@@ -9,7 +9,7 @@ from dateutil.relativedelta import relativedelta
 from odoo import Command, _, api, fields, models
 from odoo.exceptions import UserError
 from odoo.fields import first
-from odoo.tools import float_is_zero
+from odoo.tools import float_compare, float_is_zero
 
 
 class AccountBankStatementLine(models.Model):
@@ -340,6 +340,28 @@ class AccountBankStatementLine(models.Model):
             or self.analytic_distribution != line.get("analytic_distribution", False)
         )
 
+    def _check_reconcile_data_changed(self):
+        self.ensure_one()
+        data = self.reconcile_data_info.get("data", [])
+        liquidity_lines, _suspense_lines, _other_lines = self._seek_for_lines()
+        move_amount_cur = sum(liquidity_lines.mapped("amount_currency"))
+        move_credit = sum(liquidity_lines.mapped("credit"))
+        move_debit = sum(liquidity_lines.mapped("debit"))
+        stmt_amount_curr = stmt_debit = stmt_credit = 0.0
+        for line_data in data:
+            if line_data["kind"] != "liquidity":
+                continue
+            stmt_amount_curr += line_data["currency_amount"]
+            stmt_debit += line_data["debit"]
+            stmt_credit += line_data["credit"]
+        prec = self.currency_id.rounding
+        return (
+            float_compare(move_amount_cur, move_amount_cur, precision_rounding=prec)
+            != 0
+            or float_compare(move_credit, stmt_credit, precision_rounding=prec) != 0
+            or float_compare(move_debit, stmt_debit, precision_rounding=prec) != 0
+        )
+
     def _get_manual_delete_vals(self):
         return {
             "manual_reference": False,
@@ -442,10 +464,11 @@ class AccountBankStatementLine(models.Model):
             "debit": self.manual_amount if self.manual_amount > 0 else 0.0,
             "analytic_distribution": self.analytic_distribution,
         }
-        if self.manual_line_id:
+        liquidity_lines, _suspense_lines, _other_lines = self._seek_for_lines()
+        if self.manual_line_id and self.manual_line_id.id not in liquidity_lines.ids:
             vals.update(
                 {
-                    "currency_amount": self.manual_line_id.currency_id._convert(
+                    "currency_amount": self.manual_currency_id._convert(
                         self.manual_amount,
                         self.manual_in_currency_id,
                         self.company_id,
@@ -536,6 +559,8 @@ class AccountBankStatementLine(models.Model):
     def _reconcile_data_by_model(self, data, reconcile_model, reconcile_auxiliary_id):
         new_data = []
         liquidity_amount = 0.0
+        currency = self._get_reconcile_currency()
+        currency_amount = False
         default_name = ""
         for line_data in data:
             if line_data["kind"] == "suspense":
@@ -554,6 +579,13 @@ class AccountBankStatementLine(models.Model):
                 amount = self.foreign_currency_id.compute(
                     amount, self.journal_id.currency_id or self.company_currency_id
                 )
+            if currency != self.company_id.currency_id:
+                currency_amount = self.company_id.currency_id._convert(
+                    amount,
+                    currency,
+                    self.company_id,
+                    self.date,
+                )
             new_line.update(
                 {
                     "reference": "reconcile_auxiliary;%s" % reconcile_auxiliary_id,
@@ -566,9 +598,9 @@ class AccountBankStatementLine(models.Model):
                     .browse(line["account_id"])
                     .name_get()[0],
                     "date": fields.Date.to_string(self.date),
-                    "line_currency_id": self.company_id.currency_id.id,
+                    "line_currency_id": currency.id,
                     "currency_id": self.company_id.currency_id.id,
-                    "currency_amount": amount,
+                    "currency_amount": currency_amount or amount,
                     "name": line.get("name") or self.payment_ref,
                 }
             )
@@ -629,7 +661,7 @@ class AccountBankStatementLine(models.Model):
                     )
                     amount -= sum(line.get("amount") for line in line_data)
                     data += line_data
-                if res.get("auto_reconcile"):
+                if res.get("auto_reconcile") and self.reconcile_data_info:
                     self.reconcile_bank_line()
                 return self._recompute_suspense_line(
                     data,
@@ -942,6 +974,68 @@ class AccountBankStatementLine(models.Model):
                 record, "_reconcile_bank_line_%s" % record.journal_id.reconcile_mode
             )(self._prepare_reconcile_line_data(data["data"]))
         return result
+
+    def _synchronize_to_moves(self, changed_fields):
+        """We want to avoid to change stuff (mainly amounts ) in accounting entries
+        when some changes happen in the reconciliation widget. The only change
+        (among the fields triggering the synchronization) possible from the
+        reconciliation widget is the partner_id field.
+
+        So, in case of change on partner_id field we do not call super but make
+        only the required change (relative to partner) on accounting entries.
+
+        And if something else changes, we then re-define reconcile_data_info to
+        make the data consistent (for example, if debit/credit has changed by
+        applying a different rate or even if there was a correction on statement
+        line amount).
+        """
+        if self._context.get("skip_account_move_synchronization"):
+            return
+        if "partner_id" in changed_fields and not any(
+            field_name in changed_fields
+            for field_name in (
+                "payment_ref",
+                "amount",
+                "amount_currency",
+                "foreign_currency_id",
+                "currency_id",
+            )
+        ):
+            for st_line in self.with_context(skip_account_move_synchronization=True):
+
+                (
+                    liquidity_lines,
+                    suspense_lines,
+                    _other_lines,
+                ) = st_line._seek_for_lines()
+                line_vals = {"partner_id": st_line.partner_id}
+                line_ids_commands = [(1, liquidity_lines.id, line_vals)]
+                if suspense_lines:
+                    line_ids_commands.append((1, suspense_lines.id, line_vals))
+                st_line_vals = {"line_ids": line_ids_commands}
+                if st_line.move_id.partner_id != st_line.partner_id:
+                    st_line_vals["partner_id"] = st_line.partner_id.id
+                st_line.move_id.write(st_line_vals)
+        else:
+            super()._synchronize_to_moves(changed_fields=changed_fields)
+
+        if not any(
+            field_name in changed_fields
+            for field_name in (
+                "payment_ref",
+                "amount",
+                "amount_currency",
+                "foreign_currency_id",
+                "currency_id",
+                "partner_id",
+            )
+        ):
+            return
+        # reset reconcile_data_info if amounts are not consistent anymore with the
+        # amounts of the accounting entries
+        for st_line in self:
+            if st_line._check_reconcile_data_changed():
+                st_line.reconcile_data_info = st_line._default_reconcile_data()
 
     def _prepare_reconcile_line_data(self, lines):
         new_lines = []

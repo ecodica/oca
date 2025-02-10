@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-01-15 12:06+0000\n"
+"PO-Revision-Date: 2025-02-05 17:06+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -55,9 +55,9 @@ msgid ""
 "are company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
 msgstr ""
 "<span class=\"o_form_label\">Brand</span>\n"
-"                                <span class=\"fa fa-lg fa-building-o\" title="
-"\"I valori impostati qui sono specifici per azienda.\" aria-label=\"I valori "
-"impostati qui sono specifici per azienda.\" groups=\"base."
+"                                <span class=\"fa fa-lg fa-building-o\" "
+"title=\"I valori impostati qui sono specifici per azienda.\" aria-label=\"I "
+"valori impostati qui sono specifici per azienda.\" groups=\"base."
 "group_multi_company\" role=\"img\"/>"
 
 #. module: brand
@@ -912,6 +912,11 @@ msgid "Self"
 msgstr "Se stesso"
 
 #. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__use_partner_credit_limit
+msgid "Set a value greater than 0.0 to activate a credit limit check"
+msgstr "Impostare un valore superiore a 0,0 per attivare un controllo fido"
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_share
 msgid "Share Partner"
 msgstr "Condividi partner"
@@ -1162,7 +1167,7 @@ msgstr "Totale fatturato"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__debit
 msgid "Total Payable"
-msgstr "Dabito totale"
+msgstr "Debito totale"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__credit
@@ -1177,7 +1182,7 @@ msgstr "Ammontare totale dovuto da questo cliente."
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__debit
 msgid "Total amount you have to pay to this vendor."
-msgstr "Ammontare totale dovuto a questo fonritore."
+msgstr "Ammontare totale dovuto a questo fornitore."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__translated_display_name

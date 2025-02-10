@@ -613,6 +613,57 @@ class TestReconciliationWidget(TestAccountReconciliationCommon):
         self.assertTrue(reconcile_move.reversal_move_id)
         self.assertFalse(bank_stmt_line.is_reconciled)
 
+    def test_reconcile_model_with_foreign_currency(self):
+        """
+        We want to test what happens when we select a reconcile model to fill a
+        bank statement with a foreign currency.
+        """
+        bank_stmt = self.acc_bank_stmt_model.create(
+            {
+                "journal_id": self.bank_journal_usd.id,
+                "date": time.strftime("%Y-07-15"),
+                "name": "test",
+            }
+        )
+        bank_stmt_line = self.acc_bank_stmt_line_model.create(
+            {
+                "name": "testLine",
+                "journal_id": self.bank_journal_usd.id,
+                "statement_id": bank_stmt.id,
+                "amount": 100,
+                "date": time.strftime("%Y-07-15"),
+            }
+        )
+        with Form(
+            bank_stmt_line,
+            view="account_reconcile_oca.bank_statement_line_form_reconcile_view",
+        ) as f:
+            self.assertFalse(f.can_reconcile)
+            f.manual_model_id = self.rule
+            self.assertTrue(f.can_reconcile)
+        number_of_lines = len(bank_stmt_line.reconcile_data_info["data"])
+        bank_stmt_line.reconcile_bank_line()
+        self.assertEqual(
+            number_of_lines, len(bank_stmt_line.reconcile_data_info["data"])
+        )
+        self.assertEqual(2, len(bank_stmt_line.move_id.line_ids))
+        self.assertTrue(
+            bank_stmt_line.move_id.line_ids.filtered(
+                lambda r: r.account_id == self.current_assets_account
+            )
+        )
+        expected_amount = bank_stmt_line._get_reconcile_currency()._convert(
+            bank_stmt_line.amount,
+            bank_stmt_line.company_id.currency_id,
+            bank_stmt_line.company_id,
+            bank_stmt_line.date,
+        )
+        self.assertEqual(
+            bank_stmt_line.move_id.line_ids[0].amount_currency, bank_stmt_line.amount
+        )
+        self.assertEqual(bank_stmt_line.move_id.line_ids[0].debit, expected_amount)
+        self.assertEqual(bank_stmt_line.move_id.line_ids[1].credit, expected_amount)
+
     # Testing to check functionality
 
     def test_reconcile_invoice_to_check_reconciled(self):
@@ -841,6 +892,7 @@ class TestReconciliationWidget(TestAccountReconciliationCommon):
             self.assertFalse(f.partner_id)
             f.manual_reference = "account.move.line;%s" % liquidity_lines.id
             f.manual_partner_id = inv1.partner_id
+            f.save()
             self.assertEqual(f.partner_id, inv1.partner_id)
         bank_stmt_line.clean_reconcile()
         # As we have a set a partner, the cleaning should assign the invoice automatically
@@ -1245,6 +1297,7 @@ class TestReconciliationWidget(TestAccountReconciliationCommon):
                 "rate": 1.25,
             }
         )
+        liquidity_lines, suspense_lines, other_lines = bank_stmt_line._seek_for_lines()
         with Form(
             bank_stmt_line,
             view="account_reconcile_oca.bank_statement_line_form_reconcile_view",
@@ -1258,9 +1311,23 @@ class TestReconciliationWidget(TestAccountReconciliationCommon):
                 line["amount"],
                 83.33,
             )
+            # check that adding a partner does not recompute the amounts on accounting
+            # entries, but is still synchronized with accounting entries
+            f.manual_reference = "account.move.line;%s" % liquidity_lines.id
+            f.manual_partner_id = inv1.partner_id
+            self.assertEqual(f.partner_id, inv1.partner_id)
+            self.assertEqual(liquidity_lines.debit, 83.33)
+            f.save()
+            # check liquidity line did not recompute debit with the new rate with
+            # partner change
+            self.assertEqual(liquidity_lines.debit, 83.33)
+            self.assertEqual(liquidity_lines.partner_id, inv1.partner_id)
             f.manual_reference = "account.move.line;%s" % line["id"]
             # simulate click on statement line, check amount does not recompute
+            f.manual_partner_id = inv1.partner_id
             self.assertEqual(f.manual_amount, 83.33)
+            # check currency amount is still fine
+            self.assertEqual(f.reconcile_data_info["data"][0]["currency_amount"], 100)
             f.add_account_move_line_id = inv1.line_ids.filtered(
                 lambda l: l.account_id.account_type == "asset_receivable"
             )
