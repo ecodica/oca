@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-01-10 15:06+0000\n"
+"PO-Revision-Date: 2025-02-17 17:06+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -36,11 +36,6 @@ msgstr " è stato creato."
 #, python-format
 msgid " have been created."
 msgstr " è stato creato."
-
-#. module: rma_sale
-#: model_terms:ir.ui.view,arch_db:rma_sale.sale_rma_request_form
-msgid "&amp;times;"
-msgstr "&amp;volte;"
 
 #. module: rma_sale
 #: model_terms:ir.ui.view,arch_db:rma_sale.sale_rma_request_form
@@ -383,7 +378,7 @@ msgstr "Procedura guidata RMA ordine di vendita"
 #. module: rma_sale
 #: model_terms:ir.ui.view,arch_db:rma_sale.report_rma_document
 msgid "Sale order"
-msgstr "Ordini di vendita"
+msgstr "Ordine di vendita"
 
 #. module: rma_sale
 #: model:ir.model,name:rma_sale.model_sale_order
@@ -487,6 +482,9 @@ msgid ""
 msgstr ""
 "Stai per eseguire una richiesta RMA. Il nostro team lo elaborerà e ti "
 "arriverà una volta convalidato. Tieni presente che:"
+
+#~ msgid "&amp;times;"
+#~ msgstr "&amp;volte;"
 
 #~ msgid "<strong>Requested operation:</strong>"
 #~ msgstr "<strong>Operazione richiesta:</strong>"
