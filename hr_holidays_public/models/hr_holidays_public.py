@@ -138,7 +138,7 @@ class HrHolidaysPublic(models.Model):
         employee = False
         partner = False
         if employee_id is not None:
-            _logger.warning(
+            _logger.info(
                 "Use of employee_id for hr.public.holidays is deprecated. "
                 "Please use partner_id instead."
             )
@@ -146,7 +146,7 @@ class HrHolidaysPublic(models.Model):
             partner = employee.address_id
         if partner_id:
             if partner:
-                _logger.warning(
+                _logger.info(
                     "Cannot use both employee_id and address_id in parameters. "
                     "Ignoring employee_id."
                 )
