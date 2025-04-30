@@ -17,19 +17,16 @@ class ResCompany(models.Model):
 
     def l10n_ro_download_message_spv(self):
         # method to be used in cron job to auto download e-invoices from ANAF
-
-        ro_companies = self or self.env.user.company_ids.filtered(
-            lambda c: c.l10n_ro_edi_access_token
-        )
-
+        domain = [("l10n_ro_edi_access_token", "!=", False)]
+        ro_companies = self or self.env["res.company"].sudo().search(domain)
         return ro_companies._l10n_ro_download_message_spv()
 
     def _l10n_ro_download_message_spv(self, no_days=60):
-        def get_partner_from_cif(cif):
+        def get_partner_from_cif(cif, company_id):
             domain = [
                 ("vat", "like", cif),
                 ("is_company", "=", True),
-                ("company_id", "=", self.id),
+                ("company_id", "=", company_id),
             ]
             partner = self.env["res.partner"].search(domain, limit=1)
             if not partner:
@@ -43,7 +40,7 @@ class ResCompany(models.Model):
                     {
                         "name": "Unknown",
                         "vat": cif,
-                        "company_id": self.id,
+                        "company_id": company_id,
                         "country_id": self.env.ref("base.ro").id,
                         "is_company": True,
                     }
@@ -85,14 +82,14 @@ class ResCompany(models.Model):
                         match = re.search(pattern_in, message["detalii"])
                         if match:
                             cif = match.group(1)
-                            partner = get_partner_from_cif(cif)
+                            partner = get_partner_from_cif(cif, company.id)
 
                     elif message["tip"] == "FACTURA TRIMISA":
                         message_type = "out_invoice"
                         match = re.search(pattern_out, message["detalii"])
                         if match:
                             cif = match.group(1)
-                            partner = get_partner_from_cif(cif)
+                            partner = get_partner_from_cif(cif, company.id)
                     elif message["tip"] == "ERORI FACTURA":
                         message_type = "error"
                     elif "MESAJ" in message["tip"]:

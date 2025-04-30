@@ -950,7 +950,6 @@ msgstr ""
 #: model:ir.model,name:payroll.model_hr_employee
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip__employee_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip_line__employee_id
-#: model_terms:ir.ui.view,arch_db:payroll.hr_payslip_view_form
 msgid "Employee"
 msgstr "Zaposlenik"
 
@@ -2291,33 +2290,3 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:payroll.hr_payslip_line_view_form
 msgid "total_net"
 msgstr ""
-
-#~ msgid "Last Modified on"
-#~ msgstr "Zadnja promjena"
-
-#~ msgid "Input Data"
-#~ msgstr "Ulazni podatak"
-
-#~ msgid "General"
-#~ msgstr "Općenito"
-
-#~ msgid "Draft Slip"
-#~ msgstr "Nacrt listića"
-
-#~ msgid "Total Working Days"
-#~ msgstr "Ukupno radnih dana"
-
-#~ msgid "Advantage Name"
-#~ msgstr "Naziv pogodnosti"
-
-#~ msgid "<span class=\"o_form_label\">Payroll Rules</span>"
-#~ msgstr "<span class=\"o_form_label\">Pravila obračuna</span>"
-
-#~ msgid "Account"
-#~ msgstr "Konto"
-
-#~ msgid "French Payroll"
-#~ msgstr "Francuski obračun plaća"
-
-#~ msgid "Refund: "
-#~ msgstr "Povrat :"

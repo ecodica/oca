@@ -941,7 +941,6 @@ msgstr ""
 #: model:ir.model,name:payroll.model_hr_employee
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip__employee_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip_line__employee_id
-#: model_terms:ir.ui.view,arch_db:payroll.hr_payslip_view_form
 msgid "Employee"
 msgstr "Υπάλληλος"
 
@@ -2282,21 +2281,3 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:payroll.hr_payslip_line_view_form
 msgid "total_net"
 msgstr ""
-
-#~ msgid "Last Modified on"
-#~ msgstr "Τελευταία τροποποίηση στις"
-
-#~ msgid "General"
-#~ msgstr "Γενικά"
-
-#~ msgid "Account"
-#~ msgstr "Λογαριασμός"
-
-#~ msgid "French Payroll"
-#~ msgstr "Μισθοδοσία Γαλλίας"
-
-#~ msgid "Indian Payroll"
-#~ msgstr "Ινδία  - Μισθοδοσία"
-
-#~ msgid "Refund: "
-#~ msgstr "Επιστροφή:"

@@ -16,15 +16,15 @@ msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-08 23:24+0000\n"
-"PO-Revision-Date: 2023-10-09 13:37+0000\n"
-"Last-Translator: Ivorra78 <informatica@totmaterial.es>\n"
+"PO-Revision-Date: 2025-04-23 19:23+0000\n"
+"Last-Translator: \"Leonardo J. Caballero G.\" <leonardocaballero@gmail.com>\n"
 "Language-Team: Spanish (https://www.transifex.com/odoo/teams/41243/es/)\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.17\n"
+"X-Generator: Weblate 5.10.4\n"
 
 #. module: payroll
 #: model:ir.actions.report,print_report_name:payroll.action_report_payslip
@@ -134,9 +134,9 @@ msgid ""
 "                                        </code>"
 msgstr ""
 "<code>\n"
-"                                            resultado = contrato.salario\n"
-"                                            cantidad_resultado = "
-"días_trabajados.TRABAJO100.número_de_días\n"
+"                                            result = contract.wage\n"
+"                                            result_qty = worked_days.WORK100."
+"number_of_days\n"
 "                                        </code>"
 
 #. module: payroll
@@ -148,7 +148,7 @@ msgid ""
 "                                        </code>"
 msgstr ""
 "<code>\n"
-"                                            resultado = contract.wage\n"
+"                                            result = contract.wage\n"
 "                                            result_rate = 10.0\n"
 "                                        </code>"
 
@@ -158,7 +158,7 @@ msgid ""
 "<code>categories:</code> contains the sum of amount of all rules belonging "
 "to that category"
 msgstr ""
-"<code>categorías:</code> contiene la suma de la cantidad de todas las reglas "
+"<code>categories:</code> contiene la suma de la cantidad de todas las reglas "
 "que pertenecen a esa categoría"
 
 #. module: payroll
@@ -166,8 +166,8 @@ msgstr ""
 msgid ""
 "<code>contract:</code> contains current contract object data (hr.contract)"
 msgstr ""
-"<code>contrato:</code> contiene los datos del objeto contrato actual (hr."
-"contrato)"
+"<code>contract:</code> contiene los datos del objeto contrato actual "
+"(hr.contract)"
 
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.hr_salary_rule_view_form
@@ -183,38 +183,38 @@ msgstr ""
 msgid ""
 "<code>employee:</code> contains current employee object data (hr.employee)"
 msgstr ""
-"<code>empleado:</code> contiene datos del objeto del empleado actual (hr."
-"employee)"
+"<code>employee:</code> contiene datos del objeto del empleado actual "
+"(hr.employee)"
 
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.hr_salary_rule_view_form
 msgid "<code>inputs:</code> contains the computed input data"
-msgstr "<code>entradas:</code> contiene los datos de entrada calculados"
+msgstr "<code>inputs:</code> contiene los datos de entrada calculados"
 
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.hr_salary_rule_view_form
 msgid "<code>payroll:</code> contains miscellaneous values related to payroll"
 msgstr ""
-"<code>nómina:</code> contiene valores varios relacionados con la nómina"
+"<code>payroll:</code> contiene valores varios relacionados con la nómina"
 
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.hr_salary_rule_view_form
 msgid "<code>payslip:</code> contains current payslip object data (hr.payslip)"
 msgstr ""
-"<code>nómina:</code> contiene datos del objeto de nómina actual (hr.payslip)"
+"<code>payslip:</code> contiene datos del objeto de nómina actual (hr.payslip)"
 
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.hr_salary_rule_view_form
 msgid ""
 "<code>payslips:</code> contains payslips data (Payslips - Browsable Object)"
 msgstr ""
-"<code>nóminas:</code> contiene los datos de las nóminas (Payslips - "
+"<code>payslips:</code> contiene los datos de las nóminas (Payslips - "
 "Browsable Object)"
 
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.hr_salary_rule_view_form
 msgid "<code>result = contract.wage * 0.10</code>"
-msgstr "<code>resultado = contract.wage * 0.10</code>"
+msgstr "<code>result = contract.wage * 0.10</code>"
 
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.hr_salary_rule_view_form
@@ -222,8 +222,8 @@ msgid ""
 "<code>result:</code> the returned value should be in this variable. It "
 "matches with \"amount\" column."
 msgstr ""
-"<code>resultado:</code> el valor devuelto debe estar en esta variable. "
-"Coincide con la columna \"importe\"."
+"<code>result:</code> el valor devuelto debe estar en esta variable. Coincide "
+"con la columna \"amount\"."
 
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.hr_salary_rule_view_form
@@ -231,8 +231,8 @@ msgid ""
 "<code>result_name:</code> overrides the current name of the rule and allows "
 "to make dynamic names"
 msgstr ""
-"<code>nombre_resultado:</code> anula el nombre actual de la regla y permite "
-"hacer nombres dinámicos"
+"<code>result_name:</code> anula el nombre actual de la regla y permite hacer "
+"nombres dinámicos"
 
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.hr_salary_rule_view_form
@@ -240,14 +240,13 @@ msgid ""
 "<code>result_qty:</code> the quantity of units that will be multiplied to "
 "\"result\""
 msgstr ""
-"<code>cantidad_resultado:</code> la cantidad de unidades que se "
-"multiplicarán a \"resultado\""
+"<code>result_qty:</code> la cantidad de unidades que se multiplicarán a "
+"\"result\""
 
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.hr_salary_rule_view_form
 msgid "<code>result_rate:</code> the rate that should be applied to \"result\""
-msgstr ""
-"<code>tasa_resultado:</code> la tasa que debe aplicarse a \"resultado\""
+msgstr "<code>result_rate:</code> la tasa que debe aplicarse a \"result\""
 
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.hr_salary_rule_view_form
@@ -255,8 +254,8 @@ msgid ""
 "<code>result_rules:</code> contains the values of previusly computed lines "
 "(qty, rate, amount, total)"
 msgstr ""
-"<code>resultado_reglas:</code> contiene los valores de las líneas calculadas "
-"anteriormente (cantidad, tarifa, importe, total)"
+"<code>result_rules:</code> contiene los valores de las líneas calculadas "
+"anteriormente (qty, rate, amount, total)"
 
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.hr_salary_rule_view_form
@@ -270,8 +269,8 @@ msgid ""
 "<code>tools:</code> contains tools and libraries which help with "
 "mathematical operations"
 msgstr ""
-"<code>herramientas:</code> contiene herramientas y bibliotecas que ayudan "
-"con las operaciones matemáticas"
+"<code>tools:</code> contiene herramientas y bibliotecas que ayudan con las "
+"operaciones matemáticas"
 
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.hr_salary_rule_view_form
@@ -298,6 +297,21 @@ msgid ""
 "                </div>\n"
 "            "
 msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">"
+"\n"
+"            Estimado(a) <t t-out=\"object.employee_id.name\"/>,\n"
+"            <br/><br/>\n"
+"            Por favor, en el adjunto encontrará de la nómina de <t t-out="
+"\"object.payslip_run_id.name\"/>.\n"
+"            <br/><br/>\n"
+"            No dude en ponerse en contacto con nosotros si tiene alguna "
+"pregunta.\n"
+"            <br/><br/>\n"
+"            <t t-out=\"user.signature\"/>\n"
+"        </p>\n"
+"                </div>\n"
+"            "
 
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.view_hr_payslip_by_employees
@@ -313,7 +327,7 @@ msgstr ""
 "<span colspan=\"4\" nolabel=\"1\">\n"
 "                        Esta herramienta generara liquidaciones para todos "
 "los empleados seleccionados\n"
-"                       basado en las fechas y notas de credito\n"
+"                       basado en las fechas y notas de crédito\n"
 "                        especificadas\n"
 "                        en Procesamiento de liquidaciones.\n"
 "                    </span>"
@@ -492,7 +506,7 @@ msgstr "Añada aquí sus notas o la explicación de su categoría..."
 #. module: payroll
 #: model:ir.actions.act_window,name:payroll.act_children_salary_rules
 msgid "All Children Rules"
-msgstr "Todas las reglas hijas"
+msgstr "Todas las reglas secundarias"
 
 #. module: payroll
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip__allow_cancel_payslips
@@ -672,22 +686,22 @@ msgstr "Cambiar estado de la liquidación"
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.hr_payslip_line_view_form
 msgid "Child Line Details"
-msgstr "Detalle de líneas hijas"
+msgstr "Detalle de líneas secundarias"
 
 #. module: payroll
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip_line__child_ids
 msgid "Child Payslip Lines"
-msgstr "Líneas hijas de liquidación"
+msgstr "Líneas secundarias de liquidación"
 
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.hr_salary_rule_view_form
 msgid "Child Rules"
-msgstr "Reglas hijas"
+msgstr "Reglas secundarias"
 
 #. module: payroll
 #: model:ir.model.fields,field_description:payroll.field_hr_salary_rule__child_ids
 msgid "Child Salary Rule"
-msgstr "Regla salarial hija"
+msgstr "Regla salarial secundaria"
 
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.hr_salary_rule_view_form
@@ -723,12 +737,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:payroll.field_hr_payroll_structure__children_ids
 #: model:ir.model.fields,field_description:payroll.field_hr_salary_rule_category__children_ids
 msgid "Children"
-msgstr "Hijos"
+msgstr "Secundarias"
 
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.hr_salary_rule_view_form
 msgid "Children Definition"
-msgstr "Definición de los hijos"
+msgstr "Definición de las reglas secundarias"
 
 #. module: payroll
 #: model:ir.model.fields.selection,name:payroll.selection__hr_payslip_run__state__close
@@ -958,7 +972,7 @@ msgid ""
 msgstr ""
 "Define las reglas que deben ser aplicadas a este conjunto de liquidaciones, "
 "de acuerdo al contrato seleccionado. Si dejas vacío el campo contrato, este "
-"campon no sera requerido y se aplicaran todas las reglas seleccionadas en la "
+"campo no sera requerido y se aplicaran todas las reglas seleccionadas en la "
 "estructura de todos los contratos del empleado para el periodo seleccionado"
 
 #. module: payroll
@@ -1048,7 +1062,6 @@ msgstr "Lineas de liquidación filtradas dinámicamente"
 #: model:ir.model,name:payroll.model_hr_employee
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip__employee_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip_line__employee_id
-#: model_terms:ir.ui.view,arch_db:payroll.hr_payslip_view_form
 msgid "Employee"
 msgstr "Empleado"
 
@@ -1203,7 +1216,7 @@ msgstr "Ayuda"
 #. module: payroll
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip__hide_child_lines
 msgid "Hide Child Lines"
-msgstr "Ocultar líneas hijas"
+msgstr "Ocultar líneas secundarias"
 
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.hr_payslip_view_form
@@ -1256,7 +1269,7 @@ msgstr "Si se activa, los nuevos mensajes requieren tu atención."
 #: model:ir.model.fields,help:payroll.field_hr_payslip_run__message_has_error
 #: model:ir.model.fields,help:payroll.field_hr_payslip_run__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
-msgstr "Si se activa, algunos mensajes tienen un error de envio."
+msgstr "Si se activa, algunos mensajes tienen un error de envío."
 
 #. module: payroll
 #: model:ir.model.fields,help:payroll.field_hr_payslip_run__credit_note
@@ -1305,7 +1318,7 @@ msgstr ""
 "En python definición en reglas de salario, puede escribir cualquier código "
 "como lo hará\n"
 "                                    en python. Se admite cualquier operación "
-"metemática o función de python."
+"matemática o función de python."
 
 #. module: payroll
 #: model:ir.model.fields,help:payroll.field_hr_payslip__credit_note
@@ -1685,7 +1698,7 @@ msgstr "Código de nómina"
 #. module: payroll
 #: model:ir.model,name:payroll.model_report_payroll_report_contributionregister
 msgid "Payroll Contribution Register Report"
-msgstr "Reporte de registro de contribution"
+msgstr "Reporte del registro de cotizaciones de nómina"
 
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.res_config_settings_view_form
@@ -1891,13 +1904,13 @@ msgstr "Código Python"
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip_line__condition_python
 #: model:ir.model.fields,field_description:payroll.field_hr_salary_rule__condition_python
 msgid "Python Condition"
-msgstr "Condición python"
+msgstr "Condición Python"
 
 #. module: payroll
 #: model:ir.model.fields.selection,name:payroll.selection__hr_payslip_line__condition_select__python
 #: model:ir.model.fields.selection,name:payroll.selection__hr_salary_rule__condition_select__python
 msgid "Python Expression"
-msgstr "Expresión python"
+msgstr "Expresión Python"
 
 #. module: payroll
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip_line__quantity
@@ -2014,8 +2027,7 @@ msgstr "Exigir código/categoría sobre normas, categorías y estructuras"
 #: model:ir.model.fields,help:payroll.field_res_config_settings__require_code_and_category
 #: model_terms:ir.ui.view,arch_db:payroll.res_config_settings_view_form
 msgid "Require rule.code, rule.category, category.code, structure.code"
-msgstr ""
-"Requerir regla.código, regla.categoría, categoría.código, estructura.código"
+msgstr "Requerir rule.code, rule.category, category.code, structure.code"
 
 #. module: payroll
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip__activity_user_id
@@ -2037,7 +2049,7 @@ msgstr "Configuración de reglas"
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip__message_has_sms_error
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip_run__message_has_sms_error
 msgid "SMS Delivery error"
-msgstr "Error de envio de SMS"
+msgstr "Error de envío de SMS"
 
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.hr_salary_rule_category_view_form
@@ -2142,7 +2154,7 @@ msgstr "Semestralmente"
 #. module: payroll
 #: model:ir.actions.act_window,name:payroll.action_partner_mass_mail
 msgid "Send email with payslip"
-msgstr "Enviar email con la liquidacion"
+msgstr "Enviar email con la liquidación"
 
 #. module: payroll
 #: model:mail.template,name:payroll.mail_template_hr_payslip
@@ -2435,342 +2447,15 @@ msgstr "Debe crear un contrato para crear una línea de colilla de pago."
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.hr_payslip_view_form
 msgid "period"
-msgstr ""
+msgstr "período"
 
 #. module: payroll
 #: model:ir.model.fields,help:payroll.field_hr_payslip_line__amount_percentage_base
 #: model:ir.model.fields,help:payroll.field_hr_salary_rule__amount_percentage_base
 msgid "result will be affected to a variable"
-msgstr "El resultado afectará a una variable"
+msgstr "el resultado afectará a una variable"
 
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.hr_payslip_line_view_form
 msgid "total_net"
 msgstr "total_net"
-
-#~ msgid ""
-#~ "<div style=\"margin: 0px; padding: 0px;\">\n"
-#~ "        <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
-#~ "            Dear <t t-out=\"object.employee_id.name\"></t>,\n"
-#~ "            <br><br>\n"
-#~ "            Please find attached the payslip for <t t-out=\"object."
-#~ "payslip_run_id.name\"></t>.\n"
-#~ "            <br><br>\n"
-#~ "            Do not hesitate to contact us if you have any questions.\n"
-#~ "            <br><br>\n"
-#~ "            <t t-out=\"user.signature\"></t>\n"
-#~ "        </p>\n"
-#~ "    </div>\n"
-#~ "            "
-#~ msgstr ""
-#~ "<div style=\"margin: 0px; padding: 0px;\">\n"
-#~ "        <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
-#~ "            Querido<t t-out=\"object.employee_id.name\"></t>,\n"
-#~ "            <br><br>\n"
-#~ "           Se adjunta la nómina de <t t-out=\"object.payslip_run_id."
-#~ "name\"></t>.\n"
-#~ "            <br><br>\n"
-#~ "            No dude en ponerse en contacto con nosotros si tiene alguna "
-#~ "pregunta.\n"
-#~ "            <br><br>\n"
-#~ "            <t t-out=\"user.signature\"></t>\n"
-#~ "        </p>\n"
-#~ "    </div>\n"
-#~ "            "
-
-#~ msgid "Last Modified on"
-#~ msgstr "Última modificación en"
-
-#~ msgid "Main Attachment"
-#~ msgstr "Adjunto principal"
-
-#~ msgid "Number of messages which requires an action"
-#~ msgstr "Cantidad de mensajes que requieren una acción"
-
-#~ msgid ""
-#~ "<div style=\"margin: 0px; padding: 0px;\">\n"
-#~ "        <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
-#~ "            Dear ${object.employee_id.name},\n"
-#~ "            <br/><br/>\n"
-#~ "            Please find attached the payslip for ${object.payslip_run_id."
-#~ "name}.\n"
-#~ "            <br/><br/>\n"
-#~ "            Do not hesitate to contact us if you have any questions.\n"
-#~ "            <br/><br/>\n"
-#~ "            ${user.signature | safe}\n"
-#~ "        </p>\n"
-#~ "    </div>\n"
-#~ "            "
-#~ msgstr ""
-#~ "<div style=\"margin: 0px; padding: 0px;\">\n"
-#~ "        <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
-#~ "            Estimado ${object.employee_id.name},\n"
-#~ "            <br/><br/>\n"
-#~ "            Adjunto en este email encontrará el recibo correspondiente a "
-#~ "la liquidación ${object.payslip_run_id.name}.\n"
-#~ "            <br/><br/>\n"
-#~ "            En caso de dudas, no dude en contactarse con Recursos "
-#~ "Humanos. \n"
-#~ "            <br/><br/>\n"
-#~ "            ${user.signature | safe}\n"
-#~ "        </p>\n"
-#~ "    </div>\n"
-#~ "            "
-
-#~ msgid ""
-#~ "Payslip for ${object.payslip_run_id.name} from ${object.company_id.name}"
-#~ msgstr ""
-#~ "Liquidaciones para ${object.payslip_run_id.name} de ${object.company_id."
-#~ "name}"
-
-#~ msgid "Number of unread messages"
-#~ msgstr "Cantidad de mensajes no leidos"
-
-#~ msgid "Unread Messages"
-#~ msgstr "Mensajes sin leer"
-
-#~ msgid "Unread Messages Counter"
-#~ msgstr "Cantidad mensajes sin leer"
-
-#~ msgid "Child Salary Structure"
-#~ msgstr "Estructura salarial hija"
-
-#~ msgid "Followers (Channels)"
-#~ msgstr "Seguidores (Canales)"
-
-#~ msgid "Input Data"
-#~ msgstr "Datos de entrada"
-
-#, python-format
-#~ msgid "Salary Slip of %s for %s"
-#~ msgstr "Nómina salarial de %s para %s"
-
-#~ msgid "Display non-negative values for leaves in payslip worked days lines."
-#~ msgstr ""
-#~ "Utilizar valores absolutos (positivos) para las ausencias en las líneas "
-#~ "de días trabajados de la liquidación."
-
-#~ msgid "Post payroll slips in accounting"
-#~ msgstr "Publicar recibos de nómina en contabilidad"
-
-#~ msgid "Salary rules apearing on payslip"
-#~ msgstr "Reglas salariales mostradas"
-
-#~ msgid ""
-#~ "Values for leaves (days and hours fields) should be positive instead of "
-#~ "negative."
-#~ msgstr ""
-#~ "Los valores de ausencias (días y horas) seran absolutos (positivos) en "
-#~ "vez de negativo (comportamiento por defecto)."
-
-#~ msgid "Country"
-#~ msgstr "Pais"
-
-#, python-format
-#~ msgid "No rule parameter with code '%s' was found for %s "
-#~ msgstr "No se encontro ningun parametro con código '%s' para la fecha %s "
-
-#~ msgid "Parameter Value"
-#~ msgstr "Valor"
-
-#~ msgid "Rule Parameter"
-#~ msgstr "Parámetro de regla salarial"
-
-#~ msgid "Rule Parameters"
-#~ msgstr "Parámetros de reglas salariales"
-
-#~ msgid "Salary Rule Parameter"
-#~ msgstr "Parámetro de regla salarial"
-
-#~ msgid "Salary Rule Parameter Value"
-#~ msgstr "Valor de parámetro de regla salarial"
-
-#~ msgid "Salary Rule Parameters"
-#~ msgstr "Parámetros de reglas salarial"
-
-#~ msgid "Two rule parameters cannot have the same code."
-#~ msgstr ""
-#~ "No puede haber más de un parámetro de regla salarial con el mismo código."
-
-#~ msgid "Two rules parameters with the same code cannot start the same day"
-#~ msgstr ""
-#~ "Las versiones de parametros de reglas salariales con el mismo código no "
-#~ "pueden comenzar el mismo dia"
-
-#~ msgid "Versions"
-#~ msgstr "Versiones"
-
-#, python-format
-#~ msgid ""
-#~ "\n"
-#~ "Wrong python code defined for salary rule %s (%s).\n"
-#~ "Here is the error received:\n"
-#~ "\n"
-#~ "%s\n"
-#~ msgstr ""
-#~ "\n"
-#~ "Codigo python erroneo para la regla salarial %s (%s).\n"
-#~ "Aqui esta el error recibido:\n"
-#~ "\n"
-#~ "%s\n"
-
-#, python-format
-#~ msgid ""
-#~ "\n"
-#~ "Wrong python condition defined for salary rule %s (%s).\n"
-#~ "Here is the error received:\n"
-#~ "\n"
-#~ "%s\n"
-#~ msgstr ""
-#~ "\n"
-#~ "Codigo python erroneo para la regla salarial %s (%s).\n"
-#~ "Este es el error recibido:\n"
-#~ "\n"
-#~ "%s\n"
-
-#, python-format
-#~ msgid "Wrong percentage base or quantity defined for salary rule %s (%s)."
-#~ msgstr ""
-#~ "Porcentaje base o cantidad errónea para la regla de salario %s (%s)."
-
-#, python-format
-#~ msgid "Wrong quantity defined for salary rule %s (%s)."
-#~ msgstr "Cantidad errónea definida para la regla de salario %s (%s)."
-
-#, python-format
-#~ msgid "Wrong range condition defined for salary rule %s (%s)."
-#~ msgstr "Rango de condición erróneo para la regla de salario %s (%s)."
-
-#~ msgid ""
-#~ "Child rule functionality is useful when you need other rules to be "
-#~ "computed before the parent one. <br/>\n"
-#~ "                                This means that all salary rules declared "
-#~ "as childs (parent of one rule) will be added to the computation\n"
-#~ "                                if its parent rule is included in the "
-#~ "salary structure. So child rules will only be computed if it's parent is\n"
-#~ "                                computed. <br/>\n"
-#~ "                                This functionality is useful for doing "
-#~ "auxiliar calculations that are used as dependencies for the parent\n"
-#~ "                                salary rule (e.x. rules required for "
-#~ "complex tax computation that needs data from several modules)."
-#~ msgstr ""
-#~ "La funcionalidad de reglas hijas es útil cuando se necesita que otras "
-#~ "reglas de computen antes que la regla padre. <br/>\n"
-#~ "                                Esto significa, que todas las reglas "
-#~ "salariales declaradas como hijas (con una regla padre) serán agregadas "
-#~ "al\n"
-#~ "                                cómputo de la liquidación si la regla "
-#~ "padre está incluida en la estructura salarial. Entonces, las reglas "
-#~ "hijas\n"
-#~ "                                solo serán calculadas si su padre es "
-#~ "computado. <br/>\n"
-#~ "                                Esta funcionalidad es útil para realizar "
-#~ "cálculos adicionales que son usados como dependencias de la\n"
-#~ "                                regla padre (e.j. cálculos auxiliares "
-#~ "para impuestos complejos)."
-
-#~ msgid "General"
-#~ msgstr "General"
-
-#~ msgid "Draft Slip"
-#~ msgstr "Nómina borrador"
-
-#~ msgid "Total Working Days"
-#~ msgstr "Días de trabajo totales"
-
-#~ msgid "Details By Salary Rule Category"
-#~ msgstr "Detalles por categoría de regla salarial"
-
-#~ msgid "Advantage Name"
-#~ msgstr "Nombre de ventaja"
-
-#~ msgid "Contract Advantage Templates"
-#~ msgstr "Plantillas de ventaja de contrato"
-
-#~ msgid "Default value for this advantage"
-#~ msgstr "Valor predeterminado para esta ventaja"
-
-#~ msgid "Employee's Advantage on Contract"
-#~ msgstr "Ventaja del empleado en el contrato"
-
-#~ msgid "Lower Bound"
-#~ msgstr "Límite inferior"
-
-#~ msgid "Lower bound authorized by the employer for this advantage"
-#~ msgstr "Límite inferior autorizado por el empleado para esta ventaja"
-
-#~ msgid "Upper Bound"
-#~ msgstr "Límite superior"
-
-#~ msgid "Upper bound authorized by the employer for this advantage"
-#~ msgstr "Límite superior autorizado por el empleador para esta ventaja"
-
-#~ msgid "Wrong python code defined for salary rule %s (%s)."
-#~ msgstr "Código python erróneo en la regla de salario %s (%s)."
-
-#~ msgid "Wrong python condition defined for salary rule %s (%s)."
-#~ msgstr "Código python erróneo en la regla de salario %s (%s)."
-
-#~ msgid ""
-#~ "<span colspan=\"4\" nolabel=\"1\">This wizard will generate payslips for "
-#~ "all selected employee(s) based on the dates and credit note specified on "
-#~ "Payslips Run.</span>"
-#~ msgstr ""
-#~ "<span colspan=\"4\" nolabel=\"1\">Este asistente generará nóminas para "
-#~ "todos los empleados seleccionados en función de las fechas y facturas "
-#~ "rectificativas especificadas en la ejecución de nóminas.</span>"
-
-#~ msgid "PaySlip Lines By Conribution Register"
-#~ msgstr "Líneas de nómina por registro de contribución"
-
-#~ msgid ""
-#~ "* When the payslip is created the status is 'Draft'\n"
-#~ "                \n"
-#~ "* If the payslip is under verification, the status is 'Waiting'.\n"
-#~ "                \n"
-#~ "* If the payslip is confirmed then status is set to 'Done'.\n"
-#~ "                \n"
-#~ "* When user cancel payslip the status is 'Rejected'."
-#~ msgstr ""
-#~ "* Cuando la nómina es creada el estado es 'Borrador'\n"
-#~ "                \n"
-#~ "* Si la nómina está bajo verificación el estado es 'En Espera'.\n"
-#~ "                \n"
-#~ "* Si la nómina está confirmada entonces el estado se cambia a "
-#~ "'Finalizado'.\n"
-#~ "                \n"
-#~ "* Cuando el usuario cancela la nómina el estado es 'Rechazado'."
-
-#~ msgid "<span class=\"o_form_label\">Payroll Rules</span>"
-#~ msgstr "<span class=\"o_form_label\">Reglas salariales</span>"
-
-#~ msgid "Account"
-#~ msgstr "Cuenta"
-
-#~ msgid "Belgium Payroll"
-#~ msgstr "Nómina belga"
-
-#~ msgid "Choose a Payroll Localization"
-#~ msgstr "Elija una localización de nómina"
-
-#~ msgid "Conveyance Allowance For Gravie"
-#~ msgstr "Subsidio de transporte"
-
-#~ msgid "French Payroll"
-#~ msgstr "Nómina de Francia"
-
-#~ msgid "Indian Payroll"
-#~ msgstr "Nomina de la India"
-
-#~ msgid "Payroll rules that apply to your country"
-#~ msgstr "Reglas salariales que aplican a su país"
-
-#~ msgid "Payslip 'Date From' must be earlier 'Date To'."
-#~ msgstr "La nómina \"Fecha de\" debe ser anterior \"Fecha hasta\"."
-
-#~ msgid "Refund: "
-#~ msgstr "Devolución: "
-
-#~ msgid "You cannot delete a payslip which is not draft or cancelled!"
-#~ msgstr ""
-#~ "¡No puede eliminar una nómina que no esté en estado borrador o cancenlado!"

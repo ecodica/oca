@@ -947,7 +947,6 @@ msgstr ""
 #: model:ir.model,name:payroll.model_hr_employee
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip__employee_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip_line__employee_id
-#: model_terms:ir.ui.view,arch_db:payroll.hr_payslip_view_form
 msgid "Employee"
 msgstr "Ansat"
 
@@ -2288,26 +2287,3 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:payroll.hr_payslip_line_view_form
 msgid "total_net"
 msgstr ""
-
-#~ msgid "Last Modified on"
-#~ msgstr "Sidst ændret den"
-
-#~ msgid "General"
-#~ msgstr "Generel"
-
-#~ msgid "Total Working Days"
-#~ msgstr "Total antal arbejdsdage"
-
-#~ msgid "Account"
-#~ msgstr "Konto"
-
-#~ msgid "Belgium Payroll"
-#~ msgstr "Belgisk lønningsliste"
-
-#~ msgid "Indian Payroll"
-#~ msgstr "Indisk Løn"
-
-#~ msgid "You cannot delete a payslip which is not draft or cancelled!"
-#~ msgstr ""
-#~ "Du kan ikke slette en lønseddel som ikke er i status kladde eller "
-#~ "annulleret!"

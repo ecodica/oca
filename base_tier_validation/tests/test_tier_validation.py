@@ -131,11 +131,8 @@ class TierTierValidation(CommonTierValidation):
         )
         # Request validation
         self.test_record.with_user(self.test_user_2.id).request_validation()
-        self.test_record.invalidate_model()
         test_record.with_user(self.test_user_2.id).request_validation()
-        test_record.invalidate_model()
         self.test_record_2.with_user(self.test_user_2.id).request_validation()
-        self.test_record_2.invalidate_model()
         # Get review user count as systray icon would do and check count value
         docs = self.test_user_1.with_user(self.test_user_1).review_user_count()
         for doc in docs:
@@ -295,18 +292,11 @@ class TierTierValidation(CommonTierValidation):
         self.assertTrue(reviews)
 
         record1 = test_record.with_user(self.test_user_1.id)
-        record1.invalidate_model()
         self.assertTrue(record1.can_review)
         # Validation will be all by sequence
+        self.assertEqual(len(record1.review_ids), 2)
         self.assertEqual(
-            2, len(record1.review_ids.filtered(lambda x: x.status == "waiting"))
-        )
-        self.assertEqual(
-            0, len(record1.review_ids.filtered(lambda x: x.status == "pending"))
-        )
-        record1.validate_tier()
-        self.assertEqual(
-            0, len(record1.review_ids.filtered(lambda x: x.status == "waiting"))
+            1, len(record1.review_ids.filtered(lambda x: x.status == "waiting"))
         )
         self.assertEqual(
             1, len(record1.review_ids.filtered(lambda x: x.status == "pending"))
@@ -315,9 +305,31 @@ class TierTierValidation(CommonTierValidation):
         self.assertEqual(
             0, len(record1.review_ids.filtered(lambda x: x.status == "waiting"))
         )
+        self.assertEqual(
+            1, len(record1.review_ids.filtered(lambda x: x.status == "pending"))
+        )
+        self.assertEqual(
+            1, len(record1.review_ids.filtered(lambda x: x.status == "approved"))
+        )
         record1.validate_tier()
         self.assertEqual(
+            0, len(record1.review_ids.filtered(lambda x: x.status == "waiting"))
+        )
+        self.assertEqual(
             0, len(record1.review_ids.filtered(lambda x: x.status == "pending"))
+        )
+        self.assertEqual(
+            2, len(record1.review_ids.filtered(lambda x: x.status == "approved"))
+        )
+        record1.validate_tier()
+        self.assertEqual(
+            0, len(record1.review_ids.filtered(lambda x: x.status == "waiting"))
+        )
+        self.assertEqual(
+            0, len(record1.review_ids.filtered(lambda x: x.status == "pending"))
+        )
+        self.assertEqual(
+            2, len(record1.review_ids.filtered(lambda x: x.status == "approved"))
         )
 
     def test_12_approve_sequence_same_user_bypassed(self):
@@ -354,14 +366,14 @@ class TierTierValidation(CommonTierValidation):
         self.assertTrue(reviews)
 
         record1 = test_record.with_user(self.test_user_1.id)
-        record1.invalidate_model()
         self.assertTrue(record1.can_review)
         # When the first tier is validated, all the rest will be approved.
+        self.assertEqual(len(record1.review_ids), 2)
         self.assertEqual(
-            2, len(record1.review_ids.filtered(lambda x: x.status == "waiting"))
+            1, len(record1.review_ids.filtered(lambda x: x.status == "waiting"))
         )
         self.assertEqual(
-            0, len(record1.review_ids.filtered(lambda x: x.status == "pending"))
+            1, len(record1.review_ids.filtered(lambda x: x.status == "pending"))
         )
         record1.validate_tier()
         self.assertEqual(
@@ -369,6 +381,9 @@ class TierTierValidation(CommonTierValidation):
         )
         self.assertEqual(
             0, len(record1.review_ids.filtered(lambda x: x.status == "waiting"))
+        )
+        self.assertEqual(
+            2, len(record1.review_ids.filtered(lambda x: x.status == "approved"))
         )
 
     def test_13_onchange_review_type(self):
@@ -919,7 +934,7 @@ class TierTierValidation(CommonTierValidation):
         )
         self.assertEqual(notifications_no_2, notifications_no_1)
 
-    def test_25_change_field_exception_validation(self):
+    def test_27_change_field_exception_validation(self):
         """Test under and after validations"""
         # Cannot create `tier.validation.exception` records because
         # `tier.validation.tester` are fake model and its fields are
@@ -970,7 +985,7 @@ class TierTierValidation(CommonTierValidation):
             )
         self.assertEqual(self.test_record.test_validation_field, 4)
 
-    def test_26_computed_state_field(self):
+    def test_28_computed_state_field(self):
         """Test the regular flow on a model where state is a computed field"""
         # The record cannot be confirmed without validation
         with self.assertRaisesRegex(
@@ -999,7 +1014,7 @@ class TierTierValidation(CommonTierValidation):
         self.assertFalse(self.test_record_computed.review_ids)
         self.test_record_computed.invalidate_recordset()
 
-    def test_27_allow_write_for_reviewers(self):
+    def test_29_allow_write_for_reviewers(self):
         reviews = self.test_record.with_user(self.test_user_2.id).request_validation()
         record = self.test_record.with_user(self.test_user_1.id)
         record.invalidate_recordset()
@@ -1009,6 +1024,62 @@ class TierTierValidation(CommonTierValidation):
             {"allow_write_for_reviewer": True}
         )
         record.with_user(self.test_user_1.id).write({"test_field": 0.3})
+
+    def test_30_request_validation_diff_company(self):
+        """
+        Test validation request behavior with multi-company setup.
+
+        Setup:
+        - Main company has 2 tier definitions:
+          - One for User1 (sequence 30)
+          - One for User3 (sequence 20)
+        - Other company has 1 tier definition:
+          - One for User3 (sequence 30)
+
+        When record's company is set to 'other company':
+        - Only User3's tier definition from other company should be applied
+        - Should create only 1 review
+        """
+        self.assertFalse(self.test_record_2.review_ids)
+        self.assertFalse(self.test_record_2.company_id)
+        self.assertEqual(self.test_user_3_multi_company.env.company, self.main_company)
+
+        self.test_record_2.company_id = self.other_company
+
+        reviews = self.test_record_2.with_user(
+            self.test_user_3_multi_company.id
+        ).request_validation()
+        self.test_record_2.invalidate_recordset()
+
+        self.assertEqual(len(reviews), 1)
+
+    def test_31_request_validation_same_company(self):
+        """
+        Test validation request behavior with multi-company setup.
+
+        Setup:
+        - Main company has 2 tier definitions:
+          - One for User1 (sequence 30)
+          - One for User3 (sequence 20)
+        - Other company has 1 tier definition:
+          - One for User3 (sequence 30)
+
+        When record's company is set to 'main company':
+        - Both User1 and User3's tier definitions from main company should be applied
+        - Should create 2 reviews
+        """
+        self.assertFalse(self.test_record_2.review_ids)
+        self.assertFalse(self.test_record_2.company_id)
+        self.assertEqual(self.test_user_3_multi_company.env.company, self.main_company)
+
+        self.test_record_2.company_id = self.main_company
+
+        reviews = self.test_record_2.with_user(
+            self.test_user_3_multi_company.id
+        ).request_validation()
+        self.test_record_2.invalidate_recordset()
+
+        self.assertEqual(len(reviews), 2)
 
 
 @tagged("at_install")

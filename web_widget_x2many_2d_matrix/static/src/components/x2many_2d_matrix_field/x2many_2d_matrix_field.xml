@@ -8,6 +8,12 @@
                 showRowTotals="props.showRowTotals"
                 showColumnTotals="props.showColumnTotals"
                 readonly="props.readonly"
+                canOpen="props.canOpen"
+                canCreate="props.canCreate"
+                canWrite="props.canWrite"
+                canQuickCreate="props.canQuickCreate"
+                canCreateEdit="props.canCreateEdit"
+                domain="props.domain"
             />
         </div>
     </t>
