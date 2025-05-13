@@ -20,6 +20,7 @@ class AccountMove(models.Model):
         comodel_name="product.sticker",
         string="Stickers",
         compute="_compute_sticker_ids",
+        compute_sudo=True,
         store=False,
     )
 
@@ -44,8 +45,10 @@ class AccountMove(models.Model):
         for move in self:
             if not move.show_product_stickers:
                 continue
-
-            products = move.line_ids.product_id
-            stickers = products.get_product_stickers()
-            if stickers:
-                move.sticker_ids = stickers
+            move.sticker_ids = move.line_ids.product_id.get_product_stickers(
+                extra_domain=[
+                    "|",
+                    ("available_model_ids.model", "in", [self._name]),
+                    ("available_model_ids", "=", False),
+                ]
+            )

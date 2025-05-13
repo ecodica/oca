@@ -3,14 +3,25 @@
 # Copyright 2023 Tecnativa - Pedro M. Baeza
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
-from odoo.tests import Form, TransactionCase
+from odoo.tests import Form, tagged
 from odoo.tests.common import users
 
+from odoo.addons.base.tests.common import BaseCommon
 
-class TestRmaSaleBase(TransactionCase):
+
+class TestRmaSaleBase(BaseCommon):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
+        if not cls.env.company.chart_template_id:
+            # Load a CoA if there's none in current company
+            coa = cls.env.ref("l10n_generic_coa.configurable_chart_template", False)
+            if not coa:
+                # Load the first available CoA
+                coa = cls.env["account.chart.template"].search(
+                    [("visible", "=", True)], limit=1
+                )
+            coa.try_loading(company=cls.env.company, install_demo=False)
         cls.res_partner = cls.env["res.partner"]
         cls.product_product = cls.env["product.product"]
         cls.so_model = cls.env["sale.order"]
@@ -53,6 +64,7 @@ class TestRmaSaleBase(TransactionCase):
         return wizard
 
 
+@tagged("-at_install", "post_install")
 class TestRmaSale(TestRmaSaleBase):
     @classmethod
     def setUpClass(cls):
@@ -104,6 +116,22 @@ class TestRmaSale(TestRmaSaleBase):
         rma.action_confirm()
         self.assertTrue(rma.reception_move_id)
         self.assertFalse(rma.reception_move_id.origin_returned_move_id)
+        # Receive the product
+        rma.reception_move_id.quantity_done = rma.product_uom_qty
+        rma.reception_move_id.picking_id._action_done()
+        # Now do a replacement for testing the issue of a new SO line created for P2
+        delivery_form = Form(
+            self.env["rma.delivery.wizard"].with_context(
+                active_ids=rma.ids, rma_delivery_type="replace"
+            )
+        )
+        delivery_form.product_id = self.product_2
+        delivery_form.product_uom_qty = 5
+        delivery_wizard = delivery_form.save()
+        delivery_wizard.action_deliver()
+        rma.delivery_move_ids.quantity_done = rma.product_uom_qty
+        rma.delivery_move_ids.picking_id._action_done()
+        self.assertEqual(len(self.sale_order.order_line), 1)
 
     def test_create_rma_from_so(self):
         order = self.sale_order

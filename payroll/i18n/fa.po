@@ -294,21 +294,14 @@ msgstr ""
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.view_hr_payslip_by_employees
 msgid ""
-"<span colspan=\"4\" nolabel=\"1\">\n"
-"                        This wizard will generate payslips for all selected "
-"employee(s)\n"
-"                        based on the dates and credit note\n"
-"                        specified\n"
-"                        on Payslips Run.\n"
-"                    </span>"
+"<span colspan=\"2\" nolabel=\"1\">\n"
+"                            This wizard will generate payslips for all "
+"selected employee(s)\n"
+"                            based on the dates and credit note\n"
+"                            specified\n"
+"                            on Payslips Run.\n"
+"                        </span>"
 msgstr ""
-"<span colspan=\"4\" nolabel=\"1\">\n"
-"                         این ابزار جادویی، فیش حقوقی را برای همه کارمندان "
-"انتخاب شده ایجاد می کند\n"
-"                         که بر اساس تاریخ و یادداشت اعتباری\n"
-"                         مشخص شده\n"
-"                         در فیض حقوق‌ها مشخص می‌شود.\n"
-"                     </span>"
 
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.hr_salary_rule_view_form
@@ -749,6 +742,7 @@ msgstr "شرکت‌ها"
 #: model:ir.model.fields,field_description:payroll.field_hr_contribution_register__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payroll_structure__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip__company_id
+#: model:ir.model.fields,field_description:payroll.field_hr_payslip_input__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip_line__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip_run__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_salary_rule__company_id
@@ -1032,7 +1026,6 @@ msgstr "خطوط فیش حقوقی فیلتر شده پویا"
 #: model:ir.model,name:payroll.model_hr_employee
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip__employee_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip_line__employee_id
-#: model_terms:ir.ui.view,arch_db:payroll.hr_payslip_view_form
 msgid "Employee"
 msgstr "کارمند"
 
@@ -2451,17 +2444,19 @@ msgstr "نتیجه بر یک متغیر تأثیر می گذارد"
 msgid "total_net"
 msgstr "total_net"
 
-#~ msgid "SMS Delivery error"
-#~ msgstr "خطای تحویل پیامک"
-
-#~ msgid "General"
-#~ msgstr "عمومی"
-
-#~ msgid "Account"
-#~ msgstr "حساب"
-
-#~ msgid "French Payroll"
-#~ msgstr "حقوق و دستمزد فرانسه"
-
-#~ msgid "Indian Payroll"
-#~ msgstr "حقوق‌و‌دستمزد هند"
+#~ msgid ""
+#~ "<span colspan=\"4\" nolabel=\"1\">\n"
+#~ "                        This wizard will generate payslips for all "
+#~ "selected employee(s)\n"
+#~ "                        based on the dates and credit note\n"
+#~ "                        specified\n"
+#~ "                        on Payslips Run.\n"
+#~ "                    </span>"
+#~ msgstr ""
+#~ "<span colspan=\"4\" nolabel=\"1\">\n"
+#~ "                         این ابزار جادویی، فیش حقوقی را برای همه کارمندان "
+#~ "انتخاب شده ایجاد می کند\n"
+#~ "                         که بر اساس تاریخ و یادداشت اعتباری\n"
+#~ "                         مشخص شده\n"
+#~ "                         در فیض حقوق‌ها مشخص می‌شود.\n"
+#~ "                     </span>"

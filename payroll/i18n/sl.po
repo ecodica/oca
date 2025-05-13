@@ -26,8 +26,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
-"%100==4 ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3);\n"
 
 #. module: payroll
 #: model:ir.actions.report,print_report_name:payroll.action_report_payslip
@@ -242,13 +242,13 @@ msgstr ""
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.view_hr_payslip_by_employees
 msgid ""
-"<span colspan=\"4\" nolabel=\"1\">\n"
-"                        This wizard will generate payslips for all selected "
-"employee(s)\n"
-"                        based on the dates and credit note\n"
-"                        specified\n"
-"                        on Payslips Run.\n"
-"                    </span>"
+"<span colspan=\"2\" nolabel=\"1\">\n"
+"                            This wizard will generate payslips for all "
+"selected employee(s)\n"
+"                            based on the dates and credit note\n"
+"                            specified\n"
+"                            on Payslips Run.\n"
+"                        </span>"
 msgstr ""
 
 #. module: payroll
@@ -675,6 +675,7 @@ msgstr "Družbe"
 #: model:ir.model.fields,field_description:payroll.field_hr_contribution_register__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payroll_structure__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip__company_id
+#: model:ir.model.fields,field_description:payroll.field_hr_payslip_input__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip_line__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip_run__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_salary_rule__company_id
@@ -953,7 +954,6 @@ msgstr ""
 #: model:ir.model,name:payroll.model_hr_employee
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip__employee_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip_line__employee_id
-#: model_terms:ir.ui.view,arch_db:payroll.hr_payslip_view_form
 msgid "Employee"
 msgstr "Kader"
 
@@ -2338,59 +2338,3 @@ msgstr "koeficient vpliva na rezultat"
 #: model_terms:ir.ui.view,arch_db:payroll.hr_payslip_line_view_form
 msgid "total_net"
 msgstr ""
-
-#~ msgid "Input Data"
-#~ msgstr "Vhodni podatki"
-
-#, python-format
-#~ msgid "Salary Slip of %s for %s"
-#~ msgstr "Plačilna lista %s za %s"
-
-#, python-format
-#~ msgid "Wrong percentage base or quantity defined for salary rule %s (%s)."
-#~ msgstr ""
-#~ "Napačna odstotna osnova ali količina določena v plačnem pravilu %s (%s)."
-
-#, python-format
-#~ msgid "Wrong quantity defined for salary rule %s (%s)."
-#~ msgstr "Napačna količina določena v plačnem pravilu %s (%s)."
-
-#, python-format
-#~ msgid "Wrong range condition defined for salary rule %s (%s)."
-#~ msgstr "Napačen pogoj obsega določen v plačnem pravilu %s (%s)."
-
-#~ msgid "General"
-#~ msgstr "Splošno"
-
-#~ msgid "Draft Slip"
-#~ msgstr "Osnutek kuverte"
-
-#~ msgid "Total Working Days"
-#~ msgstr "Skupaj delovnih dni"
-
-#~ msgid "Details By Salary Rule Category"
-#~ msgstr "Podrobnosti po kategorijah plačnih pravil"
-
-#~ msgid "Wrong python code defined for salary rule %s (%s)."
-#~ msgstr "Napačna python koda določena v plačnem pravilu %s (%s)."
-
-#~ msgid "Wrong python condition defined for salary rule %s (%s)."
-#~ msgstr "Napačen python pogoj določen v plačnem pravilu %s (%s)."
-
-#~ msgid "PaySlip Lines By Conribution Register"
-#~ msgstr "Postavke plačilne liste po registru prispevkov"
-
-#~ msgid "Account"
-#~ msgstr "Konto"
-
-#~ msgid "French Payroll"
-#~ msgstr "Francoski plačni sistem"
-
-#~ msgid "Indian Payroll"
-#~ msgstr "Indijski plačni sistem"
-
-#~ msgid "Refund: "
-#~ msgstr "Povračilo: "
-
-#~ msgid "You cannot delete a payslip which is not draft or cancelled!"
-#~ msgstr "Plačilne liste, ki ni osnutek ali preklicana, ne morete brisati!"

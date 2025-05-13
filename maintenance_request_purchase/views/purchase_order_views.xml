@@ -28,16 +28,24 @@
             </div>
         </field>
     </record>
-    <record model="ir.ui.view" id="purchase_order_line_search">
-        <field
-            name="name"
-        >purchase.order.line.search (in maintenance_equipment_purchase)</field>
-        <field name="model">purchase.order.line</field>
-        <field name="inherit_id" ref="purchase.purchase_order_line_search" />
+
+
+    <record model="ir.ui.view" id="purchase_order_tree">
+        <field name="name">purchase.order.form (in maintenance_purchase)</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_tree" />
+        <field name="priority" eval="99" />
+        <field name="mode">primary</field>
         <field name="arch" type="xml">
-            <field name="order_id" position="after">
-                <field name="name" />
-            </field>
+            <tree position="inside">
+                <button
+                    name="get_formview_action"
+                    string="Open"
+                    type="object"
+                    class="btn btn-primary"
+                />
+            </tree>
         </field>
     </record>
+
 </odoo>

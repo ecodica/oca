@@ -5,6 +5,7 @@ import logging
 from unittest import mock
 
 from odoo import exceptions
+from odoo.tests import tagged
 
 from odoo.addons.edi_oca.tests.common import EDIBackendCommonComponentRegistryTestCase
 from odoo.addons.l10n_es_aeat.tests.test_l10n_es_aeat_certificate import (
@@ -18,6 +19,7 @@ except (ImportError, IOError) as err:
     _logger.info(err)
 
 
+@tagged("post_install", "-at_install")
 class EDIBackendTestCase(
     EDIBackendCommonComponentRegistryTestCase, TestL10nEsAeatCertificateBase
 ):
@@ -40,6 +42,7 @@ class EDIBackendTestCase(
                 "amount": 21,
                 "type_tax_use": "sale",
                 "facturae_code": "01",
+                "country_id": cls.env.ref("base.es").id,
             }
         )
 
@@ -69,7 +72,16 @@ class EDIBackendTestCase(
         )
         main_company = self.env.ref("base.main_company")
         main_company.vat = "ESA12345674"
-        main_company.partner_id.country_id = self.env.ref("base.uk")
+        main_company.partner_id.country_id = self.env.ref("base.es")
+        if not main_company.chart_template_id:
+            # Load a CoA if there's none in current company
+            coa = cls.env.ref("l10n_generic_coa.configurable_chart_template", False)
+            if not coa:
+                # Load the first available CoA
+                coa = cls.env["account.chart.template"].search(
+                    [("visible", "=", True)], limit=1
+                )
+            coa.try_loading(company=main_company, install_demo=False)
         self.env["res.currency.rate"].search(
             [("currency_id", "=", main_company.currency_id.id)]
         ).write({"company_id": False})
@@ -217,6 +229,32 @@ class EDIBackendTestCase(
             .create({})
         )
         self.partner.organo_gestor = False
+        with self.assertRaises(exceptions.ValidationError):
+            wizard.create_facturae_file()
+
+    def test_create_facturae_file_without_unidad_tramitadora(self):
+        self._activate_certificate(self.certificate_password)
+        self.move.action_post()
+        self.move.name = "2999/99999"
+        wizard = (
+            self.env["create.facturae"]
+            .with_context(active_ids=self.move.ids, active_model="account.move")
+            .create({})
+        )
+        self.partner.unidad_tramitadora = False
+        with self.assertRaises(exceptions.ValidationError):
+            wizard.create_facturae_file()
+
+    def test_create_facturae_file_without_oficina_contable(self):
+        self._activate_certificate(self.certificate_password)
+        self.move.action_post()
+        self.move.name = "2999/99999"
+        wizard = (
+            self.env["create.facturae"]
+            .with_context(active_ids=self.move.ids, active_model="account.move")
+            .create({})
+        )
+        self.partner.oficina_contable = False
         with self.assertRaises(exceptions.ValidationError):
             wizard.create_facturae_file()
 

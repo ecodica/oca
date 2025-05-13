@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-10-17 16:06+0000\n"
+"PO-Revision-Date: 2025-03-14 08:45+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -14,7 +14,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.10.2\n"
+
+#. module: account_avatax_oca
+#. odoo-python
+#: code:addons/account_avatax_oca/hooks.py:0
+#, python-format
+msgid "(Discount)"
+msgstr "(Sconto)"
 
 #. module: account_avatax_oca
 #: model:ir.model.fields.selection,name:account_avatax_oca.selection__res_partner__validation_method__avatax
@@ -197,9 +204,9 @@ msgstr ""
 "configurazione del connettore AvaTax.  \n"
 "\n"
 " Assicurarsi inoltre che l'indirizzo dell'azienda sia impostato e validato. "
-"Si può accedere attraverso Vendite->clienti a rimuovendo il filtro \"Clienti"
-"\" dalla ricerca in alto. Quandi accedere alle informazioni del contatto "
-"dell'azienda e validare l'indirizzo nella sezione AvaTax"
+"Si può accedere attraverso Vendite->clienti a rimuovendo il filtro "
+"\"Clienti\" dalla ricerca in alto. Quandi accedere alle informazioni del "
+"contatto dell'azienda e validare l'indirizzo nella sezione AvaTax"
 
 #. module: account_avatax_oca
 #: model:ir.model.constraint,message:account_avatax_oca.constraint_avalara_salestax_code_company_uniq
@@ -483,13 +490,17 @@ msgstr ""
 
 #. module: account_avatax_oca
 #: model:ir.actions.act_window,name:account_avatax_oca.action_exemption_code_details
+#: model:ir.ui.menu,name:account_avatax_oca.menu_action_exemption_code_details
+msgid "Entity Use Code"
+msgstr "Codice utilizzo entità"
+
+#. module: account_avatax_oca
 #: model:ir.model,name:account_avatax_oca.model_exemption_code
 #: model:ir.model.fields,field_description:account_avatax_oca.field_account_bank_statement_line__exemption_code_id
 #: model:ir.model.fields,field_description:account_avatax_oca.field_account_move__exemption_code_id
 #: model:ir.model.fields,field_description:account_avatax_oca.field_account_payment__exemption_code_id
 #: model:ir.model.fields,field_description:account_avatax_oca.field_res_partner__property_exemption_code_id
 #: model:ir.model.fields,field_description:account_avatax_oca.field_res_users__property_exemption_code_id
-#: model:ir.ui.menu,name:account_avatax_oca.menu_action_exemption_code_details
 msgid "Exemption Code"
 msgstr "Codice esenzione"
 
@@ -1052,7 +1063,8 @@ msgstr ""
 #: model:ir.model.fields,help:account_avatax_oca.field_res_partner__date_validation
 #: model:ir.model.fields,help:account_avatax_oca.field_res_users__date_validation
 msgid "The date the address was last validated by AvaTax and accepted"
-msgstr "La data dell'ultima validazione e accettazione dell'indirizzo da AvaTax"
+msgstr ""
+"La data dell'ultima validazione e accettazione dell'indirizzo da AvaTax"
 
 #. module: account_avatax_oca
 #: model:ir.model.fields,help:account_avatax_oca.field_res_partner__property_exemption_code_id

@@ -15,7 +15,10 @@
                     string="Purchase Orders"
                     groups="purchase.group_purchase_user"
                 >
-                    <field name="purchase_order_ids" />
+                    <field
+                        name="purchase_order_ids"
+                        context="{'tree_view_ref': 'maintenance_request_purchase.purchase_order_tree'}"
+                    />
                 </page>
             </notebook>
         </field>

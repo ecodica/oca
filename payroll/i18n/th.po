@@ -236,13 +236,13 @@ msgstr ""
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.view_hr_payslip_by_employees
 msgid ""
-"<span colspan=\"4\" nolabel=\"1\">\n"
-"                        This wizard will generate payslips for all selected "
-"employee(s)\n"
-"                        based on the dates and credit note\n"
-"                        specified\n"
-"                        on Payslips Run.\n"
-"                    </span>"
+"<span colspan=\"2\" nolabel=\"1\">\n"
+"                            This wizard will generate payslips for all "
+"selected employee(s)\n"
+"                            based on the dates and credit note\n"
+"                            specified\n"
+"                            on Payslips Run.\n"
+"                        </span>"
 msgstr ""
 
 #. module: payroll
@@ -667,6 +667,7 @@ msgstr "บริษัท"
 #: model:ir.model.fields,field_description:payroll.field_hr_contribution_register__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payroll_structure__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip__company_id
+#: model:ir.model.fields,field_description:payroll.field_hr_payslip_input__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip_line__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip_run__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_salary_rule__company_id
@@ -942,7 +943,6 @@ msgstr ""
 #: model:ir.model,name:payroll.model_hr_employee
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip__employee_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip_line__employee_id
-#: model_terms:ir.ui.view,arch_db:payroll.hr_payslip_view_form
 msgid "Employee"
 msgstr "บุคลากร"
 
@@ -2314,34 +2314,3 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:payroll.hr_payslip_line_view_form
 msgid "total_net"
 msgstr ""
-
-#~ msgid "Input Data"
-#~ msgstr "ข้อมูลอินพุต"
-
-#, python-format
-#~ msgid "Salary Slip of %s for %s"
-#~ msgstr "สลิปเงินเดือน %s (%s)"
-
-#~ msgid "General"
-#~ msgstr "ทั่วไป"
-
-#~ msgid "Draft Slip"
-#~ msgstr "ร่างสลิป"
-
-#~ msgid "Total Working Days"
-#~ msgstr "วันทำงานทั้งหมด"
-
-#~ msgid "Details By Salary Rule Category"
-#~ msgstr "รายละเอียดตามหมวดเกณฑ์เงินเดือน"
-
-#~ msgid "Account"
-#~ msgstr "บัญชี"
-
-#~ msgid "French Payroll"
-#~ msgstr "French Payroll"
-
-#~ msgid "Indian Payroll"
-#~ msgstr "Indian Payroll"
-
-#~ msgid "Refund: "
-#~ msgstr "คืนเงิน:"

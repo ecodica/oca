@@ -37,6 +37,11 @@ msgid "Maintenance Requests Count"
 msgstr "Nombre de peticions de manteniment"
 
 #. module: maintenance_request_purchase
+#: model_terms:ir.ui.view,arch_db:maintenance_request_purchase.purchase_order_tree
+msgid "Open"
+msgstr ""
+
+#. module: maintenance_request_purchase
 #: model:ir.model,name:maintenance_request_purchase.model_purchase_order
 msgid "Purchase Order"
 msgstr "Comanda de compra"

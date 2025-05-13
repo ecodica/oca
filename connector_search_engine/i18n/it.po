@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-01-24 17:33+0000\n"
+"PO-Revision-Date: 2025-04-28 09:23+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -14,33 +14,33 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.17\n"
+"X-Generator: Weblate 5.10.4\n"
 
 #. module: connector_search_engine
 #: model_terms:ir.ui.view,arch_db:connector_search_engine.se_backend_form_view
 msgid ""
 "<span class=\"o_stat_text\" attrs=\"{'invisible': [('binding_count', '&lt;', "
 "2)]}\"> Bindings</span>\n"
-"                                <span class=\"o_stat_text\" attrs="
-"\"{'invisible': [('binding_count', '&gt;', 1)]}\"> Binding</span>"
+"                                <span class=\"o_stat_text\" "
+"attrs=\"{'invisible': [('binding_count', '&gt;', 1)]}\"> Binding</span>"
 msgstr ""
 "<span class=\"o_stat_text\" attrs=\"{'invisible': [('binding_count', '&lt;', "
 "2)]}\"> Collegamenti</span>\n"
-"                                <span class=\"o_stat_text\" attrs="
-"\"{'invisible': [('binding_count', '&gt;', 1)]}\"> Collegamento</span>"
+"                                <span class=\"o_stat_text\" "
+"attrs=\"{'invisible': [('binding_count', '&gt;', 1)]}\"> Collegamento</span>"
 
 #. module: connector_search_engine
 #: model_terms:ir.ui.view,arch_db:connector_search_engine.se_index_form_view
 msgid ""
 "<span class=\"o_stat_text\" attrs=\"{'invisible': [('count_all', '&lt;', "
 "2)]}\"> Bindings</span>\n"
-"                                <span class=\"o_stat_text\" attrs="
-"\"{'invisible': [('count_all', '&gt;', 1)]}\"> Binding</span>"
+"                                <span class=\"o_stat_text\" "
+"attrs=\"{'invisible': [('count_all', '&gt;', 1)]}\"> Binding</span>"
 msgstr ""
 "<span class=\"o_stat_text\" attrs=\"{'invisible': [('count_all', '&lt;', "
 "2)]}\"> Collegamenti</span>\n"
-"                                <span class=\"o_stat_text\" attrs="
-"\"{'invisible': [('count_all', '&gt;', 1)]}\"> Collegamento</span>"
+"                                <span class=\"o_stat_text\" "
+"attrs=\"{'invisible': [('count_all', '&gt;', 1)]}\"> Collegamento</span>"
 
 #. module: connector_search_engine
 #. odoo-python
@@ -621,6 +621,11 @@ msgstr "Ricalcola tutti i collegamenti"
 #: model:ir.model.fields.selection,name:connector_search_engine.selection__se_binding__state__recomputing
 msgid "Recomputing"
 msgstr "Ricalcolo"
+
+#. module: connector_search_engine
+#: model:ir.model.fields,field_description:connector_search_engine.field_se_binding__record_id
+msgid "Record"
+msgstr "Record"
 
 #. module: connector_search_engine
 #: model:ir.model.fields,field_description:connector_search_engine.field_se_binding__res_id

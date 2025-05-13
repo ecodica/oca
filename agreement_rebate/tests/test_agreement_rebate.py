@@ -8,13 +8,21 @@ from odoo import fields
 from odoo.tests.common import Form, TransactionCase, tagged
 
 
-@freeze_time("2022-02-01 09:30:00")
 @tagged("-at_install", "post_install")
 class TestAgreementRebate(TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
         cls.env = cls.env(context=dict(cls.env.context, tracking_disable=True))
+        if not cls.env.company.chart_template_id:
+            # Load a CoA if there's none in current company
+            coa = cls.env.ref("l10n_generic_coa.configurable_chart_template", False)
+            if not coa:
+                # Load the first available CoA
+                coa = cls.env["account.chart.template"].search(
+                    [("visible", "=", True)], limit=1
+                )
+            coa.try_loading(company=cls.env.company, install_demo=False)
         cls.Partner = cls.env["res.partner"]
         cls.ProductTemplate = cls.env["product.template"]
         cls.Product = cls.env["product.product"]
@@ -108,9 +116,7 @@ class TestAgreementRebate(TransactionCase):
         move_form = Form(
             cls.env["account.move"].with_context(default_move_type="out_invoice")
         )
-        move_form.invoice_date = fields.Date.from_string(
-            "{}-01-01".format(fields.Date.today().year)
-        )
+        move_form.invoice_date = fields.Date.from_string("2022-01-01")
         move_form.ref = "Test Customer Invoice"
         move_form.partner_id = partner
         products = (
@@ -133,6 +139,7 @@ class TestAgreementRebate(TransactionCase):
                     line_form.price_unit = 500.00
 
     # Create Agreements rebates for customers for all available types
+    @freeze_time("2022-02-01 09:30:00")
     def create_agreements_rebate(self, rebate_type, partner):
         agreement = self.Agreement.create(
             {
@@ -351,7 +358,7 @@ class TestAgreementRebate(TransactionCase):
 
     def _create_invoice_wizard(self):
         sale_journal = self.env["account.journal"].search(
-            [("type", "=", "sale")], limit=1
+            [("type", "=", "sale"), ("company_id", "=", self.env.company.id)], limit=1
         )
         wiz_create_invoice_form = Form(self.env["agreement.invoice.create.wiz"])
         wiz_create_invoice_form.date_from = "2022-01-01"
@@ -362,6 +369,7 @@ class TestAgreementRebate(TransactionCase):
         wiz_create_invoice_form.agreement_type_ids.add(self.agreement_type)
         return wiz_create_invoice_form.save()
 
+    @freeze_time("2022-02-01 09:30:00")
     def test_invoice_agreements(self):
         # Create some rebate settlements
         agreement = self._create_agreement_product_filter("section_total")

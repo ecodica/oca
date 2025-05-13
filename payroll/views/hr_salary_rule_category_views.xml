@@ -33,6 +33,7 @@
                     </notebook>
                     <group string="Notes">
                         <field
+                            colspan="2"
                             name="note"
                             placeholder="Add your notes or category explanation here..."
                             nolabel="1"

@@ -237,13 +237,13 @@ msgstr ""
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.view_hr_payslip_by_employees
 msgid ""
-"<span colspan=\"4\" nolabel=\"1\">\n"
-"                        This wizard will generate payslips for all selected "
-"employee(s)\n"
-"                        based on the dates and credit note\n"
-"                        specified\n"
-"                        on Payslips Run.\n"
-"                    </span>"
+"<span colspan=\"2\" nolabel=\"1\">\n"
+"                            This wizard will generate payslips for all "
+"selected employee(s)\n"
+"                            based on the dates and credit note\n"
+"                            specified\n"
+"                            on Payslips Run.\n"
+"                        </span>"
 msgstr ""
 
 #. module: payroll
@@ -670,6 +670,7 @@ msgstr "Vállalatok"
 #: model:ir.model.fields,field_description:payroll.field_hr_contribution_register__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payroll_structure__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip__company_id
+#: model:ir.model.fields,field_description:payroll.field_hr_payslip_input__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip_line__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip_run__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_salary_rule__company_id
@@ -950,7 +951,6 @@ msgstr ""
 #: model:ir.model,name:payroll.model_hr_employee
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip__employee_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip_line__employee_id
-#: model_terms:ir.ui.view,arch_db:payroll.hr_payslip_view_form
 msgid "Employee"
 msgstr "Alkalmazott"
 
@@ -2346,83 +2346,3 @@ msgstr "az eredmény egy változóhoz lesz rendelve"
 #: model_terms:ir.ui.view,arch_db:payroll.hr_payslip_line_view_form
 msgid "total_net"
 msgstr ""
-
-#~ msgid "Input Data"
-#~ msgstr "Adatbevitel"
-
-#, python-format
-#~ msgid "Salary Slip of %s for %s"
-#~ msgstr "%s fizetési jegyzéke, időszak: %s"
-
-#, python-format
-#~ msgid "Wrong percentage base or quantity defined for salary rule %s (%s)."
-#~ msgstr ""
-#~ "Nem megfelelően lett a százalék alapja vagy mennyisége meghatározva ennek "
-#~ "a fizetési szabálynak %s (%s)."
-
-#, python-format
-#~ msgid "Wrong quantity defined for salary rule %s (%s)."
-#~ msgstr ""
-#~ "Nem megfelelően lett a mennyisége meghatározva ennek a fizetési "
-#~ "szabálynak %s (%s)."
-
-#, python-format
-#~ msgid "Wrong range condition defined for salary rule %s (%s)."
-#~ msgstr ""
-#~ "Rosszúl lett a tartomány meghatározva ehhez a fizetési szabályhoz %s (%s)."
-
-#~ msgid "General"
-#~ msgstr "Általános"
-
-#~ msgid "Draft Slip"
-#~ msgstr "Jegyzék tervezet"
-
-#~ msgid "Total Working Days"
-#~ msgstr "Összes munka nap"
-
-#~ msgid "Details By Salary Rule Category"
-#~ msgstr "Részletek a fizetési szabály kategóriánként"
-
-#~ msgid "Wrong python code defined for salary rule %s (%s)."
-#~ msgstr "Téves python kód meghatározás erre a fizetési szabályra %s (%s)."
-
-#~ msgid "Wrong python condition defined for salary rule %s (%s)."
-#~ msgstr ""
-#~ "Téves python feltétel meghatározás erre a fizetési szabályra %s (%s)."
-
-#~ msgid "PaySlip Lines By Conribution Register"
-#~ msgstr "Fizetési jegyzék a Hozzájárulások iktatása szerint"
-
-#~ msgid ""
-#~ "* When the payslip is created the status is 'Draft'\n"
-#~ "                \n"
-#~ "* If the payslip is under verification, the status is 'Waiting'.\n"
-#~ "                \n"
-#~ "* If the payslip is confirmed then status is set to 'Done'.\n"
-#~ "                \n"
-#~ "* When user cancel payslip the status is 'Rejected'."
-#~ msgstr ""
-#~ "* Fizetési jegyzék létrehozásakor annak állapota 'Tervezet'.           \n"
-#~ "* Ha a fizetési jegyzék ellenőrzés alatt van akkor annak az állapota "
-#~ "'Várakozó'.            \n"
-#~ "* Ha a fizetési jegyzék visszaigazolt akkor annak állapota "
-#~ "'Elvégezve'.           \n"
-#~ "* amikor egy fizetési jegyzéket visszavon akkor annak az állapota "
-#~ "'Elutasítva'."
-
-#~ msgid "Account"
-#~ msgstr "Főkönyvi számla"
-
-#~ msgid "French Payroll"
-#~ msgstr "Francia bérszámfelytés"
-
-#~ msgid "Indian Payroll"
-#~ msgstr "Indiai bérszámfejtés"
-
-#~ msgid "Refund: "
-#~ msgstr "Visszatérítés: "
-
-#~ msgid "You cannot delete a payslip which is not draft or cancelled!"
-#~ msgstr ""
-#~ "Nem tud olyan fizetési jegyzéket törölni mely nem tervezet vagy "
-#~ "visszavont!"

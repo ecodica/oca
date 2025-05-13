@@ -28,9 +28,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n"
-"%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
-"%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && "
+"(n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && "
+"n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
 #. module: payroll
 #: model:ir.actions.report,print_report_name:payroll.action_report_payslip
@@ -245,13 +245,13 @@ msgstr ""
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.view_hr_payslip_by_employees
 msgid ""
-"<span colspan=\"4\" nolabel=\"1\">\n"
-"                        This wizard will generate payslips for all selected "
-"employee(s)\n"
-"                        based on the dates and credit note\n"
-"                        specified\n"
-"                        on Payslips Run.\n"
-"                    </span>"
+"<span colspan=\"2\" nolabel=\"1\">\n"
+"                            This wizard will generate payslips for all "
+"selected employee(s)\n"
+"                            based on the dates and credit note\n"
+"                            specified\n"
+"                            on Payslips Run.\n"
+"                        </span>"
 msgstr ""
 
 #. module: payroll
@@ -678,6 +678,7 @@ msgstr "Firmy"
 #: model:ir.model.fields,field_description:payroll.field_hr_contribution_register__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payroll_structure__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip__company_id
+#: model:ir.model.fields,field_description:payroll.field_hr_payslip_input__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip_line__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip_run__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_salary_rule__company_id
@@ -953,7 +954,6 @@ msgstr ""
 #: model:ir.model,name:payroll.model_hr_employee
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip__employee_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip_line__employee_id
-#: model_terms:ir.ui.view,arch_db:payroll.hr_payslip_view_form
 msgid "Employee"
 msgstr "Pracownik"
 
@@ -2333,64 +2333,3 @@ msgstr "rezultat będzie zależny od zmiennej"
 #: model_terms:ir.ui.view,arch_db:payroll.hr_payslip_line_view_form
 msgid "total_net"
 msgstr ""
-
-#~ msgid "Input Data"
-#~ msgstr "Dane wejściowe"
-
-#, python-format
-#~ msgid "Salary Slip of %s for %s"
-#~ msgstr "Wynagrodzenie %s dla %s"
-
-#, python-format
-#~ msgid "Wrong percentage base or quantity defined for salary rule %s (%s)."
-#~ msgstr ""
-#~ "Reguła wynagrodzenia %s (%s) zawiera niepoprawną podstawę procentu lub "
-#~ "ilość."
-
-#, python-format
-#~ msgid "Wrong quantity defined for salary rule %s (%s)."
-#~ msgstr "Reguła wynagrodzenia %s (%s) zawiera niepoprawną ilość."
-
-#, python-format
-#~ msgid "Wrong range condition defined for salary rule %s (%s)."
-#~ msgstr "Niepoprawny warunek zakresu dla reguły wynagrodzenia %s (%s)."
-
-#~ msgid "General"
-#~ msgstr "Ogólne"
-
-#~ msgid "Draft Slip"
-#~ msgstr "Projekt listy płac"
-
-#~ msgid "Total Working Days"
-#~ msgstr "Suma dni roboczych"
-
-#~ msgid "Details By Salary Rule Category"
-#~ msgstr "Szczegóły wg kategorii reguł wynagrodzenia"
-
-#~ msgid "Advantage Name"
-#~ msgstr "Nazwa dodatku"
-
-#~ msgid "Wrong python code defined for salary rule %s (%s)."
-#~ msgstr "Niepoprawny kod python dla reguły wynagrodzenia %s (%s)."
-
-#~ msgid "Wrong python condition defined for salary rule %s (%s)."
-#~ msgstr "Niepoprawny warunek python dla reguły wynagrodzenia %s (%s)."
-
-#~ msgid "PaySlip Lines By Conribution Register"
-#~ msgstr "Pozycje paska wg funduszy"
-
-#~ msgid "Account"
-#~ msgstr "Konto"
-
-#~ msgid "French Payroll"
-#~ msgstr "Francuskie wynagrodzenie"
-
-#~ msgid "Indian Payroll"
-#~ msgstr "Indyjskie wynagrodzenie"
-
-#~ msgid "Refund: "
-#~ msgstr "Refundacja: "
-
-#~ msgid "You cannot delete a payslip which is not draft or cancelled!"
-#~ msgstr ""
-#~ "Nie możesz usuwać paska, który nie jest w stanie Projekt lub Anulowane"

@@ -234,13 +234,13 @@ msgstr ""
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.view_hr_payslip_by_employees
 msgid ""
-"<span colspan=\"4\" nolabel=\"1\">\n"
-"                        This wizard will generate payslips for all selected "
-"employee(s)\n"
-"                        based on the dates and credit note\n"
-"                        specified\n"
-"                        on Payslips Run.\n"
-"                    </span>"
+"<span colspan=\"2\" nolabel=\"1\">\n"
+"                            This wizard will generate payslips for all "
+"selected employee(s)\n"
+"                            based on the dates and credit note\n"
+"                            specified\n"
+"                            on Payslips Run.\n"
+"                        </span>"
 msgstr ""
 
 #. module: payroll
@@ -665,6 +665,7 @@ msgstr "Firmaer"
 #: model:ir.model.fields,field_description:payroll.field_hr_contribution_register__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payroll_structure__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip__company_id
+#: model:ir.model.fields,field_description:payroll.field_hr_payslip_input__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip_line__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip_run__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_salary_rule__company_id
@@ -940,7 +941,6 @@ msgstr ""
 #: model:ir.model,name:payroll.model_hr_employee
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip__employee_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip_line__employee_id
-#: model_terms:ir.ui.view,arch_db:payroll.hr_payslip_view_form
 msgid "Employee"
 msgstr "Ansatt"
 
@@ -2312,41 +2312,3 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:payroll.hr_payslip_line_view_form
 msgid "total_net"
 msgstr ""
-
-#~ msgid "Input Data"
-#~ msgstr "Inndata"
-
-#, python-format
-#~ msgid "Wrong quantity defined for salary rule %s (%s)."
-#~ msgstr "Feil antall definert for lønnsregel %s (%s)."
-
-#~ msgid "General"
-#~ msgstr "Generell"
-
-#~ msgid "Draft Slip"
-#~ msgstr "Utkast til lønnsslipp"
-
-#~ msgid "Total Working Days"
-#~ msgstr "Totaly antall arbeidsdager"
-
-#~ msgid "Advantage Name"
-#~ msgstr "Fordelsnavn"
-
-#~ msgid "Contract Advantage Templates"
-#~ msgstr "Kontraktsfordelsmaler"
-
-#~ msgid "Account"
-#~ msgstr "Konto"
-
-#~ msgid "French Payroll"
-#~ msgstr "Fransk lønningsavregning"
-
-#~ msgid "Indian Payroll"
-#~ msgstr "Indisk lønningssystem"
-
-#~ msgid "Payroll rules that apply to your country"
-#~ msgstr "Lønnsregler som gjelder landet ditt"
-
-#~ msgid "You cannot delete a payslip which is not draft or cancelled!"
-#~ msgstr ""
-#~ "Du kan ikke slette en lønnsslipp som ikke er et utkast eller kansellert!"

@@ -25,7 +25,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-08 23:24+0000\n"
-"PO-Revision-Date: 2025-01-27 11:06+0000\n"
+"PO-Revision-Date: 2025-03-14 11:06+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (https://www.transifex.com/odoo/teams/41243/it/)\n"
 "Language: it\n"
@@ -33,7 +33,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.10.2\n"
 
 #. module: payroll
 #: model:ir.actions.report,print_report_name:payroll.action_report_payslip
@@ -89,8 +89,8 @@ msgid ""
 "%(err)s\n"
 msgstr ""
 "\n"
-"Condizione Pyhon errata definita per la regola retribuzione %(nm)s (%(code)s)"
-" per dipendente %(ee)s.\n"
+"Condizione Pyhon errata definita per la regola retribuzione %(nm)s "
+"(%(code)s) per dipendente %(ee)s.\n"
 "Questo è l'errore ricevuto:\n"
 "\n"
 "%(err)s\n"
@@ -131,8 +131,8 @@ msgid ""
 "* When user cancel payslip the status is 'Rejected'."
 msgstr ""
 "* Quando viene creata la busta paga è in stato 'Bozza'.             \n"
-"* Se la busta paga è in verifica, lo stato è 'Calcola scheda'.              "
-"\n"
+"* Se la busta paga è in verifica, lo stato è 'Calcola "
+"scheda'.              \n"
 "* Se la busta paga è confermata lo stato è 'Completata'.             \n"
 "* Quando l'utente annulla la busta paga lo stato è 'Respinta'."
 
@@ -326,21 +326,21 @@ msgstr ""
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.view_hr_payslip_by_employees
 msgid ""
-"<span colspan=\"4\" nolabel=\"1\">\n"
-"                        This wizard will generate payslips for all selected "
-"employee(s)\n"
-"                        based on the dates and credit note\n"
-"                        specified\n"
-"                        on Payslips Run.\n"
-"                    </span>"
+"<span colspan=\"2\" nolabel=\"1\">\n"
+"                            This wizard will generate payslips for all "
+"selected employee(s)\n"
+"                            based on the dates and credit note\n"
+"                            specified\n"
+"                            on Payslips Run.\n"
+"                        </span>"
 msgstr ""
-"<span colspan=\"4\" nolabel=\"1\">\n"
-"                        Questa procedura guidata genererà le buste paga per "
-"i dipendenti selezionati\n"
-"                        in base alle date e alle note di credito\n"
-"                        indicate\n"
-"                        nell'esecuzione delle buste paga.\n"
-"                    </span>"
+"<span colspan=\"2\" nolabel=\"1\">\n"
+"                            Questa procedura guidata genererà le buste paga "
+"per tutti i dipendenti selezionati\n"
+"                            in base alle date e alle note di credito\n"
+"                            indicate\n"
+"                            in esecuzione buste paga.\n"
+"                        </span>"
 
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.hr_salary_rule_view_form
@@ -784,6 +784,7 @@ msgstr "Aziende"
 #: model:ir.model.fields,field_description:payroll.field_hr_contribution_register__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payroll_structure__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip__company_id
+#: model:ir.model.fields,field_description:payroll.field_hr_payslip_input__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip_line__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip_run__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_salary_rule__company_id
@@ -1069,7 +1070,6 @@ msgstr "Righe busta paga filtrate dinamicamente"
 #: model:ir.model,name:payroll.model_hr_employee
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip__employee_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip_line__employee_id
-#: model_terms:ir.ui.view,arch_db:payroll.hr_payslip_view_form
 msgid "Employee"
 msgstr "Dipendente"
 
@@ -2435,8 +2435,8 @@ msgid ""
 "Wrong percentage base or quantity defined for salary rule %(nm)s (%(code)s) "
 "for employee %(ee)s."
 msgstr ""
-"Errore base percentuale o quantità definite per la regola retribuzione %(nm)"
-"s (%(code)s) per il dipendente %(ee)s."
+"Errore base percentuale o quantità definite per la regola retribuzione "
+"%(nm)s (%(code)s) per il dipendente %(ee)s."
 
 #. module: payroll
 #. odoo-python
@@ -2499,136 +2499,19 @@ msgstr "il risultato sarà influenzato da una variabile"
 msgid "total_net"
 msgstr "total_net"
 
-#~ msgid "Input Data"
-#~ msgstr "Dati d'ingresso"
-
-#, python-format
-#~ msgid "Salary Slip of %s for %s"
-#~ msgstr "Cedolino di %s per %s"
-
-#~ msgid "Post payroll slips in accounting"
-#~ msgstr "Registra buste paga in contabilità"
-
-#, python-format
-#~ msgid "Wrong quantity defined for salary rule %s (%s)."
-#~ msgstr "Quantità errata definita per la regola stipendio %s (%s)."
-
-#, python-format
-#~ msgid "Wrong range condition defined for salary rule %s (%s)."
-#~ msgstr ""
-#~ "Definita condizione intervallo errata per la regola salario %s (%s)."
-
-#~ msgid "General"
-#~ msgstr "Generale"
-
-#~ msgid "Draft Slip"
-#~ msgstr "Busta paga in bozza"
-
-#~ msgid "Total Working Days"
-#~ msgstr "Giorni Lavorativi Totali"
-
-#~ msgid "Details By Salary Rule Category"
-#~ msgstr "Dettagli per categoria regola stipendio"
-
-#~ msgid "Advantage Name"
-#~ msgstr "Nome beneficio"
-
-#~ msgid "Contract Advantage Templates"
-#~ msgstr "Modelli beneficio contratto"
-
-#~ msgid "Default value for this advantage"
-#~ msgstr "Valore predefinito per questo beneficio"
-
-#~ msgid "Employee's Advantage on Contract"
-#~ msgstr "Beneficio nel contratto dipendente"
-
-#~ msgid "Lower Bound"
-#~ msgstr "Limite inferiore"
-
-#~ msgid "Lower bound authorized by the employer for this advantage"
-#~ msgstr ""
-#~ "Limite inferiore autorizzato dal datore di lavoro per questo beneficio"
-
-#~ msgid "Upper Bound"
-#~ msgstr "Limite superiore"
-
-#~ msgid "Upper bound authorized by the employer for this advantage"
-#~ msgstr ""
-#~ "Limite superiore autorizzato dal datore di lavoro per questo beneficio"
-
-#~ msgid "Wrong python code defined for salary rule %s (%s)."
-#~ msgstr "Codice python errato definito per la regola stipendio %s (%s)."
-
-#~ msgid "Wrong python condition defined for salary rule %s (%s)."
-#~ msgstr "Condizione python errata definita per la regola stipendio %s (%s)."
-
 #~ msgid ""
-#~ "<span colspan=\"4\" nolabel=\"1\">This wizard will generate payslips for "
-#~ "all selected employee(s) based on the dates and credit note specified on "
-#~ "Payslips Run.</span>"
+#~ "<span colspan=\"4\" nolabel=\"1\">\n"
+#~ "                        This wizard will generate payslips for all "
+#~ "selected employee(s)\n"
+#~ "                        based on the dates and credit note\n"
+#~ "                        specified\n"
+#~ "                        on Payslips Run.\n"
+#~ "                    </span>"
 #~ msgstr ""
-#~ "<span colspan=\"4\" nolabel=\"1\">Questa procedura genera le buste paga "
-#~ "per tutti i dipendenti selezionati, in base alle date e alla nota di "
-#~ "credito specificate nell'esecuzione.</span>"
-
-#~ msgid ""
-#~ "A contribution register is a third party involved in the salary\n"
-#~ "            payment of the employees. It can be the social security, the\n"
-#~ "            state or anyone that collect or inject money on payslips."
-#~ msgstr ""
-#~ "Un registro contributi è un terzo coinvolto nel pagamento degli\n"
-#~ "            stipendi dei dipendenti. Può essere la previdenza sociale, lo "
-#~ "Stato\n"
-#~ "            o chiunque raccolga o immetta denaro nelle buste paga."
-
-#~ msgid "PaySlip Lines By Conribution Register"
-#~ msgstr "Righe busta paga per registro contributi"
-
-#~ msgid ""
-#~ "* When the payslip is created the status is 'Draft'\n"
-#~ "                \n"
-#~ "* If the payslip is under verification, the status is 'Waiting'.\n"
-#~ "                \n"
-#~ "* If the payslip is confirmed then status is set to 'Done'.\n"
-#~ "                \n"
-#~ "* When user cancel payslip the status is 'Rejected'."
-#~ msgstr ""
-#~ "* Quando viene creata una busta paga, lo stato diventa «Bozza»\n"
-#~ "                \n"
-#~ "* Se la busta paga è in fase di verifica, lo stato risulta «In attesa».\n"
-#~ "                \n"
-#~ "* Se la busta paga viene confermata, lo stato viene impostato a "
-#~ "«Completata».\n"
-#~ "                \n"
-#~ "* Quando un utente annulla la busta paga, lo stato passa a «Respinta»."
-
-#~ msgid "<span class=\"o_form_label\">Payroll Rules</span>"
-#~ msgstr "<span class=\"o_form_label\">Regole libro paga</span>"
-
-#~ msgid "Account"
-#~ msgstr "Conto"
-
-#~ msgid "Belgium Payroll"
-#~ msgstr "Libro paga belga"
-
-#~ msgid "Choose a Payroll Localization"
-#~ msgstr "Scegli localizzazione per la busta paga"
-
-#~ msgid "Conveyance Allowance For Gravie"
-#~ msgstr "Indennità di trasporto"
-
-#~ msgid "French Payroll"
-#~ msgstr "Libro paga francese"
-
-#~ msgid "Indian Payroll"
-#~ msgstr "Libro paga indiano"
-
-#~ msgid "Payroll rules that apply to your country"
-#~ msgstr "Regole libro paga applicate alla nazione"
-
-#~ msgid "Payslip 'Date From' must be earlier 'Date To'."
-#~ msgstr ""
-#~ "Nella busta paga, \"Dalla data\" deve essere precedente ad \"Alla data\"."
-
-#~ msgid "You cannot delete a payslip which is not draft or cancelled!"
-#~ msgstr "Impossibile eliminare una busta paga non in bozza o annullata."
+#~ "<span colspan=\"4\" nolabel=\"1\">\n"
+#~ "                        Questa procedura guidata genererà le buste paga "
+#~ "per i dipendenti selezionati\n"
+#~ "                        in base alle date e alle note di credito\n"
+#~ "                        indicate\n"
+#~ "                        nell'esecuzione delle buste paga.\n"
+#~ "                    </span>"

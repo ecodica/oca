@@ -89,7 +89,7 @@ class AccountBankStatementLine(models.Model):
         store=False,
         default=False,
         prefetch=False,
-        domain=[("rule_type", "=", "writeoff_button")],
+        domain="[('rule_type', '=', 'writeoff_button'), ('company_id', '=', company_id)]",
     )
     manual_name = fields.Char(store=False, default=False, prefetch=False)
     manual_amount = fields.Monetary(
@@ -572,11 +572,15 @@ class AccountBankStatementLine(models.Model):
             liquidity_amount += line_data["amount"]
             if line_data["kind"] == "liquidity":
                 default_name = line_data["name"]
+        partner = (
+            reconcile_model._get_partner_from_mapping(self) or self._retrieve_partner()
+        )
         for line in reconcile_model._get_write_off_move_lines_dict(
-            -liquidity_amount, self._retrieve_partner().id
+            -liquidity_amount, partner.id
         ):
             new_line = line.copy()
             new_line["name"] = new_line.get("name") or default_name
+            new_line["partner_id"] = partner and partner.name_get()[0] or False
             amount = line.get("balance")
             if self.foreign_currency_id:
                 amount = self.foreign_currency_id.compute(
@@ -681,13 +685,16 @@ class AccountBankStatementLine(models.Model):
                         reconciled_line.move_id.journal_id
                         == self.company_id.currency_exchange_journal_id
                     ):
-                        reconcile_auxiliary_id, lines = self._get_reconcile_line(
-                            reconciled_line.move_id.line_ids - reconciled_line,
-                            "other",
-                            from_unreconcile=False,
-                            move=True,
-                        )
-                        data += lines
+                        for rl_item in (
+                            reconciled_line.move_id.line_ids - reconciled_line
+                        ):
+                            reconcile_auxiliary_id, lines = self._get_reconcile_line(
+                                rl_item,
+                                "other",
+                                from_unreconcile=False,
+                                move=True,
+                            )
+                            data += lines
                         continue
                     partial = partial_lines.filtered(
                         lambda r: r.debit_move_id == reconciled_line
@@ -1263,3 +1270,11 @@ class AccountBankStatementLine(models.Model):
         for line in lines:
             self._add_account_move_line(line, keep_current=True)
         return res
+
+    def _retrieve_partner(self):
+        if self.env.context.get("skip_retrieve_partner"):
+            # This hook can be used, for example, when importing files.
+            # With large databases, we already have the information, moreover,
+            # the data might be preloaded, so it has no sense to import it again
+            return self.partner_id
+        return super()._retrieve_partner()

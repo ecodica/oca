@@ -67,7 +67,9 @@ class HelpdeskTicket(models.Model):
         index=True,
         domain="['|',('team_ids', '=', team_id),('team_ids','=',False)]",
     )
-    partner_id = fields.Many2one(comodel_name="res.partner", string="Contact")
+    partner_id = fields.Many2one(
+        comodel_name="res.partner", string="Contact", check_company=True
+    )
     commercial_partner_id = fields.Many2one(
         string="Commercial Partner",
         store=True,
@@ -161,6 +163,8 @@ class HelpdeskTicket(models.Model):
                 vals["number"] = self._prepare_ticket_number(vals)
             if vals.get("user_id") and not vals.get("assigned_date"):
                 vals["assigned_date"] = fields.Datetime.now()
+            if not vals.get("team_id") and vals.get("category_id"):
+                vals["team_id"] = self._prepare_team_id(vals)
             if vals.get("team_id"):
                 team = self.env["helpdesk.ticket.team"].browse([vals["team_id"]])
                 if team.company_id:
@@ -214,6 +218,11 @@ class HelpdeskTicket(models.Model):
         for item in self:
             item.access_url = "/my/ticket/%s" % (item.id)
         return res
+
+    def _prepare_team_id(self, values):
+        category = self.env["helpdesk.ticket.category"].browse(values["category_id"])
+        if category.default_team_id:
+            return category.default_team_id.id
 
     # ---------------------------------------------------
     # Mail gateway

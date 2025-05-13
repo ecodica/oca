@@ -123,8 +123,8 @@ msgid ""
 "* If the payslip is confirmed then status is set to 'Done'.             \n"
 "* When user cancel payslip the status is 'Rejected'."
 msgstr ""
-"* Quando o recibo de vencimento é criado, o estado é 'Rascunho'.             "
-"\n"
+"* Quando o recibo de vencimento é criado, o estado é "
+"'Rascunho'.             \n"
 "* Se o recibo de vencimento estiver em verificação, o estado é 'Calcula "
 "Recibo'.              \n"
 "* Se o recibo de pagamento for confirmado, o status será definido como "
@@ -254,7 +254,8 @@ msgstr ""
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.hr_salary_rule_view_form
 msgid "<code>result_rate:</code> the rate that should be applied to \"result\""
-msgstr "<code>result_rate:</code> a taxa que deve ser aplicada ao \"resultado\""
+msgstr ""
+"<code>result_rate:</code> a taxa que deve ser aplicada ao \"resultado\""
 
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.hr_salary_rule_view_form
@@ -305,8 +306,8 @@ msgstr ""
 "        <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
 "            Car@ <t t-out=\"object.employee_id.name\"></t>,\n"
 "            <br><br>\n"
-"            Encontrará em anexo o recibo de vencimento para <t t-out=\"object"
-".payslip_run_id.name\"></t>.\n"
+"            Encontrará em anexo o recibo de vencimento para <t t-"
+"out=\"object.payslip_run_id.name\"></t>.\n"
 "            <br><br>\n"
 "            Não hesite em contactar-nos caso tenha alguma dúvida.\n"
 "            <br><br>\n"
@@ -318,21 +319,14 @@ msgstr ""
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.view_hr_payslip_by_employees
 msgid ""
-"<span colspan=\"4\" nolabel=\"1\">\n"
-"                        This wizard will generate payslips for all selected "
-"employee(s)\n"
-"                        based on the dates and credit note\n"
-"                        specified\n"
-"                        on Payslips Run.\n"
-"                    </span>"
+"<span colspan=\"2\" nolabel=\"1\">\n"
+"                            This wizard will generate payslips for all "
+"selected employee(s)\n"
+"                            based on the dates and credit note\n"
+"                            specified\n"
+"                            on Payslips Run.\n"
+"                        </span>"
 msgstr ""
-"<span colspan=\"4\" nolabel=\"1\">\n"
-"                        Este assistente Irá gerar recibos de vencimento para "
-"todos os funcionários selecionados\n"
-"                        com base nas datas e nota de crédito\n"
-"                        especificadas\n"
-"                        no Processamento de Remunerações.\n"
-"                    </span>"
 
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.hr_salary_rule_view_form
@@ -776,6 +770,7 @@ msgstr "Empresas"
 #: model:ir.model.fields,field_description:payroll.field_hr_contribution_register__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payroll_structure__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip__company_id
+#: model:ir.model.fields,field_description:payroll.field_hr_payslip_input__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip_line__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip_run__company_id
 #: model:ir.model.fields,field_description:payroll.field_hr_salary_rule__company_id
@@ -1061,7 +1056,6 @@ msgstr "Linhas de Recibo de Vencimento Dinâmicas Filtradas"
 #: model:ir.model,name:payroll.model_hr_employee
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip__employee_id
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip_line__employee_id
-#: model_terms:ir.ui.view,arch_db:payroll.hr_payslip_view_form
 msgid "Employee"
 msgstr "Funcionário"
 
@@ -1904,7 +1898,8 @@ msgstr "Impedir Cálculo na Confirmação"
 #: model:ir.model.fields,help:payroll.field_res_config_settings__prevent_compute_on_confirm
 #: model_terms:ir.ui.view,arch_db:payroll.res_config_settings_view_form
 msgid "Prevent payslips from being recomputed when confirming them"
-msgstr "Impedir que os recibos de vencimento sejam recalculados ao confirmá-los"
+msgstr ""
+"Impedir que os recibos de vencimento sejam recalculados ao confirmá-los"
 
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.view_payslip_lines_contribution_register
@@ -2424,8 +2419,8 @@ msgid ""
 "Wrong percentage base or quantity defined for salary rule %(nm)s (%(code)s) "
 "for employee %(ee)s."
 msgstr ""
-"Base percentual ou quantidade incorreta definida para a regra salarial %(nm)"
-"s (%(code)s) para o funcionário %(ee)s."
+"Base percentual ou quantidade incorreta definida para a regra salarial "
+"%(nm)s (%(code)s) para o funcionário %(ee)s."
 
 #. module: payroll
 #. odoo-python
@@ -2490,65 +2485,19 @@ msgstr "resultado será afetado a uma variável"
 msgid "total_net"
 msgstr "total_net"
 
-#~ msgid "Input Data"
-#~ msgstr "Entrada Dados"
-
-#, python-format
-#~ msgid "Salary Slip of %s for %s"
-#~ msgstr "Recibo Salarial de %s para %s"
-
-#, python-format
-#~ msgid "Wrong percentage base or quantity defined for salary rule %s (%s)."
+#~ msgid ""
+#~ "<span colspan=\"4\" nolabel=\"1\">\n"
+#~ "                        This wizard will generate payslips for all "
+#~ "selected employee(s)\n"
+#~ "                        based on the dates and credit note\n"
+#~ "                        specified\n"
+#~ "                        on Payslips Run.\n"
+#~ "                    </span>"
 #~ msgstr ""
-#~ "Base de percentagem errada ou quantidade definida por regra salarial %s "
-#~ "(%s)."
-
-#, python-format
-#~ msgid "Wrong quantity defined for salary rule %s (%s)."
-#~ msgstr "Quantidade definida está errada para a regra salarial %s (%s)."
-
-#, python-format
-#~ msgid "Wrong range condition defined for salary rule %s (%s)."
-#~ msgstr ""
-#~ "Condição de alcance definida está errada para a regra salarial %s (%s)."
-
-#~ msgid "General"
-#~ msgstr "Geral"
-
-#~ msgid "Draft Slip"
-#~ msgstr "Rascunho do recibo"
-
-#~ msgid "Total Working Days"
-#~ msgstr "Total de dias de trabalho"
-
-#~ msgid "Details By Salary Rule Category"
-#~ msgstr "Detalhes por Categoria da Regra Salarial"
-
-#~ msgid "Wrong python code defined for salary rule %s (%s)."
-#~ msgstr "Código python definido está errado para a regra salarial %s (%s)."
-
-#~ msgid "Wrong python condition defined for salary rule %s (%s)."
-#~ msgstr "Condição python definida está errada para a regra salarial %s (%s)."
-
-#~ msgid "PaySlip Lines By Conribution Register"
-#~ msgstr "Linhas de recibos de vencimento por registo de contribuição"
-
-#~ msgid "Account"
-#~ msgstr "Conta"
-
-#~ msgid "Choose a Payroll Localization"
-#~ msgstr "Escolher uma Localização da Folha de Pagamentos"
-
-#~ msgid "French Payroll"
-#~ msgstr "Folha de pagamentos Francesa"
-
-#~ msgid "Indian Payroll"
-#~ msgstr "Salário"
-
-#~ msgid "Refund: "
-#~ msgstr "Reembolsar: "
-
-#~ msgid "You cannot delete a payslip which is not draft or cancelled!"
-#~ msgstr ""
-#~ "Não pode apagar Recibos de Vencimento que não estão em Rancunho ou "
-#~ "Cancelados!"
+#~ "<span colspan=\"4\" nolabel=\"1\">\n"
+#~ "                        Este assistente Irá gerar recibos de vencimento "
+#~ "para todos os funcionários selecionados\n"
+#~ "                        com base nas datas e nota de crédito\n"
+#~ "                        especificadas\n"
+#~ "                        no Processamento de Remunerações.\n"
+#~ "                    </span>"

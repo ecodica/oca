@@ -8,17 +8,7 @@
         <field name="priority">100</field>
         <field name="arch" type="xml">
             <field name="struct_id" position="before">
-                <field
-                    name="company_id"
-                    groups="base.group_multi_company"
-                    required="1"
-                />
-                <field
-                    name="company_id"
-                    groups="!base.group_multi_company"
-                    required="1"
-                    invisible="1"
-                />
+                <field name="company_id" invisible="1" />
             </field>
             <label for="date_start" position="before">
                 <field
