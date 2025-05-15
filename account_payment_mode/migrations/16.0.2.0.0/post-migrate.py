@@ -7,5 +7,5 @@ from openupgradelib import openupgrade
 def migrate(env, version):
     """Migrate note field from Text to Html"""
     openupgrade.convert_field_to_html(
-        env.cr, "account_payment_mode", "note", "note", True
+        env.cr, "account_payment_mode", "note", "note", False, True
     )
