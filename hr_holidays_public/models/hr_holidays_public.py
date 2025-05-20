@@ -145,7 +145,7 @@ class HrHolidaysPublic(models.Model):
             partner = employee.address_id
         if partner_id:
             if partner:
-                _logger.info(
+                _logger.warning(
                     "Both 'employee_id' and 'partner_id' were provided in the "
                     "method's parameters. Ignoring 'employee_id'."
                 )

@@ -1,5 +1,7 @@
+# Copyright 2025 Jacques-Etienne Baudoux (BCIM) <je@bcim.be>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
-from odoo import fields, models
+
+from odoo import api, fields, models
 
 
 class StockReleaseChannel(models.Model):
@@ -16,27 +18,18 @@ class StockReleaseChannel(models.Model):
         ),
     )
 
-    def filter_release_channel_partner_window(self, picking, partner):
-        channels = self
-        if (
-            not partner.delivery_time_preference
-            or partner.delivery_time_preference == "anytime"
-        ):
-            return channels
+    delivery_date_weekday = fields.Integer(
+        compute="_compute_delivery_date_weekday",
+        store=True,
+    )
 
+    # Migration note: shipment_date will be renamed to delivery_date
+    @api.depends(
+        "shipment_date",
+    )
+    def _compute_delivery_date_weekday(self):
         for channel in self:
-            if not channel.shipment_date:
-                continue
-            shipment_datetime = fields.Datetime.to_datetime(channel.shipment_date)
-            if channel.process_end_date:
-                shipment_datetime = shipment_datetime.replace(
-                    hour=channel.process_end_date.hour,
-                    minute=channel.process_end_date.minute,
-                )
-            if (
-                channel.respect_partner_delivery_time_windows
-                and not picking.sale_id.commitment_date
-                and not partner.is_in_delivery_window(shipment_datetime)
-            ):
-                channels -= channel
-        return channels
+            if channel.shipment_date:
+                channel.delivery_date_weekday = channel.shipment_date.weekday()
+            else:
+                channel.delivery_date_weekday = -1
