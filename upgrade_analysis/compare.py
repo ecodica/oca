@@ -10,6 +10,7 @@
 
 import collections
 import copy
+from ast import literal_eval
 
 try:
     from odoo.addons.openupgrade_scripts import apriori
@@ -128,6 +129,26 @@ def fieldprint(old, new, field, text, reprs):
             text += f" [{old['table']}]"
         if field == "relation":
             text += " [nothing to do]"
+        if field == "selection_keys":
+            old_selection_keys = old.get("selection_keys") or ""
+            new_selection_keys = new.get("selection_keys") or ""
+            try:
+                old_selection_keys = literal_eval(old_selection_keys)
+                new_selection_keys = literal_eval(new_selection_keys)
+            except Exception:  # pylint: disable=except-pass
+                pass
+            if isinstance(old_selection_keys, tuple | list) and isinstance(
+                new_selection_keys, tuple | list
+            ):
+                removed = set(old_selection_keys) - set(new_selection_keys)
+                added = set(new_selection_keys) - set(old_selection_keys)
+                text = (
+                    f"{field} {added and ('added: ' + ', '.join(added)) or ''}"
+                    f"{added and ' ' or ''}"
+                    f"{removed and ('removed: ' + ', '.join(removed)) or ''}"
+                )
+                if added and not removed:
+                    text += " (most likely nothing to do)"
     if field != "module":
         reprs[module_map(new["module"])].append(f"{fullrepr}: {text}")
     if field == "module":
@@ -175,6 +196,13 @@ def report_generic(new, old, attrs, reprs):
                     text = "now related"
                 else:
                     text = "not related anymore"
+                fieldprint(old, new, "", text, reprs)
+        elif attr == "translate":
+            if old[attr] != new[attr]:
+                if new[attr]:
+                    text = "now translatable"
+                else:
+                    text = "not translatable anymore"
                 fieldprint(old, new, "", text, reprs)
         elif attr == "table":
             if old[attr] != new[attr]:
@@ -269,6 +297,7 @@ def compare_sets(old_records, new_records):
             "stored",
             "isfunction",
             "isrelated",
+            "translate",
             "required",
             "table",
             "_order",
@@ -286,6 +315,7 @@ def compare_sets(old_records, new_records):
             "stored",
             "isfunction",
             "isrelated",
+            "translate",
             "required",
             "table",
             "_order",
@@ -303,6 +333,7 @@ def compare_sets(old_records, new_records):
             "stored",
             "isfunction",
             "isrelated",
+            "translate",
             "required",
             "table",
             "_order",
@@ -339,6 +370,7 @@ def compare_sets(old_records, new_records):
     # Info that is displayed for new fields
     printkeys_new = printkeys_old + [
         "hasdefault",
+        "translate",
     ]
     for column in old_records:
         if column["field"] == "_order":
