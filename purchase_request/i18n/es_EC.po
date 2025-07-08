@@ -527,7 +527,6 @@ msgstr ""
 
 #. module: purchase_request
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request__is_editable
-#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__is_editable
 msgid "Is Editable"
 msgstr ""
 
@@ -541,6 +540,11 @@ msgstr "Es seguidor"
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request__is_name_editable
 msgid "Is Name Editable"
 msgstr ""
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__is_editable
+msgid "Is editable"
+msgstr "Es editable"
 
 #. module: purchase_request
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_make_purchase_order__item_ids
@@ -794,6 +798,16 @@ msgid "Purchase Order Lines"
 msgstr "Detalle de orden de compra"
 
 #. module: purchase_request
+#: model:mail.message.subtype,name:purchase_request.mt_request_po_confirmed
+msgid "Purchase Order confirmation"
+msgstr ""
+
+#. module: purchase_request
+#: model:mail.message.subtype,description:purchase_request.mt_request_po_confirmed
+msgid "Purchase Order is confirmed"
+msgstr ""
+
+#. module: purchase_request
 #: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
 msgid "Purchase Orders"
 msgstr "Ordenes de Compra"
@@ -928,6 +942,11 @@ msgid "Purchase Status"
 msgstr "Estado de Compra"
 
 #. module: purchase_request
+#: model:mail.message.subtype,name:purchase_request.mt_request_picking_done
+msgid "Purchase receipt confirmation"
+msgstr ""
+
+#. module: purchase_request
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request__purchase_count
 msgid "Purchases count"
 msgstr "# de Compras"
@@ -1016,6 +1035,11 @@ msgstr ""
 #. odoo-python
 #: code:addons/purchase_request/models/stock_move_line.py:0
 msgid "Receipt confirmation {picking_name} for your Request {request_name}"
+msgstr ""
+
+#. module: purchase_request
+#: model:mail.message.subtype,description:purchase_request.mt_request_picking_done
+msgid "Receipt is done"
 msgstr ""
 
 #. module: purchase_request
@@ -1496,9 +1520,6 @@ msgstr "Has seleccionado líneas de la misma compañía."
 
 #~ msgid "Followers (Channels)"
 #~ msgstr "Seguidores (canales)"
-
-#~ msgid "Is editable"
-#~ msgstr "Es editable"
 
 #~ msgid "Order confirmation %s for your Request %s"
 #~ msgstr "Confirmación de orden %s para tu requisición %s"

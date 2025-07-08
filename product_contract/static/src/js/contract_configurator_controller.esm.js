@@ -1,5 +1,3 @@
-/** @odoo-module **/
-
 import {formView} from "@web/views/form/form_view";
 import {registry} from "@web/core/registry";
 import {useService} from "@web/core/utils/hooks";
@@ -17,6 +15,7 @@ export class ProductContractConfiguratorController extends formView.Controller {
             recurring_interval,
             recurring_rule_type,
             recurrence_interval,
+            recurring_invoicing_type,
             contract_id,
             date_start,
             date_end,
@@ -24,6 +23,7 @@ export class ProductContractConfiguratorController extends formView.Controller {
             is_auto_renew,
             auto_renew_interval,
             auto_renew_rule_type,
+            contract_start_date_method,
         } = record.data;
         return {
             product_uom_qty,
@@ -31,6 +31,7 @@ export class ProductContractConfiguratorController extends formView.Controller {
             recurring_interval,
             recurring_rule_type,
             recurrence_interval,
+            recurring_invoicing_type,
             contract_id,
             date_start,
             date_end,
@@ -38,6 +39,7 @@ export class ProductContractConfiguratorController extends formView.Controller {
             is_auto_renew,
             auto_renew_interval,
             auto_renew_rule_type,
+            contract_start_date_method,
         };
     }
 

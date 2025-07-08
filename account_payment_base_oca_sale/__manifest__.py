@@ -4,14 +4,13 @@
 
 {
     "name": "Account Payment Base OCA - Sale",
-    "version": "18.0.1.0.0",
+    "version": "18.0.1.1.0",
     "category": "Banking addons",
     "license": "AGPL-3",
     "summary": "Adds payment method on sale orders",
     "author": "Akretion, Tecnativa, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/bank-payment-alternative",
     "depends": ["sale", "account_payment_base_oca"],
-    "excludes": ["account_payment_sale"],
     "data": [
         "views/sale_order.xml",
         "views/sale_report.xml",

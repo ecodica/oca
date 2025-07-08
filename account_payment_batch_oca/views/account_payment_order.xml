@@ -129,6 +129,7 @@
                                 groups="base.group_multi_company"
                             />
                             <field name="payment_type" invisible="1" />
+                            <field name="mail_notif" invisible="1" />
                         </group>
                         <group name="head-right">
                             <field name="date_prefered" readonly="state != 'draft'" />
@@ -171,7 +172,7 @@
                             <field
                                 name="payment_line_ids"
                                 readonly="state != 'draft'"
-                                context="{'default_payment_type': payment_type}"
+                                context="{'default_payment_type': payment_type, 'mail_notif': mail_notif}"
                             />
                         </page>
                         <page
@@ -338,6 +339,6 @@
         id="account_payment_order_inbound_menu"
         action="account_payment_order_inbound_action"
         parent="account.menu_finance_receivables"
-        sequence="18"
+        sequence="17"
     />
 </odoo>

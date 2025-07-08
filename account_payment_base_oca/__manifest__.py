@@ -4,7 +4,7 @@
 
 {
     "name": "Account Payment Base OCA",
-    "version": "18.0.1.2.1",
+    "version": "18.0.1.4.0",
     "category": "Accounting",
     "license": "AGPL-3",
     "summary": "OCA extensions to native payment objects of Odoo",
@@ -13,7 +13,6 @@
     "development_status": "Mature",
     "website": "https://github.com/OCA/bank-payment-alternative",
     "depends": ["account_payment_method_base"],
-    "excludes": ["account_payment_mode"],
     "data": [
         "views/account_payment_method.xml",
         "views/account_payment_method_line.xml",

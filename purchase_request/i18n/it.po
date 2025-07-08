@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: purchase-workflow (10.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-17 03:38+0000\n"
-"PO-Revision-Date: 2025-03-11 19:06+0000\n"
+"PO-Revision-Date: 2025-07-01 13:25+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-purchase-"
 "workflow-10-0/language/it/)\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10.2\n"
+"X-Generator: Weblate 5.10.4\n"
 
 #. module: purchase_request
 #. odoo-python
@@ -546,7 +546,6 @@ msgstr "In corso"
 
 #. module: purchase_request
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request__is_editable
-#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__is_editable
 msgid "Is Editable"
 msgstr "È modificabile"
 
@@ -560,6 +559,11 @@ msgstr "Segue"
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request__is_name_editable
 msgid "Is Name Editable"
 msgstr "Il nome è modificabile"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__is_editable
+msgid "Is editable"
+msgstr "E' modificabile"
 
 #. module: purchase_request
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_make_purchase_order__item_ids
@@ -812,6 +816,16 @@ msgid "Purchase Order Lines"
 msgstr "Righe ordine di acquisto"
 
 #. module: purchase_request
+#: model:mail.message.subtype,name:purchase_request.mt_request_po_confirmed
+msgid "Purchase Order confirmation"
+msgstr "Conferma ordine di acquisto"
+
+#. module: purchase_request
+#: model:mail.message.subtype,description:purchase_request.mt_request_po_confirmed
+msgid "Purchase Order is confirmed"
+msgstr "L'ordine di acquisto è confermato"
+
+#. module: purchase_request
 #: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
 msgid "Purchase Orders"
 msgstr "Ordini di acquisto"
@@ -946,6 +960,11 @@ msgid "Purchase Status"
 msgstr "Stato Acquisto"
 
 #. module: purchase_request
+#: model:mail.message.subtype,name:purchase_request.mt_request_picking_done
+msgid "Purchase receipt confirmation"
+msgstr "Conferma ricevuta acquisto"
+
+#. module: purchase_request
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request__purchase_count
 msgid "Purchases count"
 msgstr "Conteggio acquisti"
@@ -1036,6 +1055,11 @@ msgstr "Ricevuta conferma per richiesta {name}"
 msgid "Receipt confirmation {picking_name} for your Request {request_name}"
 msgstr ""
 "Conferma ricezione {picking_name} per la vostra richiesta {request_name}"
+
+#. module: purchase_request
+#: model:mail.message.subtype,description:purchase_request.mt_request_picking_done
+msgid "Receipt is done"
+msgstr "La ricevuta è pronta"
 
 #. module: purchase_request
 #. odoo-python
@@ -1571,9 +1595,6 @@ msgstr "Bisogna selezionare le righe della stessa azienda."
 
 #~ msgid "Details"
 #~ msgstr "Dettagli"
-
-#~ msgid "Is editable"
-#~ msgstr "E' modificabile"
 
 #~ msgid "Order confirmation %s for your Request %s"
 #~ msgstr "Confermato ordine  %s per la tua Richiesta %s"
