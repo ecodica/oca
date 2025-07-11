@@ -4,6 +4,7 @@
 from importlib import import_module
 
 from odoo import api, models
+from odoo.tools import mute_logger
 
 from .spec_models import SPEC_MIXIN_MAPPINGS, SpecModel, StackedModel
 
@@ -94,7 +95,10 @@ class SpecMixin(models.AbstractModel):
             return res
 
         spec_module = self._get_spec_property("odoo_module")
-        odoo_module = spec_module.split("_spec.")[0].split(".")[-1]
+        if "_spec." in spec_module:
+            odoo_module = spec_module.split("_spec.")[0].split(".")[-1]
+        else:  # for tests:
+            odoo_module = "spec_driven_model"
         load_key = f"_{spec_module}_loaded"
         if hasattr(self.env.registry, load_key):  # hook already done for registry
             return res
@@ -170,6 +174,24 @@ class SpecMixin(models.AbstractModel):
         self.env.registry.init_models(
             self.env.cr, remaining_models, {"module": odoo_module}
         )
+
+        # init_models just created ir.model.data records for the "MAGIC FIELDS"
+        # of the remaining_models. If we let these fields, next Odoo update
+        # will decide that these MAGIC FIELDS do not match the fields of the
+        # abstract schema mixins and would take a long time to delete these records
+        # and the fields. This is not what we want, so we just remove these records:
+        imd_magic_field_names = []
+        for model in remaining_models:
+            for field in models.MAGIC_COLUMNS + ["display_name", "__last_update"]:
+                imd_magic_field_names.append(
+                    f"field_{model.replace('.', '_')}__{field}"
+                )
+        imd_recs = self.env["ir.model.data"].search(
+            [("name", "in", imd_magic_field_names)]
+        )
+        with mute_logger("odoo.models"):
+            imd_recs.unlink()
+
         return res
 
     @classmethod
@@ -179,7 +201,10 @@ class SpecMixin(models.AbstractModel):
         """
 
         underline_name = cls._name.replace(".", "_")
-        model_id = f"{module_name}_spec.model_{underline_name}"
+        if module_name == "spec_driven_model":
+            model_id = f"spec_driven_model.model_{underline_name}"
+        else:
+            model_id = f"{module_name}_spec.model_{underline_name}"
         user_access_name = f"access_{underline_name}_user"
         if not env["ir.model.access"].search(
             [

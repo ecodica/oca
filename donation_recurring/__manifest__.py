@@ -5,7 +5,7 @@
 
 {
     "name": "Donation Recurring",
-    "version": "16.0.1.0.0",
+    "version": "16.0.1.1.0",
     "category": "Accounting",
     "license": "AGPL-3",
     "summary": "Manage recurring donations",
@@ -22,4 +22,5 @@
     ],
     "demo": ["demo/donation_recurring_demo.xml"],
     "installable": True,
+    "uninstall_hook": "donation_action_reset_domain",
 }
