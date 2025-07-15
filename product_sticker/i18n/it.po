@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-03-03 10:06+0000\n"
+"PO-Revision-Date: 2025-07-15 08:46+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10.2\n"
+"X-Generator: Weblate 5.10.4\n"
 
 #. module: product_sticker
 #: model:ir.model.fields.selection,name:product_sticker.selection__product_sticker__image_size__1024
@@ -109,7 +109,6 @@ msgid "Cross Category"
 msgstr "Categoria incrociata"
 
 #. module: product_sticker
-#: model_terms:ir.ui.view,arch_db:product_sticker.product_sticker_kanban_view
 #: model_terms:ir.ui.view,arch_db:product_sticker.product_sticker_search_view
 msgid "Cross Company"
 msgstr "Azienda incrociata"
@@ -130,11 +129,6 @@ msgid "Display Name with the Image"
 msgstr "Visualizza nome con immagine"
 
 #. module: product_sticker
-#: model_terms:ir.ui.view,arch_db:product_sticker.product_sticker_kanban_view
-msgid "Dropdown menu"
-msgstr "Menu a tendina"
-
-#. module: product_sticker
 #: model:ir.model.fields,field_description:product_sticker.field_product_sticker__id
 msgid "ID"
 msgstr "ID"
@@ -146,7 +140,6 @@ msgstr "Se selezionata, la nota verrà visualizzata con il bollino"
 
 #. module: product_sticker
 #: model:ir.model.fields,field_description:product_sticker.field_product_sticker__image_1920
-#: model:ir.model.fields,field_description:product_sticker.field_product_sticker__image_64
 #: model_terms:ir.ui.view,arch_db:product_sticker.product_sticker_form_view
 msgid "Image"
 msgstr "Immagine"
@@ -175,11 +168,6 @@ msgstr "Immagine 512"
 #: model:ir.model.fields,field_description:product_sticker.field_product_sticker__image_size
 msgid "Image Size"
 msgstr "Dimensione immagine"
-
-#. module: product_sticker
-#: model:ir.model.fields,field_description:product_sticker.field_product_sticker____last_update
-msgid "Last Modified on"
-msgstr "Ultima modifica il"
 
 #. module: product_sticker
 #: model:ir.model.fields,field_description:product_sticker.field_product_sticker__write_uid
@@ -267,6 +255,11 @@ msgid "Sequence"
 msgstr "Sequenza"
 
 #. module: product_sticker
+#: model:ir.model.fields,field_description:product_sticker.field_product_sticker__image_64
+msgid "Small Image"
+msgstr "Immagine piccola"
+
+#. module: product_sticker
 #: model:ir.model.fields,field_description:product_sticker.field_product_attribute__sticker_count
 #: model:ir.model.fields,field_description:product_sticker.field_product_attribute_value__sticker_count
 #: model:ir.model.fields,field_description:product_sticker.field_product_sticker_mixin__sticker_count
@@ -293,6 +286,12 @@ msgstr "Bollini"
 #: model:ir.model.fields,help:product_sticker.field_product_sticker__note
 msgid "Used to display a note with the sticker"
 msgstr "Utilizzato per visualizzare una nota con il bollinoi"
+
+#~ msgid "Dropdown menu"
+#~ msgstr "Menu a tendina"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Ultima modifica il"
 
 #~ msgid "Product Template"
 #~ msgstr "Modello prodotto"
