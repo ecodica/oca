@@ -160,7 +160,7 @@ class ZonePickingSelectLineCase(ZonePickingCommonCase):
             qty_done=10.0,
         )
         # first line done
-        move_line.qty_done = move_line.reserved_uom_qty
+        move_line.picked = True
         # get the next one
         response = self.service.dispatch(
             "scan_source",
@@ -223,7 +223,10 @@ class ZonePickingSelectLineCase(ZonePickingCommonCase):
             qty_done=10.0,
         )
 
-    def test_scan_source_barcode_package_not_found(self):
+    # FIXME: this case shouldn't be possible anymore
+    # because a check on stock.quant.package.write in odoo core
+    # prevents to update a location on a package w/o move lines.
+    def FIXME_test_scan_source_barcode_package_not_found(self):
         """Scan source: scanned package has no related move line,
         next step 'select_line' expected.
         """
@@ -625,7 +628,7 @@ class ZonePickingSelectLineCase(ZonePickingCommonCase):
         self.service.set_destination(
             move_line.id,
             self.free_package.name,
-            move_line.reserved_uom_qty,
+            move_line.quantity,
         )
         self.assertEqual(move_line.shopfloor_user_id, self.env.user)
         # The second user scans the same source location
@@ -670,7 +673,7 @@ class ZonePickingSelectLineCase(ZonePickingCommonCase):
             params={
                 "move_line_id": move_line.id,
                 "barcode": self.free_package.name,
-                "quantity": move_line.reserved_uom_qty,
+                "quantity": move_line.quantity,
             },
         )
         # unload goods
@@ -702,7 +705,7 @@ class ZonePickingSelectLineCase(ZonePickingCommonCase):
                 params={
                     "move_line_id": move_line.id,
                     "barcode": package_dest.name,
-                    "quantity": move_line.reserved_uom_qty,
+                    "quantity": move_line.quantity,
                 },
             )
         # unload goods
@@ -748,7 +751,7 @@ class ZonePickingSelectLineCase(ZonePickingCommonCase):
         )
         self.assertTrue(move_line_will_empty_location)
         # But if we check the location without giving the move line as parameter,
-        # knowing that this move line hasn't its 'qty_done' field filled,
+        # knowing that this move line hasn't its 'qty_picked' field filled,
         # the location won't be considered empty with such pending move line
         move_line_will_empty_location = location_src.planned_qty_in_location_is_empty()
         self.assertFalse(move_line_will_empty_location)

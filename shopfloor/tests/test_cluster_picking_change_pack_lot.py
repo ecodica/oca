@@ -28,7 +28,7 @@ class ClusterPickingChangePackLotCase(ClusterPickingCommonCase):
                 "picking_batch_id": batch.id,
                 "move_line_id": line.id,
                 "barcode": barcode,
-                "quantity": line.qty_done,
+                "quantity": line.qty_picked,
             },
         )
         if success:
@@ -74,7 +74,7 @@ class ClusterPickingChangePackLotCase(ClusterPickingCommonCase):
                 {
                     "package_id": new_package.id,
                     "result_package_id": new_package.id,
-                    "reserved_qty": 10.0,
+                    "quantity_product_uom": 10.0,
                 }
             ],
         )

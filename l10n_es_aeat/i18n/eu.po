@@ -133,9 +133,11 @@ msgstr "Módulo base para declaraciones AEAT"
 #: model:ir.model.constraint,message:l10n_es_aeat.constraint_l10n_es_aeat_mod123_report_name_uniq
 #: model:ir.model.constraint,message:l10n_es_aeat.constraint_l10n_es_aeat_mod130_report_name_uniq
 #: model:ir.model.constraint,message:l10n_es_aeat.constraint_l10n_es_aeat_mod216_report_name_uniq
+#: model:ir.model.constraint,message:l10n_es_aeat.constraint_l10n_es_aeat_mod296_report_name_uniq
 #: model:ir.model.constraint,message:l10n_es_aeat.constraint_l10n_es_aeat_mod303_report_name_uniq
 #: model:ir.model.constraint,message:l10n_es_aeat.constraint_l10n_es_aeat_mod347_report_name_uniq
 #: model:ir.model.constraint,message:l10n_es_aeat.constraint_l10n_es_aeat_mod349_report_name_uniq
+#: model:ir.model.constraint,message:l10n_es_aeat.constraint_l10n_es_aeat_mod390_report_name_uniq
 #: model:ir.model.constraint,message:l10n_es_aeat.constraint_l10n_es_aeat_report_name_uniq
 #: model:ir.model.constraint,message:l10n_es_aeat.constraint_l10n_es_aeat_report_tax_mapping_name_uniq
 #: model:ir.model.constraint,message:l10n_es_aeat.constraint_l10n_es_vat_book_name_uniq
@@ -176,7 +178,9 @@ msgid "AEAT tax mapping line - Tax"
 msgstr ""
 
 #. module: l10n_es_aeat
+#: model:ir.model.fields.selection,name:l10n_es_aeat.selection__account_move__aeat_state__sent_w_errors
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__aeat_mixin__aeat_state__sent_w_errors
+#: model:ir.model.fields.selection,name:l10n_es_aeat.selection__sii_mixin__aeat_state__sent_w_errors
 msgid "Accepted with errors"
 msgstr ""
 
@@ -389,9 +393,11 @@ msgstr "Cancelar"
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod123_report__state__cancelled
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod130_report__state__cancelled
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod216_report__state__cancelled
+#: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod296_report__state__cancelled
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod303_report__state__cancelled
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod347_report__state__cancelled
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod349_report__state__cancelled
+#: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod390_report__state__cancelled
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_report__state__cancelled
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_report_tax_mapping__state__cancelled
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_vat_book__state__cancelled
@@ -479,9 +485,11 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod123_report__statement_type__c
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod130_report__statement_type__c
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod216_report__statement_type__c
+#: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod296_report__statement_type__c
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod303_report__statement_type__c
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod347_report__statement_type__c
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod349_report__statement_type__c
+#: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod390_report__statement_type__c
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_report__statement_type__c
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_report_tax_mapping__statement_type__c
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_vat_book__statement_type__c
@@ -604,9 +612,11 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod123_report__support_type__c
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod130_report__support_type__c
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod216_report__support_type__c
+#: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod296_report__support_type__c
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod303_report__support_type__c
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod347_report__support_type__c
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod349_report__support_type__c
+#: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod390_report__support_type__c
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_report__support_type__c
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_report_tax_mapping__support_type__c
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_vat_book__support_type__c
@@ -662,9 +672,11 @@ msgstr "Nombre a mostrar"
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod123_report__state__done
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod130_report__state__done
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod216_report__state__done
+#: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod296_report__state__done
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod303_report__state__done
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod347_report__state__done
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod349_report__state__done
+#: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod390_report__state__done
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_report__state__done
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_report_tax_mapping__state__done
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_vat_book__state__done
@@ -679,9 +691,11 @@ msgstr "Realizada"
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod123_report__state__draft
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod130_report__state__draft
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod216_report__state__draft
+#: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod296_report__state__draft
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod303_report__state__draft
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod347_report__state__draft
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod349_report__state__draft
+#: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod390_report__state__draft
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_report__state__draft
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_report_tax_mapping__state__draft
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_vat_book__state__draft
@@ -1239,9 +1253,11 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod123_report__statement_type__n
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod130_report__statement_type__n
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod216_report__statement_type__n
+#: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod296_report__statement_type__n
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod303_report__statement_type__n
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod347_report__statement_type__n
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod349_report__statement_type__n
+#: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod390_report__statement_type__n
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_report__statement_type__n
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_report_tax_mapping__statement_type__n
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_vat_book__statement_type__n
@@ -1249,7 +1265,9 @@ msgid "Normal"
 msgstr "Normal"
 
 #. module: l10n_es_aeat
+#: model:ir.model.fields.selection,name:l10n_es_aeat.selection__account_move__aeat_state__not_sent
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__aeat_mixin__aeat_state__not_sent
+#: model:ir.model.fields.selection,name:l10n_es_aeat.selection__sii_mixin__aeat_state__not_sent
 msgid "Not sent"
 msgstr ""
 
@@ -1393,9 +1411,11 @@ msgstr "Carácter del signo positivo"
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod123_report__state__posted
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod130_report__state__posted
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod216_report__state__posted
+#: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod296_report__state__posted
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod303_report__state__posted
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod347_report__state__posted
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod349_report__state__posted
+#: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod390_report__state__posted
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_report__state__posted
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_report_tax_mapping__state__posted
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_vat_book__state__posted
@@ -1419,9 +1439,11 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod123_report__state__calculated
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod130_report__state__calculated
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod216_report__state__calculated
+#: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod296_report__state__calculated
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod303_report__state__calculated
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod347_report__state__calculated
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod349_report__state__calculated
+#: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod390_report__state__calculated
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_report__state__calculated
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_report_tax_mapping__state__calculated
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_vat_book__state__calculated
@@ -1516,7 +1538,9 @@ msgid "SII send failed"
 msgstr ""
 
 #. module: l10n_es_aeat
+#: model:ir.model.fields.selection,name:l10n_es_aeat.selection__account_move__aeat_state__sent
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__aeat_mixin__aeat_state__sent
+#: model:ir.model.fields.selection,name:l10n_es_aeat.selection__sii_mixin__aeat_state__sent
 msgid "Sent"
 msgstr ""
 
@@ -1592,9 +1616,11 @@ msgstr "Sub-configuración"
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod123_report__statement_type__s
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod130_report__statement_type__s
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod216_report__statement_type__s
+#: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod296_report__statement_type__s
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod303_report__statement_type__s
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod347_report__statement_type__s
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod349_report__statement_type__s
+#: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod390_report__statement_type__s
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_report__statement_type__s
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_report_tax_mapping__statement_type__s
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_vat_book__statement_type__s
@@ -1667,9 +1693,11 @@ msgstr "Plantillas de impuestos"
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod123_report__support_type__t
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod130_report__support_type__t
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod216_report__support_type__t
+#: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod296_report__support_type__t
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod303_report__support_type__t
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod347_report__support_type__t
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod349_report__support_type__t
+#: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_mod390_report__support_type__t
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_report__support_type__t
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_aeat_report_tax_mapping__support_type__t
 #: model:ir.model.fields.selection,name:l10n_es_aeat.selection__l10n_es_vat_book__support_type__t

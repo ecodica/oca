@@ -1,7 +1,7 @@
 # Copyright 2020 Camptocamp SA (http://www.camptocamp.com)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 from odoo import _, fields
-from odoo.tools.float_utils import float_round
+from odoo.tools.float_utils import float_compare, float_round
 
 from odoo.addons.component.core import Component
 
@@ -26,9 +26,10 @@ class StockAction(Component):
             ):
                 continue
             if move.state in ("partially_available", "assigned"):
-                quantity -= sum(move.move_line_ids.mapped("reserved_qty"))
+                # TODO: Add a test hitting this line
+                quantity -= sum(move.move_line_ids.mapped("quantity"))
             elif move.state in ("done"):
-                quantity -= move.product_uom_qty
+                quantity -= move.quantity
         return float_round(
             quantity, precision_rounding=origin_move.product_id.uom_id.rounding
         )
@@ -116,7 +117,7 @@ class StockAction(Component):
         check_user=False,
         split=True,
     ):
-        """Set the qty_done and extract lines in new order"""
+        """Set the picked quantity and extract lines in new order"""
         user = user or self.env.user
         if check_user:
             picking_users = move_lines.picking_id.user_id
@@ -125,8 +126,8 @@ class StockAction(Component):
                     _("Someone is already working on these transfers")
                 )
         for line in move_lines:
-            qty_done = quantity if quantity is not None else line.reserved_uom_qty
-            line.qty_done = qty_done
+            qty_picked = quantity if quantity is not None else line.quantity
+            line.qty_picked = qty_picked
             if split:
                 line._split_partial_quantity()
             data = {
@@ -135,7 +136,7 @@ class StockAction(Component):
             if package:
                 # destination package is set to the scanned one
                 data["result_package_id"] = package.id
-            line.write(data)
+            line.update(data)
         values_assigned = {
             "user_id": user.id,
             "printed": True,
@@ -156,7 +157,8 @@ class StockAction(Component):
         move_lines.write(
             {
                 "shopfloor_user_id": False,
-                "qty_done": 0,
+                "picked": False,
+                "qty_picked": 0,
                 "result_package_id": False,
             }
         )
@@ -250,3 +252,16 @@ class StockAction(Component):
         # when no putaway is found, the move line destination stays the
         # default's of the picking type
         return any(line.location_dest_id in base_locations for line in move_lines)
+
+    def move_line_increment_qty_picked(self, move_line, packaging=False):
+        qty = packaging and packaging.qty or 1
+        move_line.qty_picked += qty
+
+    def move_line_check_qty_picked(self, move_line):
+        rounding = move_line.product_id.uom_id.rounding
+        qty_picked = move_line.qty_picked
+        qty_todo = move_line.quantity
+        # If qty picked is >= qty todo, then there's nothing more to pick
+        if float_compare(qty_picked, qty_todo, precision_rounding=rounding) > 0:
+            return False
+        return True

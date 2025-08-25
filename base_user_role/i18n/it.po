@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-17 02:07+0000\n"
-"PO-Revision-Date: 2024-11-28 10:06+0000\n"
+"PO-Revision-Date: 2025-08-16 13:25+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
 "Language: it\n"
@@ -20,13 +20,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.10.4\n"
 
 #. module: base_user_role
 #: model:ir.model.fields,field_description:base_user_role.field_res_groups__role_count
 #: model:ir.model.fields,field_description:base_user_role.field_res_users_role__role_count
-msgid "# Roles"
-msgstr "N° ruoli"
+msgid "# User Roles"
+msgstr "N° ruoli utente"
 
 #. module: base_user_role
 #. odoo-python
@@ -310,23 +310,6 @@ msgid "Role lines"
 msgstr "Righe del ruolo"
 
 #. module: base_user_role
-#: model:ir.actions.act_window,name:base_user_role.action_res_users_role_tree
-#: model:ir.model.fields,field_description:base_user_role.field_res_groups__role_ids
-#: model:ir.model.fields,field_description:base_user_role.field_res_users__role_ids
-#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__role_ids
-#: model:ir.ui.menu,name:base_user_role.menu_action_res_users_role_tree
-#: model_terms:ir.ui.view,arch_db:base_user_role.res_groups_view_form
-#: model_terms:ir.ui.view,arch_db:base_user_role.view_res_users_form_inherit
-#: model_terms:ir.ui.view,arch_db:base_user_role.view_res_users_role_search
-msgid "Roles"
-msgstr "Ruoli"
-
-#. module: base_user_role
-#: model:ir.model.constraint,message:base_user_role.constraint_res_users_role_line_user_role_uniq
-msgid "Roles can be assigned to a user only once at a time"
-msgstr "I ruoli possono essere assegnati all'utente solo uno alla volta"
-
-#. module: base_user_role
 #: model:ir.model.fields,help:base_user_role.field_res_groups__role_ids
 #: model:ir.model.fields,help:base_user_role.field_res_users_role__role_ids
 msgid "Roles in which the group is involved"
@@ -375,13 +358,29 @@ msgstr "Utente"
 
 #. module: base_user_role
 #: model:ir.model,name:base_user_role.model_res_users_role
-msgid "User role"
+msgid "User Role"
 msgstr "Ruolo utente"
+
+#. module: base_user_role
+#: model:ir.actions.act_window,name:base_user_role.action_res_users_role_tree
+#: model:ir.model.fields,field_description:base_user_role.field_res_groups__role_ids
+#: model:ir.model.fields,field_description:base_user_role.field_res_users__role_ids
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__role_ids
+#: model:ir.ui.menu,name:base_user_role.menu_action_res_users_role_tree
+#: model_terms:ir.ui.view,arch_db:base_user_role.res_groups_view_form
+#: model_terms:ir.ui.view,arch_db:base_user_role.view_res_users_form_inherit
+msgid "User Roles"
+msgstr "Ruoli utente"
 
 #. module: base_user_role
 #: model:ir.module.category,name:base_user_role.ir_module_category_role
 msgid "User roles"
 msgstr "Ruoli utente"
+
+#. module: base_user_role
+#: model:ir.model.constraint,message:base_user_role.constraint_res_users_role_line_user_role_uniq
+msgid "User roles can be assigned to a user only once at a time"
+msgstr "I ruoli utente possono essere assegnati all'utente solo uno alla volta"
 
 #. module: base_user_role
 #: model:ir.model.fields,field_description:base_user_role.field_res_users_role__users
@@ -414,6 +413,18 @@ msgstr "Viste"
 #: model_terms:ir.ui.view,arch_db:base_user_role.create_from_user_wizard_view
 msgid "or"
 msgstr "o"
+
+#~ msgid "# Roles"
+#~ msgstr "N° ruoli"
+
+#~ msgid "Roles"
+#~ msgstr "Ruoli"
+
+#~ msgid "Roles can be assigned to a user only once at a time"
+#~ msgstr "I ruoli possono essere assegnati all'utente solo uno alla volta"
+
+#~ msgid "User role"
+#~ msgstr "Ruolo utente"
 
 #~ msgid "Last Modified on"
 #~ msgstr "Ultima modifica il"

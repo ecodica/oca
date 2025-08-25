@@ -6,9 +6,10 @@ import functools
 from collections import defaultdict
 
 from odoo.fields import first
+from odoo.tools import str2bool
 from odoo.tools.float_utils import float_compare, float_is_zero
 
-from odoo.addons.base_rest.components.service import to_bool, to_int
+from odoo.addons.base_rest.components.service import to_int
 from odoo.addons.component.core import Component
 
 from ..exceptions import ConcurentWorkOnTransfer
@@ -62,7 +63,7 @@ class ZonePicking(Component):
        * they scan a location, in which case the move line's destination is
          updated with it and the move is done
        * they scan a package, which becomes the destination package of the move
-         line, the move line is not set to done, its ``qty_done`` is updated
+         line, the move line is not set to done, its ``qty_picked`` is updated
          and a field ``shopfloor_user_id`` is set to the user; consider the
          move line is set in a buffer
 
@@ -450,7 +451,7 @@ class ZonePicking(Component):
     def _find_buffer_move_lines_domain(self, dest_package=None):
         domain = [
             ("picking_id.picking_type_id", "in", self.picking_types.ids),
-            ("qty_done", ">", 0),
+            ("picked", "=", True),
             ("state", "not in", ("cancel", "done")),
             ("result_package_id", "!=", False),
             ("shopfloor_user_id", "=", self.env.user.id),
@@ -685,6 +686,9 @@ class ZonePicking(Component):
                     response_error_func=self._response_for_change_pack_lot,
                 )
         else:
+            # FIXME: this case shouldn't be possible anymore
+            # because a check on stock.quant.package.write in odoo core
+            # prevents to update a location on a package w/o move lines.
             response = self._list_move_lines(sublocation or self.zone_location)
             message = self.msg_store.package_has_no_product_to_take(barcode)
         return response, message
@@ -701,7 +705,7 @@ class ZonePicking(Component):
         """
         if self.work.menu.no_prefill_qty:
             return qty
-        return move_line.reserved_uom_qty
+        return move_line.quantity
 
     def _scan_source_product(
         self,
@@ -952,7 +956,7 @@ class ZonePicking(Component):
             for _move_line in package.move_line_ids:
                 if _move_line.state not in ("assigned", "partially_available"):
                     continue
-                _move_line.qty_done = move_line.reserved_uom_qty
+                _move_line.qty_picked = move_line.quantity
                 move_lines |= _move_line
         self._write_destination_on_lines(move_lines, location)
 
@@ -975,8 +979,7 @@ class ZonePicking(Component):
         # Zero check
         # Only apply zero check if the product is of type "product".
         zero_check = (
-            move_line.product_id.type == "product"
-            and self.picking_type.shopfloor_zero_check
+            move_line.product_id.is_storable and self.picking_type.shopfloor_zero_check
         )
         if zero_check and move_line.location_id.planned_qty_in_location_is_empty():
             response = self._response_for_zero_check(move_line)
@@ -991,15 +994,11 @@ class ZonePicking(Component):
 
     def _move_line_compare_qty(self, move_line, qty):
         rounding = move_line.product_uom_id.rounding
-        return float_compare(
-            qty, move_line.reserved_uom_qty, precision_rounding=rounding
-        )
+        return float_compare(qty, move_line.quantity, precision_rounding=rounding)
 
     def _move_line_full_qty(self, move_line, qty):
         rounding = move_line.product_uom_id.rounding
-        return float_is_zero(
-            move_line.reserved_uom_qty - qty, precision_rounding=rounding
-        )
+        return float_is_zero(move_line.quantity - qty, precision_rounding=rounding)
 
     def _is_package_not_valid(self, package):
         message = False
@@ -1038,7 +1037,7 @@ class ZonePicking(Component):
         if qty_greater:
             response = self._response_for_set_line_destination(
                 move_line,
-                message=self.msg_store.unable_to_pick_more(move_line.reserved_uom_qty),
+                message=self.msg_store.unable_to_pick_more(move_line.quantity),
                 qty_done=quantity,
             )
             return (package_changed, response)
@@ -1062,8 +1061,7 @@ class ZonePicking(Component):
         # Zero check
         # Only apply zero check if the product is of type "product".
         zero_check = (
-            move_line.product_id.type == "product"
-            and self.picking_type.shopfloor_zero_check
+            move_line.product_id.is_storable and self.picking_type.shopfloor_zero_check
         )
         if zero_check and move_line.location_id.planned_qty_in_location_is_empty():
             response = self._response_for_zero_check(move_line)
@@ -1153,7 +1151,7 @@ class ZonePicking(Component):
           moved is 0 in the source location after the move (beware: at this
           point the product we put in the buffer is still considered to be in
           the source location, so we have to compute the source location's
-          quantity - qty_done).
+          quantity - picked qty).
         * set_line_destination: the scanned location is invalid, user has to
           scan another one
         * set_line_destination+confirmation_required: the scanned location is not
@@ -1353,7 +1351,7 @@ class ZonePicking(Component):
             ("package_id", "=", package.id),
             ("lot_id", "=", lot.id),
             ("state", "not in", ("cancel", "done")),
-            ("qty_done", "=", 0),
+            ("picked", "=", False),
         ]
         return domain
 
@@ -1364,11 +1362,11 @@ class ZonePicking(Component):
         because there is physically not enough goods. The move line is deleted
         (unreserve), and an inventory is created to reduce the quantity in the
         source location to prevent future errors until a correction. Beware:
-        the quantity already reserved and having a qty_done set on other lines
+        the quantity already reserved and having a picked qty on other lines
         in the same location should remain reserved so the inventory's quantity
-        must be set to the total of qty_done of other lines.
+        must be set to the total of picked qty of other lines.
 
-        The other lines not yet picked (no qty_done) in the same location for
+        The other lines not yet picked in the same location for
         the same product, lot, package are unreserved as well (moves lines
         deleted, which unreserve their quantity on the move).
 
@@ -1484,7 +1482,7 @@ class ZonePicking(Component):
 
         * in the current zone location and picking type
         * not done or canceled
-        * with a qty_done > 0
+        * picked
         * have a destination package
         * with ``shopfloor_user_id`` equal to the current user
 
@@ -1806,7 +1804,7 @@ class ShopfloorZonePickingValidator(Component):
     def is_zero(self):
         return {
             "move_line_id": {"coerce": to_int, "required": True, "type": "integer"},
-            "zero": {"coerce": to_bool, "required": True, "type": "boolean"},
+            "zero": {"coerce": str2bool, "required": True, "type": "boolean"},
         }
 
     def stock_issue(self):

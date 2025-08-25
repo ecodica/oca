@@ -17,8 +17,8 @@ class CheckoutSelectChildLocationCase(CheckoutCommonCase):
         picking.action_assign()
         cls.line1 = picking.move_line_ids[0]
         cls.line2 = picking.move_line_ids[1]
-        cls.line1.write({"qty_done": 10, "shopfloor_checkout_done": True})
-        cls.line2.write({"qty_done": 2, "shopfloor_checkout_done": True})
+        cls.line1.write({"qty_picked": 10, "shopfloor_checkout_done": True})
+        cls.line2.write({"qty_picked": 2, "shopfloor_checkout_done": True})
 
         cls.dest_location = picking.location_dest_id
         cls.child_location = (
@@ -49,7 +49,7 @@ class CheckoutSelectChildLocationCase(CheckoutCommonCase):
 
         self.assertRecordValues(self.picking, [{"state": "done"}])
         self.assertTrue(self.picking.backorder_ids)
-        self.assertEqual(self.picking.backorder_ids.move_line_ids.reserved_uom_qty, 8)
+        self.assertEqual(self.picking.backorder_ids.move_line_ids.quantity, 8)
 
         self.assert_response(
             response,

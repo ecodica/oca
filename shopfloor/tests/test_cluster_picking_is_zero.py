@@ -35,7 +35,7 @@ class ClusterPickingIsZeroCase(ClusterPickingCommonCase):
         cls.next_line = cls.picking.move_line_ids[1]
         cls.bin1 = cls.env["stock.quant.package"].create({})
         cls._update_qty_in_location(
-            cls.line.location_id, cls.line.product_id, cls.line.reserved_uom_qty
+            cls.line.location_id, cls.line.product_id, cls.line.quantity
         )
         # we already scan and put the first line in bin1, at this point the
         # system see the location is empty and reach "zero_check"
@@ -57,7 +57,10 @@ class ClusterPickingIsZeroCase(ClusterPickingCommonCase):
             data=self._line_data(self.next_line),
             message={
                 "message_type": "success",
-                "body": f"{self.line.qty_done} {self.line.product_id.display_name} put in {self.bin1.name}",  # noqa
+                "body": (
+                    f"{self.line.qty_picked} {self.line.product_id.display_name} "
+                    f"put in {self.bin1.name}"
+                ),
             },
         )
 
@@ -85,6 +88,6 @@ class ClusterPickingIsZeroCase(ClusterPickingCommonCase):
             data=self._line_data(self.next_line),
             message={
                 "message_type": "success",
-                "body": f"{self.line.qty_done} {self.line.product_id.display_name} put in {self.bin1.name}",  # noqa
+                "body": f"{self.line.qty_picked} {self.line.product_id.display_name} put in {self.bin1.name}",  # noqa
             },
         )

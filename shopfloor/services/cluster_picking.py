@@ -2,10 +2,25 @@
 # Copyright 2020-2022 Jacques-Etienne Baudoux (BCIM) <je@bcim.be>
 # Copyright 2023 Michael Tietz (MT Software) <mtietz@mt-software.de>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
-from odoo import _, fields
-from odoo.osv import expression
+from pytz import timezone
 
-from odoo.addons.base_rest.components.service import to_bool, to_int
+from odoo import _, exceptions, fields
+from odoo.osv import expression
+from odoo.tools import str2bool
+from odoo.tools.safe_eval import (
+    datetime as safe_datetime,
+)
+from odoo.tools.safe_eval import (
+    dateutil as safe_dateutil,
+)
+from odoo.tools.safe_eval import (
+    safe_eval,
+)
+from odoo.tools.safe_eval import (
+    time as safe_time,
+)
+
+from odoo.addons.base_rest.components.service import to_int
 from odoo.addons.component.core import Component
 
 from ..utils import to_float
@@ -361,24 +376,88 @@ class ClusterPicking(Component):
         # after ALL the other lines in the batch are processed.
         return lines.sorted(key=self._sort_key_lines)
 
+    @staticmethod
+    def _lines_filtering(line):
+        return (
+            line.state in ("assigned", "partially_available")
+            # On 'StockPicking.action_assign()', result_package_id is set to
+            # the same package as 'package_id'. Here, we need to exclude lines
+            # that were already put into a bin, i.e. the destination package
+            # is different.
+            and (
+                not line.result_package_id or line.result_package_id == line.package_id
+            )
+        )
+
+    def _group_by_product(self, lines):
+        grouped_line_ids = []
+        product_ids_checked = set()
+        for line in lines:
+            if line.product_id.id not in product_ids_checked:
+                same_product_line_ids = lines.filtered(
+                    lambda x, line=line: x.product_id == line.product_id
+                ).ids
+                grouped_line_ids.extend(same_product_line_ids)
+                product_ids_checked.add(line.product_id.id)
+        lines = self.env["stock.move.line"].browse(grouped_line_ids)
+        return lines
+
     def _lines_to_pick(self, picking_batch):
-        return self._lines_for_picking_batch(
-            picking_batch,
-            filter_func=lambda x: (
-                x.state in ("assigned", "partially_available")
-                # On 'StockPicking.action_assign()', result_package_id is set to
-                # the same package as 'package_id'. Here, we need to exclude lines
-                # that were already put into a bin, i.e. the destination package
-                # is different.
-                and (not x.result_package_id or x.result_package_id == x.package_id)
-            ),
+        order = self.work.menu.move_line_processing_sort_order
+        if order == "location":
+            lines = self._lines_for_picking_batch(
+                picking_batch, filter_func=self._lines_filtering
+            )
+        elif order == "location_grouped_product":
+            # we need to call _lines_for_picking_batch
+            # without passing a filter_func so that the ordering is computed
+            # taking into account all lines in the batch,
+            # including those that have already been processed.
+            lines = self._lines_for_picking_batch(
+                picking_batch,
+                filter_func=lambda x: x,
+            )
+            lines = self._group_by_product(lines).filtered(self._lines_filtering)
+        elif order == "custom_code":
+            lines = self._eval_custom_code(picking_batch)
+        return lines
+
+    def _eval_context(self, move_lines):
+        return {
+            "uid": self.env.uid,
+            "user": self.env.user,
+            "time": safe_time,
+            "datetime": safe_datetime,
+            "dateutil": safe_dateutil,
+            "timezone": timezone,
+            # orm
+            "env": self.env,
+            # record
+            "records": move_lines,
+            # filter
+            "default_filter_func": self._lines_filtering,
+        }
+
+    def _eval_custom_code(self, picking_batch):
+        expr = self.work.menu.move_line_processing_sort_order_custom_code
+        move_lines = picking_batch.mapped("picking_ids.move_line_ids")
+        eval_context = self._eval_context(move_lines)
+        try:
+            safe_eval(expr, eval_context, mode="exec", nocopy=True)
+        except Exception as err:
+            msg = self.env._(
+                "Error when evaluating the move lines sorting code:\n %s", err
+            )
+            raise exceptions.UserError(msg) from err
+        return eval_context.get(
+            "move_lines", move_lines.filtered(self._lines_filtering)
         )
 
     def _last_picked_line(self, picking):
         """Get the last line picked and put in a pack for this picking"""
         return fields.first(
             picking.move_line_ids.filtered(
-                lambda x: x.qty_done > 0
+                lambda x: x.picked
                 and x.result_package_id
                 # if we are moving the entire package, we shouldn't
                 # add stuff inside it, it's not a new package
@@ -508,7 +587,7 @@ class ClusterPicking(Component):
         """Returns the quantity to increment depending on no_prefill_qty optione."""
         if self.work.menu.no_prefill_qty:
             return qty
-        return move_line.reserved_uom_qty
+        return move_line.quantity
 
     def _check_first_scan_location_or_pack_first(
         self, move_line, sublocation=None, location_scanned=False
@@ -736,7 +815,7 @@ class ClusterPicking(Component):
         * zero_check: if the quantity of product moved is 0 in the
         source location after the move (beware: at this point the product we put in
         a bin is still considered to be in the source location, so we have to compute
-        the source location's quantity - qty_done).
+        the source location's quantity - qty_picked).
         * unload_all: when all lines have a destination package and they all
         have the same destination.
         * unload_single: when all lines have a destination package and they all
@@ -762,7 +841,7 @@ class ClusterPicking(Component):
         if qty_check == "greater":
             return self._response_for_scan_destination(
                 move_line,
-                message=self.msg_store.unable_to_pick_more(move_line.reserved_uom_qty),
+                message=self.msg_store.unable_to_pick_more(move_line.quantity),
                 qty_done=quantity,
             )
 
@@ -794,10 +873,10 @@ class ClusterPicking(Component):
                 },
                 qty_done=quantity,
             )
-        move_line.write({"qty_done": quantity, "result_package_id": bin_package.id})
+        move_line.write({"qty_picked": quantity, "result_package_id": bin_package.id})
         # Only apply zero check if the product is of type "product".
         zero_check = (
-            move_line.product_id.type == "product"
+            move_line.product_id.is_storable
             and move_line.picking_id.picking_type_id.shopfloor_zero_check
         )
         if zero_check and move_line.location_id.planned_qty_in_location_is_empty():
@@ -806,7 +885,7 @@ class ClusterPicking(Component):
         return self._pick_next_line(
             batch,
             message=self.msg_store.x_units_put_in_package(
-                move_line.qty_done, move_line.product_id, move_line.result_package_id
+                move_line.qty_picked, move_line.product_id, move_line.result_package_id
             ),
             # if we split the move line, we want to process the one generated by the
             # split right now
@@ -865,7 +944,7 @@ class ClusterPicking(Component):
     def _filter_for_unload(self, line):
         return (
             line.state in ("assigned", "partially_available")
-            and line.qty_done > 0
+            and line.picked
             and line.result_package_id
             and not line.shopfloor_unloaded
         )
@@ -916,7 +995,7 @@ class ClusterPicking(Component):
         return self._pick_next_line(
             batch,
             message=self.msg_store.x_units_put_in_package(
-                move_line.qty_done, move_line.product_id, move_line.result_package_id
+                move_line.qty_picked, move_line.product_id, move_line.result_package_id
             ),
         )
 
@@ -1013,6 +1092,13 @@ class ClusterPicking(Component):
         inventory.create_stock_issue(move, location, package, lot)
 
         # try to reassign the moves in case we have stock in another location
+        for move in unreserve_moves:
+            picked_lines = move.move_line_ids.filtered(lambda line: line.picked)
+            # extract picked lin
+            if picked_lines != move.move_line_ids:
+                # Extract picked lines in another move, because _action_assign will
+                # not do anything if the moved is picked.
+                move.split_other_move_lines(picked_lines, intersection=True)
         unreserve_moves._action_assign()
 
         return self._pick_next_line(batch)
@@ -1035,7 +1121,7 @@ class ClusterPicking(Component):
             ("package_id", "=", package.id),
             ("lot_id", "=", lot.id),
             ("state", "not in", ("cancel", "done")),
-            ("qty_done", "=", 0),
+            ("picked", "=", False),
             ("picking_id.batch_id", "=", batch.id),
         ]
         return domain
@@ -1385,7 +1471,7 @@ class ShopfloorClusterPickingValidator(Component):
         return {
             "picking_batch_id": {"coerce": to_int, "required": True, "type": "integer"},
             "move_line_id": {"coerce": to_int, "required": True, "type": "integer"},
-            "zero": {"coerce": to_bool, "required": True, "type": "boolean"},
+            "zero": {"coerce": str2bool, "required": True, "type": "boolean"},
         }
 
     def skip_line(self):
