@@ -4,7 +4,7 @@
 
 from collections import defaultdict
 
-from odoo import _, api, fields, models
+from odoo import Command, _, api, fields, models
 from odoo.exceptions import UserError
 from odoo.tools.misc import format_date
 
@@ -72,6 +72,9 @@ class MassRequest(models.Model):
     )
     uninterrupted = fields.Boolean(related="type_id.uninterrupted")
     offering = fields.Monetary(
+        compute="_compute_offering",
+        store=True,
+        precompute=True,
         currency_field="company_currency_id",
         readonly=True,
         states={"waiting": [("readonly", False)]},
@@ -80,6 +83,7 @@ class MassRequest(models.Model):
     unit_offering = fields.Monetary(
         compute="_compute_unit_offering",
         store=True,
+        precompute=True,
         string="Offering per Mass",
         currency_field="company_currency_id",
         help="This field is the offering amount per mass in company currency.",
@@ -105,7 +109,10 @@ class MassRequest(models.Model):
     )
     # quantity = quantity in the donation line
     mass_quantity = fields.Integer(
-        compute="_compute_total_qty", string="Total Mass Quantity", store=True
+        compute="_compute_unit_offering",
+        string="Total Mass Quantity",
+        store=True,
+        precompute=True,
     )
     intention = fields.Char()
     line_ids = fields.One2many("mass.line", "request_id", string="Mass Lines")
@@ -136,20 +143,38 @@ class MassRequest(models.Model):
     )
 
     @api.depends(
-        "type_id", "type_id.quantity", "quantity", "line_ids.request_id", "transfer_id"
+        "product_id",
+        "quantity",
+        "line_ids.request_id",
+        "offering",
+        "transfer_id",
+        # Adding transfer_id.number in @api.depends to workaround the following bug:
+        # if you delete a mass.request.transfer, _compute_state_mass_remaining_quantity()
+        # is not triggered ; with 'transfer_id.number' it is triggered
+        "transfer_id.number",
     )
     def _compute_state_mass_remaining_quantity(self):
         for req in self:
-            total_qty = req.type_id.quantity * req.quantity
+            total_qty = req.product_id.mass_request_type_id.quantity * req.quantity
             remaining_qty = total_qty
+            remaining_offering = req.offering
+            if total_qty:
+                unit_offering = req.offering / total_qty
+            else:
+                unit_offering = 0
             if req.line_ids:
                 remaining_qty -= len(req.line_ids)
+                remaining_offering = req.company_id.currency_id.round(
+                    remaining_qty * unit_offering
+                )
             if remaining_qty < 0:
                 remaining_qty = 0
+                remaining_offering = 0
             state = "waiting"
             if req.transfer_id:
                 state = "transfered"
                 remaining_qty = 0
+                remaining_offering = 0
             elif total_qty:
                 if remaining_qty == 0:
                     state = "done"
@@ -157,21 +182,31 @@ class MassRequest(models.Model):
                     state = "started"
             req.state = state
             req.mass_remaining_quantity = remaining_qty
-            req.remaining_offering = remaining_qty * req.unit_offering
+            req.remaining_offering = remaining_offering
 
-    @api.depends("type_id", "type_id.quantity", "quantity", "offering")
+    @api.depends("quantity", "product_id", "company_id")
+    def _compute_offering(self):
+        for req in self:
+            offering = 0.0
+            if req.product_id and req.company_id:
+                offering = req.company_id.currency_id.round(
+                    req.quantity * req.product_id.list_price
+                )
+            req.offering = offering
+
+    @api.depends("product_id", "quantity", "offering")
     def _compute_unit_offering(self):
         for req in self:
-            total_qty = req.type_id.quantity * req.quantity
-            if total_qty:
-                req.unit_offering = req.offering / total_qty
-            else:
-                req.unit_offering = 0.0
-
-    @api.depends("type_id", "type_id.quantity", "quantity")
-    def _compute_total_qty(self):
-        for req in self:
-            req.mass_quantity = req.type_id.quantity * req.quantity
+            mass_quantity = 0
+            unit_offering = 0.0
+            if req.product_id:
+                mass_quantity = (
+                    req.product_id.mass_request_type_id.quantity * req.quantity
+                )
+            if mass_quantity:
+                unit_offering = req.offering / mass_quantity
+            req.unit_offering = unit_offering
+            req.mass_quantity = mass_quantity
 
     @api.depends("product_id")
     def _compute_analytic_distribution(self):
@@ -209,11 +244,6 @@ class MassRequest(models.Model):
             )
         return res
 
-    @api.onchange("product_id")
-    def product_id_change(self):
-        if self.product_id:
-            self.offering = self.product_id.list_price
-
     def unlink(self):
         for request in self:
             if request.state != "waiting":
@@ -225,6 +255,31 @@ class MassRequest(models.Model):
                     % request.display_name
                 )
         return super().unlink()
+
+    def create_transfer_button(self):
+        for req in self:
+            if req.state != "waiting":
+                raise UserError(
+                    _(
+                        "Mass request '%s' cannot be transfered because it is not "
+                        "in waiting state."
+                    )
+                    % req.display_name
+                )
+        transfer = self.env["mass.request.transfer"].create(
+            {"mass_request_ids": [Command.set(self.ids)]}
+        )
+        action = self.env["ir.actions.actions"]._for_xml_id(
+            "mass.mass_request_transfer_action"
+        )
+        action.update(
+            {
+                "views": False,
+                "res_id": transfer.id,
+                "view_mode": "form,tree,pivot,graph",
+            }
+        )
+        return action
 
 
 class MassLine(models.Model):
@@ -329,39 +384,6 @@ class MassRequestTransfer(models.Model):
     _order = "id desc"
     _inherit = ["mail.thread", "mail.activity.mixin"]
 
-    def name_get(self):
-        res = []
-        for trf in self:
-            name = " ".join([trf.number, trf.celebrant_id.display_name])
-            if trf.state == "draft":
-                name = "%s (%s)" % (name, _("Draft"))
-            res.append((trf.id, name))
-        return res
-
-    @api.depends(
-        "mass_request_ids",
-        "mass_request_ids.mass_quantity",
-        "mass_request_ids.offering",
-    )
-    def _compute_transfer_totals(self):
-        rg_res = self.env["mass.request"].read_group(
-            [("transfer_id", "in", self.ids)],
-            ["transfer_id", "mass_quantity:sum", "offering:sum"],
-            ["transfer_id"],
-        )
-        mapped_data = {
-            x["transfer_id"][0]: {
-                "mass_quantity": x["mass_quantity"],
-                "offering": x["offering"],
-            }
-            for x in rg_res
-        }
-        for trf in self:
-            trf.amount_total = mapped_data.get(trf.id, {"offering": 0}).get("offering")
-            trf.mass_total = mapped_data.get(trf.id, {"mass_quantity": 0}).get(
-                "mass_quantity"
-            )
-
     number = fields.Char(
         string="Transfer Number",
         default=lambda self: _("New"),
@@ -370,7 +392,9 @@ class MassRequestTransfer(models.Model):
     )
     celebrant_id = fields.Many2one(
         "res.partner",
-        required=True,
+        # required=False because when we create a transfer from mass.request list view
+        # celebrant_id is not set
+        required=False,
         index=True,
         domain=[("celebrant", "=", "external")],
         states={"done": [("readonly", True)]},
@@ -409,12 +433,14 @@ class MassRequestTransfer(models.Model):
     amount_total = fields.Monetary(
         compute="_compute_transfer_totals",
         currency_field="company_currency_id",
+        precompute=True,
         store=True,
         tracking=True,
     )
     mass_total = fields.Integer(
         compute="_compute_transfer_totals",
         string="Total Mass Quantity",
+        precompute=True,
         store=True,
         tracking=True,
     )
@@ -427,6 +453,41 @@ class MassRequestTransfer(models.Model):
         default="draft",
         tracking=True,
     )
+
+    @api.depends(
+        "mass_request_ids",
+        "mass_request_ids.mass_quantity",
+        "mass_request_ids.offering",
+    )
+    def _compute_transfer_totals(self):
+        rg_res = self.env["mass.request"].read_group(
+            [("transfer_id", "in", self.ids)],
+            ["transfer_id", "mass_quantity:sum", "offering:sum"],
+            ["transfer_id"],
+        )
+        mapped_data = {
+            x["transfer_id"][0]: {
+                "mass_quantity": x["mass_quantity"],
+                "offering": x["offering"],
+            }
+            for x in rg_res
+        }
+        for trf in self:
+            trf.amount_total = mapped_data.get(trf.id, {"offering": 0}).get("offering")
+            trf.mass_total = mapped_data.get(trf.id, {"mass_quantity": 0}).get(
+                "mass_quantity"
+            )
+
+    def name_get(self):
+        res = []
+        for trf in self:
+            name = trf.number
+            if trf.celebrant_id:
+                name = " ".join([name, trf.celebrant_id.display_name])
+            if trf.state == "draft":
+                name = "%s (%s)" % (name, _("Draft"))
+            res.append((trf.id, name))
+        return res
 
     @api.model_create_multi
     def create(self, vals_list):
@@ -495,6 +556,11 @@ class MassRequestTransfer(models.Model):
 
     def validate(self):
         self.ensure_one()
+        if not self.celebrant_id:
+            raise UserError(
+                _("Celebrant is not set on mass request transfer '%s'.")
+                % self.display_name
+            )
         if not self.mass_request_ids:
             raise UserError(
                 _(

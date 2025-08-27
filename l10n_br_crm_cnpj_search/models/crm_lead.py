@@ -1,4 +1,4 @@
-from odoo import fields, models
+from odoo import Command, fields, models
 
 
 class Lead(models.Model):
@@ -29,21 +29,21 @@ class Lead(models.Model):
             values.update(
                 {
                     "cnpj_cpf": self.cnpj,
-                    "inscr_est": self.inscr_est,
-                    "inscr_mun": self.inscr_mun,
-                    "suframa": self.suframa,
+                    "l10n_br_ie_code": self.l10n_br_ie_code,
+                    "l10n_br_im_code": self.l10n_br_im_code,
+                    "l10n_br_isuf_code": self.l10n_br_isuf_code,
                     "legal_nature_id": self.legal_nature_id.id,
                     "equity_capital": self.equity_capital,
                     "cnae_main_id": self.cnae_main_id.id,
-                    "cnae_secondary_ids": [(6, 0, self.cnae_secondary_ids.ids)],
+                    "cnae_secondary_ids": [Command.set(self.cnae_secondary_ids.ids)],
                 }
             )
         else:
             values.update(
                 {
                     "cnpj_cpf": self.cpf,
-                    "inscr_est": self.rg,
-                    "rg": self.rg,
+                    "l10n_br_ie_code": self.l10n_br_rg_code,
+                    "l10n_br_rg_code": self.l10n_br_rg_code,
                 }
             )
         return values

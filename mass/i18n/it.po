@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-05-06 11:24+0000\n"
+"PO-Revision-Date: 2025-06-21 13:27+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -204,6 +204,13 @@ msgid "Celebrant"
 msgstr "Celebrante"
 
 #. module: mass
+#. odoo-python
+#: code:addons/mass/models/mass.py:0
+#, python-format
+msgid "Celebrant is not set on mass request transfer '%s'."
+msgstr "Il celebrante non è impostato nel trasferimento richiesta messa '%s'."
+
+#. module: mass
 #: model:ir.actions.act_window,name:mass.celebrant_partner_action
 #: model:ir.ui.menu,name:mass.mass_celebrants_menu
 #: model_terms:ir.ui.view,arch_db:mass.view_res_partner_filter
@@ -351,6 +358,11 @@ msgid "Draft"
 msgstr "Bozza"
 
 #. module: mass
+#: model:ir.model.fields,field_description:mass.field_mass_journal_validate__end_date
+msgid "End Date"
+msgstr "Data fine"
+
+#. module: mass
 #: model:ir.model.fields.selection,name:mass.selection__res_partner__celebrant__external
 msgid "External"
 msgstr "Esterno"
@@ -456,6 +468,13 @@ msgstr ""
 "particolare, selezionarlo qui. Altrimenti lasciare vuoto."
 
 #. module: mass
+#. odoo-python
+#: code:addons/mass/wizard/mass_journal_validate.py:0
+#, python-format
+msgid "Income account is not set for product '%s'."
+msgstr "Il conto ricavi non è impostato per il prodotto '%s'."
+
+#. module: mass
 #: model:ir.model.fields,field_description:mass.field_mass_line__intention
 #: model:ir.model.fields,field_description:mass.field_mass_request__intention
 #: model_terms:ir.ui.view,arch_db:mass.report_massline
@@ -475,7 +494,6 @@ msgstr "Segue"
 
 #. module: mass
 #: model:ir.model.fields,field_description:mass.field_mass_journal_generate__journal_date
-#: model:ir.model.fields,field_description:mass.field_mass_journal_validate__journal_date
 msgid "Journal Date"
 msgstr "Data registro"
 
@@ -539,7 +557,7 @@ msgstr "Gestione messe"
 #. module: mass
 #: model:res.groups,name:mass.group_mass_manager
 msgid "Manager"
-msgstr "Responsabile"
+msgstr "Supervisore"
 
 #. module: mass
 #: model:ir.model.fields.selection,name:mass.selection__product_template__detailed_type__donation_mass
@@ -639,6 +657,16 @@ msgstr "Conto giacenza messa"
 #: model:ir.model.fields,field_description:mass.field_res_config_settings__mass_validation_journal_id
 msgid "Mass Validation Journal"
 msgstr "Registro validazione messa"
+
+#. module: mass
+#. odoo-python
+#: code:addons/mass/models/mass.py:0
+#, python-format
+msgid ""
+"Mass request '%s' cannot be transfered because it is not in waiting state."
+msgstr ""
+"La richiesta di messa '%s' non può essere trasferita perché non è nello "
+"stato in attesa."
 
 #. module: mass
 #. odoo-python
@@ -750,6 +778,14 @@ msgstr "Tipo prossima attività"
 #, python-format
 msgid "No celebrants were selected !"
 msgstr "Nessun celebrante selezionato!"
+
+#. module: mass
+#. odoo-python
+#: code:addons/mass/wizard/mass_journal_validate.py:0
+#, python-format
+msgid "No mass to validate between %(start_date)s and %(end_date)s."
+msgstr ""
+"Nessuna messa da validare nel periodo dal %(start_date)s al %(end_date)s."
 
 #. module: mass
 #: model:product.template,name:mass.product_product_mass_novena_product_template
@@ -866,6 +902,11 @@ msgid "Simple Mass"
 msgstr "Messa semplice"
 
 #. module: mass
+#: model:ir.model.fields,field_description:mass.field_mass_journal_validate__start_date
+msgid "Start Date"
+msgstr "Data inizio"
+
+#. module: mass
 #: model:ir.model.fields.selection,name:mass.selection__mass_request__state__started
 #: model_terms:ir.ui.view,arch_db:mass.mass_request_search
 msgid "Started"
@@ -897,6 +938,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:mass.field_mass_request__stock_account_id
 msgid "Stock Account"
 msgstr "Conto giacenza"
+
+#. module: mass
+#. odoo-python
+#: code:addons/mass/wizard/mass_journal_validate.py:0
+#, python-format
+msgid "Stock account is not set on mass request '%s'."
+msgstr "Il conto magazzino non è impostato nella richiesta di messa '%s'."
 
 #. module: mass
 #: model_terms:ir.ui.view,arch_db:mass.swap_celebrant_form
@@ -955,6 +1003,13 @@ msgstr ""
 "Modificare le richieste."
 
 #. module: mass
+#. odoo-python
+#: code:addons/mass/wizard/mass_journal_validate.py:0
+#, python-format
+msgid "The start date (%(start_date)s) is after the end date (%(end_date)s)."
+msgstr "La data inizio (%(start_date)s) è dopo la data fine (%(end_date)s)."
+
+#. module: mass
 #: model:ir.model.fields,help:mass.field_mass_request__offering
 msgid "The total offering amount in company currency."
 msgstr "Il totale valore offerte nella valuta dell'azienda."
@@ -995,6 +1050,11 @@ msgstr "Numero totale di messe:"
 #: model_terms:ir.ui.view,arch_db:mass.mass_line_tree
 msgid "Total Offering"
 msgstr "Offerta totale"
+
+#. module: mass
+#: model_terms:ir.ui.view,arch_db:mass.mass_request_tree
+msgid "Transfer"
+msgstr "Trasferimento"
 
 #. module: mass
 #: model:ir.model.fields,field_description:mass.field_mass_request_transfer__transfer_date

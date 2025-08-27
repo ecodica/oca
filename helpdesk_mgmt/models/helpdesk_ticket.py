@@ -82,7 +82,9 @@ class HelpdeskTicket(models.Model):
     closed_date = fields.Datetime()
     closed = fields.Boolean(related="stage_id.closed")
     unattended = fields.Boolean(related="stage_id.unattended", store=True)
-    tag_ids = fields.Many2many(comodel_name="helpdesk.ticket.tag", string="Tags")
+    tag_ids = fields.Many2many(
+        comodel_name="helpdesk.ticket.tag", string="Tags", ondelete="restrict"
+    )
     company_id = fields.Many2one(
         comodel_name="res.company",
         string="Company",
@@ -201,6 +203,8 @@ class HelpdeskTicket(models.Model):
                     vals["closed_date"] = now
             if vals.get("user_id"):
                 vals["assigned_date"] = now
+            if "stage_id" in vals and "kanban_state" not in vals:
+                vals["kanban_state"] = False
         return super().write(vals)
 
     def action_duplicate_tickets(self):
@@ -324,3 +328,11 @@ class HelpdeskTicket(models.Model):
                 super(HelpdeskTicket, leftover)._notify_get_reply_to(default=default)
             )
         return res
+
+    def _message_track_post_template(self, changes):
+        if (
+            self._context.get("default_fetchmail_server_id")
+            and self._name == "helpdesk.ticket"
+        ):
+            changes.append("stage_id")
+        return super()._message_track_post_template(changes)

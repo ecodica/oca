@@ -10,6 +10,7 @@ from pytz import timezone
 
 from odoo import _, api, fields, models, tools
 from odoo.exceptions import UserError, ValidationError
+from odoo.tools.float_utils import float_compare
 from odoo.tools.safe_eval import safe_eval
 
 from .base_browsable import (
@@ -493,6 +494,8 @@ class HrPayslip(models.Model):
         return {
             "math": math,
             "datetime": datetime,
+            "relativedelta": relativedelta,
+            "float_compare": float_compare,
         }  # "math" object is useful for doing calculations
 
     def _get_baselocaldict(self, contracts):

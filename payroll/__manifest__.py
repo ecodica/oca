@@ -2,7 +2,7 @@
 
 {
     "name": "Payroll",
-    "version": "16.0.1.4.1",
+    "version": "16.0.1.6.0",
     "category": "Payroll",
     "website": "https://github.com/OCA/payroll",
     "sequence": 38,
@@ -29,6 +29,7 @@
         "views/hr_salary_rule_views.xml",
         "views/hr_payslip_line_views.xml",
         "views/hr_payslip_views.xml",
+        "views/hr_payslip_input_views.xml",
         "views/hr_payslip_run_views.xml",
         "views/hr_employee_views.xml",
         "views/report_contributionregister.xml",

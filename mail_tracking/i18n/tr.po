@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-22 00:51+0000\n"
-"PO-Revision-Date: 2025-03-21 19:06+0000\n"
-"Last-Translator: İsmail Çağan Yılmaz <ismail.cagan.yilmaz@gmail.com>\n"
+"PO-Revision-Date: 2025-07-22 14:11+0000\n"
+"Last-Translator: Ahmet Yiğit Budak <yigit@altinkaya.com>\n"
 "Language-Team: Turkish (https://www.transifex.com/oca/teams/23907/tr/)\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Weblate 5.10.2\n"
+"X-Generator: Weblate 5.10.4\n"
 
 #. module: mail_tracking
 #: model:ir.model.fields,help:mail_tracking.field_mail_tracking_email__state
@@ -50,9 +50,9 @@ msgstr ""
 "başarıyla iletildiğini belirtir.\n"
 " * 'Açıldı' durumu, mesajın alıcı tarafından açıldığını veya tıklandığını "
 "belirtir.\n"
-" * 'Reddedildi' durumu, alıcı e-posta adresinin giden e-posta sunucusu (SMTP)"
-" tarafından kara listeye alındığını belirtir. Bu e-posta adresini silmeniz "
-"önerilir.\n"
+" * 'Reddedildi' durumu, alıcı e-posta adresinin giden e-posta sunucusu "
+"(SMTP) tarafından kara listeye alındığını belirtir. Bu e-posta adresini "
+"silmeniz önerilir.\n"
 " * 'Spam' durumu, giden e-posta sunucusunun (SMTP) bu mesajı spam olarak "
 "değerlendirdiğini belirtir.\n"
 " * 'Abonelikten Çıkıldı' durumu, alıcının bu mesajdan abonelikten çıkmak "
@@ -100,7 +100,14 @@ msgstr "Atlama Tipi"
 #. module: mail_tracking
 #: model:ir.model.fields.selection,name:mail_tracking.selection__mail_tracking_email__state__bounced
 msgid "Bounced"
-msgstr "Atlandı"
+msgstr "Geri Döndü"
+
+#. module: mail_tracking
+#. odoo-javascript
+#: code:addons/mail_tracking/static/src/models/thread_view_topbar.esm.js:0
+#, python-format
+msgid "Cancel"
+msgstr ""
 
 #. module: mail_tracking
 #. odoo-javascript
@@ -209,6 +216,13 @@ msgid "Display Name"
 msgstr "Görünür İsim"
 
 #. module: mail_tracking
+#. odoo-javascript
+#: code:addons/mail_tracking/static/src/models/thread_view_topbar.esm.js:0
+#, python-format
+msgid "Do you really want to mark as reviewed all the failed messages?"
+msgstr ""
+
+#. module: mail_tracking
 #: model:ir.model.fields,field_description:mail_tracking.field_mail_tracking_email__mail_id
 #: model_terms:ir.ui.view,arch_db:mail_tracking.view_mail_tracking_email_search
 msgid "Email"
@@ -224,7 +238,7 @@ msgstr "E-posta Takma Adları"
 #: model:ir.model.fields,field_description:mail_tracking.field_res_partner__email_bounced
 #: model:ir.model.fields,field_description:mail_tracking.field_res_users__email_bounced
 msgid "Email Bounced"
-msgstr "E-posta Atlandı"
+msgstr "E-posta Geri Döndü"
 
 #. module: mail_tracking
 #: model:ir.model.fields,field_description:mail_tracking.field_res_partner__email_score
@@ -240,7 +254,7 @@ msgstr "E-posta Konusu"
 #. module: mail_tracking
 #: model_terms:ir.ui.view,arch_db:mail_tracking.view_res_partner_filter
 msgid "Email bounced"
-msgstr "E-posta atlandı"
+msgstr "E-posta geri döndü"
 
 #. module: mail_tracking
 #: model:ir.model,name:mail_tracking.model_mail_resend_message
@@ -441,7 +455,7 @@ msgstr "E-Posta Takipleri"
 #. module: mail_tracking
 #: model:ir.model,name:mail_tracking.model_mail_bounced_mixin
 msgid "Mail bounced mixin"
-msgstr "E-Posta atlandı birleşim"
+msgstr "E-Posta geri döndü birleşim"
 
 #. module: mail_tracking
 #: model:ir.model,name:mail_tracking.model_mail_tracking_email
@@ -476,6 +490,13 @@ msgid "MailTracking events"
 msgstr "E-Posta Takibi etkinlikler"
 
 #. module: mail_tracking
+#. odoo-javascript
+#: code:addons/mail_tracking/static/src/components/discuss/discuss.xml:0
+#, python-format
+msgid "Mark all as reviewed"
+msgstr ""
+
+#. module: mail_tracking
 #: model:ir.model,name:mail_tracking.model_mail_message
 #: model:ir.model.fields,field_description:mail_tracking.field_mail_tracking_email__message_id
 #: model:ir.model.fields,field_description:mail_tracking.field_mail_tracking_event__tracking_email_id
@@ -503,6 +524,13 @@ msgstr "Başarısız olan mesaj yok"
 #: model_terms:ir.ui.view,arch_db:mail_tracking.view_mail_tracking_event_tree
 msgid "OS"
 msgstr "İşletim Sistemi"
+
+#. module: mail_tracking
+#. odoo-javascript
+#: code:addons/mail_tracking/static/src/models/thread_view_topbar.esm.js:0
+#, python-format
+msgid "Ok"
+msgstr ""
 
 #. module: mail_tracking
 #: model:ir.model.fields.selection,name:mail_tracking.selection__mail_tracking_event__event_type__open

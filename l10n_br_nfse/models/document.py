@@ -107,7 +107,7 @@ class Document(models.Model):
             cidade_ibge=int(self.company_id.partner_id.city_id.ibge_code),
             cnpj_prestador=misc.punctuation_rm(self.company_id.partner_id.cnpj_cpf),
             im_prestador=misc.punctuation_rm(
-                self.company_id.partner_id.inscr_mun or ""
+                self.company_id.partner_id.l10n_br_im_code or ""
             ),
         )
 
@@ -239,7 +239,7 @@ class Document(models.Model):
         return {
             "cnpj": misc.punctuation_rm(self.company_id.partner_id.cnpj_cpf),
             "inscricao_municipal": misc.punctuation_rm(
-                self.company_id.partner_id.inscr_mun or ""
+                self.company_id.partner_id.l10n_br_im_code or ""
             )
             or None,
             "id": "rps" + str(num_rps),
@@ -266,6 +266,8 @@ class Document(models.Model):
             "carga_tributaria": self.amount_tax,
             "total_recebido": self.amount_price_gross,
             "carga_tributaria_estimada": self.amount_estimate_tax,
+            "customer_additional_data": self.customer_additional_data,
+            "fiscal_additional_data": self.fiscal_additional_data,
         }
 
     def convert_type_nfselib(self, class_object, object_filed, value):

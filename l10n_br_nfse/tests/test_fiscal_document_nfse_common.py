@@ -15,13 +15,14 @@ class TestFiscalDocumentNFSeCommon(TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
+        cls.env = cls.env(context=dict(cls.env.context, tracking_disable=True))
 
         cls.nfse_same_state = cls.env.ref("l10n_br_fiscal.demo_nfse_same_state")
         cls.company = cls.env.ref("l10n_br_base.empresa_simples_nacional")
 
         cls.company.processador_edoc = PROCESSADOR_OCA
-        cls.company.partner_id.inscr_mun = "35172"
-        cls.company.partner_id.inscr_est = ""
+        cls.company.partner_id.l10n_br_im_code = "35172"
+        cls.company.partner_id.l10n_br_ie_code = ""
         cls.company.partner_id.state_id = cls.env.ref("base.state_br_mg")
         cls.company.partner_id.city_id = cls.env.ref("l10n_br_base.city_3132404")
         cls.company.icms_regulation_id = cls.env.ref(
@@ -35,9 +36,6 @@ class TestFiscalDocumentNFSeCommon(TransactionCase):
 
     def test_certified_nfse_same_state_(self):
         """Test Certified NFSe same state."""
-
-        self.nfse_same_state._onchange_fiscal_operation_id()
-
         # RPS Number
         self.assertEqual(
             self.nfse_same_state.rps_number,
@@ -127,9 +125,7 @@ class TestFiscalDocumentNFSeCommon(TransactionCase):
 
         for line in self.nfse_same_state.fiscal_line_ids:
             line._onchange_product_id_fiscal()
-            line._onchange_commercial_quantity()
             line._onchange_fiscal_operation_id()
-            line._onchange_fiscal_operation_line_id()
             line._onchange_fiscal_taxes()
 
             # prepare_line_servico()

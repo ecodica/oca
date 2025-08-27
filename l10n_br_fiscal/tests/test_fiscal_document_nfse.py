@@ -5,21 +5,18 @@ from odoo.tests.common import TransactionCase
 
 
 class TestFiscalDocumentNFSe(TransactionCase):
-    def setUp(self):
-        super().setUp()
-
-        self.nfse_same_state = self.env.ref("l10n_br_fiscal.demo_nfse_same_state")
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.env = cls.env(context=dict(cls.env.context, tracking_disable=True))
+        cls.nfse_same_state = cls.env.ref("l10n_br_fiscal.demo_nfse_same_state")
 
     def test_nfse_same_state(self):
         """Test NFSe same state."""
 
-        self.nfse_same_state._onchange_fiscal_operation_id()
-
         for line in self.nfse_same_state.fiscal_line_ids:
             line._onchange_product_id_fiscal()
-            line._onchange_commercial_quantity()
             line._onchange_fiscal_operation_id()
-            line._onchange_fiscal_operation_line_id()
             line._onchange_fiscal_taxes()
 
             self.assertEqual(

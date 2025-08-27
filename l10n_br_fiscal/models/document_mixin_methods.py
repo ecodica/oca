@@ -11,6 +11,28 @@ from ..constants.fiscal import (
 
 
 class FiscalDocumentMixinMethods(models.AbstractModel):
+    """
+    Provides the method implementations for l10n_br_fiscal.document.mixin.
+
+    These methods are extracted into this separate mixin due to the way
+    l10n_br_fiscal.document.line is incorporated into account.move
+    by the l10n_br_account module (decorator pattern).
+
+    Specifically:
+    - In l10n_br_account, fields from l10n_br_fiscal.document
+      are added to account.move using Odoo's `_inherits` (composition)
+      mechanism.
+    - The methods in *this* mixin, however, are intended to be inherited
+      using the standard `_inherit` mechanism.
+
+    This separation is crucial because `_inherits` handles field composition
+    but does not inherit methods. Thus, `_inherit` is used to bring in
+    these methods. If these methods were defined in the same class as the
+    fields of l10n_br_fiscal.document.mixin (which are subject to
+    `_inherits`), and account.move.line also used `_inherit` on that
+    single class, the fields would be duplicated.
+    """
+
     _name = "l10n_br_fiscal.document.mixin.methods"
     _description = "Fiscal Document Mixin Methods"
 
@@ -35,40 +57,17 @@ class FiscalDocumentMixinMethods(models.AbstractModel):
                 self.company_id, self.fiscal_operation_id
             )
 
-    @api.onchange("fiscal_operation_id")
-    def _onchange_fiscal_operation_id(self):
-        if self.fiscal_operation_id:
-            self.fiscal_operation_type = self.fiscal_operation_id.fiscal_operation_type
-            self.edoc_purpose = self.fiscal_operation_id.edoc_purpose
-
-            if self.issuer == DOCUMENT_ISSUER_COMPANY and not self.document_type_id:
-                self.document_type_id = self.company_id.document_type_id
-
-            subsequent_documents = [(6, 0, {})]
-            for subsequent_id in self.fiscal_operation_id.mapped(
-                "operation_subsequent_ids"
-            ):
-                subsequent_documents.append(
-                    (
-                        0,
-                        0,
-                        {
-                            "source_document_id": self.id,
-                            "subsequent_operation_id": subsequent_id.id,
-                            "fiscal_operation_id": (
-                                subsequent_id.subsequent_operation_id.id
-                            ),
-                        },
-                    )
-                )
-            self.document_subsequent_ids = subsequent_documents
+    @api.depends("fiscal_operation_id")
+    def _compute_document_type_id(self):
+        for doc in self.filtered(lambda doc: doc.fiscal_operation_id):
+            if doc.issuer == DOCUMENT_ISSUER_COMPANY and not doc.document_type_id:
+                doc.document_type_id = doc.company_id.document_type_id
 
     def _get_amount_lines(self):
-        """Get object lines instaces used to compute fields"""
-        return self.mapped("fiscal_line_ids")
+        """Get object lines instances used to compute fiscal fields"""
+        return self.mapped(self._get_fiscal_lines_field_name())
 
     def _get_product_amount_lines(self):
-        """Get object lines instaces used to compute fields"""
         fiscal_line_ids = self._get_amount_lines()
         return fiscal_line_ids.filtered(lambda line: line.product_id.type != "service")
 
@@ -97,9 +96,44 @@ class FiscalDocumentMixinMethods(models.AbstractModel):
             elif doc.document_serie_id is None:
                 doc.document_serie_id = False
 
+    @api.model
+    def _get_fiscal_lines_field_name(self):
+        return "fiscal_line_ids"
+
+    def _get_fiscal_amount_field_dependencies(self):
+        """
+        Dynamically get the list of field dependencies.
+        """
+        if self._abstract:
+            return []
+        o2m_field_name = self._get_fiscal_lines_field_name()
+        target_fields = []
+        for field in self._get_amount_fields():
+            if (
+                field.replace("amount_", "")
+                in getattr(self, o2m_field_name)._fields.keys()
+            ):
+                target_fields.append(field.replace("amount_", ""))
+
+        return [o2m_field_name] + [
+            f"{o2m_field_name}.{target_field}" for target_field in target_fields
+        ]
+
+    @api.depends(lambda self: self._get_fiscal_amount_field_dependencies())
     def _compute_fiscal_amount(self):
+        """
+        Compute and sum various fiscal amounts from the document lines.
+
+        This method iterates over fields prefixed with 'amount_' (as determined
+        by `_get_amount_fields`) and sums corresponding values from the lines
+        retrieved by `_get_amount_lines`.
+
+        It handles cases where delivery costs (freight, insurance, other) are
+        defined at the document total level rather than per line.
+        """
+
         fields = self._get_amount_fields()
-        for doc in self:
+        for doc in self.filtered(lambda m: m.fiscal_operation_id):
             values = {key: 0.0 for key in fields}
             for line in doc._get_amount_lines():
                 for field in fields:
@@ -108,9 +142,9 @@ class FiscalDocumentMixinMethods(models.AbstractModel):
                     if field.replace("amount_", "") in line._fields.keys():
                         # FIXME this field creates an error in invoice form
                         if field == "amount_financial_discount_value":
-                            values[
-                                "amount_financial_discount_value"
-                            ] += 0  # line.financial_discount_value
+                            values["amount_financial_discount_value"] += (
+                                0  # line.financial_discount_value
+                            )
                         else:
                             values[field] += line[field.replace("amount_", "")]
 
@@ -151,12 +185,17 @@ class FiscalDocumentMixinMethods(models.AbstractModel):
 
     def _get_fiscal_partner(self):
         """
-        Meant to be overriden when the l10n_br_fiscal.document partner_id should not
-        be the same as the sale.order, purchase.order, account.move (...) partner_id.
+        Hook method to determine the fiscal partner for the document.
 
-        (In the case of invoicing, the invoicing partner set by the user should
-        get priority over any invoicing contact returned by address_get.)
+        This method is designed to be overridden in implementing models if the
+        partner relevant for fiscal purposes (e.g., for tax calculations,
+        final consumer status) is different from the main `partner_id`
+        of the document record. For instance, an invoice might use a specific
+        invoicing contact derived from the main partner.
+
+        :return: A `res.partner` recordset representing the fiscal partner.
         """
+
         self.ensure_one()
         return self.partner_id
 

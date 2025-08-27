@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-06-04 09:26+0000\n"
+"PO-Revision-Date: 2025-08-16 14:25+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -158,13 +158,13 @@ msgstr "Azienda"
 #. module: shipment_advice
 #: model:ir.model.fields,help:shipment_advice.field_shipment_advice__carrier_ids
 msgid ""
-"Concerned shipping method  for this shipment advice. It can be used to "
+"Concerned shipping method for this shipment advice. It can be used to "
 "determine what are the eligible deliveries to load in the shipment when you "
 "don't have planned content (e.g. through the shopfloor application)."
 msgstr ""
-"Motodo di spedizione utili   per questo avviso di spedizione. Può essere "
+"Metodo di spedizione utile per questo avviso di spedizione. Può essere "
 "utilizzato per determinare quali sono le consegne idonee da caricare nella "
-"spedizione quando non si è pianificato il conetnuto (es. dall'applicazione "
+"spedizione quando non si è pianificato il contenuto (es. dall'applicazione "
 "di reparto)."
 
 #. module: shipment_advice
@@ -345,7 +345,8 @@ msgstr ""
 "tutte caricate\n"
 "              in una spedizione in un avviso di spedizione, scegliere "
 "'Lascia aperte'. Quest'ultima opzione\n"
-"              è utile quando le consegne vengono spedite da diversi atomezzi."
+"              è utile quando le consegne vengono spedite da diversi "
+"automezzi."
 
 #. module: shipment_advice
 #: model:ir.model.fields,help:shipment_advice.field_res_company__shipment_advice_outgoing_backorder_policy
@@ -380,7 +381,7 @@ msgstr "In corso"
 #: model:ir.model.fields.selection,name:shipment_advice.selection__shipment_advice__shipment_type__incoming
 #: model_terms:ir.ui.view,arch_db:shipment_advice.shipment_advice_view_search
 msgid "Incoming"
-msgstr "in arrivo"
+msgstr "In entrata"
 
 #. module: shipment_advice
 #: model:ir.model.fields,field_description:shipment_advice.field_shipment_advice__message_is_follower
@@ -1169,7 +1170,7 @@ msgstr ""
 #: code:addons/shipment_advice/models/stock_move_line.py:0
 #, python-format
 msgid ""
-"This move is already loaded  in another shipment.\n"
+"This move is already loaded in another shipment.\n"
 "Product: %(product)s.\n"
 "Picking: %(picking)s"
 msgstr ""
@@ -1188,7 +1189,7 @@ msgid ""
 "To prevent timeouts for large shipments, enable this option to execute\n"
 "                            shipment advice validation through a queued job. "
 "Each picking will be\n"
-"                            validated in a separate jobs."
+"                            validated in a separate job."
 msgstr ""
 "Per prevenire i timeout nelle grandi spedizioni, abilitare questa opzione "
 "per eseguire\n"
@@ -1539,6 +1540,18 @@ msgstr "shipment_advice_auto_close_incoming"
 #: model_terms:ir.ui.view,arch_db:shipment_advice.res_config_settings_view_form
 msgid "shipment_advice_run_in_queue_job"
 msgstr "shipment_advice_run_in_queue_job"
+
+#~ msgid ""
+#~ "To prevent timeouts for large shipments, enable this option to execute\n"
+#~ "                            shipment advice validation through a queued "
+#~ "job. Each picking will be\n"
+#~ "                            validated in a separate jobs."
+#~ msgstr ""
+#~ "Per prevenire i timeout nelle grandi spedizioni, abilitare questa opzione "
+#~ "per eseguire\n"
+#~ "                            l'avviso di spedizione attraverso un lavoro "
+#~ "accodato. Ogni prelievo verrà\n"
+#~ "                            validato in un lavoro separato."
 
 #, python-format
 #~ msgid ""

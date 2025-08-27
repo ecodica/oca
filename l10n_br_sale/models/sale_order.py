@@ -50,21 +50,6 @@ class SaleOrder(models.Model):
         default=_default_copy_note,
     )
 
-    cnpj_cpf = fields.Char(
-        string="CNPJ/CPF",
-        related="partner_invoice_id.cnpj_cpf",
-    )
-
-    legal_name = fields.Char(
-        string="Legal Name",
-        related="partner_invoice_id.legal_name",
-    )
-
-    ie = fields.Char(
-        string="State Tax Number/RG",
-        related="partner_invoice_id.inscr_est",
-    )
-
     discount_rate = fields.Float(
         string="Discount",
         readonly=True,
@@ -81,29 +66,9 @@ class SaleOrder(models.Model):
         store=True,
     )
 
-    amount_freight_value = fields.Monetary(
-        inverse="_inverse_amount_freight",
-    )
-
-    amount_insurance_value = fields.Monetary(
-        inverse="_inverse_amount_insurance",
-    )
-
-    amount_other_value = fields.Monetary(
-        inverse="_inverse_amount_other",
-    )
-
-    def _get_amount_lines(self):
-        """Get object lines instaces used to compute fields"""
-        return self.mapped("order_line")
-
-    @api.depends(
-        "order_line.price_subtotal", "order_line.price_tax", "order_line.price_total"
-    )
-    def _compute_amounts(self):
-        """Compute the total amounts of the SO."""
-        for order in self:
-            order._compute_fiscal_amount()
+    @api.model
+    def _get_fiscal_lines_field_name(self):
+        return "order_line"
 
     @api.model
     def _get_view(self, view_id=None, view_type="form", **options):
@@ -115,6 +80,14 @@ class SaleOrder(models.Model):
             "//field[@name='tax_totals'][@widget='account-tax-totals-field']"
         ):
             tax_totals_node.set("attrs", "{'invisible': True}")
+
+        if view_type == "form" and (
+            self.user_has_groups("l10n_br_sale.group_line_fiscal_detail")
+            or self.env.context.get("force_line_fiscal_detail_edition")
+        ):
+            for sub_tree_node in arch.xpath("//field[@name='order_line']/tree"):
+                sub_tree_node.attrib["editable"] = ""
+
         return arch, view
 
     @api.onchange("fiscal_operation_id")

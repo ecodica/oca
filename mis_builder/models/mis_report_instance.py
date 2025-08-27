@@ -476,8 +476,10 @@ class MisReportInstance(models.Model):
 
     _name = "mis.report.instance"
     _description = "MIS Report Instance"
+    _order = "sequence, id"
 
     name = fields.Char(required=True, translate=True)
+    sequence = fields.Integer(default=10)
     description = fields.Char(related="report_id.description", readonly=True)
     date = fields.Date(
         string="Base date", help="Report base date " "(leave empty to use current date)"
@@ -863,7 +865,8 @@ class MisReportInstance(models.Model):
         """
         self.ensure_one()
         aep = self.report_id._prepare_aep(self.query_company_ids, self.currency_id)
-        kpi_matrix = self.report_id.prepare_kpi_matrix(self.multi_company)
+        multi_company = self.multi_company and len(self.query_company_ids) > 1
+        kpi_matrix = self.report_id.prepare_kpi_matrix(multi_company)
         for period in self.period_ids:
             description = None
             if period.mode == MODE_NONE:

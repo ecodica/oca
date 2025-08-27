@@ -8,11 +8,6 @@
         <field name="model">res.company</field>
         <field name="inherit_id" ref="base.view_company_form" />
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='vat']" position="attributes">
-                <attribute
-                    name="attrs"
-                >{'invisible': [('country_id', '=', %(base.br)d)]}</attribute>
-            </xpath>
             <field name="company_registry" position="after">
                 <field
                     name="legal_name"
@@ -20,22 +15,17 @@
                     attrs="{'invisible': [('country_id', '!=', %(base.br)d)]}"
                 />
                 <field
-                    name="cnpj_cpf"
-                    placeholder="CNPJ..."
-                    attrs="{'invisible': [('country_id', '!=', %(base.br)d)]}"
-                />
-                <field
-                    name="inscr_est"
+                    name="l10n_br_ie_code"
                     placeholder="State Tax Number..."
                     attrs="{'invisible': [('country_id', '!=', %(base.br)d)]}"
                 />
                 <field
-                    name="inscr_mun"
+                    name="l10n_br_im_code"
                     placeholder="Municipal Tax Number..."
                     attrs="{'invisible': [('country_id', '!=', %(base.br)d)]}"
                 />
                 <field
-                    name="suframa"
+                    name="l10n_br_isuf_code"
                     placeholder="Suframa"
                     attrs="{'invisible': [('state_id', '!=', %(base.state_br_am)d)]}"
                 />
@@ -45,7 +35,7 @@
                 >
                     <tree editable="bottom">
                         <field name="company_id" invisible="1" />
-                        <field name="inscr_est" />
+                        <field name="l10n_br_ie_code" />
                         <field
                             name="state_id"
                             domain="[('country_id', '=', %(base.br)d)]"
@@ -79,7 +69,7 @@
         <field name="field_parent">child_ids</field>
         <field name="arch" type="xml">
             <field name="name" position="after">
-                <field name="cnpj_cpf" />
+                <field name="vat" />
             </field>
         </field>
     </record>

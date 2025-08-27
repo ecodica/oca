@@ -1,16 +1,16 @@
 # Copyright (C) 2009 - TODAY Renato Lima - Akretion
 # License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
 
-from odoo import api, fields, models
+from odoo import Command, api, fields, models
 
 
 class FiscalTax(models.Model):
     _inherit = "l10n_br_fiscal.tax"
 
-    def account_taxes(self, user_type="sale", fiscal_operation=False):
+    def account_taxes(self, user_type="sale", fiscal_operation=False, company=False):
         account_taxes = self.env["account.tax"]
         for fiscal_tax in self:
-            taxes = fiscal_tax._account_taxes()
+            taxes = fiscal_tax._account_taxes(company)
             # Atualiza os impostos contábeis relacionados aos impostos fiscais
             account_taxes |= taxes.filtered(
                 lambda t: t.type_tax_use == user_type and t.active and not t.deductible
@@ -25,17 +25,18 @@ class FiscalTax(models.Model):
 
         return account_taxes
 
-    def _account_taxes(self):
+    def _account_taxes(self, company=False):
         self.ensure_one()
         account_tax_group = self.tax_group_id.account_tax_group()
-        company = self.env.company
-        if self.env.context.get("default_company_id") or self.env.context.get(
-            "allowed_company_ids"
-        ):
-            company = self.env["res.company"].browse(
-                self.env.context.get("default_company_id")
-                or self.env.context.get("allowed_company_ids")[0]
-            )
+        if not company:
+            company = self.env.company
+            if self.env.context.get("default_company_id") or self.env.context.get(
+                "allowed_company_ids"
+            ):
+                company = self.env["res.company"].browse(
+                    self.env.context.get("default_company_id")
+                    or self.env.context.get("allowed_company_ids")[0]
+                )
         return self.env["account.tax"].search(
             [
                 ("tax_group_id", "=", account_tax_group.id),
@@ -54,7 +55,7 @@ class FiscalTax(models.Model):
                     tax_values = {
                         "name": fiscal_tax.name + " " + tax_users.get(tax_use),
                         "type_tax_use": tax_use,
-                        "fiscal_tax_ids": [(4, fiscal_tax.id)],
+                        "fiscal_tax_ids": [Command.link(fiscal_tax.id)],
                         "tax_group_id": fiscal_tax.tax_group_id.account_tax_group().id,
                         "amount": 0.00,
                     }
@@ -62,7 +63,7 @@ class FiscalTax(models.Model):
                     self.env["account.tax"].create(tax_values)
 
             else:
-                account_taxes.write({"fiscal_tax_ids": [(4, fiscal_tax.id)]})
+                account_taxes.write({"fiscal_tax_ids": [Command.link(fiscal_tax.id)]})
 
     @api.model_create_multi
     def create(self, vals_list):

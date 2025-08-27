@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: account-financial-tools (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-03-10 23:23+0000\n"
-"PO-Revision-Date: 2025-05-19 09:26+0000\n"
+"PO-Revision-Date: 2025-08-19 15:25+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (http://www.transifex.com/oca/"
 "OCA-account-financial-tools-8-0/language/it/)\n"
@@ -477,7 +477,7 @@ msgstr "Calcola ammortamenti"
 #: code:addons/account_asset_management/wizard/account_asset_compute.py:0
 #, python-format
 msgid "Compute Assets errors"
-msgstr "Calcola errori ammortamento"
+msgstr "Calcola errori cespiti"
 
 #. module: account_asset_management
 #. odoo-python
@@ -1223,7 +1223,7 @@ msgstr "Valore fine periodo"
 #: model:ir.model.fields,field_description:account_asset_management.field_account_asset__method_period
 #: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__method_period
 msgid "Period Length"
-msgstr "Durata del Periodo"
+msgstr "Durata periodo"
 
 #. module: account_asset_management
 #. odoo-python
@@ -1650,7 +1650,7 @@ msgstr "Errore indefinito"
 #: model:ir.model.fields,field_description:account_asset_management.field_account_asset__use_leap_years
 #: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__use_leap_years
 msgid "Use Leap Years"
-msgstr "Una anni bisestili"
+msgstr "Usa anni bisestili"
 
 #. module: account_asset_management
 #: model:ir.model.fields,field_description:account_asset_management.field_wiz_asset_move_reverse__journal_id

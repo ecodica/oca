@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: partner-contact (9.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-31 00:06+0000\n"
-"PO-Revision-Date: 2025-02-22 09:06+0000\n"
-"Last-Translator: İsmail Çağan Yılmaz <ismail.cagan.yilmaz@gmail.com>\n"
+"PO-Revision-Date: 2025-07-10 12:22+0000\n"
+"Last-Translator: Betül Öğmen <betulo@eska.biz>\n"
 "Language-Team: Turkish (http://www.transifex.com/oca/OCA-partner-contact-9-0/"
 "language/tr/)\n"
 "Language: tr\n"
@@ -17,7 +17,32 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.10.4\n"
+
+#. module: account_financial_risk
+#: model_terms:ir.ui.view,arch_db:account_financial_risk.portal_layout
+msgid "<em>Draft Invoices </em>"
+msgstr ""
+
+#. module: account_financial_risk
+#: model_terms:ir.ui.view,arch_db:account_financial_risk.portal_layout
+msgid "<em>Open Invoices </em>"
+msgstr ""
+
+#. module: account_financial_risk
+#: model_terms:ir.ui.view,arch_db:account_financial_risk.portal_layout
+msgid "<em>Other Open Amount </em>"
+msgstr ""
+
+#. module: account_financial_risk
+#: model_terms:ir.ui.view,arch_db:account_financial_risk.portal_layout
+msgid "<em>Other Unpaid Amount </em>"
+msgstr ""
+
+#. module: account_financial_risk
+#: model_terms:ir.ui.view,arch_db:account_financial_risk.portal_layout
+msgid "<em>Unpaid Invoices </em>"
+msgstr ""
 
 #. module: account_financial_risk
 #: model_terms:ir.ui.view,arch_db:account_financial_risk.res_partner_view_risk
@@ -38,6 +63,21 @@ msgstr "<span class=\"oe_read_only\">(</span>"
 #: model_terms:ir.ui.view,arch_db:account_financial_risk.res_partner_view_risk
 msgid "<span class=\"oe_read_only\">)</span>"
 msgstr "<span class=\"oe_read_only\">)</span>"
+
+#. module: account_financial_risk
+#: model_terms:ir.ui.view,arch_db:account_financial_risk.portal_layout
+msgid "<strong>Consumed credit </strong>"
+msgstr ""
+
+#. module: account_financial_risk
+#: model_terms:ir.ui.view,arch_db:account_financial_risk.portal_layout
+msgid "<strong>Credit limit </strong>"
+msgstr ""
+
+#. module: account_financial_risk
+#: model_terms:ir.ui.view,arch_db:account_financial_risk.portal_layout
+msgid "<strong>Remaining credit </strong>"
+msgstr ""
 
 #. module: account_financial_risk
 #: model:ir.model.fields,field_description:account_financial_risk.field_res_partner__move_line_ids
@@ -86,7 +126,7 @@ msgstr ""
 #. module: account_financial_risk
 #: model:res.groups,comment:account_financial_risk.group_account_financial_risk_manager
 msgid "Can edit risk limit and overpass partner risk exceptions"
-msgstr "Risk limitini düzenleyebilir ve İş ortak risk istisnalarını aşabilir."
+msgstr "Risk limitini düzenleyebilir ve İş ortak risk istisnalarını aşabilir"
 
 #. module: account_financial_risk
 #: model_terms:ir.ui.view,arch_db:account_financial_risk.partner_risk_exceeded_wizard
@@ -98,7 +138,7 @@ msgstr "Vazgeç"
 #: code:addons/account_financial_risk/models/res_partner.py:0
 #, python-format
 msgid "Choose Manual Credit Currency."
-msgstr "Manuel Kredi Para Birimini Seçin"
+msgstr "Manuel Kredi Para Birimini Seçin."
 
 #. module: account_financial_risk
 #: model:ir.model,name:account_financial_risk.model_res_company
@@ -159,10 +199,15 @@ msgid "Credit Policy"
 msgstr "Kredi Politika"
 
 #. module: account_financial_risk
+#: model_terms:ir.ui.view,arch_db:account_financial_risk.portal_layout
+msgid "Credit information"
+msgstr ""
+
+#. module: account_financial_risk
 #: model:ir.model.fields,help:account_financial_risk.field_res_partner__credit_limit
 #: model:ir.model.fields,help:account_financial_risk.field_res_users__credit_limit
 msgid "Credit limit specific to this partner."
-msgstr "Bu iş ortağına özgü risk limiti"
+msgstr "Bu iş ortağına özgü risk limiti."
 
 #. module: account_financial_risk
 #: model:ir.model.fields,field_description:account_financial_risk.field_partner_risk_exceeded_wiz__partner_id
@@ -293,9 +338,31 @@ msgid "General Limits"
 msgstr "Genel Limitler"
 
 #. module: account_financial_risk
+#: model:ir.model.fields,help:account_financial_risk.field_res_partner__portal_show_financial_risk_visible
+#: model:ir.model.fields,help:account_financial_risk.field_res_users__portal_show_financial_risk_visible
+msgid ""
+"Helper field to control visibility of the partner option based on global "
+"config."
+msgstr ""
+
+#. module: account_financial_risk
 #: model:ir.model.fields,field_description:account_financial_risk.field_partner_risk_exceeded_wiz__id
 msgid "ID"
 msgstr "ID"
+
+#. module: account_financial_risk
+#: model:ir.model.fields,help:account_financial_risk.field_res_config_settings__portal_show_financial_risk
+#: model_terms:ir.ui.view,arch_db:account_financial_risk.res_config_settings_view_form
+msgid "If enabled, portal users will be able to see their credit information."
+msgstr ""
+
+#. module: account_financial_risk
+#: model:ir.model.fields,help:account_financial_risk.field_res_partner__show_financial_risk_in_portal
+#: model:ir.model.fields,help:account_financial_risk.field_res_users__show_financial_risk_in_portal
+msgid ""
+"If enabled, this partner will see their financial risk in the portal, "
+"provided the global setting is also enabled."
+msgstr ""
 
 #. module: account_financial_risk
 #: model:ir.model.fields,field_description:account_financial_risk.field_res_partner__risk_invoice_draft_include
@@ -336,7 +403,7 @@ msgstr "Bilgi"
 #: model:ir.model.fields,help:account_financial_risk.field_res_partner__risk_exception
 #: model:ir.model.fields,help:account_financial_risk.field_res_users__risk_exception
 msgid "It Indicate if partner risk exceeded"
-msgstr "İş Ortağı riskinin aşıldığını gösterir."
+msgstr "İş Ortağı riskinin aşıldığını gösterir"
 
 #. module: account_financial_risk
 #: model:ir.model,name:account_financial_risk.model_account_move
@@ -428,6 +495,12 @@ msgstr "İş Ortağı Risk Aşımı Sihirbazı"
 #, python-format
 msgid "Partner risk exceeded"
 msgstr "İş ortağı risk limit aşıldı"
+
+#. module: account_financial_risk
+#: model:ir.model.fields,field_description:account_financial_risk.field_res_partner__portal_show_financial_risk_visible
+#: model:ir.model.fields,field_description:account_financial_risk.field_res_users__portal_show_financial_risk_visible
+msgid "Portal Show Financial Risk Visible"
+msgstr ""
 
 #. module: account_financial_risk
 #: model:ir.model.fields.selection,name:account_financial_risk.selection__res_partner__credit_currency__pricelist
@@ -561,6 +634,13 @@ msgstr "Risk aşıldı"
 #: model:ir.model.fields,help:account_financial_risk.field_res_users__risk_invoice_unpaid_limit
 msgid "Set 0 if it is not locked"
 msgstr "Kilitli değilse 0'a ayarlayın"
+
+#. module: account_financial_risk
+#: model:ir.model.fields,field_description:account_financial_risk.field_res_config_settings__portal_show_financial_risk
+#: model:ir.model.fields,field_description:account_financial_risk.field_res_partner__show_financial_risk_in_portal
+#: model:ir.model.fields,field_description:account_financial_risk.field_res_users__show_financial_risk_in_portal
+msgid "Show credit information in portal"
+msgstr ""
 
 #. module: account_financial_risk
 #: model_terms:ir.ui.view,arch_db:account_financial_risk.res_partner_view_risk

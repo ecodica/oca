@@ -83,15 +83,15 @@ class ResPartner(models.Model):
         tracking=True,
     )
 
-    cnpj_cpf = fields.Char(
+    vat = fields.Char(
         tracking=True,
     )
 
-    inscr_est = fields.Char(
+    l10n_br_ie_code = fields.Char(
         tracking=True,
     )
 
-    inscr_mun = fields.Char(
+    l10n_br_im_code = fields.Char(
         tracking=True,
     )
 
@@ -128,7 +128,7 @@ class ResPartner(models.Model):
     def _onchange_ind_ie_dest(self):
         for p in self:
             if p.ind_ie_dest == NFE_IND_IE_DEST_9:
-                p.inscr_est = False
+                p.l10n_br_ie_code = False
                 p.state_tax_number_ids = False
 
     @api.model
@@ -139,6 +139,6 @@ class ResPartner(models.Model):
             "ind_ie_dest",
             "fiscal_profile_id",
             "ind_final",
-            "inscr_est",
-            "inscr_mun",
+            "l10n_br_ie_code",
+            "l10n_br_im_code",
         ]

@@ -1,6 +1,6 @@
 from erpbrasil.base.misc import punctuation_rm
 
-from odoo import models
+from odoo import Command, models
 
 
 class PartnerCnpjSearchWizard(models.TransientModel):
@@ -29,7 +29,7 @@ class PartnerCnpjSearchWizard(models.TransientModel):
             values_to_update = {
                 "partner_name": self.name,
                 "legal_name": self.legal_name,
-                "inscr_est": self.inscr_est,
+                "l10n_br_ie_code": self.l10n_br_ie_code,
                 "zip": self.zip,
                 "street_name": self.street_name,
                 "street_number": self.street_number,
@@ -44,7 +44,7 @@ class PartnerCnpjSearchWizard(models.TransientModel):
                 "legal_nature_id": self.legal_nature_id.id,
                 "equity_capital": self.equity_capital,
                 "cnae_main_id": self.cnae_main_id.id,
-                "cnae_secondary_ids": [(6, 0, self.cnae_secondary_ids.ids)]
+                "cnae_secondary_ids": [Command.set(self.cnae_secondary_ids.ids)]
                 if self.cnae_secondary_ids
                 else False,
             }

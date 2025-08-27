@@ -337,6 +337,24 @@ class Rma(models.Model):
     different_return_product = fields.Boolean(
         related="operation_id.different_return_product"
     )
+    requires_action = fields.Boolean(
+        compute="_compute_requires_action",
+        help="Indicates whether the RMA requires processing such as a receipt,"
+        "delivery, or refund.",
+    )
+
+    @api.depends("operation_id")
+    def _compute_requires_action(self):
+        """
+        compute whether the RMA requires any follow-up action based on the
+        operation configuration
+        """
+        for rma in self:
+            rma.requires_action = (
+                rma.operation_id.action_create_receipt
+                or rma.operation_id.action_create_delivery
+                or rma.operation_id.action_create_refund
+            )
 
     @api.depends("operation_id.action_create_receipt", "state", "reception_move_id")
     def _compute_show_create_receipt(self):
@@ -509,13 +527,17 @@ class Rma(models.Model):
                 and r.state == "confirmed"
             )
 
-    @api.depends("state", "remaining_qty")
+    @api.depends("state", "remaining_qty", "requires_action")
     def _compute_can_be_finished(self):
+        # The RMA can be finished if:
+        # - It's in a transitional state AND there is still quantity to process
+        # OR
+        # - It's not already finished AND no further action is required
         for rma in self:
             rma.can_be_finished = (
                 rma.state in {"received", "waiting_replacement", "waiting_return"}
                 and rma.remaining_qty > 0
-            )
+            ) or (rma.state != "finished" and not rma.requires_action)
 
     @api.depends("product_uom_qty", "state", "remaining_qty", "remaining_qty_to_done")
     def _compute_can_be_split(self):
@@ -852,6 +874,10 @@ class Rma(models.Model):
         self = self.filtered(lambda rma: rma.state == "draft")
         if not self:
             return
+        if not self.procurement_group_id:
+            self.procurement_group_id = self.env["procurement.group"].create(
+                self._prepare_procurement_group_vals()
+            )
         self.write({"state": "confirmed"})
         for rma in self:
             rma._add_message_subscribe_partner()
@@ -956,6 +982,9 @@ class Rma(models.Model):
     def action_finish(self):
         """Invoked when a user wants to manually finalize the RMA"""
         self.ensure_one()
+        if not self.requires_action:
+            self.state = "finished"
+            return {}
         self._ensure_can_be_returned()
         # Force active_id to avoid issues when coming from smart buttons
         # in other models
@@ -1242,11 +1271,7 @@ class Rma(models.Model):
             key=lambda rma: [rma._delivery_group_key()],
         )
         for _group, rmas in grouped_rmas:
-            rmas = (
-                self.browse()
-                .concat(*list(rmas))
-                .filtered(lambda rma: not rma.procurement_group_id)
-            )
+            rmas = self.browse().concat(*list(rmas))
             if not rmas:
                 continue
             proc_group = self.env["procurement.group"].create(

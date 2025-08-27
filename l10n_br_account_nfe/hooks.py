@@ -2,7 +2,7 @@
 # @author Antônio S. Pereira Neto <neto@engenere.one>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import SUPERUSER_ID, api, tools
+from odoo import SUPERUSER_ID, Command, api, tools
 
 
 def post_init_hook(cr, registry):
@@ -23,7 +23,7 @@ def load_simples_nacional_demo(env, registry):
     if company_sn:
         # Allow all companies for OdooBot user and set default user company
         companies = env["res.company"].search([])
-        env.user.company_ids = [(6, 0, companies.ids)]
+        env.user.company_ids = [Command.set(companies.ids)]
         env.user.company_id = company_sn
 
         tools.convert_file(
@@ -35,20 +35,6 @@ def load_simples_nacional_demo(env, registry):
             noupdate=True,
             kind="demo",
         )
-
-        # É necessário rodar os onchanges fiscais para
-        # preencher os campos referentes aos Impostos
-        invoice_tag_cobranca = env.ref("l10n_br_account_nfe.demo_nfe_dados_de_cobranca")
-        for line in invoice_tag_cobranca.invoice_line_ids:
-            line._onchange_fiscal_operation_line_id()
-            line._onchange_fiscal_tax_ids()
-
-        invoice_sem_tag_cobranca = env.ref(
-            "l10n_br_account_nfe.demo_nfe_sem_dados_de_cobranca"
-        )
-        for line in invoice_sem_tag_cobranca.invoice_line_ids:
-            line._onchange_fiscal_operation_line_id()
-            line._onchange_fiscal_tax_ids()
 
     # back to the main company as the next modules to be installed
     # expect this to be the default company.

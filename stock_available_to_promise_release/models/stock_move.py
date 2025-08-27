@@ -507,7 +507,7 @@ class StockMove(models.Model):
         return None
 
     def release_available_to_promise(self):
-        self._run_stock_rule()
+        return self._run_stock_rule()
 
     def _prepare_move_split_vals(self, qty):
         vals = super()._prepare_move_split_vals(qty)
@@ -586,10 +586,13 @@ class StockMove(models.Model):
             )
         self.env["procurement.group"].run_defer(procurement_requests)
 
-        released_moves._after_release_assign_moves()
-        released_moves._after_release_update_chain()
+        assigned_moves = released_moves._after_release_assign_moves()
+        assigned_moves._after_release_update_chain()
 
-        return released_moves
+        # We could have discrepancies regarding released moves state, recompute it
+        released_moves._recompute_state()
+
+        return assigned_moves
 
     def _before_release(self):
         """Hook that aims to be overridden."""
@@ -639,6 +642,7 @@ class StockMove(models.Model):
             ).ids
         moves = self.browse(move_ids)
         moves._action_assign()
+        return moves
 
     def _release_split(self, remaining_qty):
         """Split move and put remaining_qty to a backorder move."""
@@ -730,6 +734,14 @@ class StockMove(models.Model):
                 # Do not copy the responsible user from the source picking as somebody
                 # else could scan the new cancel picking
                 cancel_picking.user_id = False
+
+                returned_moves = return_wiz.product_return_moves.move_id
+                pickings_to_assign = returned_moves.move_dest_ids.picking_id.filtered(
+                    lambda picking: picking.id != cancel_picking.id
+                    and picking.state == "confirmed"
+                )
+                if pickings_to_assign:
+                    pickings_to_assign.action_assign()
         return True
 
     def _unrelease_set_returnable_qty_per_move(
@@ -863,6 +875,7 @@ class StockMove(models.Model):
                 move_names=move_names,
             )
             picking.message_post(body=body)
+            picking.last_release_date = False
 
     def _split_origins(self, origins, qty=None):
         """Split the origins of the move according to the quantity into the

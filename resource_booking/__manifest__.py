@@ -6,7 +6,7 @@
 {
     "name": "Resource booking",
     "summary": "Manage appointments and resource booking",
-    "version": "16.0.1.5.0",
+    "version": "16.0.1.5.1",
     "development_status": "Production/Stable",
     "category": "Appointments",
     "website": "https://github.com/OCA/calendar",
@@ -45,7 +45,7 @@
     ],
     "assets": {
         "web.assets_frontend": [
-            "resource_booking/static/src/js/booking_portal.js",
+            "resource_booking/static/src/js/booking_portal.esm.js",
             "resource_booking/static/src/scss/portal.scss",
         ],
         "web.assets_tests": [

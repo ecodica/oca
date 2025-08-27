@@ -8,7 +8,7 @@
     "license": "AGPL-3",
     "author": "Akretion, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/l10n-brazil",
-    "version": "16.0.4.2.2",
+    "version": "16.0.7.0.1",
     "development_status": "Beta",
     "maintainers": ["renatonlima", "rvalyi"],
     "depends": [
@@ -19,6 +19,7 @@
     "data": [
         # security
         "security/ir.model.access.csv",
+        "security/l10n_br_account_security.xml",
         # data
         "data/account_tax_group.xml",
         "data/account_tax_template.xml",
@@ -35,6 +36,7 @@
         # Wizards
         "wizards/account_move_reversal_view.xml",
         "wizards/wizard_document_status.xml",
+        "wizards/document_import_wizard_mixin.xml",
         # Actions
         "views/l10n_br_account_action.xml",
         # Menus

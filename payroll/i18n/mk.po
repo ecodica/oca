@@ -1635,7 +1635,9 @@ msgid "Payslip Input"
 msgstr ""
 
 #. module: payroll
+#: model:ir.actions.act_window,name:payroll.hr_payslip_input_action
 #: model:ir.model.fields,field_description:payroll.field_hr_payslip__input_line_ids
+#: model:ir.ui.menu,name:payroll.hr_payslip_input_menu
 msgid "Payslip Inputs"
 msgstr ""
 
@@ -2017,6 +2019,11 @@ msgstr ""
 #. module: payroll
 #: model_terms:ir.ui.view,arch_db:payroll.hr_salary_rule_view_search
 msgid "Search Salary Rule"
+msgstr ""
+
+#. module: payroll
+#: model_terms:ir.ui.view,arch_db:payroll.hr_payslip_input_view_search
+msgid "Search all"
 msgstr ""
 
 #. module: payroll

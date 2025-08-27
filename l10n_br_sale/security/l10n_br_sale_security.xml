@@ -14,7 +14,15 @@
   <record id="base.user_admin" model="res.users">
     <field
             name="groups_id"
-            eval="[(4, ref('l10n_br_sale.group_discount_per_value')), (4, ref('product.group_discount_per_so_line'))]"
+            eval="[Command.link(ref('l10n_br_sale.group_discount_per_value')), Command.link(ref('product.group_discount_per_so_line'))]"
+        />
+  </record>
+
+  <record id="group_line_fiscal_detail" model="res.groups">
+    <field name="name">Brazilian Fiscal details (popup) in Sale Order Lines</field>
+    <field
+            name="category_id"
+            ref="l10n_br_fiscal.module_category_l10n_br_fiscal_management"
         />
   </record>
 

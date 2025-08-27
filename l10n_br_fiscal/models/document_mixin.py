@@ -16,6 +16,31 @@ from ..constants.fiscal import (
 
 
 class FiscalDocumentMixin(models.AbstractModel):
+    """
+    Provides a collection of reusable methods for Brazilian fiscal document logic.
+
+    This abstract model is intended to be inherited by other models or mixins
+    that require fiscal document functionalities, such as preparing fiscal data,
+    calculating fiscal amounts, managing document series, and handling comments.
+
+    It is inherited by sale.order, purchase.order, account.move and even stock.picking
+    in separate modules. Indeed these business documents need to take care of
+    some fiscal parameters before creating Fiscal Documents. And of course,
+    Fiscal Document themselves inherit from this mixin.
+
+    Key functionalities include:
+    - Computation of various fiscal amounts based on document lines.
+    - Inverse methods for distributing header-level costs (freight, insurance)
+      to lines.
+    - Hooks for customizing data retrieval (e.g., lines, fiscal partner).
+
+    Models using this mixin are often expected to also include fields defined
+    in `l10n_br_fiscal.document.mixin` for methods like
+    `_prepare_br_fiscal_dict` and `_get_amount_fields` to function
+    correctly. Line-based calculations typically rely on an overrideable
+    `_get_amount_lines` method.
+    """
+
     _name = "l10n_br_fiscal.document.mixin"
     _inherit = "l10n_br_fiscal.document.mixin.methods"
     _description = "Document Fiscal Mixin Fields"
@@ -64,7 +89,6 @@ class FiscalDocumentMixin(models.AbstractModel):
 
     fiscal_operation_type = fields.Selection(
         related="fiscal_operation_id.fiscal_operation_type",
-        readonly=True,
     )
 
     ind_pres = fields.Selection(
@@ -102,7 +126,6 @@ class FiscalDocumentMixin(models.AbstractModel):
     currency_id = fields.Many2one(
         comodel_name="res.currency",
         string="Currency",
-        default=lambda self: self.env.company.currency_id,
     )
 
     amount_price_gross = fields.Monetary(
@@ -456,6 +479,10 @@ class FiscalDocumentMixin(models.AbstractModel):
 
     document_type_id = fields.Many2one(
         comodel_name="l10n_br_fiscal.document.type",
+        compute="_compute_document_type_id",
+        store=True,
+        precompute=True,
+        readonly=False,
     )
 
     document_serie_id = fields.Many2one(

@@ -85,7 +85,7 @@
                     attrs="{'invisible': [('order_type', '!=', 'blanket')], 'readonly': [('is_blanket_eol_strategy_editable', '=', False)]}"
                 />
             </field>
-            <field name="commitment_date" position="after">
+            <field name="manual_delivery" position="after">
                 <field
                     name="create_call_off_from_so_if_possible"
                     widget="boolean_toggle"
@@ -133,6 +133,17 @@
                     invisible="context.get('invisible_call_off_remaining_qty', True)"
                     readonly="1"
                     optional="show"
+                />
+            </xpath>
+
+            <xpath expr="//header/*[1]" position="before">
+                <field name="show_deliver_remaining" invisible="1" />
+                <button
+                    name="action_deliver_remaining"
+                    string="Deliver remaining"
+                    class="oe_highlight"
+                    attrs="{'invisible': [('show_deliver_remaining', '=', False)]}"
+                    type="object"
                 />
             </xpath>
 

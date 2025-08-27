@@ -7,7 +7,7 @@ from erpbrasil.base import misc
 from erpbrasil.base.fiscal import cnpj_cpf
 from erpbrasil.base.misc import punctuation_rm
 
-from odoo import api, fields, models
+from odoo import Command, api, fields, models
 
 _logger = logging.getLogger(__name__)
 
@@ -21,7 +21,7 @@ class PartnerCnpjSearchWizard(models.TransientModel):
     cnpj_cpf = fields.Char()
     legal_name = fields.Char()
     name = fields.Char()
-    inscr_est = fields.Char()
+    l10n_br_ie_code = fields.Char()
     zip = fields.Char()
     street_name = fields.Char()
     street_number = fields.Char()
@@ -99,7 +99,7 @@ class PartnerCnpjSearchWizard(models.TransientModel):
         values_to_update = {
             "legal_name": self.legal_name,
             "name": self.name,
-            "inscr_est": self.inscr_est,
+            "l10n_br_ie_code": self.l10n_br_ie_code,
             "zip": self.zip,
             "street_name": self.street_name,
             "street_number": self.street_number,
@@ -119,7 +119,7 @@ class PartnerCnpjSearchWizard(models.TransientModel):
             "company_type": "company",
         }
         if self.child_ids:
-            values_to_update["child_ids"] = [(6, 0, self.child_ids.ids)]
+            values_to_update["child_ids"] = [Command.set(self.child_ids.ids)]
 
         non_empty_values = {
             key: value for key, value in values_to_update.items() if value

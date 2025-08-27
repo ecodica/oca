@@ -5,6 +5,7 @@
 # @author Magno Costa <magno.costa@akretion.com.br>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
+from odoo import Command
 from odoo.exceptions import UserError
 from odoo.tests import Form, TransactionCase, tagged
 
@@ -14,13 +15,19 @@ class TestGeneratePaymentInfo(TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
+        cls.env = cls.env(context=dict(cls.env.context, tracking_disable=True))
 
         cls.company = cls.env.ref("l10n_br_base.empresa_lucro_presumido")
 
         # set default user company
         companies = cls.env["res.company"].search([])
-        cls.env.user.company_ids = [(6, 0, companies.ids)]
+        cls.env.user.company_ids = [Command.set(companies.ids)]
         cls.env.user.company_id = cls.company
+        # for some reason this invoice should be created with the popup mode.
+        # it seems like a test framework glitch because in the browser it works fine
+        cls.env.user.groups_id |= cls.env.ref(
+            "l10n_br_account.group_line_fiscal_detail"
+        )
 
         cls.payment_mode = cls.env["account.payment.mode"].create(
             {
@@ -104,11 +111,6 @@ class TestGeneratePaymentInfo(TransactionCase):
             "l10n_br_account_nfe.demo_nfe_dados_de_cobranca"
         )
         cls.env.user.company_id = cls.invoice_demo_data.company_id
-        for line in cls.invoice_demo_data.invoice_line_ids:
-            line.with_context(
-                check_move_validity=False
-            )._onchange_fiscal_operation_line_id()
-            line.with_context(check_move_validity=False)._onchange_fiscal_tax_ids()
 
     def test_nfe_generate_tag_pag(self):
         """Test NFe generate TAG PAG."""
@@ -131,7 +133,7 @@ class TestGeneratePaymentInfo(TransactionCase):
         self.assertEqual(self.invoice.nfe40_vDesc, 0.0)
         self.assertEqual(self.invoice.nfe40_vLiq, 450.0)
         self.assertEqual(self.invoice.nfe40_dup[0].nfe40_nDup, "001")
-        venc = self.invoice.financial_move_line_ids[0].date_maturity
+        venc = self.invoice.due_line_ids[0].date_maturity
         self.assertEqual(self.invoice.nfe40_dup[0].nfe40_dVenc, venc)
         self.assertEqual(self.invoice.nfe40_dup[0].nfe40_vDup, 450.0)
 
@@ -140,7 +142,7 @@ class TestGeneratePaymentInfo(TransactionCase):
         self.assertEqual(self.invoice_demo_data.nfe40_vDesc, 0.0)
         self.assertEqual(self.invoice_demo_data.nfe40_vLiq, 1000)
         self.assertEqual(self.invoice_demo_data.nfe40_dup[0].nfe40_nDup, "001")
-        venc = self.invoice_demo_data.financial_move_line_ids[0].date_maturity
+        venc = self.invoice_demo_data.due_line_ids[0].date_maturity
         self.assertEqual(self.invoice_demo_data.nfe40_dup[0].nfe40_dVenc, venc)
         self.assertEqual(self.invoice_demo_data.nfe40_dup[0].nfe40_vDup, 330.0)
 

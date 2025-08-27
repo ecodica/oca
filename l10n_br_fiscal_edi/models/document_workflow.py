@@ -186,8 +186,6 @@ class DocumentWorkflow(models.AbstractModel):
         elif new_state == SITUACAO_EDOC_INUTILIZADA:
             self._exec_after_SITUACAO_EDOC_INUTILIZADA(old_state, new_state)
 
-        self._generates_subsequent_operations()
-
     def _change_state(self, new_state, force_change=False):
         """Método para alterar o estado do documento fiscal, mantendo a
         integridade do workflow da invoice.
@@ -242,10 +240,10 @@ class DocumentWorkflow(models.AbstractModel):
                 date = fields.Datetime.context_timestamp(record, record.document_date)
                 chave_edoc = ChaveEdoc(
                     ano_mes=date.strftime("%y%m").zfill(4),
-                    cnpj_cpf_emitente=record.company_cnpj_cpf,
+                    cnpj_cpf_emitente=record.company_id.vat,
                     codigo_uf=(
-                        record.company_state_id
-                        and record.company_state_id.ibge_code
+                        record.company_id.state_id
+                        and record.company_id.state_id.ibge_code
                         or ""
                     ),
                     forma_emissao=1,  # TODO: Implementar campo no Odoo

@@ -97,6 +97,7 @@ class NFe(spec_models.StackedModel):
 > <infnfe>
     > <ide>
         ≡ <NFref> l10n_br_fiscal.document.related
+        - <gPagAntecipado>
     - <emit> res.company
     - <avulsa>
     - <dest> res.partner
@@ -128,7 +129,8 @@ class NFe(spec_models.StackedModel):
     - <compra>
     - <cana>
     - <infRespTec> res.partner
-    - <infSolicNFF>"""
+    - <infSolicNFF>
+    - <agropecuario>"""
 
     ##########################
     # NF-e spec related fields
@@ -382,7 +384,7 @@ class NFe(spec_models.StackedModel):
     )
 
     nfe40_CRT = fields.Selection(
-        related="company_tax_framework",
+        related="company_id.tax_framework",
         string="Código de Regime Tributário (NFe)",
     )
 
@@ -404,9 +406,9 @@ class NFe(spec_models.StackedModel):
                 stn_id = self.company_id.state_tax_number_ids.filtered(
                     lambda stn: stn.state_id == dest_state_id
                 )
-                iest = stn_id.inscr_est
+                iest = stn_id.l10n_br_ie_code
                 iest = re.sub("[^0-9]+", "", iest)
-        self.company_inscr_est_st = iest
+        self.company_l10n_br_ie_code_st = iest
 
     ##########################
     # NF-e tag: dest
@@ -420,7 +422,7 @@ class NFe(spec_models.StackedModel):
     )
 
     nfe40_indIEDest = fields.Selection(
-        related="partner_ind_ie_dest",
+        related="partner_id.ind_ie_dest",
         string="Contribuinte do ICMS (NFe)",
     )
 
@@ -706,8 +708,8 @@ class NFe(spec_models.StackedModel):
         ):
             self._set_nfe40_IEST()
             res = super()._export_many2one(field_name, xsd_required, class_obj)
-            if self.company_inscr_est_st:
-                res.IEST = self.company_inscr_est_st
+            if self.company_l10n_br_ie_code_st:
+                res.IEST = self.company_l10n_br_ie_code_st
             return res
 
         return super()._export_many2one(field_name, xsd_required, class_obj)
@@ -766,16 +768,23 @@ class NFe(spec_models.StackedModel):
                 value.enderEmit, path=path
             )
             new_value.update(enderEmit_value)
-            company_cnpj = self.env.company.cnpj_cpf.translate(
+            company_vat = self.env.company.vat.translate(
                 str.maketrans("", "", string.punctuation)
             )
-            emit_cnpj = new_value.get("nfe40_CNPJ").translate(
-                str.maketrans("", "", string.punctuation)
-            )
-            if company_cnpj != emit_cnpj:
+            emit_vat = False
+            if new_value.get("nfe40_CNPJ"):
+                emit_vat = new_value.get("nfe40_CNPJ").translate(
+                    str.maketrans("", "", string.punctuation)
+                )
+                new_value["is_company"] = True
+            elif new_value.get("nfe40_CPF"):
+                emit_vat = new_value.get("nfe40_CPF").translate(
+                    str.maketrans("", "", string.punctuation)
+                )
+                new_value["is_company"] = False
+            if company_vat != emit_vat:
                 vals["issuer"] = "partner"
-            new_value["is_company"] = True
-            new_value["cnpj_cpf"] = emit_cnpj
+            new_value["vat"] = emit_vat
             super()._build_many2one(
                 self.env["res.partner"], vals, new_value, "partner_id", value, path
             )
@@ -784,16 +793,21 @@ class NFe(spec_models.StackedModel):
                 value.enderDest, path=path
             )
             new_value.update(enderDest_value)
-            company_cnpj = self.env.company.cnpj_cpf.translate(
+            company_vat = self.env.company.vat.translate(
                 str.maketrans("", "", string.punctuation)
             )
-            dest_cnpj = new_value.get("nfe40_CNPJ").translate(
-                str.maketrans("", "", string.punctuation)
-            )
-            if company_cnpj != dest_cnpj:
+            if new_value.get("nfe40_CNPJ"):
+                dest_vat = new_value.get("nfe40_CNPJ").translate(
+                    str.maketrans("", "", string.punctuation)
+                )
+            elif new_value.get("nfe40_CPF"):
+                dest_vat = new_value.get("nfe40_CPF").translate(
+                    str.maketrans("", "", string.punctuation)
+                )
+            if company_vat != dest_vat:
                 vals["issuer"] = "partner"
             new_value["is_company"] = True
-            new_value["cnpj_cpf"] = dest_cnpj
+            new_value["vat"] = dest_vat
             super()._build_many2one(
                 self.env["res.partner"], vals, new_value, "partner_id", value, path
             )
@@ -954,10 +968,7 @@ class NFe(spec_models.StackedModel):
         result = super()._document_export()
         for record in self.filtered(filter_processador_edoc_nfe):
             edoc = record.serialize()[0]
-            processador = record._edoc_processor()
-            xml_file = processador.render_edoc_xsdata(edoc, pretty_print=pretty_print)[
-                0
-            ]
+            xml_file = edoc.to_xml()
             # Delete previous authorization events in draft
             if (
                 record.authorization_event_id
@@ -975,8 +986,13 @@ class NFe(spec_models.StackedModel):
                 document_id=self,
             )
             record.authorization_event_id = event_id
-            xml_assinado = processador.assina_raiz(edoc, edoc.infNFe.Id)
-            self._validate_xml(xml_assinado)
+            signed_xml = edoc.sign_xml(
+                xml_file,
+                self.company_id.certificate.file,
+                self.company_id.certificate.password,
+                edoc.infNFe.Id,
+            )
+            self._validate_xml(signed_xml)
         return result
 
     def _nfe_update_status_and_save_data(self, process):
@@ -1086,9 +1102,9 @@ class NFe(spec_models.StackedModel):
 
         for record in self.filtered(filter_processador_edoc_nfe):
             required_fields_gen_edoc = []
-            if not record.company_cnpj_cpf:
+            if not record.company_id.vat:
                 required_fields_gen_edoc.append("CNPJ/CPF")
-            elif not record.company_state_id:
+            elif not record.company_id.state_id:
                 required_fields_gen_edoc.append("State Company")
             elif not record.document_type_id:
                 required_fields_gen_edoc.append("Document Type")
@@ -1105,9 +1121,11 @@ class NFe(spec_models.StackedModel):
             date = fields.Datetime.context_timestamp(record, record.document_date)
             chave_edoc = ChaveEdoc(
                 ano_mes=date.strftime("%y%m").zfill(4),
-                cnpj_cpf_emitente=record.company_cnpj_cpf,
+                cnpj_cpf_emitente=record.company_id.vat,
                 codigo_uf=(
-                    record.company_state_id and record.company_state_id.ibge_code or ""
+                    record.company_id.state_id
+                    and record.company_id.state_id.ibge_code
+                    or ""
                 ),
                 forma_emissao=int(self.nfe_transmission),
                 modelo_documento=record.document_type_id.code or "",
@@ -1548,7 +1566,7 @@ class NFe(spec_models.StackedModel):
 
     def _prepare_nfce_danfe_values(self):
         return {
-            "company_ie": self.company_id.inscr_est,
+            "company_ie": self.company_id.l10n_br_ie_code,
             "company_cnpj": self.company_id.cnpj_cpf,
             "company_legal_name": self.company_id.legal_name,
             "company_street": self.company_id.street,

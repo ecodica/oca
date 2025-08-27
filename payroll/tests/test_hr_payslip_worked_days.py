@@ -60,7 +60,15 @@ class TestWorkedDays(TestPayslipBase):
 
         # I put all eligible contracts (including Richard's) in an "open" state
         self.apply_contract_cron()
-
+        # Create allocation
+        allocation = self.env["hr.leave.allocation"].create(
+            {
+                "holiday_status_id": self.holiday_type.id,
+                "employee_id": self.richard_emp.id,
+                "date_from": date.today(),
+            }
+        )
+        allocation.action_confirm()
         # Create the leave
         self.LeaveRequest.create(
             {

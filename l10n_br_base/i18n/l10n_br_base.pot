@@ -2297,7 +2297,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/l10n_br_base/models/res_partner_bank.py:0
 #, python-format
-msgid "Bank branch code must be four caracteres."
+msgid "Bank branch code must be four characters."
 msgstr ""
 
 #. module: l10n_br_base
@@ -3888,11 +3888,6 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_base.field_res_partner__cei_code
 #: model:ir.model.fields,field_description:l10n_br_base.field_res_users__cei_code
 msgid "CEI Code"
-msgstr ""
-
-#. module: l10n_br_base
-#: model_terms:ir.ui.view,arch_db:l10n_br_base.l10n_br_base_res_company_form
-msgid "CNPJ..."
 msgstr ""
 
 #. module: l10n_br_base
@@ -10901,18 +10896,6 @@ msgid "Indiavaí"
 msgstr ""
 
 #. module: l10n_br_base
-#: model:ir.model.fields,help:l10n_br_base.field_res_partner__is_br_partner
-#: model:ir.model.fields,help:l10n_br_base.field_res_users__is_br_partner
-msgid "Indicate if is a Brazilian partner"
-msgstr ""
-
-#. module: l10n_br_base
-#: model:ir.model.fields,help:l10n_br_base.field_res_partner__show_l10n_br
-#: model:ir.model.fields,help:l10n_br_base.field_res_users__show_l10n_br
-msgid "Indicates if Brazilian localization fields should be displayed."
-msgstr ""
-
-#. module: l10n_br_base
 #: model:res.city,name:l10n_br_base.city_2607109
 msgid "Ingazeira"
 msgstr ""
@@ -11300,6 +11283,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_base.field_res_partner__is_accountant
 #: model:ir.model.fields,field_description:l10n_br_base.field_res_users__is_accountant
 msgid "Is accountant?"
+msgstr ""
+
+#. module: l10n_br_base
+#: model:ir.model.fields,help:l10n_br_base.field_res_partner__is_br_partner
+#: model:ir.model.fields,help:l10n_br_base.field_res_users__is_br_partner
+msgid "Is it a Brazilian partner?"
 msgstr ""
 
 #. module: l10n_br_base
@@ -15901,11 +15890,19 @@ msgid "Munhoz de Melo"
 msgstr ""
 
 #. module: l10n_br_base
+#: model:ir.model.fields,field_description:l10n_br_base.field_l10n_br_base_party_mixin__l10n_br_im_code
+#: model:ir.model.fields,field_description:l10n_br_base.field_res_company__l10n_br_im_code
+#: model:ir.model.fields,field_description:l10n_br_base.field_res_partner__l10n_br_im_code
+#: model:ir.model.fields,field_description:l10n_br_base.field_res_users__l10n_br_im_code
+msgid "Municipal Tax Number"
+msgstr ""
+
+#. module: l10n_br_base
 #: model:ir.model.fields,field_description:l10n_br_base.field_l10n_br_base_party_mixin__inscr_mun
 #: model:ir.model.fields,field_description:l10n_br_base.field_res_company__inscr_mun
 #: model:ir.model.fields,field_description:l10n_br_base.field_res_partner__inscr_mun
 #: model:ir.model.fields,field_description:l10n_br_base.field_res_users__inscr_mun
-msgid "Municipal Tax Number"
+msgid "Municipal Tax Number alias"
 msgstr ""
 
 #. module: l10n_br_base
@@ -20179,10 +20176,8 @@ msgid "Quixeré"
 msgstr ""
 
 #. module: l10n_br_base
-#: model:ir.model.fields,field_description:l10n_br_base.field_l10n_br_base_party_mixin__rg
-#: model:ir.model.fields,field_description:l10n_br_base.field_res_company__rg
-#: model:ir.model.fields,field_description:l10n_br_base.field_res_partner__rg
-#: model:ir.model.fields,field_description:l10n_br_base.field_res_users__rg
+#: model:ir.model.fields,field_description:l10n_br_base.field_res_partner__l10n_br_rg_code
+#: model:ir.model.fields,field_description:l10n_br_base.field_res_users__l10n_br_rg_code
 #: model_terms:ir.ui.view,arch_db:l10n_br_base.l10n_br_base_partner_form
 msgid "RG"
 msgstr ""
@@ -23084,6 +23079,12 @@ msgid "Short Name"
 msgstr ""
 
 #. module: l10n_br_base
+#: model:ir.model.fields,help:l10n_br_base.field_res_partner__show_l10n_br
+#: model:ir.model.fields,help:l10n_br_base.field_res_users__show_l10n_br
+msgid "Should display Brazilian localization fields?"
+msgstr ""
+
+#. module: l10n_br_base
 #: model:ir.model.fields,field_description:l10n_br_base.field_res_partner__show_l10n_br
 #: model:ir.model.fields,field_description:l10n_br_base.field_res_users__show_l10n_br
 msgid "Show L10N Br"
@@ -23317,12 +23318,20 @@ msgid "State"
 msgstr ""
 
 #. module: l10n_br_base
+#: model:ir.model.fields,field_description:l10n_br_base.field_l10n_br_base_party_mixin__l10n_br_ie_code
+#: model:ir.model.fields,field_description:l10n_br_base.field_res_company__l10n_br_ie_code
+#: model:ir.model.fields,field_description:l10n_br_base.field_res_partner__l10n_br_ie_code
+#: model:ir.model.fields,field_description:l10n_br_base.field_res_users__l10n_br_ie_code
+#: model:ir.model.fields,field_description:l10n_br_base.field_state_tax_numbers__l10n_br_ie_code
+msgid "State Tax Number"
+msgstr ""
+
+#. module: l10n_br_base
 #: model:ir.model.fields,field_description:l10n_br_base.field_l10n_br_base_party_mixin__inscr_est
 #: model:ir.model.fields,field_description:l10n_br_base.field_res_company__inscr_est
 #: model:ir.model.fields,field_description:l10n_br_base.field_res_partner__inscr_est
 #: model:ir.model.fields,field_description:l10n_br_base.field_res_users__inscr_est
-#: model:ir.model.fields,field_description:l10n_br_base.field_state_tax_numbers__inscr_est
-msgid "State Tax Number"
+msgid "State Tax Number alias"
 msgstr ""
 
 #. module: l10n_br_base
@@ -23390,10 +23399,10 @@ msgid "Sud Mennucci"
 msgstr ""
 
 #. module: l10n_br_base
-#: model:ir.model.fields,field_description:l10n_br_base.field_l10n_br_base_party_mixin__suframa
-#: model:ir.model.fields,field_description:l10n_br_base.field_res_company__suframa
-#: model:ir.model.fields,field_description:l10n_br_base.field_res_partner__suframa
-#: model:ir.model.fields,field_description:l10n_br_base.field_res_users__suframa
+#: model:ir.model.fields,field_description:l10n_br_base.field_l10n_br_base_party_mixin__l10n_br_isuf_code
+#: model:ir.model.fields,field_description:l10n_br_base.field_res_company__l10n_br_isuf_code
+#: model:ir.model.fields,field_description:l10n_br_base.field_res_partner__l10n_br_isuf_code
+#: model:ir.model.fields,field_description:l10n_br_base.field_res_users__l10n_br_isuf_code
 #: model_terms:ir.ui.view,arch_db:l10n_br_base.l10n_br_base_res_company_form
 msgid "Suframa"
 msgstr ""
@@ -25494,6 +25503,7 @@ msgid "Tavares"
 msgstr ""
 
 #. module: l10n_br_base
+#: model:ir.model.fields,field_description:l10n_br_base.field_res_company__vat
 #: model:ir.model.fields,field_description:l10n_br_base.field_res_partner__vat
 #: model:ir.model.fields,field_description:l10n_br_base.field_res_users__vat
 msgid "Tax ID"
@@ -25683,6 +25693,7 @@ msgid "The Partner already has a State Tax Number for that State!"
 msgstr ""
 
 #. module: l10n_br_base
+#: model:ir.model.fields,help:l10n_br_base.field_res_company__vat
 #: model:ir.model.fields,help:l10n_br_base.field_res_partner__vat
 #: model:ir.model.fields,help:l10n_br_base.field_res_users__vat
 msgid ""
@@ -25707,21 +25718,27 @@ msgstr ""
 #. odoo-python
 #: code:addons/l10n_br_base/models/res_partner.py:0
 #, python-format
-msgid "There is already a partner record with this CNPJ !"
+msgid ""
+"There is already a partner %(name)s (ID %(partner_id)s) with this CNPJ "
+"%(vat)s!"
 msgstr ""
 
 #. module: l10n_br_base
 #. odoo-python
 #: code:addons/l10n_br_base/models/res_partner.py:0
 #, python-format
-msgid "There is already a partner record with this CPF/RG!"
+msgid ""
+"There is already a partner %(name)s (ID %(partner_id)s) with this CPF/RG! "
+"%(vat)s"
 msgstr ""
 
 #. module: l10n_br_base
 #. odoo-python
 #: code:addons/l10n_br_base/models/res_partner.py:0
 #, python-format
-msgid "There is already a partner record with this Estadual Inscription !"
+msgid ""
+"There is already a partner %(name)s (ID %(partner_id)s) with this Estadual "
+"Inscription %(incr_est)s!"
 msgstr ""
 
 #. module: l10n_br_base
@@ -26831,6 +26848,11 @@ msgstr ""
 #. module: l10n_br_base
 #: model:res.city,name:l10n_br_base.city_3306206
 msgid "Vassouras"
+msgstr ""
+
+#. module: l10n_br_base
+#: model:ir.model.fields,field_description:l10n_br_base.field_l10n_br_base_party_mixin__vat
+msgid "Vat"
 msgstr ""
 
 #. module: l10n_br_base

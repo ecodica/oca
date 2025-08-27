@@ -5,12 +5,14 @@
 
 
 import pytz
+from decorator import contextmanager
 
 from odoo import fields
 from odoo.tools import float_compare
 
 from odoo.addons.base_rest.components.service import to_int
 from odoo.addons.component.core import Component
+from odoo.addons.shopfloor.actions.search import SearchResult
 from odoo.addons.shopfloor.utils import to_float
 
 
@@ -48,6 +50,19 @@ class Reception(Component):
     _usage = "reception"
     _description = __doc__
 
+    search_result = SearchResult()
+
+    @contextmanager
+    def with_search_result(self, search_result: SearchResult):
+        """
+        Use this context manager if you want to include search result in
+        component behavior.
+
+        """
+        self.search_result = search_result
+        yield
+        self.search_result = SearchResult()
+
     def _check_picking_processible(self, pickings):
         # When returns are allowed,
         # the created picking might be empty and cannot be assigned.
@@ -76,17 +91,30 @@ class Reception(Component):
         domain.append(("scheduled_date", "<=", today_end))
         return domain
 
-    def _get_today_start_end_datetime(self):
+    def _get_today_start_end_datetime(self, naive=True):
+        # TODO: Put warehouse tz retrieval in shopfloor module?
         company = self.env.company
-        tz = company.partner_id.tz or "UTC"
-        today = fields.Datetime.today()
-        today_start = fields.Datetime.start_of(today, "day")
-        today_end = fields.Datetime.end_of(today, "day")
-        today_start_localized = (
-            pytz.timezone(tz).localize(today_start).astimezone(pytz.utc)
+        warehouse = self.picking_types.warehouse_id
+        tz = (
+            warehouse.partner_id.tz
+            if (len(warehouse) == 1 and warehouse.partner_id.tz)
+            else company.partner_id.tz or "UTC"
         )
-        today_end_localized = pytz.timezone(tz).localize(today_end).astimezone(pytz.utc)
+        today = fields.Datetime.today()
+        today_start = today_start_localized = fields.Datetime.start_of(today, "day")
+        today_end = today_end_localized = fields.Datetime.end_of(today, "day")
+        if not naive:
+            today_start_localized = (
+                pytz.timezone(tz).localize(today_start).astimezone(pytz.utc)
+            )
+            today_end_localized = (
+                pytz.timezone(tz).localize(today_end).astimezone(pytz.utc)
+            )
         return (today_start_localized, today_end_localized)
+
+    @property
+    def filter_today_scheduled_pickings(self):
+        return self.work.menu.filter_today_scheduled_pickings
 
     # DOMAIN METHODS
 
@@ -276,8 +304,8 @@ class Reception(Component):
 
     def _scan_line__assign_user(self, picking, line, qty_done):
         product = line.product_id
-        self._assign_user_to_line(line)
-        line.qty_done += qty_done
+        stock = self._actions_for("stock")
+        stock.mark_move_line_as_picked(line, quantity=qty_done, split=False)
         if product.tracking not in ("lot", "serial") or (line.lot_id or line.lot_name):
             return self._before_state__set_quantity(picking, line)
         return self._response_for_set_lot(picking, line)
@@ -339,9 +367,7 @@ class Reception(Component):
             # Otherwise, we ask the user to scan a package instead.
             today_start, today_end = self._get_today_start_end_datetime()
             picking_filter_result_due_today = picking_filter_result.filtered(
-                lambda p: today_start
-                <= p.scheduled_date.astimezone(pytz.utc)
-                < today_end
+                lambda p: today_start <= p.scheduled_date < today_end
             )
             if len(picking_filter_result_due_today) == 1:
                 return self._select_picking(picking_filter_result_due_today)
@@ -428,7 +454,13 @@ class Reception(Component):
             picking.action_assign()
             return self._scan_line__find_or_create_line(picking, return_move)
 
+    def _scan_line__dummy(self):
+        return
+
     def _scan_line__by_product(self, picking, product):
+        """
+        Try to find a move by product
+        """
         moves = picking.move_ids.filtered(lambda m: m.product_id == product)
         # Only create a return if don't already have a maching reception move
         if not moves and self.work.menu.allow_return:
@@ -488,6 +520,9 @@ class Reception(Component):
         return self._scan_line__find_or_create_line(picking, move)
 
     def _scan_line__by_lot(self, picking, lot):
+        """
+        Try to find a move line by its lot (it should already be assigned)
+        """
         lines = picking.move_line_ids.filtered(
             lambda l: (
                 lot == l.lot_id
@@ -529,7 +564,11 @@ class Reception(Component):
             message=message,
         )
 
-    def _check_move_available(self, move, message_code="product"):
+    def _check_move_available(self, move, message_code="product") -> bool:
+        """
+        This will check if move is available to be selected by user
+        scan
+        """
         if not move:
             message_code = message_code.capitalize()
             return self.msg_store.x_not_found_or_already_in_dest_package(message_code)
@@ -538,6 +577,7 @@ class Reception(Component):
         )
         if move.product_uom_qty - move.quantity_done < 1 and not line_without_package:
             return self.msg_store.move_already_done()
+        return False
 
     def _set_quantity__check_quantity_done(self, selected_line):
         move = selected_line.move_id
@@ -727,9 +767,12 @@ class Reception(Component):
 
     def _response_for_select_document(self, pickings=None, message=None):
         if not pickings:
-            pickings = self.env["stock.picking"].search(
-                self._domain_stock_picking(today_only=True),
-                order=self._order_stock_picking(),
+            # We use the standard shopfloor
+            move_lines = self.search_move_line.search_move_lines(match_user=True)
+            pickings = move_lines.picking_id.filtered_domain(
+                self._domain_stock_picking(
+                    today_only=self.filter_today_scheduled_pickings
+                )
             )
         else:
             # We sort by scheduled date first. However, there might be a case
@@ -750,6 +793,7 @@ class Reception(Component):
         return self._response(next_state="manual_selection", data=data)
 
     def _response_for_set_lot(self, picking, line, message=None):
+        self._set_lot_from_parse(picking, line)
         return self._response(
             next_state="set_lot",
             data={
@@ -758,6 +802,38 @@ class Reception(Component):
             },
             message=message,
         )
+
+    def _set_lot_from_parse(self, picking, line):
+        """
+        The lot has not been found in move lines before this call.
+
+        Following the picking type configuration, set it:
+
+            - on lot_id if record is found
+            - on lot_name if record is not found
+            - set expiration date if found in parse result
+        """
+        if line.shopfloor_should_create_lot and self.search_result.parse_result:
+            expiration_date = None
+            lot_name = None
+            found = False
+            for result in self.search_result.parse_result:
+                if result.type == "lot":
+                    if self.search_result.type == "lot" and self.search_result.record:
+                        lot_id = self.search_result.record
+                        lot_name = lot_id.name
+                        found = True
+                    else:
+                        lot_name = result.value
+                        found = True
+                if (
+                    result.type == "expiration_date"
+                    and line.product_id.use_expiration_date
+                ):
+                    expiration_date = result.value
+
+            if found:
+                return self.set_lot(picking.id, line.id, lot_name, expiration_date)
 
     def _align_display_product_uom_qty(self, line, response):
         # This method aligns product uom qties on move lines.
@@ -946,14 +1022,19 @@ class Reception(Component):
             "product": self._scan_line__by_product,
             "packaging": self._scan_line__by_packaging,
             "lot": self._scan_line__by_lot,
+            "expiration_date": self._scan_line__dummy,
         }
         search = self._actions_for("search")
         search_result = search.find(barcode, handlers_by_type.keys())
         # Fallback handler, returns a barcode not found error
         handler = handlers_by_type.get(search_result.type)
-        if handler:
-            return handler(picking, search_result.record)
-        return self._scan_line__fallback(picking, barcode)
+
+        # This could maybe be removed if we pass instead
+        # the search result through all calls
+        with self.with_search_result(search_result):
+            if handler:
+                return handler(picking, search_result.record)
+            return self._scan_line__fallback(picking, barcode)
 
     def manual_select_move(self, move_id):
         move = self.env["stock.move"].browse(move_id)
@@ -1045,7 +1126,7 @@ class Reception(Component):
                 )
             selected_line.lot_id = lot.id
             selected_line._onchange_lot_id()
-        elif expiration_date:
+        if expiration_date:
             selected_line.write({"expiration_date": expiration_date})
             selected_line.lot_id.write({"expiration_date": expiration_date})
         return self._response_for_set_lot(picking, selected_line)

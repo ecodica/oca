@@ -4,7 +4,7 @@
 
 from contextlib import contextmanager
 
-from odoo import _, api, fields, models
+from odoo import Command, _, api, fields, models
 from odoo.tools import frozendict
 
 
@@ -122,18 +122,7 @@ class AccountMoveLine(models.Model):
             fiscal_doc_id = move_id.fiscal_document_id.id
             if not fiscal_doc_id:
                 continue
-
-            values.update(
-                self._update_fiscal_quantity(
-                    values.get("product_id"),
-                    values.get("price_unit"),
-                    values.get("quantity"),
-                    values.get("product_uom_id"),
-                    values.get("uot_id"),
-                )
-            )
             values["document_id"] = fiscal_doc_id  # pass through the _inherits system
-
         # This reordering bellow is crucial to ensure accurate linkage between
         # account.move.line (aml) and the fiscal document line. In the fiscal create a
         # fiscal document line, leaving only those that should be created. Proper
@@ -291,14 +280,42 @@ class AccountMoveLine(models.Model):
         self.env.add_to_compute(self._fields["credit"], container["records"])
 
     @api.depends(
-        "quantity", "discount", "price_unit", "tax_ids", "currency_id", "discount"
+        "quantity",
+        "discount",
+        "price_unit",
+        "tax_ids",
+        "currency_id",
+        "discount",
+        "fiscal_tax_ids",
+        "fiscal_operation_line_id",
+        "cfop_id",
+        "ncm_id",
+        "nbs_id",
+        "nbm_id",
+        "cest_id",
+        "discount_value",
+        "insurance_value",
+        "other_value",
+        "ii_customhouse_charges",
+        "freight_value",
+        "fiscal_price",
+        "fiscal_quantity",
+        "uot_id",
+        "icmssn_range_id",
+        "icms_origin",
+        "ind_final",
     )
     def _compute_totals(self):
         """
         Overriden to pass all the Brazilian parameters we need
         to the account.tax#compute_all method.
         """
-        result = super()._compute_totals()
+        result = super(
+            AccountMoveLine,
+            self.with_context(
+                skip_compute_fiscal_tax_ids=True, skip_compute_tax_fields=True
+            ),
+        )._compute_totals()
         if not self.move_id.fiscal_operation_id:
             return result
 
@@ -310,22 +327,17 @@ class AccountMoveLine(models.Model):
 
             # Compute 'price_total'.
             if line.tax_ids:
-                # force_sign = (
-                #     -1
-                #     if line.move_type in ("out_invoice", "in_refund", "out_receipt")
-                #     else 1
-                # )
-                taxes_res = line.tax_ids._origin.with_context(
-                    #                    force_sign=force_sign
-                ).compute_all(
+                taxes_res = line.tax_ids._origin.with_context().compute_all(
                     line_discount_price_unit,
                     currency=line.currency_id,
                     quantity=line.quantity,
                     product=line.product_id,
                     partner=line.partner_id,
                     is_refund=line.move_type in ("out_refund", "in_refund"),
-                    handle_price_include=True,  # FIXME
-                    fiscal_taxes=line.fiscal_tax_ids,
+                    handle_price_include=True,  # sure?
+                    fiscal_taxes=line.with_context(
+                        skip_compute_fiscal_tax_ids=True
+                    ).fiscal_tax_ids,
                     operation_line=line.fiscal_operation_line_id,
                     cfop=line.cfop_id or None,
                     ncm=line.ncm_id,
@@ -354,8 +366,6 @@ class AccountMoveLine(models.Model):
                 + line.freight_value
                 - line.icms_relief_value
             )
-            # TODO MIGRATE v16 (that is make icms_relief_value really work),
-            # for icms_relief_value see https://github.com/OCA/l10n-brazil/pull/3037
         return result
 
     @api.depends(
@@ -367,14 +377,30 @@ class AccountMoveLine(models.Model):
         "partner_id",
         "move_id.partner_id",
         "price_unit",
+        "fiscal_tax_ids",
+        "fiscal_operation_line_id",
+        "cfop_id",
+        "ncm_id",
+        "nbm_id",
+        "nbs_id",
+        "cest_id",
+        "discount_value",
+        "insurance_value",
+        "other_value",
+        "ii_customhouse_charges",
+        "freight_value",
+        "fiscal_price",
+        "fiscal_quantity",
+        "uot_id",
+        "icmssn_range_id",
+        "icms_origin",
+        "ind_final",
     )
     def _compute_all_tax(self):
         """
         Overriden to pass all the extra Brazilian parameters we need
         to the account.tax#compute_all method.
         """
-        # TODO seems we should use sign in account_tax#compute_all
-        # so base and amount are negative if move is in.
         if not self.move_id.fiscal_operation_id:
             return super()._compute_all_tax()
 
@@ -438,8 +464,8 @@ class AccountMoveLine(models.Model):
                             tax["analytic"] or not tax["use_in_tax_closing"]
                         )
                         and line.analytic_distribution,
-                        "tax_ids": [(6, 0, tax["tax_ids"])],
-                        "tax_tag_ids": [(6, 0, tax["tag_ids"])],
+                        "tax_ids": [Command.set(tax["tax_ids"])],
+                        "tax_tag_ids": [Command.set(tax["tag_ids"])],
                         "partner_id": line.move_id.partner_id.id or line.partner_id.id,
                         "move_id": line.move_id.id,
                         "display_type": line.display_type,
@@ -458,7 +484,7 @@ class AccountMoveLine(models.Model):
             }
             if not line.tax_repartition_line_id:
                 line.compute_all_tax[frozendict({"id": line.id})] = {
-                    "tax_tag_ids": [(6, 0, compute_all_currency["base_tags"])],
+                    "tax_tag_ids": [Command.set(compute_all_currency["base_tags"])],
                 }
 
     @api.onchange("fiscal_document_line_id")
@@ -496,5 +522,12 @@ class AccountMoveLine(models.Model):
             user_type = "purchase"
 
         return self.fiscal_tax_ids.account_taxes(
-            user_type=user_type, fiscal_operation=self.fiscal_operation_id
+            user_type=user_type,
+            fiscal_operation=self.fiscal_operation_id,
+            company=self.company_id,
         )
+
+    @api.constrains("product_uom_id")
+    def _check_product_uom_category_id(self):
+        not_imported = self.filtered(lambda line: not line._is_imported())
+        return super(AccountMoveLine, not_imported)._check_product_uom_category_id()

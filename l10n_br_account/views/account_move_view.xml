@@ -14,7 +14,7 @@
             <field name="partner_id" position="before">
                 <field name="partner_legal_name" string="Legal Name" />
                 <field name="partner_cnpj_cpf" string="CNPJ/CPF" />
-                <field name="partner_inscr_est" string="State Tax Number" />
+                <field name="partner_l10n_br_ie_code" string="State Tax Number" />
             </field>
             <field name="name" position="attributes">
                 <attribute
@@ -132,57 +132,70 @@
 
 
             <!-- invoice_line_ids tree (Invoice Lines) -->
-            <xpath expr="//field[@name='invoice_line_ids']/tree" position="attributes">
-              <attribute
-                    name="editable"
-                /><!-- TODO put this in a view with a specific group? -->
-            </xpath>
             <xpath expr="//field[@name='invoice_line_ids']" position="attributes">
                 <attribute
                     name="context"
                 >{'default_move_type': context.get('default_move_type'), 'journal_id': journal_id, 'default_partner_id': commercial_partner_id, 'default_currency_id': currency_id or company_currency_id, 'default_fiscal_operation_id': fiscal_operation_id, 'default_document_type_id': document_type_id}</attribute>
             </xpath>
             <xpath
+                expr="//field[@name='invoice_line_ids']/tree/field[@name='product_id']"
+                position="before"
+            >
+                <button
+                    name="dummy_button_for_js"
+                    icon="fa-external-link"
+                    title="Edit in Form"
+                    class="btn-sm btn-link p-0 edit-line-popup"
+                />
+            </xpath>
+            <xpath
                 expr="//field[@name='invoice_line_ids']/tree/field[@name='tax_ids']"
                 position="replace"
             >
+                <control
+                    name="fiscal_fields"
+                    invisible="1"
+                /><!-- this is a dynamic fiscal fields placeholder-->
+                <control
+                    name="fiscal_taxes_fields"
+                    string="Taxes"
+                    invisible="1"
+                /><!-- this is a dynamic fiscal fields placeholder-->
+
+                <!-- the fields below would be injected by the placeholders
+                    above, but we need to repeat them here to please the
+                    Form test framework or because they are used in some
+                    domain here that is checked before the dynamic fiscal
+                    placeholders kick in.
+                -->
+                <field name="fiscal_operation_id" invisible="1" />
+                <field name="document_type_id" invisible="1" />
+                <field name="fiscal_operation_type" invisible="1" />
+                <field name="tax_icms_or_issqn" invisible="1" />
+                <field name="account_id" optional="hide" />
+
                 <field
                     name="tax_ids"
                     optional="hide"
                     widget="many2many_tags"
                     options="{'no_create': True}"
+                    attrs="{'column_invisible': [('parent.fiscal_operation_id', '!=', False)]}"
                 />
                 <field name="fiscal_document_line_id" invisible="1" />
                 <field name="document_type_id" invisible="1" />
-                <field name="amount_tax_withholding" optional="hide" />
-                <field name="amount_tax_included" optional="hide" />
-                <field name="amount_tax_not_included" optional="hide" />
                 <field name="fiscal_operation_id" optional="hide" />
-                <field name="fiscal_operation_line_id" optional="show" />
                 <field name="cfop_id" optional="hide" />
                 <field name="city_taxation_code_id" optional="hide" />
-                <field name="service_type_id" optional="hide" />
-                <field name="cnae_id" optional="hide" />
-                <field name="ncm_id" optional="hide" />
-                <field name="nbs_id" optional="hide" />
-                <field name="nbm_id" optional="hide" />
-                <field name="cest_id" optional="hide" />
-                <field name="product_uom_id" optional="hide" />
-                <field name="fiscal_genre_id" optional="hide" />
+                <field
+                    name="fiscal_operation_line_id"
+                    attrs="{'column_invisible': [('parent.fiscal_operation_id', '=', False)]}"
+                />
                 <field
                     name="fiscal_tax_ids"
-                    attrs="{'invisible': [('document_type_id', '=', False)]}"
+                    attrs="{'column_invisible': [('document_type_id', '=', False)]}"
                     widget="many2many_tags"
                     options="{'no_create': True}"
                 />
-                <field name="icms_value" optional="hide" />
-                <field name="ipi_value" optional="hide" />
-                <field name="pis_value" optional="hide" />
-                <field name="cofins_value" optional="hide" />
-                <field name="freight_value" optional="hide" />
-                <field name="insurance_value" optional="hide" />
-                <field name="other_value" optional="hide" />
-                <field name="estimate_tax" optional="hide" />
             </xpath>
 
 
@@ -213,32 +226,34 @@
                 expr="//field[@name='line_ids']/tree/field[@name='tax_ids']"
                 position="replace"
             >
+                <control
+                    name="fiscal_fields"
+                    invisible="1"
+                /><!-- this is a dynamic fiscal fields placeholder-->
+                <control
+                    name="fiscal_taxes_fields"
+                    string="Taxes"
+                    invisible="1"
+                /><!-- this is a dynamic fiscal fields placeholder-->
+
+                <!-- the fields below would be injected by the placeholders
+                    above, but we need to repeat them here to please the
+                    Form test framework or because they are used in some
+                    domain here that is checked before the dynamic fiscal
+                    placeholders kick in.
+                -->
+                <field name="fiscal_operation_id" invisible="1" />
+                <field name="document_type_id" invisible="1" />
+                <field name="fiscal_operation_type" invisible="1" />
+                <field name="tax_icms_or_issqn" invisible="1" />
+
                 <field
                     name="tax_ids"
                     optional="hide"
                     widget="many2many_tags"
                     options="{'no_create': True}"
                 />
-                <field name="fiscal_document_line_id" invisible="1" />
-                <field name="document_type_id" invisible="1" />
-                <field name="amount_tax_withholding" invisible="1" />
-                <field name="amount_tax_included" invisible="1" />
-                <field name="amount_tax_not_included" invisible="1" />
-                <field name="fiscal_operation_id" invisible="1" />
-                <field name="fiscal_operation_line_id" optional="hide" />
-                <field name="cfop_id" optional="hide" />
                 <field name="product_id" optional="hide" />
-                <field name="city_taxation_code_id" optional="hide" />
-                <field name="service_type_id" optional="hide" />
-                <field name="cnae_id" optional="hide" />
-                <field name="ncm_id" optional="hide" />
-                <field name="nbs_id" optional="hide" />
-                <field name="nbm_id" optional="hide" />
-                <field name="cest_id" optional="hide" />
-                <field name="uom_id" optional="hide" />
-                <field name="fiscal_genre_id" optional="hide" />
-                <field name="partner_company_type" invisible="1" />
-                <field name="fiscal_operation_type" invisible="1" />
                 <field
                     name="fiscal_tax_ids"
                     invisible="1"
@@ -251,16 +266,8 @@
                             <field name="fiscal_price" invisible="1" />
                             <field name="discount_value" invisible="1" />
 
-                    <!--group name="fiscal_fields" invisible="1" /-->
-
-                    <field name="freight_value" invisible="1" />
-                    <field name="insurance_value" invisible="1" />
-                    <field name="other_value" invisible="1" />
-                    <field name="estimate_tax" invisible="1" />
-
                   <!-- TODO adapt these placeholders for tree view for fiscal_form_view -->
                     <control name="fiscal_taxes_fields" string="Taxes" invisible="1" />
-                    <field name="tax_icms_or_issqn" invisible="1" />
                     <control
                     name="fiscal_line_extra_info_fields"
                     string="Extra Info"
@@ -469,9 +476,10 @@
             <field name="fiscal_position_id" position="after">
                     <field
                     name="fiscal_document_id"
+                    readonly="0"
                     placeholder="Fiscal Document to import..."
                     domain="[('partner_id', '=', partner_id), ('company_id', '=', company_id)]"
-                    attrs="{'invisible': [('state', '!=', 'draft')]}"
+                    attrs="{'invisible': [('state', '!=', 'draft')], 'readonly': False}"
                 />
                 <button
                     name="button_import_fiscal_document"

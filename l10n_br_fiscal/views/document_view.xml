@@ -171,13 +171,6 @@
                         groups="l10n_br_fiscal.group_user"
                         attrs="{'invisible': [('state_edoc', '!=', 'autorizada')]}"
                     />
-            <button
-                        name="action_send_email"
-                        type="object"
-                        string="Send Email"
-                        groups="l10n_br_fiscal.group_user"
-                        attrs="{'invisible': [('state_edoc', 'not in', ('autorizada', 'cancelada', 'denegada'))]}"
-                    />
             <field
                         name="state_edoc"
                         widget="statusbar"
@@ -301,68 +294,17 @@
                 </group>
               </group>
               <group name="company_info" string="Company">
-		<field name="company_id" invisible="1" />
+		            <field name="company_id" invisible="1" />
                 <field
                                     name="company_id"
                                     required="1"
                                     groups="base.group_multi_company"
                                 />
               </group>
-              <group>
-                <group name="company_left">
-                  <field name="company_legal_name" readonly="1" />
-                  <field name="company_name" readonly="1" />
-                  <field name="company_cnpj_cpf" readonly="1" />
-                  <field name="company_inscr_est" readonly="1" />
-                  <field name="company_inscr_est_st" readonly="1" />
-                  <field name="company_street" readonly="1" />
-                  <field name="company_number" readonly="1" />
-                  <field name="company_street2" readonly="1" />
-                  <field name="company_district" readonly="1" />
-                </group>
-                <group name="company_right">
-                  <field name="company_inscr_mun" readonly="1" />
-                  <field name="company_suframa" readonly="1" />
-                  <field name="company_cnae_main_id" readonly="1" />
-                  <field name="company_tax_framework" readonly="1" />
-                  <field name="company_country_id" readonly="1" />
-                  <field name="company_state_id" readonly="1" />
-                  <field name="company_city_id" readonly="1" />
-                  <field name="company_zip" readonly="1" />
-                  <field name="company_phone" readonly="1" />
-                </group>
-              </group>
             </page>
             <page name="partners" string="Partners">
               <group name="partner">
                 <field name="partner_id" />
-              </group>
-              <group>
-                <group name="partner_left">
-                  <field name="partner_legal_name" readonly="1" />
-                  <field name="partner_name" readonly="1" />
-                  <field name="partner_cnpj_cpf" readonly="1" />
-                  <field name="partner_inscr_est" readonly="1" />
-                  <field name="partner_ind_ie_dest" readonly="1" />
-                  <field name="partner_street" readonly="1" />
-                  <field name="partner_number" readonly="1" />
-                  <field name="partner_street2" readonly="1" />
-                  <field name="partner_district" readonly="1" />
-                </group>
-                <group name="partner_right">
-                  <field name="partner_inscr_mun" readonly="1" />
-                  <field name="partner_suframa" readonly="1" />
-                  <field name="partner_cnae_main_id" readonly="1" />
-                  <field name="partner_tax_framework" readonly="1" />
-                  <field name="partner_is_company" readonly="1" />
-                  <field name="partner_country_id" readonly="1" />
-                  <field name="partner_state_id" readonly="1" />
-                  <field name="partner_city_id" readonly="1" />
-                  <field name="partner_zip" readonly="1" />
-                  <field name="partner_phone" readonly="1" />
-                </group>
-              </group>
-              <group>
                 <field name="partner_shipping_id" />
               </group>
             </page>
@@ -382,24 +324,6 @@
             </page>
             <page name="document_related" string="Document Related">
               <field name="document_related_ids" />
-              <separator colspan="4" string="Subsequents Documents" />
-              <field name="document_subsequent_ids">
-                  <tree editable="bottom">
-                    <field
-                                        name="subsequent_document_id"
-                                        context="{'fiscal_document_complete_name': True}"
-                                    />
-                    <field name="fiscal_operation_id" />
-                    <field name="operation_performed" />
-                    <field name="subsequent_operation_id" />
-                    <button
-                                        name="show_subsequent_document"
-                                        type="object"
-                                        string="Show Document"
-                                        attrs="{'invisible': [('subsequent_document_id', '=', False)]}"
-                                    />
-                </tree>
-              </field>
             </page>
             <page name="finance" string="Finance">
             </page>

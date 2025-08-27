@@ -8,10 +8,10 @@ from odoo.tests import TransactionCase
 
 
 class TestCTeResPartner(TransactionCase):
-    def setUp(self):
-        super().setUp()
-
-        self.partner_id = self.env.ref("l10n_br_base.res_partner_kmee")
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.partner_id = cls.env.ref("l10n_br_base.res_partner_kmee")
 
     def test_compute_fields(self):
         self.partner_id.country_id = self.env.ref("base.us")
@@ -34,7 +34,7 @@ class TestCTeResPartner(TransactionCase):
         )
 
         self.partner_id.cte40_IE = "630514648079"
-        self.assertEqual(self.partner_id.inscr_est, self.partner_id.cte40_IE)
+        self.assertEqual(self.partner_id.l10n_br_ie_code, self.partner_id.cte40_IE)
 
         self.partner_id.cte40_CEP = "04324240"
         self.assertEqual(self.partner_id.zip, format_zipcode(self.partner_id.cte40_CEP))

@@ -387,6 +387,12 @@ class AccountLoanLine(models.Model):
         vals = self._add_interests_values_invoice_line(vals)
         return vals
 
+    def _auto_post_moves(self):
+        """
+        Inhertiance hook to conditon posting of moves
+        """
+        return True
+
     def _generate_move(self, journal=False, account=False):
         """
         Computes and post the moves of loans
@@ -402,7 +408,8 @@ class AccountLoanLine(models.Model):
                 move = self.env["account.move"].create(
                     record._move_vals(journal=journal, account=account)
                 )
-                move.action_post()
+                if record._auto_post_moves():
+                    move.action_post()
                 res.append(move.id)
         return res
 
@@ -412,7 +419,8 @@ class AccountLoanLine(models.Model):
             "loan_id": self.loan_id.id,
             "date": self.date,
             "ref": self.name,
-            "journal_id": self.loan_id.journal_id.id,
+            "journal_id": self.loan_id.long_term_journal_id.id
+            or self.loan_id.journal_id.id,
             "line_ids": [
                 Command.create(vals) for vals in self._get_long_term_move_line_vals()
             ],

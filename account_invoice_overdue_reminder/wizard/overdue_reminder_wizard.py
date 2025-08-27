@@ -26,9 +26,7 @@ class OverdueReminderStart(models.TransientModel):
         domain=[("customer_rank", ">", 0), ("parent_id", "=", False)],
     )
     user_ids = fields.Many2many("res.users", string="Salesman")
-    payment_ids = fields.Many2many(
-        "overdue.reminder.start.payment", "wizard_id", readonly=True
-    )
+    payment_ids = fields.Many2many("overdue.reminder.start.payment", readonly=True)
     start_days = fields.Integer(
         string="Trigger Delay",
         help="Odoo will propose to send an overdue reminder to a customer "
@@ -228,9 +226,7 @@ class OverdueReminderStart(models.TransientModel):
         unrec_domain = [
             ("account_id", "=", commercial_partner.property_account_receivable_id.id),
             ("partner_id", "=", commercial_partner.id),
-            ("full_reconcile_id", "=", False),
-            ("matched_debit_ids", "=", False),
-            ("matched_credit_ids", "=", False),
+            ("matching_number", "=", False),
         ]
         unrec_payments = amlo.search(
             unrec_domain

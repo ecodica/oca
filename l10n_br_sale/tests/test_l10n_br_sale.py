@@ -19,6 +19,7 @@ class L10nBrSaleBaseTest(TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
+        cls.env = cls.env(context=dict(cls.env.context, tracking_disable=True))
         cls.main_company = cls.env.ref("base.main_company")
         cls.company = cls.env.ref("l10n_br_base.empresa_lucro_presumido")
         cls.so_products = cls.env.ref("l10n_br_sale.lc_so_only_products")
@@ -157,7 +158,6 @@ class L10nBrSaleBaseTest(TransactionCase):
             return
         sale_line._onchange_product_id_fiscal()
         sale_line._onchange_fiscal_operation_id()
-        sale_line._onchange_fiscal_operation_line_id()
         sale_line._onchange_fiscal_taxes()
         sale_line._onchange_fiscal_tax_ids()
 
@@ -172,7 +172,7 @@ class L10nBrSaleBaseTest(TransactionCase):
         for invoice in sale_order.invoice_ids:
             self.assertTrue(
                 invoice.fiscal_operation_id,
-                "Error to included Operation on invoice " "dictionary from Sale Order.",
+                "Error to included Operation on invoice dictionary from Sale Order.",
             )
 
             self.assertTrue(
@@ -185,18 +185,17 @@ class L10nBrSaleBaseTest(TransactionCase):
             self.assertEqual(
                 sale_order.amount_total,
                 invoice.amount_total,
-                "Error field Amount Total in Invoice" " are different from Sale Order.",
+                "Error field Amount Total in Invoice are different from Sale Order.",
             )
             self.assertEqual(
                 sale_order.amount_tax,
                 invoice.amount_tax,
-                "Error field Amount Tax in Invoice" " are different from Sale Order.",
+                "Error field Amount Tax in Invoice are different from Sale Order.",
             )
             self.assertEqual(
                 sale_order.amount_untaxed,
                 invoice.amount_untaxed,
-                "Error field Amount Untaxed in Invoice"
-                " are different from Sale Order.",
+                "Error field Amount Untaxed in Invoice are different from Sale Order.",
             )
             self.assertEqual(
                 sale_order.amount_price_gross,
@@ -219,8 +218,7 @@ class L10nBrSaleBaseTest(TransactionCase):
             self.assertEqual(
                 sale_order.amount_freight_value,
                 invoice.amount_freight_value,
-                "Error field Amount Freight in Invoice"
-                " are different from Sale Order.",
+                "Error field Amount Freight in Invoice are different from Sale Order.",
             )
             self.assertEqual(
                 sale_order.amount_insurance_value,
@@ -535,8 +533,6 @@ class L10nBrSaleBaseTest(TransactionCase):
             line.insurance_value = 10.0
             line.other_value = 10.0
 
-        self.so_products.action_confirm()
-
         self.assertEqual(
             self.so_products.amount_freight_value,
             20.0,
@@ -591,8 +587,6 @@ class L10nBrSaleBaseTest(TransactionCase):
         self.so_products.amount_freight_value = 20.0
         self.so_products.amount_insurance_value = 20.0
         self.so_products.amount_other_value = 20.0
-
-        self.so_products.action_confirm()
 
         for line in self.so_products.order_line:
             if line.price_total == 234.29:

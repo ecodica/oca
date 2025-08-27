@@ -3,6 +3,7 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
 import base64
+import gzip
 import logging
 import re
 import string
@@ -515,7 +516,7 @@ class CTe(spec_models.StackedModel):
     )
 
     cte40_CRT = fields.Selection(
-        related="company_tax_framework",
+        related="company_id.tax_framework",
         string="Código de Regime Tributário (CTe)",
     )
 
@@ -538,9 +539,9 @@ class CTe(spec_models.StackedModel):
                 stn_id = self.company_id.state_tax_number_ids.filtered(
                     lambda stn: stn.state_id == dest_state_id
                 )
-                iest = stn_id.inscr_est
+                iest = stn_id.l10n_br_ie_code
                 iest = re.sub("[^0-9]+", "", iest)
-        self.company_inscr_est_st = iest
+        self.company_l10n_br_ie_code_st = iest
 
     ##########################
     # CT-e tag: rem
@@ -1248,8 +1249,8 @@ class CTe(spec_models.StackedModel):
         ):
             self._set_cte40_IEST()
             res = super()._export_many2one(field_name, xsd_required, class_obj)
-            if self.company_inscr_est_st:
-                res.IEST = self.company_inscr_est_st
+            if self.company_l10n_br_ie_code_st:
+                res.IEST = self.company_l10n_br_ie_code_st
             return res
 
         return super()._export_many2one(field_name, xsd_required, class_obj)
@@ -1483,10 +1484,11 @@ class CTe(spec_models.StackedModel):
                 process = None
                 for p in processador.processar_documento(edoc):
                     process = p
-                    if process.webservice == "cteRecepcaoLote":
-                        record.authorization_event_id._save_event_file(
-                            process.envio_xml, "xml"
-                        )
+                    if process.webservice in ["cteRecepcaoLote", "cteRecepcao"]:
+                        send_xml = gzip.decompress(
+                            base64.b64decode(process.envio_xml)
+                        ).decode("utf-8")
+                        record.authorization_event_id._save_event_file(send_xml, "xml")
 
             if process.resposta.cStat in LOTE_PROCESSADO + ["100"]:
                 record.update_status_cte(process)
@@ -1748,8 +1750,10 @@ class CTe(spec_models.StackedModel):
             "mimetype": "application/pdf",
             "type": "binary",
         }
-        report = self.env.ref("l10n_br_cte.report_dacte")
-        pdf_data = report._render_qweb_pdf(self.fiscal_line_ids.document_id.ids)
+        report = self.env.ref("l10n_br_cte.main_template_dacte")
+        pdf_data = report._render_qweb_pdf(
+            "main_template_dacte", self.fiscal_line_ids.document_id.ids
+        )
         attachment_data["datas"] = base64.b64encode(pdf_data[0])
         file_pdf = self.file_report_id
         self.file_report_id = False

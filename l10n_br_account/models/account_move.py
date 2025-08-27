@@ -17,7 +17,6 @@ from odoo.addons.l10n_br_fiscal.constants.fiscal import (
     FISCAL_IN_OUT_ALL,
     FISCAL_OUT,
     MODELO_FISCAL_NFE,
-    SITUACAO_EDOC_AUTORIZADA,
     SITUACAO_EDOC_CANCELADA,
     SITUACAO_EDOC_EM_DIGITACAO,
 )
@@ -86,6 +85,7 @@ class AccountMove(models.Model):
         copy=False,
         ondelete="cascade",
         store=True,
+        readonly=False,
         compute="_compute_fiscal_document_id",
     )
 
@@ -121,7 +121,7 @@ class AccountMove(models.Model):
         for move in self:
             for doc in move.fiscal_document_ids:
                 doc.company_id = move.company_id
-        return super()._inverse_partner_id()
+        return super()._inverse_company_id()
 
     @api.onchange("currency_id")
     def _inverse_currency_id(self):
@@ -200,9 +200,9 @@ class AccountMove(models.Model):
             else:
                 inv.fiscal_operation_type = MOVE_TO_OPERATION[inv.move_type]
 
-    def _get_amount_lines(self):
-        """Get object lines instances used to compute fields"""
-        return self.mapped("invoice_line_ids")
+    @api.model
+    def _get_fiscal_lines_field_name(self):
+        return "invoice_line_ids"
 
     def ensure_one_doc(self):
         self.ensure_one()
@@ -230,40 +230,21 @@ class AccountMove(models.Model):
     @api.model
     def _get_view(self, view_id=None, view_type="form", **options):
         arch, view = super()._get_view(view_id, view_type, **options)
-        if self.env.company.country_id.code != "BR":
+        if self.env.company.country_id.code != "BR" or view_type != "form":
             return arch, view
-        if view_type == "form":
-            view = self.env["ir.ui.view"]
+        arch = self.env["account.move.line"].inject_fiscal_fields(arch)
 
-            for tax_totals_node in arch.xpath(
-                "//field[@name='tax_totals'][@widget='account-tax-totals-field']"
-            ):
-                tax_totals_node.set("attrs", "{'invisible': True}")
+        for tax_totals_node in arch.xpath(
+            "//field[@name='tax_totals'][@widget='account-tax-totals-field']"
+        ):
+            tax_totals_node.set("attrs", "{'invisible': True}")
 
-            if view_id == self.env.ref("l10n_br_account.fiscal_invoice_form").id:
-                invoice_line_form_id = self.env.ref(
-                    "l10n_br_account.fiscal_invoice_line_form"
-                ).id
-                sub_form_node, _sub_view = self.env["account.move.line"]._get_view(
-                    view_id=invoice_line_form_id, view_type="form"
-                )
-                self.env["account.move.line"].inject_fiscal_fields(sub_form_node)
-
-                # TODO FIXME test this part:
-                for original_sub_form_node in arch.xpath(
-                    "//field[@name='invoice_line_ids']/form"
-                ):
-                    parent = original_sub_form_node.parent
-                    parent.remove(original_sub_form_node)
-                    parent.append(sub_form_node)
-
-            else:
-                for sub_form_node in arch.xpath(
-                    "//field[@name='invoice_line_ids']/form"
-                ):
-                    self.env["account.move.line"].inject_fiscal_fields(sub_form_node)
-                for sub_form_node in arch.xpath("//field[@name='line_ids']/tree"):
-                    self.env["account.move.line"].inject_fiscal_fields(sub_form_node)
+        if view_type == "form" and (
+            self.user_has_groups("l10n_br_account.group_line_fiscal_detail")
+            or self.env.context.get("force_line_fiscal_detail")
+        ):
+            for sub_tree_node in arch.xpath("//field[@name='invoice_line_ids']/tree"):
+                sub_tree_node.attrib["editable"] = ""
 
         return arch, view
 
@@ -283,23 +264,21 @@ class AccountMove(models.Model):
         "line_ids.full_reconcile_id",
         "state",
         "ind_final",
+        "line_ids.cfop_id",
     )
     def _compute_amount(self):
         for move in self.filtered(lambda m: m.fiscal_operation_id):
-            move._compute_fiscal_amount()
+            move._compute_fiscal_amount()  # breaks test_composite_move if removed
             for line in move.line_ids:
                 if (
                     move.is_invoice(include_receipts=True)
                     and line.display_type == "product"
                 ):
-                    line._update_fiscal_taxes()
+                    line._compute_tax_fields()
 
         result = super()._compute_amount()
         for move in self.filtered(lambda m: m.fiscal_operation_id):
-            if move.move_type == "entry" or move.is_outbound():
-                sign = -1
-            else:
-                sign = 1
+            sign = -move.direction_sign
             inv_line_ids = move.line_ids.filtered(
                 lambda line: line.display_type == "product"
                 and (not line.cfop_id or line.cfop_id.finance_move)
@@ -313,12 +292,18 @@ class AccountMove(models.Model):
 
         return result
 
+    def _compute_imported_terms(self):
+        self.ensure_one()
+        pass  # meant to be overriden
+
     @api.depends(
         "invoice_payment_term_id",
         "invoice_date",
         "currency_id",
         "amount_total_in_currency_signed",
         "invoice_date_due",
+        "invoice_line_ids.cfop_id",
+        "amount_financial_total",
     )
     def _compute_needed_terms(self):
         """
@@ -337,7 +322,9 @@ class AccountMove(models.Model):
             invoice.needed_terms_dirty = True
             sign = 1 if invoice.is_inbound(include_receipts=True) else -1
             if invoice.is_invoice(True) and invoice.invoice_line_ids:
-                if invoice.invoice_payment_term_id:
+                if invoice.imported_document:
+                    invoice._compute_imported_terms()
+                elif invoice.invoice_payment_term_id:
                     if is_draft:
                         tax_amount_currency = 0.0
                         untaxed_amount_currency = 0.0
@@ -395,7 +382,7 @@ class AccountMove(models.Model):
                             invoice.needed_terms[key]["amount_currency"] += values[
                                 "amount_currency"
                             ]
-                else:
+                if not invoice.needed_terms:
                     invoice.needed_terms[
                         frozendict(
                             {
@@ -476,12 +463,15 @@ class AccountMove(models.Model):
         self.clear_caches()
         return result
 
-    @api.onchange("fiscal_operation_id")
-    def _onchange_fiscal_operation_id(self):
-        result = super()._onchange_fiscal_operation_id()
-        if self.fiscal_operation_id and self.fiscal_operation_id.journal_id:
-            self.journal_id = self.fiscal_operation_id.journal_id
-        return result
+    @api.depends("move_type", "fiscal_operation_id")
+    def _compute_journal_id(self):
+        fisc_operation_driven = self.filtered(
+            lambda move: move.fiscal_operation_id
+            and move.fiscal_operation_id.journal_id
+        )
+        for move in fisc_operation_driven:
+            move.journal_id = self.fiscal_operation_id.journal_id
+        return super(AccountMove, self - fisc_operation_driven)._compute_journal_id()
 
     def open_fiscal_document(self):
         """
@@ -605,7 +595,6 @@ class AccountMove(models.Model):
                 force_fiscal_operation_id
                 or record.fiscal_operation_id.return_fiscal_operation_id
             )
-            record._onchange_fiscal_operation_id()
 
             for line in record.invoice_line_ids:
                 if (
@@ -626,37 +615,19 @@ class AccountMove(models.Model):
                 )
                 line._onchange_fiscal_operation_id()
 
-            # Adds the related document to the NF-e.
-            # this is required for correct xml validation
-            if record.document_type_id and record.document_type_id.code in (
-                MODELO_FISCAL_NFE
-            ):
-                record.fiscal_document_id._document_reference(
-                    record.reversed_entry_id.fiscal_document_id
-                )
+            # This method is in l10n_br_fiscal_subsequent_document module, the IF
+            # is necessary to avoid a 'glue module' or direct dependence.
+            if hasattr(record.fiscal_document_id, "_document_reference"):
+                # Add the related document to the NF-e.
+                # this is required for correct xml validation
+                if record.document_type_id and record.document_type_id.code in (
+                    MODELO_FISCAL_NFE
+                ):
+                    record.fiscal_document_id._document_reference(
+                        record.reversed_entry_id.fiscal_document_id
+                    )
 
         return new_moves
-
-    def _finalize_invoices(self, invoices):
-        for invoice in invoices:
-            invoice.compute_taxes()
-            for line in invoice.line_ids:
-                # Use additional field helper function (for account extensions)
-                line._set_additional_fields(invoice)
-            invoice._onchange_cash_rounding()
-
-    def post(self, invoice=False):
-        # TODO FIXME migrate: no more invoice keyword
-        result = super().post()
-        if invoice:
-            if (
-                invoice.document_type_id
-                and invoice.document_electronic
-                and invoice.issuer == DOCUMENT_ISSUER_COMPANY
-                and invoice.state_edoc != SITUACAO_EDOC_AUTORIZADA
-            ):
-                self.button_cancel()
-        return result
 
     def button_cancel(self):
         for doc in self.filtered(lambda d: d.document_type_id):
@@ -725,12 +696,15 @@ class AccountMove(models.Model):
             )
         )
         if not move_id or not move.fiscal_document_id:
+            move_form.partner_id = fiscal_document.partner_id
             move_form.invoice_date = fiscal_document.document_date
             move_form.date = fiscal_document.document_date
             move_form.document_type_id = fiscal_document.document_type_id
             move_form.fiscal_document_id = fiscal_document
             move_form.fiscal_operation_id = fiscal_document.fiscal_operation_id
+            move_form.document_serie = fiscal_document.document_serie
 
+        unit_and_prices = []  # save units to force them later
         for line in fiscal_document.fiscal_line_ids:
             with move_form.invoice_line_ids.new() as line_form:
                 line_form.cfop_id = (
@@ -738,5 +712,14 @@ class AccountMove(models.Model):
                 )  # required if we disable some fiscal tax updates
                 line_form.fiscal_operation_id = self.fiscal_operation_id
                 line_form.fiscal_document_line_id = line
+                # for some reason trying to set the product_uom_id
+                # here results in strange bugs like unbalanced move
+                # so we will force product_uom_id later
+                # we also save price_unit to reset unit factor effect
+                unit_and_prices.append((line.uot_id.id, line.price_unit))
         move_form.save()
+        move = self.env["account.move"].browse(move_form.id)
+        for index, item in enumerate(unit_and_prices):
+            move.invoice_line_ids[index].product_uom_id = item[0]
+            move.invoice_line_ids[index].price_unit = item[1]
         return move_form

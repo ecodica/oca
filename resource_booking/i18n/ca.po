@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-03-02 19:22+0000\n"
+"PO-Revision-Date: 2025-08-21 18:25+0000\n"
 "Last-Translator: Eugeni Chafer <eugeni@chafer.cat>\n"
 "Language-Team: none\n"
 "Language: ca\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 5.10.4\n"
 
 #. module: resource_booking
 #. odoo-python
@@ -56,7 +56,7 @@ msgstr "%(resources)s"
 #: code:addons/resource_booking/models/resource_booking_combination.py:0
 #, python-format
 msgid "%(resources)s (using calendar %(calendar)s)"
-msgstr ""
+msgstr "%(resources)s (fent servir el calendari %(calendar)s)"
 
 #. module: resource_booking
 #: model_terms:ir.ui.view,arch_db:resource_booking.alert_availability_lost
@@ -91,6 +91,8 @@ msgid ""
 "<i class=\"fa fa-comment\"/>\n"
 "                        Feedback"
 msgstr ""
+"<i class=\"fa fa-comment\"/>\n"
+"                        Comentaris"
 
 #. module: resource_booking
 #: model_terms:ir.ui.view,arch_db:resource_booking.resource_booking_portal_form
@@ -98,6 +100,8 @@ msgid ""
 "<i class=\"fa fa-times\"/>\n"
 "                                Cancel this booking"
 msgstr ""
+"<i class=\"fa fa-times\"/>\n"
+"                                Cancel·lar aquesta reserva/cita"
 
 #. module: resource_booking
 #: model_terms:ir.ui.view,arch_db:resource_booking.resource_booking_portal_form
@@ -105,36 +109,38 @@ msgid ""
 "<i class=\"fa fa-times\"/>\n"
 "                            Cancel"
 msgstr ""
+"<i class=\"fa fa-times\"/>\n"
+"                            Cancel·lar"
 
 #. module: resource_booking
 #: model_terms:ir.ui.view,arch_db:resource_booking.resource_booking_portal_header
 msgid "<small class=\"text-right\">State:</small>"
-msgstr ""
+msgstr "<small class=\"text-right\">Estat:</small>"
 
 #. module: resource_booking
 #: model_terms:ir.ui.view,arch_db:resource_booking.resource_booking_view_form
 msgid "<span>Preview</span>"
-msgstr ""
+msgstr "<span>Previsualitzar</span>"
 
 #. module: resource_booking
 #: model_terms:ir.ui.view,arch_db:resource_booking.resource_booking_portal_form
 msgid "<strong>Advice:</strong>"
-msgstr ""
+msgstr "<strong>Consell:</strong>"
 
 #. module: resource_booking
 #: model_terms:ir.ui.view,arch_db:resource_booking.resource_booking_portal_form
 msgid "<strong>Booked resources:</strong>"
-msgstr ""
+msgstr "<strong>Recursos reservats:</strong>"
 
 #. module: resource_booking
 #: model_terms:ir.ui.view,arch_db:resource_booking.resource_booking_portal_form
 msgid "<strong>Dates:</strong>"
-msgstr ""
+msgstr "<strong>Dates:</strong>"
 
 #. module: resource_booking
 #: model_terms:ir.ui.view,arch_db:resource_booking.resource_booking_portal_form
 msgid "<strong>Duration:</strong>"
-msgstr ""
+msgstr "<strong>Duració:</strong>"
 
 #. module: resource_booking
 #: model_terms:ir.ui.view,arch_db:resource_booking.resource_booking_portal_form

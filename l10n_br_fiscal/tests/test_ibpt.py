@@ -8,6 +8,7 @@ from os import environ
 from decorator import decorate
 from erpbrasil.base import misc
 
+from odoo import Command
 from odoo.tests import TransactionCase
 from odoo.tools import config as odooconfig
 
@@ -95,7 +96,7 @@ class TestIbpt(TransactionCase):
         """Add a company to the user's allowed & set to current."""
         user.write(
             {
-                "company_ids": [(6, 0, (company + user.company_ids).ids)],
+                "company_ids": [Command.set((company + user.company_ids).ids)],
                 "company_id": company.id,
             }
         )
@@ -107,7 +108,7 @@ class TestIbpt(TransactionCase):
         try:
             config = DeOlhoNoImposto(
                 company.ibpt_token,
-                misc.punctuation_rm(company.cnpj_cpf),
+                misc.punctuation_rm(company.vat),
                 company.state_id.code,
                 odooconfig.get("ibpt_request_timeout")
                 or cls.env["ir.config_parameter"]
@@ -130,7 +131,7 @@ class TestIbpt(TransactionCase):
         company = cls.env["res.company"].create(
             {
                 "name": "Company Test Fiscal BR",
-                "cnpj_cpf": "02.960.895/0002-12",
+                "vat": "02.960.895/0002-12",
                 "country_id": cls.env.ref("base.br").id,
                 "state_id": cls.env.ref("base.state_br_es").id,
                 "ibpt_api": True,

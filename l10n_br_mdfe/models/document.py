@@ -14,7 +14,7 @@ from nfelib.mdfe.bindings.v3_0.mdfe_v3_00 import Mdfe
 from nfelib.nfe.ws.edoc_legacy import MDFeAdapter as edoc_mdfe
 from requests import Session
 
-from odoo import api, fields
+from odoo import Command, api, fields
 
 from odoo.addons.l10n_br_fiscal.constants.fiscal import (
     EVENT_ENV_HML,
@@ -69,7 +69,7 @@ class MDFe(spec_models.StackedModel):
     _mdfe30_stacking_force_paths = [
         "infmdfe.infAdic",
         "infmdfe.tot",
-        "infmdfe.infsolicnff",
+        "infmdfe.tmdfe_infsolicnff",
         "infmdfe.InfDoc",
     ]
     _mdfe_search_keys = ["mdfe30_Id"]
@@ -91,7 +91,8 @@ class MDFe(spec_models.StackedModel):
     ≡ <autXML> res.partner
     > <infAdic>
     - <infRespTec> res.partner
-    - <infSolicNFF>"""
+    - <infSolicNFF>
+    - <infPAA>"""
 
     mdfe_version = fields.Selection(
         string="MDF-e Version",
@@ -285,11 +286,9 @@ class MDFe(spec_models.StackedModel):
     @api.depends("mdfe_loading_city_ids")
     def _compute_mdfe30_inf_carrega(self):
         for record in self.filtered(filtered_processador_edoc_mdfe):
-            record.mdfe30_infMunCarrega = [(5, 0, 0)]
+            record.mdfe30_infMunCarrega = [Command.clear()]
             record.mdfe30_infMunCarrega = [
-                (
-                    0,
-                    0,
+                Command.create(
                     {
                         "mdfe30_cMunCarrega": city.ibge_code,
                         "mdfe30_xMunCarrega": city.name,
@@ -304,7 +303,7 @@ class MDFe(spec_models.StackedModel):
                 [("ibge_code", "=", record.mdfe30_infMunCarrega.mdfe30_cMunCarrega)]
             )
             if city_ids:
-                record.mdfe_loading_city_ids = [(6, 0, city_ids.ids)]
+                record.mdfe_loading_city_ids = [Command.set(city_ids.ids)]
 
     def _inverse_mdfe30_initial_final_state(self):
         for record in self:
@@ -332,11 +331,9 @@ class MDFe(spec_models.StackedModel):
     @api.depends("mdfe_route_state_ids")
     def _compute_mdfe30_inf_percurso(self):
         for record in self:
-            record.mdfe30_infPercurso = [(5, 0, 0)]
+            record.mdfe30_infPercurso = [Command.clear()]
             record.mdfe30_infPercurso = [
-                (
-                    0,
-                    0,
+                Command.create(
                     {
                         "mdfe30_UFPer": state.code,
                     },
@@ -743,6 +740,10 @@ class MDFe(spec_models.StackedModel):
             nfe_ids = self.mdfe30_infMunDescarga.mapped("nfe_ids")
             mdfe_ids = self.mdfe30_infMunDescarga.mapped("mdfe_ids")
 
+            total_dfe = len(cte_ids) + len(nfe_ids) + len(mdfe_ids)
+            if total_dfe != 1:
+                self.mdfe30_prodPred.mdfe30_NCM = False
+
             cep_carrega, cep_descarrega = None, None
 
             if len(cte_ids) == 1 or len(nfe_ids) == 1 or len(mdfe_ids) == 1:
@@ -941,9 +942,11 @@ class MDFe(spec_models.StackedModel):
             date = fields.Datetime.context_timestamp(record, record.document_date)
             chave_edoc = ChaveEdoc(
                 ano_mes=date.strftime("%y%m").zfill(4),
-                cnpj_cpf_emitente=record.company_cnpj_cpf,
+                cnpj_cpf_emitente=record.company_id.vat,
                 codigo_uf=(
-                    record.company_state_id and record.company_state_id.ibge_code or ""
+                    record.company_id.state_id
+                    and record.company_id.state_id.ibge_code
+                    or ""
                 ),
                 forma_emissao=int(self.mdfe_transmission),
                 modelo_documento=record.document_type_id.code or "",
@@ -980,8 +983,14 @@ class MDFe(spec_models.StackedModel):
                 document_id=self,
             )
             record.authorization_event_id = event_id
-            xml_assinado = processador.assina_raiz(edoc, edoc.infMDFe.Id)
-            self._validate_xml(xml_assinado)
+            signed_xml = edoc.sign_xml(
+                xml_file,
+                self.company_id.certificate.file,
+                self.company_id.certificate.password,
+                edoc.infMDFe.Id,
+            )
+            self._validate_xml(signed_xml)
+
         return result
 
     def _validate_xml(self, xml_file):
@@ -1005,8 +1014,10 @@ class MDFe(spec_models.StackedModel):
             "mimetype": "application/pdf",
             "type": "binary",
         }
-        report = self.env.ref("l10n_br_mdfe.report_damdfe")
-        pdf_data = report._render_qweb_pdf(self.fiscal_line_ids.document_id.ids)
+        report = self.env.ref("l10n_br_mdfe.main_template_damdfe")
+        pdf_data = report._render_qweb_pdf(
+            "main_template_damdfe", self.fiscal_line_ids.document_id.ids
+        )
         attachment_data["datas"] = base64.b64encode(pdf_data[0])
         file_pdf = self.file_report_id
         self.file_report_id = False

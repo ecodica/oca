@@ -7,6 +7,7 @@ import os
 
 from xmldiff import main
 
+from odoo import Command
 from odoo.tests.common import TransactionCase
 from odoo.tools import config
 
@@ -16,15 +17,18 @@ _logger = logging.getLogger(__name__)
 
 
 class TestNFeExport(TransactionCase):
-    def setUp(self, nfe_list):
-        super().setUp()
-        self.nfe_list = nfe_list
-        for nfe_data in self.nfe_list:
-            nfe = self.env.ref(nfe_data["record_ref"])
+    @classmethod
+    def setUpClass(cls, nfe_list):
+        super().setUpClass()
+        cls.env = cls.env(context=dict(cls.env.context, tracking_disable=True))
+        cls.nfe_list = nfe_list
+        for nfe_data in cls.nfe_list:
+            nfe = cls.env.ref(nfe_data["record_ref"])
             nfe_data["nfe"] = nfe
-            self.prepare_test_nfe(nfe)
+            cls.prepare_test_nfe(nfe)
 
-    def prepare_test_nfe(self, nfe):
+    @classmethod
+    def prepare_test_nfe(cls, nfe):
         """
         Performs actions necessary to prepare an NFe of the demo data to
         perform the tests
@@ -35,15 +39,11 @@ class TestNFeExport(TransactionCase):
         for line in nfe.fiscal_line_ids:
             line._onchange_product_id_fiscal()
             line._onchange_fiscal_operation_id()
-            line._onchange_fiscal_operation_line_id()
 
-        nfe._compute_fiscal_amount()
         nfe._register_hook()  # required in v16 for next statement
         nfe.nfe40_detPag = [
-            (5, 0, 0),
-            (
-                0,
-                0,
+            Command.clear(),
+            Command.create(
                 {
                     "nfe40_indPag": "0",
                     "nfe40_tPag": "01",

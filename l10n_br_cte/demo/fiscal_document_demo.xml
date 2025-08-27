@@ -86,7 +86,6 @@
         <field name="name">Frete</field>
         <field name="product_id" ref="product.product_product_9" />
         <field name="uom_id" ref="uom.product_uom_unit" />
-        <field name="price_unit">100</field>
         <field name="quantity">1</field>
         <field name="fiscal_operation_type">out</field>
         <field name="fiscal_operation_id" ref="l10n_br_fiscal.fo_venda" />
@@ -108,14 +107,6 @@
     <function model="l10n_br_fiscal.document.line" name="_onchange_product_id_fiscal">
         <value eval="[ref('l10n_br_cte.demo_cte_lc_modal_rodoviario_1-1')]" />
     </function>
-
-    <function
-        model="l10n_br_fiscal.document.line"
-        name="_onchange_fiscal_operation_line_id"
-    >
-        <value eval="[ref('l10n_br_cte.demo_cte_lc_modal_rodoviario_1-1')]" />
-    </function>
-
 
     <!-- CTe Test - Modal Aereo - LC -->
     <record id="demo_cte_lc_modal_aereo" model="l10n_br_fiscal.document">
@@ -200,7 +191,6 @@
         <field name="name">Frete</field>
         <field name="product_id" ref="product.product_product_9" />
         <field name="uom_id" ref="uom.product_uom_unit" />
-        <field name="price_unit">100</field>
         <field name="quantity">1</field>
         <field name="fiscal_operation_type">out</field>
         <field name="fiscal_operation_id" ref="l10n_br_fiscal.fo_venda" />
@@ -222,14 +212,6 @@
     <function model="l10n_br_fiscal.document.line" name="_onchange_product_id_fiscal">
         <value eval="[ref('l10n_br_cte.demo_cte_lc_modal_aereo_1-1')]" />
     </function>
-
-    <function
-        model="l10n_br_fiscal.document.line"
-        name="_onchange_fiscal_operation_line_id"
-    >
-        <value eval="[ref('l10n_br_cte.demo_cte_lc_modal_aereo_1-1')]" />
-    </function>
-
 
     <!-- CTe Test - Modal Aquaviario - LC -->
     <record id="demo_cte_lc_modal_aquaviario" model="l10n_br_fiscal.document">
@@ -314,7 +296,6 @@
         <field name="name">Frete</field>
         <field name="product_id" ref="product.product_product_9" />
         <field name="uom_id" ref="uom.product_uom_unit" />
-        <field name="price_unit">100</field>
         <field name="quantity">1</field>
         <field name="fiscal_operation_type">out</field>
         <field name="fiscal_operation_id" ref="l10n_br_fiscal.fo_venda" />
@@ -336,14 +317,6 @@
     <function model="l10n_br_fiscal.document.line" name="_onchange_product_id_fiscal">
         <value eval="[ref('l10n_br_cte.demo_cte_lc_modal_aquaviario_1-1')]" />
     </function>
-
-    <function
-        model="l10n_br_fiscal.document.line"
-        name="_onchange_fiscal_operation_line_id"
-    >
-        <value eval="[ref('l10n_br_cte.demo_cte_lc_modal_aquaviario_1-1')]" />
-    </function>
-
 
     <!-- CTe Test - Modal Ferroviario - LC -->
     <record id="demo_cte_lc_modal_ferroviario" model="l10n_br_fiscal.document">
@@ -428,7 +401,6 @@
         <field name="name">Frete</field>
         <field name="product_id" ref="product.product_product_9" />
         <field name="uom_id" ref="uom.product_uom_unit" />
-        <field name="price_unit">100</field>
         <field name="quantity">1</field>
         <field name="fiscal_operation_type">out</field>
         <field name="fiscal_operation_id" ref="l10n_br_fiscal.fo_venda" />
@@ -450,14 +422,6 @@
     <function model="l10n_br_fiscal.document.line" name="_onchange_product_id_fiscal">
         <value eval="[ref('l10n_br_cte.demo_cte_lc_modal_ferroviario_1-1')]" />
     </function>
-
-    <function
-        model="l10n_br_fiscal.document.line"
-        name="_onchange_fiscal_operation_line_id"
-    >
-        <value eval="[ref('l10n_br_cte.demo_cte_lc_modal_ferroviario_1-1')]" />
-    </function>
-
 
     <!-- CTe Test - Modal Dutoviario - LC -->
     <record id="demo_cte_lc_modal_dutoviario" model="l10n_br_fiscal.document">
@@ -542,7 +506,6 @@
         <field name="name">Frete</field>
         <field name="product_id" ref="product.product_product_9" />
         <field name="uom_id" ref="uom.product_uom_unit" />
-        <field name="price_unit">100</field>
         <field name="quantity">1</field>
         <field name="fiscal_operation_type">out</field>
         <field name="fiscal_operation_id" ref="l10n_br_fiscal.fo_venda" />
@@ -564,14 +527,6 @@
     <function model="l10n_br_fiscal.document.line" name="_onchange_product_id_fiscal">
         <value eval="[ref('l10n_br_cte.demo_cte_lc_modal_dutoviario_1-1')]" />
     </function>
-
-    <function
-        model="l10n_br_fiscal.document.line"
-        name="_onchange_fiscal_operation_line_id"
-    >
-        <value eval="[ref('l10n_br_cte.demo_cte_lc_modal_dutoviario_1-1')]" />
-    </function>
-
 
     <!-- Empresa Simples Nacional -->
 
@@ -658,7 +613,6 @@
         <field name="name">Frete</field>
         <field name="product_id" ref="product.product_product_9" />
         <field name="uom_id" ref="uom.product_uom_unit" />
-        <field name="price_unit">100</field>
         <field name="quantity">1</field>
         <field name="fiscal_operation_type">out</field>
         <field name="fiscal_operation_id" ref="l10n_br_fiscal.fo_venda" />
@@ -680,14 +634,5 @@
     <function model="l10n_br_fiscal.document.line" name="_onchange_product_id_fiscal">
         <value eval="[ref('l10n_br_cte.demo_cte_sn_modal_rodoviario_1-1')]" />
     </function>
-
-    <function
-        model="l10n_br_fiscal.document.line"
-        name="_onchange_fiscal_operation_line_id"
-    >
-        <value eval="[ref('l10n_br_cte.demo_cte_sn_modal_rodoviario_1-1')]" />
-    </function>
-
-
 
 </odoo>

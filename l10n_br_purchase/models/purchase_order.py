@@ -36,21 +36,6 @@ class PurchaseOrder(models.Model):
         domain=lambda self: self._fiscal_operation_domain(),
     )
 
-    cnpj_cpf = fields.Char(
-        string="CNPJ/CPF",
-        related="partner_id.cnpj_cpf",
-    )
-
-    legal_name = fields.Char(
-        string="Legal Name",
-        related="partner_id.legal_name",
-    )
-
-    ie = fields.Char(
-        string="State Tax Number/RG",
-        related="partner_id.inscr_est",
-    )
-
     comment_ids = fields.Many2many(
         comodel_name="l10n_br_fiscal.comment",
         relation="purchase_order_comment_rel",
@@ -71,23 +56,23 @@ class PurchaseOrder(models.Model):
         ):
             tax_totals_node.set("attrs", "{'invisible': True}")
         arch = self.env["purchase.order.line"].inject_fiscal_fields(arch)
+
+        if view_type == "form" and (
+            self.user_has_groups("l10n_br_purchase.group_line_fiscal_detail")
+            or self.env.context.get("force_line_fiscal_detail")
+        ):
+            for sub_tree_node in arch.xpath("//field[@name='order_line']/tree"):
+                sub_tree_node.attrib["editable"] = ""
+
         return arch, view
 
     @api.onchange("fiscal_operation_id")
     def _onchange_fiscal_operation_id(self):
         self.fiscal_position_id = self.fiscal_operation_id.fiscal_position_id
 
-    def _get_amount_lines(self):
-        """Get object lines instaces used to compute fields"""
-        return self.mapped("order_line")
-
-    @api.depends("order_line")
-    def _compute_fiscal_amount(self):
-        return super()._compute_fiscal_amount()
-
-    @api.depends("order_line.price_total")
-    def _amount_all(self):
-        self._compute_fiscal_amount()
+    @api.model
+    def _get_fiscal_lines_field_name(self):
+        return "order_line"
 
     def _prepare_invoice(self):
         self.ensure_one()

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-05-16 09:24+0000\n"
+"PO-Revision-Date: 2025-08-04 13:25+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -44,6 +44,15 @@ msgstr ""
 #, python-format
 msgid "%s configurations needs a parent"
 msgstr "La configurazione %s richiede un padre"
+
+#. module: automation_oca
+#: model_terms:ir.ui.view,arch_db:automation_oca.automation_configuration_form_view
+msgid ""
+"<i class=\"fa fa-calendar pe-1\" role=\"img\" aria-label=\"At\" title=\"At\"/"
+">"
+msgstr ""
+"<i class=\"fa fa-calendar pe-1\" role=\"img\" aria-label=\"At\" title="
+"\"Alle\"/>"
 
 #. module: automation_oca
 #: model_terms:ir.ui.view,arch_db:automation_oca.automation_configuration_form_view
@@ -98,6 +107,19 @@ msgstr ""
 "contatto.</p>\n"
 "            <p>Cordiali saluti,</p>\n"
 "        "
+
+#. module: automation_oca
+#: model_terms:ir.ui.view,arch_db:automation_oca.automation_configuration_step_form_view
+msgid ""
+"<span class=\"col-2\" attrs=\"{'invisible': [('trigger_date_kind', '!=', "
+"'offset')]}\">after</span>\n"
+"                                    <span class=\"col-2\" "
+"attrs=\"{'invisible': [('trigger_date_kind', '=', 'offset')]}\">when</span>"
+msgstr ""
+"<span class=\"col-2\" attrs="
+"\"{'invisible': [('trigger_date_kind', '!=', 'offset')]}\">dopo</span>\n"
+"                                    <span class=\"col-2\" attrs="
+"\"{'invisible': [('trigger_date_kind', '=', 'offset')]}\">quando</span>"
 
 #. module: automation_oca
 #: model_terms:ir.ui.view,arch_db:automation_oca.automation_configuration_step_form_view
@@ -589,6 +611,11 @@ msgid "Field"
 msgstr "Campo"
 
 #. module: automation_oca
+#: model:ir.model.fields,field_description:automation_oca.field_automation_configuration_step__trigger_date_field
+msgid "Field Label"
+msgstr "Etichetta campo"
+
+#. module: automation_oca
 #: model:ir.model.fields,field_description:automation_oca.field_automation_configuration__filter_id
 #: model_terms:ir.ui.view,arch_db:automation_oca.automation_configuration_form_view
 msgid "Filter"
@@ -649,6 +676,11 @@ msgstr "Seguito da"
 #: model:ir.model.fields,field_description:automation_oca.field_automation_configuration__message_partner_ids
 msgid "Followers (Partners)"
 msgstr "Seguito da (partner)"
+
+#. module: automation_oca
+#: model:ir.model.fields.selection,name:automation_oca.selection__automation_configuration_step__trigger_date_kind__date
+msgid "Force on Record Date"
+msgstr "Forza su data record"
 
 #. module: automation_oca
 #: model_terms:ir.ui.view,arch_db:automation_oca.automation_configuration_form_view
@@ -872,7 +904,7 @@ msgstr "Allegato principale"
 #. module: automation_oca
 #: model:res.groups,name:automation_oca.group_automation_manager
 msgid "Manager"
-msgstr "Responsabile"
+msgstr "Supervisore"
 
 #. module: automation_oca
 #: model_terms:ir.ui.view,arch_db:automation_oca.automation_configuration_form_view
@@ -1018,6 +1050,11 @@ msgstr "Numero di messaggi che richiedono un'azione"
 #: model:ir.model.fields,help:automation_oca.field_automation_configuration__message_has_error_counter
 msgid "Number of messages with delivery error"
 msgstr "Numero di messaggi con errore di consegna"
+
+#. module: automation_oca
+#: model:ir.model.fields.selection,name:automation_oca.selection__automation_configuration_step__trigger_date_kind__offset
+msgid "Offset"
+msgstr "Offset"
 
 #. module: automation_oca
 #: model_terms:ir.ui.view,arch_db:automation_oca.automation_configuration_form_view
@@ -1369,6 +1406,19 @@ msgid "Tests"
 msgstr "Test"
 
 #. module: automation_oca
+#: model_terms:ir.ui.view,arch_db:automation_oca.automation_configuration_step_form_view
+msgid ""
+"The scheduled date will be the date of the record at the moment we generate "
+"the new record.\n"
+"                                Later changes of the field will not affect "
+"the scheduled date."
+msgstr ""
+"La data programmata sarà la data del record al momento della generazione del "
+"nuovo record.\n"
+"                                Modifiche successive al campo non "
+"influiranno sulla data programmata."
+
+#. module: automation_oca
 #: model_terms:ir.ui.view,arch_db:automation_oca.automation_configuration_form_view
 msgid ""
 "This a periodical configuration. New records are generated automatically.\n"
@@ -1416,6 +1466,16 @@ msgstr "Attivazione"
 #: model:ir.model.fields,field_description:automation_oca.field_automation_configuration_step__trigger_child_types
 msgid "Trigger Child Types"
 msgstr "Tipi figli attivazione"
+
+#. module: automation_oca
+#: model:ir.model.fields,field_description:automation_oca.field_automation_configuration_step__trigger_date_field_id
+msgid "Trigger Date Field"
+msgstr "Attiva campo data"
+
+#. module: automation_oca
+#: model:ir.model.fields,field_description:automation_oca.field_automation_configuration_step__trigger_date_kind
+msgid "Trigger Date Kind"
+msgstr "Attiva tipo data"
 
 #. module: automation_oca
 #: model:ir.model.fields,field_description:automation_oca.field_automation_configuration_step__trigger_interval

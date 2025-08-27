@@ -8,7 +8,7 @@ import base64
 
 from erpbrasil.base.fiscal.edoc import detectar_chave_edoc
 
-from odoo import _, api, fields, models
+from odoo import Command, _, api, fields, models
 from odoo.exceptions import UserError
 from odoo.osv import expression
 
@@ -63,7 +63,7 @@ class NfeImport(models.TransientModel):
         self.partner_id = self.env["res.partner"].search(
             [
                 "|",
-                ("cnpj_cpf", "=", infNFe.emit.CNPJ),
+                ("vat", "=", infNFe.emit.CNPJ),
                 ("nfe40_xNome", "=", infNFe.emit.xNome),
             ],
             limit=1,
@@ -87,10 +87,7 @@ class NfeImport(models.TransientModel):
 
         if document.modelo_documento != nfe_model_code:
             raise UserError(
-                _(
-                    f"Incorrect fiscal document model! "
-                    f"Accepted one is {nfe_model_code}"
-                )
+                _(f"Incorrect fiscal document model! Accepted one is {nfe_model_code}")
             )
 
     def _create_imported_products_by_xml(self):
@@ -103,13 +100,16 @@ class NfeImport(models.TransientModel):
                 .id
             )
 
-        self.imported_products_ids = [(6, 0, product_ids)]
+        self.imported_products_ids = [Command.set(product_ids)]
 
     def _prepare_imported_product_values(self, product):
         taxes = self._get_taxes_from_xml_product(product)
         supplier_id = self._search_product_supplier_by_product_code(product.prod.cProd)
         product_id = self._match_product(product.prod)
-        if product_id:
+        # if self.fiscal_operation_type == "in"
+        # and product_id and product_id.purchase_ok:
+        if False:  # seems former test is always true after you
+            # imported the product once -> it screws the UOM.
             uom_id = product_id.uom_po_id
         else:
             uom_id = self.env["uom.uom"].search(
@@ -120,6 +120,15 @@ class NfeImport(models.TransientModel):
                 ],
                 limit=1,
             )
+            if not uom_id:  # search for alias
+                uom_id = self.env["uom.uom"].search(
+                    [
+                        "|",
+                        ("name", "=", product.prod.uCom),
+                        ("name", "=", product.prod.uTrib),
+                    ],
+                    limit=1,
+                )
 
         return {
             "product_name": product.prod.xProd,
@@ -209,9 +218,11 @@ class NfeImport(models.TransientModel):
             binding,
             edoc_type=self.fiscal_operation_type,
         )
+        edoc.document_type_id = self.env.ref("l10n_br_fiscal.document_55").id
         edoc.fiscal_operation_id = self.fiscal_operation_id
         for line in edoc.fiscal_line_ids:
             line.fiscal_operation_id = self.fiscal_operation_id
+            line.uom_id = line.uot_id
 
         if not self.partner_id:
             self.partner_id = edoc.partner_id
@@ -250,8 +261,8 @@ class NfeImport(models.TransientModel):
                     xml_product.prod.xProd = internal_product.name
                     xml_product.prod.cEAN = internal_product.barcode or "SEM GTIN"
                     xml_product.prod.cEANTrib = internal_product.barcode or "SEM GTIN"
-                    xml_product.prod.uCom = product_line.uom_internal.name
-                    xml_product.prod.uTrib = product_line.uom_internal.name
+                    xml_product.prod.uCom = product_line.uom_internal.code
+                    xml_product.prod.uTrib = product_line.uom_internal.code
                     if product_line.new_cfop_id:
                         xml_product.prod.CFOP = product_line.new_cfop_id.code
         return parsed_xml
@@ -351,7 +362,9 @@ class NfeImportProducts(models.TransientModel):
                 "partner_uom_factor": self.uom_conversion_factor,
             }
         )
-        self.product_id.write({"seller_ids": [(4, self.product_supplier_id.id)]})
+        self.product_id.write(
+            {"seller_ids": [Command.link(self.product_supplier_id.id)]}
+        )
 
     def _update_product_supplier(self):
         self.product_supplier_id.write(

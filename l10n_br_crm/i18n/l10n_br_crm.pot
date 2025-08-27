@@ -89,8 +89,13 @@ msgid "Legal Nature"
 msgstr ""
 
 #. module: l10n_br_crm
-#: model:ir.model.fields,field_description:l10n_br_crm.field_crm_lead__inscr_mun
+#: model:ir.model.fields,field_description:l10n_br_crm.field_crm_lead__l10n_br_im_code
 msgid "Municipal Tax Number"
+msgstr ""
+
+#. module: l10n_br_crm
+#: model:ir.model.fields,field_description:l10n_br_crm.field_crm_lead__inscr_mun
+msgid "Municipal Tax Number alias"
 msgstr ""
 
 #. module: l10n_br_crm
@@ -109,7 +114,7 @@ msgid "Others State Tax Number"
 msgstr ""
 
 #. module: l10n_br_crm
-#: model:ir.model.fields,field_description:l10n_br_crm.field_crm_lead__rg
+#: model:ir.model.fields,field_description:l10n_br_crm.field_crm_lead__l10n_br_rg_code
 msgid "RG"
 msgstr ""
 
@@ -119,8 +124,13 @@ msgid "Show L10N Br"
 msgstr ""
 
 #. module: l10n_br_crm
-#: model:ir.model.fields,field_description:l10n_br_crm.field_crm_lead__inscr_est
+#: model:ir.model.fields,field_description:l10n_br_crm.field_crm_lead__l10n_br_ie_code
 msgid "State Tax Number"
+msgstr ""
+
+#. module: l10n_br_crm
+#: model:ir.model.fields,field_description:l10n_br_crm.field_crm_lead__inscr_est
+msgid "State Tax Number alias"
 msgstr ""
 
 #. module: l10n_br_crm
@@ -134,11 +144,16 @@ msgid "Street Number"
 msgstr ""
 
 #. module: l10n_br_crm
-#: model:ir.model.fields,field_description:l10n_br_crm.field_crm_lead__suframa
+#: model:ir.model.fields,field_description:l10n_br_crm.field_crm_lead__l10n_br_isuf_code
 msgid "Suframa"
 msgstr ""
 
 #. module: l10n_br_crm
 #: model:ir.model.fields,help:l10n_br_crm.field_crm_lead__legal_name
 msgid "Used in fiscal documents"
+msgstr ""
+
+#. module: l10n_br_crm
+#: model:ir.model.fields,field_description:l10n_br_crm.field_crm_lead__vat
+msgid "Vat"
 msgstr ""

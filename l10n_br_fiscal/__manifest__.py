@@ -10,7 +10,7 @@
     "maintainers": ["renatonlima", "rvalyi"],
     "website": "https://github.com/OCA/l10n-brazil",
     "development_status": "Production/Stable",
-    "version": "16.0.5.4.0",
+    "version": "16.0.12.1.0",
     "depends": [
         "product",
         "uom_alias",
@@ -21,7 +21,6 @@
         "security/fiscal_security.xml",
         "security/ir.model.access.csv",
         # Data
-        "data/l10n_br_fiscal_email_template.xml",
         "data/l10n_br_fiscal_data.xml",
         "data/uom_data.xml",
         "data/uom.alias.csv",
@@ -83,7 +82,6 @@
         "views/product_genre_view.xml",
         "views/document_type_view.xml",
         "views/document_serie_view.xml",
-        "views/document_email_view.xml",
         "views/simplified_tax_view.xml",
         "views/simplified_tax_range_view.xml",
         "views/operation_view.xml",
@@ -99,16 +97,22 @@
         "views/document_line_view.xml",
         "views/document_fiscal_line_mixin_view.xml",
         "views/res_config_settings_view.xml",
-        "views/subsequent_operation_view.xml",
-        "views/subsequent_document_view.xml",
+        "views/uom_uom.xml",
         "views/invalidate_number_view.xml",
         "views/city_taxation_code.xml",
         "views/operation_dashboard_view.xml",
+        # Wizards
+        "wizards/document_import_wizard_mixin.xml",
         # Actions
         "views/l10n_br_fiscal_action.xml",
         # Menus
         "views/l10n_br_fiscal_menu.xml",
     ],
+    "assets": {
+        "web.assets_backend": [
+            "l10n_br_fiscal/static/src/js/list_renderer_with_button.esm.js",
+        ],
+    },
     "demo": [
         "demo/city_taxation_code_demo.xml",
         "demo/company_demo.xml",
@@ -116,8 +120,6 @@
         "demo/partner_demo.xml",
         "demo/fiscal_document_nfse_demo.xml",
         "demo/fiscal_operation_demo.xml",
-        "demo/subsequent_operation_demo.xml",
-        "demo/l10n_br_fiscal_document_email.xml",
         "demo/res_users_demo.xml",
         "demo/icms_tax_definition_demo.xml",
         "demo/fiscal_document_demo.xml",

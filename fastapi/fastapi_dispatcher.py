@@ -27,11 +27,11 @@ class FastApiDispatcher(Dispatcher):
         # don't parse the httprequest let starlette parse the stream
         self.request.params = {}  # dict(self.request.get_http_params(), **args)
         environ = self._get_environ()
-        root_path = "/" + environ["PATH_INFO"].split("/")[1]
+        path = environ["PATH_INFO"]
         # TODO store the env into contextvar to be used by the odoo_env
         # depends method
-        with fastapi_app_pool.get_app(env=request.env, root_path=root_path) as app:
-            uid = request.env["fastapi.endpoint"].sudo().get_uid(root_path)
+        with fastapi_app_pool.get_app(env=request.env, root_path=path) as app:
+            uid = request.env["fastapi.endpoint"].sudo().get_uid(path)
             data = BytesIO()
             with self._manage_odoo_env(uid):
                 for r in app(environ, self._make_response):
@@ -115,5 +115,10 @@ class FastApiDispatcher(Dispatcher):
         token = odoo_env_ctx.set(env)
         try:
             yield
+            # Flush here to ensure all pending computations are being executed with
+            #  authenticated fastapi user before exiting this context manager, as it
+            #  would otherwise be done using the public user on the commit of the DB
+            #  cursor, what could potentially lead to inconsistencies or AccessError.
+            env.flush_all()
         finally:
             odoo_env_ctx.reset(token)

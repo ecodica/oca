@@ -36,8 +36,10 @@ class ResPartner(models.Model):
             "cnpj": tomador_cnpj,
             "cpf": tomador_cpf,
             "email": email,
-            "inscricao_municipal": misc.punctuation_rm(self.inscr_mun or "") or None,
-            "inscricao_estadual": misc.punctuation_rm(self.inscr_est or "") or None,
+            "inscricao_municipal": misc.punctuation_rm(self.l10n_br_im_code or "")
+            or None,
+            "inscricao_estadual": misc.punctuation_rm(self.l10n_br_ie_code or "")
+            or None,
             "razao_social": str(self.legal_name[:60] or ""),
             "endereco": str(self.street_name or self.street or ""),
             "numero": self.street_number or "",

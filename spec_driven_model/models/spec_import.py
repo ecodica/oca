@@ -9,7 +9,7 @@ from datetime import datetime
 from enum import Enum
 from typing import ForwardRef
 
-from odoo import api, models
+from odoo import Command, api, models
 
 _logger = logging.getLogger(__name__)
 
@@ -96,8 +96,7 @@ class SpecMixinImport(models.AbstractModel):
                         value = old_value[:19]
                         # TODO see python3/pysped/xml_sped/base.py#L692
                     value = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S")
-
-            self._build_string_not_simple_type(key, vals, value, node)
+            vals[key] = value
 
         else:
             if str(attr[1].type).startswith("typing.List") or "ForwardRef" in str(
@@ -136,7 +135,7 @@ class SpecMixinImport(models.AbstractModel):
                     line_vals = comodel.build_attrs(
                         line, path=child_path, defaults_model=comodel
                     )
-                    lines.append((0, 0, line_vals))
+                    lines.append(Command.create(line_vals))
                 vals[key] = lines
             else:
                 # m2o
@@ -144,14 +143,9 @@ class SpecMixinImport(models.AbstractModel):
                 child_defaults = self._extract_related_values(vals, key)
 
                 comodel_vals.update(child_defaults)
-                # FIXME comodel._build_many2one
                 self._build_many2one(
                     comodel, vals, comodel_vals, key, value, child_path
                 )
-
-    @api.model
-    def _build_string_not_simple_type(self, key, vals, value, node):
-        vals[key] = value
 
     @api.model
     def _build_many2one(self, comodel, vals, comodel_vals, key, value, path):

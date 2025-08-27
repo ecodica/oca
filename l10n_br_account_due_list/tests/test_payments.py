@@ -9,6 +9,7 @@ class TestPayments(common.TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
+        cls.env = cls.env(context=dict(cls.env.context, tracking_disable=True))
         cls.account_receivable = cls.env["account.account"].create(
             {
                 "name": "Test receivable account",
@@ -70,12 +71,11 @@ class TestPayments(common.TransactionCase):
             line_form.tax_ids.clear()
             line_form.tax_ids.add(self.tax1)
         invoice = invoice_form.save()
-        invoice._post()
-        self.assertEqual(len(invoice.financial_move_line_ids), 1)
-        self.assertEqual(invoice.financial_move_line_ids[0].debit, 200)
-        self.assertEqual(
-            invoice.financial_move_line_ids[0].account_id, self.account_receivable
-        )
+        invoice.action_post()  # Use action_post() instead of _post() in tests
+
+        self.assertEqual(len(invoice.due_line_ids), 1)
+        self.assertEqual(invoice.due_line_ids[0].debit, 200)
+        self.assertEqual(invoice.due_line_ids[0].account_id, self.account_receivable)
         self.assertEqual(len(invoice.payment_move_line_ids), 0)
 
         # register payment
@@ -87,6 +87,7 @@ class TestPayments(common.TransactionCase):
         payment = Form(self.env["account.payment.register"].with_context(**ctx))
         payment_register = payment.save()
         payment_register.action_create_payments()
+
         self.assertEqual(len(invoice.payment_move_line_ids), 1)
         self.assertEqual(invoice.payment_move_line_ids[0].credit, 200)
         self.assertEqual(
@@ -109,12 +110,11 @@ class TestPayments(common.TransactionCase):
             line_form.tax_ids.clear()
             line_form.tax_ids.add(self.tax2)
         invoice = invoice_form.save()
-        invoice._post()
-        self.assertEqual(len(invoice.financial_move_line_ids), 1)
-        self.assertEqual(invoice.financial_move_line_ids[0].credit, 100)
-        self.assertEqual(
-            invoice.financial_move_line_ids[0].account_id, self.account_payable
-        )
+        invoice.action_post()  # Use action_post() instead of _post() in tests
+
+        self.assertEqual(len(invoice.due_line_ids), 1)
+        self.assertEqual(invoice.due_line_ids[0].credit, 100)
+        self.assertEqual(invoice.due_line_ids[0].account_id, self.account_payable)
         self.assertEqual(len(invoice.payment_move_line_ids), 0)
 
         # register payment
@@ -126,6 +126,7 @@ class TestPayments(common.TransactionCase):
         payment = Form(self.env["account.payment.register"].with_context(**ctx))
         payment_register = payment.save()
         payment_register.action_create_payments()
+
         self.assertEqual(len(invoice.payment_move_line_ids), 1)
         self.assertEqual(invoice.payment_move_line_ids[0].debit, 100)
         self.assertEqual(

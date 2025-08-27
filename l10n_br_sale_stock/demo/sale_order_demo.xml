@@ -46,7 +46,7 @@
         <field name="medium_id" ref="utm.utm_medium_banner" />
         <field name="source_id" ref="utm.utm_source_monster" />
         <field name="incoterm" ref="account.incoterm_FOB" />
-        <field name="tag_ids" eval="[(4, ref('sales_team.categ_oppor1'))]" />
+        <field name="tag_ids" eval="[Command.link(ref('sales_team.categ_oppor1'))]" />
     </record>
 
     <record id="main_company-sale_order_line_1_1" model="sale.order.line">
@@ -156,7 +156,7 @@
         <field name="incoterm" ref="account.incoterm_FOB" />
         <field
             name="tag_ids"
-            eval="[(4, ref('sales_team.categ_oppor1')), (4, ref('sales_team.categ_oppor3'))]"
+            eval="[Command.link(ref('sales_team.categ_oppor1')), Command.link(ref('sales_team.categ_oppor3'))]"
         />
     </record>
 
@@ -170,7 +170,6 @@
         <field name="product_id" ref="product.product_product_16" />
         <field name="product_uom_qty">2</field>
         <field name="product_uom" ref="uom.product_uom_unit" />
-        <field name="price_unit">500</field>
         <field name="fiscal_operation_type">out</field>
         <field name="fiscal_operation_id" ref="l10n_br_fiscal.fo_venda" />
         <field name="fiscal_operation_line_id" ref="l10n_br_fiscal.fo_venda_venda" />
@@ -202,7 +201,6 @@
         <field name="product_id" ref="l10n_br_fiscal.customized_development_sale" />
         <field name="product_uom_qty">10</field>
         <field name="product_uom" ref="uom.product_uom_hour" />
-        <field name="price_unit">100</field>
         <field name="fiscal_operation_type">out</field>
         <field name="fiscal_operation_id" ref="l10n_br_fiscal.fo_venda" />
         <field
@@ -244,7 +242,7 @@
         <field name="medium_id" ref="utm.utm_medium_banner" />
         <field name="source_id" ref="utm.utm_source_monster" />
         <field name="incoterm" ref="account.incoterm_FOB" />
-        <field name="tag_ids" eval="[(4, ref('sales_team.categ_oppor1'))]" />
+        <field name="tag_ids" eval="[Command.link(ref('sales_team.categ_oppor1'))]" />
     </record>
 
     <record id="main_company-sale_order_line_3_1" model="sale.order.line">
@@ -351,7 +349,7 @@
         <field name="medium_id" ref="utm.utm_medium_banner" />
         <field name="source_id" ref="utm.utm_source_monster" />
         <field name="incoterm" ref="account.incoterm_FOB" />
-        <field name="tag_ids" eval="[(4, ref('sales_team.categ_oppor1'))]" />
+        <field name="tag_ids" eval="[Command.link(ref('sales_team.categ_oppor1'))]" />
     </record>
 
     <record id="main_company-sale_order_line_4_1" model="sale.order.line">
@@ -458,7 +456,7 @@
         <field name="medium_id" ref="utm.utm_medium_banner" />
         <field name="source_id" ref="utm.utm_source_monster" />
         <field name="incoterm" ref="account.incoterm_FOB" />
-        <field name="tag_ids" eval="[(4, ref('sales_team.categ_oppor1'))]" />
+        <field name="tag_ids" eval="[Command.link(ref('sales_team.categ_oppor1'))]" />
     </record>
 
     <record id="lucro_presumido-sale_order_line_1_1" model="sale.order.line">

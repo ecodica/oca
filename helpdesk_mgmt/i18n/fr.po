@@ -35,6 +35,11 @@ msgid "<em class=\"font-weight-normal text-muted\">Tickets in stage:</em>"
 msgstr "<em class=\"font-weight-normal text-muted\">Tickets à l'étape :</em>"
 
 #. module: helpdesk_mgmt
+#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.portal_ticket_new_button
+msgid "<i class=\"fa fa-plus me-1\"/><span>New</span>"
+msgstr ""
+
+#. module: helpdesk_mgmt
 #: model:mail.template,body_html:helpdesk_mgmt.assignment_email_template
 msgid ""
 "<p>Hello <t t-out=\"object.user_id.name\"></t>,</p>\n"
@@ -543,6 +548,7 @@ msgstr "En attente"
 
 #. module: helpdesk_mgmt
 #: model:ir.model.fields.selection,name:helpdesk_mgmt.selection__helpdesk_ticket__kanban_state__blocked
+#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.helpdesk_ticket_view_search
 msgid "Blocked"
 msgstr "Bloqué"
 
@@ -865,6 +871,11 @@ msgid "Font awesome icon e.g. fa-tasks"
 msgstr "Icône Font Awesome par ex fa-tasks"
 
 #. module: helpdesk_mgmt
+#: model:helpdesk.ticket.tag,name:helpdesk_mgmt.helpdesk_tag_3
+msgid "Functional"
+msgstr ""
+
+#. module: helpdesk_mgmt
 #: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.helpdesk_ticket_view_search
 msgid "Future Activities"
 msgstr "Activités futures"
@@ -882,6 +893,11 @@ msgstr "Regrouper par"
 #. module: helpdesk_mgmt
 #: model:ir.model,name:helpdesk_mgmt.model_ir_http
 msgid "HTTP Routing"
+msgstr ""
+
+#. module: helpdesk_mgmt
+#: model:helpdesk.ticket.tag,name:helpdesk_mgmt.helpdesk_tag_1
+msgid "Hard"
 msgstr ""
 
 #. module: helpdesk_mgmt
@@ -1188,7 +1204,6 @@ msgid "New"
 msgstr "Nouveau"
 
 #. module: helpdesk_mgmt
-#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.portal_my_home
 #: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.portal_my_tickets
 msgid "New Ticket"
 msgstr "Nouveau ticket"
@@ -1397,6 +1412,7 @@ msgstr "Tickets prioritaires"
 
 #. module: helpdesk_mgmt
 #: model:ir.model.fields.selection,name:helpdesk_mgmt.selection__helpdesk_ticket__kanban_state__done
+#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.helpdesk_ticket_view_search
 msgid "Ready for next stage"
 msgstr "Prêt pour l'étape suivante"
 
@@ -1491,6 +1507,7 @@ msgstr "Envoyer un nouveau ticket"
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_category__sequence
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_channel__sequence
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_stage__sequence
+#: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_tag__sequence
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_team__sequence
 msgid "Sequence"
 msgstr "Séquence"
@@ -1560,6 +1577,12 @@ msgid "Stages"
 msgstr "Étapes"
 
 #. module: helpdesk_mgmt
+#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.helpdesk_ticket_view_search
+#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.ticket_view_tree
+msgid "State"
+msgstr ""
+
+#. module: helpdesk_mgmt
 #: model:ir.model.fields,help:helpdesk_mgmt.field_helpdesk_ticket__activity_state
 msgid ""
 "Status based on activities\n"
@@ -1615,6 +1638,11 @@ msgstr "Membres de l'équipe"
 #: model:ir.ui.menu,name:helpdesk_mgmt.helpdesk_ticket_team_menu
 msgid "Teams"
 msgstr "Les équipes"
+
+#. module: helpdesk_mgmt
+#: model:helpdesk.ticket.tag,name:helpdesk_mgmt.helpdesk_tag_2
+msgid "Technical"
+msgstr ""
 
 #. module: helpdesk_mgmt
 #: model:ir.model.fields,help:helpdesk_mgmt.field_helpdesk_ticket_team__alias_id
@@ -1742,7 +1770,7 @@ msgstr "Numéro de ticket"
 #: model:ir.ui.menu,name:helpdesk_mgmt.helpdesk_ticket_menu
 #: model:ir.ui.menu,name:helpdesk_mgmt.helpdesk_ticket_reporting_analysis
 #: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.portal_layout
-#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.portal_my_home
+#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.portal_my_home_tickets_entry
 #: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.portal_my_tickets
 msgid "Tickets"
 msgstr "Tickets"

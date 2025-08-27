@@ -2,7 +2,7 @@
 # Copyright (C) 2021  Magno Costa - Akretion
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import exceptions
+from odoo import Command, exceptions
 from odoo.tests import Form, tagged
 
 from odoo.addons.l10n_br_sale.hooks import sale_set_journal_in_fiscal_operation
@@ -49,6 +49,8 @@ class TestSaleStock(TestBrPickingInvoicingCommon):
             line.product_uom_qty = 3
 
         self.so = sale_form.save()
+        for line in self.so.order_line:
+            line._compute_tax_fields()
 
         # confirm our standard so, check the picking
         self.so.action_confirm()
@@ -61,7 +63,7 @@ class TestSaleStock(TestBrPickingInvoicingCommon):
         # set stock.picking to be invoiced
         self.assertTrue(
             len(self.so.picking_ids) == 1,
-            "More than one stock " "picking for sale.order",
+            "More than one stock picking for sale.order",
         )
         self.so.picking_ids.set_to_be_invoiced()
 
@@ -91,7 +93,7 @@ class TestSaleStock(TestBrPickingInvoicingCommon):
             )
 
         self.env["stock.immediate.transfer"].create(
-            {"pick_ids": [(4, stock_picking.id)]}
+            {"pick_ids": [Command.link(stock_picking.id)]}
         ).process()
 
         # O valor do price_unit da stock.move é alterado ao Confirmar o
@@ -130,8 +132,16 @@ class TestSaleStock(TestBrPickingInvoicingCommon):
         Test Sale Order with product and service
         """
         sale_order_2 = self.env.ref("l10n_br_sale_stock.main_company-sale_order_2")
+        self.env.ref(
+            "l10n_br_sale_stock.main_company-sale_order_line_2_1"
+        ).product_id.list_price = 500
+        self.env.ref(
+            "l10n_br_sale_stock.main_company-sale_order_line_2_4"
+        ).product_id.list_price = 100
         sale_order_form = Form(sale_order_2)
         sale_order = sale_order_form.save()
+        for line in sale_order.order_line:
+            line._compute_tax_fields()
         sale_order.action_confirm()
         # Metodo de criação da fatura a partir do sale.order
         # deve gerar apenas a linha de serviço
@@ -401,6 +411,8 @@ class TestSaleStock(TestBrPickingInvoicingCommon):
         sale_order_1 = self.env.ref("l10n_br_sale_stock.lucro_presumido-sale_order_1")
         sale_order_form = Form(sale_order_1)
         sale_order = sale_order_form.save()
+        for line in sale_order.order_line:
+            line._compute_tax_fields()
         sale_order.incoterm = self.env.ref("account.incoterm_FOB")
 
         sale_order.action_confirm()

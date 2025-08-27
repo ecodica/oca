@@ -16,13 +16,13 @@ _logger = logging.getLogger(__name__)
 
 @tagged("post_install", "-at_install")
 class TestTestSerPro(TestCnpjCommon):
-    def setUp(self):
-        super().setUp()
-
-        self.set_param("cnpj_provider", "serpro")
-        self.set_param("serpro_token", "06aef429-a981-3ec5-a1f8-71d38d86481e")
-        self.set_param("serpro_trial", True)
-        self.set_param("serpro_schema", "basica")
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.set_param("cnpj_provider", "serpro")
+        cls.set_param("serpro_token", "06aef429-a981-3ec5-a1f8-71d38d86481e")
+        cls.set_param("serpro_trial", True)
+        cls.set_param("serpro_schema", "basica")
 
     def test_serpro_basica(self):
         with mock.patch(
@@ -118,7 +118,7 @@ class TestTestSerPro(TestCnpjCommon):
             "odoo.addons.l10n_br_cnpj_search.models.cnpj_webservice.CNPJWebservice.validate",
             return_value=self.mocked_response_serpro_2,
         ):
-            self.model.search([("cnpj_cpf", "=", "34.238.864/0002-49")]).write(
+            self.model.search([("vat", "=", "34.238.864/0002-49")]).write(
                 {"active": False}
             )
             self.set_param("serpro_schema", "empresa")
@@ -154,7 +154,7 @@ class TestTestSerPro(TestCnpjCommon):
             "odoo.addons.l10n_br_cnpj_search.models.cnpj_webservice.CNPJWebservice.validate",
             return_value=self.mocked_response_serpro_3,
         ):
-            self.model.search([("cnpj_cpf", "=", "34.238.864/0001-68")]).write(
+            self.model.search([("vat", "=", "34.238.864/0001-68")]).write(
                 {"active": False}
             )
             self.set_param("serpro_schema", "qsa")

@@ -6,6 +6,7 @@ from unittest import mock
 
 from erpbrasil.assinatura import misc
 
+from odoo import Command
 from odoo.fields import Datetime
 
 from odoo.addons.l10n_br_fiscal.constants.fiscal import (
@@ -23,10 +24,11 @@ from .test_nfe_serialize import TestNFeExport
 
 
 class TestNFCe(TestNFeExport):
-    def setUp(self):
-        super().setUp(nfe_list=[])
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass(nfe_list=[])
 
-        self.document_id = self.env.ref("l10n_br_nfe.demo_nfce_same_state")
+        cls.document_id = cls.env.ref("l10n_br_nfe.demo_nfce_same_state")
 
         certificate_valid = misc.create_fake_certificate_file(
             valid=True,
@@ -35,7 +37,7 @@ class TestNFCe(TestNFeExport):
             country="BR",
             subject="CERTIFICADO VALIDO TESTE",
         )
-        certificate_id = self.env["l10n_br_fiscal.certificate"].create(
+        certificate_id = cls.env["l10n_br_fiscal.certificate"].create(
             {
                 "type": "nf-e",
                 "subtype": "a1",
@@ -43,11 +45,11 @@ class TestNFCe(TestNFeExport):
                 "file": certificate_valid,
             }
         )
-        self.document_id.company_id.certificate_nfe_id = certificate_id
-        self.document_id.company_id.nfce_csc_token = "DUMMY"
-        self.document_id.company_id.nfce_csc_code = "DUMMY"
+        cls.document_id.company_id.certificate_nfe_id = certificate_id
+        cls.document_id.company_id.nfce_csc_token = "DUMMY"
+        cls.document_id.company_id.nfce_csc_code = "DUMMY"
 
-        self.prepare_test_nfe(self.document_id)
+        cls.prepare_test_nfe(cls.document_id)
 
     @nfe_mock({"nfeAutorizacaoLote": "retEnviNFe/autorizada.xml"})
     def test_nfce_success(self):
@@ -119,8 +121,6 @@ class TestNFCe(TestNFeExport):
         self.assertEqual(self.document_id.state_edoc, SITUACAO_EDOC_INUTILIZADA)
 
     def test_atualiza_status_nfce(self):
-        self.document_id._onchange_fiscal_operation_id()
-
         self.document_id._compute_nfe40_dhSaiEnt()
         self.assertFalse(self.document_id.nfe40_dhSaiEnt)
 
@@ -159,19 +159,15 @@ class TestNFCe(TestNFeExport):
     def test_prepare_nfce_payment(self):
         amount = self.document_id.amount_financial_total / 2
         self.document_id.nfe40_detPag = [
-            (5, 0, 0),
-            (
-                0,
-                0,
+            Command.clear(),
+            Command.create(
                 {
                     "nfe40_indPag": "0",
                     "nfe40_tPag": "99",
                     "nfe40_vPag": amount,
                 },
             ),
-            (
-                0,
-                0,
+            Command.create(
                 {
                     "nfe40_indPag": "0",
                     "nfe40_tPag": "99",
@@ -204,10 +200,8 @@ class TestNFCe(TestNFeExport):
         self.assertEqual(line1["product_unit_total"], 320)
 
         self.document_id.nfe40_detPag = [
-            (5, 0, 0),
-            (
-                0,
-                0,
+            Command.clear(),
+            Command.create(
                 {
                     "nfe40_indPag": "1",
                     "nfe40_tPag": "01",

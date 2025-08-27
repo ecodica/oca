@@ -18,6 +18,7 @@ class L10nBrPurchaseBaseTest(TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
+        cls.env = cls.env(context=dict(cls.env.context, tracking_disable=True))
         cls.company = cls.env.ref("l10n_br_base.empresa_lucro_presumido")
         cls.po_products = cls.env.ref("l10n_br_purchase.lp_po_only_products")
         # cls.po_services = cls.env.ref(
@@ -158,7 +159,6 @@ class L10nBrPurchaseBaseTest(TransactionCase):
     def _run_purchase_line_onchanges(self, purchase_line):
         purchase_line._onchange_product_id_fiscal()
         purchase_line._onchange_fiscal_operation_id()
-        purchase_line._onchange_fiscal_operation_line_id()
         purchase_line._onchange_fiscal_taxes()
         purchase_line._onchange_fiscal_tax_ids()
 
@@ -223,24 +223,23 @@ class L10nBrPurchaseBaseTest(TransactionCase):
             self.assertEqual(
                 order.amount_total,
                 invoice.amount_total,
-                "Error Amount Total in Invoice" " is different from Purchase Order.",
+                "Error Amount Total in Invoice is different from Purchase Order.",
             )
 
             self.assertEqual(
                 order.amount_tax,
                 invoice.amount_tax,
-                "Error Amount Tax in Invoice is" " different from Purchase Order.",
+                "Error Amount Tax in Invoice is different from Purchase Order.",
             )
             self.assertEqual(
                 order.amount_untaxed,
                 invoice.amount_untaxed,
-                "Error Amount Untaxed in Invoice" " is different from Purchase Order.",
+                "Error Amount Untaxed in Invoice is different from Purchase Order.",
             )
             self.assertEqual(
                 order.amount_price_gross,
                 invoice.amount_price_gross,
-                "Error Amount Price Gross in Invoice"
-                " is different from Purchase Order.",
+                "Error Amount Price Gross in Invoice is different from Purchase Order.",
             )
             self.assertEqual(
                 order.amount_financial_total,
@@ -273,7 +272,7 @@ class L10nBrPurchaseBaseTest(TransactionCase):
             for line in invoice.invoice_line_ids:
                 self.assertTrue(
                     line.fiscal_operation_line_id,
-                    "Error to included Operation " "Line from Purchase Order Line.",
+                    "Error to included Operation Line from Purchase Order Line.",
                 )
                 self.assertEqual(
                     line.price_total,
@@ -314,7 +313,7 @@ class L10nBrPurchaseBaseTest(TransactionCase):
 
             self.assertTrue(
                 line.fiscal_operation_line_id,
-                "Error to mapping Fiscal Operation" " Line on Purchase Order Line.",
+                "Error to mapping Fiscal Operation Line on Purchase Order Line.",
             )
 
             cfop = self.FISCAL_DEFS[line.cfop_id.destination][
@@ -462,7 +461,7 @@ class L10nBrPurchaseBaseTest(TransactionCase):
         arch, models = self.po_products._get_view()
         self.assertTrue(
             arch.findall(".//field[@name='fiscal_operation_id']"),
-            "Error to included Operation " "Line from Purchase Order Line.",
+            "Error to included Operation Line from Purchase Order Line.",
         )
 
     def test_fields_freight_insurance_other_costs(self):

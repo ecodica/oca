@@ -134,7 +134,7 @@ class ResPartner(spec_models.SpecModel):
         inverse="_inverse_nfe40_IE",
         compute_sudo=True,
     )
-    nfe40_ISUF = fields.Char(related="suframa")
+    nfe40_ISUF = fields.Char(related="l10n_br_isuf_code")
     nfe40_email = fields.Char(related="email")
     nfe40_xEnder = fields.Char(compute="_compute_nfe40_xEnder")
 
@@ -202,7 +202,7 @@ class ResPartner(spec_models.SpecModel):
         for rec in self:
             rec.nfe40_enderDest = rec.id
 
-    @api.depends("company_type", "inscr_est", "cnpj_cpf", "country_id")
+    @api.depends("company_type", "l10n_br_ie_code", "cnpj_cpf", "country_id")
     def _compute_nfe_data(self):
         """Set schema data which are not just related fields"""
         for rec in self:
@@ -236,8 +236,8 @@ class ResPartner(spec_models.SpecModel):
                 rec.nfe40_CNPJ = ""
                 rec.nfe40_CPF = ""
 
-            if rec.inscr_est:
-                rec.nfe40_IE = punctuation_rm(rec.inscr_est)
+            if rec.l10n_br_ie_code:
+                rec.nfe40_IE = punctuation_rm(rec.l10n_br_ie_code)
             else:
                 rec.nfe40_IE = None
 
@@ -276,7 +276,7 @@ class ResPartner(spec_models.SpecModel):
     def _inverse_nfe40_IE(self):
         for rec in self:
             if rec.nfe40_IE:
-                rec.inscr_est = str(rec.nfe40_IE)
+                rec.l10n_br_ie_code = str(rec.nfe40_IE)
 
     def _inverse_nfe40_CEP(self):
         for rec in self:
@@ -303,8 +303,8 @@ class ResPartner(spec_models.SpecModel):
         if rec_dict.get("cnpj_cpf", False):
             domain_cnpj = [
                 "|",
-                ("cnpj_cpf", "=", rec_dict["cnpj_cpf"]),
-                ("cnpj_cpf", "=", cnpj_cpf.formata(rec_dict["cnpj_cpf"])),
+                ("cnpj_cpf_stripped", "=", rec_dict["cnpj_cpf"]),
+                ("vat", "=", cnpj_cpf.formata(rec_dict["cnpj_cpf"])),
             ]
             match = self.search(domain_cnpj, limit=1)
             if match:
@@ -354,7 +354,7 @@ class ResPartner(spec_models.SpecModel):
                 return "EX"
 
             if xsd_field == "nfe40_idEstrangeiro":
-                return self.vat or self.cnpj_cpf or self.rg or "EXTERIOR"
+                return self.vat or self.cnpj_cpf or self.l10n_br_rg_code or "EXTERIOR"
 
         return super()._export_field(xsd_field, class_obj, member_spec, export_value)
 

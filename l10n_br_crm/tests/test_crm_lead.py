@@ -8,60 +8,61 @@ from odoo.tests.common import TransactionCase
 class CrmLeadTest(TransactionCase):
     """Test basic operations on Lead"""
 
-    def setUp(self):
-        super().setUp()
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
 
         # Create lead with simple details
-        self.crm_lead_company = self.env["crm.lead"].create(
+        cls.crm_lead_company = cls.env["crm.lead"].create(
             {
                 "name": "Test Company Lead",
                 "legal_name": "Teste Empresa",
                 "cnpj": "56.647.352/0001-98",
-                "stage_id": self.env.ref("crm.stage_lead1").id,
+                "stage_id": cls.env.ref("crm.stage_lead1").id,
                 "partner_name": "Test Partner",
-                "inscr_est": "079.798.013.363",
-                "inscr_mun": "99999999",
+                "l10n_br_ie_code": "079.798.013.363",
+                "l10n_br_im_code": "99999999",
             }
         )
 
         # Create lead for a person/contact
-        self.crm_lead_contact = self.env["crm.lead"].create(
+        cls.crm_lead_contact = cls.env["crm.lead"].create(
             {
                 "name": "Test Contact",
                 "cpf": "70531160505",
-                "rg": "99.888.777-1",
-                "stage_id": self.env.ref("crm.stage_lead1").id,
+                "l10n_br_rg_code": "99.888.777-1",
+                "stage_id": cls.env.ref("crm.stage_lead1").id,
                 "contact_name": "Test Contact",
             }
         )
 
         # Create lead with a valid Inscr. Estadual
-        self.crm_lead_company_1 = self.env["crm.lead"].create(
+        cls.crm_lead_company_1 = cls.env["crm.lead"].create(
             {
                 "name": "Test Company Lead IE",
                 "legal_name": "Teste Empresa 1",
                 "cnpj": "57.240.310/0001-09",
-                "stage_id": self.env.ref("crm.stage_lead1").id,
+                "stage_id": cls.env.ref("crm.stage_lead1").id,
                 "partner_name": "Test Partner 1",
-                "inscr_est": "041.092.540.590",
-                "inscr_mun": "99999999",
-                "country_id": self.env.ref("base.br").id,
-                "state_id": self.env.ref("base.state_br_sp").id,
+                "l10n_br_ie_code": "041.092.540.590",
+                "l10n_br_im_code": "99999999",
+                "country_id": cls.env.ref("base.br").id,
+                "state_id": cls.env.ref("base.state_br_sp").id,
             }
         )
 
         # Create a Partner
-        self.partner_id_01 = self.env["res.partner"].create(
+        cls.partner_id_01 = cls.env["res.partner"].create(
             {
                 "name": "Test Lead Partner",
                 "legal_name": "Test Lead Partner",
                 "cnpj_cpf": "22.898.817/0001-61",
-                "inscr_est": "041.092.540.590",
-                "inscr_mun": "99999999",
-                "suframa": "99999999",
+                "l10n_br_ie_code": "041.092.540.590",
+                "l10n_br_im_code": "99999999",
+                "l10n_br_isuf_code": "99999999",
                 "street_number": "1225",
                 "district": "centro",
-                "city_id": self.env.ref("l10n_br_base.city_4205407").id,
+                "city_id": cls.env.ref("l10n_br_base.city_4205407").id,
                 "is_company": True,
             }
         )
@@ -116,10 +117,12 @@ class CrmLeadTest(TransactionCase):
         )
         self.assertTrue(self.obj_partner.cnpj_cpf, "The field CNPJ not was filled.")
         self.assertTrue(
-            self.obj_partner.inscr_est, "The field Inscrição Estadual not was filled"
+            self.obj_partner.l10n_br_ie_code,
+            "The field Inscrição Estadual not was filled",
         )
         self.assertTrue(
-            self.obj_partner.inscr_mun, "The field Inscrição Municipal not was filled"
+            self.obj_partner.l10n_br_im_code,
+            "The field Inscrição Municipal not was filled",
         )
 
     def test_lead_won(self):
@@ -169,7 +172,7 @@ class CrmLeadTest(TransactionCase):
 
         self.assertTrue(self.obj_partner.name, "The field Name was not filled.")
         self.assertTrue(self.obj_partner.cnpj_cpf, "The field CNPJ was not filled.")
-        self.assertTrue(self.obj_partner.inscr_est, "The field RG was not filled")
+        self.assertTrue(self.obj_partner.l10n_br_ie_code, "The field RG was not filled")
 
     def test_lead_won_contact(self):
         """Test to mark the Lead as won"""
@@ -194,10 +197,12 @@ class CrmLeadTest(TransactionCase):
         )
         self.assertTrue(self.obj_partner.cnpj_cpf, "The field CNPJ not was filled.")
         self.assertTrue(
-            self.obj_partner.inscr_est, "The field Inscrição Estadual not was filled"
+            self.obj_partner.l10n_br_ie_code,
+            "The field Inscrição Estadual not was filled",
         )
         self.assertTrue(
-            self.obj_partner.inscr_mun, "The field Inscrição Municipal not was filled"
+            self.obj_partner.l10n_br_im_code,
+            "The field Inscrição Municipal not was filled",
         )
         self.assertTrue(self.obj_partner.country_id, "The field Country not was filled")
         self.assertTrue(self.obj_partner.state_id, "The field State not was filled")
@@ -225,24 +230,24 @@ class CrmLeadTest(TransactionCase):
         )
 
         self.assertEqual(
-            self.crm_lead_company_1.inscr_est,
+            self.crm_lead_company_1.l10n_br_ie_code,
             "041.092.540.590",
             "In the change of the partner \
-                         the field inscr_est was not automatically filled.",
+                         the field l10n_br_ie_code was not automatically filled.",
         )
 
         self.assertEqual(
-            self.crm_lead_company_1.inscr_mun,
+            self.crm_lead_company_1.l10n_br_im_code,
             "99999999",
             "In the change of the partner \
-                         the field inscr_mun was not automatically filled.",
+                         the field l10n_br_im_code was not automatically filled.",
         )
 
         self.assertEqual(
-            self.crm_lead_company_1.suframa,
+            self.crm_lead_company_1.l10n_br_isuf_code,
             "99999999",
             "In the change of the partner \
-                         the field suframa was not automatically filled.",
+                         the field l10n_br_isuf_code was not automatically filled.",
         )
 
         self.assertEqual(

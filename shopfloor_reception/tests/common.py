@@ -1,7 +1,6 @@
 # Copyright 2020 Camptocamp SA (http://www.camptocamp.com)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 # pylint: disable=missing-return
-
 from odoo import fields
 
 from odoo.addons.shopfloor.tests.common import CommonCase as BaseCommonCase
@@ -46,6 +45,7 @@ class CommonCase(BaseCommonCase):
     def setUpClassVars(cls, *args, **kwargs):
         super().setUpClassVars(*args, **kwargs)
         cls.menu = cls.env.ref("shopfloor_reception.shopfloor_menu_demo_reception")
+        cls.menu.sudo().filter_today_scheduled_pickings = True
         cls.profile = cls.env.ref("shopfloor.profile_demo_1")
         cls.picking_type = cls.menu.picking_type_ids
         cls.wh = cls.picking_type.warehouse_id

@@ -34,6 +34,11 @@ msgid "<em class=\"font-weight-normal text-muted\">Tickets in stage:</em>"
 msgstr ""
 
 #. module: helpdesk_mgmt
+#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.portal_ticket_new_button
+msgid "<i class=\"fa fa-plus me-1\"/><span>New</span>"
+msgstr ""
+
+#. module: helpdesk_mgmt
 #: model:mail.template,body_html:helpdesk_mgmt.assignment_email_template
 msgid ""
 "<p>Hello <t t-out=\"object.user_id.name\"></t>,</p>\n"
@@ -399,6 +404,7 @@ msgstr "Várakozik"
 
 #. module: helpdesk_mgmt
 #: model:ir.model.fields.selection,name:helpdesk_mgmt.selection__helpdesk_ticket__kanban_state__blocked
+#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.helpdesk_ticket_view_search
 msgid "Blocked"
 msgstr "Blokkolva"
 
@@ -717,6 +723,11 @@ msgid "Font awesome icon e.g. fa-tasks"
 msgstr ""
 
 #. module: helpdesk_mgmt
+#: model:helpdesk.ticket.tag,name:helpdesk_mgmt.helpdesk_tag_3
+msgid "Functional"
+msgstr ""
+
+#. module: helpdesk_mgmt
 #: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.helpdesk_ticket_view_search
 msgid "Future Activities"
 msgstr "Jövőbeni tevékenységek"
@@ -734,6 +745,11 @@ msgstr "Csoportosítás"
 #. module: helpdesk_mgmt
 #: model:ir.model,name:helpdesk_mgmt.model_ir_http
 msgid "HTTP Routing"
+msgstr ""
+
+#. module: helpdesk_mgmt
+#: model:helpdesk.ticket.tag,name:helpdesk_mgmt.helpdesk_tag_1
+msgid "Hard"
 msgstr ""
 
 #. module: helpdesk_mgmt
@@ -1036,7 +1052,6 @@ msgid "New"
 msgstr "Új"
 
 #. module: helpdesk_mgmt
-#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.portal_my_home
 #: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.portal_my_tickets
 msgid "New Ticket"
 msgstr "Új eset"
@@ -1246,6 +1261,7 @@ msgstr ""
 
 #. module: helpdesk_mgmt
 #: model:ir.model.fields.selection,name:helpdesk_mgmt.selection__helpdesk_ticket__kanban_state__done
+#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.helpdesk_ticket_view_search
 msgid "Ready for next stage"
 msgstr "Kész a következő állapotra"
 
@@ -1340,6 +1356,7 @@ msgstr "Új eset beküldése"
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_category__sequence
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_channel__sequence
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_stage__sequence
+#: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_tag__sequence
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_team__sequence
 msgid "Sequence"
 msgstr "Sorrend"
@@ -1407,6 +1424,12 @@ msgid "Stages"
 msgstr "Állapotok"
 
 #. module: helpdesk_mgmt
+#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.helpdesk_ticket_view_search
+#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.ticket_view_tree
+msgid "State"
+msgstr ""
+
+#. module: helpdesk_mgmt
 #: model:ir.model.fields,help:helpdesk_mgmt.field_helpdesk_ticket__activity_state
 msgid ""
 "Status based on activities\n"
@@ -1462,6 +1485,11 @@ msgstr "Csapattagok"
 #: model:ir.ui.menu,name:helpdesk_mgmt.helpdesk_ticket_team_menu
 msgid "Teams"
 msgstr "Csapatok"
+
+#. module: helpdesk_mgmt
+#: model:helpdesk.ticket.tag,name:helpdesk_mgmt.helpdesk_tag_2
+msgid "Technical"
+msgstr ""
 
 #. module: helpdesk_mgmt
 #: model:ir.model.fields,help:helpdesk_mgmt.field_helpdesk_ticket_team__alias_id
@@ -1588,7 +1616,7 @@ msgstr "Azonosító"
 #: model:ir.ui.menu,name:helpdesk_mgmt.helpdesk_ticket_menu
 #: model:ir.ui.menu,name:helpdesk_mgmt.helpdesk_ticket_reporting_analysis
 #: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.portal_layout
-#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.portal_my_home
+#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.portal_my_home_tickets_entry
 #: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.portal_my_tickets
 msgid "Tickets"
 msgstr "Esetek"

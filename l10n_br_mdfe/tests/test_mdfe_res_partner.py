@@ -8,10 +8,10 @@ from odoo.tests import TransactionCase
 
 
 class TestMDFeResPartner(TransactionCase):
-    def setUp(self):
-        super().setUp()
-
-        self.partner_id = self.env.ref("l10n_br_base.res_partner_kmee")
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.partner_id = cls.env.ref("l10n_br_base.res_partner_kmee")
 
     def test_compute_fields(self):
         self.partner_id.country_id = self.env.ref("base.us")
@@ -22,8 +22,9 @@ class TestMDFeResPartner(TransactionCase):
         self.assertEqual(self.partner_id.mdfe30_idEstrangeiro, self.partner_id.cnpj_cpf)
 
     def test_inverse_fields(self):
-        self.partner_id.mdfe30_idEstrangeiro = "999999999999"
-        self.assertEqual(self.partner_id.vat, self.partner_id.mdfe30_idEstrangeiro)
+        foreign_partner = self.env.ref("base.res_partner_12")
+        foreign_partner.mdfe30_idEstrangeiro = "999999999999"
+        self.assertEqual(foreign_partner.vat, foreign_partner.mdfe30_idEstrangeiro)
 
         self.partner_id.mdfe30_CNPJ = "97414612000162"
         self.assertEqual(
@@ -36,7 +37,7 @@ class TestMDFeResPartner(TransactionCase):
         )
 
         self.partner_id.mdfe30_IE = "630514648079"
-        self.assertEqual(self.partner_id.inscr_est, self.partner_id.mdfe30_IE)
+        self.assertEqual(self.partner_id.l10n_br_ie_code, self.partner_id.mdfe30_IE)
 
         self.partner_id.mdfe30_CEP = "04324240"
         self.assertEqual(

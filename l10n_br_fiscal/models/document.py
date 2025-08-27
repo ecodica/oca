@@ -31,22 +31,30 @@ from ..constants.fiscal import (
 
 
 class Document(models.Model):
-    """Implementação base dos documentos fiscais
+    """
+    Base implementation for Brazilian fiscal documents.
 
-    Devemos sempre ter em mente que o modelo que vai usar este módulo abstrato
-     tem diversos metodos importantes e a intenção que os módulos da OCA que
-     extendem este modelo, funcionem se possível sem a necessidade de
-     codificação extra.
+    This model serves as the foundational structure for various fiscal
+    documents within the Brazilian localization. It's designed to be
+    extensible, allowing other OCA modules to build upon it, ideally
+    minimizing the need for additional custom coding for common fiscal
+    document functionalities.
 
-    É preciso também estar atento que o documento fiscal tem dois estados:
+    Key aspects to note:
+    - The fiscal document manages two primary states:
+        - Electronic Document State (`state_edoc`): Reflects the status
+          of the document in its electronic lifecycle (e.g., Draft,
+          Authorized, Cancelled).
+        - Fiscal State (`state_fiscal`): Represents the document's status
+          from a purely fiscal accounting perspective (e.g., Regular,
+          Cancelled for fiscal purposes). This state is less automated
+          and often managed by the fiscal responsible to ensure correct
+          reporting, such as in SPED Fiscal.
 
-    - Estado do documento eletrônico / não eletônico: state_edoc
-    - Estado FISCAL: state_fiscal
-
-    O estado fiscal é um campo que é alterado apenas algumas vezes pelo código
-    e é de responsabilidade do responsável fiscal pela empresa de manter a
-    integridade do mesmo, pois ele não tem um fluxo realmente definido e
-    interfere no lançamento do registro no arquivo do SPED FISCAL.
+    This model inherits common fields and methods from
+    `l10n_br_fiscal.document.mixin` and includes features for document
+    numbering, key validation, partner and company fiscal details, line
+    items and returns.
     """
 
     _name = "l10n_br_fiscal.document"
@@ -83,9 +91,9 @@ class Document(models.Model):
     )
 
     fiscal_operation_id = fields.Many2one(
-        domain="[('state', '=', 'approved'), "
-        "'|', ('fiscal_operation_type', '=', fiscal_operation_type),"
-        " ('fiscal_operation_type', '=', 'all')]",
+        "l10n_br_fiscal.operation",
+        string="Fiscal Operation",
+        domain="[('state', '=', 'approved')]",
     )
 
     fiscal_operation_type = fields.Selection(
@@ -155,6 +163,9 @@ class Document(models.Model):
         selection=EDOC_PURPOSE,
         string="Finalidade",
         default=EDOC_PURPOSE_NORMAL,
+        compute="_compute_edoc_purpose",
+        store=True,
+        precompute=True,
     )
 
     document_type = fields.Char(
@@ -182,18 +193,6 @@ class Document(models.Model):
     # of objects where the fiscal mixin might be injected.
     state = fields.Selection(related="state_edoc", string="State")
 
-    document_subsequent_ids = fields.One2many(
-        comodel_name="l10n_br_fiscal.subsequent.document",
-        inverse_name="source_document_id",
-        copy=True,
-    )
-
-    document_subsequent_generated = fields.Boolean(
-        string="Subsequent documents generated?",
-        compute="_compute_document_subsequent_generated",
-        default=False,
-    )
-
     transport_modal = fields.Selection(
         selection=[
             ("01", "Rodoviário"),
@@ -216,204 +215,24 @@ class Document(models.Model):
         ],
         string="Tomador do Serviço",
     )
-
-    # ----- Now some handy related fields:
-
     partner_legal_name = fields.Char(
         string="Legal Name",
         related="partner_id.legal_name",
     )
-
-    partner_name = fields.Char(
-        string="Partner Name",
-        related="partner_id.name",
-    )
-
     partner_cnpj_cpf = fields.Char(
         string="CNPJ",
-        related="partner_id.cnpj_cpf",
+        related="partner_id.vat",
     )
-
-    partner_inscr_est = fields.Char(
+    partner_l10n_br_ie_code = fields.Char(
         string="State Tax Number",
-        related="partner_id.inscr_est",
-    )
-
-    partner_ind_ie_dest = fields.Selection(
-        string="Contribuinte do ICMS",
-        related="partner_id.ind_ie_dest",
-    )
-
-    partner_inscr_mun = fields.Char(
-        string="Municipal Tax Number",
-        related="partner_id.inscr_mun",
-    )
-
-    partner_suframa = fields.Char(
-        string="Suframa",
-        related="partner_id.suframa",
-    )
-
-    partner_cnae_main_id = fields.Many2one(
-        comodel_name="l10n_br_fiscal.cnae",
-        string="Main CNAE",
-        related="partner_id.cnae_main_id",
-    )
-
-    partner_tax_framework = fields.Selection(
-        string="Tax Framework",
-        related="partner_id.tax_framework",
-    )
-
-    partner_street = fields.Char(
-        string="Partner Street",
-        related="partner_id.street",
-    )
-
-    partner_number = fields.Char(
-        string="Partner Number",
-        related="partner_id.street_number",
-    )
-
-    partner_street2 = fields.Char(
-        string="Partner Street2",
-        related="partner_id.street2",
-    )
-
-    partner_district = fields.Char(
-        string="Partner District",
-        related="partner_id.district",
-    )
-
-    partner_country_id = fields.Many2one(
-        comodel_name="res.country",
-        string="Partner Country",
-        related="partner_id.country_id",
-    )
-
-    partner_state_id = fields.Many2one(
-        comodel_name="res.country.state",
-        string="Partner State",
-        related="partner_id.state_id",
-    )
-
-    partner_city_id = fields.Many2one(
-        comodel_name="res.city",
-        string="Partner City",
-        related="partner_id.city_id",
-    )
-
-    partner_zip = fields.Char(
-        string="Partner Zip",
-        related="partner_id.zip",
-    )
-
-    partner_phone = fields.Char(
-        string="Partner Phone",
-        related="partner_id.phone",
-    )
-
-    partner_is_company = fields.Boolean(
-        string="Partner Is Company?",
-        related="partner_id.is_company",
+        related="partner_id.l10n_br_ie_code",
     )
 
     processador_edoc = fields.Selection(
         related="company_id.processador_edoc",
     )
-
-    company_legal_name = fields.Char(
-        string="Company Legal Name",
-        related="company_id.legal_name",
-    )
-
-    company_name = fields.Char(
-        string="Company Name",
-        size=128,
-        related="company_id.name",
-    )
-
-    company_cnpj_cpf = fields.Char(
-        string="Company CNPJ",
-        related="company_id.cnpj_cpf",
-    )
-
-    company_inscr_est = fields.Char(
-        string="Company State Tax Number",
-        related="company_id.inscr_est",
-    )
-
-    company_inscr_est_st = fields.Char(
+    company_l10n_br_ie_code_st = fields.Char(
         string="Company ST State Tax Number",
-    )
-
-    company_inscr_mun = fields.Char(
-        string="Company Municipal Tax Number",
-        related="company_id.inscr_mun",
-    )
-
-    company_suframa = fields.Char(
-        string="Company Suframa",
-        related="company_id.suframa",
-    )
-
-    company_cnae_main_id = fields.Many2one(
-        comodel_name="l10n_br_fiscal.cnae",
-        string="Company Main CNAE",
-        related="company_id.cnae_main_id",
-    )
-
-    company_tax_framework = fields.Selection(
-        string="Company Tax Framework",
-        related="company_id.tax_framework",
-    )
-
-    company_street = fields.Char(
-        string="Company Street",
-        related="company_id.street",
-    )
-
-    company_number = fields.Char(
-        string="Company Number",
-        related="company_id.street_number",
-    )
-
-    company_street2 = fields.Char(
-        string="Company Street2",
-        related="company_id.street2",
-    )
-
-    company_district = fields.Char(
-        string="Company District",
-        related="company_id.district",
-    )
-
-    company_country_id = fields.Many2one(
-        comodel_name="res.country",
-        string="Company Country",
-        related="company_id.country_id",
-    )
-
-    company_state_id = fields.Many2one(
-        comodel_name="res.country.state",
-        string="Company State",
-        related="company_id.state_id",
-    )
-
-    company_city_id = fields.Many2one(
-        comodel_name="res.city",
-        string="Company City",
-        related="company_id.city_id",
-    )
-
-    company_zip = fields.Char(
-        string="Company ZIP",
-        related="company_id.zip",
-    )
-
-    company_phone = fields.Char(
-        string="Company Phone",
-        related="company_id.phone",
     )
 
     @api.constrains("document_key")
@@ -444,9 +263,9 @@ class Document(models.Model):
 
             if documents:
                 raise ValidationError(
-                    _(
-                        "There is already a fiscal document with this " "key: {} !"
-                    ).format(record.document_key)
+                    _("There is already a fiscal document with this key: {} !").format(
+                        record.document_key
+                    )
                 )
             else:
                 ChaveEdoc(chave=record.document_key, validar=True)
@@ -487,6 +306,19 @@ class Document(models.Model):
                     )
                 )
 
+    @api.onchange("fiscal_operation_type")
+    def _onchange_fiscal_operation_type(self):
+        domain = [("state", "=", "approved")]
+        if self.fiscal_operation_type:
+            domain.append(("fiscal_operation_type", "=", self.fiscal_operation_type))
+        if (
+            self.fiscal_operation_id
+            and self.fiscal_operation_id.fiscal_operation_type
+            != self.fiscal_operation_type
+        ):
+            self.fiscal_operation_id = False
+        return {"domain": {"fiscal_operation_id": domain}}
+
     @api.depends("company_id")
     def _compute_currency_id(self):
         for doc in self:
@@ -511,19 +343,19 @@ class Document(models.Model):
             name += "/" + type_serie_number
             if self.document_date:
                 name += " - " + self.document_date.strftime("%d/%m/%Y")
-            if not self.partner_cnpj_cpf:
+            if not self.partner_id.vat:
                 name += " - " + _("Unidentified Consumer")
-            elif self.partner_legal_name:
-                name += " - " + self.partner_legal_name
-                name += " - " + self.partner_cnpj_cpf
+            elif self.partner_id.legal_name:
+                name += " - " + self.partner_id.legal_name
+                name += " - " + self.partner_id.vat
             else:
-                name += " - " + self.partner_name
-                name += " - " + self.partner_cnpj_cpf
+                name += " - " + self.partner_id.name
+                name += " - " + self.partner_id.vat
         elif self._context.get("fiscal_document_no_company"):
             name += type_serie_number
         else:
             name += "{name}/{type_serie_number}".format(
-                name=self.company_name or "",
+                name=self.company_id.name or "",
                 type_serie_number=type_serie_number,
             )
         return name
@@ -547,22 +379,9 @@ class Document(models.Model):
         for r in self:
             r.name = r._compute_document_name()
 
-    @api.depends(
-        "fiscal_line_ids.estimate_tax",
-        "fiscal_line_ids.price_gross",
-        "fiscal_line_ids.amount_untaxed",
-        "fiscal_line_ids.amount_tax",
-        "fiscal_line_ids.amount_taxed",
-        "fiscal_line_ids.amount_total",
-        "fiscal_line_ids.financial_total",
-        "fiscal_line_ids.financial_total_gross",
-        "fiscal_line_ids.financial_discount_value",
-        "fiscal_line_ids.amount_tax_included",
-        "fiscal_line_ids.amount_tax_not_included",
-        "fiscal_line_ids.amount_tax_withholding",
-    )
-    def _compute_fiscal_amount(self):
-        return super()._compute_fiscal_amount()
+    @api.model
+    def _get_fiscal_lines_field_name(self):
+        return "fiscal_line_ids"
 
     def unlink(self):
         forbidden_states_unlink = [
@@ -591,14 +410,12 @@ class Document(models.Model):
             if not fsc_op:
                 raise ValidationError(
                     _(
-                        "The fiscal operation {} has no return Fiscal "
-                        "Operation defined"
+                        "The fiscal operation {} has no return Fiscal Operation defined"
                     ).format(record.fiscal_operation_id)
                 )
 
             new_doc = record.copy()
             new_doc.fiscal_operation_id = fsc_op
-            new_doc._onchange_fiscal_operation_id()
 
             for line in new_doc.fiscal_line_ids:
                 fsc_op_line = line.fiscal_operation_id.return_fiscal_operation_id
@@ -611,7 +428,6 @@ class Document(models.Model):
                     )
                 line.fiscal_operation_id = fsc_op_line
                 line._onchange_fiscal_operation_id()
-                line._onchange_fiscal_operation_line_id()
 
             return_docs |= new_doc
         return return_docs
@@ -657,152 +473,7 @@ class Document(models.Model):
         # see https://github.com/OCA/l10n-brazil/pull/3272
         pass
 
-    def _get_email_template(self, state):
-        self.ensure_one()
-        return self.document_type_id.document_email_ids.search(
-            [
-                "|",
-                ("state_edoc", "=", False),
-                ("state_edoc", "=", state),
-                ("issuer", "=", self.issuer),
-                "|",
-                ("document_type_id", "=", False),
-                ("document_type_id", "=", self.document_type_id.id),
-            ],
-            limit=1,
-            order="state_edoc, document_type_id",
-        ).mapped("email_template_id")
-
-    def send_email(self, state):
-        self.ensure_one()
-        email_template = self._get_email_template(state)
-        if email_template:
-            email_template.with_context(
-                default_attachment_ids=self._get_mail_attachment()
-            ).send_mail(self.id)
-
-    def _after_change_state(self, old_state, new_state):
-        self.ensure_one()
-        result = super()._after_change_state(old_state, new_state)
-        self.send_email(new_state)
-        return result
-
-    @api.onchange("fiscal_operation_id")
-    def _onchange_fiscal_operation_id(self):
-        result = super()._onchange_fiscal_operation_id()
-        if self.fiscal_operation_id:
-            self.fiscal_operation_type = self.fiscal_operation_id.fiscal_operation_type
-            self.edoc_purpose = self.fiscal_operation_id.edoc_purpose
-
-        if self.issuer == DOCUMENT_ISSUER_COMPANY and not self.document_type_id:
-            self.document_type_id = self.company_id.document_type_id
-
-        subsequent_documents = [(6, 0, {})]
-        for subsequent_id in self.fiscal_operation_id.mapped(
-            "operation_subsequent_ids"
-        ):
-            subsequent_documents.append(
-                (
-                    0,
-                    0,
-                    {
-                        "source_document_id": self.id,
-                        "subsequent_operation_id": subsequent_id.id,
-                        "fiscal_operation_id": subsequent_id.subsequent_operation_id.id,
-                    },
-                )
-            )
-        self.document_subsequent_ids = subsequent_documents
-        return result
-
-    def _prepare_referenced_subsequent(self, doc_referenced):
-        self.ensure_one()
-        return {
-            "document_id": self.id,
-            "document_related_id": doc_referenced.id,
-            "document_type_id": doc_referenced.document_type_id.id,
-            "document_serie": doc_referenced.document_serie,
-            "document_number": doc_referenced.document_number,
-            "document_date": doc_referenced.document_date,
-            "document_key": doc_referenced.document_key,
-        }
-
-    def _document_reference(self, documents_referenced):
-        self.ensure_one()
-        for doc_referenced in documents_referenced:
-            self.env["l10n_br_fiscal.document.related"].create(
-                self._prepare_referenced_subsequent(doc_referenced)
-            )
-
-    @api.depends("document_subsequent_ids.subsequent_document_id")
-    def _compute_document_subsequent_generated(self):
-        for document in self:
-            if not document.document_subsequent_ids:
-                document.document_subsequent_generated = False
-            else:
-                document.document_subsequent_generated = all(
-                    subsequent_id.operation_performed
-                    for subsequent_id in document.document_subsequent_ids
-                )
-
-    def _generates_subsequent_operations(self):
-        for record in self.filtered(lambda doc: not doc.document_subsequent_generated):
-            for subsequent_id in record.document_subsequent_ids.filtered(
-                lambda doc_sub: doc_sub._confirms_document_generation()
-            ):
-                subsequent_id.generate_subsequent_document()
-
-    def cancel_edoc(self):
-        self.ensure_one()
-        if any(
-            doc.state_edoc == SITUACAO_EDOC_AUTORIZADA
-            for doc in self.document_subsequent_ids.mapped("document_subsequent_ids")
-        ):
-            message = _(
-                "Canceling the document is not allowed: one or more "
-                "associated documents have already been authorized."
-            )
-            raise UserWarning(message)
-
-    def _get_mail_attachment(self):
-        self.ensure_one()
-        attachment_ids = []
-        if self.state_edoc == SITUACAO_EDOC_AUTORIZADA:
-            if self.file_report_id:
-                attachment_ids.append(self.file_report_id.id)
-            if self.authorization_file_id:
-                attachment_ids.append(self.authorization_file_id.id)
-        return attachment_ids
-
-    def action_send_email(self):
-        """Open a window to compose an email, with the fiscal document_type
-        template message loaded by default
-        """
-        self.ensure_one()
-        template = self._get_email_template(self.state)
-        compose_form = self.env.ref("mail.email_compose_message_wizard_form", False)
-        lang = self.env.context.get("lang")
-        if template and template.lang:
-            lang = template._render_template(template.lang, self._name, [self.id])
-        self = self.with_context(lang=lang)
-        ctx = dict(
-            default_model="l10n_br_fiscal.document",
-            default_res_id=self.id,
-            default_use_template=bool(template),
-            default_attachment_ids=self._get_mail_attachment(),
-            default_template_id=template and template.id or False,
-            default_composition_mode="comment",
-            model_description=self.document_type_id.name or self._name,
-            force_email=True,
-        )
-        return {
-            "name": _("Send Fiscal Document Email Notification"),
-            "type": "ir.actions.act_window",
-            "view_type": "form",
-            "view_mode": "form",
-            "res_model": "mail.compose.message",
-            "views": [(compose_form.id, "form")],
-            "view_id": compose_form.id,
-            "target": "new",
-            "context": ctx,
-        }
+    @api.depends("fiscal_operation_id")
+    def _compute_edoc_purpose(self):
+        for record in self:
+            record.edoc_purpose = record.fiscal_operation_id.edoc_purpose

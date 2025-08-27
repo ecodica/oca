@@ -5,11 +5,10 @@ from copy import deepcopy
 
 from lxml import etree
 
-from odoo import api, models
+from odoo import Command, api, models
 
 from ..constants.fiscal import CFOP_DESTINATION_EXPORT, FISCAL_IN
 from ..constants.icms import ICMS_BASE_TYPE_DEFAULT, ICMS_ST_BASE_TYPE_DEFAULT
-from .tax import TAX_DICT_VALUES
 
 FISCAL_TAX_ID_FIELDS = [
     "cofins_tax_id",
@@ -46,6 +45,28 @@ FISCAL_CST_ID_FIELDS = [
 
 
 class FiscalDocumentLineMixinMethods(models.AbstractModel):
+    """
+    Provides the method implementations for l10n_br_fiscal.document.line.mixin.
+
+    These methods are extracted into this separate mixin due to the way
+    l10n_br_fiscal.document.line is incorporated into account.move.line
+    by the l10n_br_account module (decorator pattern).
+
+    Specifically:
+    - In l10n_br_account, fields from l10n_br_fiscal.document.line
+      are added to account.move.line using Odoo's `_inherits` (composition)
+      mechanism.
+    - The methods in *this* mixin, however, are intended to be inherited
+      using the standard `_inherit` mechanism.
+
+    This separation is crucial because `_inherits` handles field composition
+    but does not inherit methods. Thus, `_inherit` is used to bring in
+    these methods. If these methods were defined in the same class as the
+    fields of l10n_br_fiscal.document.line.mixin (which are subject to
+    `_inherits`), and account.move.line also used `_inherit` on that
+    single class, the fields would be duplicated.
+    """
+
     _name = "l10n_br_fiscal.document.line.mixin.methods"
     _description = "Fiscal Document Mixin Methods"
 
@@ -78,6 +99,10 @@ class FiscalDocumentLineMixinMethods(models.AbstractModel):
                 ),
                 # these will only collect (invisible) fields for onchanges:
                 (
+                    ".//control[@name='fiscal_fields']...",
+                    "//group[@name='fiscal_fields']//field",
+                ),
+                (
                     ".//control[@name='fiscal_taxes_fields']...",
                     "//page[@name='fiscal_taxes']//field",
                 ),
@@ -87,8 +112,11 @@ class FiscalDocumentLineMixinMethods(models.AbstractModel):
                 ),
             )
         for placeholder_xpath, fiscal_xpath in xpath_mappings:
+            placeholder_nodes = doc.findall(placeholder_xpath)
+            if not placeholder_nodes:
+                continue
             fiscal_nodes = fsc_doc.xpath(fiscal_xpath)
-            for target_node in doc.findall(placeholder_xpath):
+            for target_node in placeholder_nodes:
                 if len(fiscal_nodes) == 1:
                     # replace unique placeholder
                     # (deepcopy is required to inject fiscal nodes in possible
@@ -97,10 +125,16 @@ class FiscalDocumentLineMixinMethods(models.AbstractModel):
                     target_node.getparent().replace(target_node, replace_node)
                 else:
                     # append multiple fields to placeholder container
+                    existing_fields = [
+                        e.attrib["name"] for e in target_node if e.tag == "field"
+                    ]
                     for fiscal_node in fiscal_nodes:
+                        if fiscal_node.attrib["name"] in existing_fields:
+                            continue
                         field = deepcopy(fiscal_node)
                         if not field.attrib.get("optional"):
-                            field.attrib["invisible"] = "1"
+                            field.attrib["invisible"] = "0"
+                            field.attrib["optional"] = "hide"
                         target_node.append(field)
         return doc
 
@@ -172,37 +206,6 @@ class FiscalDocumentLineMixinMethods(models.AbstractModel):
                 record.financial_total_gross = record.financial_total = 0.0
                 record.financial_discount_value = 0.0
 
-    def _compute_taxes(self, taxes, cst=None):
-        self.ensure_one()
-        return taxes.compute_taxes(
-            company=self.company_id,
-            partner=self._get_fiscal_partner(),
-            product=self.product_id,
-            price_unit=self.price_unit,
-            quantity=self.quantity,
-            uom_id=self.uom_id,
-            fiscal_price=self.fiscal_price,
-            fiscal_quantity=self.fiscal_quantity,
-            uot_id=self.uot_id,
-            discount_value=self.discount_value,
-            insurance_value=self.insurance_value,
-            ii_customhouse_charges=self.ii_customhouse_charges,
-            ii_iof_value=self.ii_iof_value,
-            other_value=self.other_value,
-            freight_value=self.freight_value,
-            ncm=self.ncm_id,
-            nbs=self.nbs_id,
-            nbm=self.nbm_id,
-            cest=self.cest_id,
-            operation_line=self.fiscal_operation_line_id,
-            cfop=self.cfop_id,
-            icmssn_range=self.icmssn_range_id,
-            icms_origin=self.icms_origin,
-            icms_cst_id=self.icms_cst_id,
-            ind_final=self.ind_final,
-            icms_relief_id=self.icms_relief_id,
-        )
-
     @api.depends("tax_icms_or_issqn", "partner_is_public_entity")
     def _compute_allow_csll_irpj(self):
         """Calculates the possibility of 'CSLL' and 'IRPJ' tax charges."""
@@ -230,81 +233,204 @@ class FiscalDocumentLineMixinMethods(models.AbstractModel):
             return {f"default_{k}": vals[k] for k in vals.keys()}
         return vals
 
-    def _get_all_tax_id_fields(self):
-        self.ensure_one()
-        taxes = self.env["l10n_br_fiscal.tax"]
-
-        for fiscal_tax_field in FISCAL_TAX_ID_FIELDS:
-            taxes |= self[fiscal_tax_field]
-
-        return taxes
-
-    def _remove_all_fiscal_tax_ids(self):
-        for line in self:
-            to_update = {"fiscal_tax_ids": False}
-            for fiscal_tax_field in FISCAL_TAX_ID_FIELDS:
-                to_update[fiscal_tax_field] = False
-            tax_methods = [
-                self._prepare_fields_issqn,
-                self._prepare_fields_csll,
-                self._prepare_fields_irpj,
-                self._prepare_fields_inss,
-                self._prepare_fields_icms,
-                self._prepare_fields_icmsfcp,
-                self._prepare_fields_icmsfcpst,
-                self._prepare_fields_icmsst,
-                self._prepare_fields_icmssn,
-                self._prepare_fields_ipi,
-                self._prepare_fields_ii,
-                self._prepare_fields_pis,
-                self._prepare_fields_pisst,
-                self._prepare_fields_cofins,
-                self._prepare_fields_cofinsst,
-                self._prepare_fields_issqn_wh,
-                self._prepare_fields_pis_wh,
-                self._prepare_fields_cofins_wh,
-                self._prepare_fields_csll_wh,
-                self._prepare_fields_irpj_wh,
-                self._prepare_fields_inss_wh,
-            ]
-            for method in tax_methods:
-                prepared_fields = method(TAX_DICT_VALUES)
-                if prepared_fields:
-                    to_update.update(prepared_fields)
-            # Update all fields at once
-            line.update(to_update)
-
-    def _update_fiscal_tax_ids(self, taxes):
-        for line in self:
-            taxes_groups = line.fiscal_tax_ids.mapped("tax_domain")
-            fiscal_taxes = line.fiscal_tax_ids.filtered(
-                lambda ft, taxes_groups=taxes_groups: ft.tax_domain not in taxes_groups
+    @api.onchange("fiscal_operation_id", "company_id", "partner_id", "product_id")
+    def _onchange_fiscal_operation_id(self):
+        if self.fiscal_operation_id:
+            self.fiscal_operation_line_id = self.fiscal_operation_id.line_definition(
+                company=self.company_id,
+                partner=self._get_fiscal_partner(),
+                product=self.product_id,
             )
-            line.fiscal_tax_ids = fiscal_taxes + taxes
 
-    def _update_fiscal_taxes(self):
+    def _get_fiscal_tax_ids_dependencies(self):
+        """
+        Dynamically get the list of fields dependencies, overriden in l10n_br_purchase.
+        """
+        return [
+            "company_id",
+            "partner_id",
+            "fiscal_operation_line_id",
+            "product_id",
+            "ncm_id",
+            "nbs_id",
+            "nbm_id",
+            "cest_id",
+            "city_taxation_code_id",
+            "service_type_id",
+            "ind_final",
+        ]
+
+    @api.depends(lambda self: self._get_fiscal_tax_ids_dependencies())
+    def _compute_fiscal_tax_ids(self):
+        """
+        Use fiscal_operation_line_id to map and compute the applicable Brazilian taxes.
+
+        Among the dependencies, company_id, partner_id and ind_final are related
+        to the fiscal document/line container. When called from account.move.line
+        via _inherits on newID records, we read these values from the related aml
+        to work around and _inherits/precompute limitation.
+        """
+        if self._context.get("skip_compute_fiscal_tax_ids"):
+            return
         for line in self:
-            compute_result = self._compute_taxes(line.fiscal_tax_ids)
-            to_update = {
-                "amount_tax_included": compute_result.get("amount_included", 0.0),
-                "amount_tax_not_included": compute_result.get(
-                    "amount_not_included", 0.0
-                ),
-                "amount_tax_withholding": compute_result.get("amount_withholding", 0.0),
-                "estimate_tax": compute_result.get("estimate_tax", 0.0),
-            }
-            to_update.update(line._prepare_tax_fields(compute_result))
-
-            in_draft_mode = self != self._origin
-            if in_draft_mode:
-                line.update(to_update)
+            if hasattr(line, "account_line_ids") and line.account_line_ids:
+                # it seems Odoo 16 ORM has a limitation when line is an
+                # l10n_br_fiscal.document.line that is edited via an account.move.line
+                # form and when both are a newID, then line relational field might be
+                # empty here. But in this case, we detect it and we wrap it back in the
+                wrapped_line = line.account_line_ids[0]
             else:
-                line.write(to_update)
+                wrapped_line = line
+
+            if wrapped_line.fiscal_operation_line_id:
+                mapping_result = wrapped_line.fiscal_operation_line_id.map_fiscal_taxes(
+                    company=wrapped_line.company_id,
+                    partner=wrapped_line._get_fiscal_partner(),
+                    product=wrapped_line.product_id,
+                    ncm=wrapped_line.ncm_id,
+                    nbm=wrapped_line.nbm_id,
+                    nbs=wrapped_line.nbs_id,
+                    cest=wrapped_line.cest_id,
+                    city_taxation_code=wrapped_line.city_taxation_code_id,
+                    service_type=wrapped_line.service_type_id,
+                    ind_final=wrapped_line.ind_final,
+                )
+                line.cfop_id = mapping_result["cfop"]
+                line.ipi_guideline_id = mapping_result["ipi_guideline"]
+                line.icms_tax_benefit_id = mapping_result["icms_tax_benefit_id"]
+                if wrapped_line._is_imported():
+                    return
+
+                taxes = line.env["l10n_br_fiscal.tax"]
+                for tax in mapping_result["taxes"].values():
+                    taxes |= tax
+                line.fiscal_tax_ids = taxes
+                line.comment_ids = line.fiscal_operation_line_id.comment_ids
+
+            else:
+                line.fiscal_tax_ids = [Command.clear()]
+
+    @api.model
+    def _build_null_mask_dict(self) -> dict:
+        """
+        Build a null values mask dict to reset all fiscal fields.
+        """
+        mask_dict = {
+            f[0]: False
+            for f in filter(
+                lambda f: f[1].compute == "_compute_tax_fields",
+                self.env["l10n_br_fiscal.document.line.mixin"]._fields.items(),
+            )
+        }
+        for fiscal_tax_field in FISCAL_TAX_ID_FIELDS:
+            mask_dict[fiscal_tax_field] = False
+        return mask_dict
+
+    def _get_tax_fields_dependencies(self):
+        """
+        Dynamically get the list of fields dependencies, overriden in l10n_br_purchase.
+        """
+        # IMPORTANT NOTE: as _compute_fiscal_tax_ids triggers _compute_tax_fields,
+        # we don't put fields that trigger _compute_fiscal_tax_ids as dependencies here.
+        return [
+            "price_unit",
+            "quantity",
+            "uom_id",
+            "fiscal_price",
+            "fiscal_quantity",
+            "uot_id",
+            "discount_value",
+            "insurance_value",
+            "ii_customhouse_charges",
+            "ii_iof_value",
+            "other_value",
+            "freight_value",
+            "cfop_id",
+            "icmssn_range_id",
+            "icms_origin",
+            "icms_cst_id",
+            "icms_relief_id",
+            "fiscal_tax_ids",
+        ]
+
+    @api.depends(lambda self: self._get_tax_fields_dependencies())
+    def _compute_tax_fields(self):
+        """
+        Compute base, percent, value... tax fields for ICMS, IPI, PIS, COFINS... taxes.
+        """
+        if self._context.get("skip_compute_tax_fields"):
+            return
+
+        null_mask = None
+        for line in self.filtered(lambda line: not line._is_imported()):
+            if hasattr(line, "account_line_ids") and line.account_line_ids:
+                # it seems Odoo 16 ORM has a limitation when line is an
+                # l10n_br_fiscal.document.line that is edited via an account.move.line
+                # form and when both are a newID, then line relational field might be
+                # empty here. But in this case, we detect it and we wrap it back in the
+                wrapped_line = line.account_line_ids[0]
+            else:
+                wrapped_line = line
+
+            if null_mask is None:
+                null_mask = self._build_null_mask_dict()
+            to_update = null_mask.copy()
+            if wrapped_line.fiscal_operation_line_id:
+                compute_result = wrapped_line.fiscal_tax_ids.compute_taxes(
+                    company=wrapped_line.company_id,
+                    partner=wrapped_line._get_fiscal_partner(),
+                    product=wrapped_line.product_id,
+                    price_unit=wrapped_line.price_unit,
+                    quantity=wrapped_line.quantity,
+                    uom_id=wrapped_line.uom_id,
+                    fiscal_price=wrapped_line.fiscal_price,
+                    fiscal_quantity=wrapped_line.fiscal_quantity,
+                    uot_id=wrapped_line.uot_id,
+                    discount_value=wrapped_line.discount_value,
+                    insurance_value=wrapped_line.insurance_value,
+                    ii_customhouse_charges=wrapped_line.ii_customhouse_charges,
+                    ii_iof_value=wrapped_line.ii_iof_value,
+                    other_value=wrapped_line.other_value,
+                    freight_value=wrapped_line.freight_value,
+                    ncm=wrapped_line.ncm_id,
+                    nbs=wrapped_line.nbs_id,
+                    nbm=wrapped_line.nbm_id,
+                    cest=wrapped_line.cest_id,
+                    operation_line=wrapped_line.fiscal_operation_line_id,
+                    cfop=wrapped_line.cfop_id,
+                    icmssn_range=wrapped_line.icmssn_range_id,
+                    icms_origin=wrapped_line.icms_origin,
+                    icms_cst_id=wrapped_line.icms_cst_id,
+                    ind_final=wrapped_line.ind_final,
+                    icms_relief_id=wrapped_line.icms_relief_id,
+                )
+                to_update.update(wrapped_line._prepare_tax_fields(compute_result))
+            else:
+                compute_result = {}
+            to_update.update(
+                {
+                    "amount_tax_included": compute_result.get("amount_included", 0.0),
+                    "amount_tax_not_included": compute_result.get(
+                        "amount_not_included", 0.0
+                    ),
+                    "amount_tax_withholding": compute_result.get(
+                        "amount_withholding", 0.0
+                    ),
+                    "estimate_tax": compute_result.get("estimate_tax", 0.0),
+                }
+            )
+            in_draft_mode = wrapped_line != wrapped_line._origin
+            if in_draft_mode:
+                wrapped_line.update(to_update)
+            else:
+                wrapped_line.write(to_update)
 
     def _prepare_tax_fields(self, compute_result):
         self.ensure_one()
-        computed_taxes = compute_result.get("taxes", {})
         tax_values = {}
+        if self._is_imported():
+            return tax_values
+        computed_taxes = compute_result.get("taxes", {})
         for tax in self.fiscal_tax_ids:
             computed_tax = computed_taxes.get(tax.tax_domain, {})
             tax_field_name = f"{tax.tax_domain}_tax_id"
@@ -317,21 +443,23 @@ class FiscalDocumentLineMixinMethods(models.AbstractModel):
                         tax_values.update(prepared_fields)
         return tax_values
 
-    def _get_product_price(self):
-        self.ensure_one()
-        price = {
-            "sale_price": self.product_id.list_price,
-            "cost_price": self.product_id.standard_price,
-        }
-
-        self.price_unit = price.get(self.fiscal_operation_id.default_price_unit, 0.00)
+    @api.depends(
+        "product_id",
+        "fiscal_operation_id",
+    )
+    def _compute_price_unit_fiscal(self):  # OK when edited from aml?? c-> check
+        for line in self:
+            line.price_unit = {
+                "sale_price": line.product_id.list_price,
+                "cost_price": line.product_id.standard_price,
+            }.get(line.fiscal_operation_id.default_price_unit, 0)
 
     def __document_comment_vals(self):
         self.ensure_one()
         return {
             "user": self.env.user,
             "ctx": self._context,
-            "doc": self.document_id,
+            "doc": self.document_id if hasattr(self, "document_id") else None,
             "item": self,
         }
 
@@ -351,55 +479,6 @@ class FiscalDocumentLineMixinMethods(models.AbstractModel):
         """
         self.ensure_one()
         return self.partner_id
-
-    @api.onchange(
-        "fiscal_operation_id", "ncm_id", "nbs_id", "cest_id", "service_type_id"
-    )
-    def _onchange_fiscal_operation_id(self):
-        if self.fiscal_operation_id:
-            if not self.price_unit:
-                self._get_product_price()
-            self._onchange_commercial_quantity()
-            self.fiscal_operation_line_id = self.fiscal_operation_id.line_definition(
-                company=self.company_id,
-                partner=self._get_fiscal_partner(),
-                product=self.product_id,
-            )
-            self._onchange_fiscal_operation_line_id()
-
-    @api.onchange("fiscal_operation_line_id")
-    def _onchange_fiscal_operation_line_id(self):
-        # Reset Taxes
-        self._remove_all_fiscal_tax_ids()
-        if self.fiscal_operation_line_id:
-            mapping_result = self.fiscal_operation_line_id.map_fiscal_taxes(
-                company=self.company_id,
-                partner=self._get_fiscal_partner(),
-                product=self.product_id,
-                ncm=self.ncm_id,
-                nbm=self.nbm_id,
-                nbs=self.nbs_id,
-                cest=self.cest_id,
-                city_taxation_code=self.city_taxation_code_id,
-                service_type=self.service_type_id,
-                ind_final=self.ind_final,
-            )
-
-            self.cfop_id = mapping_result["cfop"]
-            self._process_fiscal_mapping(mapping_result)
-
-        if not self.fiscal_operation_line_id:
-            self.cfop_id = False
-
-    def _process_fiscal_mapping(self, mapping_result):
-        self.ipi_guideline_id = mapping_result["ipi_guideline"]
-        self.icms_tax_benefit_id = mapping_result["icms_tax_benefit_id"]
-        taxes = self.env["l10n_br_fiscal.tax"]
-        for tax in mapping_result["taxes"].values():
-            taxes |= tax
-        self.fiscal_tax_ids = taxes
-        self._update_fiscal_taxes()
-        self.comment_ids = self.fiscal_operation_line_id.comment_ids
 
     @api.onchange("product_id")
     def _onchange_product_id_fiscal(self):
@@ -441,7 +520,7 @@ class FiscalDocumentLineMixinMethods(models.AbstractModel):
             self.city_taxation_code_id = False
             self.uot_id = False
 
-        self._get_product_price()
+        self._compute_price_unit_fiscal()
         self._onchange_fiscal_operation_id()
 
     def _prepare_fields_issqn(self, tax_dict):
@@ -685,72 +764,60 @@ class FiscalDocumentLineMixinMethods(models.AbstractModel):
             "cofinsst_value": tax_dict.get("tax_value", 0.00),
         }
 
-    @api.onchange(
-        "csll_tax_id",
-        "csll_wh_tax_id",
-        "irpj_tax_id",
-        "irpj_wh_tax_id",
-        "inss_tax_id",
-        "inss_wh_tax_id",
-        "issqn_tax_id",
-        "issqn_wh_tax_id",
-        "icms_tax_id",
-        "icmssn_tax_id",
-        "icmsst_tax_id",
-        "icmsfcp_tax_id",
-        "icmsfcpst_tax_id",
-        "icms_relief_id",
-        "icms_relief_value",
-        "ipi_tax_id",
-        "ii_tax_id",
-        "pis_tax_id",
-        "pis_wh_tax_id",
-        "pisst_tax_id",
-        "cofins_tax_id",
-        "cofins_wh_tax_id",
-        "cofinsst_tax_id",
-        "fiscal_price",
-        "fiscal_quantity",
-        "discount_value",
-        "insurance_value",
-        "other_value",
-        "freight_value",
-    )
+    @api.onchange(*FISCAL_TAX_ID_FIELDS)
     def _onchange_fiscal_taxes(self):
-        self._update_fiscal_tax_ids(self._get_all_tax_id_fields())
-        self._update_fiscal_taxes()
+        taxes = self.env["l10n_br_fiscal.tax"]
+        for fiscal_tax_field in FISCAL_TAX_ID_FIELDS:
+            taxes |= self[fiscal_tax_field]
 
-    @api.model
-    def _update_fiscal_quantity(self, product_id, price, quantity, uom_id, uot_id):
-        result = {"uot_id": uom_id, "fiscal_quantity": quantity, "fiscal_price": price}
-        if uot_id and uom_id != uot_id:
-            result["uot_id"] = uot_id
-            if product_id and price and quantity:
-                product = self.env["product.product"].browse(product_id)
-                result["fiscal_price"] = price / (product.uot_factor or 1.0)
-                result["fiscal_quantity"] = quantity * (product.uot_factor or 1.0)
-
-        return result
-
-    @api.onchange("uot_id", "uom_id", "price_unit", "quantity")
-    def _onchange_commercial_quantity(self):
-        product_id = False
-        if self.product_id:
-            product_id = self.product_id.id
-        self.update(
-            self._update_fiscal_quantity(
-                product_id, self.price_unit, self.quantity, self.uom_id, self.uot_id
+        for line in self:
+            taxes_groups = line.fiscal_tax_ids.mapped("tax_domain")
+            fiscal_taxes = line.fiscal_tax_ids.filtered(
+                lambda ft, taxes_groups=taxes_groups: ft.tax_domain not in taxes_groups
             )
-        )
+            line.fiscal_tax_ids = fiscal_taxes + taxes
 
-    @api.onchange("ii_customhouse_charges")
-    def _onchange_ii_customhouse_charges(self):
-        if self.ii_customhouse_charges:
-            self._update_fiscal_taxes()
+    @api.depends("uom_id")
+    def _compute_uot_id(self):
+        for line in self:
+            if not line.uot_id:
+                line.uot_id = line.uom_id
 
-    @api.onchange("fiscal_tax_ids")
-    def _onchange_fiscal_tax_ids(self):
-        self._update_fiscal_taxes()
+    @api.onchange("price_unit")
+    def _onchange_price_unit_fiscal(self):
+        self.fiscal_price = 0
+        self._compute_fiscal_price()
+
+    @api.depends("price_unit")
+    def _compute_fiscal_price(self):
+        for line in self:
+            # this test and the onchange are required to avoid
+            # resetting manual changes in fiscal_price
+            if not line.fiscal_price:
+                if line.product_id and line.price_unit:
+                    line.fiscal_price = line.price_unit / (
+                        line.product_id.uot_factor or 1.0
+                    )
+                else:
+                    line.fiscal_price = line.price_unit
+
+    @api.onchange("quantity")
+    def _onchange_quantity_fiscal(self):
+        self.fiscal_quantity = 0
+        self._compute_fiscal_quantity()
+
+    @api.depends("quantity")
+    def _compute_fiscal_quantity(self):
+        for line in self:
+            # this test and the onchange are required to avoid
+            # resetting manual changes in fiscal_quantity
+            if not line.fiscal_quantity:
+                if line.product_id and line.quantity:
+                    line.fiscal_quantity = line.quantity * (
+                        line.product_id.uot_factor or 1.0
+                    )
+                else:
+                    line.fiscal_quantity = line.quantity
 
     @api.onchange("city_taxation_code_id")
     def _onchange_city_taxation_code_id(self):
@@ -777,3 +844,9 @@ class FiscalDocumentLineMixinMethods(models.AbstractModel):
     @api.model
     def _rm_fields_to_amount(self):
         return ["icms_relief_value"]
+
+    def _is_imported(self):
+        # When the mixin is used for instance
+        # in a PO line or SO line, there is no document_id
+        # and we consider the document is not imported
+        return hasattr(self, "document_id") and self.document_id.imported_document
