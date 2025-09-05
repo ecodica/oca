@@ -3,7 +3,7 @@
 {
     "name": "Shopfloor Reception Packaging Dimension",
     "summary": "Collect Packaging Dimension from the Reception scenario",
-    "version": "18.0.1.0.0",
+    "version": "18.0.1.1.0",
     "development_status": "Beta",
     "category": "Inventory",
     "website": "https://github.com/OCA/stock-logistics-shopfloor",
@@ -11,8 +11,11 @@
     "maintainers": ["TDu"],
     "license": "AGPL-3",
     "installable": True,
-    "depends": ["shopfloor_reception"],
-    "data": ["views/shopfloor_menu.xml"],
+    "depends": ["shopfloor_reception", "product_packaging_level"],
+    "data": [
+        "views/product_packaging_level.xml",
+        "views/shopfloor_menu.xml",
+    ],
     "post_init_hook": "post_init_hook",
     "uninstall_hook": "uninstall_hook",
 }

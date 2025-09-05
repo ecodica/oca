@@ -74,6 +74,7 @@ msgstr "Tipo contratto"
 #. module: agreement
 #: model:ir.actions.act_window,name:agreement.agreement_type_action
 #: model:ir.model,name:agreement.model_agreement_type
+#: model:ir.ui.menu,name:agreement.agreement_type_menu
 msgid "Agreement Types"
 msgstr "Tipi contratto"
 
@@ -186,7 +187,6 @@ msgstr "Se selezionata, nuovi messaggi richiedono attenzione."
 
 #. module: agreement
 #: model:ir.model.fields,help:agreement.field_agreement__message_has_error
-#: model:ir.model.fields,help:agreement.field_agreement__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr "Se selezionata, alcuni messaggi hanno un errore di consegna."
 
@@ -298,11 +298,6 @@ msgid "Responsible User"
 msgstr "Utente responsabile"
 
 #. module: agreement
-#: model:ir.model.fields,field_description:agreement.field_agreement__message_has_sms_error
-msgid "SMS Delivery error"
-msgstr "Errore consegna SMS"
-
-#. module: agreement
 #. odoo-python
 #: code:addons/agreement/models/agreement.py:0
 #: model_terms:ir.ui.view,arch_db:agreement.agreement_search
@@ -392,6 +387,9 @@ msgstr "Messaggi sito web"
 #: model:ir.model.fields,help:agreement.field_agreement__website_message_ids
 msgid "Website communication history"
 msgstr "Cronologia comunicazioni sito web"
+
+#~ msgid "SMS Delivery error"
+#~ msgstr "Errore consegna SMS"
 
 #, python-format
 #~ msgid "%s (copy)"
