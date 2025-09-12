@@ -369,11 +369,6 @@ msgid "Group By"
 msgstr "Raggruppa per"
 
 #. module: mail_tracking
-#: model:ir.model,name:mail_tracking.model_mail_guest
-msgid "Guest"
-msgstr "Ospite"
-
-#. module: mail_tracking
 #: model:ir.model.fields.selection,name:mail_tracking.selection__mail_tracking_event__event_type__hard_bounce
 msgid "Hard bounce"
 msgstr "Rimbalzo forzato"
@@ -855,6 +850,9 @@ msgstr "In attesa"
 #: code:addons/mail_tracking/static/src/components/message_tracking/message_tracking_status.xml:0
 msgid "Waiting Status"
 msgstr "Stato attesa"
+
+#~ msgid "Guest"
+#~ msgstr "Ospite"
 
 #, python-format
 #~ msgid "Records:"

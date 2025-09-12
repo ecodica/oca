@@ -353,11 +353,6 @@ msgid "Group By"
 msgstr "Združi po"
 
 #. module: mail_tracking
-#: model:ir.model,name:mail_tracking.model_mail_guest
-msgid "Guest"
-msgstr ""
-
-#. module: mail_tracking
 #: model:ir.model.fields.selection,name:mail_tracking.selection__mail_tracking_event__event_type__hard_bounce
 msgid "Hard bounce"
 msgstr "Trdo odbito"
