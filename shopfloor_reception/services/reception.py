@@ -635,6 +635,14 @@ class Reception(Component):
         """
         pack_location = package.location_id
         if not pack_location:
+            package_line = fields.first(
+                picking.move_line_ids.filtered(
+                    lambda ml: ml.result_package_id == package
+                )
+            )
+            if package_line:
+                pack_location = package_line.location_dest_id
+        if not pack_location:
             line.result_package_id = package
             return None
         (
@@ -853,7 +861,7 @@ class Reception(Component):
         packages_data = self.data.packages(
             packages.with_context(picking_id=picking.id).sorted(),
             picking=picking,
-            with_packaging=True,
+            with_package_type=True,
         )
         return self._response(
             next_state="select_dest_package",
@@ -1754,7 +1762,7 @@ class ShopfloorReceptionValidatorResponse(Component):
                 "type": "list",
                 "schema": {
                     "type": "dict",
-                    "schema": self.schemas.package(with_packaging=True),
+                    "schema": self.schemas.package(with_package_type=True),
                 },
             },
             "picking": {"type": "dict", "schema": self.schemas.picking()},

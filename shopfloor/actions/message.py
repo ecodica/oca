@@ -615,7 +615,7 @@ class MessageAction(Component):
             "body": _(
                 "Lot %(lot_name)s not found in transfer %(picking_name)s",
                 lot_name=lot.name,
-                pcking_name=picking.name,
+                picking_name=picking.name,
             ),
         }
 
@@ -818,8 +818,10 @@ class MessageAction(Component):
     def lot_replaced_by_lot(self, old_lot, new_lot):
         return {
             "message_type": "success",
-            "body": _("Lot %(old_lot_name)s replaced by lot %(new_lot_name)s.").format(
-                old_lot.name, new_lot.name
+            "body": _(
+                "Lot %(old_lot_name)s replaced by lot %(new_lot_name)s.",
+                old_lot_name=old_lot.name,
+                new_lot_name=new_lot.name,
             ),
         }
 
@@ -827,8 +829,10 @@ class MessageAction(Component):
         return {
             "message_type": "success",
             "body": _(
-                "Package %(old_package_name)s replaced by package %(new_package_name)s."
-            ).format(old_package.name, new_package.name),
+                "Package %(old_pack_name)s replaced by package %(new_pack_name)s.",
+                old_pack_name=old_package.name,
+                new_pack_name=new_package.name,
+            ),
         }
 
     def package_already_picked_by(self, package, picking):
@@ -922,13 +926,13 @@ class MessageAction(Component):
             "body": _("Package has been opened. You can move partial quantities."),
         }
 
-    def packaging_invalid_for_carrier(self, packaging, carrier):
+    def package_type_invalid_for_carrier(self, package_type, carrier):
         return {
             "message_type": "error",
             "body": _(
-                "Packaging '%(package_name)s' is not allowed for carrier "
+                "Package type '%(package_type_name)s' is not allowed for carrier "
                 "%(carrier_name)s.or carrier %(carrier_name)s.",
-                package_name=packaging.name if packaging else _("No value"),
+                package_type_name=package_type.name if package_type else _("No value"),
                 carrier_name=carrier.name,
             ),
         }
@@ -945,7 +949,7 @@ class MessageAction(Component):
             "body": _("No valid package to select."),
         }
 
-    def no_delivery_packaging_available(self):
+    def no_package_type_available(self):
         return {
             "message_type": "warning",
             "body": _("No delivery package type available."),

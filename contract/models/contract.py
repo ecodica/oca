@@ -243,7 +243,10 @@ class ContractContract(models.Model):
                     field.name in self.NO_SYNC,
                 )
             ):
-                if self.contract_template_id[field_name]:
+                if (
+                    self.contract_template_id[field_name]
+                    and self.contract_template_id[field_name] != self[field_name]
+                ):
                     self[field_name] = self.contract_template_id[field_name]
 
     @api.onchange("partner_id", "company_id")
@@ -338,9 +341,11 @@ class ContractContract(models.Model):
 
     def recurring_create_invoice(self):
         """
+        Button action
         This method triggers the creation of the next invoices of the contracts
         even if their next invoicing date is in the future.
         """
+        self.ensure_one()
         invoices = self._recurring_create_invoice()
         for invoice in invoices:
             body = Markup(
