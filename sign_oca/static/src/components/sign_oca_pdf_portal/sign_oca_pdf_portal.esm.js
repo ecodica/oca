@@ -10,6 +10,7 @@ import {renderToString} from "@web/core/utils/render";
 import session from "web.session";
 import {templates} from "@web/core/assets";
 const SignRegistry = registry.category("sign_oca");
+import {startSignItemNavigator} from "./sign_oca_navigator.esm";
 
 export class SignOcaPdfPortal extends SignOcaPdfCommon {
     setup() {
@@ -152,6 +153,35 @@ export class SignOcaPdfPortal extends SignOcaPdfCommon {
                 );
             }).length === 0;
         this.checkToSign();
+    }
+    postIframeFields() {
+        super.postIframeFields(...arguments);
+        // Is essential to make sure the navigator will never duplicate
+        const target = $(
+            this.iframe.el.contentDocument.getElementById("viewerContainer")
+        );
+        const navigator = $(
+            this.iframe.el.contentDocument.getElementsByClassName(
+                "o_sign_sign_item_navigator"
+            )
+        );
+        const navLine = $(
+            this.iframe.el.contentDocument.getElementsByClassName(
+                "o_sign_sign_item_navline"
+            )
+        );
+        if (navLine.length === 0) {
+            target.append($("<div class='o_sign_sign_item_navline'/>"));
+        }
+        if (navigator.length === 0) {
+            target.append($("<div class='o_sign_sign_item_navigator'/>"));
+        }
+        // Load navigator
+        this.navigate();
+    }
+    navigate() {
+        const target = this.iframe.el.contentDocument.getElementById("viewerContainer");
+        this.navigator = startSignItemNavigator(this, target, this.env);
     }
 }
 SignOcaPdfPortal.template = "sign_oca.SignOcaPdfPortal";

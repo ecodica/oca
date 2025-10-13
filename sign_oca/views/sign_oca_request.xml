@@ -14,20 +14,20 @@
                         name="sign"
                         class="btn btn-primary"
                         type="object"
-                        attrs="{'invisible': ['|',('to_sign', '=', False), ('state', '!=', 'sent')]}"
+                        attrs="{'invisible': ['|',('to_sign', '=', False), ('state', '!=', '0_sent')]}"
                     />
                     <field name="to_sign" invisible="1" />
                     <button
                         string="Send"
                         type="object"
-                        states="draft"
+                        states="1_draft"
                         name="action_send"
                         icon="fa-paper-plane"
                     />
                     <button
                         string="Cancel"
                         type="object"
-                        states="draft,sent,signed"
+                        states="1_draft,0_sent,2_signed"
                         name="cancel"
                         confirm="You will cancel the request and all the accesses. Are you sure about it?"
                         groups="sign_oca.sign_oca_group_user"
@@ -35,7 +35,7 @@
                     <field
                         name="state"
                         widget="statusbar"
-                        statusbar_visible="sent,signed"
+                        statusbar_visible="0_sent,2_signed"
                     />
                 </header>
                 <sheet>
@@ -45,7 +45,7 @@
                             type="object"
                             class="oe_stat_button"
                             icon="fa-pencil"
-                            states="sent,signed"
+                            states="0_sent,2_signed"
                             groups="sign_oca.sign_oca_group_user"
                         >
                             <div class="o_field_widget o_stat_info">
@@ -59,7 +59,7 @@
                         <button
                             class="oe_stat_button"
                             icon="fa-wrench"
-                            states="draft"
+                            states="1_draft"
                             name="configure"
                             type="object"
                             string="Configure"
@@ -78,13 +78,13 @@
                     <widget
                         name="web_ribbon"
                         title="Fully Signed"
-                        attrs="{'invisible': [('state', '!=', 'signed')]}"
+                        attrs="{'invisible': [('state', '!=', '2_signed')]}"
                     />
                     <widget
                         name="web_ribbon"
                         bg_color="bg-danger"
                         title="Cancelled"
-                        attrs="{'invisible': [('state', '!=', 'cancel')]}"
+                        attrs="{'invisible': [('state', '!=', '3_cancel')]}"
                     />
                     <widget
                         name="web_ribbon"
@@ -153,16 +153,16 @@
                     domain="[('signer_ids.partner_id.user_ids', 'in', uid), ('signer_ids.signed_on', '=', False)]"
                 />
                 <separator />
-                <filter name="sent" string="Sent" domain="[('state', '=', 'sent')]" />
+                <filter name="sent" string="Sent" domain="[('state', '=', '0_sent')]" />
                 <filter
                     name="signed"
                     string="Signed"
-                    domain="[('state', '=', 'signed')]"
+                    domain="[('state', '=', '2_signed')]"
                 />
                 <filter
                     name="canceled"
                     string="Canceled"
-                    domain="[('state', '=', 'cancel')]"
+                    domain="[('state', '=', '3_cancel')]"
                 />
                 <separator />
                 <filter
@@ -222,7 +222,7 @@
                     name="sign"
                     class="btn btn-primary"
                     type="object"
-                    attrs="{'invisible': ['|',('to_sign', '=', False), ('state', '!=', 'sent')]}"
+                    attrs="{'invisible': ['|',('to_sign', '=', False), ('state', '!=', '0_sent')]}"
                 />
                 <field name="to_sign" invisible="1" />
             </tree>

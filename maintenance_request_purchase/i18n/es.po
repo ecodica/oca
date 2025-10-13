@@ -18,6 +18,11 @@ msgstr ""
 "X-Generator: Poedit 2.0.6\n"
 
 #. module: maintenance_request_purchase
+#: model:ir.model.fields,field_description:maintenance_request_purchase.field_maintenance_request__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: maintenance_request_purchase
 #: model_terms:ir.ui.view,arch_db:maintenance_request_purchase.purchase_order_form
 msgid "Maintenance"
 msgstr "Mantenimiento"
@@ -57,6 +62,11 @@ msgstr "Pedidos de compra"
 #: model:ir.model.fields,field_description:maintenance_request_purchase.field_maintenance_request__purchases_count
 msgid "Purchases Count"
 msgstr "Número de Compras"
+
+#. module: maintenance_request_purchase
+#: model:ir.model.fields,field_description:maintenance_request_purchase.field_maintenance_request__total_purchase_amount
+msgid "Total Purchase Amount"
+msgstr ""
 
 #~ msgid "Cancel"
 #~ msgstr "Cancelar"

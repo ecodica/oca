@@ -97,6 +97,11 @@ class WizStockBarcodesRead(models.AbstractModel):
     )
 
     enable_add_product = fields.Boolean(default=True)
+    show_form_scan = fields.Boolean(compute="_compute_show_form_scan")
+
+    def _compute_show_form_scan(self):
+        for barcode in self:
+            barcode.show_form_scan = barcode.option_group_id.show_form_scan
 
     @api.depends("res_id")
     def _compute_action_ids(self):
@@ -761,7 +766,8 @@ class WizStockBarcodesRead(models.AbstractModel):
         context = dict(self.env.context)
         if self._name == "wiz.stock.barcodes.read.picking":
             no_increase_qty_done = (
-                context.get("no_increase_qty_done", False) or self.manual_entry
+                context.get("no_increase_qty_done", False)
+                or self.option_group_id.no_increase_qty_done
             )
             force_create_move = context.get("force_create_move", False)
         res = self.with_context(

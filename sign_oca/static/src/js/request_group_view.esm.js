@@ -15,7 +15,6 @@ registerModel({
             // Fetch the data from the button otherwise fetch the ones from the parent (.o_ActivityMenuView_activityGroup).
             const data = _.extend({}, $(ev.currentTarget).data(), $(ev.target).data());
             const context = {};
-            console.log(data);
 
             this.env.services.action.doAction(
                 {
@@ -25,7 +24,7 @@ registerModel({
                     search_view_id: [false],
                     type: "ir.actions.act_window",
                     domain: [
-                        ["request_id.state", "=", "sent"],
+                        ["request_id.state", "=", "0_sent"],
                         ["partner_id", "child_of", [session.partner_id]],
                         ["signed_on", "=", false],
                     ],

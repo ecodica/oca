@@ -38,7 +38,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
         sequence="30"
     />
     <menuitem
-        name="Operation request"
+        name="Operation Request"
         id="menu_cooperator_operation_request"
         action="operation_request_action"
         parent="menu_cooperator_main_subscription"
@@ -111,6 +111,14 @@ SPDX-License-Identifier: AGPL-3.0-or-later
         sequence="100"
         groups="cooperator_group_manager"
     />
+    <menuitem
+        id="menu_cooperator_settings"
+        name="Settings"
+        action="action_cooperator_config"
+        parent="menu_cooperator_config"
+        sequence="0"
+    />
+
     <menuitem
         name="Share type"
         id="menu_cooperator_share_product"

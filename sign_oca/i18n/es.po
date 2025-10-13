@@ -289,7 +289,7 @@ msgid "Canceled"
 msgstr "Cancelado"
 
 #. module: sign_oca
-#: model:ir.model.fields.selection,name:sign_oca.selection__sign_oca_request__state__cancel
+#: model:ir.model.fields.selection,name:sign_oca.selection__sign_oca_request__state__3_cancel
 #: model_terms:ir.ui.view,arch_db:sign_oca.sign_oca_request_form_view
 msgid "Cancelled"
 msgstr "Cancelado"
@@ -301,10 +301,24 @@ msgstr "Verificar"
 
 #. module: sign_oca
 #. odoo-javascript
+#: code:addons/sign_oca/static/src/components/sign_oca_pdf_portal/sign_oca_navigator.esm.js:0
+#, python-format
+msgid "Click on Validate Button"
+msgstr ""
+
+#. module: sign_oca
+#. odoo-javascript
 #: code:addons/sign_oca/static/src/components/sign_oca_configure/sign_oca_configure.xml:0
 #, python-format
 msgid "Click on the field that you want to add"
 msgstr "Haga clic en el campo que desea agregar"
+
+#. module: sign_oca
+#. odoo-javascript
+#: code:addons/sign_oca/static/src/components/sign_oca_pdf_portal/sign_oca_navigator.esm.js:0
+#, python-format
+msgid "Click to start"
+msgstr ""
 
 #. module: sign_oca
 #: model:ir.model,name:sign_oca.model_res_company
@@ -469,7 +483,7 @@ msgid "Domain"
 msgstr "Dominio"
 
 #. module: sign_oca
-#: model:ir.model.fields.selection,name:sign_oca.selection__sign_oca_request__state__draft
+#: model:ir.model.fields.selection,name:sign_oca.selection__sign_oca_request__state__1_draft
 msgid "Draft"
 msgstr "Borrador"
 
@@ -891,6 +905,13 @@ msgid "New document to sign"
 msgstr "Nuevo documento para firmar"
 
 #. module: sign_oca
+#. odoo-javascript
+#: code:addons/sign_oca/static/src/components/sign_oca_pdf_portal/sign_oca_navigator.esm.js:0
+#, python-format
+msgid "Next"
+msgstr ""
+
+#. module: sign_oca
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request__activity_date_deadline
 msgid "Next Activity Deadline"
 msgstr "Fecha límite para la próxima actividad"
@@ -1118,7 +1139,7 @@ msgid "Send to sign"
 msgstr "Enviar para firmar"
 
 #. module: sign_oca
-#: model:ir.model.fields.selection,name:sign_oca.selection__sign_oca_request__state__sent
+#: model:ir.model.fields.selection,name:sign_oca.selection__sign_oca_request__state__0_sent
 #: model_terms:ir.ui.view,arch_db:sign_oca.sign_oca_request_search_view
 msgid "Sent"
 msgstr "Enviado"
@@ -1278,7 +1299,7 @@ msgstr ""
 
 #. module: sign_oca
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request__signed
-#: model:ir.model.fields.selection,name:sign_oca.selection__sign_oca_request__state__signed
+#: model:ir.model.fields.selection,name:sign_oca.selection__sign_oca_request__state__2_signed
 #: model_terms:ir.ui.view,arch_db:sign_oca.sign_oca_request_search_view
 msgid "Signed"
 msgstr "Firmado"

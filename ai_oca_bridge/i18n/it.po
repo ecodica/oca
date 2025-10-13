@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-07-31 10:59+0000\n"
+"PO-Revision-Date: 2025-09-18 14:28+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -174,7 +174,16 @@ msgstr "Configurazione collegamento IA"
 
 #. module: ai_oca_bridge
 #: model:ir.model.fields,field_description:ai_oca_bridge.field_ai_bridge__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_calendar_event__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_crm_lead__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_crm_team__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_crm_team_member__ai_bridge_info
 #: model:ir.model.fields,field_description:ai_oca_bridge.field_document_page__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_fsm_equipment__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_fsm_location__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_fsm_order__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_fsm_person__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_fsm_team__ai_bridge_info
 #: model:ir.model.fields,field_description:ai_oca_bridge.field_helpdesk_ticket__ai_bridge_info
 #: model:ir.model.fields,field_description:ai_oca_bridge.field_helpdesk_ticket_team__ai_bridge_info
 #: model:ir.model.fields,field_description:ai_oca_bridge.field_mail_blacklist__ai_bridge_info
@@ -183,9 +192,17 @@ msgstr "Configurazione collegamento IA"
 #: model:ir.model.fields,field_description:ai_oca_bridge.field_mail_thread_blacklist__ai_bridge_info
 #: model:ir.model.fields,field_description:ai_oca_bridge.field_mail_thread_cc__ai_bridge_info
 #: model:ir.model.fields,field_description:ai_oca_bridge.field_mail_thread_phone__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_mrp_bom__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_mrp_production__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_mrp_unbuild__ai_bridge_info
 #: model:ir.model.fields,field_description:ai_oca_bridge.field_phone_blacklist__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_product_product__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_product_template__ai_bridge_info
 #: model:ir.model.fields,field_description:ai_oca_bridge.field_res_partner__ai_bridge_info
 #: model:ir.model.fields,field_description:ai_oca_bridge.field_res_users__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_stock_lot__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_stock_picking__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_stock_scrap__ai_bridge_info
 msgid "Ai Bridge Info"
 msgstr "Informazioni collegamento IA"
 
@@ -494,6 +511,11 @@ msgstr "Scadenza mia attività"
 #: model:ir.model.fields,field_description:ai_oca_bridge.field_ai_bridge_execution__name
 msgid "Name"
 msgstr "Nome"
+
+#. module: ai_oca_bridge
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_ai_bridge__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Evento calendario attività successiva"
 
 #. module: ai_oca_bridge
 #: model:ir.model.fields,field_description:ai_oca_bridge.field_ai_bridge__activity_date_deadline

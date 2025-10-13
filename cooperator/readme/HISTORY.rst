@@ -1,9 +1,80 @@
+16.0.1.2.3 (2025-10-06)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Fix display of image fields in settings. (`#171 <https://github.com/OCA/cooperative/issues/171>`_)
+
+
+16.0.1.2.2 (2025-10-06)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Use image widget for ``signature_scan``. (`#170 <https://github.com/OCA/cooperative/issues/170>`_)
+- Fix default value of ``subscription.request.country_id``. (`#170 <https://github.com/OCA/cooperative/issues/170>`_)
+
+
+16.0.1.2.1 (2025-10-06)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Fix transfer operation to non-member: update share fields values of the internal subscription request of a transfer operation to a non-member when these values are changed in the form.
+  This ensures that the values are correct even if the subscription request is created before the values are set. (`#162 <https://github.com/OCA/cooperative/issues/162>`_)
+
+
+16.0.1.2.0 (2025-09-17)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+**Features**
+
+- Move settings from company form to main settings. (`#140 <https://github.com/OCA/cooperative/issues/140>`_)
+
+
+16.0.1.1.2 (2025-05-30)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Fix tests with a localization module: previously, when initializing a
+  database with a localization module, the default company would use the
+  account chart template from that module. Now, it doesn't use any. Fix the
+  tests by loading the first chart template found on the default company. (`#161 <https://github.com/OCA/cooperative/issues/161>`_)
+
+
+16.0.1.1.1 (2024-10-22)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Fix computation of name of subscription requests for companies when
+  processing multiple records. (`#144 <https://github.com/OCA/cooperative/issues/144>`_)
+
+
+16.0.1.1.0 (2024-05-06)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+**Deprecations and Removals**
+
+- Deprecate ``subscription.request.get_person_info()`` method in favor of new
+  ``.set_person_info()`` method.
+
+
 16.0.1.0.2 (2024-03-12)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 **Bugfixes**
 
 - Remove duplicated member field in ``res.partner`` form view. (`#47 <https://github.com/OCA/cooperative/issues/47>`_)
+
+
+16.0.1.0.1 (2024-02-01)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+**Features**
+
+- Refactor cooperative.membership preparation code. (`#101 <https://github.com/OCA/cooperative/issues/101>`_)
 
 
 16.0.1.0.0 (2023-11-29)

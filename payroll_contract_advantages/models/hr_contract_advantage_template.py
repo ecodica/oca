@@ -9,10 +9,19 @@ class HrContractAdvandageTemplate(models.Model):
 
     name = fields.Char(required=True)
     code = fields.Char(required=True)
-    lower_bound = fields.Float(
-        help="Lower bound authorized by the employer for this advantage"
+    active = fields.Boolean(default=True)
+    currency_id = fields.Many2one(
+        "res.currency",
+        required=True,
+        default=lambda self: self.env.company.currency_id,
     )
-    upper_bound = fields.Float(
-        help="Upper bound authorized by the employer for this advantage"
+
+    lower_bound = fields.Monetary(
+        currency_field="currency_id",
+        help="Lower bound authorized by the employer for this advantage",
     )
-    default_value = fields.Float()
+    upper_bound = fields.Monetary(
+        currency_field="currency_id",
+        help="Upper bound authorized by the employer for this advantage",
+    )
+    default_value = fields.Monetary(currency_field="currency_id")

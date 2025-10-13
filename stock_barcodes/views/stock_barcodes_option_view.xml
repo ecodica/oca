@@ -34,6 +34,8 @@
                             <field name="show_detailed_operations" />
                             <field name="auto_put_in_pack" />
                             <field name="display_read_quant" />
+                            <field name="no_increase_qty_done" />
+                            <field name="show_form_scan" />
                         </group>
                         <group>
                             <field name="ignore_filled_fields" />

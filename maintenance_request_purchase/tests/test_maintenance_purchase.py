@@ -22,6 +22,12 @@ class TestMaintenancePurchase(TransactionCase):
                 "date_planned": "2017-02-11 22:00:00",
             }
         )
+        cls.po_2 = cls.env["purchase.order"].create(
+            {
+                "partner_id": cls.supplier.id,
+                "date_planned": "2017-02-11 22:00:00",
+            }
+        )
 
     def test_maintenance_purchase(self):
         self.assertEqual(self.request_1.purchases_count, 0)
@@ -36,3 +42,45 @@ class TestMaintenancePurchase(TransactionCase):
         requests = self.env[action["res_model"]].search(action["domain"])
         self.assertIn(self.request_1, requests)
         self.assertIn(self.request_2, requests)
+
+    def test_compute_total_purchase_amount(self):
+        # product 4 -> 500.0
+        self.po_1.write(
+            {
+                "order_line": [
+                    (
+                        0,
+                        0,
+                        {
+                            "product_id": self.env.ref("product.product_product_4").id,
+                            "product_qty": 10,
+                            "price_unit": 500.0,
+                        },
+                    )
+                ]
+            }
+        )
+        self.po_1.button_confirm()
+
+        self.request_1.purchase_order_ids = self.po_1
+        self.assertEqual(self.request_1.total_purchase_amount, 5000)
+
+        self.po_2.write(
+            {
+                "order_line": [
+                    (
+                        0,
+                        0,
+                        {
+                            "product_id": self.env.ref("product.product_product_4").id,
+                            "product_qty": 5,
+                            "price_unit": 500.0,
+                        },
+                    )
+                ]
+            }
+        )
+        self.po_2.button_confirm()
+
+        self.request_1.purchase_order_ids |= self.po_2
+        self.assertEqual(self.request_1.total_purchase_amount, 7500)

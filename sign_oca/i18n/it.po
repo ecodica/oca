@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-07-22 12:25+0000\n"
+"PO-Revision-Date: 2025-10-13 09:43+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -288,7 +288,7 @@ msgid "Canceled"
 msgstr "Annullata"
 
 #. module: sign_oca
-#: model:ir.model.fields.selection,name:sign_oca.selection__sign_oca_request__state__cancel
+#: model:ir.model.fields.selection,name:sign_oca.selection__sign_oca_request__state__3_cancel
 #: model_terms:ir.ui.view,arch_db:sign_oca.sign_oca_request_form_view
 msgid "Cancelled"
 msgstr "Annullata"
@@ -300,10 +300,24 @@ msgstr "Controllo"
 
 #. module: sign_oca
 #. odoo-javascript
+#: code:addons/sign_oca/static/src/components/sign_oca_pdf_portal/sign_oca_navigator.esm.js:0
+#, python-format
+msgid "Click on Validate Button"
+msgstr "Clicca su pulsante valida"
+
+#. module: sign_oca
+#. odoo-javascript
 #: code:addons/sign_oca/static/src/components/sign_oca_configure/sign_oca_configure.xml:0
 #, python-format
 msgid "Click on the field that you want to add"
 msgstr "Fare clic sul campo che si vuole aggiungere"
+
+#. module: sign_oca
+#. odoo-javascript
+#: code:addons/sign_oca/static/src/components/sign_oca_pdf_portal/sign_oca_navigator.esm.js:0
+#, python-format
+msgid "Click to start"
+msgstr "Fare clic per iniziare"
 
 #. module: sign_oca
 #: model:ir.model,name:sign_oca.model_res_company
@@ -455,7 +469,7 @@ msgstr "Nome visualizzato"
 #. module: sign_oca
 #: model_terms:ir.ui.view,arch_db:sign_oca.portal_sign_document_signed
 msgid "Document"
-msgstr "Il documento"
+msgstr "Documento"
 
 #. module: sign_oca
 #: model_terms:ir.ui.view,arch_db:sign_oca.report_signature_certificate_doc
@@ -468,7 +482,7 @@ msgid "Domain"
 msgstr "Dominio"
 
 #. module: sign_oca
-#: model:ir.model.fields.selection,name:sign_oca.selection__sign_oca_request__state__draft
+#: model:ir.model.fields.selection,name:sign_oca.selection__sign_oca_request__state__1_draft
 msgid "Draft"
 msgstr "Bozza"
 
@@ -890,6 +904,13 @@ msgid "New document to sign"
 msgstr "Nuovo documento da firmare"
 
 #. module: sign_oca
+#. odoo-javascript
+#: code:addons/sign_oca/static/src/components/sign_oca_pdf_portal/sign_oca_navigator.esm.js:0
+#, python-format
+msgid "Next"
+msgstr "Successivo"
+
+#. module: sign_oca
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request__activity_date_deadline
 msgid "Next Activity Deadline"
 msgstr "Scadenza prossima attività"
@@ -1117,7 +1138,7 @@ msgid "Send to sign"
 msgstr "Invia alla firma"
 
 #. module: sign_oca
-#: model:ir.model.fields.selection,name:sign_oca.selection__sign_oca_request__state__sent
+#: model:ir.model.fields.selection,name:sign_oca.selection__sign_oca_request__state__0_sent
 #: model_terms:ir.ui.view,arch_db:sign_oca.sign_oca_request_search_view
 msgid "Sent"
 msgstr "Inviata"
@@ -1276,7 +1297,7 @@ msgstr "Firme"
 
 #. module: sign_oca
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request__signed
-#: model:ir.model.fields.selection,name:sign_oca.selection__sign_oca_request__state__signed
+#: model:ir.model.fields.selection,name:sign_oca.selection__sign_oca_request__state__2_signed
 #: model_terms:ir.ui.view,arch_db:sign_oca.sign_oca_request_search_view
 msgid "Signed"
 msgstr "Firmato"

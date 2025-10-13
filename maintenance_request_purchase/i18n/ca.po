@@ -17,6 +17,11 @@ msgstr ""
 "X-Generator: Weblate 4.17\n"
 
 #. module: maintenance_request_purchase
+#: model:ir.model.fields,field_description:maintenance_request_purchase.field_maintenance_request__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: maintenance_request_purchase
 #: model_terms:ir.ui.view,arch_db:maintenance_request_purchase.purchase_order_form
 msgid "Maintenance"
 msgstr "Manteniment"
@@ -56,6 +61,11 @@ msgstr "Comandes de compra"
 #: model:ir.model.fields,field_description:maintenance_request_purchase.field_maintenance_request__purchases_count
 msgid "Purchases Count"
 msgstr "Nombre de comandes"
+
+#. module: maintenance_request_purchase
+#: model:ir.model.fields,field_description:maintenance_request_purchase.field_maintenance_request__total_purchase_amount
+msgid "Total Purchase Amount"
+msgstr ""
 
 #~ msgid "Display Name"
 #~ msgstr "Nom a mostrar"

@@ -690,6 +690,11 @@ msgid "Display Odoo notifications"
 msgstr "Afficher les notifications Odoo"
 
 #. module: stock_barcodes
+#: model:ir.model.fields,field_description:stock_barcodes.field_stock_barcodes_option_group__no_increase_qty_done
+msgid "Do not increase qty done on each scan"
+msgstr ""
+
+#. module: stock_barcodes
 #: model:ir.model.fields,field_description:stock_barcodes.field_wiz_candidate_picking__product_qty_done
 #: model:ir.model.fields,field_description:stock_barcodes.field_wiz_stock_barcodes_read_todo__qty_done
 #: model:ir.model.fields.selection,name:stock_barcodes.selection__stock_move_line__barcode_scan_state__done
@@ -1710,6 +1715,14 @@ msgstr ""
 #: model:ir.model.fields,field_description:stock_barcodes.field_wiz_stock_barcodes_read_picking__show_detailed_operations
 msgid "Show Detailed Operations"
 msgstr "Afficher les opérations détaillées"
+
+#. module: stock_barcodes
+#: model:ir.model.fields,field_description:stock_barcodes.field_stock_barcodes_option_group__show_form_scan
+#: model:ir.model.fields,field_description:stock_barcodes.field_wiz_stock_barcodes_read__show_form_scan
+#: model:ir.model.fields,field_description:stock_barcodes.field_wiz_stock_barcodes_read_inventory__show_form_scan
+#: model:ir.model.fields,field_description:stock_barcodes.field_wiz_stock_barcodes_read_picking__show_form_scan
+msgid "Show Form Scan"
+msgstr ""
 
 #. module: stock_barcodes
 #: model:ir.model.fields,help:stock_barcodes.field_wiz_stock_barcodes_read__create_lot

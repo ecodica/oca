@@ -19,10 +19,12 @@ msgstr ""
 msgid ""
 "\n"
 "        Defines how the result from the AI system is processed.\n"
-"        - 'Immediate': The result is processed immediately after the AI system responds.\n"
+"        - 'Immediate': The result is processed immediately after the AI "
+"system responds.\n"
 "        - 'Asynchronous': The result is processed in the background.\n"
 "          It allows longer operations.\n"
-"          Odoo will provide a URL to the AI system where the response will be sent.\n"
+"          Odoo will provide a URL to the AI system where the response will "
+"be sent.\n"
 "          Users will receive a notification when the operation is started.\n"
 "          No notification will be sent when it is finished.\n"
 "        "
@@ -160,7 +162,16 @@ msgstr ""
 
 #. module: ai_oca_bridge
 #: model:ir.model.fields,field_description:ai_oca_bridge.field_ai_bridge__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_calendar_event__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_crm_lead__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_crm_team__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_crm_team_member__ai_bridge_info
 #: model:ir.model.fields,field_description:ai_oca_bridge.field_document_page__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_fsm_equipment__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_fsm_location__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_fsm_order__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_fsm_person__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_fsm_team__ai_bridge_info
 #: model:ir.model.fields,field_description:ai_oca_bridge.field_helpdesk_ticket__ai_bridge_info
 #: model:ir.model.fields,field_description:ai_oca_bridge.field_helpdesk_ticket_team__ai_bridge_info
 #: model:ir.model.fields,field_description:ai_oca_bridge.field_mail_blacklist__ai_bridge_info
@@ -169,9 +180,17 @@ msgstr ""
 #: model:ir.model.fields,field_description:ai_oca_bridge.field_mail_thread_blacklist__ai_bridge_info
 #: model:ir.model.fields,field_description:ai_oca_bridge.field_mail_thread_cc__ai_bridge_info
 #: model:ir.model.fields,field_description:ai_oca_bridge.field_mail_thread_phone__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_mrp_bom__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_mrp_production__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_mrp_unbuild__ai_bridge_info
 #: model:ir.model.fields,field_description:ai_oca_bridge.field_phone_blacklist__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_product_product__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_product_template__ai_bridge_info
 #: model:ir.model.fields,field_description:ai_oca_bridge.field_res_partner__ai_bridge_info
 #: model:ir.model.fields,field_description:ai_oca_bridge.field_res_users__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_stock_lot__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_stock_picking__ai_bridge_info
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_stock_scrap__ai_bridge_info
 msgid "Ai Bridge Info"
 msgstr ""
 
@@ -477,6 +496,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:ai_oca_bridge.field_ai_bridge__name
 #: model:ir.model.fields,field_description:ai_oca_bridge.field_ai_bridge_execution__name
 msgid "Name"
+msgstr ""
+
+#. module: ai_oca_bridge
+#: model:ir.model.fields,field_description:ai_oca_bridge.field_ai_bridge__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
 msgstr ""
 
 #. module: ai_oca_bridge

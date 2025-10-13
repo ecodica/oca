@@ -14,6 +14,11 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: maintenance_request_purchase
+#: model:ir.model.fields,field_description:maintenance_request_purchase.field_maintenance_request__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: maintenance_request_purchase
 #: model_terms:ir.ui.view,arch_db:maintenance_request_purchase.purchase_order_form
 msgid "Maintenance"
 msgstr ""
@@ -52,4 +57,9 @@ msgstr ""
 #. module: maintenance_request_purchase
 #: model:ir.model.fields,field_description:maintenance_request_purchase.field_maintenance_request__purchases_count
 msgid "Purchases Count"
+msgstr ""
+
+#. module: maintenance_request_purchase
+#: model:ir.model.fields,field_description:maintenance_request_purchase.field_maintenance_request__total_purchase_amount
+msgid "Total Purchase Amount"
 msgstr ""

@@ -7,7 +7,6 @@ export default class SignOcaPdfCommon extends Component {
     setup() {
         super.setup(...arguments);
         this.field_template = "sign_oca.sign_iframe_field";
-        console.log(this.props);
         this.pdf_url = this.getPdfUrl();
         this.viewer_url = "/web/static/lib/pdfjs/web/viewer.html?file=" + this.pdf_url;
         this.iframe = useRef("sign_oca_iframe");
@@ -119,6 +118,20 @@ export default class SignOcaPdfCommon extends Component {
         page.append(signatureItem[0]);
         this.items[item.id] = signatureItem[0];
         return signatureItem;
+    }
+    // CheckSignItemsCompletion and navigate functions for handling navigation
+    checkSignItemsCompletion() {
+        const signItemsToComplete = [];
+        $.each(this.info.items, (key, value) => {
+            if (this.postIframeField(value) && this.postIframeField(value)[0]) {
+                const $element = $(value);
+                const signItemToComplete = {};
+                signItemToComplete.data = $element[0];
+                signItemToComplete.el = this.postIframeField(value)[0];
+                signItemsToComplete.push(signItemToComplete);
+            }
+        });
+        return signItemsToComplete;
     }
 }
 SignOcaPdfCommon.template = "sign_oca.SignOcaPdfCommon";
