@@ -2,14 +2,14 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 {
     "name": "Drag & drop emails to Odoo",
-    "version": "18.0.1.0.0",
+    "version": "18.0.1.0.1",
     "author": "Therp BV,Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "category": "Discuss",
     "website": "https://github.com/OCA/mail",
     "summary": "Attach emails to Odoo by dragging them from your desktop",
     "depends": ["mail"],
-    "external_dependencies": {"python": ["extract_msg", "cryptography<37"]},
+    "external_dependencies": {"python": ["extract_msg"]},
     "data": ["views/res_config_settings_views.xml"],
     "assets": {
         "web.assets_backend": [

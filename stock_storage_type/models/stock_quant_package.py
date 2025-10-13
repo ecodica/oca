@@ -17,6 +17,17 @@ class StockQuantPackage(models.Model):
         compute="_compute_height_in_m",
         store=True,
     )
+    height = fields.Float(compute="_compute_height", store=True, readonly=False)
+
+    @api.depends("package_type_id", "product_packaging_id")
+    def _compute_height(self):
+        for package in self:
+            if package.product_packaging_id.height:
+                package.height = package.product_packaging_id.height
+            elif package.package_type_id:
+                package.height = package.package_type_id.height
+            else:
+                package.height = 0.0
 
     @api.depends("pack_weight", "weight_uom_id")
     def _compute_pack_weight_in_kg(self):
@@ -45,48 +56,3 @@ class StockQuantPackage(models.Model):
                 raise ValidationError(
                     _("The height is mandatory on package {}.").format(package.name)
                 )
-
-    def auto_assign_packaging(self):
-        res = super().auto_assign_packaging()
-        for package in self:
-            if not package.package_type_id:
-                # if no package type could be set by auto assign,
-                # fallback on the default product's package type (if any)
-                package._sync_package_type_from_single_product()
-        return res
-
-    @api.model_create_multi
-    def create(self, vals):
-        records = super().create(vals)
-        records._sync_package_type_from_packaging()
-        return records
-
-    def write(self, vals):
-        result = super().write(vals)
-        if vals.get("product_packaging_id"):
-            self._sync_package_type_from_packaging()
-        return result
-
-    def _sync_package_type_from_packaging(self):
-        for package in self:
-            if package.package_type_id:
-                # Do not set package type for delivery packages
-                # to not trigger constraint like height requirement
-                # (we are delivering them, not storing them)
-                continue
-            package_type = package.product_packaging_id.package_type_id
-            if not package_type:
-                continue
-            package.package_type_id = package_type
-
-    def _sync_package_type_from_single_product(self):
-        for package in self:
-            if package.package_type_id:
-                # Do not set package type for delivery packages
-                # to not trigger constraint like height requirement
-                # (we are delivering them, not storing them)
-                continue
-            package_type = package.single_product_id.package_type_id
-            if not package_type:
-                continue
-            package.package_type_id = package_type
