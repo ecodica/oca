@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-09-03 11:43+0000\n"
+"PO-Revision-Date: 2025-10-14 08:42+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -215,6 +215,11 @@ msgstr "Creato il"
 #: model_terms:ir.ui.view,arch_db:stock_release_channel.stock_release_channel_form_view
 msgid "Deliveries"
 msgstr "Consegne"
+
+#. module: stock_release_channel
+#: model:ir.model.fields,field_description:stock_release_channel.field_stock_picking__delivery_date
+msgid "Delivery Date"
+msgstr "Data consegna"
 
 #. module: stock_release_channel
 #: model:ir.model.fields,field_description:stock_release_channel.field_stock_release_channel__display_name
@@ -538,6 +543,7 @@ msgstr "Canale rilascio"
 #: model:ir.model.fields,field_description:stock_release_channel.field_res_users__stock_release_channel_ids
 #: model:ir.ui.menu,name:stock_release_channel.stock_release_channel_config_menu
 #: model:ir.ui.menu,name:stock_release_channel.stock_release_channel_menu
+#: model:ir.ui.menu,name:stock_release_channel.stock_release_channel_menu_section
 #: model_terms:ir.ui.view,arch_db:stock_release_channel.res_partner_form_view
 msgid "Release Channels"
 msgstr "Canali rilascio"

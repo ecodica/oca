@@ -583,20 +583,40 @@ class StockReleaseChannel(models.Model):
         ):
             return
         message = ""
-        for channel in picking._find_release_channel_possible_candidate():
+        possible_channels = picking._find_release_channel_possible_candidate()
+        log = picking.env.context.get("assign_release_channel_log_stream")
+        if log:
+            channel_names = ", ".join(possible_channels.mapped("display_name"))
+            log.write(f"Candidate channels: {channel_names}\n")
+        for channel in possible_channels:
             current = picking
             domain = channel._prepare_domain()
             code = channel.sudo().code
             if domain:
                 current = picking.filtered_domain(domain)
             if not current:
+                if log:
+                    log.write(
+                        f"Channel '{channel.display_name}' excluded by channel "
+                        "domain\n"
+                    )
                 continue
             if code:
                 current = channel._eval_code(current)
             if not current:
+                if log:
+                    log.write(
+                        f"Channel '{channel.display_name}' excluded by channel "
+                        "python code\n"
+                    )
                 continue
             current = channel._assign_release_channel_additional_filter(current)
             if not current:
+                if log:
+                    log.write(
+                        f"Channel '{channel.display_name}' excluded by channel "
+                        "additional filter\n"
+                    )
                 continue
             if current.release_channel_id != channel:
                 current.release_channel_id = channel
@@ -605,8 +625,7 @@ class StockReleaseChannel(models.Model):
         if not picking.release_channel_id:
             # by this point, the picking should have been assigned
             message_template = (
-                "Transfer %(picking_name)s could not be assigned to a "
-                "channel, you should add a final catch-all rule"
+                "Transfer %(picking_name)s could not be assigned to a channel"
             )
             _logger.warning(message_template, {"picking_name": picking.name})
             message = self.env._(message_template, picking_name=picking.name)
@@ -952,7 +971,7 @@ class StockReleaseChannel(models.Model):
         """
         return defaultdict(list)
 
-    def _get_earliest_delivery_date(self, partner, order_dt):
+    def _get_earliest_delivery_date(self, partner, start_dt, steps=None):
         """Compute the earliest delivery date for this channel
 
         Go through each steps. All generators of a step must agree on a date.
@@ -963,13 +982,14 @@ class StockReleaseChannel(models.Model):
         This algorithm performs a quick convergence to a date.
         """
         self.ensure_one()
-        best_dt = order_dt
-        limit_dt = order_dt + timedelta(days=DELIVERY_DATE_COMPUTATION_LIMIT_DAYS)
-        for step in self._delivery_date_steps:
+        best_dt = start_dt
+        limit_dt = start_dt + timedelta(days=DELIVERY_DATE_COMPUTATION_LIMIT_DAYS)
+        _logger.debug(f"Compute earliest delivery date starting from {best_dt}")
+        steps = steps or self._delivery_date_steps
+        for step in steps:
             funcs = self._delivery_date_generators.get(step)
             if not funcs:
                 continue
-            _logger.debug(f"Compute earliest delivery date for {step}")
             generators = []
             best_generators = []
             start_dt = best_dt
@@ -980,6 +1000,7 @@ class StockReleaseChannel(models.Model):
                 new_dt = next(gen)
                 if new_dt > best_dt:
                     best_dt = new_dt
+                    _logger.debug(f"  new {step} date {best_dt} from {gen.__name__}")
                     best_generators = [gen]
                 elif new_dt == best_dt:
                     best_generators.append(gen)
@@ -996,10 +1017,14 @@ class StockReleaseChannel(models.Model):
                         continue
                     best_dt = gen.send(previous_dt := best_dt)
                     if best_dt != previous_dt:
-                        _logger.debug(f"New {step} date {best_dt} from {gen}")
+                        _logger.debug(
+                            f"  new {step} date {best_dt} from {gen.__name__}"
+                        )
                         best_generators = [gen]
                     else:
                         best_generators.append(gen)
+            gen_names = ",".join(gen.__name__ for gen in generators)
+            _logger.debug(f"  {step} date {best_dt} agreed by {gen_names}")
             for gen in generators:
                 gen.close()
             if best_dt is None:
