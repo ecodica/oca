@@ -5,13 +5,13 @@
 {
     "name": "Storage Image Product",
     "summary": "Link images to products and categories",
-    "version": "18.0.1.0.1",
+    "version": "18.0.1.0.0",
     "category": "Storage",
     "website": "https://github.com/OCA/storage",
     "author": " Akretion, Odoo Community Association (OCA)",
     "license": "LGPL-3",
     "development_status": "Production/Stable",
-    "installable": True,
+    "installable": False,
     "depends": ["storage_image", "product", "sale"],  # only for the menu
     "data": [
         "security/ir.model.access.csv",

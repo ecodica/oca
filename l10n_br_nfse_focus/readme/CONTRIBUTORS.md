@@ -1,5 +1,0 @@
-- [KMEE](https://www.kmee.com.br):
-  - André Marcos \<<andre.marcos@kmee.com.br>\>
-- [Escodoo](https://www.escodoo.com.br):
-  - Marcel Savegnago \<<marcel.savegnago@escodoo.com.br>\>
-  - Kaynnan Lemes \<<kaynnan.lemes@escodoo.com.br>\>

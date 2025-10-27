@@ -1,7 +1,0 @@
-- [Tecnativa](https://www.tecnativa.com):
-  - Pedro M. Baeza
-  - Rafael Blasco
-  - David Vidal
-  - Ernesto Tejeda
-- [Heliconia Solutions Pvt. Ltd.](https://www.heliconia.io)
-  - Bhavesh Heliconia

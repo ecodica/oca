@@ -63,18 +63,6 @@ class FsFolderService {
             {}
         );
     }
-    unlink_folder(record, name) {
-        return rpc(
-            `/fs_folder/unlink_folder/${record.resModel}/${record.resId}/${name}`,
-            {}
-        );
-    }
-    deleteFolder(record, name) {
-        return rpc(
-            `/fs_folder/delete_folder/${record.resModel}/${record.resId}/${name}`,
-            {}
-        );
-    }
 }
 export const fsFolderService = {
     start() {

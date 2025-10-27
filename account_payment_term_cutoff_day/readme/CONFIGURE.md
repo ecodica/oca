@@ -1,4 +1,0 @@
-- Go to Invoicing > Configuration > Payment Terms.
-- Select or create a Payment Term.
-- Under Payment Term Lines, enable the Has Cutoff Day option.
-- Set the Cutoff Day and Months fields accordingly.

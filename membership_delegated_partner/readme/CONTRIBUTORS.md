@@ -1,9 +1,0 @@
-- [Tecnativa](https://www.tecnativa.com):
-  - Pedro M. Baeza
-  - Rafael Blasco
-  - David Vidal
-  - Carolina Fernandez
-- [Onestein](https://onestein.eu):
-  - Andrea Stirpe
-- [Heliconia Solutions Pvt. Ltd.](https://www.heliconia.io)
-  - Bhavesh Heliconia

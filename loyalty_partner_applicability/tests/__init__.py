@@ -1,1 +1,0 @@
-from . import test_loyalty_partner_applicability

@@ -1,4 +1,0 @@
-- Alexis de Lattre \<<alexis.delattre@akretion.com>\>
-- Italo LOPES \<<italo.lopes@camptocamp.com>\>
-- [Heliconia Solutions Pvt. Ltd.](https://www.heliconia.io)
-  - Bhavesh Heliconia

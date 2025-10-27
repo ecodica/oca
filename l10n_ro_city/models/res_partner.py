@@ -2,7 +2,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html)
 
 
-from odoo import _, api, fields, models
+from odoo import api, fields, models
 from odoo.exceptions import UserError
 
 
@@ -33,7 +33,8 @@ class Partner(models.Model):
             if state:
                 if self.state_id and self.state_id != state:
                     raise UserError(
-                        _(f"The state {state.name} doesn't match the zip code")
+                        self.env._("The state {name} doesn't match the zip code"),
+                        name=state.name,
                     )
                 self.state_id = state
 
@@ -47,15 +48,14 @@ class Partner(models.Model):
                     "06": "l10n_ro_city.RO_179196",  # Sector 6
                 }
                 city = self.env.ref(mapping[self.zip[:2]])
-                if (
-                    self.state_id != state_b
-                    and "skip_ro_vat_change" not in self.env.context
-                ):
+                if self.state_id != state_b:
                     raise UserError(
-                        _(
-                            f"The city {city.name} doesn't match the"
-                            f" zip code and the state {state.name}"
-                        )
+                        self.env._(
+                            "The city {city} doesn't match the"
+                            " zip code and the state {state}"
+                        ),
+                        city=city.name,
+                        state=state.name,
                     )
             else:
                 domain = [
@@ -65,9 +65,13 @@ class Partner(models.Model):
                 city = self.env["res.city"].search(domain, limit=1)
 
             if city:
-                self.city = city.name
-                self.city_id = city
-                self.state_id = city.state_id
+                self.write(
+                    {
+                        "city_id": city.id,
+                        "city": city.name,
+                        "state_id": city.state_id.id,
+                    }
+                )
 
     @api.onchange("city_id")
     def _onchange_city_id(self):

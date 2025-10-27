@@ -15,9 +15,6 @@ class ResCompany(models.Model):
         compute="_compute_l10n_ro_accounting",
         store=True,
     )
-    anglo_saxon_accounting = fields.Boolean(
-        string="Use anglo-saxon accounting", default=True
-    )
     l10n_ro_share_capital = fields.Float(
         string="Romania - Share Capital", digits="Account", default=200
     )
@@ -106,8 +103,7 @@ class ResCompany(models.Model):
         "product.product",
         string="Romania - Customs Duty Landed Cost Product",
         domain="[('type', '=', 'service')]",
-        help="This product will be used in create the DVI landed cost"
-        "for the duty tax",
+        help="This product will be used in create the DVI landed costfor the duty tax",
     )
     l10n_ro_property_customs_commission_product_id = fields.Many2one(
         "product.product",

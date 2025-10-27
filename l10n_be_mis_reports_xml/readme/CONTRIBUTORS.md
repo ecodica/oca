@@ -1,4 +1,0 @@
-- [Coop IT Easy SC](https://coopiteasy.be):
-  - Robin Keunen
-  - Virgine Dewulf
-  - hugues de keyzer

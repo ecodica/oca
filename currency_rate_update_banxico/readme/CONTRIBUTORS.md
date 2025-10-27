@@ -1,3 +1,0 @@
-- [Jarsa](https://www.jarsa.com):
-  - Alan Ramos
-- [AMOdoo](https://amodoo.org/)

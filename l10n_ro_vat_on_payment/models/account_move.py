@@ -11,7 +11,7 @@ class AccountMove(models.Model):
     _name = "account.move"
     _inherit = ["account.move", "l10n.ro.mixin"]
 
-    @api.onchange("partner_id", "company_id", "invoice_date")
+    @api.onchange("partner_id", "company_id")
     def _onchange_partner_id(self):
         """Check if invoice is with VAT on Payment.
         Romanian law specify that the VAT on payment is applied only
@@ -19,7 +19,7 @@ class AccountMove(models.Model):
         """
         result = super()._onchange_partner_id()
         if self.is_l10n_ro_record:
-            ctx = dict(self._context)
+            ctx = dict(self.env.context)
             company = self.company_id
             partner = (
                 self.env["res.partner"]._find_accounting_partner(self.partner_id)

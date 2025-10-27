@@ -1,1 +1,0 @@
-The "Partner" information only field has been added in "Discount & Loyalty" (loyalty.program) and "Sales Analysis".

@@ -1,4 +1,0 @@
-- Juan Miguel Sánchez Arce \<<juan.sanchez@camptocamp.com>\>
-- Michael Tietz (MT Software) \<<mtietz@mt-software.de>\>
-- Souheil Bejaoui \<<souheil.bejaoui@acsone.eu>\>
-- Simone Orsi \<<simone.orsi@camptocamp.com>\>

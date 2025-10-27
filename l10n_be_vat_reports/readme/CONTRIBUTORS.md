@@ -1,6 +1,0 @@
-- André Paramés \<github@andreparames.com\> (<https://www.acsone.eu/>)
-- [Coop IT Easy SC](https://coopiteasy.be):
-  - Robin Keunen
-  - hugues de keyzer
-  - Victor Champonnois
-- Jacques-Etienne Baudoux (BCIM) \<je@bcim.be\>

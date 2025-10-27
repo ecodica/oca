@@ -1,5 +1,0 @@
-- [Tecnativa](https://www.tecnativa.com):
-  - Pedro M. Baeza
-  - Carlos Roca
-  - Stefan Ungureanu
-  - Pilar Vargas

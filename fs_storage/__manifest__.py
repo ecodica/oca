@@ -5,13 +5,13 @@
 {
     "name": "Filesystem Storage Backend",
     "summary": "Implement the concept of Storage with amazon S3, sftp...",
-    "version": "18.0.2.1.0",
+    "version": "18.0.2.0.1",
     "category": "FS Storage",
     "website": "https://github.com/OCA/storage",
     "author": " ACSONE SA/NV, Odoo Community Association (OCA)",
     "license": "LGPL-3",
     "development_status": "Beta",
-    "installable": True,
+    "installable": False,
     "depends": ["base", "base_sparse_field", "server_environment"],
     "data": [
         "views/fs_storage_view.xml",

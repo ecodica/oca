@@ -5,11 +5,8 @@
 
 {
     "name": "Custom shortcut icon",
-    "version": "18.0.1.0.0",
-    "author": "Therp BV, "
-    "Tecnativa, "
-    "OERP Canada,"
-    "Odoo Community Association (OCA)",
+    "version": "19.0.1.0.0",
+    "author": "Therp BV, Tecnativa, OERP Canada,Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "category": "Website",
     "summary": "Allows to set a custom shortcut icon (aka favicon)",

@@ -1,3 +1,0 @@
-- Define examples to use and import
-- Allow child fields. Right now, only first level fields are accepted.
-- Information popover is not working properly when there is large data.

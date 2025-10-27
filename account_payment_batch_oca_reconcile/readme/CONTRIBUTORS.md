@@ -1,2 +1,0 @@
-- Enric Tobella (www.dixmit.com)
-- Alexis de Lattre \<<alexis.delattre@akretion.com>\>
