@@ -166,7 +166,10 @@ class Rma(models.Model):
 
     def _prepare_procurement_group_vals(self):
         vals = super()._prepare_procurement_group_vals()
-        if not self.env.context.get("ignore_rma_sale_order") and self.order_id:
+        if (
+            not self.env.context.get("ignore_rma_sale_order")
+            and len(self.order_id) == 1
+        ):
             vals["sale_id"] = self.order_id.id
         return vals
 
@@ -175,6 +178,39 @@ class Rma(models.Model):
         return super()._prepare_delivery_procurements(
             scheduled_date=scheduled_date, qty=qty, uom=uom
         )
+
+    def _prepare_delivery_procurement_vals(self, scheduled_date=None):
+        vals = super()._prepare_delivery_procurement_vals(scheduled_date=scheduled_date)
+        if (
+            self.move_id
+            and self.move_id.sale_line_id
+            and self.operation_id.action_create_refund == "update_quantity"
+        ):
+            vals["sale_line_id"] = self.move_id.sale_line_id.id
+        return vals
+
+    def _prepare_replace_procurement_vals(self, warehouse=None, scheduled_date=None):
+        vals = super()._prepare_replace_procurement_vals(
+            warehouse=warehouse, scheduled_date=scheduled_date
+        )
+        if (
+            self.move_id
+            and self.move_id.sale_line_id
+            and self.operation_id.action_create_refund == "update_quantity"
+        ):
+            vals["sale_line_id"] = self.move_id.sale_line_id.id
+        return vals
+
+    def _prepare_reception_procurement_vals(self, group=None):
+        """This method is used only for reception and a specific RMA IN route."""
+        vals = super()._prepare_reception_procurement_vals(group=group)
+        if (
+            self.move_id
+            and self.move_id.sale_line_id
+            and self.operation_id.action_create_refund == "update_quantity"
+        ):
+            vals["sale_line_id"] = self.move_id.sale_line_id.id
+        return vals
 
     def create_replace(self, scheduled_date, warehouse, product, qty, uom):
         # When the procurement group has the sale id set it will propagate to the

@@ -305,6 +305,11 @@ msgid "Add Attachments"
 msgstr "Pridať Prílohu"
 
 #. module: helpdesk_mgmt
+#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.res_config_settings_view_form
+msgid "Additional fields"
+msgstr ""
+
+#. module: helpdesk_mgmt
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_team__alias_contact
 msgid "Alias Contact Security"
 msgstr "Alias Kontaktu Bezpečnosti"
@@ -424,6 +429,11 @@ msgid "By"
 msgstr "od"
 
 #. module: helpdesk_mgmt
+#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.view_helpdesk_ticket_duplicate_form
+msgid "Cancel"
+msgstr ""
+
+#. module: helpdesk_mgmt
 #: model:helpdesk.ticket.stage,name:helpdesk_mgmt.helpdesk_ticket_stage_cancelled
 msgid "Cancelled"
 msgstr "Zrušené"
@@ -442,6 +452,7 @@ msgstr "Kategórie"
 #: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.helpdesk_ticket_view_search
 #: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.portal_create_ticket
 #: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.portal_ticket_list
+#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.res_config_settings_view_form
 msgid "Category"
 msgstr "Kategória"
 
@@ -466,6 +477,11 @@ msgstr "Kanály"
 #. module: helpdesk_mgmt
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_category__child_id
 msgid "Child Categories"
+msgstr ""
+
+#. module: helpdesk_mgmt
+#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.res_config_settings_view_form
+msgid "Choose which fields are required in the portal form"
 msgstr ""
 
 #. module: helpdesk_mgmt
@@ -552,6 +568,11 @@ msgid "Configure domain name"
 msgstr "Nakonfigurujte názov domény"
 
 #. module: helpdesk_mgmt
+#: model:helpdesk.ticket.team,name:helpdesk_mgmt.helpdesk_team_3
+msgid "Consultants"
+msgstr ""
+
+#. module: helpdesk_mgmt
 #: model:ir.model,name:helpdesk_mgmt.model_res_partner
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket__partner_id
 msgid "Contact"
@@ -566,6 +587,7 @@ msgstr "Dátum vytvorenia"
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket__create_uid
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_category__create_uid
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_channel__create_uid
+#: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_duplicate_wizard__create_uid
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_stage__create_uid
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_tag__create_uid
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_team__create_uid
@@ -576,6 +598,7 @@ msgstr "Vytvoril"
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket__create_date
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_category__create_date
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_channel__create_date
+#: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_duplicate_wizard__create_date
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_stage__create_date
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_tag__create_date
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_team__create_date
@@ -648,6 +671,7 @@ msgstr "Popis"
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket__display_name
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_category__display_name
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_channel__display_name
+#: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_duplicate_wizard__display_name
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_stage__display_name
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_tag__display_name
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_team__display_name
@@ -675,8 +699,44 @@ msgstr "Hotové"
 
 #. module: helpdesk_mgmt
 #: model:ir.actions.server,name:helpdesk_mgmt.action_duplicate_ticket
+#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.ticket_view_form
 msgid "Duplicate"
 msgstr "Duplikovať"
+
+#. module: helpdesk_mgmt
+#: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket__duplicate_count
+msgid "Duplicate Count"
+msgstr ""
+
+#. module: helpdesk_mgmt
+#: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_duplicate_wizard__duplicate_of_id
+msgid "Duplicate Of"
+msgstr ""
+
+#. module: helpdesk_mgmt
+#: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket__duplicate_id
+msgid "Duplicate of"
+msgstr ""
+
+#. module: helpdesk_mgmt
+#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.res_config_settings_view_form
+msgid "Duplicate stage"
+msgstr ""
+
+#. module: helpdesk_mgmt
+#: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket__duplicate_ids
+msgid "Duplicate tickets"
+msgstr ""
+
+#. module: helpdesk_mgmt
+#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.res_config_settings_view_form
+msgid "Duplicate tracking"
+msgstr ""
+
+#. module: helpdesk_mgmt
+#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.ticket_view_form
+msgid "Duplicates"
+msgstr ""
 
 #. module: helpdesk_mgmt
 #: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.view_helpdesk_ticket_kanban
@@ -710,6 +770,18 @@ msgstr "E-mailová kópia"
 #: model:ir.model.fields,help:helpdesk_mgmt.field_helpdesk_ticket_team__alias_domain
 msgid "Email domain e.g. 'example.com' in 'odoo@example.com'"
 msgstr "Doména e-mailu napr. 'example.com' v 'odoo@example.com'"
+
+#. module: helpdesk_mgmt
+#: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket__duplicate_tracking_enabled
+#: model:ir.model.fields,field_description:helpdesk_mgmt.field_res_company__helpdesk_mgmt_duplicate_tracking
+#: model:ir.model.fields,field_description:helpdesk_mgmt.field_res_config_settings__helpdesk_mgmt_duplicate_tracking
+msgid "Enable duplicate ticket tracking."
+msgstr ""
+
+#. module: helpdesk_mgmt
+#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.res_config_settings_view_form
+msgid "Enable duplicate tracking"
+msgstr ""
 
 #. module: helpdesk_mgmt
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_stage__fold
@@ -780,6 +852,7 @@ msgid "Has Message"
 msgstr "Má Správu"
 
 #. module: helpdesk_mgmt
+#: model:helpdesk.ticket.team,name:helpdesk_mgmt.helpdesk_team_2
 #: model:ir.module.category,name:helpdesk_mgmt.module_helpdesk_category
 #: model:ir.ui.menu,name:helpdesk_mgmt.helpdesk_ticket_main_menu
 #: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.res_config_settings_view_form
@@ -887,6 +960,7 @@ msgstr "Výsoká Priorita"
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket__id
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_category__id
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_channel__id
+#: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_duplicate_wizard__id
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_stage__id
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_tag__id
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_team__id
@@ -979,6 +1053,7 @@ msgstr "Aktualizácia poslednej fázy"
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket__write_uid
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_category__write_uid
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_channel__write_uid
+#: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_duplicate_wizard__write_uid
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_stage__write_uid
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_tag__write_uid
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_team__write_uid
@@ -989,6 +1064,7 @@ msgstr "Naposledy aktualizované používateľom"
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket__write_date
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_category__write_date
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_channel__write_date
+#: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_duplicate_wizard__write_date
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_stage__write_date
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_tag__write_date
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_team__write_date
@@ -1011,9 +1087,20 @@ msgid "Local-part based incoming detection"
 msgstr "Detekcia prichádzajúcich na základe miestnej časti"
 
 #. module: helpdesk_mgmt
+#: model:helpdesk.ticket.team,name:helpdesk_mgmt.helpdesk_team_1
+msgid "Localization team"
+msgstr ""
+
+#. module: helpdesk_mgmt
 #: model:ir.model.fields.selection,name:helpdesk_mgmt.selection__helpdesk_ticket__priority__0
 msgid "Low"
 msgstr "Nízky"
+
+#. module: helpdesk_mgmt
+#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.ticket_view_form
+#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.view_helpdesk_ticket_duplicate_form
+msgid "Mark as duplicate"
+msgstr ""
 
 #. module: helpdesk_mgmt
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket__attachment_ids
@@ -1041,6 +1128,12 @@ msgstr "Chyba doručenia správy"
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_team__message_ids
 msgid "Messages"
 msgstr "Správy"
+
+#. module: helpdesk_mgmt
+#: model:ir.model.fields,field_description:helpdesk_mgmt.field_res_company__helpdesk_mgmt_duplicate_ticket_stage_id
+#: model:ir.model.fields,field_description:helpdesk_mgmt.field_res_config_settings__helpdesk_mgmt_duplicate_ticket_stage_id
+msgid "Move duplicate tickets to this stage"
+msgstr ""
 
 #. module: helpdesk_mgmt
 #: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.helpdesk_ticket_view_search
@@ -1347,26 +1440,21 @@ msgid "Reporting"
 msgstr "Reporting"
 
 #. module: helpdesk_mgmt
-#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.res_config_settings_view_form
-msgid "Required Category"
-msgstr "Požadovaná kategória"
-
-#. module: helpdesk_mgmt
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_res_company__helpdesk_mgmt_portal_category_id_required
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_res_config_settings__helpdesk_mgmt_portal_category_id_required
 msgid "Required Category field in Helpdesk portal"
 msgstr "Povinné pole Kategória na portáli Helpdesk"
 
 #. module: helpdesk_mgmt
-#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.res_config_settings_view_form
-msgid "Required Team"
-msgstr "Požadovaný tím"
-
-#. module: helpdesk_mgmt
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_res_company__helpdesk_mgmt_portal_team_id_required
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_res_config_settings__helpdesk_mgmt_portal_team_id_required
 msgid "Required Team field in Helpdesk portal"
 msgstr "Povinné pole Tím na portáli Helpdesk"
+
+#. module: helpdesk_mgmt
+#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.res_config_settings_view_form
+msgid "Required fields"
+msgstr ""
 
 #. module: helpdesk_mgmt
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket__activity_user_id
@@ -1444,11 +1532,6 @@ msgid "Show in portal form"
 msgstr "Zobraziť vo formuláry portálu"
 
 #. module: helpdesk_mgmt
-#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.res_config_settings_view_form
-msgid "Show teams form"
-msgstr "Zobraziť formulár tímov"
-
-#. module: helpdesk_mgmt
 #: model:helpdesk.ticket.category,name:helpdesk_mgmt.helpdesk_category_1
 msgid "Software"
 msgstr "Softvér"
@@ -1523,9 +1606,15 @@ msgid "Tags"
 msgstr "Štítky"
 
 #. module: helpdesk_mgmt
+#: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_duplicate_wizard__target_stage_id
+msgid "Target Stage"
+msgstr ""
+
+#. module: helpdesk_mgmt
 #: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket__team_id
 #: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.helpdesk_ticket_view_search
 #: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.portal_create_ticket
+#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.res_config_settings_view_form
 msgid "Team"
 msgstr "Tím"
 
@@ -1608,6 +1697,14 @@ msgstr ""
 "záznamy na zobrazenie."
 
 #. module: helpdesk_mgmt
+#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.ticket_view_form
+msgid ""
+"This ticket is a\n"
+"                            duplicate of"
+msgstr ""
+
+#. module: helpdesk_mgmt
+#: model:ir.model.fields,field_description:helpdesk_mgmt.field_helpdesk_ticket_duplicate_wizard__ticket_id
 #: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.helpdesk_ticket_view_search
 msgid "Ticket"
 msgstr "Tiket"
@@ -1772,9 +1869,30 @@ msgid "Website communication history"
 msgstr "História komunikácie na webe"
 
 #. module: helpdesk_mgmt
+#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.res_config_settings_view_form
+msgid "When marked as duplicate, tickets will be moved to this stage"
+msgstr ""
+
+#. module: helpdesk_mgmt
+#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.res_config_settings_view_form
+msgid "Whether to display additional fields in the portal form"
+msgstr ""
+
+#. module: helpdesk_mgmt
 #: model:helpdesk.ticket.category,name:helpdesk_mgmt.helpdesk_category_2
 msgid "Wifi"
 msgstr "Wifi"
+
+#. module: helpdesk_mgmt
+#. odoo-python
+#: code:addons/helpdesk_mgmt/wizards/helpdesk_ticket_duplicate_wizard.py:0
+msgid "You need to set a valid duplicate!"
+msgstr ""
+
+#. module: helpdesk_mgmt
+#: model:ir.model,name:helpdesk_mgmt.model_helpdesk_ticket_duplicate_wizard
+msgid "helpdesk Ticket Duplicate Wizard"
+msgstr ""
 
 #. module: helpdesk_mgmt
 #: model:mail.template,subject:helpdesk_mgmt.assignment_email_template
@@ -1784,6 +1902,15 @@ msgid ""
 msgstr ""
 "{{object.company_id.name}} Pridelenie tiketov (Ref {{object.number or 'n/"
 "a' }})"
+
+#~ msgid "Required Category"
+#~ msgstr "Požadovaná kategória"
+
+#~ msgid "Required Team"
+#~ msgstr "Požadovaný tím"
+
+#~ msgid "Show teams form"
+#~ msgstr "Zobraziť formulár tímov"
 
 #~ msgid "<strong class=\"d-block mb-2\">Attachments</strong>"
 #~ msgstr "<strong class=\"d-block mb-2\">Prílohy</strong>"

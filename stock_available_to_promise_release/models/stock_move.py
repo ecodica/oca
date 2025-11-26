@@ -222,14 +222,7 @@ class StockMove(models.Model):
                 OR (
                     m.priority = move.priority
                     AND m.date_priority = move.date_priority
-                    AND m.picking_type_id = move.picking_type_id
                     AND m.id < move.id
-                )
-                OR (
-                    m.priority = move.priority
-                    AND m.date_priority = move.date_priority
-                    AND m.picking_type_id != move.picking_type_id
-                    AND m.id > move.id
                 )
             )
         """
@@ -552,6 +545,8 @@ class StockMove(models.Model):
                 move._release_split(remaining_qty)
             released_moves |= move
 
+        released_moves = released_moves._before_release()
+
         # Move the unreleased moves to a backorder.
         # This behavior can be disabled by setting the flag
         # no_backorder_at_release on the stock.route of the move.
@@ -567,7 +562,6 @@ class StockMove(models.Model):
 
         # Pull the released moves
         for move in released_moves:
-            move._before_release()
             values = move._prepare_procurement_values()
             values["move_dest_ids"] = move
             procurement_requests.append(
@@ -599,8 +593,12 @@ class StockMove(models.Model):
         return assigned_moves
 
     def _before_release(self):
-        """Hook that aims to be overridden."""
+        """Hook that aims to be overridden.
+
+        Return the moves that must be further released
+        """
         self._release_set_expected_date()
+        return self
 
     def _release_get_expected_date(self):
         """Return the new scheduled date of a single delivery move"""
@@ -615,11 +613,9 @@ class StockMove(models.Model):
 
         This will be propagated to the chain of moves"""
         for move in self:
-            if not new_expected_date:
-                new_expected_date = move._release_get_expected_date()
-            if not new_expected_date:
-                continue
-            move.date = new_expected_date
+            expected_date = new_expected_date or move._release_get_expected_date()
+            if expected_date:
+                move.date = expected_date
 
     def _after_release_update_chain(self):
         picking_ids = set()
@@ -657,17 +653,33 @@ class StockMove(models.Model):
         new_move._action_confirm(merge=False)
         return new_move
 
-    def _unreleased_to_backorder(self):
-        """Move the unreleased moves to a new backorder picking"""
+    def _unreleased_to_backorder(self, split_order=False):
+        """Move the unreleased moves to a new backorder picking
+
+        Set split_order=True when it's the released moves that are moved to a
+        split order.
+        """
         origin_pickings = {m.id: m.picking_id for m in self}
         self.with_context(release_available_to_promise=True)._assign_picking()
         backorder_links = {}
         for move in self:
             origin = origin_pickings[move.id]
             if origin:
-                backorder_links[move.picking_id] = origin
+                if not split_order:
+                    backorder_links[move.picking_id] = origin
+                else:
+                    backorder_links[origin] = move.picking_id
         for backorder, origin in backorder_links.items():
-            backorder._release_link_backorder(origin)
+            if (
+                backorder.state in ("draft", "cancel")
+                and len(backorder.backorder_ids) == 1
+            ):
+                # When the backorder order is canceled and the moves are
+                # reassigned to a new order, post a link to the real
+                # backorder. Used by the module
+                # stock_available_to_promise_release_alternative_carrier
+                backorder = backorder.backorder_ids
+            backorder._release_link_backorder(origin, split_order=split_order)
 
     def _assign_picking_post_process(self, new=False):
         res = super()._assign_picking_post_process(new)
@@ -918,11 +930,9 @@ class StockMove(models.Model):
     def _search_picking_for_assignation_domain(self):
         domain = super()._search_picking_for_assignation_domain()
         if self.env.context.get("release_available_to_promise"):
-            force_new_picking = not self.rule_id.no_backorder_at_release
-            if force_new_picking:
-                # We want a newer picking, search with '>' to prevent to select
-                # any old available picking
-                domain = expression.AND([domain, [("id", ">", self.picking_id.id)]])
+            # We want a newer picking, search with '>' to prevent to select
+            # any old available picking
+            domain = expression.AND([domain, [("id", ">", self.picking_id.id)]])
         if self.picking_type_id.prevent_new_move_after_release:
             domain = expression.AND([domain, [("last_release_date", "=", False)]])
         return domain

@@ -234,7 +234,10 @@
                             />
                             <field name="partner_shipping_id" />
                         </group>
-                        <group name="l10n_br_fiscal">
+                        <group
+                            name="l10n_br_fiscal"
+                            invisible="document_type in ('57', '08', '09', '10', '11', '26', '67', '8B')"
+                        >
                             <field
                                 name="fiscal_operation_id"
                                 options="{'no_create': True, 'no_create_edit': True}"
@@ -292,19 +295,21 @@
                             />
                             <field name="company_id" invisible="1" />
                         </group>
-                        <group
-                            name="CT-e Info"
-                            invisible="[('document_type_id.code', 'in', ['57', '08', '09', '10', '11', '26', '67', '8B'])]"
-                        >
-                            <field name="transport_modal" />
-                            <field name="service_provider" />
-                        </group>
                     </group>
                     <notebook>
                         <page name="products" string="Products and Services">
                             <field
                                 name="fiscal_line_ids"
-                                context="{'form_view_ref': 'l10n_br_fiscal.document_line_form', 'default_document_id': id, 'default_company_id': company_id, 'default_partner_id': partner_id, 'default_fiscal_operation_type': fiscal_operation_type, 'default_fiscal_operation_id': fiscal_operation_id, 'no_subcall': True}"
+                                context="{
+                                    'form_view_ref': 'l10n_br_fiscal.document_line_form',
+                                    'default_document_id': id,
+                                    'default_company_id': company_id,
+                                    'default_partner_id': partner_id,
+                                    'default_fiscal_operation_type': fiscal_operation_type,
+                                    'default_fiscal_operation_id': fiscal_operation_id,
+                                    'default_ind_final': ind_final,
+                                    'no_subcall': True,
+                                }"
                             >
                                 <list>
                                     <field name="product_id" />

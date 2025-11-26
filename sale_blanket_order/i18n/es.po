@@ -20,7 +20,6 @@ msgstr ""
 #. module: sale_blanket_order
 #. odoo-python
 #: code:addons/sale_blanket_order/models/blanket_orders.py:0
-#, python-format
 msgid ""
 "\n"
 "                    You cannot change the type of a sale order line.\n"
@@ -135,27 +134,18 @@ msgstr "Importe"
 #. module: sale_blanket_order
 #. odoo-python
 #: code:addons/sale_blanket_order/wizard/create_sale_orders.py:0
-#, python-format
 msgid "An order can't be empty"
 msgstr "Un pedido no puede estar vacío"
 
 #. module: sale_blanket_order
-#: model:ir.model.fields,field_description:sale_blanket_order.field_sale_blanket_order__analytic_account_id
-msgid "Analytic Account"
-msgstr "Cuenta Analítica"
-
-#. module: sale_blanket_order
 #: model:ir.model.fields,field_description:sale_blanket_order.field_sale_blanket_order_line__analytic_distribution
+#: model:ir.model.fields,field_description:sale_blanket_order.field_sale_blanket_order_wizard_line__analytic_distribution
 msgid "Analytic Distribution"
 msgstr ""
 
 #. module: sale_blanket_order
-#: model:ir.model.fields,field_description:sale_blanket_order.field_sale_blanket_order_line__analytic_distribution_search
-msgid "Analytic Distribution Search"
-msgstr ""
-
-#. module: sale_blanket_order
 #: model:ir.model.fields,field_description:sale_blanket_order.field_sale_blanket_order_line__analytic_precision
+#: model:ir.model.fields,field_description:sale_blanket_order.field_sale_blanket_order_wizard_line__analytic_precision
 msgid "Analytic Precision"
 msgstr ""
 
@@ -214,7 +204,6 @@ msgstr "Línea asistente de pedido programado"
 #. module: sale_blanket_order
 #. odoo-python
 #: code:addons/sale_blanket_order/wizard/create_sale_orders.py:0
-#, python-format
 msgid ""
 "Can not create Sale Order from Blanket Order lines with different currencies"
 msgstr "No puede crear un pedido desde una programación con monedas diferentes"
@@ -228,7 +217,6 @@ msgstr "Cancelar"
 #. module: sale_blanket_order
 #. odoo-python
 #: code:addons/sale_blanket_order/models/sale_orders.py:0
-#, python-format
 msgid ""
 "Cannot confirm order %s as one of the lines refers to a blanket order that "
 "has no remaining quantity."
@@ -247,6 +235,7 @@ msgstr ""
 #. module: sale_blanket_order
 #: model:ir.model.fields,field_description:sale_blanket_order.field_sale_blanket_order__company_id
 #: model:ir.model.fields,field_description:sale_blanket_order.field_sale_blanket_order_line__company_id
+#: model:ir.model.fields,field_description:sale_blanket_order.field_sale_blanket_order_wizard_line__company_id
 msgid "Company"
 msgstr "Empresa"
 
@@ -313,7 +302,6 @@ msgstr "Expediente del Cliente"
 #. module: sale_blanket_order
 #. odoo-python
 #: code:addons/sale_blanket_order/models/blanket_orders.py:0
-#, python-format
 msgid "Date Scheduled"
 msgstr "Fecha prevista"
 
@@ -332,6 +320,11 @@ msgstr "Cantidad entregada"
 #: model:ir.model.fields,field_description:sale_blanket_order.field_sale_blanket_order_line__name
 msgid "Description"
 msgstr "Descripción"
+
+#. module: sale_blanket_order
+#: model:ir.model.fields,field_description:sale_blanket_order.field_sale_order__disable_adding_lines
+msgid "Disable Adding Lines"
+msgstr ""
 
 #. module: sale_blanket_order
 #: model:ir.model.fields,field_description:sale_blanket_order.field_res_config_settings__group_blanket_disable_adding_lines
@@ -356,6 +349,12 @@ msgstr "Nombre mostrado"
 #: model:ir.model.fields,field_description:sale_blanket_order.field_sale_blanket_order_line__display_type
 msgid "Display Type"
 msgstr "Mostrar Tipo"
+
+#. module: sale_blanket_order
+#: model:ir.model.fields,field_description:sale_blanket_order.field_sale_blanket_order_line__distribution_analytic_account_ids
+#: model:ir.model.fields,field_description:sale_blanket_order.field_sale_blanket_order_wizard_line__distribution_analytic_account_ids
+msgid "Distribution Analytic Account"
+msgstr ""
 
 #. module: sale_blanket_order
 #: model:ir.model.fields.selection,name:sale_blanket_order.selection__sale_blanket_order__state__done
@@ -455,11 +454,6 @@ msgid "Invoiced quantity"
 msgstr "Cantidad facturada"
 
 #. module: sale_blanket_order
-#: model_terms:ir.ui.view,arch_db:sale_blanket_order.view_blanket_order_form
-msgid "Invoicing"
-msgstr "Facturación"
-
-#. module: sale_blanket_order
 #: model:ir.model.fields,field_description:sale_blanket_order.field_sale_blanket_order__message_is_follower
 #: model:ir.model.fields,field_description:sale_blanket_order.field_sale_blanket_order_line__message_is_follower
 msgid "Is Follower"
@@ -507,7 +501,6 @@ msgstr "Faltan campos obligatorios en la línea de pedido de venta contable."
 #. module: sale_blanket_order
 #. odoo-python
 #: code:addons/sale_blanket_order/models/blanket_orders.py:0
-#, python-format
 msgid "Must have some lines"
 msgstr "Debe tener alguna línea"
 
@@ -634,7 +627,6 @@ msgstr "Cliente"
 #. module: sale_blanket_order
 #. odoo-python
 #: code:addons/sale_blanket_order/models/blanket_orders.py:0
-#, python-format
 msgid "Partner is mandatory"
 msgstr "Es obligatorio el cliente"
 
@@ -649,13 +641,6 @@ msgstr "Modo de pago"
 #: model:ir.model.fields,field_description:sale_blanket_order.field_sale_blanket_order_wizard_line__price_unit
 msgid "Price"
 msgstr "Precio"
-
-#. module: sale_blanket_order
-#. odoo-python
-#: code:addons/sale_blanket_order/models/blanket_orders.py:0
-#, python-format
-msgid "Price must be greater than zero"
-msgstr "El precio debe ser mayor que cero"
 
 #. module: sale_blanket_order
 #: model:ir.model.fields,field_description:sale_blanket_order.field_sale_blanket_order__pricelist_id
@@ -684,7 +669,6 @@ msgstr "Pedido de compra"
 #. module: sale_blanket_order
 #. odoo-python
 #: code:addons/sale_blanket_order/models/blanket_orders.py:0
-#, python-format
 msgid "Quantity must be greater than zero"
 msgstr "La cantidad debe ser mayor que cero"
 
@@ -692,12 +676,6 @@ msgstr "La cantidad debe ser mayor que cero"
 #: model:ir.model.fields,field_description:sale_blanket_order.field_sale_blanket_order_wizard_line__qty
 msgid "Quantity to Order"
 msgstr "Cantidad pedida"
-
-#. module: sale_blanket_order
-#: model:ir.model.fields,field_description:sale_blanket_order.field_sale_blanket_order__rating_ids
-#: model:ir.model.fields,field_description:sale_blanket_order.field_sale_blanket_order_line__rating_ids
-msgid "Ratings"
-msgstr ""
 
 #. module: sale_blanket_order
 #: model_terms:ir.ui.view,arch_db:sale_blanket_order.view_blanket_order_search
@@ -730,7 +708,6 @@ msgstr "Usuario responsable"
 #. module: sale_blanket_order
 #. odoo-python
 #: code:addons/sale_blanket_order/wizard/create_sale_orders.py:0
-#, python-format
 msgid "Sale Blanket Order %s is not open"
 msgstr "La programación %s no está abierta"
 
@@ -782,7 +759,6 @@ msgstr "Línea de pedido de venta"
 #. module: sale_blanket_order
 #. odoo-python
 #: code:addons/sale_blanket_order/wizard/create_sale_orders.py:0
-#, python-format
 msgid "Sales Orders"
 msgstr "Pedidos de clientes"
 
@@ -850,6 +826,11 @@ msgid "Subtotal"
 msgstr "Subtotal"
 
 #. module: sale_blanket_order
+#: model:ir.model.fields,field_description:sale_blanket_order.field_sale_blanket_order__tag_ids
+msgid "Tags"
+msgstr ""
+
+#. module: sale_blanket_order
 #: model:ir.model.fields,field_description:sale_blanket_order.field_sale_blanket_order_line__price_tax
 msgid "Tax"
 msgstr "Impuesto"
@@ -875,7 +856,6 @@ msgstr "Términos y Condiciones"
 #. module: sale_blanket_order
 #. odoo-python
 #: code:addons/sale_blanket_order/models/sale_orders.py:0
-#, python-format
 msgid ""
 "The currency of the blanket order must match with that of the sale order."
 msgstr ""
@@ -884,7 +864,6 @@ msgstr ""
 #. module: sale_blanket_order
 #. odoo-python
 #: code:addons/sale_blanket_order/models/sale_orders.py:0
-#, python-format
 msgid "The customer must be equal to the blanket order lines customer"
 msgstr ""
 "El cliente debe ser igual al cliente de las líneas del pedido programado"
@@ -892,7 +871,6 @@ msgstr ""
 #. module: sale_blanket_order
 #. odoo-python
 #: code:addons/sale_blanket_order/models/sale_orders.py:0
-#, python-format
 msgid "The product in the blanket order and in the sales order must match"
 msgstr ""
 "El producto en el pedido programado y el del pedido de venta deben coincidir"
@@ -900,7 +878,6 @@ msgstr ""
 #. module: sale_blanket_order
 #. odoo-python
 #: code:addons/sale_blanket_order/wizard/create_sale_orders.py:0
-#, python-format
 msgid "The sale has already been completed."
 msgstr "Esta venta ya ha sido completada."
 
@@ -964,14 +941,12 @@ msgstr "Fecha de validez"
 #. module: sale_blanket_order
 #. odoo-python
 #: code:addons/sale_blanket_order/models/blanket_orders.py:0
-#, python-format
 msgid "Validity date is mandatory"
 msgstr "La fecha de validez es obligatoria"
 
 #. module: sale_blanket_order
 #. odoo-python
 #: code:addons/sale_blanket_order/models/blanket_orders.py:0
-#, python-format
 msgid "Validity date must be in the future"
 msgstr "La fecha de validez debe ser superior a la fecha de hoy"
 
@@ -1000,7 +975,6 @@ msgstr "Asistente"
 #. module: sale_blanket_order
 #. odoo-python
 #: code:addons/sale_blanket_order/models/blanket_orders.py:0
-#, python-format
 msgid ""
 "You can not delete a blanket order with opened sale orders! Try to cancel "
 "them before."
@@ -1011,7 +985,6 @@ msgstr ""
 #. module: sale_blanket_order
 #. odoo-python
 #: code:addons/sale_blanket_order/models/blanket_orders.py:0
-#, python-format
 msgid ""
 "You can not delete an open blanket or with active sale orders! Try to cancel "
 "it before."
@@ -1022,7 +995,6 @@ msgstr ""
 #. module: sale_blanket_order
 #. odoo-python
 #: code:addons/sale_blanket_order/wizard/create_sale_orders.py:0
-#, python-format
 msgid "You can't create a sale order from an expired blanket order!"
 msgstr ""
 "¡No puede crear un pedido de venta a partir de un pedido programado vencido!"
@@ -1030,23 +1002,30 @@ msgstr ""
 #. module: sale_blanket_order
 #. odoo-python
 #: code:addons/sale_blanket_order/wizard/create_sale_orders.py:0
-#, python-format
 msgid "You can't order more than the remaining quantities"
 msgstr "No puede pedir una cantidad superior a las cantidades restantes"
 
 #. module: sale_blanket_order
 #. odoo-python
 #: code:addons/sale_blanket_order/wizard/create_sale_orders.py:0
-#, python-format
 msgid "You have to select lines from the same company."
 msgstr "Tiene que seleccionar líneas desde la misma compañía."
 
 #. module: sale_blanket_order
 #. odoo-python
 #: code:addons/sale_blanket_order/models/blanket_orders.py:0
-#, python-format
 msgid "remaining"
 msgstr "restante"
+
+#~ msgid "Analytic Account"
+#~ msgstr "Cuenta Analítica"
+
+#~ msgid "Invoicing"
+#~ msgstr "Facturación"
+
+#, python-format
+#~ msgid "Price must be greater than zero"
+#~ msgstr "El precio debe ser mayor que cero"
 
 #~ msgid "Analytic Tags"
 #~ msgstr "Etiquetas Analíticas"

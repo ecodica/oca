@@ -10,7 +10,7 @@
 {
     "name": "Account Payment Batch OCA",
     "summary": "Add payment orders and debit orders",
-    "version": "18.0.3.2.0",
+    "version": "18.0.3.4.0",
     "license": "AGPL-3",
     "author": "ACSONE SA/NV, "
     "Therp BV, "
@@ -37,6 +37,8 @@
         "views/account_payment_order.xml",
         "views/account_payment_line.xml",
         "views/account_move.xml",
+        "reports/account_payment_order.xml",
+        "reports/ir_actions_report.xml",
         "data/payment_seq.xml",
     ],
     "installable": True,

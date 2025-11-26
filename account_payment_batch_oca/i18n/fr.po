@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-10 16:15+0000\n"
-"PO-Revision-Date: 2025-09-17 17:47+0000\n"
-"Last-Translator: matnoublanche <log-github@thieu.biz>\n"
+"PO-Revision-Date: 2025-11-13 20:42+0000\n"
+"Last-Translator: Alexis de Lattre <alexis@via.ecp.fr>\n"
 "Language-Team: French (https://www.transifex.com/oca/teams/23907/fr/)\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -141,6 +141,56 @@ msgid ""
 "                </table>\n"
 "            </div>\n"
 "        "
+msgstr ""
+
+#. module: account_payment_batch_oca
+#: model_terms:ir.ui.view,arch_db:account_payment_batch_oca.print_account_payment_order_document
+msgid "<strong>Amount</strong>"
+msgstr ""
+
+#. module: account_payment_batch_oca
+#: model_terms:ir.ui.view,arch_db:account_payment_batch_oca.print_account_payment_order_document
+msgid "<strong>Bank Account</strong>"
+msgstr ""
+
+#. module: account_payment_batch_oca
+#: model_terms:ir.ui.view,arch_db:account_payment_batch_oca.print_account_payment_order_document
+msgid "<strong>Communication</strong>"
+msgstr ""
+
+#. module: account_payment_batch_oca
+#: model_terms:ir.ui.view,arch_db:account_payment_batch_oca.print_account_payment_order_document
+msgid "<strong>Description</strong>"
+msgstr ""
+
+#. module: account_payment_batch_oca
+#: model_terms:ir.ui.view,arch_db:account_payment_batch_oca.print_account_payment_order_document
+msgid "<strong>Execution</strong>"
+msgstr ""
+
+#. module: account_payment_batch_oca
+#: model_terms:ir.ui.view,arch_db:account_payment_batch_oca.print_account_payment_order_document
+msgid "<strong>Partner</strong>"
+msgstr ""
+
+#. module: account_payment_batch_oca
+#: model_terms:ir.ui.view,arch_db:account_payment_batch_oca.print_account_payment_order_document
+msgid "<strong>Payment Date</strong>"
+msgstr ""
+
+#. module: account_payment_batch_oca
+#: model_terms:ir.ui.view,arch_db:account_payment_batch_oca.print_account_payment_order_document
+msgid "<strong>Payment Method</strong>"
+msgstr ""
+
+#. module: account_payment_batch_oca
+#: model_terms:ir.ui.view,arch_db:account_payment_batch_oca.print_account_payment_order_document
+msgid "<strong>Total</strong>"
+msgstr "<strong>Total</strong>"
+
+#. module: account_payment_batch_oca
+#: model_terms:ir.ui.view,arch_db:account_payment_batch_oca.print_account_payment_order_document
+msgid "<strong>Used Account</strong>"
 msgstr ""
 
 #. module: account_payment_batch_oca
@@ -424,6 +474,11 @@ msgstr "Devise"
 #: model:ir.model.fields,field_description:account_payment_batch_oca.field_account_payment_line__currency_id
 msgid "Currency of the Payment Transaction"
 msgstr "Devise de l'opération de paiement"
+
+#. module: account_payment_batch_oca
+#: model_terms:ir.ui.view,arch_db:account_payment_batch_oca.print_account_payment_order_document
+msgid "Debit Order #"
+msgstr ""
 
 #. module: account_payment_batch_oca
 #: model:ir.actions.act_window,name:account_payment_batch_oca.account_payment_order_inbound_action
@@ -945,9 +1000,8 @@ msgstr "Nombre d'actions"
 
 #. module: account_payment_batch_oca
 #: model:ir.model.fields,field_description:account_payment_batch_oca.field_account_payment_order__payment_lot_count
-#, fuzzy
 msgid "Number of Lots"
-msgstr "Nombre d'erreurs"
+msgstr "Nombre de lots"
 
 #. module: account_payment_batch_oca
 #: model:ir.model.fields,field_description:account_payment_batch_oca.field_account_payment_order__payment_count
@@ -1025,6 +1079,11 @@ msgstr "Options pour les ordres de paiement"
 #: model_terms:ir.ui.view,arch_db:account_payment_batch_oca.account_payment_lot_search
 msgid "Outbound"
 msgstr "Sortant"
+
+#. module: account_payment_batch_oca
+#: model_terms:ir.ui.view,arch_db:account_payment_batch_oca.print_account_payment_order_document
+msgid "PAY001"
+msgstr ""
 
 #. module: account_payment_batch_oca
 #: model:ir.model.fields.selection,name:account_payment_batch_oca.selection__account_payment_method_line__mail_partner_policy__parent
@@ -1164,6 +1223,11 @@ msgid "Payment Order"
 msgstr "Ordre de paiement"
 
 #. module: account_payment_batch_oca
+#: model_terms:ir.ui.view,arch_db:account_payment_batch_oca.print_account_payment_order_document
+msgid "Payment Order #"
+msgstr ""
+
+#. module: account_payment_batch_oca
 #: model_terms:ir.ui.view,arch_db:account_payment_batch_oca.view_move_form
 msgid "Payment Order Lines"
 msgstr ""
@@ -1224,6 +1288,7 @@ msgid "Payment transaction"
 msgstr "Transaction de paiement"
 
 #. module: account_payment_batch_oca
+#: model:ir.actions.report,name:account_payment_batch_oca.action_print_payment_order
 #: model:ir.model,name:account_payment_batch_oca.model_account_payment_order
 #, fuzzy
 msgid "Payment/Debit Order"
@@ -1575,9 +1640,6 @@ msgstr ""
 
 #~ msgid "<strong>Reference</strong>"
 #~ msgstr "<strong>Référence</strong>"
-
-#~ msgid "<strong>Total</strong>"
-#~ msgstr "<strong>Total</strong>"
 
 #~ msgid "<strong>Used Account:</strong>"
 #~ msgstr "<strong>Compte utilisé :</strong>"
