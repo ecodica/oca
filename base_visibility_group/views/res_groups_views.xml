@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_groups_form_inherit" model="ir.ui.view">
+        <field name="name">res.groups.form.inherit</field>
+        <field name="model">res.groups</field>
+        <field name="inherit_id" ref="base.view_groups_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='notes']" position="after">
+                <page string="Allowed Menus" name="allowed_menus" groups="base.group_no_one">
+                    <span>If you add menus to this field, the user will only be able to see the menus in this list. If the list is empty, normal access groups rules will be applied</span>
+                    <field name="allowed_menu_ids"/>
+                </page>
+                <page string="Allowed Actions" name="allowed_actions" groups="base.group_no_one">
+                    <span>If you add actions to this field, the user will only be able to open the actions in this list. If the list is empty, normal access groups rules will be applied</span>
+                    <field name="allowed_action_ids"/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

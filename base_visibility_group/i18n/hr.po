@@ -1,0 +1,72 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* base_visibility_group
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-12 12:57+0000\n"
+"PO-Revision-Date: 2024-12-12 12:57+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: base_visibility_group
+#: model_terms:ir.ui.view,arch_db:base_visibility_group.view_groups_form_inherit
+msgid ""
+"<span>If you add actions to this field, the user will only be able to open "
+"the actions in this list. If the list is empty, normal access groups rules "
+"will be applied</span>"
+msgstr ""
+"<span>Ako dodate ackije u ovo polje, korisnici koji imaju ovu grupu prava će"
+"vidjeti samo akcije s liste. Ako je lista prazna, vidljivost akcija se određuje"
+" kroz ostale grupe prava korisnika.</span>"
+
+#. module: base_visibility_group
+#: model_terms:ir.ui.view,arch_db:base_visibility_group.view_groups_form_inherit
+msgid ""
+"<span>If you add menus to this field, the user will only be able to see the "
+"menus in this list. If the list is empty, normal access groups rules will be"
+" applied</span>"
+msgstr ""
+"<span>Ako dodate menije u ovo polje, korisnici koji imaju ovu grupu prava će"
+"vidjeti samo menije s liste. Ako je lista prazna, vidljivost menija se određuje"
+" kroz ostale grupe prava korisnika.</span>"
+
+#. module: base_visibility_group
+#: model:ir.model,name:base_visibility_group.model_res_groups
+msgid "Access Groups"
+msgstr "Grupe"
+
+#. module: base_visibility_group
+#: model:ir.model,name:base_visibility_group.model_ir_actions_act_window
+msgid "Action Window"
+msgstr "Akcijski prozor"
+
+#. module: base_visibility_group
+#: model:ir.model.fields,field_description:base_visibility_group.field_res_groups__allowed_action_ids
+#: model_terms:ir.ui.view,arch_db:base_visibility_group.view_groups_form_inherit
+msgid "Allowed Actions"
+msgstr "Dozvoljene akcije"
+
+#. module: base_visibility_group
+#: model:ir.model.fields,field_description:base_visibility_group.field_res_groups__allowed_menu_ids
+#: model_terms:ir.ui.view,arch_db:base_visibility_group.view_groups_form_inherit
+msgid "Allowed Menus"
+msgstr "Dozvoljeni meniji"
+
+#. module: base_visibility_group
+#: model:ir.model,name:base_visibility_group.model_ir_ui_menu
+msgid "Menu"
+msgstr "Izbornik"
+
+#. module: base_visibility_group
+#. odoo-python
+#: code:addons/base_visibility_group/models/ir_actions.py:0
+#, python-format
+msgid "You don't have enough access rights to run this action."
+msgstr "Nemate prava za izvršavanje ove akcije."
