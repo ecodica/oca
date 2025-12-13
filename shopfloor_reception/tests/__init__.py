@@ -1,3 +1,4 @@
+from . import test_assign_package_type
 from . import test_start
 from . import test_select_document
 from . import test_manual_selection
@@ -13,3 +14,5 @@ from . import test_return_scan_document
 from . import test_return_scan_line
 from . import test_return_set_quantity
 from . import test_return_reception_done
+from . import test_recover
+from . import test_change_package_type
