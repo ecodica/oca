@@ -56,6 +56,9 @@
                                 <field name="document_type_id" />
                                 <field name="add_to_amount" />
                             </group>
+                            <group name="general_tax_classification">
+                                <field name="tax_classification_id" />
+                            </group>
                             <group
                                 name="general_cfop"
                                 invisible="fiscal_operation_type == 'all'"
@@ -96,11 +99,7 @@
                         </page>
                     </notebook>
                 </sheet>
-                <div class="oe_chatter">
-                    <field name="message_follower_ids" groups="base.group_user" />
-                    <field name="activity_ids" />
-                    <field name="message_ids" />
-                </div>
+                <chatter />
             </form>
         </field>
     </record>
