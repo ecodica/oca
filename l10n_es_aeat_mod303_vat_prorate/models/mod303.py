@@ -8,6 +8,7 @@ import math
 import re
 
 from odoo import _, api, exceptions, fields, models
+from odoo.tools import float_is_zero
 
 
 class L10nEsAeatMod303Report(models.Model):
@@ -72,6 +73,13 @@ class L10nEsAeatMod303Report(models.Model):
     def _general_prorate_method(self):
         self.ensure_one()
         theoretical_prorate = self.prorate_id.vat_prorate
+        if float_is_zero(theoretical_prorate, precision_digits=2):
+            raise exceptions.ValidationError(
+                self.env._(
+                    "Prorate percentage not found, or it's 0. "
+                    "Please review the company's prorate adjustments."
+                )
+            )
         diff_perc = self.vat_prorate_percent - theoretical_prorate
         if not diff_perc:
             return
@@ -189,7 +197,14 @@ class L10nEsAeatMod303Report(models.Model):
         taxed = -sum(move_lines.mapped("balance"))
         # Get base amount of exempt operations
         mapline_vals["tax_xmlid_ids"] = [
-            (4, self.env.ref("l10n_es_aeat_mod303.s_iva0").id)
+            (4, self.env.ref(f"l10n_es_aeat_mod303.{x}").id)
+            for x in [
+                "s_iva0",
+                "s_iva0_art22",
+                "s_iva0_art23",
+                "s_iva0_nsd",
+                "s_iva0_ns",
+            ]
         ]
         map_line = MapLine.new(mapline_vals)
         move_lines = self._get_tax_lines(date_from, date_to, map_line)
