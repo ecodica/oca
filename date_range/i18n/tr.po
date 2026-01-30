@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-01 02:44+0000\n"
-"PO-Revision-Date: 2025-11-12 21:42+0000\n"
+"PO-Revision-Date: 2026-01-22 13:50+0000\n"
 "Last-Translator: Betül Öğmen <betulo@eska.biz>\n"
 "Language-Team: Turkish (https://www.transifex.com/oca/teams/23907/tr/)\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Weblate 5.10.4\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: date_range
 #. odoo-python
@@ -362,7 +362,8 @@ msgstr ""
 #: model:ir.model.fields,help:date_range.field_date_range_type__active
 msgid ""
 "The active field allows you to hide the date range type without removing it."
-msgstr "Aktif alanı, tarih aralığı türünü kaldırmadan gizlemenize olanak tanır."
+msgstr ""
+"Aktif alanı, tarih aralığı türünü kaldırmadan gizlemenize olanak tanır."
 
 #. module: date_range
 #: model:ir.model.fields,help:date_range.field_date_range__active
@@ -439,6 +440,19 @@ msgstr "haftalar"
 #: model:ir.model.fields.selection,name:date_range.selection__date_range_type__unit_of_time__0
 msgid "years"
 msgstr "yıllar"
+
+#~ msgid "%(thisname)s overlaps %(dtnames)s"
+#~ msgstr "%(thisname)s ve %(dtnames)s örtüşüyor"
+
+#~ msgid "Companies"
+#~ msgstr "Şirketler"
+
+#~ msgid ""
+#~ "The Date Range Type %(drt_name)s assigned to other company, you can't "
+#~ "change the company in Date Range %(dt_name)s"
+#~ msgstr ""
+#~ "Tarih Aralığı Türü %(drt_name)s başka bir şirkete atanmıştır, Tarih "
+#~ "Aralığı %(dt_name)s'deki şirketi değiştiremezsiniz"
 
 #, fuzzy
 #~ msgid "Type Name"

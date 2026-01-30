@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-01 02:44+0000\n"
-"PO-Revision-Date: 2025-05-12 09:24+0000\n"
+"PO-Revision-Date: 2026-01-21 08:45+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
 "Language: it\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10.4\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: date_range
 #. odoo-python
@@ -444,6 +444,19 @@ msgstr "settimane"
 #: model:ir.model.fields.selection,name:date_range.selection__date_range_type__unit_of_time__0
 msgid "years"
 msgstr "anni"
+
+#~ msgid "%(thisname)s overlaps %(dtnames)s"
+#~ msgstr "%(thisname)s si sovrappone a %(dtnames)s"
+
+#~ msgid "Companies"
+#~ msgstr "Aziende"
+
+#~ msgid ""
+#~ "The Date Range Type %(drt_name)s assigned to other company, you can't "
+#~ "change the company in Date Range %(dt_name)s"
+#~ msgstr ""
+#~ "Il tipo intervallo date %(drt_name)s è assegnato ad un'altra azienda, non "
+#~ "si può modificare l'azienda nell'intervallo date %(dt_name)s"
 
 #~ msgid "&amp;nbsp;"
 #~ msgstr "&amp;nbsp;"

@@ -11,13 +11,18 @@ msgstr ""
 "POT-Creation-Date: 2017-09-20 09:52+0000\n"
 "PO-Revision-Date: 2017-09-20 09:52+0000\n"
 "Last-Translator: Martin Trigaux <mat@odoo.com>, 2017\n"
-"Language-Team: Spanish (Paraguay) (https://www.transifex.com/odoo/"
-"teams/41243/es_PY/)\n"
+"Language-Team: Spanish (Paraguay) (https://www.transifex.com/odoo/teams/"
+"41243/es_PY/)\n"
 "Language: es_PY\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: crm_lead_to_task
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead__task_count
+msgid "#Task"
+msgstr ""
 
 #. module: crm_lead_to_task
 #: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_view_form
@@ -152,11 +157,6 @@ msgstr ""
 #: model:ir.model,name:crm_lead_to_task.model_project_task
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead__task_ids
 msgid "Task"
-msgstr ""
-
-#. module: crm_lead_to_task
-#: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead__task_count
-msgid "Task Count"
 msgstr ""
 
 #. module: crm_lead_to_task

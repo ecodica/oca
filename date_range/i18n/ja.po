@@ -206,8 +206,8 @@ msgid ""
 "'index' variable."
 msgstr ""
 "評価式。例： \"'FY%s' % date_start.strftime('%Y%m%d')\"\n"
-"Date型の'date_end'や'date_start'、ならびに'index' "
-"変数を使用することができます。"
+"Date型の'date_end'や'date_start'、ならびに'index' 変数を使用することができま"
+"す。"
 
 #. module: date_range
 #: model:ir.model.fields,field_description:date_range.field_date_range_search_mixin__date_range_search_id
@@ -359,12 +359,14 @@ msgstr "日付範囲生成と日付範囲タイプにおける会社は同一で
 #: model:ir.model.fields,help:date_range.field_date_range_type__active
 msgid ""
 "The active field allows you to hide the date range type without removing it."
-msgstr "有効フィールドを使用すると、日付範囲タイプを削除せずに非表示にできます。"
+msgstr ""
+"有効フィールドを使用すると、日付範囲タイプを削除せずに非表示にできます。"
 
 #. module: date_range
 #: model:ir.model.fields,help:date_range.field_date_range__active
 msgid "The active field allows you to hide the date range without removing it."
-msgstr "有効フィールドを使用すると、日付範囲タイプを削除せずに非表示にできます。"
+msgstr ""
+"有効フィールドを使用すると、日付範囲タイプを削除せずに非表示にできます。"
 
 #. module: date_range
 #: model:ir.model.fields,field_description:date_range.field_date_range__type_id
@@ -389,8 +391,9 @@ msgstr "終了"
 msgid ""
 "You cannot change the company, as this Date Range Type is assigned to Date "
 "Range '%s'."
-msgstr "日付範囲タイプは日付範囲 "
-"'%s'に割り当てられているため、会社を変更することはできません。"
+msgstr ""
+"日付範囲タイプは日付範囲 '%s'に割り当てられているため、会社を変更することはで"
+"きません。"
 
 #. module: date_range
 #: model:ir.model.fields.selection,name:date_range.selection__date_range_generator__unit_of_time__3
