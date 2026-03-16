@@ -46,6 +46,7 @@ class PrintingPrinter(models.Model):
     model = fields.Char(readonly=True)
     location = fields.Char(readonly=True)
     uri = fields.Char(string="URI", readonly=True)
+    multi_thread = fields.Boolean()
 
     @staticmethod
     def _set_option_doc_format(report, value):
@@ -57,10 +58,13 @@ class PrintingPrinter(models.Model):
     def _set_option_noop(report, value):
         return {}
 
-    def _set_option_tray(self, report, value):
+    def _set_option_input_tray(self, report, value):
         """Note we use self here as some older PPD use tray
         rather than InputSlot so we may need to query printer in override"""
         return {"InputSlot": str(value)} if value else {}
+
+    def _set_option_output_tray(self, report, value):
+        return {"OutputBin": str(value)} if value else {}
 
     _set_option_action = _set_option_noop
     _set_option_printer = _set_option_noop

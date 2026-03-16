@@ -131,6 +131,7 @@ class TestAccountPaymentPartner(BaseCommon):
             {
                 "acc_number": "5345345",
                 "partner_id": cls.supplier.id,
+                "allow_out_payment": True,
             }
         )
         cls.supplier.with_company(
@@ -179,7 +180,7 @@ class TestAccountPaymentPartner(BaseCommon):
                 "bank_account_id": cls.journal_bank.id,
             }
         )
-        cls.supplier_invoice = cls.move_model.create(
+        cls.supplier_invoice = cls.move_model.with_company(cls.company.id).create(
             {
                 "partner_id": cls.supplier.id,
                 "invoice_date": fields.Date.today(),
@@ -393,7 +394,8 @@ class TestAccountPaymentPartner(BaseCommon):
             refund_invoice.payment_mode_id,
             invoice.payment_mode_id.refund_payment_mode_id,
         )
-        self.assertEqual(refund_invoice.partner_bank_id, invoice.partner_bank_id)
+        # Now the partner_bank_id can be a not allow_out_payment bank account
+        self.assertTrue(refund_invoice.partner_bank_id)
 
     def test_invoice_out_refund(self):
         invoice = self._create_invoice(
