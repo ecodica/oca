@@ -61,6 +61,32 @@ def deprecated(reason):
     return decorator
 
 
+def prevent_call_from_safe_eval(reason):
+    """Decorator to prevent the call to the method in the context of a
+    safe_eval.
+    """
+
+    def deorator(func):
+        @functools.wraps(func)
+        def wrapper(self, *args, **kwargs):
+            for frame_info in inspect.stack():
+                filename = frame_info.filename or ""
+                function = frame_info.function or ""
+                if "safe_eval" in filename or function == "safe_eval":
+                    raise ValidationError(
+                        self.env._(
+                            "Calling fs.storage.%(reason)s is not allowed "
+                            "in a safe_eval context.",
+                            reason=reason,
+                        )
+                    )
+            return func(self, *args, **kwargs)
+
+        return wrapper
+
+    return deorator
+
+
 class FSStorage(models.Model):
     _name = "fs.storage"
     _inherit = "server.env.mixin"
@@ -190,6 +216,15 @@ class FSStorage(models.Model):
         "* Create Marker file : Create a file on remote and check it exists\n"
         "* List File : List all files from root directory",
     )
+    is_cacheable = fields.Boolean(
+        help="If True, once instantiated, the filesystem will be cached and reused.\n"
+        "By default, the filesystem is cacheable but in some cases, like "
+        "when using OAuth2 authentication, the filesystem cannot be cached "
+        "because it depends on the user and the token can change.\n"
+        "In this case, you can set this field to False to avoid caching the "
+        "filesystem.",
+        default=True,
+    )
 
     _uniq_code = models.Constraint(
         "unique(code)",
@@ -277,10 +312,29 @@ class FSStorage(models.Model):
             "check_connection_method": {},
         }
 
+    @api.model_create_multi
+    @prevent_call_from_safe_eval("create")
+    def create(self, vals_list):
+        return super().create(vals_list)
+
+    @prevent_call_from_safe_eval("create")
+    def _create(self, data_list):
+        return super()._create(data_list)
+
+    @prevent_call_from_safe_eval("write")
     def write(self, vals):
         self.__fs = None
         self.env.registry.clear_cache()
         return super().write(vals)
+
+    @prevent_call_from_safe_eval("write")
+    def _write_multi(self, vals_list):
+        return super()._write_multi(vals_list)
+
+    @api.ondelete(at_uninstall=False)
+    @prevent_call_from_safe_eval("unlink")
+    def _check_no_safe_eval_call(self):
+        pass
 
     def get_directory_path(self):
         """Returns directory path with substitution done."""
@@ -311,6 +365,23 @@ class FSStorage(models.Model):
         return res
 
     @api.model
+    @tools.ormcache("code")
+    def get_protocol_by_code(self, code):
+        record = self.get_by_code(code)
+        return record.protocol if record else None
+
+    @api.model
+    @tools.ormcache("code")
+    def _is_fs_cacheable(self, code):
+        """Return True if the filesystem is cacheable."""
+        # This method is used to check if the filesystem is cacheable.
+        # It is used to avoid caching filesystems that are not cacheable.
+        # For example, the msgd protocol is not cacheable because it uses
+        # OAuth2 authentication and the token can change.
+        fs_storage = self.get_by_code(code)
+        return fs_storage and fs_storage.sudo().is_cacheable
+
+    @api.model
     @tools.ormcache()
     def get_storage_codes(self):
         """Return the list of codes of the existing filesystems."""
@@ -318,15 +389,24 @@ class FSStorage(models.Model):
 
     @api.model
     @tools.ormcache("code")
-    def get_fs_by_code(self, code):
+    def _get_fs_by_code_from_cache(self, code):
+        return self.get_fs_by_code(code, force_no_cache=True)
+
+    @api.model
+    def get_fs_by_code(self, code, force_no_cache=False):
         """Return the filesystem associated to the given code.
 
         :param code: the code of the filesystem
         """
+
+        use_cache = not force_no_cache and self._is_fs_cacheable(code)
         fs = None
-        fs_storage = self.get_by_code(code)
-        if fs_storage:
-            fs = fs_storage.fs
+        if use_cache:
+            fs = self._get_fs_by_code_from_cache(code)
+        else:
+            fs_storage = self.get_by_code(code)
+            if fs_storage:
+                fs = fs_storage.fs
         return fs
 
     @api.model
