@@ -33,6 +33,18 @@ msgid "ANAF service unable to generate PDF from this XML."
 msgstr "Serviciul ANAF nu poate să genereze PFD pentru acest XML."
 
 #. module: l10n_ro_message_spv
+#. odoo-python
+#: code:addons/l10n_ro_message_spv/models/ciusro_document.py:0
+msgid "Access token is forbidden."
+msgstr ""
+
+#. module: l10n_ro_message_spv
+#. odoo-python
+#: code:addons/l10n_ro_message_spv/models/ciusro_document.py:0
+msgid "Access token is unauthorized."
+msgstr ""
+
+#. module: l10n_ro_message_spv
 #: model:ir.model.fields,field_description:l10n_ro_message_spv.field_l10n_ro_message_spv__amount
 msgid "Amount"
 msgstr "Sumă"
@@ -41,6 +53,11 @@ msgstr "Sumă"
 #: model:ir.model.fields,field_description:l10n_ro_message_spv.field_l10n_ro_message_spv__attachment_id
 msgid "Attachment"
 msgstr "Atașament"
+
+#. module: l10n_ro_message_spv
+#: model:ir.model,name:l10n_ro_message_spv.model_account_edi_xml_ubl_ro
+msgid "CIUS RO"
+msgstr ""
 
 #. module: l10n_ro_message_spv
 #: model:ir.model.fields,field_description:l10n_ro_message_spv.field_l10n_ro_message_spv__cif
@@ -95,7 +112,14 @@ msgid "Details"
 msgstr "Detalii"
 
 #. module: l10n_ro_message_spv
+#: model:ir.model.fields,field_description:l10n_ro_message_spv.field_account_edi_xml_ubl_ro__display_name
+#: model:ir.model.fields,field_description:l10n_ro_message_spv.field_account_move__display_name
+#: model:ir.model.fields,field_description:l10n_ro_message_spv.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:l10n_ro_message_spv.field_l10n_ro_edi_document__display_name
 #: model:ir.model.fields,field_description:l10n_ro_message_spv.field_l10n_ro_message_spv__display_name
+#: model:ir.model.fields,field_description:l10n_ro_message_spv.field_product_product__display_name
+#: model:ir.model.fields,field_description:l10n_ro_message_spv.field_res_company__display_name
+#: model:ir.model.fields,field_description:l10n_ro_message_spv.field_res_config_settings__display_name
 msgid "Display Name"
 msgstr "Nume afișat"
 
@@ -177,7 +201,14 @@ msgid "Get Invoice"
 msgstr "Găsește factură"
 
 #. module: l10n_ro_message_spv
+#: model:ir.model.fields,field_description:l10n_ro_message_spv.field_account_edi_xml_ubl_ro__id
+#: model:ir.model.fields,field_description:l10n_ro_message_spv.field_account_move__id
+#: model:ir.model.fields,field_description:l10n_ro_message_spv.field_account_move_line__id
+#: model:ir.model.fields,field_description:l10n_ro_message_spv.field_l10n_ro_edi_document__id
 #: model:ir.model.fields,field_description:l10n_ro_message_spv.field_l10n_ro_message_spv__id
+#: model:ir.model.fields,field_description:l10n_ro_message_spv.field_product_product__id
+#: model:ir.model.fields,field_description:l10n_ro_message_spv.field_res_company__id
+#: model:ir.model.fields,field_description:l10n_ro_message_spv.field_res_config_settings__id
 msgid "ID"
 msgstr ""
 
@@ -252,6 +283,12 @@ msgid "Maximum number of days to download e-invoices."
 msgstr ""
 
 #. module: l10n_ro_message_spv
+#: model:ir.model.fields,field_description:l10n_ro_message_spv.field_res_company__l10n_ro_refresh_message_days
+#: model:ir.model.fields,field_description:l10n_ro_message_spv.field_res_config_settings__l10n_ro_refresh_message_days
+msgid "Maximum number of days to refresh e-invoice messages."
+msgstr ""
+
+#. module: l10n_ro_message_spv
 #: model:ir.model.fields,field_description:l10n_ro_message_spv.field_l10n_ro_message_spv__message
 #: model:ir.model.fields.selection,name:l10n_ro_message_spv.selection__l10n_ro_message_spv__message_type__message
 #: model_terms:ir.ui.view,arch_db:l10n_ro_message_spv.view_l10n_ro_message_spv_form
@@ -299,6 +336,11 @@ msgstr "Factură vânzare cu bon"
 #: model_terms:ir.ui.view,arch_db:l10n_ro_message_spv.view_l10n_ro_message_spv_search
 msgid "Partner"
 msgstr "Partener"
+
+#. module: l10n_ro_message_spv
+#: model:ir.model,name:l10n_ro_message_spv.model_product_product
+msgid "Product Variant"
+msgstr ""
 
 #. module: l10n_ro_message_spv
 #: model:ir.model.fields,field_description:l10n_ro_message_spv.field_l10n_ro_message_spv__ref
@@ -360,6 +402,19 @@ msgid "Technical field used to track the status of a submission."
 msgstr "Câmp tehnic folosit pentru a urmări starea unei trimiteri."
 
 #. module: l10n_ro_message_spv
+#. odoo-python
+#: code:addons/l10n_ro_message_spv/models/ciusro_document.py:0
+msgid "There is something wrong with the SPV. Please try again later."
+msgstr ""
+
+#. module: l10n_ro_message_spv
+#. odoo-python
+#: code:addons/l10n_ro_message_spv/models/ciusro_document.py:0
+msgid ""
+"Timeout while sending to SPV. Use Synchronise to SPV to update the status."
+msgstr ""
+
+#. module: l10n_ro_message_spv
 #: model:ir.model.fields,field_description:l10n_ro_message_spv.field_account_bank_statement_line__l10n_ro_edi_transaction
 #: model:ir.model.fields,field_description:l10n_ro_message_spv.field_account_move__l10n_ro_edi_transaction
 msgid "Transaction ID (RO)"
@@ -372,8 +427,9 @@ msgid "Type"
 msgstr "Tip"
 
 #. module: l10n_ro_message_spv
-#: model:ir.model,name:l10n_ro_message_spv.model_account_edi_xml_ubl_20
-msgid "UBL 2.0"
+#. odoo-python
+#: code:addons/l10n_ro_message_spv/models/ciusro_document.py:0
+msgid "Unknown endpoint."
 msgstr ""
 
 #. module: l10n_ro_message_spv
@@ -384,4 +440,10 @@ msgstr "Cod furnizor"
 #. module: l10n_ro_message_spv
 #: model:ir.model.fields,field_description:l10n_ro_message_spv.field_l10n_ro_message_spv__attachment_xml_id
 msgid "XML"
+msgstr ""
+
+#. module: l10n_ro_message_spv
+#. odoo-python
+#: code:addons/l10n_ro_message_spv/models/ciusro_document.py:0
+msgid "You reached the limit of requests. Please try again later."
 msgstr ""
