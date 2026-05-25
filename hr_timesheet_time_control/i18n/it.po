@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-10 02:40+0000\n"
-"PO-Revision-Date: 2026-01-29 13:09+0000\n"
+"PO-Revision-Date: 2026-05-21 14:46+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
 "Language: it\n"
@@ -244,6 +244,7 @@ msgid "Show Time Control"
 msgstr "Visualizza controllo orario"
 
 #. module: hr_timesheet_time_control
+#: model:ir.model.fields.selection,name:hr_timesheet_time_control.selection__crm_lead__show_time_control__start
 #: model:ir.model.fields.selection,name:hr_timesheet_time_control.selection__hr_timesheet_time_control_mixin__show_time_control__start
 #: model:ir.model.fields.selection,name:hr_timesheet_time_control.selection__project_project__show_time_control__start
 #: model:ir.model.fields.selection,name:hr_timesheet_time_control.selection__project_task__show_time_control__start
@@ -277,6 +278,7 @@ msgstr "Inizia lavoro"
 
 #. module: hr_timesheet_time_control
 #: model:ir.model.fields.selection,name:hr_timesheet_time_control.selection__account_analytic_line__show_time_control__stop
+#: model:ir.model.fields.selection,name:hr_timesheet_time_control.selection__crm_lead__show_time_control__stop
 #: model:ir.model.fields.selection,name:hr_timesheet_time_control.selection__hr_timesheet_time_control_mixin__show_time_control__stop
 #: model:ir.model.fields.selection,name:hr_timesheet_time_control.selection__project_project__show_time_control__stop
 #: model:ir.model.fields.selection,name:hr_timesheet_time_control.selection__project_task__show_time_control__stop
@@ -325,6 +327,12 @@ msgstr "Il timer precedente è vecchio. Lo si vuole veramente fermare adesso?"
 #: model:ir.model.fields,help:hr_timesheet_time_control.field_hr_timesheet_switch__running_timer_id
 msgid "This timer is running and will be stopped"
 msgstr "Questo timer è in esecuzione e verrà fermato"
+
+#. module: hr_timesheet_time_control
+#. odoo-python
+#: code:addons/hr_timesheet_time_control/models/account_analytic_line.py:0
+msgid "Unsupported operator: %s"
+msgstr "Operatore non supportato: %s"
 
 #. module: hr_timesheet_time_control
 #: model:ir.model.fields,help:hr_timesheet_time_control.field_project_task__display_name
