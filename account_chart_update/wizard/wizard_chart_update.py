@@ -71,7 +71,7 @@ class WizardUpdateChartsAccounts(models.TransientModel):
         default=lambda self: self.env.user.company_id.id,
     )
     chart_template = fields.Selection(
-        selectio,n="_chart_template_selection",
+        selection="_chart_template_selection",
         required=True,
     )
     code_digits = fields.Integer()
