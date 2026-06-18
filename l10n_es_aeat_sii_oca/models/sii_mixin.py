@@ -38,6 +38,7 @@ class SiiMixin(models.AbstractModel):
     sii_description = fields.Char(
         string="SII computed description",
         compute="_compute_sii_description",
+        size=500,
         default="/",
         store=True,
         readonly=False,
@@ -46,7 +47,7 @@ class SiiMixin(models.AbstractModel):
     aeat_state = fields.Selection(
         selection_add=SII_STATES,
     )
-    sii_csv = fields.Char(string="SII CSV", copy=False, readonly=True)
+    sii_csv = fields.Char(string="SII CSV", copy=False, readonly=True, index=True)
     sii_return = fields.Text(string="SII Return", copy=False, readonly=True)
     sii_refund_type = fields.Selection(
         selection=[
@@ -201,21 +202,13 @@ class SiiMixin(models.AbstractModel):
         tax_templates = sii_map.map_lines.filtered(
             lambda x: x.code in codes
         ).tax_xmlid_ids
-        taxes = self.env["account.tax"]
-        for template in tax_templates:
-            tax_id = self.company_id._get_tax_id_from_xmlid(template.name)
-            taxes |= self.env["account.tax"].browse(tax_id)
-        return taxes
+        return self.company_id._get_taxes_from_xmlids(tax_templates.mapped("name"))
 
     def _get_dua_sii_exempt_taxes(self):
         self.ensure_one()
-        taxes = []
-        dua_exempt_tax = self.company_id._get_tax_id_from_xmlid(
-            "account_tax_template_p_dua_exempt"
+        return self.company_id._get_taxes_from_xmlids(
+            ["account_tax_template_p_dua_exempt"]
         )
-        if dua_exempt_tax:
-            taxes.append(dua_exempt_tax)
-        return taxes
 
     def _get_aeat_header(self, tipo_comunicacion=False, cancellation=False):
         """Builds SII send header
