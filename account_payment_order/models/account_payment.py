@@ -1,6 +1,7 @@
 # Copyright 2019 ACSONE SA/NV
 # Copyright 2022 Tecnativa - Pedro M. Baeza
 # Copyright 2023 Noviat
+# Copyright 2024 Tecnativa - Víctor Martínez
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from odoo import _, api, fields, models
@@ -14,6 +15,7 @@ class AccountPayment(models.Model):
     order_state = fields.Selection(
         related="payment_order_id.state", string="Payment Order State"
     )
+    payment_line_date = fields.Date(compute="_compute_payment_line_date")
 
     @api.depends("payment_type", "journal_id")
     def _compute_payment_method_line_fields(self):
@@ -38,6 +40,20 @@ class AccountPayment(models.Model):
                 )
         return res
 
+    @api.depends("payment_line_ids", "payment_line_ids.date")
+    def _compute_payment_line_date(self):
+        for item in self:
+            item.payment_line_date = item.payment_line_ids[:1].date
+
+    @api.depends("payment_line_ids")
+    def _compute_partner_bank_id(self):
+        # Force the payment line bank account. The grouping function has already
+        # assured that there's no more than one bank account in the group
+        order_pays = self.filtered("payment_line_ids")
+        for pay in order_pays:
+            pay.partner_bank_id = pay.payment_line_ids.partner_bank_id
+        return super(AccountPayment, self - order_pays)._compute_partner_bank_id()
+
     def update_payment_reference(self):
         view = self.env.ref("account_payment_order.account_payment_update_view_form")
         return {
@@ -52,3 +68,18 @@ class AccountPayment(models.Model):
                 self.env.context, default_payment_reference=self.payment_reference
             ),
         }
+
+    def _prepare_move_line_default_vals(
+        self, write_off_line_vals=None, force_balance=None
+    ):
+        """Overwrite date_maturity of the move_lines that are generated when related
+        to a payment order.
+        """
+        vals_list = super()._prepare_move_line_default_vals(
+            write_off_line_vals=write_off_line_vals, force_balance=force_balance
+        )
+        if not self.payment_order_id:
+            return vals_list
+        for vals in vals_list:
+            vals["date_maturity"] = self.payment_line_ids[0].date
+        return vals_list

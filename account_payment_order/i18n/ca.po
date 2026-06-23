@@ -24,8 +24,8 @@ msgstr ""
 #: code:addons/account_payment_order/models/account_move.py:0
 #, python-format
 msgid ""
-"%(count)d payment lines added to the existing draft payment order <a href=# "
-"data-oe-model=account.payment.order data-oe-id=%(order_id)d>%(name)s</a>."
+"%(count)d payment lines added to the existing draft payment order "
+"%(payorder_link)s."
 msgstr ""
 
 #. module: account_payment_order
@@ -33,9 +33,8 @@ msgstr ""
 #: code:addons/account_payment_order/models/account_move.py:0
 #, python-format
 msgid ""
-"%(count)d payment lines added to the new draft payment order <a href=# data-"
-"oe-model=account.payment.order data-oe-id=%(order_id)d>%(name)s</a>, which "
-"has been automatically created."
+"%(count)d payment lines added to the new draft payment order "
+"%(payorder_link)s, which has been automatically created."
 msgstr ""
 
 #. module: account_payment_order
@@ -556,7 +555,6 @@ msgstr "Si està marca, els missatges nous requereixen la vostra atenció."
 
 #. module: account_payment_order
 #: model:ir.model.fields,help:account_payment_order.field_account_payment_order__message_has_error
-#: model:ir.model.fields,help:account_payment_order.field_account_payment_order__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr "Si està marcat, alguns missatges tenen un error de lliurament."
 
@@ -919,6 +917,11 @@ msgid "Payment Line Count"
 msgstr ""
 
 #. module: account_payment_order
+#: model:ir.model.fields,field_description:account_payment_order.field_account_payment__payment_line_date
+msgid "Payment Line Date"
+msgstr ""
+
+#. module: account_payment_order
 #: model:ir.actions.act_window,name:account_payment_order.account_payment_line_action
 #: model:ir.model,name:account_payment_order.model_account_payment_line
 #: model_terms:ir.ui.view,arch_db:account_payment_order.account_payment_line_form
@@ -1043,11 +1046,6 @@ msgid "Responsible User"
 msgstr ""
 
 #. module: account_payment_order
-#: model:ir.model.fields,field_description:account_payment_order.field_account_payment_order__message_has_sms_error
-msgid "SMS Delivery error"
-msgstr "Error d'enviament de missatge"
-
-#. module: account_payment_order
 #: model:ir.model.fields.selection,name:account_payment_order.selection__account_payment_line_create__payment_mode__same
 #: model:ir.model.fields.selection,name:account_payment_order.selection__account_payment_mode__default_payment_mode__same
 msgid "Same"
@@ -1118,6 +1116,11 @@ msgid ""
 "Overdue: Due date is already passed\n"
 "Today: Activity date is today\n"
 "Planned: Future activities."
+msgstr ""
+
+#. module: account_payment_order
+#: model:ir.model.fields.selection,name:account_payment_order.selection__account_payment_line__communication_type__structured
+msgid "Structured"
 msgstr ""
 
 #. module: account_payment_order
@@ -1270,6 +1273,11 @@ msgid "Value Date"
 msgstr "Data de valor"
 
 #. module: account_payment_order
+#: model_terms:ir.ui.view,arch_db:account_payment_order.account_payment_line_tree
+msgid "View"
+msgstr ""
+
+#. module: account_payment_order
 #: model:ir.model.fields,field_description:account_payment_order.field_account_payment_order__website_message_ids
 msgid "Website Messages"
 msgstr "Missatges del lloc web"
@@ -1316,6 +1324,9 @@ msgid "otherwise, new payment orders will be created (one per payment mode)."
 msgstr ""
 "altrament, es crearan ordres de pagament noves (una per cada mode de "
 "pagament)."
+
+#~ msgid "SMS Delivery error"
+#~ msgstr "Error d'enviament de missatge"
 
 #~ msgid "Last Modified on"
 #~ msgstr "Darrera modificació el"
