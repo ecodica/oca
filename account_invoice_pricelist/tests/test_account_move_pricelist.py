@@ -216,11 +216,9 @@ class TestAccountMovePricelist(common.TransactionCase):
                 ],
             }
         )
-        cls.euro_currency = cls.env["res.currency"].search(
-            [("active", "=", False), ("name", "=", "EUR")]
-        )
+        cls.euro_currency = cls.env.ref("base.EUR")
         cls.euro_currency.active = True
-        cls.usd_currency = cls.env["res.currency"].search([("name", "=", "USD")])
+        cls.usd_currency = cls.env.ref("base.USD")
         cls.sale_pricelist_with_discount_in_euros = cls.ProductPricelist.create(
             {
                 "name": "Test Sale pricelist - 4",
@@ -330,15 +328,13 @@ class TestAccountMovePricelist(common.TransactionCase):
                 ],
             }
         )
-        # Fix currency rate of EUR -> USD to 1.5289
-        usd_currency = cls.env["res.currency"].search([("name", "=", "USD")])
-        usd_rates = cls.env["res.currency.rate"].search(
-            [("currency_id", "=", usd_currency.id)]
-        )
-        usd_rates.unlink()
+        # Fix currency rate of EUR -> USD to 1.1913
+        cls.env["res.currency.rate"].search(
+            [("currency_id", "in", (cls.usd_currency.id, cls.euro_currency.id))]
+        ).unlink()
         cls.env["res.currency.rate"].create(
             {
-                "currency_id": usd_currency.id,
+                "currency_id": cls.usd_currency.id,
                 "rate": 1.1913,
                 "create_date": "2010-01-01",
                 "write_date": "2010-01-01",
