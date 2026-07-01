@@ -4,41 +4,42 @@
         id="pos_session_sales_details"
         inherit_id="point_of_sale.pos_session_sales_details"
     >
-        <xpath expr="//thead/tr" position="inside">
-            <th class="text-right">Stock Price Unit</th>
-            <th class="text-right">Stock Amount</th>
+        <!-- Rand categorie (Sales + Refunds): celule goale ca sa pastram alinierea coloanelor -->
+        <xpath expr="//tr[@t-as='category']" position="inside">
+            <td class="fw-bold" />
+            <td class="text-end fw-bold" />
         </xpath>
-        <xpath expr="//tbody/tr" position="inside">
-            <td class="text-right">
-                <t
-                    t-esc="line.get('stock_price',0.0)"
-                    t-options='{"widget": "float", "precision": currency_precision}'
-                />
+
+        <!-- Rand produs (Sales + Refunds): cost unitar din stoc + valoare stoc -->
+        <xpath expr="//tr[@t-as='line']" position="inside">
+            <td class="text-end">
+                <span
+                    t-out="line.get('stock_price', 0.0)"
+                    t-options="{'widget': 'float', 'precision': currency['precision']}"
+                >0.00</span>
             </td>
-            <td class="text-right">
-                <t
-                    t-esc="line.get('stock_amount',0.0)"
-                    t-options='{"widget": "float", "precision": currency_precision}'
-                />
+            <td class="text-end">
+                <span
+                    t-out="line.get('stock_amount', 0.0)"
+                    t-options="{'widget': 'float', 'precision': currency['precision']}"
+                >0.00</span>
             </td>
         </xpath>
-        <xpath expr="//tbody" position="after">
-            <tfoot>
-                <tr>
-                    <td>
-                        <strong>Totals</strong>
-                    </td>
-                    <td />
-                    <td />
-                    <td />
-                    <td class="text-right">
-                        <strong
-                            t-esc='total_stock_amount'
-                            t-options="{'widget': 'float', 'precision': currency_precision}"
-                        />
-                    </td>
-                </tr>
-            </tfoot>
+
+        <!-- Rand Total (sectiunea Sales): valoarea totala de stoc -->
+        <xpath
+            expr="//tr[td/strong/span[@t-out=&quot;products_info['qty']&quot;]]"
+            position="inside"
+        >
+            <td />
+            <td class="text-end">
+                <strong>
+                    <span
+                        t-out="total_stock_amount"
+                        t-options="{'widget': 'float', 'precision': currency['precision']}"
+                    >0.00</span>
+                </strong>
+            </td>
         </xpath>
     </template>
 </odoo>
