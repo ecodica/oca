@@ -201,6 +201,13 @@ msgid "Automatically post bills for this trusted partner"
 msgstr ""
 
 #. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__receipt_reminder_email
+msgid ""
+"Automatically send a confirmation email to the vendor X days before the "
+"expected receipt date, asking him to confirm the exact date."
+msgstr ""
+
+#. module: pms_base
 #: model:pms.stage,name:pms_base.pms_stage_available
 msgid "Available"
 msgstr ""
@@ -302,8 +309,18 @@ msgid "Building Boiler"
 msgstr ""
 
 #. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__buyer_id
+msgid "Buyer"
+msgstr ""
+
+#. module: pms_base
 #: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
 msgid "CRM"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__can_publish
+msgid "Can Publish"
 msgstr ""
 
 #. module: pms_base
@@ -564,6 +581,11 @@ msgid "Current property"
 msgstr ""
 
 #. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__property_stock_customer
+msgid "Customer Location"
+msgstr ""
+
+#. module: pms_base
 #: model:ir.model.fields,field_description:pms_base.field_pms_property__property_payment_term_id
 msgid "Customer Payment Terms"
 msgstr ""
@@ -579,6 +601,11 @@ msgid "Dashboard"
 msgstr ""
 
 #. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__reminder_date_before_receipt
+msgid "Days Before Receipt"
+msgstr ""
+
+#. module: pms_base
 #: model:ir.model.fields,field_description:pms_base.field_pms_property__days_sales_outstanding
 msgid "Days Sales Outstanding (DSO)"
 msgstr ""
@@ -586,6 +613,20 @@ msgstr ""
 #. module: pms_base
 #: model:pms.team,name:pms_base.pms_team_default
 msgid "Default Team"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__group_rfq
+msgid ""
+"Define if RFQ should be grouped         together based on expected arrival, "
+"except for dropship operations.\n"
+"         On Order: Replenishment needs will be grouped together except for "
+"MTO.\n"
+"         Daily: Replenishment needs will be grouped if the expected arrival "
+"is the same day\n"
+"         Weekly: Replenishment needs will be grouped if the expected arrival "
+"is the same week or week day\n"
+"         Always: Replenishment needs will always be grouped."
 msgstr ""
 
 #. module: pms_base
@@ -807,6 +848,11 @@ msgid "Geolocation Date"
 msgstr ""
 
 #. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__group_rfq
+msgid "Group RFQ"
+msgstr ""
+
+#. module: pms_base
 #: model:pms.room.type,name:pms_base.pms_room_type_half_bath
 msgid "Half Bathroom"
 msgstr ""
@@ -998,6 +1044,11 @@ msgstr ""
 #. module: pms_base
 #: model:ir.model.fields,field_description:pms_base.field_pms_property__is_public
 msgid "Is Public"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__is_published
+msgid "Is Published"
 msgstr ""
 
 #. module: pms_base
@@ -1242,6 +1293,16 @@ msgid "Message Delivery error"
 msgstr ""
 
 #. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__purchase_warn_msg
+msgid "Message for Purchase Order"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__picking_warn_msg
+msgid "Message for Stock Picking"
+msgstr ""
+
+#. module: pms_base
 #: model:ir.model.fields,field_description:pms_base.field_pms_property__message_ids
 #: model:ir.model.fields,field_description:pms_base.field_pms_team__message_ids
 msgid "Messages"
@@ -1315,6 +1376,11 @@ msgid "Number of Actions"
 msgstr ""
 
 #. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__reminder_date_before_receipt
+msgid "Number of days to send reminder email before the promised receipt date"
+msgstr ""
+
+#. module: pms_base
 #: model:ir.model.fields,field_description:pms_base.field_pms_property__message_has_error_counter
 #: model:ir.model.fields,field_description:pms_base.field_pms_team__message_has_error_counter
 msgid "Number of errors"
@@ -1343,6 +1409,11 @@ msgid "Offline since"
 msgstr ""
 
 #. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__on_time_rate
+msgid "On-Time Delivery Rate"
+msgstr ""
+
+#. module: pms_base
 #: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
 msgid "Online reservation"
 msgstr ""
@@ -1365,6 +1436,14 @@ msgstr ""
 #. module: pms_base
 #: model:ir.model.fields,help:pms_base.field_pms_amenity__type_id
 msgid "Organize amenities by type (multimedia, comfort, etc ...)"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__on_time_rate
+msgid ""
+"Over the past x days; the number of products received on time divided by the "
+"number of ordered products.x is either the System Parameter "
+"purchase_stock.on_time_delivery_days or the default 365"
 msgstr ""
 
 #. module: pms_base
@@ -1602,6 +1681,16 @@ msgid "Purchase Contracts"
 msgstr ""
 
 #. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__purchase_line_ids
+msgid "Purchase Lines"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__purchase_order_count
+msgid "Purchase Order Count"
+msgstr ""
+
+#. module: pms_base
 #: model:ir.model.fields,field_description:pms_base.field_pms_property__qty_bedroom
 msgid "Qty Bedroom"
 msgstr ""
@@ -1638,6 +1727,11 @@ msgid "Ratings"
 msgstr ""
 
 #. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__receipt_reminder_email
+msgid "Receipt Reminder"
+msgstr ""
+
+#. module: pms_base
 #: model:ir.model.fields,field_description:pms_base.field_pms_property__ref
 #: model_terms:ir.ui.view,arch_db:pms_base.view_pms_property_form
 msgid "Reference"
@@ -1663,6 +1757,11 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:pms_base.view_pms_room_form
 #: model_terms:ir.ui.view,arch_db:pms_base.view_pms_service_form
 msgid "Restore"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__website_id
+msgid "Restrict to a specific website."
 msgstr ""
 
 #. module: pms_base
@@ -1901,6 +2000,26 @@ msgid "Street2"
 msgstr ""
 
 #. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__suggest_based_on
+msgid "Suggest Based On"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__suggest_days
+msgid "Suggest Days"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__suggest_percent
+msgid "Suggest Percent"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__property_purchase_currency_id
+msgid "Supplier Currency"
+msgstr ""
+
+#. module: pms_base
 #: model:ir.model.fields,field_description:pms_base.field_pms_property__supplier_rank
 msgid "Supplier Rank"
 msgstr ""
@@ -1990,6 +2109,16 @@ msgid ""
 msgstr ""
 
 #. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__website_absolute_url
+msgid "The full absolute URL to access the document through the website."
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__website_url
+msgid "The full relative URL to access the document through the website."
+msgstr ""
+
+#. module: pms_base
 #: model:ir.model.fields,help:pms_base.field_pms_property__user_id
 msgid "The internal user in charge of this contact."
 msgstr ""
@@ -2012,10 +2141,27 @@ msgid ""
 msgstr ""
 
 #. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__property_stock_customer
+msgid ""
+"The stock location used as destination when sending goods to this contact."
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__property_stock_supplier
+msgid ""
+"The stock location used as source when receiving goods from this contact."
+msgstr ""
+
+#. module: pms_base
 #: model:ir.model.fields,help:pms_base.field_pms_property__main_user_id
 msgid ""
 "There can be several users related to the same partner. When a single user "
 "is needed, this field attempts to find the most appropriate one."
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__property_purchase_currency_id
+msgid "This currency will be used for purchases from the current partner"
 msgstr ""
 
 #. module: pms_base
@@ -2153,6 +2299,11 @@ msgid "Vendor"
 msgstr ""
 
 #. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__property_stock_supplier
+msgid "Vendor Location"
+msgstr ""
+
+#. module: pms_base
 #: model:ir.model.fields,field_description:pms_base.field_pms_property__property_supplier_payment_term_id
 msgid "Vendor Payment Terms"
 msgstr ""
@@ -2163,8 +2314,24 @@ msgid "Vendors"
 msgstr ""
 
 #. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__website_published
+msgid "Visible on current website"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__visitor_ids
+msgid "Visitors"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__website_id
 #: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
 msgid "Website"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__website_absolute_url
+msgid "Website Absolute URL"
 msgstr ""
 
 #. module: pms_base
@@ -2185,9 +2352,19 @@ msgid "Website Messages"
 msgstr ""
 
 #. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__website_url
+msgid "Website URL"
+msgstr ""
+
+#. module: pms_base
 #: model:ir.model.fields,help:pms_base.field_pms_property__website_message_ids
 #: model:ir.model.fields,help:pms_base.field_pms_team__website_message_ids
 msgid "Website communication history"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__group_on
+msgid "Week Day"
 msgstr ""
 
 #. module: pms_base
