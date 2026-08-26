@@ -1,6 +1,8 @@
 # Copyright 2024 Antoni Marroig(APSL-Nagarro)<amarroig@apsl.net>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
+from unittest.mock import patch
+
 from odoo.addons.base.tests.common import HttpCaseWithUserPortal
 
 MAIL_TEMPLATE = """Return-Path: <whatever-2a840@postmaster.twitter.com>
@@ -262,6 +264,33 @@ class TestCustomerResponse(HttpCaseWithUserPortal):
         self._message_process_from("wrong@example.com")
         self.assertEqual(self.ticket.stage_id, self.stage_in_progress)
 
+    def test_no_crash_when_assigning_mail_to_new_thread(self):
+        """New thread (thread_id=None) must not crash and creates the ticket."""
+        MailThread = self.env["mail.thread"]
+        message = MAIL_TEMPLATE.format(
+            to=self.env.user.email,
+            subject="Brand new ticket via mail",
+            email_from=self.external_partner.email,
+            msg_id="<new-thread-assign-test@example.com>",
+        )
+        thread_id = MailThread.message_process(
+            model="helpdesk.ticket",
+            message=message,
+            save_original=False,
+            strip_attachments=True,
+        )
+        ticket = self.env["helpdesk.ticket"].browse(thread_id).exists()
+        self.assertTrue(ticket)
+
+    def test_change_ticket_status_via_mail_no_ticket_id(self):
+        """Route without thread_id returns None instead of raising."""
+        MailThread = self.env["mail.thread"]
+        routes = [("helpdesk.ticket", None, {}, self.env.user.id, None)]
+        result = MailThread.change_ticket_status_via_mail(
+            routes, {"email_from": "external@example.com"}
+        )
+        self.assertIsNone(result)
+
     # ------------------------------------------------------------------
     # Branch 4: external sender (no Odoo user), ticket has only partner_email
     # ------------------------------------------------------------------
@@ -309,4 +338,24 @@ class TestCustomerResponse(HttpCaseWithUserPortal):
             {"partner_id": False, "partner_email": "external@example.com"}
         )
         self._message_process_from("wrong@example.com")
+
+    def test_skip_autoreply_default_returns_false(self):
+        """Default hook returns False so normal stage updates are not suppressed."""
+        mail_thread = self.env["mail.thread"]
+        result = mail_thread._skip_ticket_stage_update_from_autoreply(None, {}, [])
+        self.assertFalse(result)
+
+    def test_no_stage_update_when_autoreply_skips(self):
+        """When _skip_ticket_stage_update_from_autoreply returns True (e.g. an
+        integration module detected an auto-reply), the stage must NOT be updated
+        even though the mail would otherwise qualify for an update."""
+        self.ticket = self._create_ticket(self.helpdesk_team1, self.partner_portal)
+        self.ticket.stage_id = self.stage_in_progress
+        MailThreadClass = type(self.env["mail.thread"])
+        with patch.object(
+            MailThreadClass,
+            "_skip_ticket_stage_update_from_autoreply",
+            return_value=True,
+        ):
+            self.message_process()
         self.assertEqual(self.ticket.stage_id, self.stage_in_progress)

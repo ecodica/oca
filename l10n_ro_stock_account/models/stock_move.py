@@ -11,6 +11,35 @@ from odoo.tools.sql import column_exists, create_column
 
 _logger = logging.getLogger(__name__)
 
+# Kept as a module level constant so that other modules can reuse it; up to 18.0
+# the same list lived on stock.valuation.layer as VALUED_TYPE, and the storage
+# sheet report imported it from there.
+MOVE_TYPE = [
+    ("reception", "Reception"),
+    ("reception_return", "Reception Return"),
+    ("reception_notice", "Reception Notice"),
+    ("reception_notice_return", "Reception Notice Return"),
+    ("reception_in_progress", "Reception In Progress"),
+    ("reception_in_progress_return", "Reception In Progress Return"),
+    ("delivery", "Delivery"),
+    ("delivery_return", "Delivery Return"),
+    ("delivery_notice", "Delivery Notice"),
+    ("delivery_notice_return", "Delivery Notice Return"),
+    ("plus_inventory", "Plus Inventory"),
+    ("minus_inventory", "Minus Inventory"),
+    ("consumption", "Consumption"),
+    ("consumption_return", "Consumption Return"),
+    ("usage_giving", "Usage Giving"),
+    ("usage_giving_return", "Usage Giving Return"),
+    ("production", "Production"),
+    ("production_return", "Production Return"),
+    ("internal_transfer", "Internal Transfer"),
+    ("internal_transit_out", "Internal Transit Out"),
+    ("internal_transit_in", "Internal Transit In"),
+    ("dropshipped", "Dropshipped"),
+    ("dropshipped_return", "Dropshipped Return"),
+]
+
 
 class StockMove(models.Model):
     _name = "stock.move"
@@ -24,31 +53,7 @@ class StockMove(models.Model):
         copy=False,
     )
     l10n_ro_move_type = fields.Selection(
-        [
-            ("reception", "Reception"),
-            ("reception_return", "Reception Return"),
-            ("reception_notice", "Reception Notice"),
-            ("reception_notice_return", "Reception Notice Return"),
-            ("reception_in_progress", "Reception In Progress"),
-            ("reception_in_progress_return", "Reception In Progress Return"),
-            ("delivery", "Delivery"),
-            ("delivery_return", "Delivery Return"),
-            ("delivery_notice", "Delivery Notice"),
-            ("delivery_notice_return", "Delivery Notice Return"),
-            ("plus_inventory", "Plus Inventory"),
-            ("minus_inventory", "Minus Inventory"),
-            ("consumption", "Consumption"),
-            ("consumption_return", "Consumption Return"),
-            ("usage_giving", "Usage Giving"),
-            ("usage_giving_return", "Usage Giving Return"),
-            ("production", "Production"),
-            ("production_return", "Production Return"),
-            ("internal_transfer", "Internal Transfer"),
-            ("internal_transit_out", "Internal Transit Out"),
-            ("internal_transit_in", "Internal Transit In"),
-            ("dropshipped", "Dropshipped"),
-            ("dropshipped_return", "Dropshipped Return"),
-        ],
+        MOVE_TYPE,
         compute="_compute_l10n_ro_move_type",
         store=True,
         string="Romanian - Move Type",
@@ -286,7 +291,22 @@ class StockMove(models.Model):
 
     def _set_value(self, correction_quantity=None):
         """Set the value of the move"""
-        res = super()._set_value(correction_quantity=correction_quantity)
+        # Dropship moves gain nothing from core's own _set_value (they never
+        # satisfy its is_in/_is_out branches), but core still adds their
+        # product to `products_to_recompute` (keyed on `is_dropship or
+        # is_in`) and later recomputes the average cost for it — folding the
+        # dropship cost into the SAME moving-average pool as the company's
+        # real stock of that product (core's `_run_average_batch` explicitly
+        # includes `is_dropship` moves), which retroactively reprices
+        # unrelated quants already on hand. Route dropship moves around
+        # core's _set_value entirely and value them ourselves below instead.
+        ro_dropship_moves = self.filtered(
+            lambda m: m.is_l10n_ro_record
+            and m.l10n_ro_move_type in ("dropshipped", "dropshipped_return")
+        )
+        res = super(StockMove, self - ro_dropship_moves)._set_value(
+            correction_quantity=correction_quantity
+        )
         ro_internal_moves = self.filtered(
             lambda m: m.is_l10n_ro_record and m.l10n_ro_move_type == "internal_transfer"
         )
@@ -294,7 +314,117 @@ class StockMove(models.Model):
             # Since we create double entry throught transfer account
             # we need to set the value to the same as the stock valuation
             move.value = move.sudo()._get_value()
+
+        for move in ro_dropship_moves.filtered(lambda m: not m.value):
+            move.value = move.sudo()._get_value()
         return res
+
+    def _l10n_ro_get_source_account_unit_cost(self):
+        """Unit cost the source warehouse account actually holds for the product.
+
+        An internal transfer must move the value the source warehouse owns for
+        the goods, not the average taken over every warehouse. The balance is
+        rebuilt from the done moves in and out of the locations sharing the
+        source valuation account, which is what the storage sheet reports per
+        warehouse.
+
+        Returns ``None`` when the cost cannot be established, in which case the
+        caller keeps the standard behaviour. This is notably the case when the
+        source location has no valuation account of its own: source and
+        destination then share the product account and the global cost is
+        already the right one.
+        """
+        self.ensure_one()
+        src_account = self.location_id.with_company(
+            self.company_id
+        ).l10n_ro_property_stock_valuation_account_id
+        if not src_account:
+            return None
+        locations = (
+            self.env["stock.location"]
+            .sudo()
+            .with_company(self.company_id)
+            .search(
+                [
+                    ("usage", "=", "internal"),
+                    ("company_id", "in", [False, self.company_id.id]),
+                    (
+                        "l10n_ro_property_stock_valuation_account_id",
+                        "=",
+                        src_account.id,
+                    ),
+                ]
+            )
+        )
+        if not locations:
+            return None
+        domain = [
+            ("product_id", "=", self.product_id.id),
+            ("state", "=", "done"),
+            ("company_id", "=", self.company_id.id),
+            ("id", "!=", self.id),
+        ]
+        move_obj = self.env["stock.move"].sudo()
+        value = quantity = 0.0
+        # Moves landing in the warehouse add value, moves leaving it remove
+        # value; a move inside the warehouse appears on both sides and cancels
+        # out, as it should.
+        for sign, location_field in ((1, "location_dest_id"), (-1, "location_id")):
+            groups = move_obj._read_group(
+                domain + [(location_field, "in", locations.ids)],
+                aggregates=["value:sum", "product_qty:sum"],
+            )
+            # _read_group returns an empty list when nothing matches.
+            group_value, group_quantity = groups[0] if groups else (0.0, 0.0)
+            value += sign * (group_value or 0.0)
+            quantity += sign * (group_quantity or 0.0)
+        if quantity <= 0 or self.product_id.uom_id.is_zero(quantity):
+            return None
+        unit_cost = value / quantity
+        if unit_cost <= 0:
+            # A warehouse left with a negative balance by earlier
+            # mis-valuations gives a negative cost, which is not a cost the
+            # goods can be taken out at: the move would be valued negatively,
+            # which runs its whole entry backwards - the source warehouse
+            # debited instead of credited - so the transfer would deepen the
+            # negative balance instead of relieving it. Keep the standard
+            # valuation and let the existing imbalance be corrected on its own.
+            return None
+        return unit_cost
+
+    def _get_value_from_std_price(self, quantity, std_price=False, at_date=None):
+        """Value an internal transfer at the cost held by the source warehouse.
+
+        Only the last step of ``_get_value_data`` is replaced, so a value coming
+        from a bill, a quotation, a return or a landed cost keeps priority
+        exactly as in the standard flow; the override kicks in only where the
+        standard flow would fall back to the product's global cost.
+
+        FIFO and lot valued products are left alone: there the cost already
+        comes from the layers or from the lot, not from a global average.
+        """
+        if (
+            not std_price
+            and not at_date
+            and self.is_l10n_ro_record
+            and self.l10n_ro_move_type == "internal_transfer"
+            and self.product_id.cost_method != "fifo"
+            and not self.product_id.lot_valuated
+        ):
+            unit_cost = self.sudo()._l10n_ro_get_source_account_unit_cost()
+            if unit_cost is not None:
+                return {
+                    "value": unit_cost * quantity,
+                    "quantity": quantity,
+                    "description": self.env._(
+                        "%(quantity)s %(uom)s at the cost of the source warehouse",
+                        quantity=quantity,
+                        uom=self.product_id.uom_id.name,
+                    ),
+                }
+        return super()._get_value_from_std_price(
+            quantity, std_price=std_price, at_date=at_date
+        )
 
     def _get_valued_qty(self, lot=None):
         self.ensure_one()
@@ -403,8 +533,8 @@ class StockMove(models.Model):
             "internal_transit_in": [
                 ("stock_valuation", "l10n_ro_transfer", "value", 1)
             ],
-            "dropshipped": [],
-            "dropshipped_return": [],
+            "dropshipped": [("expense", "stock_valuation", "value", 1)],
+            "dropshipped_return": [("expense", "stock_valuation", "value", -1)],
         }
         return vals.get(self.l10n_ro_move_type, [])
 
@@ -425,6 +555,62 @@ class StockMove(models.Model):
             ],
         }
         return vals.get(self.l10n_ro_move_type, [])
+
+    def _l10n_ro_get_pivot_currency_amount(self, value):
+        """Return (currency, amount) for the 408 leg of a reception on notice.
+
+        When the reception comes from a purchase order in a foreign currency,
+        the estimated liability is a monetary item and must keep the order
+        currency, so the exchange rate difference between reception and invoice
+        can be recognised when the invoice arrives (OMFP 1802/2014, function of
+        account 408). The stock leg stays in company currency at the reception
+        rate, inventory being a non-monetary asset that is not retranslated
+        (IAS 21).
+        """
+        self.ensure_one()
+        company_currency = self.company_id.currency_id
+        po_line = self.purchase_line_id if "purchase_line_id" in self._fields else False
+        if po_line and po_line.currency_id and po_line.currency_id != company_currency:
+            qty = self.product_uom._compute_quantity(
+                self.quantity, po_line.product_uom_id
+            )
+            return po_line.currency_id, po_line.price_unit * qty
+        return company_currency, value
+
+    def _l10n_ro_pivot_currency_vals(self, account_key, value, leg_sign):
+        """Extra values carrying the order currency on the 408 leg of a notice
+        reception. Empty for every other account and move type."""
+        self.ensure_one()
+        if account_key != "l10n_ro_picking_payable":
+            return {}
+        if not (self.l10n_ro_move_type or "").startswith("reception_notice"):
+            return {}
+        currency, amount = self._l10n_ro_get_pivot_currency_amount(value)
+        if currency == self.company_id.currency_id:
+            return {}
+        # `value` already carries the storno sign of the entry; mirror it here
+        signed = amount if value > 0 else -amount
+        return {"currency_id": currency.id, "amount_currency": leg_sign * signed}
+
+    def _get_value_from_bill(self, aml):
+        """Keep the reception rate for the quantity already received on notice.
+
+        Inventory is a non-monetary asset and is not retranslated for exchange
+        rate movements (IAS 21 / OMFP 1802): the rate delta belongs on 765/665,
+        not in the stock value. Only the part invoiced beyond the reception - a
+        genuine price difference, whose liability arises at the invoice date -
+        is taken at the invoice rate.
+
+        Defined by `purchase_stock`, the only caller, so this override is
+        reached exclusively on that path.
+        """
+        self.ensure_one()
+        company_currency = self.company_id.currency_id
+        if self.company_id.l10n_ro_accounting:
+            rate_diff = aml._l10n_ro_notice_rate_difference()
+            if not company_currency.is_zero(rate_diff):
+                return company_currency.round(aml.balance + rate_diff)
+        return super()._get_value_from_bill(aml)
 
     def _get_l10n_ro_value(self, price_type):
         self.ensure_one()
@@ -515,26 +701,27 @@ class StockMove(models.Model):
                 "l10n_ro_usage_giving", False
             ):
                 continue
-            res += [
-                {
-                    "account_id": debit_acc.id,
-                    "name": self.reference,
-                    "product_id": self.product_id.id,
-                    "quantity": self.product_qty,
-                    "debit": value,
-                    "credit": 0,
-                    "is_storno": value < 0,
-                },
-                {
-                    "account_id": credit_acc.id,
-                    "name": self.reference,
-                    "product_id": self.product_id.id,
-                    "quantity": self.product_qty,
-                    "debit": 0,
-                    "credit": value,
-                    "is_storno": value < 0,
-                },
-            ]
+            debit_vals = {
+                "account_id": debit_acc.id,
+                "name": self.reference,
+                "product_id": self.product_id.id,
+                "quantity": self.product_qty,
+                "debit": value,
+                "credit": 0,
+                "is_storno": value < 0,
+            }
+            credit_vals = {
+                "account_id": credit_acc.id,
+                "name": self.reference,
+                "product_id": self.product_id.id,
+                "quantity": self.product_qty,
+                "debit": 0,
+                "credit": value,
+                "is_storno": value < 0,
+            }
+            debit_vals.update(self._l10n_ro_pivot_currency_vals(from_key, value, 1))
+            credit_vals.update(self._l10n_ro_pivot_currency_vals(to_key, value, -1))
+            res += [debit_vals, credit_vals]
         if self.l10n_ro_move_type in (
             "consumption",
             "usage_giving",

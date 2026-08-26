@@ -4,6 +4,7 @@
 import logging
 
 from odoo import Command, api, fields, models
+from odoo.exceptions import UserError
 
 _logger = logging.getLogger(__name__)
 
@@ -280,15 +281,54 @@ class StockMove(models.Model):
     def _split_for_fifo_assignment(self):
         """Splits moves based on FIFO list coming from product
         _run_fifo_layers."""
+        # The FIFO stack must be walked for what this move is actually
+        # shipping right now - `move.quantity` (what's picked, the same
+        # quantity core's own `_create_backorder` compares against
+        # `product_uom_qty` to decide what goes to a backorder) - not for
+        # `product_uom_qty`/`product_qty`, the *ordered* demand. When an
+        # operator ships less than ordered (reducing `quantity` so the rest
+        # backorders, the normal Odoo workflow), `product_uom_qty` stays at
+        # the full order on purpose. Consuming/valuing against it here
+        # would draw FIFO layers - and split off an extra stock.move - for
+        # the un-shipped remainder too, shipping the full original demand
+        # regardless of what was actually picked.
+        self.invalidate_recordset(["product_uom_qty", "quantity", "product_qty"])
         fifo_split_vals_list = []
         for move in self:
+            quantity_to_ship = move.product_uom._compute_quantity(
+                move.quantity, move.product_id.uom_id, round=False
+            )
             fifo_list = move.product_id.with_context(
                 location=move.location_id.ids
-            )._run_fifo_layers(move.product_qty, location=move.location_id)
-            quantity = move.product_qty
+            )._run_fifo_layers(quantity_to_ship, location=move.location_id)
+            quantity = quantity_to_ship
+            vals_before = len(fifo_split_vals_list)
             while quantity >= move.quantity and fifo_list:
                 fifo_split_vals_list, quantity = self._l10n_ro_process_fifo_split(
                     move, fifo_list, quantity, fifo_split_vals_list
+                )
+            # Safety net: whatever's left on `move` plus whatever got split
+            # off of it must add up to what this move is actually shipping
+            # (`quantity_to_ship`), not more, not less. If it doesn't, stop
+            # instead of silently shipping/valuing the wrong amount -
+            # nothing has been marked done yet at this point.
+            split_qty_for_move = sum(
+                vals.get("quantity", 0.0) for vals in fifo_split_vals_list[vals_before:]
+            )
+            accounted_for = move.quantity + split_qty_for_move
+            if move.product_uom.compare(accounted_for, quantity_to_ship):
+                raise UserError(
+                    self.env._(
+                        "Verificare de consistență FIFO eșuată la transferul"
+                        " %(picking)s, produsul %(product)s: se livrează"
+                        " %(shipping)s dar %(accounted)s a fost procesat la"
+                        " validare. Nimic nu a fost livrat încă - anulează și"
+                        " reia operația (verifică rezervarea/cantitatea).",
+                        picking=move.picking_id.display_name,
+                        product=move.product_id.display_name,
+                        shipping=quantity_to_ship,
+                        accounted=accounted_for,
+                    )
                 )
         if fifo_split_vals_list:
             fifo_splitted_moves = self.env["stock.move"].create(fifo_split_vals_list)
@@ -309,8 +349,18 @@ class StockMove(models.Model):
         """Processes the FIFO split for a given move."""
         fifo_item = fifo_list.pop(0)
         fifo_quantity = fifo_item["quantity"]
-        if fifo_quantity < quantity:
+        # A slice with nothing left to consume (a stack move with zero valued
+        # quantity, or a rounding residue) carries no value and cannot become
+        # a stock move: ``_split`` returns no values for a quantity that is
+        # zero at the UoM rounding. Drop it and keep consuming the next one.
+        if move.product_id.uom_id.compare(fifo_quantity, 0) <= 0:
+            return fifo_split_vals_list, quantity
+        if move.product_id.uom_id.compare(fifo_quantity, quantity) < 0:
             new_move_vals_list = move._split(fifo_quantity)
+            if not new_move_vals_list:
+                # Nothing could be split off; leave the quantity on the
+                # original move instead of losing it.
+                return fifo_split_vals_list, quantity
             new_move_vals_list[0].update(
                 {
                     "value_manual": fifo_item["value"],
@@ -376,7 +426,7 @@ class StockMove(models.Model):
         entries (e.g. _set_value is re-called when the invoice is posted),
         we return immediately to avoid doubling the effect."""
         self.ensure_one()
-        if self.fifo_neg_compensation_move_ids:
+        if self.sudo().fifo_neg_compensation_move_ids:
             return
         location = self.location_dest_id
         if not location._should_be_valued():

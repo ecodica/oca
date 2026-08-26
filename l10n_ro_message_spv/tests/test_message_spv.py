@@ -845,6 +845,76 @@ class TestMessageSPV(TestMessageSPV):
         self.assertEqual(invoice.l10n_ro_edi_document_ids[0].state, "invoice_validated")
         self.assertEqual(invoice.l10n_ro_edi_state, "invoice_validated")
 
+    def test_out_message_edi_state_validated(self):
+        """An out message matched by hand (typically a self-billed invoice the
+        customer issued in our name) must get an invoice_validated EDI
+        document, not invoice_sent.
+
+        With invoice_sent the fetch-status cron queries ANAF using
+        l10n_ro_edi_index — empty, because the upload never left this
+        instance — fails on every run and re-triggers itself every 2 minutes
+        for as long as an invoice_sent invoice exists, so it never stops."""
+        refund = self.env["account.move"].create(
+            {
+                "move_type": "out_refund",
+                "partner_id": self.vendor.id,
+                "ref": "00027547122026",
+            }
+        )
+        message_spv = self.env["l10n.ro.message.spv"].create(
+            {
+                "name": "MSG_OUT_SELF",
+                "request_id": "REQ_OUT_SELF",
+                "cif": "123",
+                "message_type": "out_invoice",
+                "partner_id": self.vendor.id,
+                "invoice_id": refund.id,
+            }
+        )
+        self.assertFalse(refund.l10n_ro_edi_document_ids)
+
+        message_spv.get_data_from_invoice()
+
+        self.assertEqual(len(refund.l10n_ro_edi_document_ids), 1)
+        self.assertEqual(refund.l10n_ro_edi_document_ids[0].state, "invoice_validated")
+        self.assertEqual(refund.l10n_ro_edi_state, "invoice_validated")
+        # The state is no longer the one the fetch-status cron queries, and
+        # re-sending stays blocked: _is_ro_edi_applicable requires an empty
+        # l10n_ro_edi_state or invoice_refused.
+        self.assertNotIn(
+            refund.l10n_ro_edi_state, (False, "invoice_sent", "invoice_refused")
+        )
+
+    def test_out_message_keeps_existing_edi_document(self):
+        """Invoices uploaded by this very instance already have an EDI document
+        holding the index: matching must not touch their state, so the normal
+        invoice_sent -> invoice_validated flow (and the signature retrieval)
+        stays unchanged."""
+        invoice = self.env["account.move"].create(
+            {
+                "move_type": "out_invoice",
+                "partner_id": self.vendor.id,
+            }
+        )
+        existing = self.env["l10n_ro_edi.document"].create(
+            {"invoice_id": invoice.id, "state": "invoice_sent"}
+        )
+        message_spv = self.env["l10n.ro.message.spv"].create(
+            {
+                "name": "MSG_OUT_OWN",
+                "request_id": "REQ_OUT_OWN",
+                "cif": "123",
+                "message_type": "out_invoice",
+                "partner_id": self.vendor.id,
+                "invoice_id": invoice.id,
+            }
+        )
+
+        message_spv.get_data_from_invoice()
+
+        self.assertEqual(invoice.l10n_ro_edi_document_ids, existing)
+        self.assertEqual(invoice.l10n_ro_edi_state, "invoice_sent")
+
     def test_onchange_invoice_id(self):
         """Testează _onchange_invoice_id pentru diverse tipuri de facturi"""
         invoice = self.env["account.move"].create(
@@ -1247,3 +1317,184 @@ class TestMessageSPV(TestMessageSPV):
         self.assertFalse(manual_line._l10n_ro_is_spv_imported_line())
         self.assertEqual(manual_line.name, "Produs adaugat manual")
         self.assertEqual(manual_line.price_unit, 55.0)
+
+    # ------------------------------------------------------------------
+    # CIF lookup with / without the "RO" prefix
+    # ------------------------------------------------------------------
+
+    def test_get_partner_from_cif_ro_prefix_variants(self):
+        """ANAF sends the CIF with or without the RO prefix: both must match
+        the same partner, instead of creating a duplicate "Unknown"."""
+        company = self.env.company
+        # the partner holds "RO20603502", the message brings the bare number
+        self.assertEqual(company._l10n_ro_get_partner_from_cif("20603502"), self.vendor)
+        # ... and the other way around, the same partner is found
+        self.assertEqual(
+            company._l10n_ro_get_partner_from_cif("RO20603502"), self.vendor
+        )
+        # the partner holds the bare number, the message brings "RO"
+        no_prefix_partner = self.env["res.partner"].create(
+            {
+                "name": "Furnizor fara prefix",
+                "vat": "12345674",
+                "is_company": True,
+                "country_id": self.env.ref("base.ro").id,
+            }
+        )
+        self.assertEqual(no_prefix_partner.vat, "12345674")
+        self.assertEqual(
+            company._l10n_ro_get_partner_from_cif("RO12345674"), no_prefix_partner
+        )
+        self.assertEqual(
+            company._l10n_ro_get_partner_from_cif("12345674"), no_prefix_partner
+        )
+
+    def test_get_partner_from_cif_creates_normalized_partner(self):
+        """An unknown CIF creates a single partner, with the CIF normalized
+        without the RO prefix."""
+        company = self.env.company
+        partner = company._l10n_ro_get_partner_from_cif("RO9999997")
+        self.assertEqual(partner.name, "Unknown")
+        self.assertEqual(partner.vat, "9999997")
+        self.assertEqual(partner.company_id, company)
+        # the second call, with the other spelling, reuses the same partner
+        self.assertEqual(company._l10n_ro_get_partner_from_cif("9999997"), partner)
+
+    def test_message_get_partner_ro_prefix_variants(self):
+        """get_partner on the message follows the same rule as the company
+        helper."""
+        message = self.env["l10n.ro.message.spv"].create(
+            {
+                "name": "MSG_CIF_VARIANT",
+                "cif": "20603502",
+                "company_id": self.env.company.id,
+            }
+        )
+        message.get_partner()
+        self.assertEqual(message.partner_id, self.vendor)
+
+    # ------------------------------------------------------------------
+    # Multi-company isolation
+    # ------------------------------------------------------------------
+
+    def _create_other_company(self, name="Alta companie SPV"):
+        return self.env["res.company"].create(
+            {"name": name, "country_id": self.env.ref("base.ro").id}
+        )
+
+    def test_multi_company_partner_isolation(self):
+        """A partner belonging to another company must not be reused: neither
+        by get_partner, nor by the company helper."""
+        other_company = self._create_other_company()
+        foreign_partner = self.env["res.partner"].create(
+            {
+                "name": "Furnizor alta companie",
+                "vat": "RO12345674",
+                "is_company": True,
+                "country_id": self.env.ref("base.ro").id,
+                "company_id": other_company.id,
+            }
+        )
+        message = self.env["l10n.ro.message.spv"].create(
+            {
+                "name": "MSG_MULTICOMPANY",
+                "cif": "12345674",
+                "company_id": self.env.company.id,
+            }
+        )
+        message.get_partner()
+        self.assertTrue(message.partner_id)
+        self.assertNotEqual(message.partner_id, foreign_partner)
+        self.assertEqual(message.partner_id.company_id, self.env.company)
+
+        foreign_partner_2 = self.env["res.partner"].create(
+            {
+                "name": "Alt furnizor alta companie",
+                "vat": "RO9999997",
+                "is_company": True,
+                "country_id": self.env.ref("base.ro").id,
+                "company_id": other_company.id,
+            }
+        )
+        partner = self.env.company._l10n_ro_get_partner_from_cif("9999997")
+        self.assertNotEqual(partner, foreign_partner_2)
+        self.assertEqual(partner.name, "Unknown")
+        self.assertEqual(partner.company_id, self.env.company)
+
+    def test_multi_company_check_company_on_attachment(self):
+        """The stored ZIP cannot belong to a company other than the
+        message's one."""
+        other_company = self._create_other_company("Companie atasament SPV")
+        message = self.env["l10n.ro.message.spv"].create(
+            {
+                "name": "MSG_MC_ATTACHMENT",
+                "company_id": self.env.company.id,
+            }
+        )
+        foreign_attachment = self.env["ir.attachment"].create(
+            {
+                "name": "foreign.zip",
+                "raw": b"foreign",
+                "mimetype": "application/zip",
+                "company_id": other_company.id,
+            }
+        )
+        with self.assertRaises(UserError):
+            message.attachment_id = foreign_attachment
+        # an attachment of the same company (or a shared one) is accepted
+        own_attachment = self.env["ir.attachment"].create(
+            {
+                "name": "own.zip",
+                "raw": b"own",
+                "mimetype": "application/zip",
+                "company_id": self.env.company.id,
+            }
+        )
+        message.attachment_id = own_attachment
+        self.assertEqual(message.attachment_id, own_attachment)
+
+    def test_multi_company_check_company_on_partner(self):
+        """partner_id is company-checked as well."""
+        other_company = self._create_other_company("Companie partener SPV")
+        message = self.env["l10n.ro.message.spv"].create(
+            {
+                "name": "MSG_MC_INVOICE",
+                "company_id": self.env.company.id,
+            }
+        )
+        foreign_partner = self.env["res.partner"].create(
+            {
+                "name": "Partener alta companie",
+                "is_company": True,
+                "company_id": other_company.id,
+            }
+        )
+        with self.assertRaises(UserError):
+            message.partner_id = foreign_partner
+
+    def test_download_stores_zip_in_message_company(self):
+        """The downloaded ZIP and the created bill belong to the message's
+        company."""
+        message_spv = self.env["l10n.ro.message.spv"].create(
+            {
+                "name": "3006372781",
+                "request_id": "5004111924",
+                "company_id": self.env.company.id,
+                "message_type": "in_invoice",
+                "cif": "8486152",
+            }
+        )
+        file_invoice = file_path("l10n_ro_message_spv/tests/invoice.zip")
+        with open(file_invoice, "rb") as zip_file:
+            anaf_messages = {"content": zip_file.read()}
+        with patch(
+            "odoo.addons.l10n_ro_message_spv.models.ciusro_document.make_efactura_request",
+            return_value=anaf_messages,
+        ):
+            message_spv.download_from_spv()
+
+        self.assertEqual(message_spv.attachment_id.company_id, self.env.company)
+
+        message_spv.create_invoice()
+        self.assertTrue(message_spv.invoice_id)
+        self.assertEqual(message_spv.invoice_id.company_id, self.env.company)

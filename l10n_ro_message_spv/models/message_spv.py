@@ -3,6 +3,7 @@
 
 import io
 import logging
+import re
 import zipfile
 from base64 import b64decode
 
@@ -20,6 +21,7 @@ class MessageSPV(models.Model):
     _name = "l10n.ro.message.spv"
     _description = "Message SPV"
     _order = "date desc"
+    _check_company_auto = True
 
     name = fields.Char(string="Message ID")  # id
     cif = fields.Char()  # cif
@@ -44,8 +46,8 @@ class MessageSPV(models.Model):
 
     # campuri suplimentare
 
-    invoice_id = fields.Many2one("account.move", string="Invoice")
-    partner_id = fields.Many2one("res.partner", string="Partner")
+    invoice_id = fields.Many2one("account.move", string="Invoice", check_company=True)
+    partner_id = fields.Many2one("res.partner", string="Partner", check_company=True)
 
     # draft - starea initiala a mesajului descarcat din SPV
     # downloaded - fisierul a fost descarcat cu succes
@@ -64,11 +66,17 @@ class MessageSPV(models.Model):
     download_attempts = fields.Integer(default=0)
     last_download_date = fields.Date()
     file_name = fields.Char()
-    attachment_id = fields.Many2one("ir.attachment", string="Attachment")
+    attachment_id = fields.Many2one(
+        "ir.attachment", string="Attachment", check_company=True
+    )
     # The signed ANAF ZIP (attachment_id) is the only stored file. The XML
     # and the PDFs are derived from it on demand; these fields only expose
     # what was materialized on the invoice (the XML import source and the
     # embedded PDF preview).
+    # They are computed and not stored, so they carry no `check_company`:
+    # nothing is written through them, and their company consistency is
+    # already guaranteed by `invoice_id` (they can only point to attachments
+    # of that invoice, which is itself company-checked).
     attachment_xml_id = fields.Many2one(
         "ir.attachment", string="XML", compute="_compute_derived_attachments"
     )
@@ -238,6 +246,7 @@ class MessageSPV(models.Model):
                 "name": file_name,
                 "raw": response["content"],
                 "mimetype": "application/zip",
+                "company_id": message.company_id.id,
             }
             attachment = self.env["ir.attachment"].sudo().create(attachment_value)
 
@@ -479,27 +488,35 @@ class MessageSPV(models.Model):
                     {"res_id": message.invoice_id.id, "res_model": "account.move"}
                 )
 
-                if "out" in message.message_type:
-                    if not message.invoice_id.l10n_ro_edi_document_ids:
-                        self.env["l10n_ro_edi.document"].create(
-                            {
-                                "invoice_id": message.invoice_id.id,
-                                "state": "invoice_sent",
-                            }
-                        )
                 if not message.invoice_id.l10n_ro_edi_document_ids:
-                    if message.message_type in ("in_invoice", "in_receipt"):
-                        # Facturile primite se marchează invoice_validated, nu
-                        # invoice_sent. Core-ul l10n_ro_edi deduplică facturile
-                        # primite dupa l10n_ro_edi_state == 'invoice_validated';
-                        # cum starea e calculata din primul document EDI, daca
-                        # punem invoice_sent factura importata nu mai e gasita la
-                        # dedup, iar cronul de import o recreeaza (duplicat).
-                        edi_state = "invoice_validated"
-                    elif message.message_type == "error":
+                    if message.message_type == "error":
                         edi_state = "invoice_refused"
                     else:
-                        edi_state = "invoice_sent"
+                        # The document is already in the SPV — the very
+                        # existence of the message proves it — and the invoice
+                        # carries no EDI document, so this instance never
+                        # uploaded anything. The correct state is the terminal
+                        # one, invoice_validated:
+                        #
+                        # - for received bills, l10n_ro_edi core deduplicates on
+                        #   l10n_ro_edi_state == 'invoice_validated'; with
+                        #   invoice_sent the imported bill is no longer found at
+                        #   dedup time and the import cron recreates it
+                        #   (duplicate bills);
+                        # - for our own invoices (including self-billed ones the
+                        #   customer issued in our name), invoice_sent would
+                        #   queue the document for the fetch-status cron, which
+                        #   queries ANAF with l10n_ro_edi_index — empty, since we
+                        #   did not upload it. The fetch fails on every run, logs
+                        #   in the chatter, and re-triggers itself every 2
+                        #   minutes for as long as an invoice_sent invoice
+                        #   exists, so the loop never ends.
+                        #
+                        # Invoices this instance did upload already have an EDI
+                        # document holding the index, so they never reach this
+                        # branch: their normal sent -> validated flow (and the
+                        # signature retrieval) is untouched.
+                        edi_state = "invoice_validated"
 
                     self.env["l10n_ro_edi.document"].create(
                         {
@@ -524,6 +541,7 @@ class MessageSPV(models.Model):
                 "partner_id": message.partner_id.id,
                 "l10n_ro_edi_download": message.name,
                 "l10n_ro_edi_transaction": message.request_id,
+                "company_id": message.company_id.id,
             }
             if "extract_state" in move_obj._fields:
                 invoice_values["extract_state"] = "no_extract_requested"
@@ -708,23 +726,41 @@ class MessageSPV(models.Model):
         }
 
     def get_partner(self):
+        partner_obj = self.env["res.partner"]
         for message in self.filtered(lambda m: not m.partner_id):
             if message.cif:
-                domain = [("vat", "like", message.cif), ("is_company", "=", True)]
-                partner = self.env["res.partner"].search(domain, limit=1)
+                # The CIF may reach us with or without the "RO" prefix, while
+                # the partner in Odoo can hold the other spelling: try both.
+                cif_clean = re.sub(r"^RO", "", message.cif.strip().upper())
+                partner = partner_obj.browse()
+                for variant in (cif_clean, "RO" + cif_clean):
+                    partner = partner_obj.search(
+                        [
+                            ("vat", "=ilike", variant),
+                            ("is_company", "=", True),
+                            "|",
+                            ("company_id", "=", message.company_id.id),
+                            ("company_id", "=", False),
+                        ],
+                        limit=1,
+                    )
+                    if partner:
+                        break
                 if not partner:
-                    partner = self.env["res.partner"].create(
+                    partner = partner_obj.create(
                         {
                             "name": message.cif,
                             "vat": message.cif,
                             "is_company": True,
+                            "company_id": message.company_id.id,
                         }
                     )
                 message.write({"partner_id": partner.id})
 
     def refresh(self):
-        get_param = self.env["ir.config_parameter"].sudo().get_param
-        l10n_ro_refresh_message_days = int(get_param("l10n_ro_refresh_message_days", 1))
+        l10n_ro_refresh_message_days = int(
+            self.env.company.l10n_ro_refresh_message_days or 1
+        )
         self.env.company._l10n_ro_download_message_spv(
             no_days=l10n_ro_refresh_message_days
         )

@@ -9,8 +9,27 @@ from dateutil.relativedelta import relativedelta
 from odoo import api, fields, models
 from odoo.exceptions import UserError
 
-# Local fallback; in v19 we do not depend on l10n_ro_stock_account
-VALUED_TYPE = [("indefinite", "Indefinite")]
+from odoo.addons.l10n_ro_stock_account.models.stock_move import MOVE_TYPE
+
+# Up to 18.0 the valued type of a report line came from the valuation layer
+# (svl.l10n_ro_valued_type). Odoo 19 removed stock.valuation.layer and moved the
+# valuation onto stock.move, so the same information is read from the stored
+# stock.move.l10n_ro_move_type column. "indefinite" stays as the fallback for
+# moves whose type could not be determined.
+# The opening and closing balance rows are not movements, so they have no move
+# type to read. They still need a valued type of their own: the sheet groups its
+# rows by valued type, and leaving these NULL files both balances into the same
+# empty-type bucket as the movements whose type is unknown. That bucket then
+# shows an opening and a closing balance that differ with no movement in
+# between - the movements being on the typed rows - which reads as a broken
+# report even though every figure is right.
+BALANCE_TYPE = [("initial", "Initial Balance"), ("final", "Final Balance")]
+
+VALUED_TYPE = MOVE_TYPE + BALANCE_TYPE + [("indefinite", "Indefinite")]
+
+# Movement rows take the valued type from the move; it is not an aggregate, so
+# it has to appear in the GROUP BY of the in/out queries as well.
+VALUED_TYPE_SQL = "COALESCE(sm.l10n_ro_move_type, 'indefinite')"
 
 _logger = logging.getLogger(__name__)
 
@@ -254,7 +273,7 @@ class StorageSheet(models.TransientModel):
          insert into l10n_ro_stock_storage_sheet_line
           (report_id, product_id, amount_initial, quantity_initial,
            account_id, date_time, date, reference, document,
-           location_id, categ_id {field})
+           location_id, valued_type, categ_id {field})
 
         select * from(
             SELECT %(report)s as report_id, x.product_id as product_id,
@@ -266,6 +285,7 @@ class StorageSheet(models.TransientModel):
                 %(reference)s as reference,
                 %(reference)s as document,
                 %(location)s as location_id,
+                'initial' as valued_type,
                 x.categ_id as categ_id
                 {select}
             from (
@@ -312,7 +332,7 @@ class StorageSheet(models.TransientModel):
         insert into l10n_ro_stock_storage_sheet_line
           (report_id, product_id, amount_final, quantity_final,
            account_id, date_time, date, reference, document,
-           location_id, categ_id {field})
+           location_id, valued_type, categ_id {field})
         select * from(
             SELECT %(report)s as report_id, x.product_id as product_id,
                 COALESCE(sum(x.amount), 0) as amount_final,
@@ -324,6 +344,7 @@ class StorageSheet(models.TransientModel):
                 %(reference)s as reference,
                 %(reference)s as document,
                 %(location)s as location_id,
+                'final' as valued_type,
                 x.categ_id as categ_id
                 {select}
             from (
@@ -391,7 +412,7 @@ class StorageSheet(models.TransientModel):
             %(location)s as location_id,
             sp.partner_id,
             sm.reference as document,
-            'indefinite' as valued_type,
+            {VALUED_TYPE_SQL} as valued_type,
             pt.categ_id as categ_id
             {select}
 
@@ -413,6 +434,7 @@ class StorageSheet(models.TransientModel):
         GROUP BY sm.product_id, sm.date, sm.reference,
                 sp.partner_id, sm.l10n_ro_account_id,
                 sm.l10n_ro_transfer_account_id,
+                {VALUED_TYPE_SQL},
                 pt.categ_id {group}
         """
         return sql
@@ -445,7 +467,7 @@ class StorageSheet(models.TransientModel):
             %(location)s as location_id,
             sp.partner_id,
             sm.reference as document,
-            'indefinite' as valued_type,
+            {VALUED_TYPE_SQL} as valued_type,
             pt.categ_id as categ_id
             {select}
 
@@ -466,6 +488,7 @@ class StorageSheet(models.TransientModel):
 
         GROUP BY sm.product_id, sm.date, sm.reference,
                 sp.partner_id, sm.l10n_ro_account_id,  sm.l10n_ro_transfer_account_id,
+                {VALUED_TYPE_SQL},
                 pt.categ_id {group}
         """
         return sql

@@ -1,4 +1,4 @@
-# Copyright (C) 2021 - TODAY, Open Source Integrators
+# Copyright (C) 2021 - TODAY, Gray Matter Logic
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from odoo.addons.fieldservice.tests.test_fsm_common import FSMCommon
@@ -41,6 +41,7 @@ class TestFieldServicePurchase(FSMCommon):
                 "price": 100,
             }
         )
+        fsm_person.invalidate_recordset(["pricelist_count"])
         self.assertEqual(fsm_person.pricelist_count, 1)
         action = fsm_person.action_view_pricelists()
         self.assertEqual(action["res_id"], supplierinfo.id)

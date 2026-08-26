@@ -1,4 +1,4 @@
-# Copyright (C) 2018 - TODAY, Open Source Integrators
+# Copyright (C) 2018 - TODAY, Gray Matter Logic
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from odoo import api, fields, models
@@ -95,4 +95,6 @@ class FSMPerson(models.Model):
     def create(self, vals_list):
         for vals in vals_list:
             vals.update({"fsm_person": True})
-        return super().create(vals_list)
+        return super(FSMPerson, self.with_context(creating_fsm_person=True)).create(
+            vals_list
+        )

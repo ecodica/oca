@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2026-07-23 08:46+0000\n"
+"PO-Revision-Date: 2026-08-25 04:46+0000\n"
 "Last-Translator: Matjaz Mozetic <matjaz@luxim.si>\n"
 "Language-Team: none\n"
 "Language: sl\n"
@@ -26,7 +26,7 @@ msgstr "Št. sestankov"
 #. module: fieldservice
 #: model:ir.model.fields,field_description:fieldservice.field_fsm_location__opportunity_count
 msgid "# Opportunities"
-msgstr ""
+msgstr "Št. priložnosti"
 
 #. module: fieldservice
 #: model:ir.model.fields,field_description:fieldservice.field_fsm_location__supplier_invoice_count
@@ -803,6 +803,16 @@ msgstr "Št. stikov"
 #: model_terms:ir.ui.view,arch_db:fieldservice.partner_wizard_view
 msgid "Convert"
 msgstr "Pretvori"
+
+#. module: fieldservice
+#: model_terms:ir.ui.view,arch_db:fieldservice.fsm_partner_fields
+msgid "Convert to FS Location"
+msgstr "Pretvori v operativno lokacijo"
+
+#. module: fieldservice
+#: model_terms:ir.ui.view,arch_db:fieldservice.fsm_partner_fields
+msgid "Convert to FS Worker"
+msgstr ""
 
 #. module: fieldservice
 #: model:ir.actions.act_window,name:fieldservice.partner_fsm_action
@@ -2490,12 +2500,12 @@ msgstr "Operacije"
 #: model:ir.model.fields,field_description:fieldservice.field_fsm_location__opportunity_ids
 #: model:ir.model.fields,field_description:fieldservice.field_fsm_person__opportunity_ids
 msgid "Opportunities"
-msgstr ""
+msgstr "Priložnosti"
 
 #. module: fieldservice
 #: model:ir.model.fields,field_description:fieldservice.field_fsm_person__opportunity_count
 msgid "Opportunity Count"
-msgstr ""
+msgstr "Št. priložnosti"
 
 #. module: fieldservice
 #: model:ir.model.fields,field_description:fieldservice.field_fsm_order__display_name
@@ -3772,8 +3782,8 @@ msgstr ""
 
 #. module: fieldservice
 #: model_terms:ir.ui.view,arch_db:fieldservice.fsm_person_form
-msgid "You can archive the contact"
-msgstr "Stik lahko arhivirate"
+msgid "You can archive the contact from the partner form."
+msgstr ""
 
 #. module: fieldservice
 #: model:ir.model.fields,help:fieldservice.field_fsm_location__vat
@@ -3847,3 +3857,6 @@ msgstr "predloga"
 #: model_terms:ir.ui.view,arch_db:fieldservice.fsm_person_form
 msgid "x"
 msgstr "x"
+
+#~ msgid "You can archive the contact"
+#~ msgstr "Stik lahko arhivirate"
