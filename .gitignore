@@ -18,6 +18,12 @@ lib/
 lib64/
 parts/
 sdist/
+
+# The unanchored "lib/" rule above matches any directory named "lib",
+# including vendored frontend libraries under a module's static/lib/
+# (e.g. base_geoengine/static/lib/ol-7.2.2/) - un-ignore those.
+!*/static/lib/
+!*/static/lib/**
 var/
 wheels/
 pip-wheel-metadata/
