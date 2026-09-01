@@ -50,6 +50,11 @@ class GeoVectorLayer(models.Model):
     )
     name = fields.Char("Layer Name", translate=True, required=True)
     begin_color = fields.Char("Begin color class", required=False, help="hex value")
+    intermediate_colors = fields.Char(
+        "Intermediate colors",
+        required=False,
+        help="Comma-separated hex values for intermediate gradient stops",
+    )
     end_color = fields.Char(
         "End color class", required=False, help="hex value", default="#FF680A"
     )
@@ -61,9 +66,12 @@ class GeoVectorLayer(models.Model):
         ondelete="cascade",
         domain=[("ttype", "ilike", "geo_")],
     )
-    attribute_field_id = fields.Many2one(
-        "ir.model.fields", "Attribute field", domain=[("ttype", "in", SUPPORTED_ATT)]
+
+    attribute_field_id_domain = fields.Binary(
+        compute="_compute_attribute_field_id_domain", readonly=True, store=False
     )
+    attribute_field_id = fields.Many2one("ir.model.fields", "Attribute field")
+
     model_id = fields.Many2one(
         "ir.model",
         "Model to use",
@@ -155,3 +163,15 @@ class GeoVectorLayer(models.Model):
                     rec.model_id = ""
             else:
                 rec.model_id = ""
+
+    @api.depends("geo_field_id")
+    def _compute_attribute_field_id_domain(self):
+        for rec in self:
+            rec.attribute_field_id_domain = (
+                [
+                    ("ttype", "in", SUPPORTED_ATT),
+                    ("model", "=", rec.geo_field_id.model_id.model),
+                ]
+                if rec.geo_field_id
+                else [("ttype", "in", SUPPORTED_ATT)]
+            )

@@ -43,6 +43,11 @@ msgid "Add tag"
 msgstr ""
 
 #. module: base_geoengine
+#: model:ir.model.fields,field_description:base_geoengine.field_geoengine_vector_layer__attribute_field_id_domain
+msgid "Attribute Field Id Domain"
+msgstr ""
+
+#. module: base_geoengine
 #: model:ir.model.fields,field_description:base_geoengine.field_geoengine_vector_layer__attribute_field_id
 msgid "Attribute field"
 msgstr "Attribut"
@@ -89,6 +94,11 @@ msgstr "Plage de couleurs/Chroma.js"
 #: model_terms:ir.ui.view,arch_db:base_geoengine.geo_vector_view_form
 msgid "Colors"
 msgstr "Couleurs"
+
+#. module: base_geoengine
+#: model:ir.model.fields,help:base_geoengine.field_geoengine_vector_layer__intermediate_colors
+msgid "Comma-separated hex values for intermediate gradient stops"
+msgstr ""
 
 #. module: base_geoengine
 #: model:ir.ui.menu,name:base_geoengine.geoengine_base_view_menu
@@ -312,6 +322,11 @@ msgstr "A le type"
 #: model:ir.model.fields,field_description:base_geoengine.field_geoengine_raster_layer_type__id
 #: model:ir.model.fields,field_description:base_geoengine.field_geoengine_vector_layer__id
 msgid "ID"
+msgstr ""
+
+#. module: base_geoengine
+#: model:ir.model.fields,field_description:base_geoengine.field_geoengine_vector_layer__intermediate_colors
+msgid "Intermediate colors"
 msgstr ""
 
 #. module: base_geoengine
@@ -541,7 +556,7 @@ msgstr "Paramètres"
 
 #. module: base_geoengine
 #: model:ir.model.fields,field_description:base_geoengine.field_geoengine_raster_layer__params_wms
-msgid "Params Wms"
+msgid "Params WMS"
 msgstr ""
 
 #. module: base_geoengine
