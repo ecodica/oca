@@ -549,8 +549,10 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/base_tier_validation/static/src/components/tier_review_menu/tier_review_menu.xml:0
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__account_move__validation_status__pending
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__hr_expense__validation_status__pending
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__purchase_order__validation_status__pending
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__purchase_request__validation_status__pending
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__res_partner__validation_status__pending
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__sale_order__validation_status__pending
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__stock_picking__validation_status__pending
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__tier_review__status__pending
@@ -570,8 +572,10 @@ msgstr "Reddet"
 
 #. module: base_tier_validation
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__account_move__validation_status__rejected
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__hr_expense__validation_status__rejected
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__purchase_order__validation_status__rejected
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__purchase_request__validation_status__rejected
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__res_partner__validation_status__rejected
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__sale_order__validation_status__rejected
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__stock_picking__validation_status__rejected
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__tier_review__status__rejected
@@ -631,6 +635,12 @@ msgstr "Yeniden Doğrulama İste"
 #: model:ir.model.fields,field_description:base_tier_validation.field_comment_wizard__review_ids
 msgid "Review"
 msgstr "İncele"
+
+#. module: base_tier_validation
+#. odoo-python
+#: code:addons/base_tier_validation/models/tier_validation.py:0
+msgid "Review pending for %(assignees)s, requested by %(requester)s."
+msgstr ""
 
 #. module: base_tier_validation
 #: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__reviewer_id
@@ -839,8 +849,10 @@ msgstr "Reddetmeyi Doğrula"
 
 #. module: base_tier_validation
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__account_move__validation_status__validated
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__hr_expense__validation_status__validated
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__purchase_order__validation_status__validated
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__purchase_request__validation_status__validated
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__res_partner__validation_status__validated
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__sale_order__validation_status__validated
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__stock_picking__validation_status__validated
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__tier_validation__validation_status__validated
@@ -888,8 +900,10 @@ msgstr "Doğrulamalar"
 
 #. module: base_tier_validation
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__account_move__validation_status__waiting
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__hr_expense__validation_status__waiting
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__purchase_order__validation_status__waiting
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__purchase_request__validation_status__waiting
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__res_partner__validation_status__waiting
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__sale_order__validation_status__waiting
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__stock_picking__validation_status__waiting
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__tier_review__status__waiting
@@ -910,8 +924,10 @@ msgstr ""
 
 #. module: base_tier_validation
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__account_move__validation_status__no
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__hr_expense__validation_status__no
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__purchase_order__validation_status__no
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__purchase_request__validation_status__no
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__res_partner__validation_status__no
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__sale_order__validation_status__no
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__stock_picking__validation_status__no
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__tier_validation__validation_status__no
@@ -974,6 +990,12 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_definition_view_form
 msgid "e.g. Tier Validation for..."
 msgstr "ör. Şunun için Seviye Doğrulaması..."
+
+#. module: base_tier_validation
+#. odoo-python
+#: code:addons/base_tier_validation/models/tier_validation.py:0
+msgid "the assigned reviewer"
+msgstr ""
 
 #~ msgid ""
 #~ "<i class=\"fa fa-lg fa-info-circle\"/>\n"

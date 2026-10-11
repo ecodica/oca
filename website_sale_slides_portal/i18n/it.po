@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2026-09-21 11:49+0000\n"
+"PO-Revision-Date: 2026-10-09 13:46+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -15,6 +15,24 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.15.2\n"
+
+#. module: website_sale_slides_portal
+#: model_terms:ir.ui.view,arch_db:website_sale_slides_portal.portal_my_courses
+msgid "Actions"
+msgstr "Azioni"
+
+#. module: website_sale_slides_portal
+#. odoo-javascript
+#: code:addons/website_sale_slides_portal/static/src/js/portal_courses.esm.js:0
+msgid "Copied"
+msgstr "Copiato"
+
+#. module: website_sale_slides_portal
+#. odoo-javascript
+#: code:addons/website_sale_slides_portal/static/src/js/portal_courses.esm.js:0
+#: model_terms:ir.ui.view,arch_db:website_sale_slides_portal.portal_my_courses
+msgid "Copy link"
+msgstr "Copia collegamento"
 
 #. module: website_sale_slides_portal
 #. odoo-python
@@ -26,23 +44,14 @@ msgstr "Corso"
 #. module: website_sale_slides_portal
 #: model_terms:ir.ui.view,arch_db:website_sale_slides_portal.portal_my_courses
 #: model_terms:ir.ui.view,arch_db:website_sale_slides_portal.portal_my_home_courses
+#: model_terms:ir.ui.view,arch_db:website_sale_slides_portal.portal_my_home_menu_courses
 msgid "Courses"
 msgstr "Corsi"
-
-#. module: website_sale_slides_portal
-#: model_terms:ir.ui.view,arch_db:website_sale_slides_portal.portal_my_courses
-msgid "Go to course"
-msgstr "Vai al corso"
 
 #. module: website_sale_slides_portal
 #: model_terms:ir.ui.view,arch_db:website_sale_slides_portal.portal_my_home_courses
 msgid "Information about courses and participations."
 msgstr "Informazioni sui corsi e i partecipanti."
-
-#. module: website_sale_slides_portal
-#: model_terms:ir.ui.view,arch_db:website_sale_slides_portal.portal_my_courses
-msgid "Invitation Link"
-msgstr "Collegamento invito"
 
 #. module: website_sale_slides_portal
 #. odoo-python
@@ -69,3 +78,9 @@ msgstr "Totale"
 #: model_terms:ir.ui.view,arch_db:website_sale_slides_portal.portal_my_courses
 msgid "Used"
 msgstr "Usato"
+
+#~ msgid "Go to course"
+#~ msgstr "Vai al corso"
+
+#~ msgid "Invitation Link"
+#~ msgstr "Collegamento invito"
