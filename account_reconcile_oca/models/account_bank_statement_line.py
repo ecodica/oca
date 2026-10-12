@@ -1,7 +1,7 @@
 # Copyright 2023 Dixmit
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
-
 from collections import defaultdict
+from datetime import timedelta
 
 from dateutil import rrule
 from dateutil.relativedelta import relativedelta
@@ -41,6 +41,7 @@ class AccountBankStatementLine(models.Model):
         store=False,
         default=False,
         prefetch=False,
+        domain=[("deprecated", "=", False)],
     )
     manual_partner_id = fields.Many2one(
         "res.partner",
@@ -77,6 +78,12 @@ class AccountBankStatementLine(models.Model):
         prefetch=False,
         currency_field="manual_in_currency_id",
     )
+    previous_manual_amount_in_currency = fields.Monetary(
+        store=False,
+        default=False,
+        prefetch=False,
+        currency_field="manual_in_currency_id",
+    )
     manual_exchange_counterpart = fields.Boolean(
         store=False,
     )
@@ -86,7 +93,11 @@ class AccountBankStatementLine(models.Model):
         store=False,
         default=False,
         prefetch=False,
-        domain=[("rule_type", "=", "writeoff_button")],
+        domain="""
+        [('rule_type', '=', 'writeoff_button'),
+        '|',
+        ('match_journal_ids', '=', False), ('match_journal_ids', '=', journal_id)]
+        """,
     )
     manual_name = fields.Char(store=False, default=False, prefetch=False)
     manual_amount = fields.Monetary(
@@ -384,6 +395,7 @@ class AccountBankStatementLine(models.Model):
             "currency_id"
         ] != line.get("line_currency_id")
         self.manual_amount_in_currency = line.get("currency_amount")
+        self.previous_manual_amount_in_currency = line.get("currency_amount")
         self.manual_name = line["name"]
         self.manual_exchange_counterpart = line.get("is_exchange_counterpart", False)
         self.manual_partner_id = line.get("partner_id") and line["partner_id"][0]
@@ -402,10 +414,6 @@ class AccountBankStatementLine(models.Model):
         data = self.reconcile_data_info.get("data", [])
         new_data = []
         related_move_line_id = False
-        for line in data:
-            if line.get("reference") == self.manual_reference:
-                related_move_line_id = line.get("id")
-                break
         for line in data:
             if (
                 self.manual_delete
@@ -429,21 +437,6 @@ class AccountBankStatementLine(models.Model):
         )
         self.can_reconcile = self.reconcile_data_info.get("can_reconcile", False)
 
-    @api.onchange("manual_amount_in_currency")
-    def _onchange_manual_amount_in_currency(self):
-        if (
-            self.manual_line_id.exists()
-            and self.manual_line_id
-            and self.manual_kind != "liquidity"
-        ):
-            self.manual_amount = self.manual_in_currency_id._convert(
-                self.manual_amount_in_currency,
-                self.company_id.currency_id,
-                self.company_id,
-                self.manual_line_id.date,
-            )
-        self._onchange_manual_reconcile_vals()
-
     def _get_manual_reconcile_vals(self):
         vals = {
             "name": self.manual_name,
@@ -462,6 +455,7 @@ class AccountBankStatementLine(models.Model):
             "credit": -self.manual_amount if self.manual_amount < 0 else 0.0,
             "debit": self.manual_amount if self.manual_amount > 0 else 0.0,
             "analytic_distribution": self.analytic_distribution,
+            "currency_amount": self.manual_amount_in_currency,
         }
         liquidity_lines, _suspense_lines, _other_lines = self._seek_for_lines()
         if self.manual_line_id and self.manual_line_id.id not in liquidity_lines.ids:
@@ -483,11 +477,35 @@ class AccountBankStatementLine(models.Model):
         "manual_name",
         "manual_amount",
         "analytic_distribution",
+        "manual_amount_in_currency",
     )
     def _onchange_manual_reconcile_vals(self):
         self.ensure_one()
         data = self.reconcile_data_info.get("data", [])
         new_data = []
+        if (
+            self.manual_in_currency_id
+            and float_compare(
+                self.manual_amount_in_currency,
+                self.previous_manual_amount_in_currency,
+                precision_rounding=self.manual_in_currency_id.rounding,
+            )
+            != 0
+        ):
+            in_currency_date = self.date
+            if (
+                self.manual_line_id.exists()
+                and self.manual_line_id
+                and self.manual_kind != "liquidity"
+            ):
+                in_currency_date = self.manual_line_id.date
+            self.manual_amount = self.manual_in_currency_id._convert(
+                self.manual_amount_in_currency,
+                self.manual_currency_id,
+                self.company_id,
+                in_currency_date,
+            )
+        self.previous_manual_amount_in_currency = self.manual_amount_in_currency
         for line in data:
             if line["reference"] == self.manual_reference:
                 if self._check_line_changed(line):
@@ -510,6 +528,7 @@ class AccountBankStatementLine(models.Model):
                 )
                 line.update(
                     {
+                        "currency_amount": self.manual_amount_in_currency,
                         "amount": amount,
                         "credit": -amount if amount < 0 else 0.0,
                         "debit": amount if amount > 0 else 0.0,
@@ -531,7 +550,7 @@ class AccountBankStatementLine(models.Model):
     @api.depends("reconcile_data", "is_reconciled")
     def _compute_reconcile_data_info(self):
         for record in self:
-            if record.reconcile_data:
+            if record.reconcile_data and not record.is_reconciled:
                 record.reconcile_data_info = record.reconcile_data
             else:
                 record.reconcile_data_info = record._default_reconcile_data(
@@ -669,6 +688,7 @@ class AccountBankStatementLine(models.Model):
                         is_counterpart=True,
                         max_amount=amount,
                         reconcile_auxiliary_id=reconcile_auxiliary_id,
+                        move=True,
                     )
                     amount -= sum(line.get("amount") for line in line_data)
                     data += line_data
@@ -697,6 +717,7 @@ class AccountBankStatementLine(models.Model):
                                 "other",
                                 from_unreconcile=False,
                                 move=True,
+                                is_reconciled=self.is_reconciled,
                             )
                             data += lines
                         continue
@@ -738,7 +759,10 @@ class AccountBankStatementLine(models.Model):
                     data += lines
             else:
                 reconcile_auxiliary_id, lines = self._get_reconcile_line(
-                    line, "other", from_unreconcile=False
+                    line,
+                    "other",
+                    from_unreconcile=False,
+                    is_reconciled=self.is_reconciled,
                 )
                 data += lines
 
@@ -823,6 +847,7 @@ class AccountBankStatementLine(models.Model):
     def _reconcile_bank_line_keep_move_vals(self):
         return {
             "journal_id": self.journal_id.id,
+            "date": self._get_reconciled_move_date(),
         }
 
     def _reconcile_bank_line_keep(self, data):
@@ -884,7 +909,7 @@ class AccountBankStatementLine(models.Model):
                         | line
                     )
             move.invalidate_recordset()
-        move._post()
+        move._post(soft=False)
         for _account, lines in to_reconcile.items():
             lines.reconcile()
 
@@ -918,6 +943,23 @@ class AccountBankStatementLine(models.Model):
                 for move in to_reverse
             ]
             to_reverse._reverse_moves(default_values_list, cancel=True)
+
+    def _get_reconciled_move_date(self):
+        """Get the date of the move to reconcile, considering the lock
+        dates defined in the company (user defined and tax dates).
+        so that the date proposed is the lock date +1 day if there's a lock date,
+        and the move date otherwise."""
+        locks = []
+        user_lock_date = self.move_id.company_id._get_user_fiscal_lock_date()
+        if user_lock_date:
+            locks.append(user_lock_date)
+        if self.move_id._affect_tax_report() and self.move_id.company_id.tax_lock_date:
+            locks.append(self.tax_lock_date)
+        lock_date = max(locks)
+        if lock_date and self.move_id.date <= lock_date:
+            return lock_date + timedelta(days=1)
+        else:
+            return self.move_id.date
 
     def _reconcile_move_line_vals(self, line, move_id=False):
         vals = {
@@ -1152,6 +1194,7 @@ class AccountBankStatementLine(models.Model):
         from_unreconcile=False,
         reconcile_auxiliary_id=False,
         move=False,
+        is_reconciled=False,
     ):
         new_vals = super()._get_reconcile_line(
             line,
@@ -1160,6 +1203,7 @@ class AccountBankStatementLine(models.Model):
             max_amount=max_amount,
             from_unreconcile=from_unreconcile,
             move=move,
+            is_reconciled=is_reconciled,
         )
         rates = []
         for vals in new_vals:
