@@ -1,7 +1,5 @@
 /** @odoo-module **/
 import {formatDate, parseDate} from "@web/core/l10n/dates";
-import {getCurrency} from "@web/core/currency";
-import {floatIsZero} from "@web/core/utils/numbers";
 import {formatMonetary} from "@web/views/fields/formatters";
 import {registry} from "@web/core/registry";
 import {useService} from "@web/core/utils/hooks";
@@ -25,10 +23,6 @@ export class AccountReconcileDataWidget extends Component {
     }
     getReconcileLines() {
         var data = this.props.record.data[this.props.name].data;
-        const totals = {debit: 0, credit: 0};
-        if (!data || !data.length) {
-            return {lines: [], totals};
-        }
         for (var line in data) {
             data[line].amount_format = formatMonetary(data[line].amount, {
                 currencyId: data[line].currency_id,
@@ -41,6 +35,7 @@ export class AccountReconcileDataWidget extends Component {
             });
             data[line].amount_currency_format = formatMonetary(
                 data[line].currency_amount,
+                undefined,
                 {
                     currencyId: data[line].line_currency_id,
                 }
@@ -56,20 +51,8 @@ export class AccountReconcileDataWidget extends Component {
             data[line].date_format = formatDate(
                 parseDate(data[line].date, undefined, {isUTC: true})
             );
-            totals.debit += data[line].debit || 0;
-            totals.credit += data[line].credit || 0;
         }
-        totals.balance = totals.debit - totals.credit;
-        const [firstLine = {}] = Object.values(data);
-        const currency = getCurrency(firstLine.currency_id);
-        const decimals = currency.digits[1];
-        const hasOpenBalance = !floatIsZero(totals.balance, decimals);
-        const absoluteBalance = Math.abs(totals.balance);
-        const openDebitFmt =
-            totals.balance < 0 ? formatMonetary(absoluteBalance, {currency}) : null;
-        const openCreditFmt =
-            totals.balance > 0 ? formatMonetary(absoluteBalance, {currency}) : null;
-        return {lines: data, hasOpenBalance, openDebitFmt, openCreditFmt};
+        return data;
     }
     onTrashLine(ev, line) {
         ev.stopPropagation();
