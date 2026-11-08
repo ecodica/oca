@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-06-28 21:01+0000\n"
-"PO-Revision-Date: 2023-12-12 11:01+0000\n"
+"PO-Revision-Date: 2026-11-06 09:46+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: \n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.17\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: sales_team_security
 #: model:ir.model,name:sales_team_security.model_res_partner
@@ -23,25 +23,26 @@ msgid "Contact"
 msgstr "Contatto"
 
 #. module: sales_team_security
-#: model:ir.model.fields,help:sales_team_security.field_res_partner__team_id
-#: model:ir.model.fields,help:sales_team_security.field_res_users__team_id
-msgid ""
-"If set, this Sales Team will be used for sales and assignments related to "
-"this partner"
-msgstr ""
-"Se impostato, il team di vendita viene utilizzato per vendite e assegnazioni "
-"correlate al partner"
+#: model:ir.model,website_form_label:sales_team_security.model_res_partner
+msgid "Create a Customer"
+msgstr "Crea un cliente"
+
+#. module: sales_team_security
+#: model:ir.model.fields,field_description:sales_team_security.field_ir_rule__display_name
+#: model:ir.model.fields,field_description:sales_team_security.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Nome visualizzato"
+
+#. module: sales_team_security
+#: model:ir.model.fields,field_description:sales_team_security.field_ir_rule__id
+#: model:ir.model.fields,field_description:sales_team_security.field_res_partner__id
+msgid "ID"
+msgstr "ID"
 
 #. module: sales_team_security
 #: model:ir.model,name:sales_team_security.model_ir_rule
 msgid "Record Rule"
 msgstr "Regola su record"
-
-#. module: sales_team_security
-#: model:ir.model.fields,field_description:sales_team_security.field_res_partner__team_id
-#: model:ir.model.fields,field_description:sales_team_security.field_res_users__team_id
-msgid "Sales Team"
-msgstr "Team di vendita"
 
 #. module: sales_team_security
 #: model:ir.model.fields,field_description:sales_team_security.field_res_partner__user_id
@@ -67,3 +68,13 @@ msgstr ""
 #: model:res.groups,name:sales_team_security.group_sale_team_manager
 msgid "User: Team Documents Only"
 msgstr "Utente: solo documenti del team"
+
+#~ msgid ""
+#~ "If set, this Sales Team will be used for sales and assignments related to "
+#~ "this partner"
+#~ msgstr ""
+#~ "Se impostato, il team di vendita viene utilizzato per vendite e "
+#~ "assegnazioni correlate al partner"
+
+#~ msgid "Sales Team"
+#~ msgstr "Team di vendita"
