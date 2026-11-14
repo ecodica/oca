@@ -1,5 +1,0 @@
-- [Ecosoft](http://ecosoft.co.th):
-  - Saran Lim. \<<saranl@ecosoft.co.th>\>
-  - Pimolnat Suntian \<<pimolnats@ecosoft.co.th>\>
-- [Newlogic](https://newlogic.com/odoo):
-  - Baptiste \<baptiste@newlogic.com\>

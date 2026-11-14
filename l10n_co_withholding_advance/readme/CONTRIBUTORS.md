@@ -1,1 +1,0 @@
-- **Yan Chirino** - *IKU Solutions* - Desarrollo inicial - [GitHub](https://github.com/yanchirino)

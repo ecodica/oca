@@ -1,2 +1,0 @@
-- Martin Reisenhofer \<<martin.reisenhofer@weboffice.at>\>
-- Weboffice IT-Service und Marketing GmbH & Co KG

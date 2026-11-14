@@ -1,1 +1,0 @@
-This module shows the invoice name on the title of the DIN 5008

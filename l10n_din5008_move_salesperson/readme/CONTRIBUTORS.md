@@ -1,2 +1,0 @@
-- [NICO SOLUTIONS - ENGINEERING & IT](https://nico-solutions.de):
-  - Nils Coenen
