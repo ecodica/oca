@@ -1,0 +1,550 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* contract_line_successor
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: contract_line_successor
+#. odoo-python
+#: code:addons/contract_line_successor/models/contract_line.py:0
+msgid "A canceled contract line can't be set to auto-renew"
+msgstr "Otkazana stavka ugovora ne može se postaviti na automatsku obnovu"
+
+#. module: contract_line_successor
+#. odoo-python
+#: code:addons/contract_line_successor/models/contract_line.py:0
+msgid "A contract line with a successor can't be set to auto-renew"
+msgstr ""
+"Stavka ugovora s nasljednikom ne može se postaviti na automatsku obnovu"
+
+#. module: contract_line_successor
+#. odoo-python
+#: code:addons/contract_line_successor/models/contract_line.py:0
+msgid "A contract line with a successor must have a end date"
+msgstr "Stavka ugovora s nasljednikom mora imati završni datum"
+
+#. module: contract_line_successor
+#. odoo-python
+#: code:addons/contract_line_successor/models/contract_line.py:0
+msgid "An auto-renew line must have a end date"
+msgstr "Stavka s automatskom obnovom mora imati završni datum"
+
+#. module: contract_line_successor
+#: model_terms:ir.ui.view,arch_db:contract_line_successor.contract_contract_form_view
+#: model_terms:ir.ui.view,arch_db:contract_line_successor.contract_line_tree_view
+msgid "Are you sure you want to cancel this line"
+msgstr "Jeste li sigurni da želite otkazati ovu stavku"
+
+#. module: contract_line_successor
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_line__is_auto_renew
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_template_line__is_auto_renew
+msgid "Auto Renew"
+msgstr "Automatska obnova"
+
+#. module: contract_line_successor
+#. odoo-python
+#: code:addons/contract_line_successor/models/contract_line.py:0
+msgid "Auto renew interval should be different then 0"
+msgstr "Interval automatske obnove treba biti različit od 0"
+
+#. module: contract_line_successor
+#: model_terms:ir.ui.view,arch_db:contract_line_successor.contract_line_search_view
+msgid "Auto-renew"
+msgstr "Automatska obnova"
+
+#. module: contract_line_successor
+#: model_terms:ir.ui.view,arch_db:contract_line_successor.contract_contract_form_view
+#: model_terms:ir.ui.view,arch_db:contract_line_successor.contract_line_tree_view
+#: model_terms:ir.ui.view,arch_db:contract_line_successor.contract_line_wizard_plan_successor_form_view
+#: model_terms:ir.ui.view,arch_db:contract_line_successor.contract_line_wizard_stop_form_view
+#: model_terms:ir.ui.view,arch_db:contract_line_successor.contract_line_wizard_stop_plan_successor_form_view
+#: model_terms:ir.ui.view,arch_db:contract_line_successor.contract_line_wizard_uncancel_form_view
+msgid "Cancel"
+msgstr "Odustani"
+
+#. module: contract_line_successor
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_line__is_cancel_allowed
+msgid "Cancel allowed?"
+msgstr "Otkazivanje dopušteno?"
+
+#. module: contract_line_successor
+#. odoo-python
+#: code:addons/contract_line_successor/models/contract_line.py:0
+msgid "Cancel not allowed for this line"
+msgstr "Otkazivanje nije dopušteno za ovu stavku"
+
+#. module: contract_line_successor
+#: model:ir.model.fields.selection,name:contract_line_successor.selection__contract_line__state__canceled
+#: model_terms:ir.ui.view,arch_db:contract_line_successor.contract_line_search_view
+msgid "Canceled"
+msgstr "Otkazano"
+
+#. module: contract_line_successor
+#: model:ir.model.fields,help:contract_line_successor.field_contract_contract__line_recurrence
+msgid ""
+"Check this if you want to control recurrence at the line level instead of "
+"for the whole contract."
+msgstr ""
+"Označite ako želite kontrolirati ponavljanje na razini stavke umjesto za "
+"cijeli ugovor."
+
+#. module: contract_line_successor
+#: model:ir.model.fields.selection,name:contract_line_successor.selection__contract_line__state__closed
+msgid "Closed"
+msgstr "Zatvoren"
+
+#. module: contract_line_successor
+#: model:ir.model,name:contract_line_successor.model_res_company
+msgid "Companies"
+msgstr "Tvrtke"
+
+#. module: contract_line_successor
+#: model:ir.model,name:contract_line_successor.model_res_config_settings
+msgid "Config Settings"
+msgstr "Postavke"
+
+#. module: contract_line_successor
+#: model:ir.model,name:contract_line_successor.model_contract_contract
+msgid "Contract"
+msgstr "Ugovor"
+
+#. module: contract_line_successor
+#: model:ir.model,name:contract_line_successor.model_contract_line
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_line_wizard__contract_line_id
+msgid "Contract Line"
+msgstr "Stavka ugovora"
+
+#. module: contract_line_successor
+#: model:ir.model,name:contract_line_successor.model_contract_line_wizard
+msgid "Contract Line Wizard"
+msgstr "Čarobnjak stavke ugovora"
+
+#. module: contract_line_successor
+#: model:ir.model.fields,help:contract_line_successor.field_contract_line__predecessor_contract_line_id
+msgid "Contract Line origin of this one."
+msgstr "Izvor ove stavke ugovora."
+
+#. module: contract_line_successor
+#: model:ir.model,name:contract_line_successor.model_contract_template
+msgid "Contract Template"
+msgstr "Predložak ugovora"
+
+#. module: contract_line_successor
+#: model:ir.model,name:contract_line_successor.model_contract_template_line
+msgid "Contract Template Line"
+msgstr "Stavka predloška ugovora"
+
+#. module: contract_line_successor
+#. odoo-python
+#: code:addons/contract_line_successor/models/contract_line.py:0
+msgid "Contract line Un-canceled: %s"
+msgstr "Stavka ugovora od-otkazana: %s"
+
+#. module: contract_line_successor
+#. odoo-python
+#: code:addons/contract_line_successor/models/contract_line.py:0
+msgid "Contract line and its predecessor overlapped"
+msgstr "Stavka ugovora i njezin prethodnik su se preklapali"
+
+#. module: contract_line_successor
+#. odoo-python
+#: code:addons/contract_line_successor/models/contract_line.py:0
+msgid "Contract line and its successor overlapped"
+msgstr "Stavka ugovora i njezin nasljednik su se preklapali"
+
+#. module: contract_line_successor
+#. odoo-python
+#: code:addons/contract_line_successor/models/contract_line.py:0
+msgid "Contract line canceled: %s"
+msgstr "Stavka ugovora otkazana: %s"
+
+#. module: contract_line_successor
+#. odoo-python
+#: code:addons/contract_line_successor/models/contract_line.py:0
+msgid ""
+"Contract line for <strong>%(product)s</strong>\n"
+"                            stopped: <br/>\n"
+"                            - <strong>End</strong>: %(old_end)s -- %(new_end)s\n"
+"                            "
+msgstr ""
+
+#. module: contract_line_successor
+#. odoo-python
+#: code:addons/contract_line_successor/models/contract_line.py:0
+msgid ""
+"Contract line for <strong>%(product)s</strong>\n"
+"                    planned a successor: <br/>\n"
+"                    - <strong>Start</strong>: %(new_date_start)s\n"
+"                    <br/>\n"
+"                    - <strong>End</strong>: %(new_date_end)s\n"
+"                    "
+msgstr ""
+
+#. module: contract_line_successor
+#. odoo-python
+#: code:addons/contract_line_successor/models/contract_line.py:0
+msgid ""
+"Contract line for <strong>%(product)s</strong>\n"
+"                renewed: <br/>\n"
+"                - <strong>Start</strong>: %(new_date_start)s\n"
+"                <br/>\n"
+"                - <strong>End</strong>: %(new_date_end)s\n"
+"                "
+msgstr ""
+
+#. module: contract_line_successor
+#. odoo-python
+#: code:addons/contract_line_successor/models/contract_line.py:0
+msgid ""
+"Contract line for <strong>%(product)s</strong>\n"
+"                suspended: <br/>\n"
+"                - <strong>Suspension Start</strong>: %(new_date_start)s\n"
+"                <br/>\n"
+"                - <strong>Suspension End</strong>: %(new_date_end)s\n"
+"                "
+msgstr ""
+
+#. module: contract_line_successor
+#: model:ir.model.fields,field_description:contract_line_successor.field_res_company__create_new_line_at_contract_line_renew
+#: model:ir.model.fields,field_description:contract_line_successor.field_res_config_settings__create_new_line_at_contract_line_renew
+msgid "Create New Line At Contract Line Renew"
+msgstr "Kreiraj novu stavku pri obnovi stavke ugovora"
+
+#. module: contract_line_successor
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_line_wizard__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: contract_line_successor
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_line_wizard__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: contract_line_successor
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_line_wizard__date_end
+msgid "Date End"
+msgstr "Datum završetka"
+
+#. module: contract_line_successor
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_line_wizard__date_start
+msgid "Date Start"
+msgstr "Datum početka"
+
+#. module: contract_line_successor
+#: model:ir.model.fields.selection,name:contract_line_successor.selection__contract_line__auto_renew_rule_type__daily
+#: model:ir.model.fields.selection,name:contract_line_successor.selection__contract_line__termination_notice_rule_type__daily
+#: model:ir.model.fields.selection,name:contract_line_successor.selection__contract_template_line__auto_renew_rule_type__daily
+#: model:ir.model.fields.selection,name:contract_line_successor.selection__contract_template_line__termination_notice_rule_type__daily
+msgid "Day(s)"
+msgstr "Dan(a)"
+
+#. module: contract_line_successor
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_contract__display_name
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_line__display_name
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_line_wizard__display_name
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_template__display_name
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_template_line__display_name
+#: model:ir.model.fields,field_description:contract_line_successor.field_res_company__display_name
+#: model:ir.model.fields,field_description:contract_line_successor.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: contract_line_successor
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_contract__id
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_line__id
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_line_wizard__id
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_template__id
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_template_line__id
+#: model:ir.model.fields,field_description:contract_line_successor.field_res_company__id
+#: model:ir.model.fields,field_description:contract_line_successor.field_res_config_settings__id
+msgid "ID"
+msgstr "ID"
+
+#. module: contract_line_successor
+#: model:ir.model.fields,help:contract_line_successor.field_res_company__create_new_line_at_contract_line_renew
+#: model:ir.model.fields,help:contract_line_successor.field_res_config_settings__create_new_line_at_contract_line_renew
+msgid ""
+"If checked, a new line will be generated at contract line renew and linked "
+"to the original one as successor. The default behavior is to extend the end "
+"date of the contract by a new subscription period"
+msgstr ""
+
+#. module: contract_line_successor
+#: model:ir.model.fields,help:contract_line_successor.field_contract_line__successor_contract_line_id
+msgid ""
+"In case of restart after suspension, this field contain the new contract "
+"line created."
+msgstr ""
+
+#. module: contract_line_successor
+#: model:ir.model.fields.selection,name:contract_line_successor.selection__contract_line__state__in-progress
+msgid "In-progress"
+msgstr ""
+
+#. module: contract_line_successor
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_contract__is_auto_renew
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_line_wizard__is_auto_renew
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_template__is_auto_renew
+msgid "Is Auto Renew"
+msgstr ""
+
+#. module: contract_line_successor
+#: model_terms:ir.ui.view,arch_db:contract_line_successor.contract_line_wizard_stop_form_view
+msgid "Is suspension without end date"
+msgstr ""
+
+#. module: contract_line_successor
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_line_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: contract_line_successor
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_line_wizard__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: contract_line_successor
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_line__manual_renew_needed
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_line_wizard__manual_renew_needed
+msgid "Manual Renew Needed"
+msgstr ""
+
+#. module: contract_line_successor
+#: model:ir.model.fields.selection,name:contract_line_successor.selection__contract_line__auto_renew_rule_type__monthly
+#: model:ir.model.fields.selection,name:contract_line_successor.selection__contract_line__termination_notice_rule_type__monthly
+#: model:ir.model.fields.selection,name:contract_line_successor.selection__contract_template_line__auto_renew_rule_type__monthly
+#: model:ir.model.fields.selection,name:contract_line_successor.selection__contract_template_line__termination_notice_rule_type__monthly
+msgid "Month(s)"
+msgstr "Mjesec(i)"
+
+#. module: contract_line_successor
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_line_wizard__recurring_next_date
+msgid "Next Invoice Date"
+msgstr "Datum sljedećeg računa"
+
+#. module: contract_line_successor
+#: model_terms:ir.ui.view,arch_db:contract_line_successor.contract_contract_form_view
+#: model_terms:ir.ui.view,arch_db:contract_line_successor.contract_line_tree_view
+msgid "Plan Start"
+msgstr ""
+
+#. module: contract_line_successor
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_line__is_plan_successor_allowed
+msgid "Plan successor allowed?"
+msgstr ""
+
+#. module: contract_line_successor
+#. odoo-python
+#: code:addons/contract_line_successor/models/contract_line.py:0
+msgid "Plan successor not allowed for this line"
+msgstr ""
+
+#. module: contract_line_successor
+#: model_terms:ir.ui.view,arch_db:contract_line_successor.contract_line_form_view
+msgid "Predecessor & Successor Lines"
+msgstr ""
+
+#. module: contract_line_successor
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_line__predecessor_contract_line_id
+msgid "Predecessor Contract Line"
+msgstr ""
+
+#. module: contract_line_successor
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_contract__line_recurrence
+msgid "Recurrence at line level?"
+msgstr ""
+
+#. module: contract_line_successor
+#: model_terms:ir.ui.view,arch_db:contract_line_successor.contract_contract_form_view
+#: model_terms:ir.ui.view,arch_db:contract_line_successor.contract_line_tree_view
+msgid "Renew"
+msgstr "Obnovi"
+
+#. module: contract_line_successor
+#: model:ir.actions.server,name:contract_line_successor.contract_line_cron_for_renew_ir_actions_server
+msgid "Renew Contract lines"
+msgstr ""
+
+#. module: contract_line_successor
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_line__auto_renew_interval
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_template_line__auto_renew_interval
+msgid "Renew Every"
+msgstr ""
+
+#. module: contract_line_successor
+#: model:ir.model.fields,help:contract_line_successor.field_contract_line__auto_renew_interval
+#: model:ir.model.fields,help:contract_line_successor.field_contract_template_line__auto_renew_interval
+msgid "Renew every (Days/Weeks/Months/Years)"
+msgstr ""
+
+#. module: contract_line_successor
+#: model_terms:ir.ui.view,arch_db:contract_line_successor.contract_template_line_form_view
+msgid "Renewal"
+msgstr "Obnova"
+
+#. module: contract_line_successor
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_line__auto_renew_rule_type
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_template_line__auto_renew_rule_type
+msgid "Renewal type"
+msgstr ""
+
+#. module: contract_line_successor
+#: model:ir.model.fields,help:contract_line_successor.field_contract_line__auto_renew_rule_type
+#: model:ir.model.fields,help:contract_line_successor.field_contract_template_line__auto_renew_rule_type
+msgid "Specify interval for automatic renewal."
+msgstr ""
+
+#. module: contract_line_successor
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_line__state
+msgid "State"
+msgstr "Stanje"
+
+#. module: contract_line_successor
+#: model_terms:ir.ui.view,arch_db:contract_line_successor.contract_contract_form_view
+#: model_terms:ir.ui.view,arch_db:contract_line_successor.contract_line_tree_view
+msgid "Stop"
+msgstr "Kraj"
+
+#. module: contract_line_successor
+#: model_terms:ir.ui.view,arch_db:contract_line_successor.contract_line_wizard_stop_form_view
+msgid "Stop Date"
+msgstr "Završni datum"
+
+#. module: contract_line_successor
+#: model_terms:ir.ui.view,arch_db:contract_line_successor.contract_contract_form_view
+#: model_terms:ir.ui.view,arch_db:contract_line_successor.contract_line_tree_view
+msgid "Stop Plan Successor"
+msgstr ""
+
+#. module: contract_line_successor
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_line__is_stop_allowed
+msgid "Stop allowed?"
+msgstr ""
+
+#. module: contract_line_successor
+#. odoo-python
+#: code:addons/contract_line_successor/models/contract_line.py:0
+msgid "Stop not allowed for this line"
+msgstr ""
+
+#. module: contract_line_successor
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_line__is_stop_plan_successor_allowed
+msgid "Stop/Plan successor allowed?"
+msgstr ""
+
+#. module: contract_line_successor
+#. odoo-python
+#: code:addons/contract_line_successor/models/contract_line.py:0
+msgid "Stop/Plan successor not allowed for this line"
+msgstr ""
+
+#. module: contract_line_successor
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_line__successor_contract_line_id
+msgid "Successor Contract Line"
+msgstr ""
+
+#. module: contract_line_successor
+#: model_terms:ir.ui.view,arch_db:contract_line_successor.contract_line_wizard_stop_plan_successor_form_view
+msgid "Suspension End Date"
+msgstr ""
+
+#. module: contract_line_successor
+#: model_terms:ir.ui.view,arch_db:contract_line_successor.contract_line_wizard_stop_plan_successor_form_view
+msgid "Suspension Start Date"
+msgstr ""
+
+#. module: contract_line_successor
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_line__termination_notice_interval
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_template_line__termination_notice_interval
+msgid "Termination Notice Before"
+msgstr ""
+
+#. module: contract_line_successor
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_line__termination_notice_date
+msgid "Termination Notice Date"
+msgstr ""
+
+#. module: contract_line_successor
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_line__termination_notice_rule_type
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_template_line__termination_notice_rule_type
+msgid "Termination Notice type"
+msgstr ""
+
+#. module: contract_line_successor
+#: model:ir.model.fields,help:contract_line_successor.field_contract_line__manual_renew_needed
+#: model:ir.model.fields,help:contract_line_successor.field_contract_line_wizard__manual_renew_needed
+msgid ""
+"This flag is used to make a difference between a definitive stopand "
+"temporary one for which a user is not able to plan asuccessor in advance"
+msgstr ""
+
+#. module: contract_line_successor
+#: model:ir.model.fields.selection,name:contract_line_successor.selection__contract_line__state__to-renew
+msgid "To renew"
+msgstr "Za obnoviti"
+
+#. module: contract_line_successor
+#: model:ir.model.fields,field_description:contract_line_successor.field_contract_line__is_un_cancel_allowed
+msgid "Un-Cancel allowed?"
+msgstr ""
+
+#. module: contract_line_successor
+#: model_terms:ir.ui.view,arch_db:contract_line_successor.contract_contract_form_view
+#: model_terms:ir.ui.view,arch_db:contract_line_successor.contract_line_tree_view
+msgid "Un-cancel"
+msgstr ""
+
+#. module: contract_line_successor
+#. odoo-python
+#: code:addons/contract_line_successor/models/contract_line.py:0
+msgid "Un-cancel not allowed for this line"
+msgstr ""
+
+#. module: contract_line_successor
+#: model:ir.model.fields.selection,name:contract_line_successor.selection__contract_line__state__upcoming
+msgid "Upcoming"
+msgstr "Nadolazeći"
+
+#. module: contract_line_successor
+#: model:ir.model.fields.selection,name:contract_line_successor.selection__contract_line__state__upcoming-close
+msgid "Upcoming Close"
+msgstr ""
+
+#. module: contract_line_successor
+#: model_terms:ir.ui.view,arch_db:contract_line_successor.contract_line_wizard_plan_successor_form_view
+#: model_terms:ir.ui.view,arch_db:contract_line_successor.contract_line_wizard_stop_form_view
+#: model_terms:ir.ui.view,arch_db:contract_line_successor.contract_line_wizard_stop_plan_successor_form_view
+#: model_terms:ir.ui.view,arch_db:contract_line_successor.contract_line_wizard_uncancel_form_view
+msgid "Validate"
+msgstr "Validiraj"
+
+#. module: contract_line_successor
+#: model:ir.model.fields.selection,name:contract_line_successor.selection__contract_line__auto_renew_rule_type__weekly
+#: model:ir.model.fields.selection,name:contract_line_successor.selection__contract_line__termination_notice_rule_type__weekly
+#: model:ir.model.fields.selection,name:contract_line_successor.selection__contract_template_line__auto_renew_rule_type__weekly
+#: model:ir.model.fields.selection,name:contract_line_successor.selection__contract_template_line__termination_notice_rule_type__weekly
+msgid "Week(s)"
+msgstr "Tjedan(i)"
+
+#. module: contract_line_successor
+#: model:ir.model.fields.selection,name:contract_line_successor.selection__contract_line__auto_renew_rule_type__yearly
+#: model:ir.model.fields.selection,name:contract_line_successor.selection__contract_template_line__auto_renew_rule_type__yearly
+msgid "Year(s)"
+msgstr ""
+
+#. module: contract_line_successor
+#. odoo-python
+#: code:addons/contract_line_successor/models/contract_line.py:0
+msgid "You can't delay a contract line invoiced at least one time."
+msgstr "Ne možete odgoditi stavku ugovora fakturiranu barem jednom."

@@ -1,0 +1,123 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fieldservice_vehicle
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: fieldservice_vehicle
+#: model_terms:ir.actions.act_window,help:fieldservice_vehicle.action_fsm_vehicle
+msgid "Add a Field Service Vehicle here."
+msgstr "Dodajte vozilo terenske službe ovdje."
+
+#. module: fieldservice_vehicle
+#: model:ir.model.fields,field_description:fieldservice_vehicle.field_fsm_vehicle__person_id
+msgid "Assigned Driver"
+msgstr "Dodijeljeni vozač"
+
+#. module: fieldservice_vehicle
+#: model:ir.model.fields,field_description:fieldservice_vehicle.field_fsm_vehicle__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: fieldservice_vehicle
+#: model:ir.model.fields,field_description:fieldservice_vehicle.field_fsm_vehicle__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: fieldservice_vehicle
+#: model:ir.model.fields,field_description:fieldservice_vehicle.field_fsm_person__vehicle_id
+msgid "Default Vehicle"
+msgstr "Zadano vozilo"
+
+#. module: fieldservice_vehicle
+#: model:ir.model.fields,field_description:fieldservice_vehicle.field_fsm_person__display_name
+#: model:ir.model.fields,field_description:fieldservice_vehicle.field_fsm_vehicle__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: fieldservice_vehicle
+#: model:ir.model,name:fieldservice_vehicle.model_fsm_order
+msgid "Field Service Order"
+msgstr ""
+
+#. module: fieldservice_vehicle
+#: model:ir.model,name:fieldservice_vehicle.model_fsm_vehicle
+msgid "Field Service Vehicle"
+msgstr ""
+
+#. module: fieldservice_vehicle
+#: model:ir.actions.act_window,name:fieldservice_vehicle.action_fsm_vehicle
+msgid "Field Service Vehicles"
+msgstr ""
+
+#. module: fieldservice_vehicle
+#: model:ir.model,name:fieldservice_vehicle.model_fsm_person
+msgid "Field Service Worker"
+msgstr ""
+
+#. module: fieldservice_vehicle
+#: model:ir.model.fields,field_description:fieldservice_vehicle.field_fsm_order__id
+#: model:ir.model.fields,field_description:fieldservice_vehicle.field_fsm_person__id
+#: model:ir.model.fields,field_description:fieldservice_vehicle.field_fsm_vehicle__id
+msgid "ID"
+msgstr "ID"
+
+#. module: fieldservice_vehicle
+#: model:ir.model.fields,field_description:fieldservice_vehicle.field_fsm_vehicle__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: fieldservice_vehicle
+#: model:ir.model.fields,field_description:fieldservice_vehicle.field_fsm_vehicle__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: fieldservice_vehicle
+#: model:res.groups,name:fieldservice_vehicle.group_fsm_vehicle
+msgid "Manage Vehicles"
+msgstr ""
+
+#. module: fieldservice_vehicle
+#: model:ir.model.fields,field_description:fieldservice_vehicle.field_fsm_vehicle__name
+msgid "Name"
+msgstr "Naziv"
+
+#. module: fieldservice_vehicle
+#: model:ir.model.fields,field_description:fieldservice_vehicle.field_fsm_order__display_name
+msgid "Order"
+msgstr "Narudžba"
+
+#. module: fieldservice_vehicle
+#: model:ir.model.fields,field_description:fieldservice_vehicle.field_fsm_order__vehicle_id
+msgid "Vehicle"
+msgstr "Vozilo"
+
+#. module: fieldservice_vehicle
+#: model:ir.model.constraint,message:fieldservice_vehicle.constraint_fsm_vehicle_name_uniq
+msgid "Vehicle name already exists!"
+msgstr ""
+
+#. module: fieldservice_vehicle
+#: model:ir.actions.act_window,name:fieldservice_vehicle.action_fsm_report_vehicle
+#: model:ir.ui.menu,name:fieldservice_vehicle.menu_fsm_report_vehicle
+#: model:ir.ui.menu,name:fieldservice_vehicle.menu_fsm_vehicle
+#: model_terms:ir.ui.view,arch_db:fieldservice_vehicle.fsm_vehicle_graph_view
+#: model_terms:ir.ui.view,arch_db:fieldservice_vehicle.fsm_vehicle_pivot_view
+msgid "Vehicles"
+msgstr "Vozila"
+
+#. module: fieldservice_vehicle
+#: model_terms:ir.actions.act_window,help:fieldservice_vehicle.action_fsm_report_vehicle
+msgid "Vehicles Report"
+msgstr ""

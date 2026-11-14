@@ -1,0 +1,353 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* delivery_dhl_parcel
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields,help:delivery_dhl_parcel.field_delivery_carrier__dhl_parcel_pre_1330
+msgid "Activates Feature 714 for Pre 13:30 time-definite delivery."
+msgstr ""
+"Aktivira značajku 714 za vremenski determiniranu isporuku prije 13:30."
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields,field_description:delivery_dhl_parcel.field_dhl_parcel_endday_wizard__all_customer_accounts
+msgid "All customer accounts"
+msgstr "Svi računi kupaca"
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields.selection,name:delivery_dhl_parcel.selection__delivery_carrier__dhl_parcel_product__b2b
+msgid "B2B Product"
+msgstr "B2B proizvod"
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields.selection,name:delivery_dhl_parcel.selection__delivery_carrier__dhl_parcel_product__b2c
+msgid "B2C Product"
+msgstr "B2C proizvod"
+
+#. module: delivery_dhl_parcel
+#: model_terms:ir.ui.view,arch_db:delivery_dhl_parcel.delivery_endday_wizard_form
+msgid "Cancel"
+msgstr "Odustani"
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields,field_description:delivery_dhl_parcel.field_delivery_carrier__dhl_parcel_cash_on_delivery
+msgid "Cash on delivery DHL"
+msgstr "Pouzeće DHL"
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields,field_description:delivery_dhl_parcel.field_dhl_parcel_endday_wizard__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields,field_description:delivery_dhl_parcel.field_dhl_parcel_endday_wizard__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields,field_description:delivery_dhl_parcel.field_dhl_parcel_endday_wizard__customer_accounts
+msgid "Customer codes to end day for"
+msgstr "Šifre kupca za završni dan"
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields.selection,name:delivery_dhl_parcel.selection__delivery_carrier__delivery_type__dhl_parcel
+msgid "DHL Parcel"
+msgstr "DHL Parcel"
+
+#. module: delivery_dhl_parcel
+#. odoo-python
+#: code:addons/delivery_dhl_parcel/models/delivery_carrier.py:0
+msgid ""
+"DHL Parcel API doesn't provide methods to compute delivery rates, so\n"
+"                you should rely on another price method instead or override this\n"
+"                one in your custom code."
+msgstr ""
+"DHL Parcel API ne pruža metode za izračun cijena isporuke, pa se\n"
+"                oslonite na drugu metodu cijene ili nadjačajte ovu u vlastitom kodu."
+
+#. module: delivery_dhl_parcel
+#. odoo-python
+#: code:addons/delivery_dhl_parcel/models/delivery_carrier.py:0
+msgid "DHL Parcel Cancellation failed with reason: %(reason)s"
+msgstr "Otkazivanje DHL Parcela nije uspjelo s razlogom: %(reason)s"
+
+#. module: delivery_dhl_parcel
+#: model_terms:ir.ui.view,arch_db:delivery_dhl_parcel.view_delivery_carrier_form
+msgid "DHL Parcel Configuration"
+msgstr "DHL Parcel konfiguracija"
+
+#. module: delivery_dhl_parcel
+#. odoo-python
+#: code:addons/delivery_dhl_parcel/models/delivery_carrier.py:0
+msgid "DHL Parcel End Day"
+msgstr "Završni dan DHL Parcela"
+
+#. module: delivery_dhl_parcel
+#: model_terms:ir.ui.view,arch_db:delivery_dhl_parcel.delivery_endday_wizard_form
+msgid "DHL Parcel End day"
+msgstr "Završni dan DHL Parcela"
+
+#. module: delivery_dhl_parcel
+#. odoo-python
+#: code:addons/delivery_dhl_parcel/models/delivery_carrier.py:0
+msgid "DHL Parcel Expedition with reference %(reference)s cancelled"
+msgstr "DHL Parcel pošiljka s referencom %(reference)s otkazana"
+
+#. module: delivery_dhl_parcel
+#: model_terms:ir.ui.view,arch_db:delivery_dhl_parcel.view_picking_withcarrier_out_form
+msgid "DHL Parcel Label"
+msgstr "DHL Parcel oznaka"
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields,field_description:delivery_dhl_parcel.field_delivery_carrier__dhl_parcel_password
+msgid "DHL Parcel Password"
+msgstr "DHL Parcel lozinka"
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields,field_description:delivery_dhl_parcel.field_dhl_parcel_endday_wizard__carrier_id
+msgid "DHL Parcel Service"
+msgstr "DHL Parcel usluga"
+
+#. module: delivery_dhl_parcel
+#. odoo-python
+#: code:addons/delivery_dhl_parcel/models/delivery_carrier.py:0
+msgid ""
+"DHL Parcel Shipping extra info:\n"
+"Origin: %(origin)s, Customer: %(customer)s, AWB: %(awb)s, LP: %(lp)s"
+msgstr ""
+"DHL Parcel dodatne informacije otpreme:\n"
+"Porijeklo: %(origin)s, Kupac: %(customer)s, AWB: %(awb)s, LP: %(lp)s"
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields,field_description:delivery_dhl_parcel.field_delivery_carrier__dhl_parcel_uid
+msgid "DHL Parcel UID"
+msgstr "DHL Parcel UID"
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields,field_description:delivery_dhl_parcel.field_delivery_carrier__dhl_parcel_customer_code
+msgid "DHL Parcel customer code"
+msgstr "Šifra kupca DHL Parcela"
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields,field_description:delivery_dhl_parcel.field_delivery_carrier__dhl_parcel_incoterm
+msgid "DHL Parcel incoterms"
+msgstr "DHL Parcel incoterms"
+
+#. module: delivery_dhl_parcel
+#. odoo-python
+#: code:addons/delivery_dhl_parcel/models/stock_picking.py:0
+msgid "DHL Parcel label for %(reference)s"
+msgstr "DHL Parcel oznaka za %(reference)s"
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields,field_description:delivery_dhl_parcel.field_delivery_carrier__dhl_parcel_last_end_day_report
+msgid "DHL Parcel last manual end day report"
+msgstr "Zadnji ručni izvještaj završnog dana DHL Parcela"
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields,field_description:delivery_dhl_parcel.field_stock_picking__dhl_parcel_shipment_held
+msgid "DHL Parcel shipment on hold"
+msgstr "DHL Parcel pošiljka na čekanju"
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields,field_description:delivery_dhl_parcel.field_delivery_carrier__dhl_parcel_product
+msgid "DHL Product"
+msgstr "DHL proizvod"
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields,field_description:delivery_dhl_parcel.field_delivery_carrier__display_name
+#: model:ir.model.fields,field_description:delivery_dhl_parcel.field_dhl_parcel_endday_wizard__display_name
+#: model:ir.model.fields,field_description:delivery_dhl_parcel.field_sale_order__display_name
+#: model:ir.model.fields,field_description:delivery_dhl_parcel.field_stock_picking__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields.selection,name:delivery_dhl_parcel.selection__delivery_carrier__dhl_parcel_label_format__epl
+msgid "EPL"
+msgstr "EPL"
+
+#. module: delivery_dhl_parcel
+#: model_terms:ir.ui.view,arch_db:delivery_dhl_parcel.delivery_endday_wizard_form
+#: model_terms:ir.ui.view,arch_db:delivery_dhl_parcel.view_delivery_carrier_form
+msgid "End day"
+msgstr "Završni dan"
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields,field_description:delivery_dhl_parcel.field_delivery_carrier__dhl_parcel_last_end_day_report_name
+msgid "Filename"
+msgstr "Naziv datoteke"
+
+#. module: delivery_dhl_parcel
+#. odoo-python
+#: code:addons/delivery_dhl_parcel/models/stock_picking.py:0
+msgid "Held shipment for %(reference)s"
+msgstr ""
+
+#. module: delivery_dhl_parcel
+#: model_terms:ir.ui.view,arch_db:delivery_dhl_parcel.view_picking_withcarrier_out_form
+msgid "Hold DHL Parcel shipment"
+msgstr ""
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields,field_description:delivery_dhl_parcel.field_delivery_carrier__id
+#: model:ir.model.fields,field_description:delivery_dhl_parcel.field_dhl_parcel_endday_wizard__id
+#: model:ir.model.fields,field_description:delivery_dhl_parcel.field_sale_order__id
+#: model:ir.model.fields,field_description:delivery_dhl_parcel.field_stock_picking__id
+msgid "ID"
+msgstr "ID"
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields,help:delivery_dhl_parcel.field_delivery_carrier__dhl_parcel_cash_on_delivery
+msgid ""
+"If checked, it means that the carrier is paid with cash. It assumes there is"
+" a sale order linked and it will use that total amount as the value to be "
+"paid. It will also exclude this carrier from the e-commerce checkout."
+msgstr ""
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields,help:delivery_dhl_parcel.field_delivery_carrier__dhl_parcel_insurance
+msgid ""
+"If checked, the shipment will be declared as insured. It assumes there is a "
+"sale order linked and it will use the picking lines total as the declared "
+"insurance value."
+msgstr ""
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields,help:delivery_dhl_parcel.field_dhl_parcel_endday_wizard__customer_accounts
+msgid ""
+"If doing multiple, input them separated by commas without spaces.\n"
+"i.e. '001-000001,002-000002'\n"
+"You can also use 'ALL' to end all of them"
+msgstr ""
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields,help:delivery_dhl_parcel.field_delivery_carrier__dhl_parcel_product
+msgid "If the product is not specified, it is considered B2B"
+msgstr ""
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields,field_description:delivery_dhl_parcel.field_delivery_carrier__dhl_parcel_insurance_expenses
+msgid "Insurance expenses"
+msgstr ""
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields,field_description:delivery_dhl_parcel.field_delivery_carrier__dhl_parcel_insurance
+msgid "Insured shipment"
+msgstr ""
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields,field_description:delivery_dhl_parcel.field_delivery_carrier__dhl_parcel_label_format
+msgid "Label format"
+msgstr ""
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields,field_description:delivery_dhl_parcel.field_dhl_parcel_endday_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields,field_description:delivery_dhl_parcel.field_dhl_parcel_endday_wizard__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: delivery_dhl_parcel
+#: model:ir.model,name:delivery_dhl_parcel.model_dhl_parcel_endday_wizard
+msgid "Manually end the day"
+msgstr ""
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields.selection,name:delivery_dhl_parcel.selection__delivery_carrier__dhl_parcel_incoterm__exw
+msgid "Owed transport"
+msgstr ""
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields.selection,name:delivery_dhl_parcel.selection__delivery_carrier__dhl_parcel_label_format__pdf
+msgid "PDF"
+msgstr "PDF"
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields.selection,name:delivery_dhl_parcel.selection__delivery_carrier__dhl_parcel_insurance_expenses__d
+msgid "Paid by recipient"
+msgstr ""
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields.selection,name:delivery_dhl_parcel.selection__delivery_carrier__dhl_parcel_insurance_expenses__p
+msgid "Paid by sender"
+msgstr ""
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields.selection,name:delivery_dhl_parcel.selection__delivery_carrier__dhl_parcel_incoterm__cpt
+msgid "Paid transport"
+msgstr ""
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields,field_description:delivery_dhl_parcel.field_delivery_carrier__dhl_parcel_pre_1330
+msgid "Pre 13:30"
+msgstr ""
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields,field_description:delivery_dhl_parcel.field_delivery_carrier__delivery_type
+msgid "Provider"
+msgstr "Davatelj"
+
+#. module: delivery_dhl_parcel
+#: model_terms:ir.ui.view,arch_db:delivery_dhl_parcel.view_picking_withcarrier_out_form
+msgid "Release DHL Parcel shipment"
+msgstr ""
+
+#. module: delivery_dhl_parcel
+#. odoo-python
+#: code:addons/delivery_dhl_parcel/models/stock_picking.py:0
+msgid "Released shipment for %(reference)s"
+msgstr ""
+
+#. module: delivery_dhl_parcel
+#: model:ir.model,name:delivery_dhl_parcel.model_sale_order
+msgid "Sales Order"
+msgstr "Prodajni nalog"
+
+#. module: delivery_dhl_parcel
+#. odoo-python
+#: code:addons/delivery_dhl_parcel/models/dhl_parcel_request.py:0
+msgid "Server not reachable, please try again later"
+msgstr ""
+
+#. module: delivery_dhl_parcel
+#: model:ir.model,name:delivery_dhl_parcel.model_delivery_carrier
+msgid "Shipping Methods"
+msgstr "Načini dostave"
+
+#. module: delivery_dhl_parcel
+#. odoo-python
+#: code:addons/delivery_dhl_parcel/models/dhl_parcel_request.py:0
+msgid "Timeout: the server did not reply within 60s"
+msgstr ""
+
+#. module: delivery_dhl_parcel
+#: model:ir.model,name:delivery_dhl_parcel.model_stock_picking
+msgid "Transfer"
+msgstr "Prijenos"
+
+#. module: delivery_dhl_parcel
+#. odoo-python
+#: code:addons/delivery_dhl_parcel/models/dhl_parcel_request.py:0
+msgid "Unsupported request type, please only use 'GET' or 'POST'"
+msgstr ""
+
+#. module: delivery_dhl_parcel
+#: model:ir.model.fields.selection,name:delivery_dhl_parcel.selection__delivery_carrier__dhl_parcel_label_format__zpl
+msgid "ZPL"
+msgstr "ZPL"

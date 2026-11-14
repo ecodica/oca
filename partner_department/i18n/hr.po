@@ -1,0 +1,118 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* partner_department
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: partner_department
+#: model_terms:ir.ui.view,arch_db:partner_department.view_partner_form_department
+msgid "<i class=\"fa fa-fw me-1 fa-envelope text-primary\" title=\"Email\"/>"
+msgstr "<i class=\"fa fa-fw me-1 fa-envelope text-primary\" title=\"E-mail\"/>"
+
+#. module: partner_department
+#: model_terms:ir.ui.view,arch_db:partner_department.view_partner_form_department
+msgid "<i class=\"fa fa-fw me-1 fa-phone text-primary\" title=\"Phone\"/>"
+msgstr "<i class=\"fa fa-fw me-1 fa-phone text-primary\" title=\"Telefon\"/>"
+
+#. module: partner_department
+#: model_terms:ir.ui.view,arch_db:partner_department.view_partner_form_department
+msgid "<i class=\"fa fa-fw me-1 fa-suitcase text-primary\" title=\"Position\"/>"
+msgstr "<i class=\"fa fa-fw me-1 fa-suitcase text-primary\" title=\"Position\"/>"
+
+#. module: partner_department
+#. odoo-python
+#: code:addons/partner_department/models/res_partner.py:0
+msgid "A partner contact/department cannot have a department as its parent."
+msgstr "Kontakt/odjel partnera ne može imati odjel kao nadređenog."
+
+#. module: partner_department
+#: model:ir.model.fields,field_description:partner_department.field_res_partner__type
+#: model:ir.model.fields,field_description:partner_department.field_res_users__type
+msgid "Address Type"
+msgstr "Vrsta adrese"
+
+#. module: partner_department
+#: model:ir.model,name:partner_department.model_res_partner
+msgid "Contact"
+msgstr "Kontakt"
+
+#. module: partner_department
+#: model_terms:ir.ui.view,arch_db:partner_department.view_partner_form_department
+msgid "Contact image"
+msgstr "Slika kontakta"
+
+#. module: partner_department
+#: model:ir.model.fields,field_description:partner_department.field_res_partner__department_id
+#: model:ir.model.fields,field_description:partner_department.field_res_users__department_id
+#: model:ir.model.fields.selection,name:partner_department.selection__res_partner__type__department
+#: model_terms:ir.ui.view,arch_db:partner_department.view_partner_form_department
+#: model_terms:ir.ui.view,arch_db:partner_department.view_res_partner_filter_department
+msgid "Department"
+msgstr "Odjel"
+
+#. module: partner_department
+#: model:ir.model.fields,field_description:partner_department.field_res_partner__department_member_count
+#: model:ir.model.fields,field_description:partner_department.field_res_users__department_member_count
+msgid "Department Member Count"
+msgstr "Broj članova odjela"
+
+#. module: partner_department
+#: model:ir.model.fields,field_description:partner_department.field_res_partner__department_ids
+#: model:ir.model.fields,field_description:partner_department.field_res_users__department_ids
+#: model_terms:ir.ui.view,arch_db:partner_department.view_partner_form_department
+msgid "Departments"
+msgstr "Odjeli"
+
+#. module: partner_department
+#: model:ir.model.fields,field_description:partner_department.field_res_partner__department_member_ids
+#: model:ir.model.fields,field_description:partner_department.field_res_users__department_member_ids
+msgid "Direct Members"
+msgstr "Izravni članovi"
+
+#. module: partner_department
+#: model:ir.model.fields,field_description:partner_department.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: partner_department
+#: model_terms:ir.ui.view,arch_db:partner_department.view_partner_form_department
+msgid "Email"
+msgstr "E-pošta"
+
+#. module: partner_department
+#: model:ir.model.fields,field_description:partner_department.field_res_partner__id
+msgid "ID"
+msgstr "ID"
+
+#. module: partner_department
+#: model:ir.model.fields,field_description:partner_department.field_res_partner__department_all_member_ids
+#: model:ir.model.fields,field_description:partner_department.field_res_users__department_all_member_ids
+#: model_terms:ir.ui.view,arch_db:partner_department.view_partner_form_department
+msgid "Members"
+msgstr "Članovi"
+
+#. module: partner_department
+#: model_terms:ir.ui.view,arch_db:partner_department.view_partner_form_department
+msgid "Name"
+msgstr "Naziv"
+
+#. module: partner_department
+#: model_terms:ir.ui.view,arch_db:partner_department.view_partner_form_department
+msgid "Phone"
+msgstr "Telefon"
+
+#. module: partner_department
+#: model_terms:ir.ui.view,arch_db:partner_department.view_partner_form_department
+msgid "e.g. Engineering"
+msgstr ""

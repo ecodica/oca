@@ -1,0 +1,89 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* purchase_order_report_grouped_by_vendor
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: purchase_order_report_grouped_by_vendor
+#: model:ir.actions.report,print_report_name:purchase_order_report_grouped_by_vendor.action_report_purchase_order
+msgid ""
+"\n"
+"            (object.state in ('draft', 'sent') and 'Request for Quotation - %s' % (object.name) or\n"
+"            'Purchase Order - %s' % (object.name))"
+msgstr ""
+
+#. module: purchase_order_report_grouped_by_vendor
+#: model_terms:ir.ui.view,arch_db:purchase_order_report_grouped_by_vendor.report_purchase_order_grouped_by_vendor_document
+msgid "/ Vendor Ref:"
+msgstr "/ Referenca dobavljača:"
+
+#. module: purchase_order_report_grouped_by_vendor
+#: model_terms:ir.ui.view,arch_db:purchase_order_report_grouped_by_vendor.report_purchase_order_grouped_by_vendor_document
+msgid "<strong>Amount</strong>"
+msgstr "<strong>Iznos</strong>"
+
+#. module: purchase_order_report_grouped_by_vendor
+#: model_terms:ir.ui.view,arch_db:purchase_order_report_grouped_by_vendor.report_purchase_order_grouped_by_vendor_document
+msgid "<strong>Description</strong>"
+msgstr "<strong>Opis</strong>"
+
+#. module: purchase_order_report_grouped_by_vendor
+#: model_terms:ir.ui.view,arch_db:purchase_order_report_grouped_by_vendor.report_purchase_order_grouped_by_vendor_document
+msgid "<strong>Qty</strong>"
+msgstr "<strong>Kol</strong>"
+
+#. module: purchase_order_report_grouped_by_vendor
+#: model_terms:ir.ui.view,arch_db:purchase_order_report_grouped_by_vendor.report_purchase_order_grouped_by_vendor_document
+msgid "<strong>Receipt Date</strong>"
+msgstr "<strong>Datum zaprimanja</strong>"
+
+#. module: purchase_order_report_grouped_by_vendor
+#: model_terms:ir.ui.view,arch_db:purchase_order_report_grouped_by_vendor.report_purchase_order_grouped_by_vendor_document
+msgid "<strong>Taxes</strong>"
+msgstr "<strong>Porezi</strong>"
+
+#. module: purchase_order_report_grouped_by_vendor
+#: model_terms:ir.ui.view,arch_db:purchase_order_report_grouped_by_vendor.report_purchase_order_grouped_by_vendor_document
+msgid "<strong>Total:</strong>"
+msgstr "<strong>Ukupno:</strong>"
+
+#. module: purchase_order_report_grouped_by_vendor
+#: model_terms:ir.ui.view,arch_db:purchase_order_report_grouped_by_vendor.report_purchase_order_grouped_by_vendor_document
+msgid "<strong>Unit Price</strong>"
+msgstr "<strong>Jedinična cijena</strong>"
+
+#. module: purchase_order_report_grouped_by_vendor
+#: model:ir.model.fields,field_description:purchase_order_report_grouped_by_vendor.field_purchase_order__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: purchase_order_report_grouped_by_vendor
+#: model:ir.model.fields,field_description:purchase_order_report_grouped_by_vendor.field_purchase_order__id
+msgid "ID"
+msgstr "ID"
+
+#. module: purchase_order_report_grouped_by_vendor
+#: model_terms:ir.ui.view,arch_db:purchase_order_report_grouped_by_vendor.report_purchase_order_grouped_by_vendor_document
+msgid "Order:"
+msgstr ""
+
+#. module: purchase_order_report_grouped_by_vendor
+#: model:ir.model,name:purchase_order_report_grouped_by_vendor.model_purchase_order
+msgid "Purchase Order"
+msgstr "Nabavni nalog"
+
+#. module: purchase_order_report_grouped_by_vendor
+#: model:ir.actions.report,name:purchase_order_report_grouped_by_vendor.action_report_purchase_order
+msgid "Purchase Order Grouped By Vendor"
+msgstr ""

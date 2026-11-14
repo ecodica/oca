@@ -1,0 +1,90 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fieldservice_purchase
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: fieldservice_purchase
+#: model:ir.model.fields,field_description:fieldservice_purchase.field_fsm_person__pricelist_count
+msgid "# Pricelists"
+msgstr "# Cjenici"
+
+#. module: fieldservice_purchase
+#: model:ir.model.fields,field_description:fieldservice_purchase.field_fsm_order__purchase_count
+msgid "# Purchases"
+msgstr "# Nabave"
+
+#. module: fieldservice_purchase
+#: model_terms:ir.ui.view,arch_db:fieldservice_purchase.purchase_order_form
+msgid "<span class=\"o_stat_text\">FSM Order</span>"
+msgstr "<span class=\"o_stat_text\">FSM nalog</span>"
+
+#. module: fieldservice_purchase
+#: model:ir.model.fields,field_description:fieldservice_purchase.field_fsm_person__display_name
+#: model:ir.model.fields,field_description:fieldservice_purchase.field_purchase_order__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: fieldservice_purchase
+#: model:ir.model.fields,field_description:fieldservice_purchase.field_purchase_order__fsm_order_id
+msgid "FSM Order"
+msgstr ""
+
+#. module: fieldservice_purchase
+#. odoo-python
+#: code:addons/fieldservice_purchase/models/purchase_order.py:0
+msgid "FSM Order: %s"
+msgstr ""
+
+#. module: fieldservice_purchase
+#: model:ir.model,name:fieldservice_purchase.model_fsm_order
+msgid "Field Service Order"
+msgstr ""
+
+#. module: fieldservice_purchase
+#: model:ir.model,name:fieldservice_purchase.model_fsm_person
+msgid "Field Service Worker"
+msgstr ""
+
+#. module: fieldservice_purchase
+#: model:ir.model.fields,field_description:fieldservice_purchase.field_fsm_order__id
+#: model:ir.model.fields,field_description:fieldservice_purchase.field_fsm_person__id
+#: model:ir.model.fields,field_description:fieldservice_purchase.field_purchase_order__id
+msgid "ID"
+msgstr "ID"
+
+#. module: fieldservice_purchase
+#: model:ir.model.fields,field_description:fieldservice_purchase.field_fsm_order__display_name
+msgid "Order"
+msgstr "Narudžba"
+
+#. module: fieldservice_purchase
+#: model_terms:ir.ui.view,arch_db:fieldservice_purchase.fsm_person_form_view_pricelists
+msgid "Pricelists"
+msgstr "Cjenici"
+
+#. module: fieldservice_purchase
+#: model:ir.model.fields,field_description:fieldservice_purchase.field_fsm_order__purchase_ids
+msgid "Purchase"
+msgstr "Nabava"
+
+#. module: fieldservice_purchase
+#: model:ir.model,name:fieldservice_purchase.model_purchase_order
+msgid "Purchase Order"
+msgstr "Nabavni nalog"
+
+#. module: fieldservice_purchase
+#: model_terms:ir.ui.view,arch_db:fieldservice_purchase.fsm_order_form
+msgid "Purchases"
+msgstr "Nabave"

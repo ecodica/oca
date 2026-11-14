@@ -1,0 +1,140 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mail_notification_custom_subject
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: mail_notification_custom_subject
+#: model:ir.model.fields.selection,name:mail_notification_custom_subject.selection__mail_message_custom_subject__position__append_after
+msgid "Append After"
+msgstr "Dodaj nakon"
+
+#. module: mail_notification_custom_subject
+#: model:ir.model.fields.selection,name:mail_notification_custom_subject.selection__mail_message_custom_subject__position__append_before
+msgid "Append Before"
+msgstr "Dodaj prije"
+
+#. module: mail_notification_custom_subject
+#: model:ir.model.fields,field_description:mail_notification_custom_subject.field_mail_message_custom_subject__subtype_ids
+msgid "Applied Subtypes"
+msgstr "Primijenjene podvrste"
+
+#. module: mail_notification_custom_subject
+#: model:ir.model.fields,field_description:mail_notification_custom_subject.field_mail_message_custom_subject__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: mail_notification_custom_subject
+#: model:ir.model.fields,field_description:mail_notification_custom_subject.field_mail_message_custom_subject__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: mail_notification_custom_subject
+#: model:ir.model.fields,field_description:mail_notification_custom_subject.field_mail_message_custom_subject__display_name
+#: model:ir.model.fields,field_description:mail_notification_custom_subject.field_mail_thread__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: mail_notification_custom_subject
+#: model:ir.model,name:mail_notification_custom_subject.model_mail_thread
+msgid "Email Thread"
+msgstr "E-mail"
+
+#. module: mail_notification_custom_subject
+#: model:ir.model.fields,field_description:mail_notification_custom_subject.field_mail_message_custom_subject__id
+#: model:ir.model.fields,field_description:mail_notification_custom_subject.field_mail_thread__id
+msgid "ID"
+msgstr "ID"
+
+#. module: mail_notification_custom_subject
+#: model:ir.model.fields,field_description:mail_notification_custom_subject.field_mail_message_custom_subject__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: mail_notification_custom_subject
+#: model:ir.model.fields,field_description:mail_notification_custom_subject.field_mail_message_custom_subject__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: mail_notification_custom_subject
+#: model:ir.model,name:mail_notification_custom_subject.model_mail_message_custom_subject
+msgid "Mail Message Custom Subject"
+msgstr ""
+
+#. module: mail_notification_custom_subject
+#: model:ir.model.fields,field_description:mail_notification_custom_subject.field_mail_message_custom_subject__model_id
+msgid "Model"
+msgstr "Model"
+
+#. module: mail_notification_custom_subject
+#: model:ir.model.fields,help:mail_notification_custom_subject.field_mail_message_custom_subject__model_id
+msgid "Model where this template applies"
+msgstr ""
+
+#. module: mail_notification_custom_subject
+#: model:ir.model.fields.selection,name:mail_notification_custom_subject.selection__mail_message_custom_subject__position__inside_replace
+msgid "Partial Replacement"
+msgstr ""
+
+#. module: mail_notification_custom_subject
+#: model:ir.model.fields,field_description:mail_notification_custom_subject.field_mail_message_custom_subject__position
+msgid "Position"
+msgstr "Pozicija"
+
+#. module: mail_notification_custom_subject
+#: model:ir.model.fields.selection,name:mail_notification_custom_subject.selection__mail_message_custom_subject__position__replace
+msgid "Replace"
+msgstr "Zamijeni"
+
+#. module: mail_notification_custom_subject
+#: model:ir.model.fields,help:mail_notification_custom_subject.field_mail_message_custom_subject__subject_template
+#: model_terms:ir.ui.view,arch_db:mail_notification_custom_subject.mail_notification_custom_subject_form
+msgid "Subject (placeholders may be used here)"
+msgstr "Naslov"
+
+#. module: mail_notification_custom_subject
+#: model:ir.actions.act_window,name:mail_notification_custom_subject.action_mail_notification_custom_subject_tree_all
+#: model:ir.ui.menu,name:mail_notification_custom_subject.menu_mail_notification_custom_subject
+#: model_terms:ir.ui.view,arch_db:mail_notification_custom_subject.mail_notification_custom_subject_form
+msgid "Subject Replacement Templates"
+msgstr ""
+
+#. module: mail_notification_custom_subject
+#: model:ir.model.fields,field_description:mail_notification_custom_subject.field_mail_message_custom_subject__subject_template
+msgid "Subject Template"
+msgstr ""
+
+#. module: mail_notification_custom_subject
+#: model:ir.model.fields,field_description:mail_notification_custom_subject.field_mail_message_custom_subject__subject_to_replace
+msgid "Subject To Replace"
+msgstr ""
+
+#. module: mail_notification_custom_subject
+#: model:ir.model.fields,field_description:mail_notification_custom_subject.field_mail_message_custom_subject__name
+msgid "Template Name"
+msgstr "Naziv predloška"
+
+#. module: mail_notification_custom_subject
+#: model:ir.model.fields,help:mail_notification_custom_subject.field_mail_message_custom_subject__subject_to_replace
+msgid ""
+"The text that will be replaced. You can use placeholders. E.g.: {{ "
+"object.company_id.name }}"
+msgstr ""
+
+#. module: mail_notification_custom_subject
+#: model:ir.model.fields,help:mail_notification_custom_subject.field_mail_message_custom_subject__position
+msgid ""
+"Whether to replace completely, partially, append at beginning or append at "
+"end to other templates that apply to a given context"
+msgstr ""

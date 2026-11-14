@@ -1,0 +1,51 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_move_line_payment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: account_move_line_payment
+#: model:ir.model.fields,field_description:account_move_line_payment.field_account_move_line__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: account_move_line_payment
+#: model:ir.model.fields,field_description:account_move_line_payment.field_account_move_line__id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_move_line_payment
+#: model:ir.model,name:account_move_line_payment.model_account_move_line
+msgid "Journal Item"
+msgstr "Stavka dnevnika"
+
+#. module: account_move_line_payment
+#: model_terms:ir.ui.view,arch_db:account_move_line_payment.view_account_move_line_filter
+msgid "Overdue"
+msgstr "Dospjelo"
+
+#. module: account_move_line_payment
+#: model:ir.actions.act_window,name:account_move_line_payment.action_pay
+msgid "Register Payment"
+msgstr "Registriraj plaćanje"
+
+#. module: account_move_line_payment
+#: model:ir.model.fields,field_description:account_move_line_payment.field_account_move_line__pending_due_date
+msgid "Remaining due days"
+msgstr "Preostali dani dospijeća"
+
+#. module: account_move_line_payment
+#: model:ir.model.fields,help:account_move_line_payment.field_account_move_line__pending_due_date
+msgid "The date when the payment is due, or empty if it's done."
+msgstr "Datum kada plaćanje dospijeva, ili prazan ako je izvršeno."

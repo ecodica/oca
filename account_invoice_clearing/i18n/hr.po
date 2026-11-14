@@ -1,0 +1,405 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_invoice_clearing
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: account_invoice_clearing
+#. odoo-python
+#: code:addons/account_invoice_clearing/wizards/account_invoice_clearing_wizard.py:0
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_lines_wizard__account_id
+msgid "Account"
+msgstr "Konto"
+
+#. module: account_invoice_clearing
+#: model:ir.model,name:account_invoice_clearing.model_account_invoice_clearing_lines_wizard
+msgid "Account Invoice Clearing Lines Wizard"
+msgstr "Čarobnjak redaka poravnanja računa"
+
+#. module: account_invoice_clearing
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_wizard__amount_to_clear
+msgid "Amount To Clear"
+msgstr "Iznos za poravnanje"
+
+#. module: account_invoice_clearing
+#. odoo-python
+#: code:addons/account_invoice_clearing/wizards/account_invoice_clearing_wizard.py:0
+msgid "Amount to clear cannot be greater than residual amount."
+msgstr "Iznos za poravnanje ne može biti veći od preostalog iznosa."
+
+#. module: account_invoice_clearing
+#: model_terms:ir.ui.view,arch_db:account_invoice_clearing.account_invoice_clearing_wizard_form_view
+msgid ""
+"Are you sure you want to use the selected configuration to clear invoices? "
+"This operation will create a new move and will reconcile every line with its"
+" respective counterpart."
+msgstr ""
+"Jeste li sigurni da želite koristiti odabranu konfiguraciju za poravnanje "
+"računa? Ova operacija će kreirati novo knjiženje i pomiriti svaku stavku s "
+"odgovarajućom protustavkom."
+
+#. module: account_invoice_clearing
+#: model_terms:ir.ui.view,arch_db:account_invoice_clearing.account_invoice_clearing_wizard_form_view
+msgid "Auto Fill"
+msgstr "Automatsko popunjavanje"
+
+#. module: account_invoice_clearing
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_lines_wizard__can_use_line
+msgid "Can Use Line"
+msgstr "Može koristiti stavku"
+
+#. module: account_invoice_clearing
+#: model_terms:ir.ui.view,arch_db:account_invoice_clearing.account_invoice_clearing_wizard_form_view
+msgid "Cancel"
+msgstr "Odustani"
+
+#. module: account_invoice_clearing
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_lines_wizard__clearing_id
+msgid "Clearing"
+msgstr "Poravnanje"
+
+#. module: account_invoice_clearing
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_lines_wizard__amount_to_clear
+msgid "Clearing amount"
+msgstr "Iznos poravnanja"
+
+#. module: account_invoice_clearing
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_wizard__commercial_partner_id
+msgid "Commercial Partner"
+msgstr "Komercijalni partner"
+
+#. module: account_invoice_clearing
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_wizard__company_id
+msgid "Company"
+msgstr "Tvrtka"
+
+#. module: account_invoice_clearing
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_lines_wizard__company_currency_id
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_wizard__company_currency_id
+msgid "Company Currency"
+msgstr "Valuta organizacije"
+
+#. module: account_invoice_clearing
+#: model_terms:ir.ui.view,arch_db:account_invoice_clearing.account_invoice_clearing_wizard_form_view
+msgid "Create and Concile"
+msgstr "Kreiraj i pomiri"
+
+#. module: account_invoice_clearing
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_lines_wizard__create_uid
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_wizard__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: account_invoice_clearing
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_lines_wizard__create_date
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_wizard__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: account_invoice_clearing
+#. odoo-python
+#: code:addons/account_invoice_clearing/wizards/account_invoice_clearing_wizard.py:0
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_lines_wizard__credit
+msgid "Credit"
+msgstr "Potražuje"
+
+#. module: account_invoice_clearing
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_lines_wizard__date
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_wizard__date
+msgid "Date"
+msgstr "Datum"
+
+#. module: account_invoice_clearing
+#. odoo-python
+#: code:addons/account_invoice_clearing/wizards/account_invoice_clearing_wizard.py:0
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_lines_wizard__debit
+msgid "Debit"
+msgstr "Duguje"
+
+#. module: account_invoice_clearing
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_lines_wizard__display_name
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_wizard__display_name
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_move__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: account_invoice_clearing
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_lines_wizard__date_maturity
+#: model_terms:ir.ui.view,arch_db:account_invoice_clearing.account_invoice_clearing_wizard_form_view
+msgid "Due Date"
+msgstr "Datum dospijeća"
+
+#. module: account_invoice_clearing
+#: model_terms:ir.ui.view,arch_db:account_invoice_clearing.account_invoice_clearing_wizard_form_view
+msgid ""
+"Fills the amount to clear with the residual amount of the invoice in order "
+"until the total residual amount is zero."
+msgstr ""
+"Popunjava iznos za poravnanje preostalim iznosom računa redom dok ukupni "
+"preostali iznos ne bude nula."
+
+#. module: account_invoice_clearing
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_lines_wizard__id
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_wizard__id
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_move__id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_invoice_clearing
+#: model:ir.actions.server,name:account_invoice_clearing.action_invoice_clearing
+msgid "Invoice Clearing"
+msgstr "Poravnanje računa"
+
+#. module: account_invoice_clearing
+#: model:ir.model,name:account_invoice_clearing.model_account_invoice_clearing_wizard
+msgid "Invoice Clearing Wizard"
+msgstr "Čarobnjak poravnanja računa"
+
+#. module: account_invoice_clearing
+#: model:ir.actions.act_window,name:account_invoice_clearing.action_account_invoice_clearing_wizard
+#: model_terms:ir.ui.view,arch_db:account_invoice_clearing.account_invoice_clearing_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:account_invoice_clearing.view_move_form
+msgid "Invoice clearing"
+msgstr "Poravnanje računa"
+
+#. module: account_invoice_clearing
+#. odoo-python
+#: code:addons/account_invoice_clearing/wizards/account_invoice_clearing_wizard.py:0
+msgid "Invoices must be from the same commercial partner."
+msgstr "Računi moraju biti od istog komercijalnog partnera."
+
+#. module: account_invoice_clearing
+#. odoo-python
+#: code:addons/account_invoice_clearing/wizards/account_invoice_clearing_wizard.py:0
+msgid "Invoices must be of the same type."
+msgstr "Računi moraju biti iste vrste."
+
+#. module: account_invoice_clearing
+#. odoo-python
+#: code:addons/account_invoice_clearing/wizards/account_invoice_clearing_wizard.py:0
+msgid "Invoices must belong to the same company."
+msgstr "Računi moraju pripadati istoj tvrtki."
+
+#. module: account_invoice_clearing
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_wizard__invoice_ids
+msgid "Invoices/Bills"
+msgstr "Računi/računi dobavljača"
+
+#. module: account_invoice_clearing
+#: model:ir.model.fields,help:account_invoice_clearing.field_account_invoice_clearing_wizard__preview_move_data
+msgid "JSON value of the data to be displayed in the previewer"
+msgstr "JSON vrijednost podataka za prikaz u pregledniku"
+
+#. module: account_invoice_clearing
+#: model:ir.model.fields,help:account_invoice_clearing.field_account_invoice_clearing_wizard__move_data
+msgid "JSON value of the moves to be created"
+msgstr "JSON vrijednost knjiženja za kreiranje"
+
+#. module: account_invoice_clearing
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_wizard__journal_id
+msgid "Journal"
+msgstr "Dnevnik"
+
+#. module: account_invoice_clearing
+#: model:ir.model,name:account_invoice_clearing.model_account_move
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_lines_wizard__invoice_id
+msgid "Journal Entry"
+msgstr "Stavke temeljnice"
+
+#. module: account_invoice_clearing
+#. odoo-python
+#: code:addons/account_invoice_clearing/wizards/account_invoice_clearing_wizard.py:0
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_lines_wizard__name
+msgid "Label"
+msgstr "Oznaka"
+
+#. module: account_invoice_clearing
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_lines_wizard__write_uid
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: account_invoice_clearing
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_lines_wizard__write_date
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_wizard__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: account_invoice_clearing
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_wizard__line_ids
+msgid "Lines"
+msgstr "Stavke"
+
+#. module: account_invoice_clearing
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_wizard__move_data
+msgid "Move Data"
+msgstr "Podaci kretanja"
+
+#. module: account_invoice_clearing
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_lines_wizard__move_line_id
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_wizard__move_line_ids
+msgid "Move Line"
+msgstr "Stavka temeljnice"
+
+#. module: account_invoice_clearing
+#: model_terms:ir.ui.view,arch_db:account_invoice_clearing.account_invoice_clearing_wizard_form_view
+msgid "Move Lines to clear"
+msgstr "Stavke knjiženja za poravnanje"
+
+#. module: account_invoice_clearing
+#: model_terms:ir.ui.view,arch_db:account_invoice_clearing.account_invoice_clearing_wizard_form_view
+msgid "Move Lines to use for clearing"
+msgstr "Stavke knjiženja za korištenje pri poravnanju"
+
+#. module: account_invoice_clearing
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_wizard__move_name
+msgid "Move Name"
+msgstr "Naziv knjiženja"
+
+#. module: account_invoice_clearing
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_wizard__move_type
+msgid "Move Type"
+msgstr "Tip temeljnice"
+
+#. module: account_invoice_clearing
+#: model_terms:ir.ui.view,arch_db:account_invoice_clearing.account_invoice_clearing_wizard_form_view
+msgid "Move and Move lines texts"
+msgstr "Tekstovi knjiženja i stavaka knjiženja"
+
+#. module: account_invoice_clearing
+#: model_terms:ir.ui.view,arch_db:account_invoice_clearing.account_invoice_clearing_wizard_form_view
+msgid "Move general configuration"
+msgstr "Opća konfiguracija knjiženja"
+
+#. module: account_invoice_clearing
+#: model:ir.model.fields,help:account_invoice_clearing.field_account_invoice_clearing_wizard__move_name
+msgid "Name of the move generated by this wizard"
+msgstr "Naziv knjiženja koje generira ovaj čarobnjak"
+
+#. module: account_invoice_clearing
+#. odoo-python
+#: code:addons/account_invoice_clearing/wizards/account_invoice_clearing_wizard.py:0
+msgid "Partner"
+msgstr "Partner"
+
+#. module: account_invoice_clearing
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_wizard__move_line_prefix
+msgid "Prefix for move lines"
+msgstr "Prefiks za stavke knjiženja"
+
+#. module: account_invoice_clearing
+#: model:ir.model.fields,help:account_invoice_clearing.field_account_invoice_clearing_wizard__move_line_prefix
+msgid ""
+"Prefix to be used in the name of the move lines generated by this wizard"
+msgstr ""
+"Prefiks koji se koristi u nazivu stavaka knjiženja koje generira ovaj "
+"čarobnjak"
+
+#. module: account_invoice_clearing
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_wizard__preview_move_data
+msgid "Preview Move Data"
+msgstr "Pregled podataka kretanja"
+
+#. module: account_invoice_clearing
+#. odoo-python
+#: code:addons/account_invoice_clearing/wizards/account_invoice_clearing_wizard.py:0
+msgid "Preview of the clearing move related to %s"
+msgstr "Pregled knjiženja poravnanja povezanog s %s"
+
+#. module: account_invoice_clearing
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_lines_wizard__product_id
+msgid "Product"
+msgstr "Proizvod"
+
+#. module: account_invoice_clearing
+#: model_terms:ir.ui.view,arch_db:account_invoice_clearing.account_invoice_clearing_wizard_form_view
+msgid "Removes all lines and adds all available move lines again."
+msgstr "Uklanja sve retke i ponovno dodaje sve dostupne stavke knjiženja."
+
+#. module: account_invoice_clearing
+#: model_terms:ir.ui.view,arch_db:account_invoice_clearing.account_invoice_clearing_wizard_form_view
+msgid "Reset"
+msgstr "Poništi"
+
+#. module: account_invoice_clearing
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_lines_wizard__amount_residual
+#: model_terms:ir.ui.view,arch_db:account_invoice_clearing.account_invoice_clearing_wizard_form_view
+msgid "Residual Amount"
+msgstr "Preostali iznos"
+
+#. module: account_invoice_clearing
+#: model_terms:ir.ui.view,arch_db:account_invoice_clearing.account_invoice_clearing_wizard_form_view
+msgid "Residual Amount Total (Signed)"
+msgstr "Ukupni preostali iznos (s predznakom)"
+
+#. module: account_invoice_clearing
+#: model_terms:ir.ui.view,arch_db:account_invoice_clearing.account_invoice_clearing_wizard_form_view
+msgid "Residual Amount to clear (Signed)"
+msgstr "Preostali iznos za poravnanje (s predznakom)"
+
+#. module: account_invoice_clearing
+#. odoo-python
+#: code:addons/account_invoice_clearing/wizards/account_invoice_clearing_wizard.py:0
+msgid "Resulting Clearing Move"
+msgstr "Rezultirajuće knjiženje poravnanja"
+
+#. module: account_invoice_clearing
+#: model_terms:ir.ui.view,arch_db:account_invoice_clearing.account_invoice_clearing_wizard_form_view
+msgid "Resulting move will not be fully reconciled."
+msgstr "Rezultirajuće knjiženje neće biti potpuno pomireno."
+
+#. module: account_invoice_clearing
+#: model:ir.model.fields,field_description:account_invoice_clearing.field_account_invoice_clearing_lines_wizard__sequence
+msgid "Sequence"
+msgstr "Sekvenca"
+
+#. module: account_invoice_clearing
+#: model_terms:ir.ui.view,arch_db:account_invoice_clearing.account_invoice_clearing_wizard_form_view
+msgid "Sorts the invoices by date due."
+msgstr "Sortira račune po datumu dospijeća."
+
+#. module: account_invoice_clearing
+#: model_terms:ir.ui.view,arch_db:account_invoice_clearing.account_invoice_clearing_wizard_form_view
+msgid "Sorts the invoices by residual amount."
+msgstr "Sortira račune po preostalom iznosu."
+
+#. module: account_invoice_clearing
+#: model_terms:ir.ui.view,arch_db:account_invoice_clearing.account_invoice_clearing_wizard_form_view
+msgid "The following Journal Entries will be generated"
+msgstr "Sljedeće temeljnice dnevnika će biti kreirane"
+
+#. module: account_invoice_clearing
+#: model:ir.model.fields,help:account_invoice_clearing.field_account_invoice_clearing_lines_wizard__amount_residual
+msgid ""
+"The residual amount on a journal item expressed in the company currency."
+msgstr "Ostatak iznosa na temeljnici iskazan u valuti tvrtke."
+
+#. module: account_invoice_clearing
+#: model:ir.model.fields,help:account_invoice_clearing.field_account_invoice_clearing_lines_wizard__date_maturity
+msgid ""
+"This field is used for payable and receivable journal entries. You can put "
+"the limit date for the payment of this line."
+msgstr ""
+"Koristi se za salda konti kupaca i dobavljača. Upišite datum valute "
+"plaćanja."
+
+#. module: account_invoice_clearing
+#: model_terms:ir.ui.view,arch_db:account_invoice_clearing.account_invoice_clearing_wizard_form_view
+msgid "Total Amount Residual (Signed)"
+msgstr "Ukupni preostali iznos (s predznakom)"
+
+#. module: account_invoice_clearing
+#: model_terms:ir.ui.view,arch_db:account_invoice_clearing.account_invoice_clearing_wizard_form_view
+msgid "Use"
+msgstr "Upotreba"

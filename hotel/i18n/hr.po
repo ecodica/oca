@@ -1,0 +1,4132 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hotel
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__serial_prefix_format
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__serial_prefix_format
+#: model:ir.model.fields,help:hotel.field_hotel_services__serial_prefix_format
+msgid ""
+"\n"
+"    If multiple products share the same prefix, they will share the same sequence, otherwise the sequence will be dedicated to the product.\n"
+"\n"
+"    * Legend (for prefix):\n"
+"    - Current Year with Century: %(year)s\n"
+"    - Current Year without Century: %(y)s\n"
+"    - Month: %(month)s\n"
+"    - Day: %(day)s\n"
+"    - Day of the Year: %(doy)s\n"
+"    - Week of the Year: %(woy)s\n"
+"    - Day of the Week (0:Monday): %(weekday)s\n"
+"    - Hour 00->24: %(h24)s\n"
+"    - Hour 00->12: %(h12)s\n"
+"    - Minute: %(min)s\n"
+"    - Second: %(sec)s\n"
+msgstr ""
+"\n"
+"    Ako više proizvoda dijeli isti prefiks, dijelit će i istu sekvencu, u suprotnom sekvenca će biti posvećena proizvodu.\n"
+"\n"
+"    * Legenda (za prefiks):\n"
+"    - Trenutna godina sa stoljećem: %(year)s\n"
+"    - Trenutna godina bez stoljeća: %(y)s\n"
+"    - Mjesec: %(month)s\n"
+"    - Dan: %(day)s\n"
+"    - Dan u godini: %(doy)s\n"
+"    - Tjedan u godini: %(woy)s\n"
+"    - Dan u tjednu (0:Ponedjeljak): %(weekday)s\n"
+"    - Sat 00->24: %(h24)s\n"
+"    - Sat 00->12: %(h12)s\n"
+"    - Minuta: %(min)s\n"
+"    - Sekunda: %(sec)s\n"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__product_variant_count
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__product_variant_count
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__product_variant_count
+msgid "# Product Variants"
+msgstr "# Varijante proizvoda"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__product_count
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__product_count
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__product_count
+msgid "# Products"
+msgstr "# Proizvodi"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_kanban
+msgid "<span title=\"fa_icon\" class=\"fa fa-bars fa-lg\"/>"
+msgstr ""
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.report_hotel_folio
+msgid "<strong>CheckIN</strong>"
+msgstr "<strong>Prijava</strong>"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.report_hotel_folio
+msgid "<strong>CheckOut</strong>"
+msgstr "<strong>Odjava</strong>"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.report_hotel_folio
+msgid "<strong>Customer Name</strong>"
+msgstr "<strong>Naziv kupca</strong>"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.report_hotel_folio
+msgid "<strong>Folio No.</strong>"
+msgstr "<strong>Broj folija</strong>"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.report_hotel_folio
+msgid "<strong>From:</strong>"
+msgstr "<strong>Od:</strong>"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.report_hotel_folio
+msgid "<strong>Net Total:</strong>"
+msgstr "<strong>Neto ukupno:</strong>"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.report_hotel_folio
+msgid "<strong>To:</strong>"
+msgstr "<strong>Za:</strong>"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.report_hotel_folio
+msgid "<strong>Total</strong>"
+msgstr "<strong>Ukupno</strong>"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__description_sale
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__description_sale
+#: model:ir.model.fields,help:hotel.field_hotel_services__description_sale
+msgid ""
+"A description of the Product that you want to communicate to your customers."
+" This description will be copied to every Sales Order, Delivery Order and "
+"Customer Invoice/Credit Note"
+msgstr ""
+"Opis proizvoda koji želite prenijeti svojim kupcima. Ovaj opis bit će "
+"kopiran na svaku prodajnu narudžbu, narudžbu za dostavu i fakturu/kreditnu "
+"notu kupca"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_sale_advance_payment_inv__advance_payment_method
+msgid ""
+"A standard invoice is issued with all the order lines ready for\n"
+"        invoicing, according to their invoicing policy\n"
+"        (based on ordered or delivered quantity)."
+msgstr ""
+"Standardni račun izdaje se sa svim stavkama naloga spremnim za\n"
+"        fakturiranje, prema njihovoj politici fakturiranja\n"
+"        (na temelju naručene ili isporučene količine)."
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio_line__is_storable
+#: model:ir.model.fields,help:hotel.field_hotel_room__is_storable
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__is_storable
+#: model:ir.model.fields,help:hotel.field_hotel_service_line__is_storable
+#: model:ir.model.fields,help:hotel.field_hotel_services__is_storable
+msgid "A storable product is a product for which you manage stock."
+msgstr "Uskladištivi proizvod je onaj za kojeg vodite stanje skladišta."
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__project_id
+msgid ""
+"A task will be created for the project upon sales order confirmation. The "
+"analytic distribution of this project will also serve as a reference for "
+"newly created sales order items."
+msgstr ""
+"Zadatak će biti kreiran za projekt pri potvrdi prodajnog naloga. Analitička "
+"raspodjela ovog projekta služit će i kao referenca za novokreirane stavke "
+"prodajnog naloga."
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__access_warning
+msgid "Access warning"
+msgstr "Upozorenje pristupa"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio_line__qty_delivered_method
+#: model:ir.model.fields,help:hotel.field_hotel_service_line__qty_delivered_method
+msgid ""
+"According to product configuration, the delivered quantity can be automatically computed by mechanism:\n"
+"  - Manual: the quantity is set manually on the line\n"
+"  - Analytic From expenses: the quantity is the quantity sum from posted expenses\n"
+"  - Timesheet: the quantity is the sum of hours recorded on tasks linked to this sale line\n"
+"  - Stock Moves: the quantity comes from confirmed pickings\n"
+msgstr ""
+"Prema konfiguraciji proizvoda, isporučena količina može se automatski izračunati mehanizmom:\n"
+"- Ručno: količina se postavlja ručno u retku\n"
+"- Analitički iz troškova: količina je zbroj količina iz knjiženih troškova\n"
+"- Evidencija radnog vremena: količina je zbroj sati zabilježenih na zadacima povezanim s ovim retkom prodaje\n"
+"- Kretanje zaliha: količina dolazi iz potvrđenih prikupljanja\n"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__account_tag_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__account_tag_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__account_tag_ids
+msgid "Account Tags"
+msgstr "Oznake konta"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__message_needaction
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__message_needaction
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__message_needaction
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__message_needaction
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__message_needaction
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__message_needaction
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__message_needaction
+msgid "Action Needed"
+msgstr "Potrebna radnja"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__active
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__active
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__active
+msgid "Active"
+msgstr "Aktivno"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__activity_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__activity_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__activity_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__activity_ids
+msgid "Activities"
+msgstr "Aktivnosti"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__activity_exception_decoration
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__activity_exception_decoration
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__activity_exception_decoration
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Ukras iznimke aktivnosti"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__activity_state
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__activity_state
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__activity_state
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__activity_state
+msgid "Activity State"
+msgstr "Status aktivnosti"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__activity_type_icon
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__activity_type_icon
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__activity_type_icon
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Ikona vrste aktivnosti"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_res_company__additional_hours
+msgid "Additional Hours"
+msgstr "Dodatni sati"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__uom_ids
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__uom_ids
+#: model:ir.model.fields,help:hotel.field_hotel_services__uom_ids
+msgid "Additional packagings for this product which can be used for sales"
+msgstr "Dodatna pakiranja za ovaj proizvod koja se mogu koristiti za prodaju"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__all_product_tag_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__all_product_tag_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__all_product_tag_ids
+msgid "All Product Tag"
+msgstr "Oznaka svih proizvoda"
+
+#. module: hotel
+#: model:ir.model,name:hotel.model_folio_report_wizard
+msgid "Allow print folio report by date"
+msgstr "Dopusti ispis izvještaja folija po datumu"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__allowed_uom_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__allowed_uom_ids
+msgid "Allowed Uom"
+msgstr "Dopuštena JM"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__amount_invoiced
+msgid "Already invoiced"
+msgstr "Već fakturirano"
+
+#. module: hotel
+#: model:ir.actions.act_window,name:hotel.action_hotel_room_amenities_view_form
+#: model:ir.ui.menu,name:hotel.menu_action_hotel_room_amenities_view_form
+msgid "Amenities"
+msgstr "Sadržaji"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__amenities_categ_id
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_aenities_search
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_amenities_form
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_amenities_list
+msgid "Amenities Category"
+msgstr "Kategorija sadržaja"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__child_ids
+msgid "Amenities Child Categories"
+msgstr "Podkategorije sadržaja"
+
+#. module: hotel
+#: model:ir.actions.act_window,name:hotel.action_hotel_room_amenities_type_view_form
+msgid "Amenities Type"
+msgstr "Vrsta sadržaja"
+
+#. module: hotel
+#: model:ir.ui.menu,name:hotel.menu_amenity
+msgid "Amenity"
+msgstr "Sadržaj"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_amenities_list
+msgid "Amenity Rate"
+msgstr "Stopa sadržaja"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_amenities_form
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_amenities_type_form
+msgid "Amenity Type"
+msgstr "Vrsta sadržaja"
+
+#. module: hotel
+#: model:ir.ui.menu,name:hotel.menu_action_hotel_room_amenities_type_view_form
+msgid "Amenity Types"
+msgstr "Vrste sadržaja"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_amenities_form
+msgid "Amenity manager"
+msgstr "Upravitelj sadržaja"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_aenities_search
+msgid "Amenity rate"
+msgstr "Stopa sadržaja"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__amount_to_invoice_at_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__amount_to_invoice_at_date
+msgid "Amount"
+msgstr "Iznos"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__amount_undiscounted
+msgid "Amount Before Discount"
+msgstr "Iznos prije popusta"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__analytic_distribution
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__analytic_distribution
+msgid "Analytic Distribution"
+msgstr "Analitička distribucija"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__analytic_precision
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__analytic_precision
+msgid "Analytic Precision"
+msgstr "Preciznost analitike"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__analytic_line_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__analytic_line_ids
+msgid "Analytic lines"
+msgstr "Retci analitike"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities_type__account_stock_variation_id
+#: model:ir.model.fields,help:hotel.field_hotel_room_type__account_stock_variation_id
+#: model:ir.model.fields,help:hotel.field_hotel_service_type__account_stock_variation_id
+msgid ""
+"At closing, register the inventory variation of the period into a specific "
+"account"
+msgstr ""
+"Pri zatvaranju, registriraj varijaciju zaliha razdoblja na poseban konto"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__floor_id
+msgid "At which floor the room is located."
+msgstr "Na kojem je katu soba."
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__message_attachment_count
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__message_attachment_count
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__message_attachment_count
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__message_attachment_count
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__message_attachment_count
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__message_attachment_count
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__message_attachment_count
+msgid "Attachment Count"
+msgstr "Broj privitaka"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__product_template_attribute_value_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__product_template_attribute_value_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__product_template_attribute_value_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__product_template_attribute_value_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__product_template_attribute_value_ids
+msgid "Attribute Values"
+msgstr "Vrijednosti značajki"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__authorized_transaction_ids
+msgid "Authorized Transactions"
+msgstr "Autorizirane transkacije"
+
+#. module: hotel
+#: model:ir.model,name:hotel.model_report_hotel_report_hotel_folio
+msgid "Auxiliar to get the report"
+msgstr "Pomoćnik za izvještaj"
+
+#. module: hotel
+#: model:ir.model.fields.selection,name:hotel.selection__hotel_room__status__available
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_kanban
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_search
+msgid "Available"
+msgstr "Dostupno"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__available_in_pos
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__available_in_pos
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__available_in_pos
+msgid "Available in POS"
+msgstr "Dostupno u POS-u"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__free_qty
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__free_qty
+#: model:ir.model.fields,help:hotel.field_hotel_services__free_qty
+msgid ""
+"Available quantity (computed as Quantity On Hand - reserved quantity)\n"
+"In a context with a single Stock Location, this includes goods stored in this location, or any of its children.\n"
+"In a context with a single Warehouse, this includes goods stored in the Stock Location of this Warehouse, or any of its children.\n"
+"Otherwise, this includes goods stored in any Stock Location with 'internal' type."
+msgstr ""
+"Dostupna količina (izračunata kao količina na stanju - rezervirana količina)\n"
+"U kontekstu s jednom lokacijom zaliha, ovo uključuje robu pohranjenu na toj lokaciji ili bilo kojoj njezinoj podlokaciji.\n"
+"U kontekstu s jednim skladištem, ovo uključuje robu pohranjenu na lokaciji zaliha tog skladišta ili bilo kojoj njezinoj podlokaciji.\n"
+"Inače, ovo uključuje robu pohranjenu na bilo kojoj lokaciji zaliha tipa 'interno'."
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__avg_cost
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__avg_cost
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__avg_cost
+msgid "Average Cost"
+msgstr "Prosječan trošak"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__barcode
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__barcode
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__barcode
+msgid "Barcode"
+msgstr "Barkod"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__valid_ean
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__valid_ean
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__valid_ean
+msgid "Barcode is valid EAN"
+msgstr "Barkod sarži valjan EAN"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__delivery_status
+msgid ""
+"Blue: Not Delivered/Started\n"
+"            Orange: Partially Delivered\n"
+"            Green: Fully Delivered"
+msgstr ""
+"Plavo: Nije isporučeno/Započeto\n"
+"            Narančasto: Djelomično isporučeno\n"
+"            Zeleno: Potpuno isporučeno"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_folio_form
+msgid "Branch"
+msgstr "Podružnica"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__campaign_id
+msgid "Campaign"
+msgstr "Kampanja"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__product_updatable
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__product_updatable
+msgid "Can Edit Product"
+msgstr "Može uređivati proizvod"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__can_image_1024_be_zoomed
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__can_image_1024_be_zoomed
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__can_image_1024_be_zoomed
+msgid "Can Image 1024 be zoomed"
+msgstr "Može li se slika 1024 povećati"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__can_image_variant_1024_be_zoomed
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__can_image_variant_1024_be_zoomed
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__can_image_variant_1024_be_zoomed
+msgid "Can Variant Image 1024 be zoomed"
+msgstr "Može li se slika varijante 1024 povećati?"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_folio_form
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_folio_wizard
+msgid "Cancel"
+msgstr "Odustani"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__capacity
+msgid "Capacity"
+msgstr "Kapacitet"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_kanban
+msgid "Capacity:"
+msgstr "Kapacitet:"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__amenity_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__categ_id
+msgid "Category"
+msgstr "Kategorija"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__route_from_categ_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__route_from_categ_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__route_from_categ_ids
+msgid "Category Routes"
+msgstr "Kategorija rute"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__pos_categ_ids
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__pos_categ_ids
+#: model:ir.model.fields,help:hotel.field_hotel_services__pos_categ_ids
+msgid "Category used in the Point of Sale."
+msgstr "Kategorija koja se koristi na prodajnom mjestu."
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__checkin_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__checkin_date
+msgid "Check In"
+msgstr "Prijava"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_folio_room_line__check_in
+msgid "Check In Date"
+msgstr "Datum prijave"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__checkout_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__checkout_date
+msgid "Check Out"
+msgstr "Odjava"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_folio_room_line__check_out
+msgid "Check Out Date"
+msgstr "Datum odjave"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__to_weight
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__to_weight
+#: model:ir.model.fields,help:hotel.field_hotel_services__to_weight
+msgid ""
+"Check if the product should be weighted using the hardware scale "
+"integration."
+msgstr "Označiti ako artikl treba izvagati vagom."
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__available_in_pos
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__available_in_pos
+#: model:ir.model.fields,help:hotel.field_hotel_services__available_in_pos
+msgid "Check if you want this product to appear in the Point of Sale."
+msgstr "Označite ovdje ako želite da se proizvod pojavljuje u POS-u"
+
+#. module: hotel
+#. odoo-python
+#: code:addons/hotel/models/hotel_service_line.py:0
+msgid "Checkout must be greater or equal checkin date"
+msgstr "Odjava mora biti veća ili jednaka datumu prijave"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__child_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__child_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__child_id
+msgid "Child Categories"
+msgstr "Kategorije kćeri"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__collapse_composition
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__collapse_composition
+msgid "Collapse Composition"
+msgstr "Sažmi sastav"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__collapse_prices
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__collapse_prices
+msgid "Collapse Prices"
+msgstr "Sažmi cijene"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__color
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__color
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__color
+msgid "Color Index"
+msgstr "Indeks boje"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__combination_indices
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__combination_indices
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__combination_indices
+msgid "Combination Indices"
+msgstr "Indeksi kombinacija"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__combo_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__combo_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__combo_ids
+msgid "Combo Choices"
+msgstr "Kombinirani izbori"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__combo_item_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__combo_item_id
+msgid "Combo Item"
+msgstr "Kombinirana stavka"
+
+#. module: hotel
+#: model:ir.model,name:hotel.model_res_company
+msgid "Companies"
+msgstr "Tvrtke"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__company_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__company_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__company_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__company_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__company_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__company_id
+msgid "Company"
+msgstr "Tvrtka"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__complete_name
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__complete_name
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__complete_name
+msgid "Complete Name"
+msgstr "Puni naziv"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__effective_date
+msgid "Completion date of the first delivery order."
+msgstr "Datum dovršenja prvog dostavnog naloga."
+
+#. module: hotel
+#: model:ir.ui.menu,name:hotel.hotel_configuration_menu
+msgid "Configuration"
+msgstr "Konfiguracija"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_folio_form
+msgid "Confirm Sale"
+msgstr "Potvrdi prodaju"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__standard_price
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__standard_price
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__standard_price
+msgid "Cost"
+msgstr "Trošak"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__cost_currency_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__cost_currency_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__cost_currency_id
+msgid "Cost Currency"
+msgstr "Valuta troška"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__cost_method
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__cost_method
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__cost_method
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_amenities_form
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_form
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_services_form
+msgid "Cost Method"
+msgstr "Metoda troška"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__property_cost_method
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__property_cost_method
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__property_cost_method
+msgid "Costing Method"
+msgstr "Metoda troška"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__country_code
+msgid "Country code"
+msgstr "Kod Zemlje"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_sale_advance_payment_inv__advance_payment_method
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_folio_form
+msgid "Create Invoice"
+msgstr "Kreiraj račun"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__service_tracking
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__service_tracking
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__service_tracking
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__service_tracking
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__service_tracking
+msgid "Create on Order"
+msgstr "Kreiraj prilikom narudžbe"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_folio_report_wizard__create_uid
+#: model:ir.model.fields,field_description:hotel.field_folio_room_line__create_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_floor__create_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__create_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__create_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__create_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__create_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__create_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__create_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__create_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__create_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_folio_report_wizard__create_date
+#: model:ir.model.fields,field_description:hotel.field_folio_room_line__create_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_floor__create_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__create_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__create_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__create_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__create_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__create_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__create_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__create_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__create_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__date_order
+msgid ""
+"Creation date of draft/sent orders,\n"
+"Confirmation date of confirmed orders."
+msgstr ""
+"Datum izrade nacrta/poslanih naloga,\n"
+"datum potvrde potvrđenih narudžbi."
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__currency_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__currency_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__currency_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__currency_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__currency_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__currency_id
+msgid "Currency"
+msgstr "Valuta"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__currency_rate
+msgid "Currency Rate"
+msgstr "Tečaj"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_folio_search
+msgid "Current Booking"
+msgstr "Trenutna rezervacija"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__qty_available
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__qty_available
+#: model:ir.model.fields,help:hotel.field_hotel_services__qty_available
+msgid ""
+"Current quantity of products.\n"
+"In a context with a single Stock Location, this includes goods stored at this Location, or any of its children.\n"
+"In a context with a single Warehouse, this includes goods stored in the Stock Location of this Warehouse, or any of its children.\n"
+"stored in the Stock Location of the Warehouse of this Shop, or any of its children.\n"
+"Otherwise, this includes goods stored in any Stock Location with 'internal' type."
+msgstr ""
+"Trenutna količina artikala.\n"
+"U kontekstu jednog skladišta, to uključuje robu pohranjenu na ovom mjestu ili bilo koje njegovo dijete.\n"
+"U kontekstu pojedinog skladišta, to uključuje robu pohranjenu na skladištu ovog skladišta ili bilo koje njegove djece.\n"
+"pohranjena na skladišnom mjestu skladišta ove trgovine ili bilo koje od njegove djece.\n"
+"Inače, to uključuje robu pohranjenu na bilo kojem skladištu s 'internim' tipom."
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__serial_prefix_format
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__serial_prefix_format
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__serial_prefix_format
+msgid "Custom Lot/Serial"
+msgstr "Prilagođeni lot/serijski"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__product_custom_attribute_value_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__product_custom_attribute_value_ids
+msgid "Custom Values"
+msgstr "Prilagođene vrijednosti"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__partner_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__order_partner_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__order_partner_id
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_folio_search
+msgid "Customer"
+msgstr "Kupac"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__sale_delay
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__sale_delay
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__sale_delay
+msgid "Customer Lead Time"
+msgstr "Rok isporuke kupcu"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__access_url
+msgid "Customer Portal URL"
+msgstr "URL portala za kupce"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__partner_ref
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__partner_ref
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__partner_ref
+msgid "Customer Ref"
+msgstr "Šifra kupca"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__client_order_ref
+msgid "Customer Reference"
+msgstr "Referenca kupca"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_amenities_form
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_form
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_services_form
+msgid "Customer Taxes"
+msgstr "Porezi kod prodaje"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__company_price_include
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__company_price_include
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__company_price_include
+msgid "Default Sales Price Include"
+msgstr "Zadana prodajna cijena uključuje"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__company_price_include
+#: model:ir.model.fields,help:hotel.field_hotel_folio_line__company_price_include
+#: model:ir.model.fields,help:hotel.field_hotel_service_line__company_price_include
+msgid ""
+"Default on whether the sales price used on the product and invoices with "
+"this Company includes its taxes."
+msgstr ""
+"Zadana vrijednost ovisno o tome uključuje li prodajna cijena korištena za "
+"proizvod i fakture ove tvrtke poreze."
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__supplier_taxes_id
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__supplier_taxes_id
+#: model:ir.model.fields,help:hotel.field_hotel_services__supplier_taxes_id
+msgid "Default taxes used when buying the product"
+msgstr "Zadani porezi koji se koriste pri kupnji proizvoda"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__taxes_id
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__taxes_id
+#: model:ir.model.fields,help:hotel.field_hotel_services__taxes_id
+msgid "Default taxes used when selling the product"
+msgstr "Zadani porezi koji se koriste pri prodaji proizvoda"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__uom_id
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__uom_id
+#: model:ir.model.fields,help:hotel.field_hotel_services__uom_id
+msgid "Default unit of measure used for all stock operations."
+msgstr "Predefinirana mjerna jedinica za sve funkcije zalihe."
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_kanban
+msgid "Delete"
+msgstr "Izbriši"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__qty_delivered_at_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__qty_delivered_at_date
+msgid "Delivered"
+msgstr "Isporučeno"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__partner_shipping_id
+msgid "Delivery Address"
+msgstr "Adresa dostave"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__commitment_date
+msgid "Delivery Date"
+msgstr "Datum dostave"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__delivery_count
+msgid "Delivery Orders"
+msgstr "Otpremni nalozi"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__qty_delivered
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__qty_delivered
+msgid "Delivery Quantity"
+msgstr "Količina isporuke"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__delivery_status
+msgid "Delivery Status"
+msgstr "Status isporuke"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__expected_date
+msgid ""
+"Delivery date you can promise to the customer, computed from the minimum "
+"lead time of the order lines in case of Service products. In case of "
+"shipping, the shipping policy of the order will be taken into account to "
+"either use the minimum or maximum lead time of the order lines."
+msgstr ""
+"Datum isporuke koji možete obećati kupcu, računajući se od minimalnog "
+"vremena isporuke linija za narudžbu u slučaju proizvoda usluge. U slučaju "
+"dostave, uzeće se u obzir politika otpreme narudžbe kako bi se koristilo "
+"minimalno ili maksimalno vrijeme isporuke linija narudžbe."
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__sale_delay
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__sale_delay
+#: model:ir.model.fields,help:hotel.field_hotel_services__sale_delay
+msgid ""
+"Delivery lead time, in days. It's the number of days, promised to the "
+"customer, between the confirmation of the sales order and the delivery."
+msgstr ""
+"Vrijeme isporuke, u danima. To je broj dana, obećanih kupcu, između potvrde "
+"prodajnog naloga i dostave."
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__route_ids
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__route_ids
+#: model:ir.model.fields,help:hotel.field_hotel_services__route_ids
+msgid ""
+"Depending on the modules installed, this will allow you to define the route "
+"of the product: whether it will be bought, manufactured, replenished on "
+"order, etc."
+msgstr ""
+"Ovisno o instaliranim modulima ovo će omogućiti definiranje rute proizvoda: "
+"hoće li se kupiti, proizvoditi, nadopunjavati po narudžbi i sl."
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__name
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__description
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__description
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__name
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__description
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_amenities_form
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_form
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_services_form
+msgid "Description"
+msgstr "Opis"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__description_pickingout
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__description_pickingout
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__description_pickingout
+msgid "Description on Delivery Orders"
+msgstr "Opis za otpremnice"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__description_picking
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__description_picking
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__description_picking
+msgid "Description on Picking"
+msgstr "Opis na skladišnicama"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__description_pickingin
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__description_pickingin
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__description_pickingin
+msgid "Description on Receptions"
+msgstr "Opis na primkama"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_amenities_form
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_form
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_services_form
+msgid "Descriptions"
+msgstr "Opisi"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__pos_sequence
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__pos_sequence
+#: model:ir.model.fields,help:hotel.field_hotel_services__pos_sequence
+msgid "Determine the display order in the POS Terminal"
+msgstr "Odredite redoslijed prikaza na POS terminalu"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__discount
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__discount
+msgid "Discount (%)"
+msgstr "Popust (%)"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_account_move__display_name
+#: model:ir.model.fields,field_description:hotel.field_folio_report_wizard__display_name
+#: model:ir.model.fields,field_description:hotel.field_folio_room_line__display_name
+#: model:ir.model.fields,field_description:hotel.field_hotel_floor__display_name
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__display_name
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__display_name
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__display_name
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__display_name
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__display_name
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__display_name
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__display_name
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__display_name
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__display_name
+#: model:ir.model.fields,field_description:hotel.field_product_product__display_name
+#: model:ir.model.fields,field_description:hotel.field_report_hotel_report_hotel_folio__display_name
+#: model:ir.model.fields,field_description:hotel.field_res_company__display_name
+#: model:ir.model.fields,field_description:hotel.field_sale_advance_payment_inv__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__display_qty_widget
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__display_qty_widget
+msgid "Display Qty Widget"
+msgstr "Widget za prikaz količine"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__display_type
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__display_type
+msgid "Display Type"
+msgstr "Vrsta prikaza"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__distribution_analytic_account_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__distribution_analytic_account_ids
+msgid "Distribution Analytic Account"
+msgstr "Analitički račun distribucije"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__product_document_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__product_document_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__product_document_ids
+msgid "Documents"
+msgstr "Dokumenti"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__product_document_count
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__product_document_count
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__product_document_count
+msgid "Documents Count"
+msgstr "Broj dokumenata"
+
+#. module: hotel
+#: model:ir.model.fields.selection,name:hotel.selection__sale_advance_payment_inv__advance_payment_method__fixed
+msgid "Down payment (fixed amount)"
+msgstr "Polog (fiksni iznos)"
+
+#. module: hotel
+#: model:ir.model.fields.selection,name:hotel.selection__sale_advance_payment_inv__advance_payment_method__percentage
+msgid "Down payment (percentage)"
+msgstr "Polog (postotak)"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio_line__is_downpayment
+#: model:ir.model.fields,help:hotel.field_hotel_service_line__is_downpayment
+msgid ""
+"Down payments are made when creating invoices from a sales order. They are "
+"not copied when duplicating a sales order."
+msgstr ""
+"Polog se vrši prilikom izrade računa iz prodajnog naloga. Ne kopiraju se "
+"prilikom kopiranja prodajnog naloga."
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__duplicated_order_ids
+msgid "Duplicated Order"
+msgstr "Duplicirana narudžba"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_folio_form
+msgid "Duration"
+msgstr "Trajanje"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__duration_dummy
+msgid "Duration Dummy"
+msgstr "Prividno trajanje"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__duration
+msgid "Duration in Days"
+msgstr "Trajanje u danima"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_kanban
+msgid "Edit"
+msgstr "Uredi"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__effective_date
+msgid "Effective Date"
+msgstr "Efektivni datum"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_folio_report_wizard__date_end
+msgid "End Date"
+msgstr "Datum završetka"
+
+#. module: hotel
+#. odoo-python
+#: code:addons/hotel/wizard/hotel_wizard.py:0
+msgid "End date must be Greater than the Start date"
+msgstr "Završni datum mora biti veći od početnog datuma"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__tracking
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__tracking
+#: model:ir.model.fields,help:hotel.field_hotel_services__tracking
+msgid "Ensure the traceability of a storable product in your warehouse."
+msgstr "Osigurava sljedivost uskladištivog proizvoda u vašem skladištu."
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__expected_date
+msgid "Expected Date"
+msgstr "Očekivani datum"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__property_account_expense_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__property_account_expense_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__property_account_expense_categ_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__property_account_expense_categ_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__property_account_expense_categ_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__property_account_expense_id
+msgid "Expense Account"
+msgstr "Konto troška"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__validity_date
+msgid "Expiration"
+msgstr "Istek"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__extra_tax_data
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__extra_tax_data
+msgid "Extra Tax Data"
+msgstr "Dodatni porezni podaci"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__product_no_variant_attribute_value_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__product_no_variant_attribute_value_ids
+msgid "Extra Values"
+msgstr "Dodatne vrijednosti"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__is_favorite
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__is_favorite
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__is_favorite
+msgid "Favorite"
+msgstr "Omiljeni"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__fiscal_country_codes
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__fiscal_country_codes
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__fiscal_country_codes
+msgid "Fiscal Country Codes"
+msgstr "Fiskalni kodovi zemalja"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__fiscal_position_id
+msgid "Fiscal Position"
+msgstr "Fiskalna pozicija"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__fiscal_position_id
+msgid ""
+"Fiscal positions are used to adapt taxes and accounts for particular "
+"customers or sales orders/invoices.The default value comes from the "
+"customer."
+msgstr ""
+"Fiskalne pozicije koriste se za prilagođavanje poreza i računa za određene "
+"kupce ili prodajne naloge / račune. Zadana vrijednost dolazi od kupca."
+
+#. module: hotel
+#: model:ir.actions.act_window,name:hotel.open_hotel_floor_form_tree
+#: model:ir.model,name:hotel.model_hotel_floor
+#: model:ir.ui.menu,name:hotel.menu_open_hotel_floor_form_tree
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_form
+msgid "Floor"
+msgstr "Nivo"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_floor__name
+msgid "Floor Name"
+msgstr "Naziv nivoa"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__floor_id
+msgid "Floor No"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__folio_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__folio_id
+#: model:ir.ui.menu,name:hotel.menu_all_folio
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_folio_form
+msgid "Folio"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_folio_room_line__folio_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__name
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_folio_form
+msgid "Folio Number"
+msgstr ""
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_folio_wizard
+msgid "Folio Report"
+msgstr ""
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_form
+msgid "Folio Room Reservation Line"
+msgstr ""
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_form
+msgid "Folio Room Reservations"
+msgstr ""
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.hotel_folio_calendar_view
+msgid "Folios"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__message_follower_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__message_follower_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__message_follower_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__message_follower_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__message_follower_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__message_follower_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__message_follower_ids
+msgid "Followers"
+msgstr "Pratitelji"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__message_partner_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__message_partner_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__message_partner_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__message_partner_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__message_partner_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__message_partner_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Pratitelji (partneri)"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__activity_type_icon
+#: model:ir.model.fields,help:hotel.field_hotel_room__activity_type_icon
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__activity_type_icon
+#: model:ir.model.fields,help:hotel.field_hotel_services__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Font awesome ikona npr. fa-tasks"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__removal_strategy_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__removal_strategy_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__removal_strategy_id
+msgid "Force Removal Strategy"
+msgstr "Forsiraj strategiju uklanjanja"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__forecast_expected_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__forecast_expected_date
+msgid "Forecast Expected Date"
+msgstr "Predvidi očekivani datum"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__virtual_available
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__virtual_available
+#: model:ir.model.fields,help:hotel.field_hotel_services__virtual_available
+msgid ""
+"Forecast quantity (computed as Quantity On Hand - Outgoing + Incoming)\n"
+"In a context with a single Stock Location, this includes goods stored in this location, or any of its children.\n"
+"In a context with a single Warehouse, this includes goods stored in the Stock Location of this Warehouse, or any of its children.\n"
+"Otherwise, this includes goods stored in any Stock Location with 'internal' type."
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__virtual_available
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__virtual_available
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__virtual_available
+msgid "Forecasted Quantity"
+msgstr "Predviđena količina"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__free_qty_today
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__free_qty_today
+msgid "Free Qty Today"
+msgstr "Slobodna količina danas"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__free_qty
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__free_qty
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__free_qty
+msgid "Free To Use Quantity "
+msgstr "Slobodna količina za korištenje "
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__ser_checkin_date
+msgid "From Date"
+msgstr "Od datuma"
+
+#. module: hotel
+#: model:ir.actions.act_window,name:hotel.open_hotel_folio1_form_tree_all
+#: model:ir.ui.menu,name:hotel.menu_open_hotel_folio1_form_tree_all
+msgid "Generate Folio"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__sequence
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__sequence
+#: model:ir.model.fields,help:hotel.field_hotel_services__sequence
+msgid "Gives the sequence order when displaying a product list"
+msgstr "Određuje redoslijed slijeda pri prikazu popisa proizvoda"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio_line__product_type
+#: model:ir.model.fields,help:hotel.field_hotel_room__type
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__type
+#: model:ir.model.fields,help:hotel.field_hotel_service_line__product_type
+#: model:ir.model.fields,help:hotel.field_hotel_services__type
+msgid ""
+"Goods are tangible materials and merchandise you provide.\n"
+"A service is a non-material product you provide."
+msgstr ""
+"Roba su opipljivi materijali i roba koju pružate.\n"
+"Usluga je nematerijalni proizvod koji pružate."
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_folio_form
+msgid "Guest Name"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__has_active_pricelist
+msgid "Has Active Pricelist"
+msgstr "Ima aktivni cjenik"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__has_archived_products
+msgid "Has Archived Products"
+msgstr "Ima arhivirane proizvode"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__has_authorized_transaction_ids
+msgid "Has Authorized Transactions"
+msgstr "Ima autorizirane transakcije"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__show_update_fpos
+msgid "Has Fiscal Position Changed"
+msgstr "Ima promijenjenu fiskalnu poziciju"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__has_message
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__has_message
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__has_message
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__has_message
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__has_message
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__has_message
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__has_message
+msgid "Has Message"
+msgstr "Ima poruku"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__show_update_pricelist
+msgid "Has Pricelist Changed"
+msgstr "Je li promijenjen cjenik"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__show_json_popover
+msgid "Has late picking"
+msgstr "Ima zakašnjelu skladišnu operaciju"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_folio_form
+msgid "History"
+msgstr "Povijest"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_floor_form
+msgid "Hotel Floor"
+msgstr ""
+
+#. module: hotel
+#: model:ir.actions.report,name:hotel.report_hotel_management
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_folio_search
+msgid "Hotel Folio"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model,name:hotel.model_hotel_folio_line
+msgid "Hotel Folio Line"
+msgstr ""
+
+#. module: hotel
+#: model:ir.actions.act_window,name:hotel.hotel_folio_wizard
+#: model:ir.ui.menu,name:hotel.wizard_hotel_menu
+msgid "Hotel Folio Report"
+msgstr ""
+
+#. module: hotel
+#: model:ir.ui.menu,name:hotel.hotel_management_menu
+msgid "Hotel Management"
+msgstr ""
+
+#. module: hotel
+#: model:res.groups,name:hotel.group_hotel_manager
+msgid "Hotel Management / Manager"
+msgstr ""
+
+#. module: hotel
+#: model:res.groups,name:hotel.group_hotel_user
+msgid "Hotel Management / User"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__hotel_policy
+msgid "Hotel Policy"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model,name:hotel.model_hotel_room
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_form
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_search
+msgid "Hotel Room"
+msgstr ""
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_aenities_search
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_amenities_form
+msgid "Hotel Room Amenities"
+msgstr ""
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_amenities_type_form
+msgid "Hotel Room Amenities Type"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model,name:hotel.model_folio_room_line
+msgid "Hotel Room Reservation"
+msgstr ""
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_type_form
+msgid "Hotel Room Type"
+msgstr ""
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_services_form
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_services_search
+msgid "Hotel Services"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model,name:hotel.model_hotel_services
+msgid "Hotel Services and its charges"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__hotel_policy
+msgid ""
+"Hotel policy for payment that either the guest has to pay at booking time or"
+" check-in check-out time."
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__room_line_ids
+msgid "Hotel room reservation detail."
+msgstr ""
+
+#. module: hotel
+#: model:ir.model,name:hotel.model_hotel_service_line
+msgid "Hotel service line"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__service_line_ids
+msgid ""
+"Hotel services details provided to Customer and it will be included in the "
+"main Invoice."
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_account_move__id
+#: model:ir.model.fields,field_description:hotel.field_folio_report_wizard__id
+#: model:ir.model.fields,field_description:hotel.field_folio_room_line__id
+#: model:ir.model.fields,field_description:hotel.field_hotel_floor__id
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__id
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__id
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__id
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__id
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__id
+#: model:ir.model.fields,field_description:hotel.field_product_product__id
+#: model:ir.model.fields,field_description:hotel.field_report_hotel_report_hotel_folio__id
+#: model:ir.model.fields,field_description:hotel.field_res_company__id
+#: model:ir.model.fields,field_description:hotel.field_sale_advance_payment_inv__id
+msgid "ID"
+msgstr "ID"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__activity_exception_icon
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__activity_exception_icon
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__activity_exception_icon
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__activity_exception_icon
+msgid "Icon"
+msgstr "Ikona"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__activity_exception_icon
+#: model:ir.model.fields,help:hotel.field_hotel_room__activity_exception_icon
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__activity_exception_icon
+#: model:ir.model.fields,help:hotel.field_hotel_services__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Ikona koja označava iznimnu aktivnost."
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__message_needaction
+#: model:ir.model.fields,help:hotel.field_hotel_room__message_needaction
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__message_needaction
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities_type__message_needaction
+#: model:ir.model.fields,help:hotel.field_hotel_room_type__message_needaction
+#: model:ir.model.fields,help:hotel.field_hotel_service_type__message_needaction
+#: model:ir.model.fields,help:hotel.field_hotel_services__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Ako je označeno, nove poruke zahtijevaju vašu pažnju."
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__message_has_error
+#: model:ir.model.fields,help:hotel.field_hotel_room__message_has_error
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__message_has_error
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities_type__message_has_error
+#: model:ir.model.fields,help:hotel.field_hotel_room_type__message_has_error
+#: model:ir.model.fields,help:hotel.field_hotel_service_type__message_has_error
+#: model:ir.model.fields,help:hotel.field_hotel_services__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Ako je označeno, neke poruke imaju grešku u dostavi."
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities_type__anglo_saxon_accounting
+#: model:ir.model.fields,help:hotel.field_hotel_room_type__anglo_saxon_accounting
+#: model:ir.model.fields,help:hotel.field_hotel_service_type__anglo_saxon_accounting
+msgid ""
+"If checked, the product will be valued using the Anglo-Saxon accounting "
+"method."
+msgstr ""
+"Ako je označeno, proizvod će se vrednovati pomoću anglosaksonske "
+"računovodstvene metode."
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__lot_valuated
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__lot_valuated
+#: model:ir.model.fields,help:hotel.field_hotel_services__lot_valuated
+msgid "If checked, the valuation will be specific by Lot/Serial number."
+msgstr "Ako je označeno, vrednovanje će biti specifično po broju lota/serije."
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__journal_id
+msgid ""
+"If set, the SO will invoice in this journal; otherwise the sales journal "
+"with the lowest sequence is used."
+msgstr ""
+"Ako je postavljeno, prodajna narudžba će fakturirati u ovom dnevniku; inače "
+"se koristi prodajni dnevnik s najnižom sekvencom."
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__active
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__active
+#: model:ir.model.fields,help:hotel.field_hotel_services__active
+msgid ""
+"If unchecked, it will allow you to hide the product without removing it."
+msgstr "Ako je označeno omogućava sakrivanje proizvoda bez brisanja."
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__pricelist_id
+msgid "If you change the pricelist, only newly added lines will be affected."
+msgstr "Ako promijenite cjenik, to će utjecati samo na novo dodane stavke."
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__picking_policy
+msgid ""
+"If you deliver all products at once, the delivery order will be scheduled "
+"based on the greatest product lead time. Otherwise, it will be based on the "
+"shortest."
+msgstr ""
+"Ako sve proizvode isporučujete odjednom, dostavni nalog će biti zakazan "
+"prema najdužem vremenu isporuke proizvoda. U suprotnom, bit će zakazan prema"
+" najkraćem."
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__image_1920
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__image_1920
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__image_1920
+msgid "Image"
+msgstr "Slika"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__image_1024
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__image_1024
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__image_1024
+msgid "Image 1024"
+msgstr "Slika 1024"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__image_128
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__image_128
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__image_128
+msgid "Image 128"
+msgstr "Slika 128"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__image_256
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__image_256
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__image_256
+msgid "Image 256"
+msgstr "Slika 256"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__image_512
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__image_512
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__image_512
+msgid "Image 512"
+msgstr "Slika 512"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__property_account_income_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__property_account_income_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__property_account_income_categ_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__property_account_income_categ_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__property_account_income_categ_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__property_account_income_id
+msgid "Income Account"
+msgstr "Konto prihoda"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__incoming_qty
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__incoming_qty
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__incoming_qty
+msgid "Incoming"
+msgstr "Ulazna"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__incoterm
+msgid "Incoterm"
+msgstr "Incoterm"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__incoterm_location
+msgid "Incoterm Location"
+msgstr "Incoterm lokacija"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_amenities_form
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_form
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_services_form
+msgid "Information"
+msgstr "Informacija"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__default_code
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__default_code
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__default_code
+msgid "Internal Reference"
+msgstr "Interna oznaka"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__sale_warning_text
+msgid "Internal warning for the partner or the products as set by the user."
+msgstr ""
+"Interno upozorenje za partnera ili proizvode koje je postavio korisnik."
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__barcode
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__barcode
+#: model:ir.model.fields,help:hotel.field_hotel_services__barcode
+msgid "International Article Number used for product identification."
+msgstr "Interna šifra proizvoda koja se koristi za identifikaciju artikla."
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__incoterm
+msgid ""
+"International Commercial Terms are a series of predefined commercial terms "
+"used in international transactions."
+msgstr ""
+"Internacionalni komercijalni uvjeti su niz predefiniranih komercijalnih "
+"uvjeta koji se koriste za inozemne transakcije."
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__property_stock_inventory
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__property_stock_inventory
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__property_stock_inventory
+msgid "Inventory Location"
+msgstr "Lokacija inventara"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__property_valuation
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__property_valuation
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__property_valuation
+msgid "Inventory Valuation"
+msgstr "Vrednovanje zaliha"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__hotel_invoice_id
+msgid "Invoice"
+msgstr "Račun"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__partner_invoice_id
+msgid "Invoice Address"
+msgstr "Adresa za račun"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__invoice_count
+msgid "Invoice Count"
+msgstr "Broj računa"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__invoice_lines
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__invoice_lines
+msgid "Invoice Lines"
+msgstr "Stavke računa"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__invoice_status
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__invoice_status
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__invoice_status
+msgid "Invoice Status"
+msgstr "Stanje računa"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__qty_invoiced_at_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__qty_invoiced_at_date
+msgid "Invoiced"
+msgstr "Izdani računi"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__amount_invoiced
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__amount_invoiced
+msgid "Invoiced Amount"
+msgstr "Fakturirani iznos"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__qty_invoiced
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__qty_invoiced
+msgid "Invoiced Quantity"
+msgstr "Količina za koju je izdan račun"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__qty_invoiced_posted
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__qty_invoiced_posted
+msgid "Invoiced Quantity (posted)"
+msgstr "Fakturirana količina (knjižena)"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__invoice_ids
+msgid "Invoices"
+msgstr "Računi"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__journal_id
+msgid "Invoicing Journal"
+msgstr "Dnevnik fakturiranja"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__invoice_policy
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__invoice_policy
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__invoice_policy
+msgid "Invoicing Policy"
+msgstr "Politika izdavanja računa"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__iscategid
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__iscategid
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__iscategid
+#: model:ir.model.fields,field_description:hotel.field_product_product__iscategid
+msgid "Is Categ"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__is_dynamically_created
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__is_dynamically_created
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__is_dynamically_created
+msgid "Is Dynamically Created"
+msgstr "Dinamički kreirano"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__is_expired
+msgid "Is Expired"
+msgstr "Isteklo je"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__message_is_follower
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__message_is_follower
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__message_is_follower
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__message_is_follower
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__message_is_follower
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__message_is_follower
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__message_is_follower
+msgid "Is Follower"
+msgstr "Je pratitelj"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__is_in_selected_section_of_order
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__is_in_selected_section_of_order
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__is_in_selected_section_of_order
+msgid "Is In Selected Section Of Order"
+msgstr "Je u odabranoj sekciji narudžbe"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__is_mto
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__is_mto
+msgid "Is Mto"
+msgstr "Je izrada po narudžbi"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__is_product_archived
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__is_product_archived
+msgid "Is Product Archived"
+msgstr "Je proizvod arhiviran"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__is_product_variant
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__is_product_variant
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__is_product_variant
+msgid "Is Product Variant"
+msgstr "Je Varijanta proizvoda"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__is_reserved
+msgid "Is Reserved"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__isroom
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__isroom
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__isroom
+#: model:ir.model.fields,field_description:hotel.field_product_product__isroom
+msgid "Is Room"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__isservice
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__isservice
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__isservice
+#: model:ir.model.fields,field_description:hotel.field_product_product__isservice
+msgid "Is Service"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__has_configurable_attributes
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__has_configurable_attributes
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__has_configurable_attributes
+msgid "Is a configurable product"
+msgstr "Je konfigurabilan proizvod"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__is_downpayment
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__is_downpayment
+msgid "Is a down payment"
+msgstr "Je li polog"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__is_expense
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__is_expense
+msgid "Is expense"
+msgstr "Je li trošak"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__is_configurable_product
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__is_configurable_product
+msgid "Is the product configurable?"
+msgstr "Da li je proizvod konfigurabilan?"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio_line__is_expense
+#: model:ir.model.fields,help:hotel.field_hotel_service_line__is_expense
+msgid ""
+"Is true if the sales order line comes from an expense or a vendor bills"
+msgstr ""
+"Istina je ako stavka prodajnog naloga dolazi iz računa ili računa dobavljača"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__json_popover
+msgid "JSON data for the popover widget"
+msgstr "JSON podaci za popover widget"
+
+#. module: hotel
+#: model:ir.model,name:hotel.model_account_move
+msgid "Journal Entry"
+msgstr "Stavke temeljnice"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__property_account_income_id
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__property_account_income_id
+#: model:ir.model.fields,help:hotel.field_hotel_services__property_account_income_id
+msgid ""
+"Keep this field empty to use the default value from the product category."
+msgstr ""
+"Ostavite ovo polje prazno za korištenje zadane vrijednosti iz kategorije "
+"proizvoda."
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__property_account_expense_id
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__property_account_expense_id
+#: model:ir.model.fields,help:hotel.field_hotel_services__property_account_expense_id
+msgid ""
+"Keep this field empty to use the default value from the product category. If"
+" anglo-saxon accounting with automated valuation method is configured, the "
+"expense account on the product category will be used."
+msgstr ""
+"Ostavite polje prazno za korištenje zadane vrijednosti iz kategorije "
+"proizvoda. Ako je konfigurirano anglosaksonsko računovodstvo s automatskom "
+"metodom vrednovanja, koristit će se račun troškova za kategoriju proizvoda."
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_folio_report_wizard__write_uid
+#: model:ir.model.fields,field_description:hotel.field_folio_room_line__write_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_floor__write_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__write_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__write_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__write_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__write_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__write_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__write_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__write_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__write_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_folio_report_wizard__write_date
+#: model:ir.model.fields,field_description:hotel.field_folio_room_line__write_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_floor__write_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__write_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__write_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__write_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__write_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__write_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__write_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__write_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__write_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__late_availability
+msgid "Late Availability"
+msgstr "Zakašnjela dostupnost"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__customer_lead
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__customer_lead
+msgid "Lead Time"
+msgstr "Vrijeme isporuke"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__linked_line_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__linked_line_id
+msgid "Linked Order Line"
+msgstr "Povezana stavka narudžbe"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__linked_line_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__linked_line_ids
+msgid "Linked Order Lines"
+msgstr "Povezane stavke narudžbe"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__linked_virtual_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__linked_virtual_id
+msgid "Linked Virtual"
+msgstr "Povezani virtualno"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__room_amenities_ids
+msgid "List of room amenities."
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__location_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__location_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__location_id
+msgid "Location"
+msgstr "Lokacija"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__locked
+msgid "Locked"
+msgstr "Zaključano"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__locked
+msgid "Locked orders cannot be modified."
+msgstr "Zaključane narudžbe se ne mogu mijenjati."
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__lot_properties_definition
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__lot_properties_definition
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__lot_properties_definition
+msgid "Lot Properties"
+msgstr "Svojstva lota"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__service_type
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__service_type
+#: model:ir.model.fields,help:hotel.field_hotel_services__service_type
+msgid ""
+"Manually set quantities on order: Invoice based on the manually entered quantity, without creating an analytic account.\n"
+"Timesheets on contract: Invoice based on the tracked hours on the related timesheet.\n"
+"Create a task and track hours: Create a task on the sales order validation and track the work hours."
+msgstr ""
+"Ručno postavljanje količina po narudžbi: Račun na temelju ručno unesene količine, bez stvaranja analitičkog računa.\n"
+"Vremenski listovi po ugovoru: Račun na temelju praćenih sati na odgovarajućem vremenskom listu.\n"
+"Stvorite zadatak i pratite radno vrijeme: Stvorite zadatak na provjeri valjanosti prodajnog naloga i pratite radno vrijeme."
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__max_adult
+msgid "Max Adult"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__max_child
+msgid "Max Child"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__medium_id
+msgid "Medium"
+msgstr "Medij"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__message_has_error
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__message_has_error
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__message_has_error
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__message_has_error
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__message_has_error
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__message_has_error
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__message_has_error
+msgid "Message Delivery error"
+msgstr "Greška u dostavi poruke"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__message_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__message_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__message_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__message_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__message_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__message_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__message_ids
+msgid "Messages"
+msgstr "Poruke"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__qty_delivered_method
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__qty_delivered_method
+msgid "Method to update delivered qty"
+msgstr "Način ažuriranja isporučene količine"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__orderpoint_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__orderpoint_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__orderpoint_ids
+msgid "Minimum Stock Rules"
+msgstr "Pravila minimalnih zaliha"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__my_activity_date_deadline
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__my_activity_date_deadline
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__my_activity_date_deadline
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Rok moje aktivnosti"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__name
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__name
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__name
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__name
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__name
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__name
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_amenities_form
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_form
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_services_form
+msgid "Name"
+msgstr "Naziv"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__nbr_moves_in
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__nbr_moves_in
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__nbr_moves_in
+msgid "Nbr Moves In"
+msgstr "Br Ulaznih prenosa"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__nbr_moves_out
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__nbr_moves_out
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__nbr_moves_out
+msgid "Nbr Moves Out"
+msgstr "Br Izlaznih prenosa"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__activity_date_deadline
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__activity_date_deadline
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__activity_date_deadline
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Rok sljedeće aktivnosti"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__activity_summary
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__activity_summary
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__activity_summary
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__activity_summary
+msgid "Next Activity Summary"
+msgstr "Sažetak sljedeće aktivnosti"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__activity_type_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__activity_type_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__activity_type_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__activity_type_id
+msgid "Next Activity Type"
+msgstr "Vrsta sljedeće aktivnosti"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__next_serial
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__next_serial
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__next_serial
+msgid "Next Serial"
+msgstr "Sljedeći serijski"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__message_needaction_counter
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__message_needaction_counter
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__message_needaction_counter
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__message_needaction_counter
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__message_needaction_counter
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__message_needaction_counter
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Broj radnji"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio_line__customer_lead
+#: model:ir.model.fields,help:hotel.field_hotel_service_line__customer_lead
+msgid ""
+"Number of days between the order confirmation and the shipping of the "
+"products to the customer"
+msgstr "Broj dana između potvrde narudžbe i dostave proizvoda kupcu"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__duration
+msgid ""
+"Number of days which will automatically count from the check-in and check-"
+"out date. "
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__message_has_error_counter
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__message_has_error_counter
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__message_has_error_counter
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__message_has_error_counter
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__message_has_error_counter
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__message_has_error_counter
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__message_has_error_counter
+msgid "Number of errors"
+msgstr "Broj grešaka"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__nbr_moves_in
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__nbr_moves_in
+#: model:ir.model.fields,help:hotel.field_hotel_services__nbr_moves_in
+msgid "Number of incoming stock moves in the past 12 months"
+msgstr "Broj ulaznih skladišnih kretanja u posljednjih 12 mjeseci"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__message_needaction_counter
+#: model:ir.model.fields,help:hotel.field_hotel_room__message_needaction_counter
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__message_needaction_counter
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities_type__message_needaction_counter
+#: model:ir.model.fields,help:hotel.field_hotel_room_type__message_needaction_counter
+#: model:ir.model.fields,help:hotel.field_hotel_service_type__message_needaction_counter
+#: model:ir.model.fields,help:hotel.field_hotel_services__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Broj poruka koje zahtijevaju radnju"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__message_has_error_counter
+#: model:ir.model.fields,help:hotel.field_hotel_room__message_has_error_counter
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__message_has_error_counter
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities_type__message_has_error_counter
+#: model:ir.model.fields,help:hotel.field_hotel_room_type__message_has_error_counter
+#: model:ir.model.fields,help:hotel.field_hotel_service_type__message_has_error_counter
+#: model:ir.model.fields,help:hotel.field_hotel_services__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Broj poruka s greškom u dostavi"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__nbr_moves_out
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__nbr_moves_out
+#: model:ir.model.fields,help:hotel.field_hotel_services__nbr_moves_out
+msgid "Number of outgoing stock moves in the past 12 months"
+msgstr "Broj izlaznih skladišnih kretanja u posljednjih 12 mjeseci"
+
+#. module: hotel
+#: model:ir.model.fields.selection,name:hotel.selection__hotel_room__status__occupied
+msgid "Occupied"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields.selection,name:hotel.selection__hotel_folio__hotel_policy__prepaid
+msgid "On Booking"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields.selection,name:hotel.selection__hotel_folio__hotel_policy__manual
+msgid "On Check In"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields.selection,name:hotel.selection__hotel_folio__hotel_policy__picking
+msgid "On Checkout"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__require_payment
+msgid "Online payment"
+msgstr "Online plaćanje"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__require_signature
+msgid "Online signature"
+msgstr "Online potpis"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__is_optional
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__is_optional
+msgid "Optional Line"
+msgstr "Neobavezna stavka"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__optional_product_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__optional_product_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__optional_product_ids
+msgid "Optional Products"
+msgstr "Dodatni proizvodi"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__optional_product_ids
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__optional_product_ids
+#: model:ir.model.fields,help:hotel.field_hotel_services__optional_product_ids
+msgid ""
+"Optional Products are suggested whenever the customer hits *Add to Cart* "
+"(cross-sell strategy, e.g. for computers: warranty, software, etc.)."
+msgstr ""
+"Dodatni proizvodi predlažu se kad god kupac klikne na *Dodaj u košaricu* "
+"(strategija unakrsne prodaje, npr. za računala: jamstvo, softver itd.)."
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__pos_optional_product_ids
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__pos_optional_product_ids
+#: model:ir.model.fields,help:hotel.field_hotel_services__pos_optional_product_ids
+msgid ""
+"Optional products are suggested when customers add items to their cart "
+"(e.g., adding a burger suggests cold drinks or fries)."
+msgstr ""
+"Neobavezni proizvodi predlažu se kada kupci dodaju stavke u košaricu (npr. "
+"dodavanje burgera predlaže hladna pića ili pomfrit)."
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__order_id
+msgid "Order"
+msgstr "Narudžba"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_folio_search
+msgid "Order By Month"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__date_order
+msgid "Order Date"
+msgstr "Datum narudžbe"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__order_line_id
+msgid "Order Line"
+msgstr "Stavka naloga"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__order_line
+msgid "Order Lines"
+msgstr "Stavke narudžbe"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__order_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__order_id
+msgid "Order Reference"
+msgstr "Referenca naloga"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__state
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__state
+msgid "Order Status"
+msgstr "Status naloga"
+
+#. module: hotel
+#. odoo-python
+#: code:addons/hotel/models/hotel_folio.py:0
+msgid "Order id is not available"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__invoice_policy
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__invoice_policy
+#: model:ir.model.fields,help:hotel.field_hotel_services__invoice_policy
+msgid ""
+"Ordered Quantity: Invoice quantities ordered by the customer.\n"
+"Delivered Quantity: Invoice quantities delivered to the customer."
+msgstr ""
+"Naručena količina: Obračunaj količine naručene od kupca.\n"
+"Isporučena količina: Obračunaj količine isporučene kupcu."
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_folio_form
+msgid "Other data"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__outgoing_qty
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__outgoing_qty
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__outgoing_qty
+msgid "Outgoing"
+msgstr "Odlazno"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__pos_optional_product_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__pos_optional_product_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__pos_optional_product_ids
+msgid "POS Optional Products"
+msgstr "POS neobavezni proizvodi"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__pos_sequence
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__pos_sequence
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__pos_sequence
+msgid "POS Sequence"
+msgstr "POS sekvenca"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__uom_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__uom_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__uom_ids
+msgid "Packagings"
+msgstr "Pakiranja"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__parent_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__parent_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__parent_id
+msgid "Parent Category"
+msgstr "Nadređena kategorija"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__parent_path
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__parent_path
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__parent_path
+msgid "Parent Path"
+msgstr "Putanja nadređenih"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__parent_route_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__parent_route_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__parent_route_ids
+msgid "Parent Routes"
+msgstr "Nadređene rute"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__parent_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__parent_id
+msgid "Parent Section Line"
+msgstr "Stavka nadređenog odjeljka"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__partner_credit_warning
+msgid "Partner Credit Warning"
+msgstr "Upozorenje o kreditnoj sposobnosti partnera"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__preferred_payment_method_line_id
+msgid "Payment Method"
+msgstr "Način plaćanja"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__reference
+msgid "Payment Ref."
+msgstr "Referenca plaćanja"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__payment_term_id
+msgid "Payment Terms"
+msgstr "Uvjeti plaćanja"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__amount_paid
+msgid "Payment Transactions Amount"
+msgstr "Iznos transakcija plaćanja"
+
+#. module: hotel
+#: model:ir.ui.menu,name:hotel.hotel_report_menu
+msgid "Pdf Reports"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__pending_email_template_id
+msgid "Pending Email Template"
+msgstr "Predložak e-pošte na čekanju"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities_type__property_valuation
+#: model:ir.model.fields,help:hotel.field_hotel_room_type__property_valuation
+#: model:ir.model.fields,help:hotel.field_hotel_service_type__property_valuation
+msgid ""
+"Periodic: The accounting entries are suggested manually in the inventory valuation report.\n"
+"        Perpetual: An accounting entry is automatically created to value the inventory when a product is billed or invoiced.\n"
+"        "
+msgstr ""
+"Periodički: računovodstvene stavke predlažu se ručno u izvještaju vrednovanja zaliha.\n"
+"        Kontinuirano: računovodstvena stavka automatski se kreira za vrednovanje zaliha kada se proizvod fakturira.\n"
+"        "
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__pos_categ_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__pos_categ_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__pos_categ_ids
+msgid "Point of Sale Category"
+msgstr "Kategorije POS-a"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__access_url
+msgid "Portal Access URL"
+msgstr "URL za pristup portalu"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__prepayment_percent
+msgid "Prepayment percentage"
+msgstr "Postotak plaćanja unaprijed"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__property_price_difference_account_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__property_price_difference_account_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__property_price_difference_account_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__property_price_difference_account_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__property_price_difference_account_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__property_price_difference_account_id
+msgid "Price Difference Account"
+msgstr "Konto razlike u cijeni"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__price_reduce_taxexcl
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__price_reduce_taxexcl
+msgid "Price Reduce Tax excl"
+msgstr "Umanji cijenu bez poreza"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__price_reduce_taxinc
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__price_reduce_taxinc
+msgid "Price Reduce Tax incl"
+msgstr "Sniženje cijene s PDV-om"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__list_price
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__list_price
+#: model:ir.model.fields,help:hotel.field_hotel_services__list_price
+msgid "Price at which the product is sold to customers."
+msgstr "Cijena po kojoj se proizvod prodaje kupcima."
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__pricelist_id
+msgid "Pricelist"
+msgstr "Cjenik"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__pricelist_item_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__pricelist_item_id
+msgid "Pricelist Item"
+msgstr "Stavka cjenika"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__pricelist_rule_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__pricelist_rule_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__pricelist_rule_ids
+msgid "Pricelist Rules"
+msgstr "Pravila cjenika"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_folio_wizard
+msgid "Print Folio"
+msgstr ""
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_amenities_form
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_form
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_services_form
+msgid "Procurement"
+msgstr "Nabava"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__product_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__product_variant_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__product_variant_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__product_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__product_variant_id
+msgid "Product"
+msgstr "Proizvod"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__attribute_line_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__attribute_line_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__attribute_line_ids
+msgid "Product Attributes"
+msgstr "Značajke proizvoda"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__product_catalog_product_is_in_sale_order
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__product_catalog_product_is_in_sale_order
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__product_catalog_product_is_in_sale_order
+msgid "Product Catalog Product Is In Sale Order"
+msgstr "Katalog proizvoda Proizvod je u prodaji"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__categ_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__categ_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__categ_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__product_categ_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__product_categ_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__categ_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__product_categ_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__categ_id
+msgid "Product Category"
+msgstr "Kategorija proizvoda"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__public_description
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__public_description
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__public_description
+msgid "Product Description"
+msgstr "Opis proizvoda"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__product_manager
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__product_manager
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__product_manager
+msgid "Product Manager"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__product_properties_definition
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__product_properties_definition
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__product_properties_definition
+msgid "Product Properties"
+msgstr "Svojstva proizvoda"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__product_template_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__product_tmpl_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__product_tmpl_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__product_template_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__product_tmpl_id
+msgid "Product Template"
+msgstr "Predložak proizvoda"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__product_tooltip
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__product_tooltip
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__product_tooltip
+msgid "Product Tooltip"
+msgstr "Pomoćni tekst proizvoda"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__product_type
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__type
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__type
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__product_type
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__type
+msgid "Product Type"
+msgstr "Tip artikla"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__product_uom_readonly
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__product_uom_readonly
+msgid "Product Uom Readonly"
+msgstr "Jedinica mjere proizvoda samo za čitanje"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__import_attribute_values
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__import_attribute_values
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__import_attribute_values
+msgid "Product Values"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model,name:hotel.model_product_product
+msgid "Product Variant"
+msgstr "Varijanta proizvoda"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__product_id
+msgid "Product_id"
+msgstr "Product_id"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__property_stock_production
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__property_stock_production
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__property_stock_production
+msgid "Production Location"
+msgstr "Lokacija proizvodnje"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__product_variant_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__product_variant_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__product_variant_ids
+msgid "Products"
+msgstr "Proizvodi"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__project_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__project_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__project_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__project_id
+msgid "Project"
+msgstr "Projekt"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__project_account_id
+msgid "Project Account"
+msgstr "Konto projekta"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__project_template_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__project_template_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__project_template_id
+msgid "Project Template"
+msgstr "Predložak projekta"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__product_properties
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__product_properties
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__product_properties
+msgid "Properties"
+msgstr "Svojstva"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_res_company__additional_hours
+msgid ""
+"Provide the min hours value for                                       check "
+"in, checkout days, whatever the                                       hours "
+"will be provided here based on                                       that "
+"extra days will be calculated."
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__purchase_ok
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__purchase_ok
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__purchase_ok
+msgid "Purchase"
+msgstr "Nabava"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__description_purchase
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__description_purchase
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__description_purchase
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_amenities_form
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_services_form
+msgid "Purchase Description"
+msgstr "Opis nabave"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__supplier_taxes_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__supplier_taxes_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__supplier_taxes_id
+msgid "Purchase Taxes"
+msgstr "Porezi pri nabavi"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__putaway_rule_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__putaway_rule_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__putaway_rule_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__putaway_rule_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__putaway_rule_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__putaway_rule_ids
+msgid "Putaway Rules"
+msgstr "Pravila odlaganja"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__qty_available_today
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__qty_available_today
+msgid "Qty Available Today"
+msgstr "Kol. dostupna danas"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__qty_to_deliver
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__qty_to_deliver
+msgid "Qty To Deliver"
+msgstr "Kol za isporučiti"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__product_uom_qty
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__product_uom_qty
+msgid "Quantity"
+msgstr "Količina"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__qty_available
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__qty_available
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__qty_available
+msgid "Quantity On Hand"
+msgstr "Fizička zaliha"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__qty_to_invoice
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__qty_to_invoice
+msgid "Quantity To Invoice"
+msgstr "Količina za naplatu"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__incoming_qty
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__incoming_qty
+#: model:ir.model.fields,help:hotel.field_hotel_services__incoming_qty
+msgid ""
+"Quantity of planned incoming products.\n"
+"In a context with a single Stock Location, this includes goods arriving to this Location, or any of its children.\n"
+"In a context with a single Warehouse, this includes goods arriving to the Stock Location of this Warehouse, or any of its children.\n"
+"Otherwise, this includes goods arriving to any Stock Location with 'internal' type."
+msgstr ""
+"Količina planiranih ulaznih proizvoda.\n"
+"U kontekstu s jednom skladišnom lokacijom, ovo uključuje robu koja stiže na ovu lokaciju ili bilo koju od njezinih podređenih.\n"
+"U kontekstu s jednim skladištem, ovo uključuje robu koja stiže na skladišnu lokaciju ovog skladišta ili bilo koju od njezinih podređenih.\n"
+"Inače, ovo uključuje robu koja stiže na bilo koju skladišnu lokaciju s tipom 'interna'."
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__outgoing_qty
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__outgoing_qty
+#: model:ir.model.fields,help:hotel.field_hotel_services__outgoing_qty
+msgid ""
+"Quantity of planned outgoing products.\n"
+"In a context with a single Stock Location, this includes goods leaving this Location, or any of its children.\n"
+"In a context with a single Warehouse, this includes goods leaving the Stock Location of this Warehouse, or any of its children.\n"
+"Otherwise, this includes goods leaving any Stock Location with 'internal' type."
+msgstr ""
+"Količina planiranih izlaznih proizvoda.\n"
+"U kontekstu s jednom skladišnom lokacijom, ovo uključuje robu koja napušta ovu lokaciju ili bilo koju od njezinih podređenih.\n"
+"U kontekstu s jednim skladištem, ovo uključuje robu koja napušta skladišnu lokaciju ovog skladišta ili bilo koju od njezinih podređenih.\n"
+"Inače, ovo uključuje robu koja napušta bilo koju skladišnu lokaciju s tipom 'interna'."
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__sale_order_template_id
+msgid "Quotation Template"
+msgstr "Predložak ponude"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_kanban
+msgid "Rate:"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__rating_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__rating_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__rating_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__rating_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__rating_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__rating_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__rating_ids
+msgid "Ratings"
+msgstr "Ocjene"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__expense_policy
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__expense_policy
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__expense_policy
+msgid "Re-Invoice Costs"
+msgstr "Troškovi ponovnog fakturiranja"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__visible_expense_policy
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__visible_expense_policy
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__visible_expense_policy
+msgid "Re-Invoice Policy visible"
+msgstr "Politika ponovnog fakturiranja vidljiva"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__code
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__code
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__code
+msgid "Reference"
+msgstr "Referenca"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__origin
+msgid "Reference of the document that generated this sales order request"
+msgstr ""
+"Referenca dokumenta koji je generirao ovaj zahtjev za prodajnu narudžbu"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__stock_reference_ids
+msgid "References"
+msgstr "Reference"
+
+#. module: hotel
+#: model:ir.model.fields.selection,name:hotel.selection__sale_advance_payment_inv__advance_payment_method__delivered
+msgid "Regular invoice"
+msgstr "Normalni račun"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_folio_form
+msgid "Related invoices"
+msgstr ""
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_folio_form
+msgid "Rent(UOM)"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__reordering_max_qty
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__reordering_max_qty
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__reordering_max_qty
+msgid "Reordering Max Qty"
+msgstr "Maks. količina ponovne narudžbe"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__reordering_min_qty
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__reordering_min_qty
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__reordering_min_qty
+msgid "Reordering Min Qty"
+msgstr "Min. količina ponovne narudžbe"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__nbr_reordering_rules
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__nbr_reordering_rules
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__nbr_reordering_rules
+msgid "Reordering Rules"
+msgstr "Pravila ponovnog naručivanja"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__require_payment
+msgid "Request a online payment from the customer to confirm the order."
+msgstr "Zatražite online plaćanje od kupca kako biste potvrdili narudžbu."
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__require_signature
+msgid "Request a online signature from the customer to confirm the order."
+msgstr "Zatražite online potpis od kupca kako biste potvrdili narudžbu."
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities_type__packaging_reserve_method
+#: model:ir.model.fields,help:hotel.field_hotel_room_type__packaging_reserve_method
+#: model:ir.model.fields,help:hotel.field_hotel_service_type__packaging_reserve_method
+msgid ""
+"Reserve Only Full Packagings: will not reserve partial packagings. If customer orders 2 pallets of 1000 units each and you only have 1600 in stock, then only 1000 will be reserved\n"
+"Reserve Partial Packagings: allow reserving partial packagings. If customer orders 2 pallets of 1000 units each and you only have 1600 in stock, then 1600 will be reserved"
+msgstr ""
+"Rezerviraj samo puna pakiranja: neće rezervirati djelomična pakiranja. Ako kupac naruči 2 palete od po 1000 jedinica, a Vi imate samo 1600 na zalihi, tada će biti rezervirano samo 1000\n"
+"Rezerviraj djelomična pakiranja: dozvoljava rezerviranje djelomičnih pakiranja. Ako kupac naruči 2 palete od po 1000 jedinica, a Vi imate samo 1600 na zalihi, tada će biti rezervirano 1600"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__packaging_reserve_method
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__packaging_reserve_method
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__packaging_reserve_method
+msgid "Reserve Packagings"
+msgstr "Rezervirana pakiranja"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_search
+msgid "Reserved"
+msgstr "Rezervirano"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__responsible_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__responsible_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__responsible_id
+msgid "Responsible"
+msgstr "Odgovoran"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__activity_user_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__activity_user_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__activity_user_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__activity_user_id
+msgid "Responsible User"
+msgstr "Odgovorni korisnik"
+
+#. module: hotel
+#: model:ir.actions.act_window,name:hotel.action_hotel_room_form
+#: model:ir.model.fields,field_description:hotel.field_folio_room_line__room_id
+#: model:ir.ui.menu,name:hotel.menu_hotel_room
+msgid "Room"
+msgstr "Soba"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__room_amenities_ids
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_form
+msgid "Room Amenities"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__product_id
+msgid "Room Amenities Product"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__room_categ_id
+msgid "Room Category"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__child_ids
+msgid "Room Child Categories"
+msgstr ""
+
+#. module: hotel
+#. odoo-python
+#: code:addons/hotel/models/hotel_folio.py:0
+msgid ""
+"Room Duplicate Exceeded!\n"
+"                                You cannot book the same room '%s'\n"
+"                                twice with overlapping dates."
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__room_line_ids
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_folio_form
+msgid "Room Line"
+msgstr ""
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_folio_form
+msgid "Room Lines"
+msgstr ""
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_form
+msgid "Room Manager"
+msgstr ""
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_folio_form
+msgid "Room No"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__room_line_ids
+msgid "Room Reservation Line"
+msgstr ""
+
+#. module: hotel
+#: model:ir.actions.act_window,name:hotel.open_hotel_room_type_form_tree
+#: model:ir.model,name:hotel.model_hotel_room_type
+msgid "Room Type"
+msgstr ""
+
+#. module: hotel
+#: model:ir.ui.menu,name:hotel.menu_open_hotel_room_type_form_tree
+msgid "Room Types"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model,name:hotel.model_hotel_room_amenities
+msgid "Room amenities"
+msgstr ""
+
+#. module: hotel
+#. odoo-python
+#: code:addons/hotel/models/hotel_room.py:0
+msgid "Room capacity must be more than 0"
+msgstr ""
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_form
+msgid "Room line"
+msgstr ""
+
+#. module: hotel
+#. odoo-python
+#: code:addons/hotel/models/hotel_folio_line.py:0
+msgid "Room line Check In Date Should be less than the Check Out Date!"
+msgstr ""
+
+#. module: hotel
+#. odoo-python
+#: code:addons/hotel/models/hotel_folio_line.py:0
+msgid "Room line check in date should be greater than the current date."
+msgstr ""
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_search
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_tree
+msgid "Room rate"
+msgstr ""
+
+#. module: hotel
+#: model:ir.ui.menu,name:hotel.menu_open_hotel_room_form
+msgid "Rooms"
+msgstr "Sobe"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__route_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__route_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__route_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__route_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__route_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__route_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__route_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__route_ids
+msgid "Routes"
+msgstr "Rute"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__has_available_route_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__has_available_route_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__has_available_route_ids
+msgid "Routes can be selected on this product"
+msgstr "Rute se mogu odabrati na ovom proizvodu"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_amenities_form
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_services_form
+msgid "Sale Description"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__sale_line_warn_msg
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__sale_line_warn_msg
+msgid "Sale Line Warn Msg"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__sale_warning_text
+msgid "Sale Warning"
+msgstr "Upozorenje o prodaji"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__sale_ok
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__sale_ok
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__sale_ok
+msgid "Sales"
+msgstr "Prodaja"
+
+#. module: hotel
+#: model:ir.model,name:hotel.model_sale_advance_payment_inv
+msgid "Sales Advance Payment Invoice"
+msgstr "Račun za predujam"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__description_sale
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__description_sale
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__description_sale
+msgid "Sales Description"
+msgstr "Opis prodaje"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__sale_line_warn_msg
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__sale_line_warn_msg
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__sale_line_warn_msg
+msgid "Sales Order Line Warning"
+msgstr "Upozorenje retka prodajnog naloga"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__list_price
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__list_price
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__list_price
+msgid "Sales Price"
+msgstr "Prodajna cijena"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__taxes_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__taxes_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__taxes_id
+msgid "Sales Taxes"
+msgstr "Prodajni porezi"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__team_id
+msgid "Sales Team"
+msgstr "Prodajni tim"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__user_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__salesman_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__salesman_id
+msgid "Salesperson"
+msgstr "Prodavač"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__lst_price
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__lst_price
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__lst_price
+msgid "Sales Price"
+msgstr "Prodajna cijena"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__scheduled_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__scheduled_date
+msgid "Scheduled Date"
+msgstr "Planirani datum"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__access_token
+msgid "Security Token"
+msgstr "Sigurnosni token"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__selected_combo_items
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__selected_combo_items
+msgid "Selected Combo Items"
+msgstr "Odabrane kombinirane stavke"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__sequence
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__sequence
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__sequence
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__sequence
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__sequence
+msgid "Sequence"
+msgstr "Sekvenca"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__lot_sequence_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__lot_sequence_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__lot_sequence_id
+msgid "Serial/Lot Numbers Sequence"
+msgstr "Sekvenca serijskih/lot brojeva"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__service_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__service_categ_id
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_services_form
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_services_search
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_services_tree
+msgid "Service Category"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__child_ids
+msgid "Service Child Categories"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__service_policy
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__service_policy
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__service_policy
+msgid "Service Invoicing Policy"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__service_line_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__service_line_id
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_folio_form
+msgid "Service Line"
+msgstr ""
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_folio_form
+msgid "Service Lines"
+msgstr ""
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_services_form
+msgid "Service Manager"
+msgstr ""
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_service_type_form
+msgid "Service Name"
+msgstr "Naziv usluge"
+
+#. module: hotel
+#: model:ir.actions.act_window,name:hotel.open_hotel_service_type_form_tree
+#: model:ir.model,name:hotel.model_hotel_service_type
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_service_type_form
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_services_form
+msgid "Service Type"
+msgstr "Tip usluge"
+
+#. module: hotel
+#: model:ir.ui.menu,name:hotel.menu_open_hotel_service_type_form_tree
+msgid "Service Types"
+msgstr "Tipovi servisa"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_services_search
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_services_tree
+msgid "Service rate"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__product_id
+msgid "Service_id"
+msgstr "Service_id"
+
+#. module: hotel
+#: model:ir.actions.act_window,name:hotel.action_hotel_services_form
+#: model:ir.ui.menu,name:hotel.menu_hotel_service
+#: model:ir.ui.menu,name:hotel.menu_open_hotel_services_form
+msgid "Services"
+msgstr "Usluge"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities_type__removal_strategy_id
+#: model:ir.model.fields,help:hotel.field_hotel_room_type__removal_strategy_id
+#: model:ir.model.fields,help:hotel.field_hotel_service_type__removal_strategy_id
+msgid ""
+"Set a specific removal strategy that will be used regardless of the source location for this product category.\n"
+"\n"
+"FIFO: products/lots that were stocked first will be moved out first.\n"
+"LIFO: products/lots that were stocked last will be moved out first.\n"
+"Closest location: products/lots closest to the target location will be moved out first.\n"
+"FEFO: products/lots with the closest removal date will be moved out first (the availability of this method depends on the \"Expiration Dates\" setting).\n"
+"Least Packages: FIFO but with the least number of packages possible when there are several packages containing the same product."
+msgstr ""
+"Postavite specifičnu strategiju uklanjanja koja će se koristiti neovisno o izvorišnoj lokaciji za ovu kategoriju proizvoda.\n"
+"\n"
+"FIFO: proizvodi/lotovi koji su prvi uskladišteni prvi će biti izdani.\n"
+"LIFO: proizvodi/lotovi koji su posljednji uskladišteni prvi će biti izdani.\n"
+"Najbliža lokacija: proizvodi/lotovi najbliži ciljnoj lokaciji prvi će biti izdani.\n"
+"FEFO: proizvodi/lotovi s najbližim datumom uklanjanja prvi će biti izdani (dostupnost ove metode ovisi o postavci \"Datumi isteka\").\n"
+"Najmanje paketa: FIFO, ali s najmanjim mogućim brojem paketa kad postoji nekoliko paketa s istim proizvodom."
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_folio_form
+msgid "Set to Draft"
+msgstr "Postavi na nacrt"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__picking_policy
+msgid "Shipping Policy"
+msgstr "Način otpreme"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__show_forecasted_qty_status_button
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__show_forecasted_qty_status_button
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__show_forecasted_qty_status_button
+msgid "Show Forecasted Qty Status Button"
+msgstr "Prikaži gumb statusa predviđene količine"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__show_on_hand_qty_status_button
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__show_on_hand_qty_status_button
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__show_on_hand_qty_status_button
+msgid "Show On Hand Qty Status Button"
+msgstr "Prikaži gumb statusa količine na stanju"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__show_qty_update_button
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__show_qty_update_button
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__show_qty_update_button
+msgid "Show Qty Update Button"
+msgstr "Prikaži gumb ažuriranja količine"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__signature
+msgid "Signature"
+msgstr "Potpis"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__signed_by
+msgid "Signed By"
+msgstr "Potpisao"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__signed_on
+msgid "Signed On"
+msgstr "Potpisano"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__sales_count
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__sales_count
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__sales_count
+msgid "Sold"
+msgstr "Prodano"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__source_id
+msgid "Source"
+msgstr "Izvor"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__origin
+msgid "Source Document"
+msgstr "Izvorni dokument"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities_type__property_cost_method
+#: model:ir.model.fields,help:hotel.field_hotel_room_type__property_cost_method
+#: model:ir.model.fields,help:hotel.field_hotel_service_type__property_cost_method
+msgid ""
+"Standard Price: The products are valued at their standard cost defined on the product.\n"
+"        Average Cost (AVCO): The products are valued at weighted average cost.\n"
+"        First In First Out (FIFO): The products are valued supposing those that enter the company first will also leave it first.\n"
+"        "
+msgstr ""
+"Standardna cijena: proizvodi se vrednuju prema svojoj standardnoj cijeni definiranoj na proizvodu.\n"
+"        Prosječna cijena (AVCO): proizvodi se vrednuju prema ponderiranoj prosječnoj cijeni.\n"
+"        Prvi ulaz prvi izlaz (FIFO): proizvodi se vrednuju pretpostavljajući da će oni koji prvi uđu u tvrtku i prvi izaći.\n"
+"        "
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_folio_report_wizard__date_start
+msgid "Start Date"
+msgstr "Datum početka"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__state
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__status
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_form
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_search
+msgid "Status"
+msgstr "Status"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__activity_state
+#: model:ir.model.fields,help:hotel.field_hotel_room__activity_state
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__activity_state
+#: model:ir.model.fields,help:hotel.field_hotel_services__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Status na temelju aktivnosti\n"
+"Kašnjenje: rok je već prošao\n"
+"Danas: datum aktivnosti je danas\n"
+"Planirano: buduće aktivnosti."
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_kanban
+msgid "Status:"
+msgstr "Status:"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__property_stock_journal
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__property_stock_journal
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__property_stock_journal
+msgid "Stock Journal"
+msgstr "Dnevnik zalihe"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__stock_move_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__stock_move_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__stock_move_ids
+msgid "Stock Move"
+msgstr "Skladišni prijenos"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__move_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__move_ids
+msgid "Stock Moves"
+msgstr "Skladišni prijenosi"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__stock_quant_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__stock_quant_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__stock_quant_ids
+msgid "Stock Quant"
+msgstr "Skladišni kvant"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__property_stock_valuation_account_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__property_stock_valuation_account_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__property_stock_valuation_account_id
+msgid "Stock Valuation Account"
+msgstr "Konto procjene zaliha"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__account_stock_variation_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__account_stock_variation_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__account_stock_variation_id
+msgid "Stock Variation Account"
+msgstr "Konto varijacije zaliha"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__storage_category_capacity_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__storage_category_capacity_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__storage_category_capacity_ids
+msgid "Storage Category Capacity"
+msgstr "Kapacitet kategorije skladišta"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__price_subtotal
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__price_subtotal
+msgid "Subtotal"
+msgstr "Podzbroj"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__amount_paid
+msgid ""
+"Sum of transactions made in through the online payment form that are in the "
+"state 'done' or 'authorized' and linked to this order."
+msgstr ""
+"Zbroj transakcija izvršenih putem online obrasca za plaćanje koje su u "
+"statusu 'završeno' ili 'odobreno' i povezane su s ovom narudžbom."
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_services_form
+msgid "Suplliers"
+msgstr ""
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_amenities_form
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_form
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_services_form
+msgid "Supplier Taxes"
+msgstr ""
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_amenities_form
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_form
+msgid "Suppliers"
+msgstr "Dobavljači"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__tag_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__product_tag_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__product_tag_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__product_tag_ids
+msgid "Tags"
+msgstr "Oznake"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__account_tag_ids
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__account_tag_ids
+#: model:ir.model.fields,help:hotel.field_hotel_services__account_tag_ids
+msgid ""
+"Tags to be set on the base and tax journal items created for this product."
+msgstr ""
+"Oznake koje se postavljaju na osnovne i porezne stavke dnevnika stvorene za "
+"ovaj proizvod."
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__task_template_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__task_template_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__task_template_id
+msgid "Task Template"
+msgstr "Predložak zadatka"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__tax_calculation_rounding_method
+msgid "Tax Calculation Rounding Method"
+msgstr "Metoda zaokruživanja prilikom izračuna poreza"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__tax_country_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__tax_country_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__tax_country_id
+msgid "Tax Country"
+msgstr "Država poreza"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__tax_string
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__tax_string
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__tax_string
+msgid "Tax String"
+msgstr "Niz poreza"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__tax_totals
+msgid "Tax Totals"
+msgstr "Ukupni porezi"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__tax_calculation_rounding_method
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__tax_calculation_rounding_method
+msgid "Tax calculation rounding method"
+msgstr "Metoda zaokruživanja izračuna poreza"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__amount_tax
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__tax_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__tax_ids
+msgid "Taxes"
+msgstr "Porezi"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__lot_sequence_id
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__lot_sequence_id
+#: model:ir.model.fields,help:hotel.field_hotel_services__lot_sequence_id
+msgid ""
+"Technical Field: The Ir.Sequence record that is used to generate serial/lot "
+"numbers for this product"
+msgstr ""
+"Tehničko polje: zapis Ir.Sequence koji se koristi za generiranje "
+"serijskih/lot brojeva za ovaj proizvod"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__technical_price_unit
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__technical_price_unit
+msgid "Technical Price Unit"
+msgstr "Jedinica tehničke cijene"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__company_currency_id
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__company_currency_id
+#: model:ir.model.fields,help:hotel.field_hotel_services__company_currency_id
+msgid ""
+"Technical field to correctly show the currently selected company's currency "
+"that corresponds to the totaled value of the product's valuation layers"
+msgstr ""
+"Tehničko polje za ispravan prikaz valute trenutno odabrane tvrtke koja "
+"odgovara ukupnoj vrijednosti slojeva vrednovanja proizvoda"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__terms_type
+msgid "Terms & Conditions format"
+msgstr "Format uvjeta i odredbi"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__note
+msgid "Terms and conditions"
+msgstr "Uvijeti o korištenju"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__country_code
+msgid ""
+"The ISO country code in two chars. \n"
+"You can use this field for quick search."
+msgstr ""
+"ISO oznaka države u dva slova.\n"
+"Možete koristiti za brzo pretraživanje."
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities_type__property_account_expense_categ_id
+#: model:ir.model.fields,help:hotel.field_hotel_room_type__property_account_expense_categ_id
+#: model:ir.model.fields,help:hotel.field_hotel_service_type__property_account_expense_categ_id
+msgid ""
+"The expense is accounted for when a vendor bill is validated, except in "
+"anglo-saxon accounting with perpetual inventory valuation in which case the "
+"expense (Cost of Goods Sold account) is recognized at the customer invoice "
+"validation."
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities_type__product_count
+#: model:ir.model.fields,help:hotel.field_hotel_room_type__product_count
+#: model:ir.model.fields,help:hotel.field_hotel_service_type__product_count
+msgid ""
+"The number of products under this category (Does not consider the children "
+"categories)"
+msgstr "Broj proizvoda u ovoj kategoriji (ne ubraja podređene kategorije)"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__reference
+msgid "The payment communication of this sale order."
+msgstr "Obavijest o plaćanju ove narudžbenice."
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__prepayment_percent
+msgid ""
+"The percentage of the amount needed that must be paid by the customer to "
+"confirm the order."
+msgstr ""
+"Postotak potrebnog iznosa koji kupac mora platiti za potvrdu narudžbe."
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__lst_price
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__lst_price
+#: model:ir.model.fields,help:hotel.field_hotel_services__lst_price
+msgid ""
+"The sale price is managed from the product template. Click on the 'Configure"
+" Variants' button to set the extra attribute prices."
+msgstr ""
+"Prodajnom cijenom upravlja se od predloška proizvoda. Kliknite gumb "
+"\"Konfiguriraj varijante\" da biste postavili cijene dodatnih atributa."
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities_type__property_account_income_categ_id
+#: model:ir.model.fields,help:hotel.field_hotel_room_type__property_account_income_categ_id
+#: model:ir.model.fields,help:hotel.field_hotel_service_type__property_account_income_categ_id
+msgid "This account will be used when validating a customer invoice."
+msgstr "Ovaj će se račun koristiti prilikom provjere fakture kupca."
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__campaign_id
+msgid ""
+"This is a name that helps you keep track of your different campaign efforts,"
+" e.g. Fall_Drive, Christmas_Special"
+msgstr ""
+"Ovo je naziv koji vam pomaže pratiti vaše različite kampanje, npr. "
+"Jesenski_pogon, Božićni_posebni"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__commitment_date
+msgid ""
+"This is the delivery date promised to the customer. If set, the delivery "
+"order will be scheduled based on this date rather than product lead times."
+msgstr ""
+"Ovo je datum isporuke koji je obećan kupcu. Ako je postavljeno, nalog za "
+"isporuku bit će zakazan na temelju ovog datuma, a ne vremena isporuke "
+"proizvoda."
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__medium_id
+msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
+msgstr "Ovo je način isporuke, na pr. Razglednica, e-pošta ili natpisni oglas"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__source_id
+msgid ""
+"This is the source of the link, e.g. Search Engine, another domain, or name "
+"of email list"
+msgstr ""
+"Ovo je izvor poveznice, npr. Tražilica, druga domena ili naziv popisa "
+"e-adresa"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__price_extra
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__price_extra
+#: model:ir.model.fields,help:hotel.field_hotel_services__price_extra
+msgid "This is the sum of the extra price of all attributes"
+msgstr "Ovo je zbroj dodatnih cijena svih atributa"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__property_stock_production
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__property_stock_production
+#: model:ir.model.fields,help:hotel.field_hotel_services__property_stock_production
+msgid ""
+"This stock location will be used, instead of the default one, as the source "
+"location for stock moves generated by manufacturing orders."
+msgstr ""
+"Ova će se skladišna lokacija koristiti umjesto zadane kao izvorišna lokacija"
+" za skladišna kretanja generirana radnim nalozima."
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__property_stock_inventory
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__property_stock_inventory
+#: model:ir.model.fields,help:hotel.field_hotel_services__property_stock_inventory
+msgid ""
+"This stock location will be used, instead of the default one, as the source "
+"location for stock moves generated when you do an inventory."
+msgstr ""
+"Ova će se lokacija koristiti, umjesto predefinirane, kao odredišna lokacija "
+"za skladišne prijenose koji se generiraju prilikom izrade inventure."
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__responsible_id
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__responsible_id
+#: model:ir.model.fields,help:hotel.field_hotel_services__responsible_id
+msgid ""
+"This user will be responsible of the next activities related to logistic "
+"operations for this product."
+msgstr ""
+"Ovaj korisnik bit će odgovoran za sljedeće aktivnosti povezane s logističkim"
+" operacijama za ovaj proizvod."
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__ser_checkout_date
+msgid "To Date"
+msgstr "Do datuma"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__to_weight
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__to_weight
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__to_weight
+msgid "To Weigh With Scale"
+msgstr "Izvagati vagom"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__amount_total
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__price_total
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__price_total
+msgid "Total"
+msgstr "Ukupno"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.report_hotel_folio
+msgid "Total Collection"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__price_tax
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__price_tax
+msgid "Total Tax"
+msgstr "Ukupni porez"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__total_value
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__total_value
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__total_value
+msgid "Total Value"
+msgstr "Ukupna vrijednost"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_folio_form
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_folio_tree
+msgid "Total amount"
+msgstr "Ukupni iznos"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__total_route_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__total_route_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__total_route_ids
+msgid "Total routes"
+msgstr "Uk. Ruta"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__is_storable
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__is_storable
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__is_storable
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__is_storable
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__is_storable
+msgid "Track Inventory"
+msgstr "Prati skladište"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__service_type
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__service_type
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__service_type
+msgid "Track Service"
+msgstr "Prati uslugu"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__tracking
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__tracking
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__tracking
+msgid "Tracking"
+msgstr "Praćenje"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__transaction_ids
+msgid "Transactions"
+msgstr "Transakcije"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__picking_ids
+msgid "Transfers"
+msgstr "Prijenosi"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__translated_product_name
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__translated_product_name
+msgid "Translated Product Name"
+msgstr "Prevedeni naziv proizvoda"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__late_availability
+msgid "True if any related picking has late availability"
+msgstr ""
+"Točno ako bilo koja povezana skladišna operacija ima zakašnjelu dostupnost"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio_line__is_reserved
+msgid "True when folio line created from Reservation"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__type_name
+msgid "Type Name"
+msgstr "Upiši ime"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__activity_exception_decoration
+#: model:ir.model.fields,help:hotel.field_hotel_room__activity_exception_decoration
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__activity_exception_decoration
+#: model:ir.model.fields,help:hotel.field_hotel_services__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Vrsta iznimne aktivnosti na zapisu."
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__amount_to_invoice
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__amount_to_invoice
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__amount_to_invoice
+msgid "Un-invoiced Balance"
+msgstr "Nefakturirani saldo"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__product_uom_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__uom_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__uom_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__product_uom_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__uom_id
+msgid "Unit"
+msgstr "Jedinica mjere"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__product_uom_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__product_uom_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__product_uom_ids
+msgid "Unit Barcode"
+msgstr "Barkod jedinice"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__uom_name
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__uom_name
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__uom_name
+msgid "Unit Name"
+msgstr "Naziv jedinice"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__price_unit
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__price_unit
+msgid "Unit Price"
+msgstr "Jedinična cijena"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__amount_untaxed
+msgid "Untaxed Amount"
+msgstr "Osnovica"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__untaxed_amount_to_invoice
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__untaxed_amount_to_invoice
+msgid "Untaxed Amount To Invoice"
+msgstr "Osnovica za obračun"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__untaxed_amount_invoiced
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__untaxed_amount_invoiced
+msgid "Untaxed Invoiced Amount"
+msgstr "Obračun osnovice"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_folio_form
+msgid "Untaxed amount"
+msgstr "Iznos bez poreza"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__anglo_saxon_accounting
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__anglo_saxon_accounting
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__anglo_saxon_accounting
+msgid "Use Anglo-Saxon Accounting"
+msgstr "Koristi anglosaksonsko računovodstvo"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__valid_product_template_attribute_line_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__valid_product_template_attribute_line_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__valid_product_template_attribute_line_ids
+msgid "Valid Product Attribute Lines"
+msgstr "Valjane stavke atributa proizvoda"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__expense_policy
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__expense_policy
+#: model:ir.model.fields,help:hotel.field_hotel_services__expense_policy
+msgid ""
+"Validated expenses, vendor bills, or stock pickings (set up to track costs) "
+"can be invoiced to the customer at either cost or sales price."
+msgstr ""
+"Potvrđeni troškovi, računi dobavljača ili komisioniranje zaliha (postavljeno"
+" za praćenje troškova) mogu se fakturirati kupcu po trošku ili prodajnoj "
+"cijeni."
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__validity_date
+msgid ""
+"Validity of the order, after that you will not able to sign & pay the "
+"quotation."
+msgstr ""
+"Valjanost narudžbe, nakon toga nećete moći potpisati i platiti ponudu."
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__valuation
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__valuation
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__valuation
+msgid "Valuation"
+msgstr "Vrednovanje"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__company_currency_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__company_currency_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__company_currency_id
+msgid "Valuation Currency"
+msgstr "Valuta vrednovanja"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__lot_valuated
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__lot_valuated
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__lot_valuated
+msgid "Valuation by Lot/Serial"
+msgstr "Vrednovanje po lotu/seriji"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__standard_price
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__standard_price
+#: model:ir.model.fields,help:hotel.field_hotel_services__standard_price
+msgid ""
+"Value of the product (automatically computed in AVCO).\n"
+"        Used to value the product when the purchase cost is not known (e.g. inventory adjustment).\n"
+"        Used to compute margins on sale orders."
+msgstr ""
+"Vrijednost proizvoda (automatski izračunata u AVCO).\n"
+"        Koristi se za vrednovanje proizvoda kada cijena nabave nije poznata (npr. prilagodba zaliha).\n"
+"        Koristi se za izračun marži na prodajnim nalozima."
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__image_variant_1920
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__image_variant_1920
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__image_variant_1920
+msgid "Variant Image"
+msgstr "Varijanta slike"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__image_variant_1024
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__image_variant_1024
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__image_variant_1024
+msgid "Variant Image 1024"
+msgstr "Slika varijante 1024"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__image_variant_128
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__image_variant_128
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__image_variant_128
+msgid "Variant Image 128"
+msgstr "Slika varijante 128"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__image_variant_256
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__image_variant_256
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__image_variant_256
+msgid "Variant Image 256"
+msgstr "Slika varijante 256"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__image_variant_512
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__image_variant_512
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__image_variant_512
+msgid "Variant Image 512"
+msgstr "Slika varijante 512"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__price_extra
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__price_extra
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__price_extra
+msgid "Variant Price Extra"
+msgstr "Dodatna cijena Varijanti"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__variant_seller_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__variant_seller_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__variant_seller_ids
+msgid "Variant Seller"
+msgstr "Prodavač varijante"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__additional_product_tag_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__additional_product_tag_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__additional_product_tag_ids
+msgid "Variant Tags"
+msgstr "Oznake varijanti"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__product_template_variant_value_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__product_template_variant_value_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__product_template_variant_value_ids
+msgid "Variant Values"
+msgstr "Varijante vrijednosti"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__seller_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__seller_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__seller_ids
+msgid "Vendors"
+msgstr "Dobavljači"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__virtual_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__virtual_id
+msgid "Virtual"
+msgstr "Virtualno"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__virtual_available_at_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__virtual_available_at_date
+msgid "Virtual Available At Date"
+msgstr "Virtualno dostupno na datum"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__volume
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__volume
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__volume
+msgid "Volume"
+msgstr "Volumen"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__volume_uom_name
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__volume_uom_name
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__volume_uom_name
+msgid "Volume unit of measure label"
+msgstr "Oznaka jedinice mjere volumena"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__warehouse_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio_line__warehouse_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__warehouse_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__warehouse_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_line__warehouse_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__warehouse_id
+msgid "Warehouse"
+msgstr "Skladište"
+
+#. module: hotel
+#. odoo-python
+#: code:addons/hotel/models/hotel_folio_line.py:0
+#: code:addons/hotel/models/hotel_service_line.py:0
+msgid "Warning for %s"
+msgstr "Upozorenje za %s"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_folio__website_message_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__website_message_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__website_message_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__website_message_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__website_message_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__website_message_ids
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__website_message_ids
+msgid "Website Messages"
+msgstr "Poruke web stranice"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_folio__website_message_ids
+#: model:ir.model.fields,help:hotel.field_hotel_room__website_message_ids
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__website_message_ids
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities_type__website_message_ids
+#: model:ir.model.fields,help:hotel.field_hotel_room_type__website_message_ids
+#: model:ir.model.fields,help:hotel.field_hotel_service_type__website_message_ids
+#: model:ir.model.fields,help:hotel.field_hotel_services__website_message_ids
+msgid "Website communication history"
+msgstr "Povijest komunikacije web stranice"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__weight
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__weight
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__weight
+msgid "Weight"
+msgstr "Težina"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__weight_uom_name
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities__weight_uom_name
+#: model:ir.model.fields,field_description:hotel.field_hotel_services__weight_uom_name
+msgid "Weight unit of measure label"
+msgstr "Oznaka jedinice mjere težine"
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities_type__property_stock_valuation_account_id
+#: model:ir.model.fields,help:hotel.field_hotel_room_type__property_stock_valuation_account_id
+#: model:ir.model.fields,help:hotel.field_hotel_service_type__property_stock_valuation_account_id
+msgid ""
+"When automated inventory valuation is enabled on a product, this account "
+"will hold the current value of the products."
+msgstr ""
+"Kada je na proizvodu omogućeno automatizirano vrednovanje zaliha, ovaj konto"
+" će sadržavati trenutnu vrijednost proizvoda."
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities_type__property_stock_journal
+#: model:ir.model.fields,help:hotel.field_hotel_room_type__property_stock_journal
+#: model:ir.model.fields,help:hotel.field_hotel_service_type__property_stock_journal
+msgid ""
+"When doing automated inventory valuation, this is the Accounting Journal in "
+"which entries will be automatically posted when stock moves are processed."
+msgstr ""
+"Prilikom automatiziranog vrednovanja zaliha, ovo je računovodstveni dnevnik "
+"u kojem će se automatski knjižiti stavke kada se obrađuju kretanja zaliha."
+
+#. module: hotel
+#: model:ir.model.fields,help:hotel.field_hotel_room__property_price_difference_account_id
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities__property_price_difference_account_id
+#: model:ir.model.fields,help:hotel.field_hotel_room_amenities_type__property_price_difference_account_id
+#: model:ir.model.fields,help:hotel.field_hotel_room_type__property_price_difference_account_id
+#: model:ir.model.fields,help:hotel.field_hotel_service_type__property_price_difference_account_id
+#: model:ir.model.fields,help:hotel.field_hotel_services__property_price_difference_account_id
+msgid ""
+"With perpetual valuation, this account will hold the price difference "
+"between the standard price and the bill price."
+msgstr ""
+"Uz kontinuirano vrednovanje, ovaj konto će sadržavati razliku u cijeni "
+"između standardne cijene i cijene računa."
+
+#. module: hotel
+#: model:ir.model,name:hotel.model_hotel_room_amenities_type
+msgid "amenities Type"
+msgstr "vrsta sadržaja"
+
+#. module: hotel
+#: model:ir.model,name:hotel.model_hotel_folio
+msgid "hotel folio"
+msgstr "hotelski folio"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_kanban
+msgid "occupied"
+msgstr "zauzeto"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_kanban
+msgid "room_image"
+msgstr "room_image"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_floor__sequence
+msgid "sequence"
+msgstr "sekvenca"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_folio_room_line__status
+msgid "state"
+msgstr "state"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_amenities_type__filter_for_stock_putaway_rule
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__filter_for_stock_putaway_rule
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_type__filter_for_stock_putaway_rule
+msgid "stock.putaway.rule"
+msgstr "stock.putaway.rule"

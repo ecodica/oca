@@ -1,0 +1,642 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_statement_import_sheet_file
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: account_statement_import_sheet_file
+#. odoo-python
+#: code:addons/account_statement_import_sheet_file/wizard/account_statement_import_sheet_parser.py:0
+msgid "%(code)s: %(filename)s"
+msgstr "%(code)s: %(filename)s"
+
+#. module: account_statement_import_sheet_file
+#: model_terms:ir.ui.view,arch_db:account_statement_import_sheet_file.account_statement_import_sheet_mapping_tree
+msgid ""
+"<span class=\"fa fa-info-circle\">\n"
+"                                    Add the column names or column number (when the file has no header). You can concatenate multiple columns in the file into the same field, indicating the column names or numbers separated by comma.\n"
+"                                </span>"
+msgstr ""
+"<span class=\"fa fa-info-circle\">\n"
+"                                    Dodajte nazive stupaca ili broj stupca (kada datoteka nema zaglavlje). Možete spojiti više stupaca iz datoteke u isto polje, navodeći nazive ili brojeve stupaca odvojene zarezom.\n"
+"                                </span>"
+
+#. module: account_statement_import_sheet_file
+#: model_terms:ir.ui.view,arch_db:account_statement_import_sheet_file.account_statement_import_sheet_mapping_tree
+msgid ""
+"<span class=\"fa fa-info-circle\">\n"
+"                                    indicate the column number in the Columns section. The first column is 0.\n"
+"                                </span>"
+msgstr ""
+"<span class=\"fa fa-info-circle\">\n"
+"                                    navedite broj stupca u odjeljku Stupci. Prvi stupac je 0.\n"
+"                                </span>"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields.selection,name:account_statement_import_sheet_file.selection__account_statement_import_sheet_mapping__amount_type__absolute_value
+msgid "Absolute value"
+msgstr "Apsolutna vrijednost"
+
+#. module: account_statement_import_sheet_file
+#. odoo-python
+#: code:addons/account_statement_import_sheet_file/wizard/account_statement_import_sheet_parser.py:0
+msgid "Account: %s; "
+msgstr "Konto: %s; "
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,help:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__skip_empty_lines
+msgid "Allows to skip empty lines"
+msgstr "Omogućuje preskakanje praznih redaka"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__amount_column
+msgid "Amount column"
+msgstr "Stupac iznosa"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__amount_type
+msgid "Amount type"
+msgstr "Vrsta iznosa"
+
+#. module: account_statement_import_sheet_file
+#. odoo-python
+#: code:addons/account_statement_import_sheet_file/wizard/account_statement_import.py:0
+msgid "Bad file/mapping: "
+msgstr "Loša datoteka/mapiranje: "
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__balance_column
+msgid "Balance Column"
+msgstr "Stupac stanja"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,help:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__balance_column
+msgid "Balance after transaction in journal's currency"
+msgstr "Stanje nakon transakcije u valuti dnevnika"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields.selection,name:account_statement_import_sheet_file.selection__account_statement_import_sheet_mapping__file_encoding__iso-8859-4
+msgid "Baltic (Latin-4 / ISO 8859-4)"
+msgstr "Baltički (Latin-4 / ISO 8859-4)"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__bank_account_column
+msgid "Bank Account Column"
+msgstr "Stupac bankovnog računa"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__bank_name_column
+msgid "Bank Name Column"
+msgstr "Stupac naziva banke"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model,name:account_statement_import_sheet_file.model_account_statement_import_sheet_mapping
+msgid "Bank Statement Import Sheet Mapping"
+msgstr "Mapiranje lista uvoza bankovnog izvoda"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model,name:account_statement_import_sheet_file.model_account_statement_import_sheet_parser
+msgid "Bank Statement Import Sheet Parser"
+msgstr "Parser lista uvoza bankovnog izvoda"
+
+#. module: account_statement_import_sheet_file
+#. odoo-python
+#: code:addons/account_statement_import_sheet_file/wizard/account_statement_import_sheet_parser.py:0
+msgid "Bank: %s; "
+msgstr "Banka: %s; "
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields.selection,name:account_statement_import_sheet_file.selection__account_statement_import_sheet_mapping__file_encoding__iso-8859-2
+msgid "Central European (Latin-2 / ISO 8859-2)"
+msgstr "Srednjoeuropski (Latin-2 / ISO 8859-2)"
+
+#. module: account_statement_import_sheet_file
+#: model_terms:ir.ui.view,arch_db:account_statement_import_sheet_file.account_statement_import_sheet_mapping_tree
+msgid "Columns"
+msgstr "Kolone"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,help:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__offset_column
+msgid "Columns to ignore before starting to parse"
+msgstr "Stupci koje treba preskočiti prije početka parsiranja"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__create_uid
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_parser__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__create_date
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_parser__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__credit_value
+msgid "Credit Value"
+msgstr "Kreditna vrijednost"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__amount_credit_column
+msgid "Credit amount column"
+msgstr "Stupac iznosa odobrenja"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,help:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__amount_credit_column
+msgid "Credit amount of transaction in journal's currency"
+msgstr "Iznos odobrenja transakcije u valuti dnevnika"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__currency_column
+msgid "Currency Column"
+msgstr "Stupac valute"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields.selection,name:account_statement_import_sheet_file.selection__account_statement_import_sheet_mapping__file_encoding__koi8_r
+msgid "Cyrillic (KOI8-R)"
+msgstr "Ćirilica (KOI8-R)"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields.selection,name:account_statement_import_sheet_file.selection__account_statement_import_sheet_mapping__file_encoding__koi8_u
+msgid "Cyrillic (KOI8-U)"
+msgstr "Ćirilica (KOI8-U)"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields.selection,name:account_statement_import_sheet_file.selection__account_statement_import_sheet_mapping__file_encoding__windows-1251
+msgid "Cyrillic (Windows-1251)"
+msgstr "Ćirilica (Windows-1251)"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__debit_value
+msgid "Debit Value"
+msgstr "Vrijednost terećenja"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__amount_debit_column
+msgid "Debit amount column"
+msgstr "Stupac iznosa terećenja"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,help:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__amount_debit_column
+msgid "Debit amount of transaction in journal's currency"
+msgstr "Iznos terećenja transakcije u valuti dnevnika"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__debit_credit_column
+msgid "Debit/credit column"
+msgstr "Stupac terećenja/odobrenja"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__float_decimal_sep
+msgid "Decimals Separator"
+msgstr "Decimalni razdjelnik"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_journal__default_sheet_mapping_id
+msgid "Default Sheet Mapping"
+msgstr "Zadano mapiranje lista"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__delimiter
+msgid "Delimiter"
+msgstr "Razdjelnik"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__description_column
+msgid "Description Column"
+msgstr "Stupac opisa"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_journal__display_name
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import__display_name
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__display_name
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_parser__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields.selection,name:account_statement_import_sheet_file.selection__account_statement_import_sheet_mapping__amount_type__distinct_credit_debit
+msgid "Distinct Credit/debit Column"
+msgstr "Odvojeni stupac terećenja/odobrenja"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__file_encoding
+msgid "Encoding"
+msgstr "Kodna stranica:"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__no_header
+msgid "File does not contain header line"
+msgstr "Datoteka ne sadrži redak zaglavlja"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__footer_lines_skip_count
+msgid "Footer lines skip count"
+msgstr "Broj redaka zaglavlja za preskakanje"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__header_lines_skip_count
+msgid "Header lines skip count"
+msgstr "Broj redaka zaglavlja za preskakanje"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_journal__id
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import__id
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__id
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_parser__id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model,name:account_statement_import_sheet_file.model_account_statement_import
+msgid "Import Bank Statement Files"
+msgstr "Uvezi datoteke bankovnog izvoda"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,help:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__currency_column
+msgid ""
+"In case statement is multi-currency, column to get currency of transaction "
+"from"
+msgstr ""
+"U slučaju da je izvod viševalutni, stupac za dobivanje valute transakcije"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,help:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__original_currency_column
+msgid ""
+"In case statement provides original currency for transactions with automatic"
+" currency conversion, column to get original currency of transaction from"
+msgstr ""
+"U slučaju da izvod pruža izvornu valutu za transakcije s automatskom "
+"konverzijom valute, stupac za dobivanje izvorne valute transakcije"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,help:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__original_amount_column
+msgid ""
+"In case statement provides original currency for transactions with automatic"
+" currency conversion, column to get original transaction amount in original "
+"transaction currency from"
+msgstr ""
+"U slučaju da izvod pruža izvornu valutu za transakcije s automatskom "
+"konverzijom valute, stupac za dobivanje izvornog iznosa transakcije u "
+"izvornoj valuti transakcije"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,help:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__amount_inverse_sign
+msgid ""
+"In some cases such as in credit card statements the amounts are expressed in"
+" the inverse sign. By setting this flag during the upload the amounts will "
+"be inverted in sign."
+msgstr ""
+"U nekim slučajevima kao što su izvodi kreditne kartice iznosi su izraženi "
+"obrnutim predznakom. Postavljanjem ove oznake tijekom prijenosa iznosi će "
+"biti invertirani u predznaku."
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__amount_inverse_sign
+msgid "Inverse sign of amount"
+msgstr "Obrni predznak iznosa"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields.selection,name:account_statement_import_sheet_file.selection__account_statement_import_sheet_mapping__file_encoding__shift_jis
+msgid "Japanese (Shift JIS)"
+msgstr "Japanski (Shift JIS)"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model,name:account_statement_import_sheet_file.model_account_journal
+msgid "Journal"
+msgstr "Dnevnik"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__write_uid
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_parser__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__write_date
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_parser__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: account_statement_import_sheet_file
+#. odoo-python
+#: code:addons/account_statement_import_sheet_file/wizard/account_statement_import_sheet_parser.py:0
+#: model:ir.model.fields.selection,name:account_statement_import_sheet_file.selection__account_statement_import_sheet_mapping__delimiter__n/a
+msgid "N/A"
+msgstr "Nedostupno"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__name
+msgid "Name"
+msgstr "Naziv"
+
+#. module: account_statement_import_sheet_file
+#. odoo-python
+#: code:addons/account_statement_import_sheet_file/wizard/account_statement_import_sheet_parser.py:0
+msgid "No valid encoding was found for the attached file"
+msgstr "Za priloženu datoteku nije pronađeno valjano kodiranje"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__notes_column
+msgid "Notes Column"
+msgstr "Stupac bilješke"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__offset_column
+msgid "Offset Column"
+msgstr "Stupac prijeboja"
+
+#. module: account_statement_import_sheet_file
+#. odoo-python
+#: code:addons/account_statement_import_sheet_file/models/account_statement_import_sheet_mapping.py:0
+msgid "Offsets cannot be negative"
+msgstr "Prijeboji ne mogu biti negativni"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__original_amount_column
+msgid "Original Amount Column"
+msgstr "Stupac izvornog iznosa"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__original_currency_column
+msgid "Original Currency Column"
+msgstr "Stupac izvorne valute"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__partner_name_column
+msgid "Partner Name Column"
+msgstr "Stupac naziva partnera"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,help:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__bank_name_column
+msgid "Partner's bank"
+msgstr "Banka partnera"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,help:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__bank_account_column
+msgid "Partner's bank account"
+msgstr "Bankovni račun partnera"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__reference_column
+msgid "Reference Column"
+msgstr "Stupac reference"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,help:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__footer_lines_skip_count
+msgid ""
+"Set the Footer lines number.Used in some csv/xlsx file that integrate meta "
+"data inlast lines."
+msgstr ""
+"Postavite broj redaka podnožja. Koristi se u nekim csv/xlsx datotekama koje integriraju metapodatke u\n"
+"zadnjim recima."
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,help:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__header_lines_skip_count
+msgid "Set the Header lines number."
+msgstr "Postavite broj redaka zaglavlja."
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import__sheet_mapping_id
+msgid "Sheet mapping"
+msgstr "Mapiranje lista"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields.selection,name:account_statement_import_sheet_file.selection__account_statement_import_sheet_mapping__amount_type__simple_value
+msgid "Simple value"
+msgstr "Jednostavna vrijednost"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,help:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__amount_type
+msgid ""
+"Simple value: use igned amount in amount column\n"
+"Absolute Value: use a same column for debit and credit\n"
+"(absolute value + indicate sign)\n"
+"Distinct Credit/debit Column: use a distinct column for debit and credit"
+msgstr ""
+"Jednostavna vrijednost: koristi predznak iznosa u stupcu iznosa\n"
+"Apsolutna vrijednost: koristi isti stupac za terećenje i odobrenje\n"
+"(apsolutna vrijednost + naznaka predznaka)\n"
+"Odvojeni stupac terećenja/odobrenja: koristi odvojeni stupac za terećenje i odobrenje"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__skip_empty_lines
+msgid "Skip Empty Lines"
+msgstr "Preskoči prazne retke"
+
+#. module: account_statement_import_sheet_file
+#: model_terms:ir.ui.view,arch_db:account_statement_import_sheet_file.view_account_journal_form_n43
+msgid "Statement Import Map"
+msgstr "Mapa uvoza izvoda"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.actions.act_window,name:account_statement_import_sheet_file.action_statement_import_sheet_report_mappings
+#: model:ir.ui.menu,name:account_statement_import_sheet_file.menu_statement_import_sheet_mapping
+msgid "Statement Sheet Mappings"
+msgstr "Mapiranja lista izvoda"
+
+#. module: account_statement_import_sheet_file
+#: model_terms:ir.ui.view,arch_db:account_statement_import_sheet_file.account_statement_import_form
+msgid "TXT/CSV/XLSX mapping:"
+msgstr "TXT/CSV/XLSX mapiranje:"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__quotechar
+msgid "Text qualifier"
+msgstr "Tekstualni kvalifikator"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__float_thousands_sep
+msgid "Thousands Separator"
+msgstr "Separator tisućica"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__timestamp_column
+msgid "Timestamp Column"
+msgstr "Stupac vremenske oznake"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__timestamp_format
+msgid "Timestamp Format"
+msgstr "Format vremenske oznake"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields.selection,name:account_statement_import_sheet_file.selection__account_statement_import_sheet_mapping__file_encoding__big5
+msgid "Traditional Chinese (big5)"
+msgstr "Tradicionalni kineski (big5)"
+
+#. module: account_statement_import_sheet_file
+#. odoo-python
+#: code:addons/account_statement_import_sheet_file/wizard/account_statement_import_sheet_parser.py:0
+msgid "Transaction ID: %s; "
+msgstr "ID transakcije: %s; "
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields.selection,name:account_statement_import_sheet_file.selection__account_statement_import_sheet_mapping__file_encoding__utf-16
+msgid "UTF-16"
+msgstr "UTF-16"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields.selection,name:account_statement_import_sheet_file.selection__account_statement_import_sheet_mapping__file_encoding__utf-16-sig
+msgid "UTF-16 (with BOM)"
+msgstr "UTF-16 (s BOM-om)"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields.selection,name:account_statement_import_sheet_file.selection__account_statement_import_sheet_mapping__file_encoding__utf-8
+msgid "UTF-8"
+msgstr "UTF-8"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields.selection,name:account_statement_import_sheet_file.selection__account_statement_import_sheet_mapping__file_encoding__utf-8-sig
+msgid "UTF-8 (with BOM)"
+msgstr "UTF-8 (s BOM-om)"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields.selection,name:account_statement_import_sheet_file.selection__account_statement_import_sheet_mapping__file_encoding__gb18030
+msgid "Unified Chinese (gb18030)"
+msgstr "Unificirani kineski (gb18030)"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,field_description:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__transaction_id_column
+msgid "Unique transaction ID column"
+msgstr "Stupac jedinstvenog ID-a transakcije"
+
+#. module: account_statement_import_sheet_file
+#. odoo-python
+#: code:addons/account_statement_import_sheet_file/models/account_statement_import_sheet_mapping.py:0
+msgid "Use amount_column if you have set Amount type = 'Single value'"
+msgstr ""
+"Koristite amount_column ako ste postavili vrstu iznosa = 'Jednostavna "
+"vrijednost'"
+
+#. module: account_statement_import_sheet_file
+#. odoo-python
+#: code:addons/account_statement_import_sheet_file/models/account_statement_import_sheet_mapping.py:0
+msgid ""
+"Use amount_debit_column and amount_credit_column if you have set Amount type"
+" = 'Distinct Credit/debit Column'"
+msgstr ""
+"Koristite amount_debit_column i amount_credit_column ako ste postavili vrstu"
+" iznosa = 'Odvojeni stupac terećenja/odobrenja'"
+
+#. module: account_statement_import_sheet_file
+#. odoo-python
+#: code:addons/account_statement_import_sheet_file/models/account_statement_import_sheet_mapping.py:0
+msgid "Use debit_credit_column if you have set Amount type = 'Absolute value'"
+msgstr ""
+"Koristite debit_credit_column ako ste postavili vrstu iznosa = 'Apsolutna "
+"vrijednost'"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,help:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__debit_credit_column
+msgid ""
+"Used if amount type is \"Absolute value\"\n"
+"Some statement formats use absolute amount value and indicate sign\n"
+"of the transaction by specifying if it was a debit or a credit one"
+msgstr ""
+"Koristi se ako je vrsta iznosa \"Apsolutna vrijednost\"\n"
+"Neki formati izvoda koriste apsolutnu vrijednost iznosa i označavaju predznak\n"
+"transakcije navodeći radi li se o terećenju ili odobrenju"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,help:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__amount_column
+msgid ""
+"Used if amount type is \"Simple value\" or \"Absolute value\"\n"
+"Amount of transaction in journal's currency\n"
+"Some statement formats use credit/debit columns"
+msgstr ""
+"Koristi se ako je vrsta iznosa \"Jednostavna vrijednost\" ili \"Apsolutna vrijednost\"\n"
+"Iznos transakcije u valuti dnevnika\n"
+"Neki formati izvoda koriste stupce odobrenja/terećenja"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,help:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__credit_value
+msgid "Value of debit/credit column that indicates if it's a credit"
+msgstr ""
+"Vrijednost stupca terećenja/odobrenja koja označava da je riječ o odobrenju"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,help:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__debit_value
+msgid "Value of debit/credit column that indicates if it's a debit"
+msgstr ""
+"Vrijednost stupca terećenja/odobrenja koja označava da je riječ o terećenju"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields.selection,name:account_statement_import_sheet_file.selection__account_statement_import_sheet_mapping__file_encoding__iso-8859-1
+msgid "Western (Latin-1 / ISO 8859-1)"
+msgstr "Zapadni (Latin-1 / ISO 8859-1)"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields.selection,name:account_statement_import_sheet_file.selection__account_statement_import_sheet_mapping__file_encoding__windows-1252
+msgid "Western (Windows-1252)"
+msgstr "Zapadni (Windows-1252)"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,help:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__float_decimal_sep
+msgid ""
+"When the separator is 'none', the value will be shifted according to the "
+"currency decimals. For example, 12345 will be converted to 123.45"
+msgstr ""
+"Kada je razdjelnik 'nijedan', vrijednost će biti pomaknuta prema decimalama "
+"valute. Na primjer, 12345 će biti pretvoreno u 123,45"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields,help:account_statement_import_sheet_file.field_account_statement_import_sheet_mapping__no_header
+msgid ""
+"When this occurs please indicate the column number in the Columns section "
+"instead of the column name, considering that the first column is 0"
+msgstr ""
+"Kada se to dogodi, navedite broj stupca u odjeljku Stupci umjesto naziva "
+"stupca, uzevši u obzir da je prvi stupac 0"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields.selection,name:account_statement_import_sheet_file.selection__account_statement_import_sheet_mapping__delimiter__comma
+#: model:ir.model.fields.selection,name:account_statement_import_sheet_file.selection__account_statement_import_sheet_mapping__float_decimal_sep__comma
+#: model:ir.model.fields.selection,name:account_statement_import_sheet_file.selection__account_statement_import_sheet_mapping__float_thousands_sep__comma
+msgid "comma (,)"
+msgstr "zarez (,)"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields.selection,name:account_statement_import_sheet_file.selection__account_statement_import_sheet_mapping__delimiter__dot
+#: model:ir.model.fields.selection,name:account_statement_import_sheet_file.selection__account_statement_import_sheet_mapping__float_decimal_sep__dot
+#: model:ir.model.fields.selection,name:account_statement_import_sheet_file.selection__account_statement_import_sheet_mapping__float_thousands_sep__dot
+msgid "dot (.)"
+msgstr "točka (.)"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields.selection,name:account_statement_import_sheet_file.selection__account_statement_import_sheet_mapping__float_decimal_sep__none
+#: model:ir.model.fields.selection,name:account_statement_import_sheet_file.selection__account_statement_import_sheet_mapping__float_thousands_sep__none
+msgid "none"
+msgstr "nema"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields.selection,name:account_statement_import_sheet_file.selection__account_statement_import_sheet_mapping__float_thousands_sep__quote
+msgid "quote (')"
+msgstr "navodnik (')"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields.selection,name:account_statement_import_sheet_file.selection__account_statement_import_sheet_mapping__delimiter__semicolon
+msgid "semicolon (;)"
+msgstr "točka-zarez (;)"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields.selection,name:account_statement_import_sheet_file.selection__account_statement_import_sheet_mapping__delimiter__space
+msgid "space"
+msgstr "razmak"
+
+#. module: account_statement_import_sheet_file
+#: model:ir.model.fields.selection,name:account_statement_import_sheet_file.selection__account_statement_import_sheet_mapping__delimiter__tab
+msgid "tab"
+msgstr "tabulator"

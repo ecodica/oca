@@ -1,0 +1,77 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* survey_partner_representative
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: survey_partner_representative
+#: model:ir.model.fields,help:survey_partner_representative.field_survey_survey__allow_partner_representing
+msgid ""
+"A user with the proper permissions, could do the survey on behalf of other"
+msgstr "Korisnik s odgovarajućim dozvolama može ispuniti anketu u ime drugih"
+
+#. module: survey_partner_representative
+#: model:ir.model.fields,field_description:survey_partner_representative.field_survey_survey__allow_partner_representing
+msgid "Allow Partner Representing"
+msgstr "Dopusti zastupanje partnera"
+
+#. module: survey_partner_representative
+#: model:ir.model.fields,field_description:survey_partner_representative.field_survey_representative_mixin__display_name
+#: model:ir.model.fields,field_description:survey_partner_representative.field_survey_survey__display_name
+#: model:ir.model.fields,field_description:survey_partner_representative.field_survey_user_input__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: survey_partner_representative
+#: model:ir.model.fields,field_description:survey_partner_representative.field_survey_representative_mixin__id
+#: model:ir.model.fields,field_description:survey_partner_representative.field_survey_survey__id
+#: model:ir.model.fields,field_description:survey_partner_representative.field_survey_user_input__id
+msgid "ID"
+msgstr "ID"
+
+#. module: survey_partner_representative
+#: model:ir.model.fields,field_description:survey_partner_representative.field_survey_user_input__representative_partner_id
+msgid "Representative Partner"
+msgstr ""
+
+#. module: survey_partner_representative
+#: model:res.groups,name:survey_partner_representative.partner_representative
+msgid "Representative on surveys"
+msgstr ""
+
+#. module: survey_partner_representative
+#: model:ir.model,name:survey_partner_representative.model_survey_survey
+msgid "Survey"
+msgstr "Anketa"
+
+#. module: survey_partner_representative
+#: model:ir.model.fields,field_description:survey_partner_representative.field_survey_representative_mixin__survey_representative_partner_id
+msgid "Survey Representative Partner"
+msgstr ""
+
+#. module: survey_partner_representative
+#: model:ir.model,name:survey_partner_representative.model_survey_user_input
+#: model:ir.model.fields,field_description:survey_partner_representative.field_survey_representative_mixin__survey_user_input_id
+msgid "Survey User Input"
+msgstr "Anketa koju popunjava korisnik"
+
+#. module: survey_partner_representative
+#: model:ir.model.fields,help:survey_partner_representative.field_survey_user_input__representative_partner_id
+msgid "This partner filled this survey on behalf of other"
+msgstr ""
+
+#. module: survey_partner_representative
+#: model:ir.model,name:survey_partner_representative.model_survey_representative_mixin
+msgid "Use this mixin in models that have a linked survey input"
+msgstr ""

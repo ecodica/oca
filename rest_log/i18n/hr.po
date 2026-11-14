@@ -1,0 +1,223 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* rest_log
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: rest_log
+#: model:ir.actions.server,name:rest_log.ir_cron_autovacuum_rest_log_ir_actions_server
+msgid "Auto-vacuum REST Logs"
+msgstr "Automatski očisti REST zapise"
+
+#. module: rest_log
+#: model:ir.model.fields,field_description:rest_log.field_rest_log__collection
+#: model_terms:ir.ui.view,arch_db:rest_log.rest_log_search_view
+msgid "Collection"
+msgstr "Kolekcija"
+
+#. module: rest_log
+#: model:ir.model.fields,field_description:rest_log.field_rest_log__collection_id
+msgid "Collection ID"
+msgstr "ID kolekcije"
+
+#. module: rest_log
+#: model:ir.model.fields,field_description:rest_log.field_rest_log__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: rest_log
+#: model:ir.model.fields,field_description:rest_log.field_rest_log__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: rest_log
+#: model_terms:ir.ui.view,arch_db:rest_log.rest_log_search_view
+msgid "Date"
+msgstr "Datum"
+
+#. module: rest_log
+#: model:ir.model.fields,field_description:rest_log.field_rest_log__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: rest_log
+#: model:ir.model.fields,field_description:rest_log.field_rest_log__error
+#: model_terms:ir.ui.view,arch_db:rest_log.rest_log_form_view
+msgid "Error"
+msgstr "Pogreška"
+
+#. module: rest_log
+#: model:ir.model.fields,field_description:rest_log.field_rest_log__exception_name
+#: model_terms:ir.ui.view,arch_db:rest_log.rest_log_search_view
+msgid "Exception"
+msgstr "Iznimka"
+
+#. module: rest_log
+#: model:ir.model.fields,field_description:rest_log.field_rest_log__exception_message
+msgid "Exception Message"
+msgstr ""
+
+#. module: rest_log
+#: model_terms:ir.ui.view,arch_db:rest_log.rest_log_search_view
+msgid "Exception message"
+msgstr ""
+
+#. module: rest_log
+#: model:ir.model.fields.selection,name:rest_log.selection__rest_log__state__failed
+#: model_terms:ir.ui.view,arch_db:rest_log.rest_log_search_view
+msgid "Failed"
+msgstr "Neuspjelo"
+
+#. module: rest_log
+#: model:ir.model.fields.selection,name:rest_log.selection__rest_log__severity__functional
+msgid "Functional"
+msgstr ""
+
+#. module: rest_log
+#: model_terms:ir.ui.view,arch_db:rest_log.rest_log_search_view
+msgid "Functional errors"
+msgstr ""
+
+#. module: rest_log
+#: model_terms:ir.ui.view,arch_db:rest_log.rest_log_search_view
+msgid "Group By"
+msgstr "Grupiraj po"
+
+#. module: rest_log
+#: model:ir.model.fields,field_description:rest_log.field_rest_log__headers
+msgid "Headers"
+msgstr "Zaglavlja"
+
+#. module: rest_log
+#: model:ir.model.fields,field_description:rest_log.field_rest_log__id
+msgid "ID"
+msgstr "ID"
+
+#. module: rest_log
+#: model:ir.model.fields,field_description:rest_log.field_rest_log__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: rest_log
+#: model:ir.model.fields,field_description:rest_log.field_rest_log__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: rest_log
+#: model:ir.ui.menu,name:rest_log.menu_rest_api_log
+msgid "Logs"
+msgstr "Praćenja"
+
+#. module: rest_log
+#: model_terms:ir.ui.view,arch_db:rest_log.rest_log_search_view
+msgid "Logs generated today"
+msgstr ""
+
+#. module: rest_log
+#: model_terms:ir.ui.view,arch_db:rest_log.rest_log_form_view
+msgid "Parameters"
+msgstr "Parametri"
+
+#. module: rest_log
+#: model:ir.model.fields,field_description:rest_log.field_rest_log__params
+msgid "Params"
+msgstr ""
+
+#. module: rest_log
+#: model:ir.model,name:rest_log.model_rest_log
+msgid "REST API Logging"
+msgstr "REST API Logging"
+
+#. module: rest_log
+#: model:res.groups,name:rest_log.group_rest_log_manager
+msgid "REST Log Manager"
+msgstr ""
+
+#. module: rest_log
+#: model:ir.actions.act_window,name:rest_log.action_rest_log
+msgid "REST Logs"
+msgstr ""
+
+#. module: rest_log
+#: model:ir.model.fields,field_description:rest_log.field_rest_log__request_method
+msgid "Request Method"
+msgstr ""
+
+#. module: rest_log
+#: model:ir.model.fields,field_description:rest_log.field_rest_log__request_url
+#: model_terms:ir.ui.view,arch_db:rest_log.rest_log_search_view
+msgid "Request URL"
+msgstr ""
+
+#. module: rest_log
+#: model:ir.model.fields,field_description:rest_log.field_rest_log__result
+#: model_terms:ir.ui.view,arch_db:rest_log.rest_log_form_view
+msgid "Result"
+msgstr "Rezultat"
+
+#. module: rest_log
+#: model:ir.model.fields.selection,name:rest_log.selection__rest_log__severity__severe
+msgid "Severe"
+msgstr ""
+
+#. module: rest_log
+#: model_terms:ir.ui.view,arch_db:rest_log.rest_log_search_view
+msgid "Severe errors"
+msgstr ""
+
+#. module: rest_log
+#: model:ir.model.fields,field_description:rest_log.field_rest_log__severity
+#: model_terms:ir.ui.view,arch_db:rest_log.rest_log_search_view
+msgid "Severity"
+msgstr ""
+
+#. module: rest_log
+#: model:ir.model.fields,field_description:rest_log.field_rest_log__state
+msgid "State"
+msgstr "Stanje"
+
+#. module: rest_log
+#: model_terms:ir.ui.view,arch_db:rest_log.rest_log_search_view
+msgid "Status"
+msgstr "Status"
+
+#. module: rest_log
+#: model:ir.model.fields.selection,name:rest_log.selection__rest_log__state__success
+msgid "Success"
+msgstr "Uspjeh"
+
+#. module: rest_log
+#: model_terms:ir.ui.view,arch_db:rest_log.rest_log_search_view
+msgid "Today"
+msgstr "Danas"
+
+#. module: rest_log
+#: model_terms:ir.ui.view,arch_db:rest_log.rest_log_search_view
+msgid "User"
+msgstr "Korisnik"
+
+#. module: rest_log
+#: model_terms:ir.ui.view,arch_db:rest_log.rest_log_form_view
+msgid "View collection"
+msgstr ""
+
+#. module: rest_log
+#: model:ir.model.fields.selection,name:rest_log.selection__rest_log__severity__warning
+msgid "Warning"
+msgstr "Upozorenje"
+
+#. module: rest_log
+#: model_terms:ir.ui.view,arch_db:rest_log.rest_log_search_view
+msgid "Warning errors"
+msgstr ""

@@ -1,0 +1,103 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_inventory_justification
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: stock_inventory_justification
+#: model:ir.model.fields,field_description:stock_inventory_justification.field_stock_inventory_justification__active
+msgid "Active"
+msgstr "Aktivno"
+
+#. module: stock_inventory_justification
+#: model:ir.model.fields,field_description:stock_inventory_justification.field_stock_inventory_justification__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: stock_inventory_justification
+#: model:ir.model.fields,field_description:stock_inventory_justification.field_stock_inventory_justification__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: stock_inventory_justification
+#: model:ir.model.fields,field_description:stock_inventory_justification.field_stock_inventory_justification__display_name
+#: model:ir.model.fields,field_description:stock_inventory_justification.field_stock_move__display_name
+#: model:ir.model.fields,field_description:stock_inventory_justification.field_stock_move_line__display_name
+#: model:ir.model.fields,field_description:stock_inventory_justification.field_stock_quant__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: stock_inventory_justification
+#: model:ir.model.fields,field_description:stock_inventory_justification.field_stock_inventory_justification__id
+#: model:ir.model.fields,field_description:stock_inventory_justification.field_stock_move__id
+#: model:ir.model.fields,field_description:stock_inventory_justification.field_stock_move_line__id
+#: model:ir.model.fields,field_description:stock_inventory_justification.field_stock_quant__id
+msgid "ID"
+msgstr "ID"
+
+#. module: stock_inventory_justification
+#: model:ir.model,name:stock_inventory_justification.model_stock_inventory_justification
+msgid "Inventory justification"
+msgstr ""
+
+#. module: stock_inventory_justification
+#: model:ir.actions.act_window,name:stock_inventory_justification.stock_inventory_justification_act_window
+#: model:ir.model.fields,help:stock_inventory_justification.field_stock_move__inventory_justification_ids
+#: model:ir.model.fields,help:stock_inventory_justification.field_stock_move_line__inventory_justification_ids
+#: model:ir.model.fields,help:stock_inventory_justification.field_stock_quant__inventory_justification_ids
+#: model:ir.ui.menu,name:stock_inventory_justification.silog_stock_inventory_justification_menu
+msgid "Inventory justifications"
+msgstr ""
+
+#. module: stock_inventory_justification
+#: model:ir.model.fields,field_description:stock_inventory_justification.field_stock_move__inventory_justification_ids
+#: model:ir.model.fields,field_description:stock_inventory_justification.field_stock_move_line__inventory_justification_ids
+#: model:ir.model.fields,field_description:stock_inventory_justification.field_stock_quant__inventory_justification_ids
+msgid "Justifications"
+msgstr ""
+
+#. module: stock_inventory_justification
+#: model:ir.model.fields,field_description:stock_inventory_justification.field_stock_inventory_justification__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: stock_inventory_justification
+#: model:ir.model.fields,field_description:stock_inventory_justification.field_stock_inventory_justification__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: stock_inventory_justification
+#: model:ir.model.fields,field_description:stock_inventory_justification.field_stock_inventory_justification__name
+msgid "Name"
+msgstr "Naziv"
+
+#. module: stock_inventory_justification
+#: model:ir.model,name:stock_inventory_justification.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Kretanja proizvoda (Stavka skladišnog prijenosa)"
+
+#. module: stock_inventory_justification
+#: model:ir.model,name:stock_inventory_justification.model_stock_quant
+msgid "Quants"
+msgstr "Količine"
+
+#. module: stock_inventory_justification
+#: model:ir.model,name:stock_inventory_justification.model_stock_move
+msgid "Stock Move"
+msgstr "Skladišni prijenos"
+
+#. module: stock_inventory_justification
+#: model:ir.model.constraint,message:stock_inventory_justification.constraint_stock_inventory_justification_unique_name
+msgid "This stock inventory justification already exists."
+msgstr ""

@@ -1,0 +1,109 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* report_csv
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: report_csv
+#: model:ir.model,name:report_csv.model_report_report_csv_abstract
+msgid "Abstract Model for CSV reports"
+msgstr "Apstraktni model za CSV izvještaje"
+
+#. module: report_csv
+#: model:ir.model.fields,field_description:report_csv.field_ir_actions_report__display_name
+#: model:ir.model.fields,field_description:report_csv.field_report_report_csv_abstract__display_name
+#: model:ir.model.fields,field_description:report_csv.field_report_report_csv_partner_csv__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: report_csv
+#: model:ir.model.fields,field_description:report_csv.field_ir_actions_report__encode_error_handling
+msgid "Encode Error Handling"
+msgstr "Rukovanje pogreškama kodiranja"
+
+#. module: report_csv
+#: model:ir.model.fields,field_description:report_csv.field_ir_actions_report__encoding
+msgid "Encoding"
+msgstr "Kodna stranica:"
+
+#. module: report_csv
+#: model:ir.model.fields,help:report_csv.field_ir_actions_report__encoding
+msgid "Encoding to be applied to the generated CSV file. e.g. cp932"
+msgstr ""
+"Kodiranje koje će se primijeniti na generiranu CSV datoteku. Npr. cp932"
+
+#. module: report_csv
+#. odoo-python
+#: code:addons/report_csv/report/report_csv.py:0
+msgid "Failed to encode the data with the encoding set in the report."
+msgstr ""
+"Kodiranje podataka s kodiranjem postavljenim u izvještaju nije uspjelo."
+
+#. module: report_csv
+#: model:ir.model.fields,field_description:report_csv.field_ir_actions_report__id
+#: model:ir.model.fields,field_description:report_csv.field_report_report_csv_abstract__id
+#: model:ir.model.fields,field_description:report_csv.field_report_report_csv_partner_csv__id
+msgid "ID"
+msgstr "ID"
+
+#. module: report_csv
+#: model:ir.model.fields,help:report_csv.field_ir_actions_report__encode_error_handling
+msgid ""
+"If nothing is selected, CSV export will fail with an error message when "
+"there is a character that fail to be encoded."
+msgstr ""
+"Ako ništa nije odabrano, CSV izvoz neće uspjeti s porukom o pogrešci kada "
+"postoji znak koji se ne može kodirati."
+
+#. module: report_csv
+#: model:ir.model.fields.selection,name:report_csv.selection__ir_actions_report__encode_error_handling__ignore
+msgid "Ignore"
+msgstr "Zanemari"
+
+#. module: report_csv
+#: model:ir.model.fields.selection,name:report_csv.selection__ir_actions_report__encode_error_handling__replace
+msgid "Replace"
+msgstr "Zamijeni"
+
+#. module: report_csv
+#: model:ir.model,name:report_csv.model_ir_actions_report
+msgid "Report Action"
+msgstr "Radnja izvještaja"
+
+#. module: report_csv
+#: model:ir.model,name:report_csv.model_report_report_csv_partner_csv
+msgid "Report Partner to CSV"
+msgstr "Partner u CSV izvještaju"
+
+#. module: report_csv
+#: model:ir.model.fields,field_description:report_csv.field_ir_actions_report__report_type
+msgid "Report Type"
+msgstr "Vrsta izvještaja"
+
+#. module: report_csv
+#: model:ir.model.fields,help:report_csv.field_ir_actions_report__report_type
+msgid ""
+"The type of the report that will be rendered, each one having its own "
+"rendering method. HTML means the report will be opened directly in your "
+"browser PDF means the report will be rendered using Wkhtmltopdf and "
+"downloaded by the user."
+msgstr ""
+"Vrsta izvješća koje će se generirati, svaka sa svojom metodom generiranja. "
+"HTML znači da će se izvješće otvoriti izravno u pregledniku; PDF znači da će"
+" se izvješće generirati pomoću Wkhtmltopdf i preuzeti."
+
+#. module: report_csv
+#: model:ir.model.fields.selection,name:report_csv.selection__ir_actions_report__report_type__csv
+msgid "csv"
+msgstr "csv"

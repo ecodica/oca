@@ -1,0 +1,188 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* purchase_auto_bill_on_receipt
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: purchase_auto_bill_on_receipt
+#. odoo-python
+#: code:addons/purchase_auto_bill_on_receipt/models/purchase_order.py:0
+msgid "Auto %(doc)s creation failed on %(src)s %(picking)s: %(error)s"
+msgstr ""
+"Automatsko kreiranje %(doc)s nije uspjelo na %(src)s %(picking)s: %(error)s"
+
+#. module: purchase_auto_bill_on_receipt
+#. odoo-python
+#: code:addons/purchase_auto_bill_on_receipt/models/purchase_order.py:0
+msgid "Auto %(doc)s creation failed — manual review needed"
+msgstr "Automatsko kreiranje %(doc)s nije uspjelo — potreban ručni pregled"
+
+#. module: purchase_auto_bill_on_receipt
+#. odoo-python
+#: code:addons/purchase_auto_bill_on_receipt/models/purchase_order.py:0
+msgid ""
+"Auto %(doc)s posting failed on %(src)s %(picking)s (%(doc)s %(bill)s remains"
+" in draft): %(error)s"
+msgstr ""
+"Automatsko knjiženje %(doc)s nije uspjelo na %(src)s %(picking)s (%(doc)s "
+"%(bill)s ostaje u nacrtu): %(error)s"
+
+#. module: purchase_auto_bill_on_receipt
+#. odoo-python
+#: code:addons/purchase_auto_bill_on_receipt/models/purchase_order.py:0
+msgid "Auto %(doc)s posting failed — manual review needed"
+msgstr "Automatsko knjiženje %(doc)s nije uspjelo — potreban ručni pregled"
+
+#. module: purchase_auto_bill_on_receipt
+#: model:ir.model.fields.selection,name:purchase_auto_bill_on_receipt.selection__res_partner__auto_bill_on_receipt__auto
+msgid "Auto Bill"
+msgstr "Automatski račun"
+
+#. module: purchase_auto_bill_on_receipt
+#: model:ir.model.fields,field_description:purchase_auto_bill_on_receipt.field_stock_picking__auto_bill_pending
+msgid "Auto Bill Pending"
+msgstr "Automatski račun na čekanju"
+
+#. module: purchase_auto_bill_on_receipt
+#: model:ir.model.fields,field_description:purchase_auto_bill_on_receipt.field_res_company__auto_bill_on_receipt
+#: model:ir.model.fields,field_description:purchase_auto_bill_on_receipt.field_res_config_settings__auto_bill_on_receipt
+#: model:ir.model.fields,field_description:purchase_auto_bill_on_receipt.field_res_partner__auto_bill_on_receipt
+#: model:ir.model.fields,field_description:purchase_auto_bill_on_receipt.field_res_users__auto_bill_on_receipt
+msgid "Auto Bill on Purchase Receipt"
+msgstr "Automatski račun pri primki nabave"
+
+#. module: purchase_auto_bill_on_receipt
+#: model_terms:ir.ui.view,arch_db:purchase_auto_bill_on_receipt.res_config_settings_view_form
+msgid ""
+"Automatically create and post a Vendor Bill when a purchase receipt is "
+"validated, and a Credit Note when a purchase return is validated. Can be "
+"overridden per vendor."
+msgstr ""
+"Automatski kreiraj i knjiži račun dobavljača kada je primka nabave "
+"validirana i odobrenje kada je povrat nabave validiran. Može se nadjačati po"
+" dobavljaču."
+
+#. module: purchase_auto_bill_on_receipt
+#: model:ir.model.fields,field_description:purchase_auto_bill_on_receipt.field_purchase_order__block_auto_bill
+msgid "Block Auto Bill"
+msgstr "Blokiraj automatski račun"
+
+#. module: purchase_auto_bill_on_receipt
+#: model:ir.model,name:purchase_auto_bill_on_receipt.model_res_company
+msgid "Companies"
+msgstr "Tvrtke"
+
+#. module: purchase_auto_bill_on_receipt
+#: model:ir.model,name:purchase_auto_bill_on_receipt.model_res_partner
+msgid "Contact"
+msgstr "Kontakt"
+
+#. module: purchase_auto_bill_on_receipt
+#: model:ir.model.fields,field_description:purchase_auto_bill_on_receipt.field_purchase_order__display_name
+#: model:ir.model.fields,field_description:purchase_auto_bill_on_receipt.field_res_company__display_name
+#: model:ir.model.fields,field_description:purchase_auto_bill_on_receipt.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:purchase_auto_bill_on_receipt.field_res_partner__display_name
+#: model:ir.model.fields,field_description:purchase_auto_bill_on_receipt.field_stock_picking__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: purchase_auto_bill_on_receipt
+#: model:ir.model.fields,field_description:purchase_auto_bill_on_receipt.field_purchase_order__id
+#: model:ir.model.fields,field_description:purchase_auto_bill_on_receipt.field_res_company__id
+#: model:ir.model.fields,field_description:purchase_auto_bill_on_receipt.field_res_config_settings__id
+#: model:ir.model.fields,field_description:purchase_auto_bill_on_receipt.field_res_partner__id
+#: model:ir.model.fields,field_description:purchase_auto_bill_on_receipt.field_stock_picking__id
+msgid "ID"
+msgstr "ID"
+
+#. module: purchase_auto_bill_on_receipt
+#: model:ir.model.fields.selection,name:purchase_auto_bill_on_receipt.selection__res_partner__auto_bill_on_receipt__no_auto
+msgid "No Auto Bill"
+msgstr ""
+
+#. module: purchase_auto_bill_on_receipt
+#: model:ir.model.fields,help:purchase_auto_bill_on_receipt.field_res_partner__auto_bill_on_receipt
+#: model:ir.model.fields,help:purchase_auto_bill_on_receipt.field_res_users__auto_bill_on_receipt
+msgid ""
+"Override the company default for auto-billing on purchase receipt. Leave "
+"empty to inherit the company setting."
+msgstr ""
+
+#. module: purchase_auto_bill_on_receipt
+#: model:ir.model,name:purchase_auto_bill_on_receipt.model_res_config_settings
+msgid "Procurement purchase grouping settings"
+msgstr "Postavke grupiranja nabave"
+
+#. module: purchase_auto_bill_on_receipt
+#: model:ir.model,name:purchase_auto_bill_on_receipt.model_purchase_order
+msgid "Purchase Order"
+msgstr "Nabavni nalog"
+
+#. module: purchase_auto_bill_on_receipt
+#: model:ir.actions.server,name:purchase_auto_bill_on_receipt.ir_cron_auto_bill_ir_actions_server
+msgid "Purchase: Auto Bill on Receipt"
+msgstr ""
+
+#. module: purchase_auto_bill_on_receipt
+#: model:ir.model.fields,help:purchase_auto_bill_on_receipt.field_stock_picking__auto_bill_pending
+msgid ""
+"Set when a validated receipt or return is queued for auto-billing. The "
+"scheduled action picks it up to create and post the Vendor Bill or Credit "
+"Note."
+msgstr ""
+
+#. module: purchase_auto_bill_on_receipt
+#: model:ir.model,name:purchase_auto_bill_on_receipt.model_stock_picking
+msgid "Transfer"
+msgstr "Prijenos"
+
+#. module: purchase_auto_bill_on_receipt
+#: model:ir.model.fields,help:purchase_auto_bill_on_receipt.field_purchase_order__block_auto_bill
+msgid ""
+"When enabled, suppresses automatic bill creation on receipt for this order, "
+"regardless of the company or vendor settings."
+msgstr ""
+
+#. module: purchase_auto_bill_on_receipt
+#: model:ir.model.fields,help:purchase_auto_bill_on_receipt.field_res_company__auto_bill_on_receipt
+#: model:ir.model.fields,help:purchase_auto_bill_on_receipt.field_res_config_settings__auto_bill_on_receipt
+msgid ""
+"When enabled, validating an incoming purchase receipt automatically creates "
+"and posts a Vendor Bill. This is the default for all vendors and can be "
+"overridden per vendor."
+msgstr ""
+
+#. module: purchase_auto_bill_on_receipt
+#. odoo-python
+#: code:addons/purchase_auto_bill_on_receipt/models/purchase_order.py:0
+msgid "bill"
+msgstr "račun"
+
+#. module: purchase_auto_bill_on_receipt
+#. odoo-python
+#: code:addons/purchase_auto_bill_on_receipt/models/purchase_order.py:0
+msgid "credit note"
+msgstr "odobrenje"
+
+#. module: purchase_auto_bill_on_receipt
+#. odoo-python
+#: code:addons/purchase_auto_bill_on_receipt/models/purchase_order.py:0
+msgid "receipt"
+msgstr "primka"
+
+#. module: purchase_auto_bill_on_receipt
+#. odoo-python
+#: code:addons/purchase_auto_bill_on_receipt/models/purchase_order.py:0
+msgid "return"
+msgstr "vrati"

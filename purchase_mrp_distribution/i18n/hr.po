@@ -1,0 +1,198 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* purchase_mrp_distribution
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: purchase_mrp_distribution
+#: model_terms:ir.ui.view,arch_db:purchase_mrp_distribution.mrp_bom_form_view
+msgid ""
+"A BoM of type distribution is used to select the quantities of components."
+msgstr ""
+"Sastavnica vrste distribucija koristi se za odabir količina komponenti."
+
+#. module: purchase_mrp_distribution
+#: model_terms:ir.ui.view,arch_db:purchase_mrp_distribution.mrp_bom_form_view
+msgid "At a Stock Transfer."
+msgstr "Pri prijenosu zaliha."
+
+#. module: purchase_mrp_distribution
+#: model:ir.model,name:purchase_mrp_distribution.model_mrp_bom
+msgid "Bill of Material"
+msgstr "Sastavnica materijala"
+
+#. module: purchase_mrp_distribution
+#: model:ir.model.fields,field_description:purchase_mrp_distribution.field_mrp_bom__type
+msgid "BoM Type"
+msgstr "Tip sastavnice"
+
+#. module: purchase_mrp_distribution
+#: model_terms:ir.ui.view,arch_db:purchase_mrp_distribution.stock_move_distribution_wiz_form
+msgid "Cancel"
+msgstr "Odustani"
+
+#. module: purchase_mrp_distribution
+#: model:ir.model.fields,field_description:purchase_mrp_distribution.field_stock_move_distribution_wiz_line__company_id
+msgid "Company"
+msgstr "Tvrtka"
+
+#. module: purchase_mrp_distribution
+#: model:ir.model.fields,field_description:purchase_mrp_distribution.field_stock_move_distribution_wiz__create_uid
+#: model:ir.model.fields,field_description:purchase_mrp_distribution.field_stock_move_distribution_wiz_line__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: purchase_mrp_distribution
+#: model:ir.model.fields,field_description:purchase_mrp_distribution.field_stock_move_distribution_wiz__create_date
+#: model:ir.model.fields,field_description:purchase_mrp_distribution.field_stock_move_distribution_wiz_line__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: purchase_mrp_distribution
+#: model:ir.model.fields,field_description:purchase_mrp_distribution.field_stock_move_distribution_wiz__demand_quantity
+msgid "Demand"
+msgstr "Zahtjevajte"
+
+#. module: purchase_mrp_distribution
+#: model:ir.model.fields,field_description:purchase_mrp_distribution.field_mrp_bom__display_name
+#: model:ir.model.fields,field_description:purchase_mrp_distribution.field_purchase_order_line__display_name
+#: model:ir.model.fields,field_description:purchase_mrp_distribution.field_stock_move__display_name
+#: model:ir.model.fields,field_description:purchase_mrp_distribution.field_stock_move_distribution_wiz__display_name
+#: model:ir.model.fields,field_description:purchase_mrp_distribution.field_stock_move_distribution_wiz_line__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: purchase_mrp_distribution
+#: model_terms:ir.ui.view,arch_db:purchase_mrp_distribution.stock_move_distribution_wiz_form
+msgid "Distribute"
+msgstr "Raspodijeli"
+
+#. module: purchase_mrp_distribution
+#: model_terms:ir.ui.view,arch_db:purchase_mrp_distribution.view_picking_form
+msgid "Distribute quantity"
+msgstr "Raspodijeli količinu"
+
+#. module: purchase_mrp_distribution
+#: model:ir.model.fields.selection,name:purchase_mrp_distribution.selection__mrp_bom__type__distribution
+msgid "Distribution"
+msgstr "Distribucija"
+
+#. module: purchase_mrp_distribution
+#: model:ir.model.fields,field_description:purchase_mrp_distribution.field_stock_move__distribution_bom_id
+msgid "Distribution Bom"
+msgstr "Distribucijska sastavnica"
+
+#. module: purchase_mrp_distribution
+#. odoo-python
+#: code:addons/purchase_mrp_distribution/models/stock_move.py:0
+msgid "Distribution for %s"
+msgstr "Raspodjela za %s"
+
+#. module: purchase_mrp_distribution
+#: model:ir.model.fields,field_description:purchase_mrp_distribution.field_mrp_bom__id
+#: model:ir.model.fields,field_description:purchase_mrp_distribution.field_purchase_order_line__id
+#: model:ir.model.fields,field_description:purchase_mrp_distribution.field_stock_move__id
+#: model:ir.model.fields,field_description:purchase_mrp_distribution.field_stock_move_distribution_wiz__id
+#: model:ir.model.fields,field_description:purchase_mrp_distribution.field_stock_move_distribution_wiz_line__id
+msgid "ID"
+msgstr "ID"
+
+#. module: purchase_mrp_distribution
+#: model:ir.model.fields,field_description:purchase_mrp_distribution.field_stock_move_distribution_wiz__write_uid
+#: model:ir.model.fields,field_description:purchase_mrp_distribution.field_stock_move_distribution_wiz_line__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: purchase_mrp_distribution
+#: model:ir.model.fields,field_description:purchase_mrp_distribution.field_stock_move_distribution_wiz__write_date
+#: model:ir.model.fields,field_description:purchase_mrp_distribution.field_stock_move_distribution_wiz_line__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: purchase_mrp_distribution
+#: model:ir.model.fields,field_description:purchase_mrp_distribution.field_stock_move_distribution_wiz__line_ids
+msgid "Line"
+msgstr "Stavka"
+
+#. module: purchase_mrp_distribution
+#: model:ir.model,name:purchase_mrp_distribution.model_stock_move_distribution_wiz_line
+msgid "Lines of wizard to distribute product qty to diferent products"
+msgstr ""
+
+#. module: purchase_mrp_distribution
+#: model:ir.model.fields,field_description:purchase_mrp_distribution.field_stock_move_distribution_wiz_line__lot_id
+msgid "Lot"
+msgstr "Serija"
+
+#. module: purchase_mrp_distribution
+#: model:ir.model.fields,field_description:purchase_mrp_distribution.field_stock_move_distribution_wiz__move_id
+msgid "Move"
+msgstr "Kretanje"
+
+#. module: purchase_mrp_distribution
+#: model:ir.model.fields,field_description:purchase_mrp_distribution.field_stock_move_distribution_wiz_line__package_id
+msgid "Package"
+msgstr "Paket"
+
+#. module: purchase_mrp_distribution
+#: model:ir.model.fields,field_description:purchase_mrp_distribution.field_stock_move_distribution_wiz_line__product_id
+msgid "Product"
+msgstr "Proizvod"
+
+#. module: purchase_mrp_distribution
+#: model:ir.model,name:purchase_mrp_distribution.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "Stavka nabavnog naloga"
+
+#. module: purchase_mrp_distribution
+#: model:ir.model.fields,field_description:purchase_mrp_distribution.field_stock_move_distribution_wiz_line__quantity
+msgid "Quantity"
+msgstr "Količina"
+
+#. module: purchase_mrp_distribution
+#: model:ir.model,name:purchase_mrp_distribution.model_stock_move
+msgid "Stock Move"
+msgstr "Skladišni prijenos"
+
+#. module: purchase_mrp_distribution
+#: model:ir.model.fields,help:purchase_mrp_distribution.field_stock_move_distribution_wiz__demand_quantity
+msgid ""
+"This is the quantity of product that is planned to be moved.Lowering this "
+"quantity does not generate a backorder.Changing this quantity on assigned "
+"moves affects the product reservation, and should be done with care."
+msgstr ""
+"Ovo je količina proizvoda koju je planirano premjestiti. Smanjenje ove "
+"količine ne generira zaostalu narudžbu. Promjena ove količine na "
+"dodijeljenim kretanjima utječe na rezervaciju proizvoda i treba se obaviti s"
+" oprezom."
+
+#. module: purchase_mrp_distribution
+#: model:ir.model.fields,field_description:purchase_mrp_distribution.field_stock_move_distribution_wiz__move_uom_id
+msgid "Unit"
+msgstr "Jedinica mjere"
+
+#. module: purchase_mrp_distribution
+#: model:ir.model.fields,field_description:purchase_mrp_distribution.field_stock_move_distribution_wiz_line__uom_id
+msgid "Uom"
+msgstr "JM"
+
+#. module: purchase_mrp_distribution
+#: model:ir.model.fields,field_description:purchase_mrp_distribution.field_stock_move_distribution_wiz_line__wizard_id
+msgid "Wizard"
+msgstr "Čarobnjak"
+
+#. module: purchase_mrp_distribution
+#: model:ir.model,name:purchase_mrp_distribution.model_stock_move_distribution_wiz
+msgid "Wizard to distribute product qty to diferent products"
+msgstr ""

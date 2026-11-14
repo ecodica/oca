@@ -1,0 +1,2484 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pms_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__meeting_count
+msgid "# Meetings"
+msgstr "# Sastanaka"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__supplier_invoice_count
+msgid "# Vendor Bills"
+msgstr "Ulazni računi"
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_team_kanban
+msgid ""
+"<br/>\n"
+"                                        Properties"
+msgstr ""
+"<br/>\n"
+"                                        Svojstva"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__account_move_count
+msgid "Account Move Count"
+msgstr "Broj premještanja računa"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__property_account_payable_id
+msgid "Account Payable"
+msgstr "Konto obveze"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__property_account_receivable_id
+msgid "Account Receivable"
+msgstr "Konto potraživanja"
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Accounting"
+msgstr "Računovodstvo"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__message_needaction
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__message_needaction
+msgid "Action Needed"
+msgstr "Potrebna radnja"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_amenity__active
+#: model:ir.model.fields,field_description:pms_base.field_pms_amenity_type__active
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__active
+#: model:ir.model.fields,field_description:pms_base.field_pms_room__active
+#: model:ir.model.fields,field_description:pms_base.field_pms_service__active
+#: model:ir.model.fields,field_description:pms_base.field_pms_stage__active
+msgid "Active"
+msgstr "Aktivno"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__active_lang_count
+msgid "Active Lang Count"
+msgstr "Broj aktivnih jezika"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__activity_ids
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__activity_ids
+msgid "Activities"
+msgstr "Aktivnosti"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__activity_exception_decoration
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Ukras iznimke aktivnosti"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__activity_state
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__activity_state
+msgid "Activity State"
+msgstr "Status aktivnosti"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__activity_type_icon
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Ikona vrste aktivnosti"
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_property_form
+msgid "Address"
+msgstr "Adresa"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__type
+msgid "Address Type"
+msgstr "Vrsta adrese"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__type_address_label
+msgid "Address Type Description"
+msgstr "Vrsta adrese Opis"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__lang
+msgid ""
+"All the emails and documents sent to this contact will be translated in this"
+" language."
+msgstr ""
+"Sva e-pošta i dokumentacija poslani ovom kontaktu biti će prevedeni na ovaj "
+"jezik."
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Allow customers to book reservations online"
+msgstr "Dopusti kupcima online rezervacije"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_res_config_settings__module_pms_website_sale
+msgid "Allow online booking"
+msgstr "Dopusti online rezervaciju"
+
+#. module: pms_base
+#: model:ir.actions.act_window,name:pms_base.action_pms_amenity
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__amenity_ids
+#: model:ir.ui.menu,name:pms_base.menu_pms_data_amenity
+#: model_terms:ir.ui.view,arch_db:pms_base.pms_amenity_view_tree
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_amenity_form
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_amenity_search
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_property_form
+msgid "Amenities"
+msgstr "Sadržaji"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__amenity_ids
+msgid "Amenities available in this property"
+msgstr "Sadržaji dostupni u ovoj nekretnini"
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_amenity_form
+msgid "Amenity"
+msgstr "Sadržaj"
+
+#. module: pms_base
+#: model:ir.model,name:pms_base.model_pms_amenity_type
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_room_amenity_type_form
+msgid "Amenity Type"
+msgstr "Vrsta sadržaja"
+
+#. module: pms_base
+#: model:ir.actions.act_window,name:pms_base.action_pms_amenity_type
+#: model:ir.ui.menu,name:pms_base.menu_pms_config_property_amenity_type
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_amenity_type_tree
+msgid "Amenity Types"
+msgstr "Vrste sadržaja"
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_room_form
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_service_form
+msgid "Archive"
+msgstr "Arhiviraj"
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_property_search
+msgid "Archived"
+msgstr "Arhivirano"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__area
+#: model:ir.model.fields,field_description:pms_base.field_pms_room__area
+msgid "Area"
+msgstr "Područje"
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Area (UoM)"
+msgstr "Površina (JM)"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__message_attachment_count
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__message_attachment_count
+msgid "Attachment Count"
+msgstr "Broj privitaka"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__autopost_bills
+msgid "Auto-post bills"
+msgstr "Automatski knjiži račune"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__autopost_bills
+msgid "Automatically post bills for this trusted partner"
+msgstr "Automatski knjižite račune za ovog pouzdanog partnera"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__receipt_reminder_email
+msgid ""
+"Automatically send a confirmation email to the vendor X days before the "
+"expected receipt date, asking him to confirm the exact date."
+msgstr ""
+"Automatski pošaljite e-mail s potvrdom dobavljaču X dana prije očekivanog "
+"datuma primitka, u kojem se od njega traži potvrda točnog datuma."
+
+#. module: pms_base
+#: model:pms.stage,name:pms_base.pms_stage_available
+msgid "Available"
+msgstr "Dostupno"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__available_invoice_template_pdf_report_ids
+msgid "Available Invoice Template Pdf Report"
+msgstr "Dostupni predložak računa u PDF formatu"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__avatar_1920
+msgid "Avatar"
+msgstr "Avatar"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__avatar_1024
+msgid "Avatar 1024"
+msgstr "Avatar 1024"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__avatar_128
+msgid "Avatar 128"
+msgstr "Avatar 128"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__avatar_256
+msgid "Avatar 256"
+msgstr "Avatar 256"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__avatar_512
+msgid "Avatar 512"
+msgstr "Avatar 512"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__balcony
+#: model:pms.room.type,name:pms_base.pms_room_type_balcony
+msgid "Balcony"
+msgstr "Balkon"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__bank_account_count
+msgid "Bank"
+msgstr "Banka"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__bank_ids
+msgid "Banks"
+msgstr "Banke"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__barcode
+msgid "Barcode"
+msgstr "Barkod"
+
+#. module: pms_base
+#: model:pms.room.type,name:pms_base.pms_room_type_basement
+msgid "Basement"
+msgstr "Podrum"
+
+#. module: pms_base
+#: model:pms.room.type,name:pms_base.pms_room_type_bath
+msgid "Bathroom"
+msgstr "Kupaonica"
+
+#. module: pms_base
+#: model:pms.room.type,name:pms_base.pms_room_type_bed
+msgid "Bedroom"
+msgstr "Spavaća soba"
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_property_form
+msgid "Bedroom(s)"
+msgstr "Spavaća(e) soba(e)"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__is_blacklisted
+msgid "Blacklist"
+msgstr "Crna lista"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__phone_blacklisted
+msgid "Blacklisted Phone is Phone"
+msgstr "Brojevi na crnoj listi su telefonski"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__message_bounce
+msgid "Bounce"
+msgstr "Odbij"
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_property_search
+msgid "Building"
+msgstr "Zgrada"
+
+#. module: pms_base
+#: model:ir.model.fields.selection,name:pms_base.selection__pms_property__heating__boiler_building
+msgid "Building Boiler"
+msgstr "Kotao zgrade"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__buyer_id
+msgid "Buyer"
+msgstr "Kupac"
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "CRM"
+msgstr "CRM"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__can_publish
+msgid "Can Publish"
+msgstr "Može objaviti"
+
+#. module: pms_base
+#: model:pms.stage,name:pms_base.pms_stage_cancelled
+msgid "Cancelled"
+msgstr "Otkazano"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_room__capacity
+msgid "Capacity"
+msgstr "Kapacitet"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__channel_member_ids
+msgid "Channel Member"
+msgstr "Član kanala"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__channel_ids
+msgid "Channels"
+msgstr "Kanali prodaje"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__is_company
+msgid "Check if the contact is a company, otherwise it is a person"
+msgstr "Označite ako je kontakt Tvrtka, u suprotnom smatra se osobom"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__employee
+msgid "Check this box if this contact is an Employee."
+msgstr "Ovo polje označite ako je kontakt ujedno i djelatnik"
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_property_form
+msgid "Child Property"
+msgstr "Podređena nekretnina"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__childs_property_count
+msgid "Children Count"
+msgstr "Broj podređenih"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__property_child_ids
+msgid "Children Property"
+msgstr "Podređene nekretnine"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__city
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_property_form
+msgid "City"
+msgstr "Grad"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_stage__custom_color
+msgid "Color Code"
+msgstr "Šifra boje"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__color
+#: model:ir.model.fields,field_description:pms_base.field_pms_tag__color
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__color
+msgid "Color Index"
+msgstr "Indeks boje"
+
+#. module: pms_base
+#. odoo-python
+#: code:addons/pms_base/models/pms_stage.py:0
+msgid "Color code should be Hex Code. Ex:-#FFFFFF"
+msgstr "Šifra boje treba biti heksadekadska. Npr. -#FFFFFF"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__commercial_partner_id
+msgid "Commercial Entity"
+msgstr "Poslovni entitet"
+
+#. module: pms_base
+#: model:ir.model,name:pms_base.model_res_company
+msgid "Companies"
+msgstr "Tvrtke"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__ref_company_ids
+msgid "Companies that refers to partner"
+msgstr "Tvrtke koje su vezane s partnerom"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__company_id
+#: model:ir.model.fields,field_description:pms_base.field_pms_stage__company_id
+#: model:ir.model.fields,field_description:pms_base.field_pms_tag__company_id
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__company_id
+msgid "Company"
+msgstr "Tvrtka"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__company_registry
+msgid "Company ID"
+msgstr "OIB"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__company_registry_label
+msgid "Company ID Label"
+msgstr "Oznaka ID tvrtke"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__company_name
+msgid "Company Name"
+msgstr "Tvrtka"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__commercial_company_name
+msgid "Company Name Entity"
+msgstr "Entitet naziva tvrtke"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__company_registry_placeholder
+msgid "Company Registry Placeholder"
+msgstr "Rezervirano mjesto OIB-a tvrtke"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__company_type
+msgid "Company Type"
+msgstr "Vrsta tvrtke"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_tag__company_id
+msgid "Company related to this tag"
+msgstr "Tvrtka povezana s ovom oznakom"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_team__company_id
+msgid "Company related to this team"
+msgstr "Tvrtka povezana s ovim timom"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__contact_address
+msgid "Complete Address"
+msgstr "Puna adresa"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__complete_name
+msgid "Complete Name"
+msgstr "Puni naziv"
+
+#. module: pms_base
+#: model:pms.room.type,name:pms_base.pms_room_type_4
+msgid "Conference Room"
+msgstr "Konferencijska soba"
+
+#. module: pms_base
+#: model:ir.model,name:pms_base.model_res_config_settings
+msgid "Config Settings"
+msgstr "Postavke"
+
+#. module: pms_base
+#: model:ir.ui.menu,name:pms_base.menu_config
+msgid "Configuration"
+msgstr "Konfiguracija"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_res_config_settings__module_connector_guesty
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Connect with Guesty"
+msgstr "Poveži se s Guesty"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_res_config_settings__module_connector_wubook
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Connect with Wubook"
+msgstr "Poveži se s Wubook"
+
+#. module: pms_base
+#: model:pms.amenity.type,name:pms_base.pms_amenity_type_1
+msgid "Connectivity"
+msgstr "Povezivost"
+
+#. module: pms_base
+#: model:ir.model,name:pms_base.model_res_partner
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__child_ids
+msgid "Contact"
+msgstr "Kontakt"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__contract_ids
+msgid "Contracts"
+msgstr "Ugovori"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__message_bounce
+msgid "Counter of the number of bounced emails for this contact"
+msgstr "Broj odbačenih e-mail poruka ovog kontakta"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__country_id
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_property_form
+msgid "Country"
+msgstr "Država"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__country_code
+msgid "Country Code"
+msgstr "Šifra države"
+
+#. module: pms_base
+#: model:ir.model,website_form_label:pms_base.model_res_partner
+msgid "Create a Customer"
+msgstr "Kreiraj kupca"
+
+#. module: pms_base
+#: model_terms:ir.actions.act_window,help:pms_base.action_pms_tag
+msgid "Create a tag."
+msgstr "Kreiraj oznaku."
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_amenity__create_uid
+#: model:ir.model.fields,field_description:pms_base.field_pms_amenity_type__create_uid
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__create_uid
+#: model:ir.model.fields,field_description:pms_base.field_pms_room__create_uid
+#: model:ir.model.fields,field_description:pms_base.field_pms_room_type__create_uid
+#: model:ir.model.fields,field_description:pms_base.field_pms_service__create_uid
+#: model:ir.model.fields,field_description:pms_base.field_pms_stage__create_uid
+#: model:ir.model.fields,field_description:pms_base.field_pms_tag__create_uid
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_amenity__create_date
+#: model:ir.model.fields,field_description:pms_base.field_pms_amenity_type__create_date
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__create_date
+#: model:ir.model.fields,field_description:pms_base.field_pms_room__create_date
+#: model:ir.model.fields,field_description:pms_base.field_pms_room_type__create_date
+#: model:ir.model.fields,field_description:pms_base.field_pms_service__create_date
+#: model:ir.model.fields,field_description:pms_base.field_pms_stage__create_date
+#: model:ir.model.fields,field_description:pms_base.field_pms_tag__create_date
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__credit_limit
+msgid "Credit Limit"
+msgstr "Kreditno ograničenje"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__credit_to_invoice
+msgid "Credit To Invoice"
+msgstr "Kredit na račun"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__credit_limit
+msgid "Credit limit specific to this partner."
+msgstr "Kreditno ograničenje specifično za ovog partnera."
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__currency_id
+msgid "Currency"
+msgstr "Valuta"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__partner_id
+msgid "Current property"
+msgstr "Trenutna nekretnina"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__property_stock_customer
+msgid "Customer Location"
+msgstr "Lokacija kupca"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__property_payment_term_id
+msgid "Customer Payment Terms"
+msgstr "Uvjeti plaćanja kupca"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__customer_rank
+msgid "Customer Rank"
+msgstr "Rank kupca"
+
+#. module: pms_base
+#: model:ir.ui.menu,name:pms_base.menu_board
+msgid "Dashboard"
+msgstr "Nadzorna ploča"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__reminder_date_before_receipt
+msgid "Days Before Receipt"
+msgstr "Dani prije računa"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__days_sales_outstanding
+msgid "Days Sales Outstanding (DSO)"
+msgstr "Dani prodaje nepodmireni (DSO)"
+
+#. module: pms_base
+#: model:pms.team,name:pms_base.pms_team_default
+msgid "Default Team"
+msgstr "Zadani tim"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__group_rfq
+msgid ""
+"Define if RFQ should be grouped         together based on expected arrival, except for dropship operations.\n"
+"         On Order: Replenishment needs will be grouped together except for MTO.\n"
+"         Daily: Replenishment needs will be grouped if the expected arrival is the same day\n"
+"         Weekly: Replenishment needs will be grouped if the expected arrival is the same week or week day\n"
+"         Always: Replenishment needs will always be grouped."
+msgstr ""
+"Definirajte trebaju li se zahtjevi za ponudu grupirati         zajedno na temelju očekivanog dolaska, osim za dropship operacije.\n"
+"         Po nalogu: potrebe za nadopunom grupirat će se zajedno osim za proizvodnju po narudžbi.\n"
+"         Dnevno: potrebe za nadopunom grupirat će se ako je očekivani dolazak isti dan\n"
+"         Tjedno: potrebe za nadopunom grupirat će se ako je očekivani dolazak isti tjedan ili dan u tjednu\n"
+"         Uvijek: potrebe za nadopunom uvijek će se grupirati."
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Define your unit of measure when entering area"
+msgstr "Definirajte jedinicu mjere pri unosu površine"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__trust
+msgid "Degree of trust you have in this debtor"
+msgstr "Stupanj povjerenja koji imate prema ovom kupcu"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__property_delivery_carrier_id
+msgid "Delivery Method"
+msgstr "Način dostave"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_stage__description
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__description
+msgid "Description"
+msgstr "Opis"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_amenity__active
+msgid "Determines if amenity is active"
+msgstr "Određuje je li sadržaj aktivan"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_amenity_type__active
+msgid "Determines if amenity type is active"
+msgstr "Određuje je li vrsta sadržaja aktivna"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_room__active
+msgid "Determines if room is active"
+msgstr "Određuje je li soba aktivna"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_service__active
+msgid "Determines if service is active"
+msgstr "Određuje je li usluga aktivna"
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_property_form
+msgid "Dining Room(s)"
+msgstr "Blagovaonica(e)"
+
+#. module: pms_base
+#: model:pms.room.type,name:pms_base.pms_room_type_dining
+msgid "Diningroom"
+msgstr "Blagovaonica"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__display_invoice_edi_format
+msgid "Display Invoice Edi Format"
+msgstr "Prikaži EDI format računa"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__display_invoice_template_pdf_report_id
+msgid "Display Invoice Template Pdf Report"
+msgstr "Prikaži PDF izvješće predloška računa"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_amenity__display_name
+#: model:ir.model.fields,field_description:pms_base.field_pms_amenity_type__display_name
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__display_name
+#: model:ir.model.fields,field_description:pms_base.field_pms_room__display_name
+#: model:ir.model.fields,field_description:pms_base.field_pms_room_type__display_name
+#: model:ir.model.fields,field_description:pms_base.field_pms_service__display_name
+#: model:ir.model.fields,field_description:pms_base.field_pms_stage__display_name
+#: model:ir.model.fields,field_description:pms_base.field_pms_tag__display_name
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__display_name
+#: model:ir.model.fields,field_description:pms_base.field_res_company__display_name
+#: model:ir.model.fields,field_description:pms_base.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:pms_base.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: pms_base
+#: model:pms.room.type,name:pms_base.pms_room_type_2
+msgid "Double"
+msgstr "Dvostruko"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__duplicate_bank_partner_ids
+msgid "Duplicate Bank Partner"
+msgstr "Duplicirani bankovni partner"
+
+#. module: pms_base
+#: model:pms.room.type,name:pms_base.pms_room_type_0
+msgid "Economic"
+msgstr "Ekonomski"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__partner_share
+msgid ""
+"Either customer (not a user), either shared user. Indicated the current "
+"partner is a customer without access or with a limited access created for "
+"sharing data."
+msgstr ""
+"Ili kupac (ne korisnik), ili zajednički korisnik. Navedeno da je trenutni "
+"partner klijent bez pristupa ili s ograničenim pristupom stvorenim za "
+"dijeljenje podataka."
+
+#. module: pms_base
+#: model:ir.model.fields.selection,name:pms_base.selection__pms_property__heating__tankless_electric
+msgid "Electric (Tankless)"
+msgstr "Električni (bez spremnika)"
+
+#. module: pms_base
+#: model:ir.model.fields.selection,name:pms_base.selection__pms_property__heating__boiler_electric
+msgid "Electric Boiler"
+msgstr "Električni kotao"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__email
+msgid "Email"
+msgstr "E-pošta"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__employee
+msgid "Employee"
+msgstr "Zaposlenik"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_room__sequence
+#: model:ir.model.fields,help:pms_base.field_pms_service__sequence
+msgid ""
+"Field used to change the position of the rooms in tree view.Changing the "
+"position changes the sequence"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__phone_sanitized
+msgid ""
+"Field used to store sanitized phone number. Helps speeding up searches and "
+"comparisons."
+msgstr ""
+"Polje za pohranu normaliziranog broja telefona. Ubrzava pretraživanje i "
+"usporedbe."
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__fiscal_country_codes
+msgid "Fiscal Country Codes"
+msgstr "Fiskalni kodovi zemalja"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__fiscal_country_group_codes
+msgid "Fiscal Country Group Codes"
+msgstr "Fiskalni kodovi grupa zemalja"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__property_account_position_id
+msgid "Fiscal Position"
+msgstr "Fiskalna pozicija"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__floors_num
+msgid "Floor"
+msgstr "Nivo"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_stage__fold
+msgid "Folded in Kanban"
+msgstr "Zatvoreno u kanbanu"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__message_follower_ids
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__message_follower_ids
+msgid "Followers"
+msgstr "Pratitelji"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__message_partner_ids
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Pratitelji (partneri)"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__activity_type_icon
+#: model:ir.model.fields,help:pms_base.field_pms_team__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Font awesome ikona npr. fa-tasks"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__email_formatted
+msgid "Format email address \"Name <email@domain>\""
+msgstr "Format email adrese \"Naziv <email@domena>\""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__email_formatted
+msgid "Formatted Email"
+msgstr "Oblikovani e-mail"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_tag__full_name
+msgid "Full Name"
+msgstr "Puno ime"
+
+#. module: pms_base
+#: model:pms.room.type,name:pms_base.pms_room_type_garage
+msgid "Garage"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields.selection,name:pms_base.selection__pms_property__heating__tankless_gas
+msgid "Gas (Tankless)"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields.selection,name:pms_base.selection__pms_property__heating__boiler_gas
+msgid "Gas Boiler"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__partner_latitude
+msgid "Geo Latitude"
+msgstr "Geografska širina"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__partner_longitude
+msgid "Geo Longitude"
+msgstr "Geografska duljina"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__date_localization
+msgid "Geolocation Date"
+msgstr "Datum geolociranja"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__group_rfq
+msgid "Group RFQ"
+msgstr "Grupiraj zahtjeve za ponudu"
+
+#. module: pms_base
+#: model:pms.room.type,name:pms_base.pms_room_type_half_bath
+msgid "Half Bathroom"
+msgstr ""
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_property_form
+msgid "Half Bathroom(s)"
+msgstr ""
+
+#. module: pms_base
+#: model:pms.room.type,name:pms_base.pms_room_type_hall
+msgid "Hall"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__has_message
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__has_message
+msgid "Has Message"
+msgstr "Ima poruku"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__heating
+msgid "Heating"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_amenity__id
+#: model:ir.model.fields,field_description:pms_base.field_pms_amenity_type__id
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__id
+#: model:ir.model.fields,field_description:pms_base.field_pms_room__id
+#: model:ir.model.fields,field_description:pms_base.field_pms_room_type__id
+#: model:ir.model.fields,field_description:pms_base.field_pms_service__id
+#: model:ir.model.fields,field_description:pms_base.field_pms_stage__id
+#: model:ir.model.fields,field_description:pms_base.field_pms_tag__id
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__id
+#: model:ir.model.fields,field_description:pms_base.field_res_company__id
+#: model:ir.model.fields,field_description:pms_base.field_res_config_settings__id
+#: model:ir.model.fields,field_description:pms_base.field_res_partner__id
+msgid "ID"
+msgstr "ID"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__im_status
+msgid "IM Status"
+msgstr "IM Status"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__activity_exception_icon
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__activity_exception_icon
+msgid "Icon"
+msgstr "Ikona"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__activity_exception_icon
+#: model:ir.model.fields,help:pms_base.field_pms_team__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Ikona koja označava iznimnu aktivnost."
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__message_needaction
+#: model:ir.model.fields,help:pms_base.field_pms_team__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Ako je označeno, nove poruke zahtijevaju vašu pažnju."
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__message_has_error
+#: model:ir.model.fields,help:pms_base.field_pms_team__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Ako je označeno, neke poruke imaju grešku u dostavi."
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__is_blacklisted
+msgid ""
+"If the email address is on the blacklist, the contact won't receive mass "
+"mailing anymore, from any list"
+msgstr ""
+"Ako je adresa e-pošte na crnoj listi, kontakt više neće primati masovnu "
+"poštu, ni s jedne liste"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__phone_sanitized_blacklisted
+msgid ""
+"If the sanitized phone number is on the blacklist, the contact won't receive"
+" mass mailing sms anymore, from any list"
+msgstr ""
+"Ako je telefonski broj na crnoj listi, kontakt više neće primati SMS poruke "
+"iz masovnih kampanja, s bilo kojeg popisa."
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__ignore_abnormal_invoice_amount
+msgid "Ignore Abnormal Invoice Amount"
+msgstr "Ignoriraj abnormalan iznos na računu"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__ignore_abnormal_invoice_date
+msgid "Ignore Abnormal Invoice Date"
+msgstr "Ignoriraj abnormalan datum računa"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__image_1920
+msgid "Image"
+msgstr "Slika"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__image_1024
+msgid "Image 1024"
+msgstr "Slika 1024"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__image_128
+msgid "Image 128"
+msgstr "Slika 128"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__image_256
+msgid "Image 256"
+msgstr "Slika 256"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__image_512
+msgid "Image 512"
+msgstr "Slika 512"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__phone_blacklisted
+msgid ""
+"Indicates if a blacklisted sanitized phone number is a phone number. Helps "
+"distinguish which number is blacklisted             when there is both a "
+"mobile and phone field in a model."
+msgstr ""
+"Označava je li blokirani normalizirani broj telefona telefonski broj. Pomaže"
+" razlikovati koji je broj na crnoj listi kada model ima i mobilno i "
+"telefonsko polje."
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__industry_id
+msgid "Industry"
+msgstr "Industrija"
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_property_form
+msgid "Information"
+msgstr "Informacija"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__contact_address_inline
+msgid "Inlined Complete Address"
+msgstr "Potpuna adresa u jednom retku"
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Integrations"
+msgstr "Integracije"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_amenity__default_code
+msgid "Internal Reference"
+msgstr "Interna oznaka"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_amenity__default_code
+msgid "Internal unique identifier of the amenity"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__invoice_edi_format_store
+msgid "Invoice Edi Format Store"
+msgstr "Format za spremanje EDI računa"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__invoice_template_pdf_report_id
+msgid "Invoice report"
+msgstr "Izvješće računa"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__invoice_sending_method
+msgid "Invoice sending"
+msgstr "Slanje računa"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__invoice_ids
+msgid "Invoices"
+msgstr "Računi"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__message_is_follower
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__message_is_follower
+msgid "Is Follower"
+msgstr "Je pratitelj"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__is_in_call
+msgid "Is In Call"
+msgstr "Je u pozivu"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__is_pickup_location
+msgid "Is Pickup Location"
+msgstr "Je lokacija preuzimanja"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__is_public
+msgid "Is Public"
+msgstr "Je javno"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__is_published
+msgid "Is Published"
+msgstr "je objavljeno"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__is_company
+msgid "Is a Company"
+msgstr "je tvrtka"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__is_property
+#: model:ir.model.fields,field_description:pms_base.field_res_partner__is_property
+#: model:ir.model.fields,field_description:pms_base.field_res_users__is_property
+msgid "Is a Property"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_stage__is_closed
+msgid "Is a close stage"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_stage__is_default
+msgid "Is a default stage"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__function
+msgid "Job Position"
+msgstr "Radno mjesto"
+
+#. module: pms_base
+#: model:pms.room.type,name:pms_base.pms_room_type_kitchen
+msgid "Kitchen"
+msgstr ""
+
+#. module: pms_base
+#: model:pms.amenity.type,name:pms_base.pms_amenity_type_2
+msgid "Kitchen facilities"
+msgstr ""
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_property_form
+msgid "Kitchen(s)"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__lang
+msgid "Language"
+msgstr "Jezik"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_amenity__write_uid
+#: model:ir.model.fields,field_description:pms_base.field_pms_amenity_type__write_uid
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__write_uid
+#: model:ir.model.fields,field_description:pms_base.field_pms_room__write_uid
+#: model:ir.model.fields,field_description:pms_base.field_pms_room_type__write_uid
+#: model:ir.model.fields,field_description:pms_base.field_pms_service__write_uid
+#: model:ir.model.fields,field_description:pms_base.field_pms_stage__write_uid
+#: model:ir.model.fields,field_description:pms_base.field_pms_tag__write_uid
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_amenity__write_date
+#: model:ir.model.fields,field_description:pms_base.field_pms_amenity_type__write_date
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__write_date
+#: model:ir.model.fields,field_description:pms_base.field_pms_room__write_date
+#: model:ir.model.fields,field_description:pms_base.field_pms_room_type__write_date
+#: model:ir.model.fields,field_description:pms_base.field_pms_service__write_date
+#: model:ir.model.fields,field_description:pms_base.field_pms_stage__write_date
+#: model:ir.model.fields,field_description:pms_base.field_pms_tag__write_date
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__calendar_last_notif_ack
+msgid "Last notification marked as read from base Calendar"
+msgstr "Zadnje upozorenje označeno kao pročitano iz osnovnog kalendara"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__laundry_room
+#: model:pms.amenity.type,name:pms_base.pms_amenity_type_3
+#: model:pms.room.type,name:pms_base.pms_room_type_laundry
+msgid "Laundry Room"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_res_config_settings__module_pms_crm
+msgid "Link a property to a lead"
+msgstr ""
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Link a property to a stock location"
+msgstr ""
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Link projects and tasks to your properties"
+msgstr ""
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Link purchases to your properties"
+msgstr ""
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Link to Projects"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_res_config_settings__module_pms_project
+msgid "Link to Projects and Tasks"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_res_config_settings__module_pms_purchase
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Link to Purchases"
+msgstr ""
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Link your leads to a property"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__room_ids
+msgid "List of rooms in the property."
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__service_ids
+msgid "List of services available in the property."
+msgstr ""
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_property_form
+msgid "Living Rom(s)"
+msgstr ""
+
+#. module: pms_base
+#: model:pms.room.type,name:pms_base.pms_room_type_living
+msgid "Livingroom"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__main_user_id
+msgid "Main User"
+msgstr "Main User"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_res_config_settings__module_pms_account
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Manage Accounting"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_res_config_settings__module_pms_account_asset
+msgid "Manage Assets"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_res_config_settings__module_pms_stock
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Manage Content"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_res_config_settings__module_pms_contract
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Manage Contracts"
+msgstr ""
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Manage Depreciation and Amortization"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_res_config_settings__module_pms_sale
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Manage Reservations"
+msgstr ""
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Manage accounting related information"
+msgstr ""
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Manage amenities related to your properties"
+msgstr ""
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Manage assets related to your properties"
+msgstr ""
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Manage reservations"
+msgstr ""
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Manage rooms of your properties"
+msgstr ""
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Manage services available at your properties"
+msgstr ""
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Manage utility contracts and others recurring invoices/bills"
+msgstr ""
+
+#. module: pms_base
+#: model:res.groups,name:pms_base.group_pms_manager
+msgid "Manager"
+msgstr "Menadžer"
+
+#. module: pms_base
+#: model:ir.ui.menu,name:pms_base.menu_data
+msgid "Master Data"
+msgstr "Glavni podaci"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__meeting_ids
+msgid "Meetings"
+msgstr "Sastanci"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__message_has_error
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__message_has_error
+msgid "Message Delivery error"
+msgstr "Greška u dostavi poruke"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__purchase_warn_msg
+msgid "Message for Purchase Order"
+msgstr "Poruka za narudžbu (nabave)"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__sale_warn_msg
+msgid "Message for Sales Order"
+msgstr "Poruka za prodajni nalog"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__picking_warn_msg
+msgid "Message for Stock Picking"
+msgstr "Poruka za skladišnicu"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__message_ids
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__message_ids
+msgid "Messages"
+msgstr "Poruke"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__my_activity_date_deadline
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Rok moje aktivnosti"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_amenity__name
+#: model:ir.model.fields,field_description:pms_base.field_pms_amenity_type__name
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__name
+#: model:ir.model.fields,field_description:pms_base.field_pms_room_type__name
+#: model:ir.model.fields,field_description:pms_base.field_pms_stage__name
+#: model:ir.model.fields,field_description:pms_base.field_pms_tag__name
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__name
+msgid "Name"
+msgstr "Naziv"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_amenity__name
+msgid "Name of the amenity"
+msgstr ""
+
+#. module: pms_base
+#: model:pms.stage,name:pms_base.pms_stage_new
+msgid "New"
+msgstr "Novi"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__activity_calendar_event_id
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Događaj sljedećeg kalendara aktivnosti"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__activity_date_deadline
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Rok sljedeće aktivnosti"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__activity_summary
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__activity_summary
+msgid "Next Activity Summary"
+msgstr "Sažetak sljedeće aktivnosti"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__activity_type_id
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__activity_type_id
+msgid "Next Activity Type"
+msgstr "Vrsta sljedeće aktivnosti"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__email_normalized
+msgid "Normalized Email"
+msgstr "Normalizirani Email"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__comment
+msgid "Notes"
+msgstr "Bilješke"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__message_needaction_counter
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Broj radnji"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__reminder_date_before_receipt
+msgid "Number of days to send reminder email before the promised receipt date"
+msgstr ""
+"Broj dana preostalih za slanje e-mail podsjetnika prije obećanog datuma "
+"izvršenja naloga"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__message_has_error_counter
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__message_has_error_counter
+msgid "Number of errors"
+msgstr "Broj grešaka"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__message_needaction_counter
+#: model:ir.model.fields,help:pms_base.field_pms_team__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Broj poruka koje zahtijevaju radnju"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__message_has_error_counter
+#: model:ir.model.fields,help:pms_base.field_pms_team__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Broj poruka s greškom u dostavi"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__room_count
+msgid "Number of rooms"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__offline_since
+msgid "Offline since"
+msgstr "Nepovezan od"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__on_time_rate
+msgid "On-Time Delivery Rate"
+msgstr "Točnost isporuke"
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Online reservation"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.ui.menu,name:pms_base.menu_operations
+msgid "Operations"
+msgstr "Operacije"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__opportunity_ids
+msgid "Opportunities"
+msgstr "Prilike"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__opportunity_count
+msgid "Opportunity Count"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_amenity__type_id
+msgid "Organize amenities by type (multimedia, comfort, etc ...)"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__on_time_rate
+msgid ""
+"Over the past x days; the number of products received on time divided by the"
+" number of ordered products.x is either the System Parameter "
+"purchase_stock.on_time_delivery_days or the default 365"
+msgstr ""
+"Tijekom zadnjih x dana; broj proizvoda primljenih na vrijeme podijeljen s "
+"brojem naručenih proizvoda. x je sistemski parametar "
+"purchase_stock.on_time_delivery_days ili zadana vrijednost 365"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__owner_id
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_property_search
+msgid "Owner"
+msgstr "Vlasnik"
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_property_search
+msgid "Owners"
+msgstr "Vlasnici"
+
+#. module: pms_base
+#: model:ir.model,name:pms_base.model_pms_stage
+msgid "PMS Stage"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.actions.act_window,name:pms_base.action_pms_stage
+msgid "PMS Stages"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model,name:pms_base.model_pms_tag
+msgid "PMS Tag"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__tag_ids
+msgid "PMS Tags"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model,name:pms_base.model_pms_team
+msgid "PMS Team"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.actions.act_window,name:pms_base.action_pms_team
+msgid "PMS Teams"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_tag__parent_id
+msgid "Parent"
+msgstr "Nadređeni"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__parent_id
+msgid "Parent Property"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__parent_name
+msgid "Parent name"
+msgstr "Ime roditelja"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__parking_lot
+#: model:pms.amenity.type,name:pms_base.pms_amenity_type_4
+#: model:pms.room.type,name:pms_base.pms_room_type_parking_lot
+msgid "Parking Lot"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__partner_company_registry_placeholder
+msgid "Partner Company Registry Placeholder"
+msgstr "Rezervirano mjesto OIB-a partnera"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__use_partner_credit_limit
+msgid "Partner Limit"
+msgstr "Limit partnera"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__partner_vat_placeholder
+msgid "Partner Vat Placeholder"
+msgstr "Rezervirano mjesto PDV-a partnera"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__same_company_registry_partner_id
+msgid "Partner with same Company Registry"
+msgstr "Partner s istim registrom tvrtki"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__same_vat_partner_id
+msgid "Partner with same Tax ID"
+msgstr "Partner sa istim poreznim brojem"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__payment_token_count
+msgid "Payment Token Count"
+msgstr "Broj tokena plaćanja"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__payment_token_ids
+msgid "Payment Tokens"
+msgstr "Token plaćanja"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__pets
+#: model:pms.amenity.type,name:pms_base.pms_amenity_type_5
+#: model:pms.room.type,name:pms_base.pms_room_type_pets
+msgid "Pets"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__phone
+msgid "Phone"
+msgstr "Telefon"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__phone_sanitized_blacklisted
+msgid "Phone Blacklisted"
+msgstr "Telefon je stavljen na crnu listu"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__phone_mobile_search
+msgid "Phone Number"
+msgstr "Broj telefona"
+
+#. module: pms_base
+#: model:pms.room.type,name:pms_base.pms_room_type_play
+msgid "Playroom"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__property_product_pricelist
+msgid "Pricelist"
+msgstr "Cjenik"
+
+#. module: pms_base
+#: model:ir.ui.menu,name:pms_base.menu_pms_data_product
+msgid "Products"
+msgstr "Proizvodi"
+
+#. module: pms_base
+#: model:ir.actions.act_window,name:pms_base.action_pms_property
+#: model:ir.actions.act_window,name:pms_base.property_action_from_dashboard
+#: model:ir.model.fields,field_description:pms_base.field_pms_amenity__property_ids
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__properties
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__property_ids
+#: model:ir.ui.menu,name:pms_base.menu_config_property
+#: model:ir.ui.menu,name:pms_base.menu_pms_data_property
+#: model:ir.ui.menu,name:pms_base.menu_root
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_amenity_form
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_property_tree
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Properties"
+msgstr "Svojstva"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__properties_base_definition_id
+msgid "Properties Base Definition"
+msgstr "Bazna definicija svojstava"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__property_count
+msgid "Properties Count"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_amenity__property_ids
+msgid "Properties with access to the amenity"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model,name:pms_base.model_pms_property
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__partner_id
+#: model:ir.model.fields,field_description:pms_base.field_pms_room__property_id
+#: model:ir.model.fields,field_description:pms_base.field_pms_service__property_id
+#: model:ir.model.fields.selection,name:pms_base.selection__pms_stage__stage_type__property
+#: model_terms:ir.ui.view,arch_db:pms_base.view_partner_form_inherit_pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_property_form
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_property_search
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_room_search
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_partner_filter_inherit_pms_base
+msgid "Property"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model,name:pms_base.model_pms_amenity
+msgid "Property Amenity"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__property_inbound_payment_method_line_id
+msgid "Property Inbound Payment Method Line"
+msgstr "Stavka svojstva dolazne metode plaćanja"
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Property Information"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.module.category,name:pms_base.module_category_property_management
+msgid "Property Management"
+msgstr ""
+
+#. module: pms_base
+#: model:res.groups.privilege,name:pms_base.res_groups_privilege_property_management
+msgid "Property Management System"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__property_outbound_payment_method_line_id
+msgid "Property Outbound Payment Method Line"
+msgstr "Stavka svojstva odlazne metode plaćanja"
+
+#. module: pms_base
+#: model:ir.model,name:pms_base.model_pms_room
+msgid "Property Room"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model,name:pms_base.model_pms_service
+msgid "Property Service"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_res_config_settings__module_pms_website
+msgid "Publish properties"
+msgstr ""
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Publish properties to https://guesty.com and get reservations"
+msgstr ""
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Publish properties to https://wubook.com and get reservations"
+msgstr ""
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Publish your properties on your website"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__purchase_contract_count
+msgid "Purchase Contracts"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__purchase_line_ids
+msgid "Purchase Lines"
+msgstr "Linije nabave"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__purchase_order_count
+msgid "Purchase Order Count"
+msgstr "Broj naloga za nabavu"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__qty_bedroom
+msgid "Qty Bedroom"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__qty_dining_room
+msgid "Qty Dining Room"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__qty_half_bathroom
+msgid "Qty Half Bathroom"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__qty_kitchen
+msgid "Qty Kitchen"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__qty_living_room
+msgid "Qty Living Room"
+msgstr ""
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_property_form
+msgid "Quantities"
+msgstr "Količine"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__rating_ids
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__rating_ids
+msgid "Ratings"
+msgstr "Ocjene"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__receipt_reminder_email
+msgid "Receipt Reminder"
+msgstr "Podsjetnik o računu"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__ref
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_property_form
+msgid "Reference"
+msgstr "Referenca"
+
+#. module: pms_base
+#: model:ir.ui.menu,name:pms_base.menu_report
+msgid "Reporting"
+msgstr "Izvještavanje"
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Reservations"
+msgstr "Rezervirano"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__activity_user_id
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__activity_user_id
+msgid "Responsible User"
+msgstr "Odgovorni korisnik"
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_room_form
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_service_form
+msgid "Restore"
+msgstr "Vrati"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__website_id
+msgid "Restrict to a specific website."
+msgstr ""
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_room_form
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_room_search
+msgid "Room"
+msgstr "Soba"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_room__name
+#: model:ir.model.fields,help:pms_base.field_pms_room__name
+msgid "Room Name"
+msgstr "Naziv Sobe"
+
+#. module: pms_base
+#: model:ir.model,name:pms_base.model_pms_room_type
+#: model:ir.model.fields,field_description:pms_base.field_pms_room__type_id
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_room_type_form
+msgid "Room Type"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.actions.act_window,name:pms_base.action_pms_room_type
+#: model:ir.ui.menu,name:pms_base.menu_pms_config_property_room_type
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_room_search
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_room_type_tree
+msgid "Room Types"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.actions.act_window,name:pms_base.action_pms_room
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__room_ids
+#: model:ir.ui.menu,name:pms_base.menu_pms_data_room
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_property_form
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_room_tree
+msgid "Rooms"
+msgstr "Sobe"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__rtc_session_ids
+msgid "Rtc Session"
+msgstr "RTC sesija"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__sale_contract_count
+msgid "Sale Contracts"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__sale_order_count
+msgid "Sale Order Count"
+msgstr "Broj ponuda"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__sale_order_ids
+msgid "Sales Order"
+msgstr "Prodajni nalog"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__user_id
+msgid "Salesperson"
+msgstr "Prodavač"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__phone_sanitized
+msgid "Sanitized Number"
+msgstr "Sanirani broj"
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_stage_search
+msgid "Search Stages"
+msgstr "Pretraži faze"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__self
+msgid "Self"
+msgstr "Sebi"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_room__sequence
+#: model:ir.model.fields,field_description:pms_base.field_pms_room_type__sequence
+#: model:ir.model.fields,field_description:pms_base.field_pms_service__sequence
+#: model:ir.model.fields,field_description:pms_base.field_pms_stage__sequence
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__sequence
+msgid "Sequence"
+msgstr "Sekvenca"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_service__name
+#: model:ir.model.fields,help:pms_base.field_pms_service__name
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_service_form
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_service_search
+msgid "Service"
+msgstr "Usluga"
+
+#. module: pms_base
+#: model:ir.actions.act_window,name:pms_base.action_pms_service
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__service_ids
+#: model:ir.ui.menu,name:pms_base.menu_pms_data_service
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_property_form
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_service_tree
+msgid "Services"
+msgstr "Usluge"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_stage__is_closed
+msgid "Services in this stage are considered as closed."
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_room_type__icon
+#: model:ir.model.fields,help:pms_base.field_pms_service__icon
+msgid "Set Icon name from https://fontawesome.com/"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__use_partner_credit_limit
+msgid "Set a value greater than 0.0 to activate a credit limit check"
+msgstr ""
+"Postavite vrijednost veću od 0,0 za aktivaciju provjere kreditnog "
+"ograničenja"
+
+#. module: pms_base
+#: model:ir.actions.act_window,name:pms_base.action_pms_config
+#: model:ir.ui.menu,name:pms_base.menu_pms_config_settings
+msgid "Settings"
+msgstr "Postavke"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__partner_share
+msgid "Share Partner"
+msgstr "Podijeli partnera"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_res_config_settings__group_pms_show_amenity
+#: model:res.groups,name:pms_base.group_pms_show_amenity
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Show Amenities"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__show_credit_limit
+msgid "Show Credit Limit"
+msgstr "Prikaži kreditni limit"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_res_config_settings__group_pms_show_room
+#: model:res.groups,name:pms_base.group_pms_show_room
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Show Rooms"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_res_config_settings__group_pms_show_service
+#: model:res.groups,name:pms_base.group_pms_show_service
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Show Services"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_res_config_settings__group_pms_show_team
+#: model:res.groups,name:pms_base.group_pms_show_team
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Show Teams"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__signup_type
+msgid "Signup Token Type"
+msgstr "Tip tokena prijave"
+
+#. module: pms_base
+#: model:pms.room.type,name:pms_base.pms_room_type_1
+msgid "Single"
+msgstr "Samac"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__specific_property_product_pricelist
+msgid "Specific Property Product Pricelist"
+msgstr "Dodijeljen specifičan cjenik proizvoda"
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Split your properties by Team"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields.selection,name:pms_base.selection__res_company__pms_uom__ft
+msgid "Square Foot"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields.selection,name:pms_base.selection__res_company__pms_uom__m
+msgid "Square Meter"
+msgstr ""
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_stage_form
+msgid "Stage"
+msgstr "Faza"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__stage_ids
+#: model:ir.ui.menu,name:pms_base.menu_config_stage
+#: model_terms:ir.ui.view,arch_db:pms_base.view_stage_tree
+msgid "Stages"
+msgstr "Faze"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__state_id
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_property_form
+msgid "State"
+msgstr "Stanje"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__application_statistics
+msgid "Stats"
+msgstr "Statistika"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__activity_state
+#: model:ir.model.fields,help:pms_base.field_pms_team__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Status na temelju aktivnosti\n"
+"Kašnjenje: rok je već prošao\n"
+"Danas: datum aktivnosti je danas\n"
+"Planirano: buduće aktivnosti."
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__street
+msgid "Street"
+msgstr "Ulica"
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_property_form
+msgid "Street 2..."
+msgstr "Ulica 2..."
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_property_form
+msgid "Street..."
+msgstr "Ulica..."
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__street2
+msgid "Street2"
+msgstr "Ulica2"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__suggest_based_on
+msgid "Suggest Based On"
+msgstr "Predloži na temelju"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__suggest_days
+msgid "Suggest Days"
+msgstr "Predloženi dani"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__suggest_percent
+msgid "Suggest Percent"
+msgstr "Predloženi postotak"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__property_purchase_currency_id
+msgid "Supplier Currency"
+msgstr "Valuta dobavljača"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__supplier_rank
+msgid "Supplier Rank"
+msgstr "Rank dobavljača"
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_tag_form
+msgid "Tag"
+msgstr "Oznaka"
+
+#. module: pms_base
+#: model:ir.model.constraint,message:pms_base.constraint_pms_tag_sql_name_uniq
+msgid "Tag name already exists!"
+msgstr "Naziv oznake već postoji !"
+
+#. module: pms_base
+#: model:ir.actions.act_window,name:pms_base.action_pms_tag
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__category_id
+#: model:ir.ui.menu,name:pms_base.menu_config_tag
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_tag_tree
+msgid "Tags"
+msgstr "Oznake"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__task_ids
+msgid "Tasks"
+msgstr "Zadaci"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__vat
+msgid "Tax ID"
+msgstr "PDV ID / OIB"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__vat_label
+msgid "Tax ID Label"
+msgstr "Oznaka poreznog broja"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__team_id
+#: model_terms:ir.ui.view,arch_db:pms_base.view_team_form
+msgid "Team"
+msgstr "Tim"
+
+#. module: pms_base
+#: model:ir.model.constraint,message:pms_base.constraint_pms_team_sql_name_uniq
+msgid "Team name already exists!"
+msgstr "Naziv tima već postoji!"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_stage__team_ids
+#: model:ir.ui.menu,name:pms_base.menu_board_pms_team
+#: model:ir.ui.menu,name:pms_base.menu_config_team
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_property_search
+#: model_terms:ir.ui.view,arch_db:pms_base.view_team_tree
+msgid "Teams"
+msgstr "Timovi"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__terrace
+msgid "Terrace"
+msgstr ""
+
+#. module: pms_base
+#: model:pms.room.type,name:pms_base.pms_room_type_patio
+msgid "Terrace/Patio"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__country_code
+msgid ""
+"The ISO country code in two chars. \n"
+"You can use this field for quick search."
+msgstr ""
+"ISO oznaka države u dva slova.\n"
+"Možete koristiti za brzo pretraživanje."
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__property_account_position_id
+msgid ""
+"The fiscal position determines the taxes/accounts used for this contact."
+msgstr "Fiskalna pozicija određuje poreze i konta za partnera."
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__website_absolute_url
+msgid "The full absolute URL to access the document through the website."
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__website_url
+msgid "The full relative URL to access the document through the website."
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__user_id
+msgid "The internal user in charge of this contact."
+msgstr "Unutarnji korisnik zadužen za kontakt."
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_room__capacity
+msgid "The maximum number of people that can occupy a room"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__owner_id
+msgid "The owner of the property."
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__company_registry
+msgid ""
+"The registry number of the company. Use it if it is different from the Tax "
+"ID. It must be unique across all partners of a same country"
+msgstr ""
+"Matični broj tvrtke. Koristite ga ako se razlikuje od poreznog broja. Mora "
+"biti jedinstven za sve partnere iste zemlje"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__property_stock_customer
+msgid ""
+"The stock location used as destination when sending goods to this contact."
+msgstr ""
+"Skladišna lokacija koja se koristi kao odredište pri slanju robe ovom "
+"kontaktu."
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__property_stock_supplier
+msgid ""
+"The stock location used as source when receiving goods from this contact."
+msgstr ""
+"Skladišna lokacija koja se koristi kao izvor pri primanju robe od ovog "
+"kontakta."
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__main_user_id
+msgid ""
+"There can be several users related to the same partner. When a single user "
+"is needed, this field attempts to find the most appropriate one."
+msgstr ""
+"Može postojati više korisnika povezanih s istim partnerom. Kada je potreban "
+"jedan korisnik, ovo polje pokušava pronaći najprikladnijeg."
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__property_purchase_currency_id
+msgid "This currency will be used for purchases from the current partner"
+msgstr "Ova valuta koristit će se za kupnje od trenutnog partnera"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__tz
+msgid "This field is used to determine the timezone of the property."
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__email_normalized
+msgid ""
+"This field is used to search on email address as the primary email field can"
+" contain more than strictly an email address."
+msgstr ""
+"Ovo se polje koristi za pretragu e-adrese jer polje primarne e-pošte može "
+"sadržavati više od same e-adrese."
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_stage__fold
+msgid ""
+"This stage is folded in the kanban view when there are no record in that "
+"stage to display."
+msgstr ""
+"Ova faza je presavijena u kanban prikazu kada nema zapisa u toj fazi za "
+"prikaz."
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__tz
+msgid "Timezone"
+msgstr "Vremenska zona"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__tz_offset
+msgid "Timezone offset"
+msgstr "Pomak vremenskog pojasa"
+
+#. module: pms_base
+#: model:pms.amenity.type,name:pms_base.pms_amenity_type_0
+msgid "Toiletries"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__total_invoiced
+msgid "Total Invoiced"
+msgstr "Ukupno obračunato"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__debit
+msgid "Total Payable"
+msgstr "Ukupno obaveze"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__credit
+msgid "Total Receivable"
+msgstr "Ukupno potraživanja"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__credit
+msgid "Total amount this customer owes you."
+msgstr "Ukupan iznos dugovanja kupca."
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__debit
+msgid "Total amount you have to pay to this vendor."
+msgstr "Ukupni iznos za uplatu ovom dobavljaču."
+
+#. module: pms_base
+#: model:pms.room.type,name:pms_base.pms_room_type_3
+msgid "Triple"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_amenity__type_id
+#: model:ir.model.fields,field_description:pms_base.field_pms_stage__stage_type
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_amenity_form
+#: model_terms:ir.ui.view,arch_db:pms_base.view_stage_search
+msgid "Type"
+msgstr "Vrsta"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__activity_exception_decoration
+#: model:ir.model.fields,help:pms_base.field_pms_team__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Vrsta iznimne aktivnosti na zapisu."
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_room__type_id
+msgid "Unique room type for the rooms"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__unit_floor
+msgid "Unit Floor"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_res_company__pms_uom
+#: model:ir.model.fields,field_description:pms_base.field_res_config_settings__pms_uom
+msgid "Unit of Measure"
+msgstr "Jedinica mjere"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_stage__custom_color
+msgid "Use Hex Code only Ex:-#FFFFFF"
+msgstr "Koristite samo heksadekadsku šifru. Npr. -#FFFFFF"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__barcode
+msgid "Use a barcode to identify this contact."
+msgstr "Koristite barkod za identifikaciju ovog ugovora."
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_stage__is_default
+msgid "Used as default stage"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__property_product_pricelist
+msgid "Used for sales to the current partner"
+msgstr "Koristi se za prodaju trenutnom partneru"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__property_delivery_carrier_id
+msgid "Used in sales orders."
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_team__sequence
+msgid "Used to sort teams. Lower is better."
+msgstr "Koristi se za sortiranje timova. Niže je bolje."
+
+#. module: pms_base
+#: model:res.groups,name:pms_base.group_pms_user
+msgid "User"
+msgstr "Korisnik"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__user_ids
+msgid "Users"
+msgstr "Korisnici"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_service__vendor_id
+msgid "Vendor"
+msgstr "Dobavljač"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__property_stock_supplier
+msgid "Vendor Location"
+msgstr "Lokacija dobavljača"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__property_supplier_payment_term_id
+msgid "Vendor Payment Terms"
+msgstr "Uvjeti plaćanja dobavljača"
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_service_search
+msgid "Vendors"
+msgstr "Dobavljači"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__website_published
+msgid "Visible on current website"
+msgstr "Vidljivo na trenutnoj web stranicama"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__visitor_ids
+msgid "Visitors"
+msgstr "Posjetitelji"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__website_id
+#: model_terms:ir.ui.view,arch_db:pms_base.view_res_config_settings_form
+msgid "Website"
+msgstr "Web stranica"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__website_absolute_url
+msgid "Website Absolute URL"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_room_type__icon
+#: model:ir.model.fields,field_description:pms_base.field_pms_service__icon
+msgid "Website Icon"
+msgstr ""
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__website
+msgid "Website Link"
+msgstr "Link web stranice"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__website_message_ids
+#: model:ir.model.fields,field_description:pms_base.field_pms_team__website_message_ids
+msgid "Website Messages"
+msgstr "Poruke web stranice"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__website_url
+msgid "Website URL"
+msgstr "URL web stranice"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__website_message_ids
+#: model:ir.model.fields,help:pms_base.field_pms_team__website_message_ids
+msgid "Website communication history"
+msgstr "Povijest komunikacije web stranice"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__group_on
+msgid "Week Day"
+msgstr "Dan u tjednu"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__vat
+msgid "You can use '/' to indicate that the customer has no Tax ID."
+msgstr "Možete koristiti '/' kako biste označili da nema OIB-a."
+
+#. module: pms_base
+#: model:ir.model.constraint,message:pms_base.constraint_pms_room_sql_room_property_unique
+msgid "You cannot have more 2 rooms with the same name in the same property."
+msgstr "Ne možete imati više od 2 sobe s istim nazivom u istoj nekretnini."
+
+#. module: pms_base
+#: model_terms:ir.ui.view,arch_db:pms_base.view_pms_property_form
+msgid "ZIP"
+msgstr "Poštanski broj"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__zip
+msgid "Zip"
+msgstr "Poštanski broj"
+
+#. module: pms_base
+#: model:ir.model.fields,help:pms_base.field_pms_property__days_sales_outstanding
+msgid ""
+"[(Total Receivable/Total Revenue) * number of days since the first invoice] "
+"for this customer"
+msgstr ""
+"[(Ukupna potraživanja/Ukupni prihod) * broj dana od prvog računa] za ovog "
+"kupca"
+
+#. module: pms_base
+#: model:ir.model.fields,field_description:pms_base.field_pms_property__invoice_edi_format
+msgid "eInvoice format"
+msgstr "Format e-računa"

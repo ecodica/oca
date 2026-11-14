@@ -1,0 +1,100 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_invoice_export_yellowbill
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: account_invoice_export_yellowbill
+#. odoo-python
+#: code:addons/account_invoice_export_yellowbill/models/account_invoice_yellowbill.py:0
+msgid ""
+"%(name)s has no recipient bank account, so the eBill cannot tell the "
+"customer how to pay it."
+msgstr ""
+"%(name)s nema primateljev bankovni račun, pa eRačun ne može reći kupcu kako "
+"ga platiti."
+
+#. module: account_invoice_export_yellowbill
+#. odoo-python
+#: code:addons/account_invoice_export_yellowbill/models/account_invoice_yellowbill.py:0
+msgid ""
+"%(name)s is not a customer invoice or credit note, it cannot be exported as "
+"an eBill."
+msgstr ""
+"%(name)s nije račun kupca ni odobrenje, ne može se izvesti kao eRačun."
+
+#. module: account_invoice_export_yellowbill
+#: model_terms:ir.ui.view,arch_db:account_invoice_export_yellowbill.invoice_yellowbill
+msgid "CreateybInvoice"
+msgstr "KreirajRačun"
+
+#. module: account_invoice_export_yellowbill
+#: model:ir.model.fields,field_description:account_invoice_export_yellowbill.field_account_invoice_yellowbill__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: account_invoice_export_yellowbill
+#: model:ir.model.fields,field_description:account_invoice_export_yellowbill.field_account_invoice_yellowbill__id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_invoice_export_yellowbill
+#: model_terms:ir.ui.view,arch_db:account_invoice_export_yellowbill.invoice_yellowbill
+msgid "IPECeBILLServer"
+msgstr "IPECeBILLServer"
+
+#. module: account_invoice_export_yellowbill
+#: model_terms:ir.ui.view,arch_db:account_invoice_export_yellowbill.invoice_yellowbill
+msgid "NORMAL"
+msgstr "NORORMALNO"
+
+#. module: account_invoice_export_yellowbill
+#: model_terms:ir.ui.view,arch_db:account_invoice_export_yellowbill.invoice_yellowbill
+msgid "Odoo"
+msgstr "Odoo"
+
+#. module: account_invoice_export_yellowbill
+#: model_terms:ir.ui.view,arch_db:account_invoice_export_yellowbill.invoice_yellowbill
+msgid "OrderNumberByBuyer"
+msgstr "OrderNumberByBuyer"
+
+#. module: account_invoice_export_yellowbill
+#: model_terms:ir.ui.view,arch_db:account_invoice_export_yellowbill.invoice_yellowbill
+msgid "OrderNumberBySupplier"
+msgstr "OrderNumberBySupplier"
+
+#. module: account_invoice_export_yellowbill
+#: model_terms:ir.ui.view,arch_db:account_invoice_export_yellowbill.invoice_yellowbill
+msgid "OrderReference"
+msgstr "OrderReference"
+
+#. module: account_invoice_export_yellowbill
+#: model_terms:ir.ui.view,arch_db:account_invoice_export_yellowbill.invoice_yellowbill
+msgid "PDFAppendix"
+msgstr "PDFDodatak"
+
+#. module: account_invoice_export_yellowbill
+#: model_terms:ir.ui.view,arch_db:account_invoice_export_yellowbill.invoice_yellowbill
+msgid "VAT"
+msgstr "PDV"
+
+#. module: account_invoice_export_yellowbill
+#: model_terms:ir.ui.view,arch_db:account_invoice_export_yellowbill.invoice_yellowbill
+msgid "Yes"
+msgstr "Da"
+
+#. module: account_invoice_export_yellowbill
+#: model:ir.model,name:account_invoice_export_yellowbill.model_account_invoice_yellowbill
+msgid "eBill YellowBill invoice builder"
+msgstr "Graditelj računa eBill YellowBill"

@@ -1,0 +1,86 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_order_carrier_auto_assign
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: sale_order_carrier_auto_assign
+#: model_terms:ir.ui.view,arch_db:sale_order_carrier_auto_assign.res_config_settings_view_form_sale
+msgid "Assigns automatically delivery carrier on sale order confirmation."
+msgstr "Automatski dodjeljuje prijevoznika pri potvrdi prodajnog naloga."
+
+#. module: sale_order_carrier_auto_assign
+#: model:ir.model.fields,field_description:sale_order_carrier_auto_assign.field_res_company__carrier_auto_assign
+#: model:ir.model.fields,field_description:sale_order_carrier_auto_assign.field_res_config_settings__carrier_auto_assign
+msgid "Carrier Auto Assign"
+msgstr "Automatska dodjela prijevoznika"
+
+#. module: sale_order_carrier_auto_assign
+#: model:ir.model.fields,field_description:sale_order_carrier_auto_assign.field_res_company__carrier_on_create
+#: model:ir.model.fields,field_description:sale_order_carrier_auto_assign.field_res_config_settings__carrier_on_create
+msgid "Carrier On Create"
+msgstr "Prijevoznik pri kreiranju"
+
+#. module: sale_order_carrier_auto_assign
+#: model:ir.model,name:sale_order_carrier_auto_assign.model_res_company
+msgid "Companies"
+msgstr "Tvrtke"
+
+#. module: sale_order_carrier_auto_assign
+#: model:ir.model,name:sale_order_carrier_auto_assign.model_res_config_settings
+msgid "Config Settings"
+msgstr "Postavke"
+
+#. module: sale_order_carrier_auto_assign
+#: model:ir.model.fields,field_description:sale_order_carrier_auto_assign.field_res_company__display_name
+#: model:ir.model.fields,field_description:sale_order_carrier_auto_assign.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:sale_order_carrier_auto_assign.field_sale_order__display_name
+#: model:ir.model.fields,field_description:sale_order_carrier_auto_assign.field_sale_order_line__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: sale_order_carrier_auto_assign
+#: model:ir.model.fields,help:sale_order_carrier_auto_assign.field_res_company__carrier_auto_assign
+#: model:ir.model.fields,help:sale_order_carrier_auto_assign.field_res_config_settings__carrier_auto_assign
+msgid "Enable carrier auto assign on sale order confirmation."
+msgstr "Omogući automatsku dodjelu prijevoznika pri potvrdi prodajnog naloga."
+
+#. module: sale_order_carrier_auto_assign
+#: model:ir.model.fields,field_description:sale_order_carrier_auto_assign.field_res_company__id
+#: model:ir.model.fields,field_description:sale_order_carrier_auto_assign.field_res_config_settings__id
+#: model:ir.model.fields,field_description:sale_order_carrier_auto_assign.field_sale_order__id
+#: model:ir.model.fields,field_description:sale_order_carrier_auto_assign.field_sale_order_line__id
+msgid "ID"
+msgstr "ID"
+
+#. module: sale_order_carrier_auto_assign
+#: model:ir.model.fields,help:sale_order_carrier_auto_assign.field_res_company__carrier_on_create
+#: model:ir.model.fields,help:sale_order_carrier_auto_assign.field_res_config_settings__carrier_on_create
+msgid "On the sales quotation, add the shipping method on creation."
+msgstr ""
+
+#. module: sale_order_carrier_auto_assign
+#: model:ir.model,name:sale_order_carrier_auto_assign.model_sale_order
+msgid "Sales Order"
+msgstr "Prodajni nalog"
+
+#. module: sale_order_carrier_auto_assign
+#: model:ir.model,name:sale_order_carrier_auto_assign.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Stavka prodajnog naloga"
+
+#. module: sale_order_carrier_auto_assign
+#: model_terms:ir.ui.view,arch_db:sale_order_carrier_auto_assign.res_config_settings_view_form_sale
+msgid "Set default shipping method automatically."
+msgstr ""

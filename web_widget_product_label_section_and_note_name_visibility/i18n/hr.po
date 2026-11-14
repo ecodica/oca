@@ -1,0 +1,65 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* web_widget_product_label_section_and_note
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: web_widget_product_label_section_and_note
+#. odoo-javascript
+#: code:addons/web_widget_product_label_section_and_note/static/src/components/product_label_section_and_note_field/product_label_section_and_note_field.xml:0
+#, python-format
+msgid "Click or press enter to add a description"
+msgstr "Kliknite ili pritisnite enter za dodavanje opisa"
+
+#. module: web_widget_product_label_section_and_note
+#. odoo-javascript
+#: code:addons/web_widget_product_label_section_and_note/static/src/components/product_label_section_and_note_field/product_label_section_and_note_field.xml:0
+#, python-format
+msgid "Click to remove/add the product name from the description."
+msgstr "Kliknite za uklanjanje/dodavanje naziva proizvoda iz opisa."
+
+#. module: web_widget_product_label_section_and_note
+#. odoo-javascript
+#: code:addons/web_widget_product_label_section_and_note/static/src/components/product_label_section_and_note_field/product_label_section_and_note_field.xml:0
+#: code:addons/web_widget_product_label_section_and_note/static/src/components/product_label_section_and_note_field/product_label_section_and_note_field.xml:0
+#: code:addons/web_widget_product_label_section_and_note/static/src/components/product_label_section_and_note_field/product_label_section_and_note_field.xml:0
+#: code:addons/web_widget_product_label_section_and_note/static/src/components/product_label_section_and_note_field/product_label_section_and_note_field.xml:0
+#, python-format
+msgid "Enter a description"
+msgstr "Unesite opis"
+
+#. module: web_widget_product_label_section_and_note
+#. odoo-javascript
+#: code:addons/web_widget_product_label_section_and_note/static/src/components/product_label_section_and_note_field/product_label_section_and_note_field.xml:0
+#: code:addons/web_widget_product_label_section_and_note/static/src/components/product_label_section_and_note_field/product_label_section_and_note_field.xml:0
+#, python-format
+msgid "Internal link"
+msgstr "Interna poveznica"
+
+#. module: web_widget_product_label_section_and_note
+#. odoo-javascript
+#: code:addons/web_widget_product_label_section_and_note/static/src/components/product_label_section_and_note_field/product_label_section_and_note_field.xml:0
+#: code:addons/web_widget_product_label_section_and_note/static/src/components/product_label_section_and_note_field/product_label_section_and_note_field.xml:0
+#: code:addons/web_widget_product_label_section_and_note/static/src/components/product_label_section_and_note_field/product_label_section_and_note_field.xml:0
+#, python-format
+msgid "Scan barcode"
+msgstr ""
+
+#. module: web_widget_product_label_section_and_note
+#. odoo-javascript
+#: code:addons/web_widget_product_label_section_and_note/static/src/components/product_label_section_and_note_field/product_label_section_and_note_field.esm.js:0
+#: code:addons/web_widget_product_label_section_and_note/static/src/components/product_label_section_and_note_field/product_label_section_and_note_field.xml:0
+#, python-format
+msgid "Search a product"
+msgstr "Pretražite proizvod"

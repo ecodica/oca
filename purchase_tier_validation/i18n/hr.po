@@ -1,0 +1,129 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* purchase_tier_validation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: purchase_tier_validation
+#: model:ir.model.fields,field_description:purchase_tier_validation.field_purchase_order__can_forward
+msgid "Can Forward"
+msgstr "Može proslijediti"
+
+#. module: purchase_tier_validation
+#: model:ir.model.fields,field_description:purchase_tier_validation.field_purchase_order__can_review
+msgid "Can Review"
+msgstr "Može recenzirati"
+
+#. module: purchase_tier_validation
+#: model:ir.model.fields,field_description:purchase_tier_validation.field_purchase_order__display_name
+#: model:ir.model.fields,field_description:purchase_tier_validation.field_tier_definition__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: purchase_tier_validation
+#: model:ir.model.fields,field_description:purchase_tier_validation.field_purchase_order__has_comment
+msgid "Has Comment"
+msgstr "Ima komentar"
+
+#. module: purchase_tier_validation
+#: model:ir.model.fields,field_description:purchase_tier_validation.field_purchase_order__hide_reviews
+msgid "Hide Reviews"
+msgstr "Sakrij recenzije"
+
+#. module: purchase_tier_validation
+#: model:ir.model.fields,field_description:purchase_tier_validation.field_purchase_order__id
+#: model:ir.model.fields,field_description:purchase_tier_validation.field_tier_definition__id
+msgid "ID"
+msgstr "ID"
+
+#. module: purchase_tier_validation
+#: model:ir.model.fields,help:purchase_tier_validation.field_purchase_order__has_comment
+msgid "If set, Allow the reviewer to leave a comment on the review."
+msgstr ""
+"Ako je postavljeno, dozvoljava recenzentu da ostavi komentar na recenziji."
+
+#. module: purchase_tier_validation
+#: model_terms:ir.ui.view,arch_db:purchase_tier_validation.view_purchase_order_filter
+msgid "My Purchases to review"
+msgstr "Moja nabava za recenziju"
+
+#. module: purchase_tier_validation
+#: model:ir.model.fields,field_description:purchase_tier_validation.field_purchase_order__need_validation
+msgid "Need Validation"
+msgstr "Treba validaciju"
+
+#. module: purchase_tier_validation
+#: model_terms:ir.ui.view,arch_db:purchase_tier_validation.view_purchase_order_filter
+msgid "Needs my Review"
+msgstr "Treba moju recenziju"
+
+#. module: purchase_tier_validation
+#: model:ir.model.fields,field_description:purchase_tier_validation.field_purchase_order__next_review
+msgid "Next Review"
+msgstr "Sljedeća ovjera"
+
+#. module: purchase_tier_validation
+#: model_terms:ir.ui.view,arch_db:purchase_tier_validation.view_purchase_order_filter
+msgid "POs validated and ready to be confirmed"
+msgstr "Nalozi za nabavu validirani i spremni za potvrdu"
+
+#. module: purchase_tier_validation
+#: model:ir.model,name:purchase_tier_validation.model_purchase_order
+msgid "Purchase Order"
+msgstr "Nabavni nalog"
+
+#. module: purchase_tier_validation
+#: model:ir.model.fields,field_description:purchase_tier_validation.field_purchase_order__rejected_message
+msgid "Rejected Message"
+msgstr "Poruka odbijanja"
+
+#. module: purchase_tier_validation
+#: model:ir.model.fields,field_description:purchase_tier_validation.field_purchase_order__require_authentication
+msgid "Require Authentication"
+msgstr "Zahtijevaj autentikaciju"
+
+#. module: purchase_tier_validation
+#: model:ir.model.fields,field_description:purchase_tier_validation.field_purchase_order__reviewer_ids
+msgid "Reviewers"
+msgstr "Recenzenti"
+
+#. module: purchase_tier_validation
+#: model:ir.model,name:purchase_tier_validation.model_tier_definition
+msgid "Tier Definition"
+msgstr "Definicija razine"
+
+#. module: purchase_tier_validation
+#: model:ir.model.fields,field_description:purchase_tier_validation.field_purchase_order__to_validate_message
+msgid "To Validate Message"
+msgstr "Poruka za validaciju"
+
+#. module: purchase_tier_validation
+#: model_terms:ir.ui.view,arch_db:purchase_tier_validation.view_purchase_order_filter
+msgid "Validated"
+msgstr "Validirano"
+
+#. module: purchase_tier_validation
+#: model:ir.model.fields,field_description:purchase_tier_validation.field_purchase_order__validated_message
+msgid "Validated Message"
+msgstr "Poruka validacije"
+
+#. module: purchase_tier_validation
+#: model:ir.model.fields,field_description:purchase_tier_validation.field_purchase_order__validation_status
+msgid "Validation Status"
+msgstr "Status validacije"
+
+#. module: purchase_tier_validation
+#: model:ir.model.fields,field_description:purchase_tier_validation.field_purchase_order__review_ids
+msgid "Validations"
+msgstr "Validacije"

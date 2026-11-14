@@ -1,0 +1,56 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* delivery_price_method
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: delivery_price_method
+#: model:ir.model.fields.selection,name:delivery_price_method.selection__delivery_carrier__price_method__base_on_rule
+msgid "Based on Rules"
+msgstr "Na temelju pravila"
+
+#. module: delivery_price_method
+#: model:ir.model.fields.selection,name:delivery_price_method.selection__delivery_carrier__price_method__carrier
+msgid "Carrier obtained price"
+msgstr "Cijena dobivena od prijevoznika"
+
+#. module: delivery_price_method
+#: model:ir.model.fields,field_description:delivery_price_method.field_delivery_carrier__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: delivery_price_method
+#: model:ir.model.fields.selection,name:delivery_price_method.selection__delivery_carrier__price_method__fixed
+msgid "Fixed price"
+msgstr "Fiksna cijena"
+
+#. module: delivery_price_method
+#: model:ir.model.fields,field_description:delivery_price_method.field_delivery_carrier__id
+msgid "ID"
+msgstr "ID"
+
+#. module: delivery_price_method
+#: model:ir.model.fields,field_description:delivery_price_method.field_delivery_carrier__price_method
+msgid "Price method"
+msgstr ""
+
+#. module: delivery_price_method
+#: model_terms:ir.ui.view,arch_db:delivery_price_method.view_delivery_carrier_form
+msgid "Pricing"
+msgstr "Cijene"
+
+#. module: delivery_price_method
+#: model:ir.model,name:delivery_price_method.model_delivery_carrier
+msgid "Shipping Methods"
+msgstr "Načini dostave"

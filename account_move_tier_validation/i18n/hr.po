@@ -1,0 +1,183 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_move_tier_validation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: account_move_tier_validation
+#. odoo-python
+#: code:addons/account_move_tier_validation/models/account_move.py:0
+msgid "Bill"
+msgstr "Račun"
+
+#. module: account_move_tier_validation
+#: model:ir.model.fields,field_description:account_move_tier_validation.field_account_move__can_forward
+msgid "Can Forward"
+msgstr "Može proslijediti"
+
+#. module: account_move_tier_validation
+#: model:ir.model.fields,field_description:account_move_tier_validation.field_account_move__can_review
+msgid "Can Review"
+msgstr "Može recenzirati"
+
+#. module: account_move_tier_validation
+#. odoo-python
+#: code:addons/account_move_tier_validation/models/account_move.py:0
+msgid "Credit Note"
+msgstr "Knjižno odobrenje"
+
+#. module: account_move_tier_validation
+#: model:ir.model.fields,field_description:account_move_tier_validation.field_account_move__display_name
+#: model:ir.model.fields,field_description:account_move_tier_validation.field_tier_definition__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: account_move_tier_validation
+#: model:ir.model.fields,field_description:account_move_tier_validation.field_account_move__has_comment
+msgid "Has Comment"
+msgstr "Ima komentar"
+
+#. module: account_move_tier_validation
+#: model:ir.model.fields,field_description:account_move_tier_validation.field_account_move__hide_reviews
+msgid "Hide Reviews"
+msgstr "Sakrij recenzije"
+
+#. module: account_move_tier_validation
+#: model:ir.model.fields,field_description:account_move_tier_validation.field_account_move__id
+#: model:ir.model.fields,field_description:account_move_tier_validation.field_tier_definition__id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_move_tier_validation
+#: model:ir.model.fields,help:account_move_tier_validation.field_account_move__has_comment
+msgid "If set, Allow the reviewer to leave a comment on the review."
+msgstr ""
+"Ako je postavljeno, dozvoljava recenzentu da ostavi komentar na recenziji."
+
+#. module: account_move_tier_validation
+#. odoo-python
+#: code:addons/account_move_tier_validation/models/account_move.py:0
+msgid "Invoice"
+msgstr "Račun"
+
+#. module: account_move_tier_validation
+#: model_terms:ir.ui.view,arch_db:account_move_tier_validation.view_account_invoice_filter
+msgid "Invoices Pending to Validate"
+msgstr "Računi na čekanju validacije"
+
+#. module: account_move_tier_validation
+#: model_terms:ir.ui.view,arch_db:account_move_tier_validation.view_account_invoice_filter
+msgid "Invoices validated and ready to be confirmed"
+msgstr "Računi validirani i spremni za potvrdu"
+
+#. module: account_move_tier_validation
+#: model_terms:ir.ui.view,arch_db:account_move_tier_validation.view_account_invoice_filter
+msgid "Invoices where no validation has been requested"
+msgstr "Računi za koje nije zatražena validacija"
+
+#. module: account_move_tier_validation
+#: model_terms:ir.ui.view,arch_db:account_move_tier_validation.view_account_invoice_filter
+msgid "Invoices where validation has not started"
+msgstr "Računi kod kojih validacija nije započela"
+
+#. module: account_move_tier_validation
+#: model:ir.model,name:account_move_tier_validation.model_account_move
+msgid "Journal Entry"
+msgstr "Stavke temeljnice"
+
+#. module: account_move_tier_validation
+#: model_terms:ir.ui.view,arch_db:account_move_tier_validation.view_account_invoice_filter
+msgid "My Accounts to review"
+msgstr "Moji konti za pregled"
+
+#. module: account_move_tier_validation
+#: model:ir.model.fields,field_description:account_move_tier_validation.field_account_move__need_validation
+msgid "Need Validation"
+msgstr "Treba validaciju"
+
+#. module: account_move_tier_validation
+#: model_terms:ir.ui.view,arch_db:account_move_tier_validation.view_account_invoice_filter
+msgid "Needs my Review"
+msgstr "Treba moju recenziju"
+
+#. module: account_move_tier_validation
+#: model:ir.model.fields,field_description:account_move_tier_validation.field_account_move__next_review
+msgid "Next Review"
+msgstr "Sljedeća ovjera"
+
+#. module: account_move_tier_validation
+#: model_terms:ir.ui.view,arch_db:account_move_tier_validation.view_account_invoice_filter
+msgid "No Validation Requested"
+msgstr "Nije zatražena validacija"
+
+#. module: account_move_tier_validation
+#. odoo-python
+#: code:addons/account_move_tier_validation/models/account_move.py:0
+msgid "Refund"
+msgstr "Odobrenje"
+
+#. module: account_move_tier_validation
+#: model:ir.model.fields,field_description:account_move_tier_validation.field_account_move__rejected_message
+msgid "Rejected Message"
+msgstr "Poruka odbijanja"
+
+#. module: account_move_tier_validation
+#: model:ir.model.fields,field_description:account_move_tier_validation.field_account_move__require_authentication
+msgid "Require Authentication"
+msgstr "Zahtijevaj autentikaciju"
+
+#. module: account_move_tier_validation
+#: model:ir.model.fields,field_description:account_move_tier_validation.field_account_move__reviewer_ids
+msgid "Reviewers"
+msgstr "Recenzenti"
+
+#. module: account_move_tier_validation
+#: model:ir.model,name:account_move_tier_validation.model_tier_definition
+msgid "Tier Definition"
+msgstr "Definicija razine"
+
+#. module: account_move_tier_validation
+#: model:ir.model.fields,field_description:account_move_tier_validation.field_account_move__to_validate_message
+msgid "To Validate Message"
+msgstr "Poruka za validaciju"
+
+#. module: account_move_tier_validation
+#: model_terms:ir.ui.view,arch_db:account_move_tier_validation.view_account_invoice_filter
+msgid "Validated"
+msgstr "Validirano"
+
+#. module: account_move_tier_validation
+#: model:ir.model.fields,field_description:account_move_tier_validation.field_account_move__validated_message
+msgid "Validated Message"
+msgstr "Poruka validacije"
+
+#. module: account_move_tier_validation
+#: model_terms:ir.ui.view,arch_db:account_move_tier_validation.view_account_invoice_filter
+msgid "Validation In Progress"
+msgstr "Validacija u tijeku"
+
+#. module: account_move_tier_validation
+#: model_terms:ir.ui.view,arch_db:account_move_tier_validation.view_account_invoice_filter
+msgid "Validation Not Started"
+msgstr "Validacija nije započela"
+
+#. module: account_move_tier_validation
+#: model:ir.model.fields,field_description:account_move_tier_validation.field_account_move__validation_status
+msgid "Validation Status"
+msgstr "Status validacije"
+
+#. module: account_move_tier_validation
+#: model:ir.model.fields,field_description:account_move_tier_validation.field_account_move__review_ids
+msgid "Validations"
+msgstr "Validacije"

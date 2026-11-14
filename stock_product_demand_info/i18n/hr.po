@@ -1,0 +1,232 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_product_demand_info
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: stock_product_demand_info
+#: model:ir.model.fields,field_description:stock_product_demand_info.field_product_demand_period__active
+msgid "Active"
+msgstr "Aktivno"
+
+#. module: stock_product_demand_info
+#: model:ir.model,name:stock_product_demand_info.model_res_config_settings
+msgid "Config Settings"
+msgstr "Postavke"
+
+#. module: stock_product_demand_info
+#: model_terms:ir.actions.act_window,help:stock_product_demand_info.action_product_demand_period
+msgid ""
+"Create demand periods to see past demand by period on products and "
+"orderpoints."
+msgstr ""
+"Kreiraj razdoblja potražnje za prikaz prošle potražnje po razdobljima na "
+"proizvodima i točkama naručivanja."
+
+#. module: stock_product_demand_info
+#: model:ir.model.fields,field_description:stock_product_demand_info.field_product_demand_period__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: stock_product_demand_info
+#: model:ir.model.fields,field_description:stock_product_demand_info.field_product_demand_period__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: stock_product_demand_info
+#. odoo-javascript
+#: code:addons/stock_product_demand_info/static/src/widgets/demand_period_info.xml:0
+#: model:ir.model.fields,field_description:stock_product_demand_info.field_product_product__demand_period_info
+#: model:ir.model.fields,field_description:stock_product_demand_info.field_product_template__demand_period_info
+#: model:ir.model.fields,field_description:stock_product_demand_info.field_stock_warehouse_orderpoint__demand_period_info
+#: model_terms:ir.ui.view,arch_db:stock_product_demand_info.product_template_form_view
+#: model_terms:ir.ui.view,arch_db:stock_product_demand_info.view_stock_warehouse_orderpoint_form_demand_period
+msgid "Demand by period"
+msgstr "Potražnja po razdoblju"
+
+#. module: stock_product_demand_info
+#: model_terms:ir.ui.view,arch_db:stock_product_demand_info.view_product_demand_period_form
+msgid "Demand period"
+msgstr "Razdoblje potražnje"
+
+#. module: stock_product_demand_info
+#: model:ir.actions.act_window,name:stock_product_demand_info.action_product_demand_period
+#: model:ir.model.fields,field_description:stock_product_demand_info.field_res_config_settings__demand_period_ids
+#: model_terms:ir.ui.view,arch_db:stock_product_demand_info.view_product_demand_period_list
+msgid "Demand periods"
+msgstr "Razdoblja potražnje"
+
+#. module: stock_product_demand_info
+#: model:ir.model.fields,field_description:stock_product_demand_info.field_product_demand_period__display_name
+#: model:ir.model.fields,field_description:stock_product_demand_info.field_product_product__display_name
+#: model:ir.model.fields,field_description:stock_product_demand_info.field_product_template__display_name
+#: model:ir.model.fields,field_description:stock_product_demand_info.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:stock_product_demand_info.field_stock_warehouse_orderpoint__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: stock_product_demand_info
+#: model_terms:ir.actions.act_window,help:stock_product_demand_info.action_product_demand_period
+msgid ""
+"Each period has a name and start/end date expressions (e.g. \"today -7d\", "
+"\"today\")."
+msgstr ""
+"Svako razdoblje ima naziv i izraze datuma početka/završetka (npr. \"danas "
+"-7d\", \"danas\")."
+
+#. module: stock_product_demand_info
+#: model:ir.model.fields,field_description:stock_product_demand_info.field_product_demand_period__end_expression
+msgid "End Expression"
+msgstr "Završni izraz"
+
+#. module: stock_product_demand_info
+#: model:ir.model.fields,help:stock_product_demand_info.field_product_demand_period__end_expression
+msgid ""
+"End of the time window used to search for outgoing stock moves (demand). "
+"Same syntax as Start: 'today'/'now' with ±Nd, ±Nw, ±Nm, ±Ny, or =1d, =6m."
+msgstr ""
+
+#. module: stock_product_demand_info
+#: model:ir.model.fields,field_description:stock_product_demand_info.field_product_demand_period__id
+#: model:ir.model.fields,field_description:stock_product_demand_info.field_product_product__id
+#: model:ir.model.fields,field_description:stock_product_demand_info.field_product_template__id
+#: model:ir.model.fields,field_description:stock_product_demand_info.field_res_config_settings__id
+#: model:ir.model.fields,field_description:stock_product_demand_info.field_stock_warehouse_orderpoint__id
+msgid "ID"
+msgstr "ID"
+
+#. module: stock_product_demand_info
+#: model_terms:ir.ui.view,arch_db:stock_product_demand_info.view_product_demand_period_form
+msgid "Inactive"
+msgstr "Neaktivan"
+
+#. module: stock_product_demand_info
+#. odoo-python
+#: code:addons/stock_product_demand_info/models/product_demand_period.py:0
+msgid "Invalid date expression: %(error)s"
+msgstr ""
+
+#. module: stock_product_demand_info
+#: model:product.demand.period,name:stock_product_demand_info.period_last_30_days
+msgid "Last 30 days"
+msgstr "Posljednih 30 dana"
+
+#. module: stock_product_demand_info
+#: model:product.demand.period,name:stock_product_demand_info.period_last_7_days
+msgid "Last 7 days"
+msgstr "Posljednjih 7 dana"
+
+#. module: stock_product_demand_info
+#: model:ir.model.fields,field_description:stock_product_demand_info.field_product_demand_period__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: stock_product_demand_info
+#: model:ir.model.fields,field_description:stock_product_demand_info.field_product_demand_period__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: stock_product_demand_info
+#: model:product.demand.period,name:stock_product_demand_info.period_last_month
+msgid "Last month"
+msgstr "Prošli mjesec"
+
+#. module: stock_product_demand_info
+#: model:product.demand.period,name:stock_product_demand_info.period_last_year
+msgid "Last year"
+msgstr ""
+
+#. module: stock_product_demand_info
+#: model_terms:ir.ui.view,arch_db:stock_product_demand_info.res_config_settings_view_form
+msgid "Manage demand periods"
+msgstr ""
+
+#. module: stock_product_demand_info
+#: model:ir.model,name:stock_product_demand_info.model_stock_warehouse_orderpoint
+msgid "Minimum Inventory Rule"
+msgstr "Pravilo minimalne zalihe"
+
+#. module: stock_product_demand_info
+#: model:ir.model.fields,field_description:stock_product_demand_info.field_product_demand_period__name
+msgid "Name"
+msgstr "Naziv"
+
+#. module: stock_product_demand_info
+#: model:product.demand.period,name:stock_product_demand_info.period_next_month_last_year
+msgid "Next month last year"
+msgstr "Sljedeći mjesec prošle godine"
+
+#. module: stock_product_demand_info
+#: model:ir.model.fields,help:stock_product_demand_info.field_product_product__demand_period_info
+#: model:ir.model.fields,help:stock_product_demand_info.field_product_template__demand_period_info
+#: model:ir.model.fields,help:stock_product_demand_info.field_stock_warehouse_orderpoint__demand_period_info
+msgid "Past demand per period. Periods can be configured in General Settings."
+msgstr ""
+
+#. module: stock_product_demand_info
+#: model:ir.model,name:stock_product_demand_info.model_product_template
+msgid "Product"
+msgstr "Proizvod"
+
+#. module: stock_product_demand_info
+#: model:ir.model,name:stock_product_demand_info.model_product_product
+msgid "Product Variant"
+msgstr "Varijanta proizvoda"
+
+#. module: stock_product_demand_info
+#: model:ir.model,name:stock_product_demand_info.model_product_demand_period
+msgid "Product demand period"
+msgstr ""
+
+#. module: stock_product_demand_info
+#: model:product.demand.period,name:stock_product_demand_info.period_same_month_last_year
+msgid "Same month last year"
+msgstr "Isti mjesec prošle godine"
+
+#. module: stock_product_demand_info
+#: model:ir.model.fields,field_description:stock_product_demand_info.field_product_demand_period__sequence
+msgid "Sequence"
+msgstr "Sekvenca"
+
+#. module: stock_product_demand_info
+#: model:ir.model.fields,field_description:stock_product_demand_info.field_product_demand_period__start_expression
+msgid "Start Expression"
+msgstr ""
+
+#. module: stock_product_demand_info
+#. odoo-python
+#: code:addons/stock_product_demand_info/models/product_demand_period.py:0
+msgid ""
+"Start expression must be before or equal to end expression for period "
+"\"%(name)s\"."
+msgstr ""
+
+#. module: stock_product_demand_info
+#: model:ir.model.fields,help:stock_product_demand_info.field_product_demand_period__start_expression
+msgid ""
+"Start of the time window used to search for outgoing stock moves. Use "
+"'today' or 'now' followed by optional offsets: ±Nd (days), ±Nw (weeks), ±Nm "
+"(months), ±Ny (years). Use =1d for first day of month, =6m for a given "
+"month."
+msgstr ""
+
+#. module: stock_product_demand_info
+#: model_terms:ir.ui.view,arch_db:stock_product_demand_info.res_config_settings_view_form
+msgid "View previous demand statistics for products"
+msgstr ""
+
+#. module: stock_product_demand_info
+#: model:product.demand.period,name:stock_product_demand_info.period_ytd
+msgid "Year to date"
+msgstr ""

@@ -1,0 +1,1386 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_payment_return_import_iso20022
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AC09
+msgid "Account currency is invalid or missing"
+msgstr "Valuta konta je nevažeća ili nedostaje"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AC01
+msgid "Account number is invalid or missing."
+msgstr "Broj računa je nevažeći ili nedostaje."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AC04
+msgid ""
+"Account number specified has been closed on the bank of account's books."
+msgstr "Navedeni broj računa zatvoren je na knjigama banke računa."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AC06
+msgid ""
+"Account specified is blocked, prohibiting posting of transactions against "
+"it."
+msgstr ""
+"Navedeni konto je blokiran, što zabranjuje knjiženje transakcija na njemu."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AC12
+msgid "Account type missing or invalid."
+msgstr "Vrsta konta nedostaje ili je nevažeća."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AG04
+msgid "Agent country code is missing or invalid."
+msgstr "Šifra države agenta nedostaje ili je nevažeća."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AGNT
+msgid "Agent in the payment workflow is incorrect"
+msgstr "Agent u tijeku plaćanja je netočan"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AB07
+msgid "Agent of message is not online."
+msgstr "Agent poruke nije na mreži."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AG10
+msgid "Agent of message is suspended from the Real Time Payment system."
+msgstr "Agent poruke je suspendiran iz sustava plaćanja u stvarnom vremenu."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS07
+msgid ""
+"All actions concerning the order could be done by the EBICS bank server"
+msgstr ""
+"Sve radnje koje se odnose na nalog može izvršiti EBICS bankovni poslužitelj"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AM12
+msgid "Amount is invalid or missing"
+msgstr "Iznos je nevažeći ili nedostaje"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AM04
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AM07
+msgid ""
+"Amount of funds available to cover specified message amount is insufficient."
+msgstr ""
+"Iznos dostupnih sredstava za pokriće navedenog iznosa poruke je nedovoljan."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AM09
+msgid "Amount received is not the amount agreed or expected"
+msgstr "Primljeni iznos nije dogovoreni niti očekivani iznos"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS02
+msgid "An authorized user has cancelled the order"
+msgstr "Ovlašteni korisnik otkazao je nalog"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DT05
+msgid ""
+"Associated message, payment information block or transaction was received "
+"after agreed processing cut-off date, i.e., date in the past."
+msgstr ""
+"Povezana poruka, blok informacija o plaćanju ili transakcija primljena je "
+"nakon dogovorenog roka obrade, tj. datuma u prošlosti."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_TM01
+msgid ""
+"Associated message, payment information block, or transaction was received "
+"after agreed processing cut-off time."
+msgstr ""
+"Povezana poruka, blok informacija o plaćanju ili transakcija primljena je "
+"nakon dogovorenog vremena obrade."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_RC05
+msgid "BIC identifier is invalid or missing."
+msgstr "Identifikator BIC je nevažeći ili nedostaje."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_ED03
+msgid "Balance of payments complementary info is requested"
+msgstr "Zatražena je dopunska informacija bilance plaćanja"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AG02
+msgid "Bank Operation code specified in the message is not valid for receiver"
+msgstr "Šifra bankovne operacije navedena u poruci nije valjana za primatelja"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_RC01
+msgid ""
+"Bank identifier code specified in the message has an incorrect format "
+"(formerly IncorrectFormatForRoutingCode)."
+msgstr ""
+"Šifra identifikatora banke navedena u poruci ima netočan format (ranije "
+"IncorrectFormatForRoutingCode)."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_RC02
+msgid "Bank identifier is invalid or missing."
+msgstr "Identifikator banke je nevažeći ili nedostaje."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_SL12
+msgid ""
+"Blacklisting service offered by the Debtor Agent, Debtor included the "
+"Creditor on his “Blacklist”. In the Blacklist the Debtor may list all "
+"Creditors not allowed to debit Debtor bank account"
+msgstr ""
+"Usluga blokiranja koju nudi agent dužnika; dužnik je uključio vjerovnika na "
+"svoju \"Crnu listu\". Na crnoj listi dužnik može navesti sve vjerovnike "
+"kojima nije dopušteno teretiti dužnikov bankovni račun"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AC08
+msgid "Branch code is invalid or missing"
+msgstr "Šifra podružnice je nevažeća ili nedostaje"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_CUST
+msgid "Cancellation requested by the Debtor"
+msgstr "Otkazivanje koje je zatražio dužnik"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_FF06
+msgid "Category Purpose code is missing or invalid"
+msgstr "Šifra svrhe kategorije nedostaje ili je nevažeća"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_RR10
+msgid "Character set supplied not valid for the country and payment type."
+msgstr "Zadani skup znakova nije valjan za državu i vrstu plaćanja."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_BE19
+msgid "Charge bearer code for transaction type is invalid"
+msgstr "Šifra nositelja troška za vrstu transakcije je nevažeća"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_FF09
+msgid "Cheque number missing or invalid"
+msgstr "Broj čeka nedostaje ili je nevažeći"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AB02
+msgid "Clearing process aborted due to a fatal error.   "
+msgstr "Proces poravnanja prekinut je zbog fatalne pogreške.   "
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AB01
+msgid "Clearing process aborted due to timeout."
+msgstr "Proces poravnanja prekinut je zbog isteka vremena."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_FF11
+msgid "Clearing request rejected due it being subject to an abort operation."
+msgstr "Zahtjev poravnanja odbijen je jer je predmet operacije prekida."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_RC08
+msgid "ClearingSystemMemberidentifier is invalid or missing."
+msgstr "Identifikator člana klirinškog sustava je nevažeći ili nedostaje."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_RCON
+msgid "Conflict with R-Message"
+msgstr "Sukob s R-porukom"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_BE18
+msgid "Contact details missing or invalid"
+msgstr "Kontaktni podaci nedostaju ili su nevažeći"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_CH15
+msgid ""
+"Content Remittance Information/Structured includes more than 140 characters"
+msgstr ""
+"Sadržaj informacije o doznaci/strukturirana sadrži više od 140 znakova"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_CH16
+msgid "Content is incorrect"
+msgstr "Sadržaj je netočan"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AM16
+msgid "Control Sum at the Group level is invalid"
+msgstr "Kontrolni zbroj na razini grupe je nevažeći"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AM17
+msgid "Control Sum at the Payment Information level is invalid"
+msgstr "Kontrolni zbroj na razini informacije o plaćanju je nevažeći"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_ED01
+msgid "Correspondent bank not possible."
+msgstr "Korespondentna banka nije moguća."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_BE09
+msgid "Country code is missing or Invalid."
+msgstr "Šifra države nedostaje ili je nevažeća."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_BE14
+msgid "Country code of creditor's residence is missing or Invalid"
+msgstr "Šifra države prebivališta vjerovnika nedostaje ili je nevažeća"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_BE13
+msgid "Country code of debtor's residence is missing or Invalid"
+msgstr "Šifra države prebivališta dužnika nedostaje ili je nevažeća"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_BE12
+msgid "Country code of residence is missing or Invalid."
+msgstr "Šifra države prebivališta nedostaje ili je nevažeća."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_CERI
+msgid ""
+"Credit transfer is not tagged as an Extended Remittance Information (ERI) "
+"transaction but contains ERI."
+msgstr ""
+"Kreditni prijenos nije označen kao transakcija proširene informacije o "
+"doznaci (ERI), ali sadrži ERI."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_NERI
+msgid ""
+"Credit transfer is tagged as an Extended Remittance Information (ERI) "
+"transaction but does not contain ERI."
+msgstr ""
+"Kreditni prijenos označen je kao transakcija proširene informacije o doznaci"
+" (ERI), ali ne sadrži ERI."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AB08
+msgid "Creditor Agent is not online."
+msgstr "Agent vjerovnika nije na mreži."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AG11
+msgid ""
+"Creditor Agent of message is suspended from the Real Time Payment system."
+msgstr ""
+"Agent vjerovnika poruke je suspendiran iz sustava plaćanja u stvarnom "
+"vremenu."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_RC07
+msgid "Creditor BIC identifier is invalid or missing"
+msgstr "Identifikator BIC vjerovnika je nevažeći ili nedostaje"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_RC10
+msgid "Creditor ClearingSystemMember identifier is invalid or missing"
+msgstr ""
+"Identifikator člana klirinškog sustava vjerovnika je nevažeći ili nedostaje"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_CH12
+msgid "Creditor Identifier is ambiguous at Transaction Level"
+msgstr "Identifikator vjerovnika je dvosmislen na razini transakcije"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_RC12
+msgid "Creditor Scheme Id is invalid or  missing"
+msgstr "Id sheme vjerovnika je nevažeći ili nedostaje"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AC11
+msgid "Creditor account currency is invalid or missing"
+msgstr "Valuta računa vjerovnika je nevažeća ili nedostaje"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AC07
+msgid "Creditor account number closed"
+msgstr "Broj računa vjerovnika zatvoren"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AC03
+msgid "Creditor account number invalid or missing"
+msgstr "Broj računa vjerovnika nevažeći ili nedostaje"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AC14
+msgid "Creditor account type missing or invalid"
+msgstr "Vrsta računa vjerovnika nedostaje ili je nevažeća"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AG06
+msgid "Creditor agent country code is missing or invalid"
+msgstr "Šifra države agenta vjerovnika nedostaje ili je nevažeća"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_RC04
+msgid "Creditor bank identifier is invalid or missing"
+msgstr "Identifikator banke vjerovnika je nevažeći ili nedostaje"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_CNOR
+msgid "Creditor bank is not registered under this BIC in the CSM"
+msgstr "Banka vjerovnika nije registrirana pod ovim BIC-om u CSM-u"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_BE11
+msgid "Creditor country code is missing or invalid"
+msgstr "Šifra države vjerovnika nedostaje ili je nevažeća"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_BE22
+msgid "Creditor name is missing"
+msgstr "Naziv vjerovnika nedostaje"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_BE17
+msgid "Creditor or Ultimate Creditor identification code missing or invalid"
+msgstr ""
+"Identifikacijska šifra vjerovnika ili krajnjeg vjerovnika nedostaje ili je "
+"nevažeća"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_MD05
+msgid ""
+"Creditor or creditor's agent should not have collected the direct debit"
+msgstr ""
+"Vjerovnik niti agent vjerovnika nisu smjeli prikupiti izravno terećenje"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_CURR
+msgid "Currency of the payment is incorrect"
+msgstr "Valuta plaćanja je netočna"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS0B
+msgid "Data signature for the format is not available or invalid."
+msgstr "Potpis podataka za format nije dostupan ili je nevažeći."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS0A
+msgid "Data signature is required."
+msgstr "Potpis podataka je obavezan."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_RC06
+msgid "Debtor BIC identifier is invalid or missing"
+msgstr "Identifikator BIC dužnika je nevažeći ili nedostaje"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_RC09
+msgid "Debtor ClearingSystemMember identifier is invalid or missing"
+msgstr ""
+"Identifikator člana klirinškog sustava dužnika je nevažeći ili nedostaje"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AG07
+msgid "Debtor account cannot be debited for a generic reason."
+msgstr "Račun dužnika ne može se teretiti iz generičkog razloga."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AC10
+msgid "Debtor account currency is invalid or missing"
+msgstr "Valuta računa dužnika je nevažeća ili nedostaje"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AC05
+msgid "Debtor account number closed"
+msgstr "Broj računa dužnika zatvoren"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AC02
+msgid "Debtor account number invalid or missing"
+msgstr "Broj računa dužnika nevažeći ili nedostaje"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AC13
+msgid "Debtor account type missing or invalid"
+msgstr "Vrsta računa dužnika nedostaje ili je nevažeća"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AG05
+msgid "Debtor agent country code is missing or invalid"
+msgstr "Šifra države agenta dužnika nedostaje ili je nevažeća"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_RC03
+msgid "Debtor bank identifier is invalid or missing"
+msgstr "Identifikator banke dužnika je nevažeći ili nedostaje"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DNOR
+msgid "Debtor bank is not registered under this BIC in the CSM"
+msgstr "Banka dužnika nije registrirana pod ovim BIC-om u CSM-u"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_BE10
+msgid "Debtor country code is missing or invalid"
+msgstr "Šifra države dužnika nedostaje ili je nevažeća"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_BE08
+msgid "Debtor name is missing"
+msgstr "Naziv dužnika nedostaje"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_BE16
+msgid "Debtor or Ultimate Debtor identification code missing or invalid"
+msgstr ""
+"Identifikacijska šifra dužnika ili krajnjeg dužnika nedostaje ili je "
+"nevažeća"
+
+#. module: account_payment_return_import_iso20022
+#: model:ir.model.fields,field_description:account_payment_return_import_iso20022.field_payment_return_import__display_name
+#: model:ir.model.fields,field_description:account_payment_return_import_iso20022.field_payment_return_line__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_SL14
+msgid ""
+"Due to Maximum allowed Direct Debit Transaction amount service offered by "
+"the Debtor Agent."
+msgstr ""
+"Zbog usluge maksimalnog dopuštenog iznosa transakcije izravnog terećenja "
+"koju nudi agent dužnika."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_SL13
+msgid ""
+"Due to Maximum allowed Direct Debit Transactions per period service offered "
+"by the Debtor Agent."
+msgstr ""
+"Zbog usluge maksimalnog broja dopuštenih transakcija izravnog terećenja po "
+"razdoblju koju nudi agent dužnika."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_SL02
+msgid "Due to specific service offered by the Creditor Agent"
+msgstr "Zbog posebne usluge koju nudi agent vjerovnika"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_SL01
+msgid "Due to specific service offered by the Debtor Agent"
+msgstr "Zbog posebne usluge koju nudi agent dužnika"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AM05
+msgid "Duplication"
+msgstr "Udvostručavanje"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_CH17
+msgid "Element is not allowed"
+msgstr "Element nije dopušten"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_CH07
+msgid "Element is not to be used at B- and C-Level"
+msgstr "Element se ne smije koristiti na B- i C-razini"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DU04
+msgid "End To End ID is not unique."
+msgstr "End-to-end ID nije jedinstven."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_MD07
+msgid "End customer is deceased."
+msgstr "Krajnji kupac je preminuo."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_BE06
+msgid ""
+"End customer specified is not known at associated Sort/National Bank Code or"
+" does no longer exist in the books"
+msgstr ""
+"Navedeni krajnji kupac nije poznat na povezanom sortiranom/nacionalnom "
+"bankovnom kodu ili više ne postoji u knjigama"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_FF08
+msgid "End to End Id missing or invalid"
+msgstr "End-to-end Id nedostaje ili je nevažeći"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DT06
+msgid ""
+"Execution Date has been modified in order for transaction to be processed"
+msgstr "Datum izvršenja promijenjen je kako bi se transakcija obradila"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_ERIN
+msgid "Extended Remittance Information (ERI) option is not supported."
+msgstr "Opcija proširene informacije o doznaci (ERI) nije podržana."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_FF01
+msgid "File Format incomplete or invalid"
+msgstr "Format datoteke nepotpun ili nevažeći"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS18
+msgid ""
+"File cannot be tested, the complete order has to be repeated. This code is "
+"returned in the event of a malfunction during the signature check, e.g. not "
+"enough storage space."
+msgstr ""
+"Datoteka se ne može testirati, cijeli nalog mora se ponoviti. Ovaj kod vraća"
+" se u slučaju kvara tijekom provjere potpisa, npr. nema dovoljno prostora za"
+" pohranu."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_FF10
+msgid ""
+"File or transaction cannot be processed due to technical issues at the bank "
+"side"
+msgstr ""
+"Datoteka ili transakcija ne mogu se obraditi zbog tehničkih problema na "
+"strani banke"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DT04
+msgid "Future date not supported"
+msgstr "Budući datum nije podržan"
+
+#. module: account_payment_return_import_iso20022
+#: model:ir.model.fields,field_description:account_payment_return_import_iso20022.field_payment_return_import__id
+#: model:ir.model.fields,field_description:account_payment_return_import_iso20022.field_payment_return_line__id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_BE15
+msgid "Identification code missing or invalid."
+msgstr "Identifikacijska šifra nedostaje ili je nevažeća."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_BE01
+msgid ""
+"Identification of end customer is not consistent with associated account "
+"number. (formerly CreditorConsistency)."
+msgstr ""
+"Identifikacija krajnjeg kupca nije u skladu s povezanim brojem računa. "
+"(ranije CreditorConsistency)."
+
+#. module: account_payment_return_import_iso20022
+#: model:ir.model,name:account_payment_return_import_iso20022.model_payment_return_import
+msgid "Import Payment Return"
+msgstr "Uvezi povrat plaćanja"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_G003
+msgid ""
+"In a FIToFI Customer Credit Transfer: Credit to creditor’s account is "
+"pending receipt of required documents. The Status Originator has requested "
+"creditor to provide additional documentation. Update will follow from the "
+"Status Originator."
+msgstr ""
+"U FIToFI kreditnom prijenosu kupca: odobrenje na račun vjerovnika čeka "
+"primitak potrebnih dokumenata. Izvorni status zatražio je od vjerovnika "
+"dodatnu dokumentaciju. Ažuriranje će uslijediti od izvornika statusa."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_G004
+msgid ""
+"In a FIToFI Customer Credit Transfer: Credit to the creditor’s account is "
+"pending, status Originator is waiting for funds provided via a cover. Update"
+" will follow from the Status Originator."
+msgstr ""
+"U FIToFI kreditnom prijenosu kupca: odobrenje na račun vjerovnika je na "
+"čekanju, izvornik statusa čeka sredstva osigurana pokrićem. Ažuriranje će "
+"uslijediti od izvornika statusa."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_G001
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_G002
+msgid ""
+"In a FIToFI Customer Credit Transfer: Credit to the creditor’s account may "
+"not be confirmed same day. Update will follow from the Status Originator."
+msgstr ""
+"U FIToFI kreditnom prijenosu kupca: odobrenje na račun vjerovnika možda se "
+"ne može potvrditi isti dan. Ažuriranje će uslijediti od izvornika statusa."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_G000
+msgid ""
+"In a FIToFI Customer Credit Transfer: The Status Originator transferred the "
+"payment to the next Agent or to a Market Infrastructure. The payment "
+"transfer is not tracked. No further updates will follow from the Status "
+"Originator."
+msgstr ""
+"U FIToFI kreditnom prijenosu kupca: izvornik statusa prenio je plaćanje "
+"sljedećem agentu ili na tržišnu infrastrukturu. Prijenos plaćanja se ne "
+"prati. Neće uslijediti daljnja ažuriranja od izvornika statusa."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_CH10
+msgid "Information on mandate changes are missing"
+msgstr "Informacije o promjenama mandata nedostaju"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DU05
+msgid "Instruction ID is not unique."
+msgstr "ID upute nije jedinstven."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_ED06
+msgid "Interbank settlement system not available."
+msgstr "Međubankovni sustav namire nije dostupan."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_RC11
+msgid "Intermediary Agent is invalid or missing"
+msgstr "Posrednički agent je nevažeći ili nedostaje"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DT02
+msgid "Invalid creation date and time in Group Header (eg, historic date)"
+msgstr ""
+"Nevažeći datum i vrijeme kreiranja u zaglavlju grupe (npr. povijesni datum)"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DT01
+msgid "Invalid date (eg, wrong or missing settlement date)"
+msgstr "Nevažeći datum (npr. pogrešan ili nedostajući datum namire)"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DT03
+msgid "Invalid non bank processing date (eg, weekend or local public holiday)"
+msgstr ""
+"Nevažeći nebankarski datum obrade (npr. vikend ili lokalni javni blagdan)"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_RR11
+msgid "Invalid or missing identification of a bank proprietary service."
+msgstr "Nevažeća ili nedostajuća identifikacija bankovne vlasničke usluge."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_RR12
+msgid ""
+"Invalid or missing identification required within a particular country or "
+"payment type."
+msgstr ""
+"Nevažeća ili nedostajuća identifikacija potrebna unutar određene države ili "
+"vrste plaćanja."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_FF05
+msgid "Local Instrument code is missing or invalid"
+msgstr "Šifra lokalnog instrumenta nedostaje ili je nevažeća"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_CH09
+msgid "Mandate changes are not allowed"
+msgstr "Promjene mandata nisu dopuštene"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_MD02
+msgid "Mandate related information data required by the scheme is missing."
+msgstr "Podaci vezani uz mandat koji shema zahtijeva nedostaju."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_CH21
+msgid "Mandatory element is missing"
+msgstr "Obavezni element nedostaje"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DU01
+msgid "Message Identification is not unique."
+msgstr "Identifikacija poruke nije jedinstvena."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_BE20
+msgid "Name length exceeds local rules for payment type."
+msgstr "Duljina naziva premašuje lokalna pravila za vrstu plaćanja."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_BE21
+msgid ""
+"Name missing or invalid.  Generic usage if cannot specifically identify "
+"debtor or creditor."
+msgstr ""
+"Naziv nedostaje ili je nevažeći.  Generička upotreba ako se ne može "
+"konkretno identificirati dužnik ili vjerovnik."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_MD01
+msgid "No Mandate"
+msgstr "Bez mandata"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_CH20
+msgid "Number of decimal points not compatible with the currency"
+msgstr "Broj decimalnih mjesta nije kompatibilan s valutom"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AM19
+msgid "Number of transactions at the Group level is invalid or missing"
+msgstr "Broj transakcija na razini grupe je nevažeći ili nedostaje"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AM20
+msgid "Number of transactions at the Payment Information level is invalid"
+msgstr "Broj transakcija na razini informacije o plaćanju je nevažeći"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AM18
+msgid "Number of transactions is invalid or missing."
+msgstr "Broj transakcija je nevažeći ili nedostaje."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS17
+msgid "Order data and signatures don’t match"
+msgstr "Podaci naloga i potpisi se ne podudaraju"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_CH13
+msgid "Original Debtor Account is not to be used"
+msgstr "Izvorni račun dužnika ne smije se koristiti"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_CH14
+msgid "Original Debtor Agent  is not to be used"
+msgstr "Izvorni agent dužnika ne smije se koristiti"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AG09
+msgid "Original payment never received."
+msgstr "Izvorno plaćanje nikada nije primljeno."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_BE05
+msgid "Party who initiated the message is not recognised by the end customer"
+msgstr "Strana koja je pokrenula poruku nije prepoznata od krajnjeg kupca"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DU02
+msgid "Payment Information Block is not unique."
+msgstr "Blok informacija o plaćanju nije jedinstven."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_FF03
+msgid "Payment Type Information is missing or invalid."
+msgstr "Informacije o vrsti plaćanja nedostaju ili su nevažeće."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_G005
+msgid "Payment has been delivered to creditor agent with service level."
+msgstr "Plaćanje je isporučeno agentu vjerovnika s razinom usluge."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_G006
+msgid "Payment has been delivered to creditor agent without service level."
+msgstr "Plaćanje je isporučeno agentu vjerovnika bez razine usluge."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DUPL
+msgid "Payment is a duplicate of another payment"
+msgstr "Plaćanje je duplikat drugog plaćanja"
+
+#. module: account_payment_return_import_iso20022
+#: model:ir.model,name:account_payment_return_import_iso20022.model_payment_return_line
+msgid "Payment return lines"
+msgstr "Reci povrata plaćanja"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_FF07
+msgid "Purpose is missing or invalid"
+msgstr "Svrha nedostaje ili je nevažeća"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_MS03
+msgid "Reason has not been specified by agent."
+msgstr "Razlog agent nije naveo."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_MS02
+msgid "Reason has not been specified by end customer"
+msgstr "Razlog krajnji kupac nije naveo"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_NARR
+msgid ""
+"Reason is provided as narrative information in the additional reason "
+"information."
+msgstr ""
+"Razlog je naveden kao narativna informacija u dodatnoj informaciji o "
+"razlogu."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_RR04
+msgid "Regulatory Reason"
+msgstr "Regulatorni razlog"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_RR05
+msgid ""
+"Regulatory or Central Bank Reporting information missing, incomplete or "
+"invalid."
+msgstr ""
+"Informacije regulatornog ili središnjeg bankovnog izvještavanja nedostaju, "
+"nepotpune su ili nevažeće."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_RR07
+msgid ""
+"Remittance information structure does not comply with rules for payment "
+"type."
+msgstr ""
+"Struktura informacije o doznaci nije u skladu s pravilima za vrstu plaćanja."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_RR08
+msgid ""
+"Remittance information truncated to comply with rules for payment type."
+msgstr ""
+"Informacija o doznaci skraćena je radi usklađivanja s pravilima za vrstu "
+"plaćanja."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_S004
+msgid ""
+"Request for Cancellation has been acknowledged as delivered to payment "
+"processing/last payment processing agent."
+msgstr ""
+"Zahtjev za otkazivanje potvrđen je kao isporučen agentu za obradu "
+"plaćanja/posljednjem agentu za obradu plaćanja."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_S003
+msgid ""
+"Request for Cancellation has been forwarded to the payment processing/last "
+"payment processing agent."
+msgstr ""
+"Zahtjev za otkazivanje proslijeđen je agentu za obradu plaćanja/posljednjem "
+"agentu za obradu plaćanja."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_S000
+msgid "Request for Cancellation is acknowledged following validation."
+msgstr "Zahtjev za otkazivanje je potvrđen nakon validacije."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_MD06
+msgid "Return of funds requested by end customer"
+msgstr "Povrat sredstava zatražio krajnji kupac"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_CH22
+msgid "SDD CORE and B2B not permitted within one message"
+msgstr "SDD CORE i B2B nisu dopušteni unutar jedne poruke"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_FF04
+msgid "Service Level code is missing or invalid"
+msgstr "Šifra razine usluge nedostaje ili je nevažeća"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AB03
+msgid "Settlement aborted due to timeout.   "
+msgstr "Poravnanje prekinuto zbog isteka vremena.   "
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_ED05
+msgid "Settlement of the transaction has failed."
+msgstr "Namira transakcije nije uspjela."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AB04
+msgid "Settlement process aborted due to a fatal error.   "
+msgstr "Proces poravnanja prekinut je zbog fatalne pogreške.   "
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_ID01
+msgid ""
+"Signature file was sent to the bank but the corresponding original file has "
+"not been sent yet."
+msgstr ""
+"Datoteka potpisa poslana je banci, ali odgovarajuća izvorna datoteka još "
+"nije poslana."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS0H
+msgid "Signer is not allowed to sign for this account."
+msgstr "Potpisnik nema dozvolu potpisati za ovaj račun."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS0G
+msgid "Signer is not allowed to sign this operation type."
+msgstr "Potpisnik nema dozvolu potpisati ovu vrstu operacije."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AM02
+msgid "Specific transaction/message amount is greater than allowed maximum"
+msgstr "Određeni iznos transakcije/poruke veći je od dopuštenog maksimuma"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_BE04
+msgid ""
+"Specification of creditor's address, which is required for payment, is "
+"missing/not correct (formerly IncorrectCreditorAddress)."
+msgstr ""
+"Specifikacija adrese vjerovnika, koja je potrebna za plaćanje, "
+"nedostaje/nije točna (ranije IncorrectCreditorAddress)."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_BE07
+msgid ""
+"Specification of debtor's address, which is required for payment, is "
+"missing/not correct."
+msgstr ""
+"Specifikacija adrese dužnika, koja je potrebna za plaćanje, nedostaje/nije "
+"točna."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_RR03
+msgid ""
+"Specification of the creditor’s name and/or address needed for regulatory "
+"requirements is insufficient or missing."
+msgstr ""
+"Specifikacija naziva i/ili adrese vjerovnika potrebna za regulatorne "
+"zahtjeve je nedovoljna ili nedostaje."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_RR01
+msgid ""
+"Specification of the debtor’s account or unique identification needed for "
+"reasons of regulatory requirements is insufficient or missing"
+msgstr ""
+"Specifikacija računa dužnika ili jedinstvene identifikacije potrebna iz "
+"regulatornih razloga je nedovoljna ili nedostaje"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_RR02
+msgid ""
+"Specification of the debtor’s name and/or address needed for regulatory "
+"requirements is insufficient or missing."
+msgstr ""
+"Specifikacija naziva i/ili adrese dužnika potrebna za regulatorne zahtjeve "
+"je nedovoljna ili nedostaje."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AM03
+msgid ""
+"Specified message amount is an non processable currency outside of existing "
+"agreement"
+msgstr ""
+"Navedeni iznos poruke je valuta koja se ne može obraditi izvan postojećeg "
+"ugovora"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AM01
+msgid "Specified message amount is equal to zero"
+msgstr "Navedeni iznos poruke jednak je nuli"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AM06
+msgid "Specified transaction amount is less than agreed minimum."
+msgstr "Navedeni iznos transakcije manji je od dogovorenog minimuma."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_RR09
+msgid "Structured creditor reference invalid or missing."
+msgstr "Strukturirana referenca vjerovnika nevažeća ili nedostaje."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AM10
+msgid "Sum of instructed amounts does not equal the control sum."
+msgstr "Zbroj naloga ne odgovara kontrolnom zbroju."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_FF02
+msgid ""
+"Syntax error reason is provided as narrative information in the additional "
+"reason information."
+msgstr ""
+"Razlog sintaksne pogreške naveden je kao narativna informacija u dodatnoj "
+"informaciji o razlogu."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_RR06
+msgid "Tax information missing, incomplete or invalid."
+msgstr "Informacije o porezu nedostaju, nepotpune su ili nevažeće."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_TS01
+msgid "The (technical) transmission of the file was successful."
+msgstr "(Tehnički) prijenos datoteke bio je uspješan."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AC15
+msgid "The account details for the counterparty have changed."
+msgstr "Podaci o računu druge ugovorne strane su se promijenili."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS13
+msgid ""
+"The authority of signer certification sending the certificate is unknown for"
+" the first signer."
+msgstr ""
+"Autoritet certifikata potpisnika koji šalje certifikat nepoznat je za prvog "
+"potpisnika."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS23
+msgid ""
+"The authority of signer certification sending the certificate is unknown for"
+" the second signer."
+msgstr ""
+"Autoritet certifikata potpisnika koji šalje certifikat nepoznat je za drugog"
+" potpisnika."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS0F
+msgid ""
+"The authority of the signer certification sending the certificate is "
+"unknown."
+msgstr "Autoritet certifikata potpisnika koji šalje certifikat je nepoznat."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS12
+msgid "The certificate is not present for the first signer."
+msgstr "Certifikat nije prisutan za prvog potpisnika."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS22
+msgid "The certificate is not present for the second signer."
+msgstr "Certifikat nije prisutan za drugog potpisnika."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS11
+msgid ""
+"The certificate is not valid (revoked or not active) for the first signer."
+msgstr "Certifikat nije valjan (opozvan ili neaktivan) za prvog potpisnika."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS21
+msgid ""
+"The certificate is not valid (revoked or not active) for the second signer."
+msgstr "Certifikat nije valjan (opozvan ili neaktivan) za drugog potpisnika."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS10
+msgid "The certificate is revoked for the first signer."
+msgstr "Certifikat je opozvan za prvog potpisnika."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS20
+msgid "The certificate is revoked for the second signer."
+msgstr "Certifikat je opozvan za drugog potpisnika."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS08
+msgid "The decompression of the file was not successful"
+msgstr "Dekomprimiranje datoteke nije bilo uspješno"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS09
+msgid "The decryption of the file was not successful"
+msgstr "Dešifriranje datoteke nije bilo uspješno"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS01
+msgid "The electronic signature(s) is/are correct"
+msgstr "Elektronički potpis/i je/su točni"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_TD02
+msgid "The file cannot be read (e.g. unknown format)"
+msgstr "Datoteka se ne može pročitati (npr. nepoznat format)"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_TD03
+msgid "The file format is incomplete or invalid"
+msgstr "Format datoteke je nepotpun ili nevažeći"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS0K
+msgid "The number of transaction is over the number allowed for this signer."
+msgstr "Broj transakcija je iznad broja dopuštenog za ovog potpisnika."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS25
+msgid "The order file was deleted by the bank server"
+msgstr "Datoteka naloga izbrisana je od strane bankovnog poslužitelja"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS05
+msgid "The order was correct and could be forwarded for postprocessing"
+msgstr "Nalog je bio ispravan i mogao se proslijediti na naknadnu obradu"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS04
+msgid ""
+"The order was rejected by the bank side (for reasons concerning content)"
+msgstr "Nalog je odbijen od strane banke (iz razloga vezanih uz sadržaj)"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS06
+msgid "The order was transferred to VEU"
+msgstr "Nalog je prebačen u VEU"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_TS04
+msgid "The order was transferred to pass by accompanying note signed by hand"
+msgstr "Nalog je prebačen da prođe uz popratnu bilješku potpisanu rukom"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS16
+msgid ""
+"The public key version is not correct. This code is returned when a customer"
+" sends signature files to the financial institution after conversion from an"
+" older program version (old ES format) to a new program version (new ES "
+"format) without having carried out re-initialisation with regard to a public"
+" key change."
+msgstr ""
+"Verzija javnog ključa nije točna. Ovaj kod vraća se kada kupac šalje "
+"datoteke potpisa financijskoj instituciji nakon konverzije sa starije "
+"verzije programa (stari ES format) na novu verziju programa (novi ES format)"
+" bez provedene reinicijalizacije s obzirom na promjenu javnog ključa."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS15
+msgid "The same signature has already been sent to the bank"
+msgstr "Isti potpis već je poslan banci"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS26
+msgid "The same user has signed multiple times"
+msgstr "Isti korisnik potpisao je više puta"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS0E
+msgid "The signer certificate is not present."
+msgstr "Certifikat potpisnika nije prisutan."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS0D
+msgid "The signer certificate is not valid (revoked or not active)."
+msgstr "Certifikat potpisnika nije valjan (opozvan ili neaktivan)."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS0C
+msgid "The signer certificate is revoked."
+msgstr "Certifikat potpisnika je opozvan."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_TA01
+msgid ""
+"The transmission of the file was not successful – it had to be aborted (for "
+"technical reasons)"
+msgstr ""
+"Prijenos datoteke nije bio uspješan – morao se prekinuti (iz tehničkih "
+"razloga)"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS27
+msgid "The user is not yet activated (technically)"
+msgstr "Korisnik još nije aktiviran (tehnički)"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS14
+msgid "The user is unknown on the server"
+msgstr "Korisnik je nepoznat na poslužitelju"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS03
+msgid "The user’s attempt to cancel the order was not successful"
+msgstr "Korisnikov pokušaj otkazivanja naloga nije bio uspješan"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS19
+msgid ""
+"The user’s rights (concerning his signature) are insufficient to execute the"
+" order"
+msgstr ""
+"Korisnikova prava (vezana uz njegov potpis) nedovoljna su za izvršenje "
+"naloga"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_TD01
+msgid "There is no data available (for download)"
+msgstr "Nema dostupnih podataka (za preuzimanje)"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AM15
+msgid "Transaction amount below minimum set by clearing system"
+msgstr "Iznos transakcije ispod minimuma koji je postavio klirinški sustav"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AM14
+msgid "Transaction amount exceeds limits agreed between bank and client"
+msgstr "Iznos transakcije premašuje limite dogovorene između banke i klijenta"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AM21
+msgid "Transaction amount exceeds limits agreed between bank and client."
+msgstr ""
+"Iznos transakcije premašuje limite dogovorene između banke i klijenta."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AM13
+msgid "Transaction amount exceeds limits set by clearing system"
+msgstr "Iznos transakcije premašuje limite koje je postavio klirinški sustav"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AM23
+msgid "Transaction amount exceeds settlement limit."
+msgstr "Iznos transakcije premašuje limit namire."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AM11
+msgid "Transaction currency is invalid or missing"
+msgstr "Valuta transakcije je nevažeća ili nedostaje"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AG08
+msgid "Transaction failed due to invalid or missing user or access right"
+msgstr ""
+"Transakcija nije uspjela zbog nevažećeg ili nedostajućeg korisnika ili prava"
+" pristupa"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AG01
+msgid "Transaction forbidden on this type of account (formerly NoAgreement)"
+msgstr "Transakcija zabranjena na ovoj vrsti konta (ranije NoAgreement)"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DU03
+msgid "Transaction is not unique."
+msgstr "Transakcija nije jedinstvena."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_RF01
+msgid "Transaction reference is not unique within the message."
+msgstr "Referenca transakcije nije jedinstvena unutar poruke."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AB09
+msgid "Transaction stopped due to error at the Creditor Agent."
+msgstr "Transakcija zaustavljena zbog pogreške kod agenta vjerovnika."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AB10
+msgid "Transaction stopped due to error at the Instructed Agent."
+msgstr "Transakcija zaustavljena zbog pogreške kod upućenog agenta."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AB05
+msgid "Transaction stopped due to timeout at the Creditor Agent."
+msgstr "Transakcija zaustavljena zbog isteka vremena kod agenta vjerovnika."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AB06
+msgid "Transaction stopped due to timeout at the Instructed Agent."
+msgstr "Transakcija zaustavljena zbog isteka vremena kod upućenog agenta."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AG03
+msgid "Transaction type not supported/authorized on this account"
+msgstr "Vrsta transakcije nije podržana/ovlaštena na ovom kontu"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_AM22
+msgid ""
+"Unable to apply zero amount to designated account. For example, where the "
+"rules of a service allow the use of zero amount payments, however the back-"
+"office system is unable to apply the funds to the account. If the rules of a"
+" service prohibit the use of zero amount payments, then code AM01 is used to"
+" report the error condition."
+msgstr ""
+"Nije moguće primijeniti nulti iznos na naznačeni konto. Na primjer, kada "
+"pravila usluge dopuštaju korištenje plaćanja s nultim iznosom, ali back-"
+"office sustav ne može primijeniti sredstva na konto. Ako pravila usluge "
+"zabranjuju korištenje plaćanja s nultim iznosom, onda se kod AM01 koristi za"
+" prijavu pogreške."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_S001
+msgid ""
+"Unique End-to-end Transaction Reference (UETR) relating to a payment has "
+"been identified as being associated with a Request for Cancellation."
+msgstr ""
+"Jedinstvena end-to-end referenca transakcije (UETR) koja se odnosi na "
+"plaćanje identificirana je kao povezana sa zahtjevom za otkazivanje."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_S002
+msgid ""
+"Unique End-to-end Transaction Reference (UETR) relating to a payment has "
+"been prevent from traveling across a messaging network."
+msgstr ""
+"Jedinstvenoj end-to-end referenci transakcije (UETR) koja se odnosi na "
+"plaćanje spriječeno je putovanje kroz mrežu za razmjenu poruka."
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_CH11
+msgid "Value in Creditor Identifier is incorrect"
+msgstr "Vrijednost u identifikatoru vjerovnika je netočna"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_CH03
+msgid ""
+"Value in Requested Execution Date or Requested Collection Date is too far in"
+" the future"
+msgstr ""
+"Vrijednost u zatraženom datumu izvršenja ili zatraženom datumu naplate je "
+"predaleko u budućnosti"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_CH04
+msgid ""
+"Value in Requested Execution Date or Requested Collection Date is too far in"
+" the past"
+msgstr ""
+"Vrijednost u zatraženom datumu izvršenja ili zatraženom datumu naplate je "
+"predaleko u prošlosti"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_CH19
+msgid ""
+"Values in Interbank Settlement Date or Requested Collection Date will be set"
+" to the next TARGET day"
+msgstr ""
+"Vrijednosti u datumu međubankarske namire ili zatraženom datumu naplate bit "
+"će postavljene na sljedeći TARGET dan"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_DS24
+msgid "Waiting time expired due to incomplete order"
+msgstr "Vrijeme čekanja isteklo je zbog nepotpunog naloga"
+
+#. module: account_payment_return_import_iso20022
+#: model:payment.return.reason,name:account_payment_return_import_iso20022.unpaid_reason_SL11
+msgid ""
+"Whitelisting service offered by the Debtor Agent, Debtor has not included "
+"the Creditor on its “Whitelist” (yet). In the Whitelist the Debtor may list "
+"all allowed Creditors to debit Debtor bank account"
+msgstr ""
+"Usluga bijele liste koju nudi agent dužnika; dužnik (još) nije uključio "
+"vjerovnika na svoju \"Bijelu listu\". Na bijeloj listi dužnik može navesti "
+"sve dopuštene vjerovnike koji smiju teretiti dužnikov bankovni račun"

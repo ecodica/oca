@@ -1,0 +1,173 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_statement_import_online_ponto
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: account_statement_import_online_ponto
+#. odoo-python
+#: code:addons/account_statement_import_online_ponto/models/ponto_interface.py:0
+msgid "%d transactions present in response data"
+msgstr "%d transakcija prisutno je u podacima odgovora"
+
+#. module: account_statement_import_online_ponto
+#: model:ir.model.fields,field_description:account_statement_import_online_ponto.field_online_bank_statement_provider__display_name
+#: model:ir.model.fields,field_description:account_statement_import_online_ponto.field_ponto_interface__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: account_statement_import_online_ponto
+#: model:ir.model.fields.selection,name:account_statement_import_online_ponto.selection__online_bank_statement_provider__ponto_date_field__execution_date
+msgid "Execution Date"
+msgstr "Datum izvršenja"
+
+#. module: account_statement_import_online_ponto
+#. odoo-python
+#: code:addons/account_statement_import_online_ponto/models/ponto_interface.py:0
+msgid "GET request on %(url)s"
+msgstr "GET zahtjev na %(url)s"
+
+#. module: account_statement_import_online_ponto
+#. odoo-python
+#: code:addons/account_statement_import_online_ponto/models/ponto_interface.py:0
+msgid "GET request to %(url)s with headers %(headers)s and params %(params)s"
+msgstr ""
+"GET zahtjev na %(url)s sa zaglavljima %(headers)s i parametrima %(params)s"
+
+#. module: account_statement_import_online_ponto
+#. odoo-python
+#: code:addons/account_statement_import_online_ponto/models/ponto_interface.py:0
+msgid "HTTP answer code %(response_code)s from Ponto"
+msgstr "HTTP šifra odgovora %(response_code)s od Ponta"
+
+#. module: account_statement_import_online_ponto
+#: model:ir.model.fields,field_description:account_statement_import_online_ponto.field_online_bank_statement_provider__id
+#: model:ir.model.fields,field_description:account_statement_import_online_ponto.field_ponto_interface__id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_statement_import_online_ponto
+#: model:ir.model,name:account_statement_import_online_ponto.model_ponto_interface
+msgid "Interface to all interactions with Ponto API"
+msgstr "Sučelje za sve interakcije s Ponto API-jem"
+
+#. module: account_statement_import_online_ponto
+#: model_terms:ir.ui.view,arch_db:account_statement_import_online_ponto.online_bank_statement_provider_form
+msgid "Login"
+msgstr "Korisnik"
+
+#. module: account_statement_import_online_ponto
+#. odoo-python
+#: code:addons/account_statement_import_online_ponto/models/online_bank_statement_provider_ponto.py:0
+msgid "No lines were retrieved from Ponto"
+msgstr "Nijedan redak nije preuzet s Ponta"
+
+#. module: account_statement_import_online_ponto
+#. odoo-python
+#: code:addons/account_statement_import_online_ponto/models/ponto_interface.py:0
+msgid "No transactions where found in data %(data)s"
+msgstr "Nisu pronađene transakcije u podacima %(data)s"
+
+#. module: account_statement_import_online_ponto
+#: model:ir.model,name:account_statement_import_online_ponto.model_online_bank_statement_provider
+msgid "Online Bank Statement Provider"
+msgstr "Pružatelj online bankovnog izvoda"
+
+#. module: account_statement_import_online_ponto
+#. odoo-python
+#: code:addons/account_statement_import_online_ponto/models/ponto_interface.py:0
+msgid "POST request on %(url)s"
+msgstr "POST zahtjev na %(url)s"
+
+#. module: account_statement_import_online_ponto
+#. odoo-python
+#: code:addons/account_statement_import_online_ponto/models/ponto_interface.py:0
+msgid "Please fill login and key."
+msgstr "Popunite prijavu i ključ."
+
+#. module: account_statement_import_online_ponto
+#. odoo-python
+#: code:addons/account_statement_import_online_ponto/models/ponto_interface.py:0
+msgid "Ponto : no token"
+msgstr "Ponto: nema tokena"
+
+#. module: account_statement_import_online_ponto
+#. odoo-python
+#: code:addons/account_statement_import_online_ponto/models/ponto_interface.py:0
+msgid "Ponto : wrong configuration, account %(account)s not found in %(data)s"
+msgstr ""
+"Ponto: pogrešna konfiguracija, konto %(account)s nije pronađen u %(data)s"
+
+#. module: account_statement_import_online_ponto
+#: model_terms:ir.ui.view,arch_db:account_statement_import_online_ponto.online_bank_statement_provider_form
+msgid "Ponto Config"
+msgstr "Ponto konfiguracija"
+
+#. module: account_statement_import_online_ponto
+#: model:ir.model.fields,field_description:account_statement_import_online_ponto.field_online_bank_statement_provider__ponto_date_field
+msgid "Ponto Date Field"
+msgstr "Ponto polje datuma"
+
+#. module: account_statement_import_online_ponto
+#: model:ir.model.fields,field_description:account_statement_import_online_ponto.field_online_bank_statement_provider__ponto_last_identifier
+msgid "Ponto Last Identifier"
+msgstr "Ponto zadnji identifikator"
+
+#. module: account_statement_import_online_ponto
+#. odoo-python
+#: code:addons/account_statement_import_online_ponto/models/online_bank_statement_provider_ponto.py:0
+msgid "Ponto obtain all new statement data for journal %s"
+msgstr "Ponto dobiva sve nove podatke izvoda za dnevnik %s"
+
+#. module: account_statement_import_online_ponto
+#. odoo-python
+#: code:addons/account_statement_import_online_ponto/models/online_bank_statement_provider_ponto.py:0
+msgid ""
+"Ponto obtain statement data for journal %(journal)s from %(date_since)s to "
+"%(date_until)s"
+msgstr ""
+"Ponto dobiva podatke izvoda za dnevnik %(journal)s od %(date_since)s do "
+"%(date_until)s"
+
+#. module: account_statement_import_online_ponto
+#: model_terms:ir.ui.view,arch_db:account_statement_import_online_ponto.online_bank_statement_provider_form
+msgid "Secret Key"
+msgstr "Tajni ključ"
+
+#. module: account_statement_import_online_ponto
+#: model:ir.model.fields,help:account_statement_import_online_ponto.field_online_bank_statement_provider__ponto_date_field
+msgid ""
+"Select the Ponto date field that will be used for the Odoo bank statement "
+"line date."
+msgstr ""
+"Odaberite Ponto polje datuma koje će se koristiti za datum stavke Odoo "
+"bankovnog izvoda."
+
+#. module: account_statement_import_online_ponto
+#. odoo-python
+#: code:addons/account_statement_import_online_ponto/models/ponto_interface.py:0
+msgid "Server returned status code %(response_code)s: %(response_text)s"
+msgstr ""
+"Poslužitelj je vratio statusni kod %(response_code)s: %(response_text)s"
+
+#. module: account_statement_import_online_ponto
+#. odoo-python
+#: code:addons/account_statement_import_online_ponto/tests/test_account_statement_import_online_ponto.py:0
+msgid "Statement contains transactions: %s"
+msgstr "Izvod sadrži transakcije: %s"
+
+#. module: account_statement_import_online_ponto
+#: model:ir.model.fields.selection,name:account_statement_import_online_ponto.selection__online_bank_statement_provider__ponto_date_field__value_date
+msgid "Value Date"
+msgstr "Datum valute"

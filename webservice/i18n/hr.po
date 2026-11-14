@@ -1,0 +1,311 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* webservice
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: webservice
+#: model:ir.model.fields,field_description:webservice.field_webservice_backend__api_key
+#: model:ir.model.fields.selection,name:webservice.selection__webservice_backend__auth_type__api_key
+msgid "API Key"
+msgstr "API ključ"
+
+#. module: webservice
+#: model:ir.model.fields,field_description:webservice.field_webservice_backend__api_key_header
+msgid "API Key header"
+msgstr "Zaglavlje API ključa"
+
+#. module: webservice
+#: model:ir.model.fields,field_description:webservice.field_webservice_backend__oauth2_audience
+msgid "Audience"
+msgstr "Publika"
+
+#. module: webservice
+#: model:ir.model.fields,field_description:webservice.field_webservice_backend__auth_type
+msgid "Auth Type"
+msgstr "Vrsta autentikacije"
+
+#. module: webservice
+#: model:ir.model.fields,field_description:webservice.field_webservice_backend__oauth2_authorization_url
+msgid "Authorization URL"
+msgstr "URL autorizacije"
+
+#. module: webservice
+#: model:ir.model.fields.selection,name:webservice.selection__webservice_backend__oauth2_flow__backend_application
+msgid "Backend Application (Client Credentials Grant)"
+msgstr "Pozadinska aplikacija (Client Credentials Grant)"
+
+#. module: webservice
+#: model:ir.model.fields,field_description:webservice.field_webservice_backend__oauth2_client_auth_header
+msgid "Client Auth Header"
+msgstr "Zaglavlje autentikacije klijenta"
+
+#. module: webservice
+#: model:ir.model.fields,field_description:webservice.field_webservice_backend__oauth2_client_auth_value
+msgid "Client Auth Header Value"
+msgstr "Vrijednost zaglavlja autentikacije klijenta"
+
+#. module: webservice
+#: model:ir.model.fields,field_description:webservice.field_webservice_backend__oauth2_client_auth_method
+msgid "Client Authentication"
+msgstr "Autentikacija klijenta"
+
+#. module: webservice
+#: model:ir.model.fields,field_description:webservice.field_webservice_backend__oauth2_clientid
+msgid "Client ID"
+msgstr "ID klijenta"
+
+#. module: webservice
+#: model:ir.model.fields.selection,name:webservice.selection__webservice_backend__oauth2_client_auth_method__client_secret_basic
+msgid "Client ID & Secret (HTTP Basic)"
+msgstr "ID klijenta i tajna (HTTP Basic)"
+
+#. module: webservice
+#: model:ir.model.fields,field_description:webservice.field_webservice_backend__oauth2_client_secret
+msgid "Client Secret"
+msgstr "Tajni klijent"
+
+#. module: webservice
+#: model:ir.model.fields,field_description:webservice.field_webservice_backend__company_id
+msgid "Company"
+msgstr "Tvrtka"
+
+#. module: webservice
+#: model:ir.model.fields,field_description:webservice.field_webservice_backend__content_type
+msgid "Content Type"
+msgstr "Vrsta datoteke"
+
+#. module: webservice
+#: model:ir.model.fields,field_description:webservice.field_webservice_backend__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: webservice
+#: model:ir.model.fields,field_description:webservice.field_webservice_backend__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: webservice
+#: model:ir.model.fields.selection,name:webservice.selection__webservice_backend__oauth2_client_auth_method__custom_header
+msgid "Custom Authorization header"
+msgstr "Prilagođeno zaglavlje autorizacije"
+
+#. module: webservice
+#: model:ir.model.fields,field_description:webservice.field_webservice_backend__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: webservice
+#: model:ir.model.fields.selection,name:webservice.selection__webservice_backend__content_type__application/x-www-form-urlencoded
+msgid "Form"
+msgstr "Forma"
+
+#. module: webservice
+#: model:ir.model.fields,help:webservice.field_webservice_backend__oauth2_client_auth_value
+msgid ""
+"Full, static header value sent to the token endpoint when the client "
+"authentication method is a custom Authorization header (e.g. 'SSWS "
+"<token>')."
+msgstr ""
+
+#. module: webservice
+#: model:ir.model.fields.selection,name:webservice.selection__webservice_backend__oauth2_token_method__get
+msgid "GET"
+msgstr "GET"
+
+#. module: webservice
+#: model:ir.model.fields.selection,name:webservice.selection__webservice_backend__protocol__http
+msgid "HTTP Request"
+msgstr ""
+
+#. module: webservice
+#: model:ir.model.fields,help:webservice.field_webservice_backend__oauth2_token_method
+msgid ""
+"HTTP method used to request the token from the token endpoint. Most "
+"providers use POST; some expose the token endpoint as GET."
+msgstr ""
+
+#. module: webservice
+#: model:ir.model.fields,help:webservice.field_webservice_backend__oauth2_client_auth_header
+msgid ""
+"Header name used to send the client credentials when the client "
+"authentication method is a custom Authorization header."
+msgstr ""
+
+#. module: webservice
+#: model:ir.model.fields,help:webservice.field_webservice_backend__oauth2_client_auth_method
+msgid "How the client credentials are presented to the token endpoint."
+msgstr ""
+
+#. module: webservice
+#: model:ir.model.fields,field_description:webservice.field_webservice_backend__id
+msgid "ID"
+msgstr "ID"
+
+#. module: webservice
+#: model:ir.model.fields.selection,name:webservice.selection__webservice_backend__content_type__application/json
+msgid "JSON"
+msgstr "JSON"
+
+#. module: webservice
+#: model:ir.model.fields,field_description:webservice.field_webservice_backend__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: webservice
+#: model:ir.model.fields,field_description:webservice.field_webservice_backend__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: webservice
+#: model:ir.model.fields,field_description:webservice.field_webservice_backend__name
+msgid "Name"
+msgstr "Naziv"
+
+#. module: webservice
+#: model_terms:ir.ui.view,arch_db:webservice.webservice_backend_form_view
+msgid "OAuth Authorize"
+msgstr ""
+
+#. module: webservice
+#: model:ir.model.fields.selection,name:webservice.selection__webservice_backend__auth_type__oauth2
+msgid "OAuth2"
+msgstr "OAuth2"
+
+#. module: webservice
+#: model:ir.model.fields,field_description:webservice.field_webservice_backend__oauth2_flow
+msgid "Oauth2 Flow"
+msgstr ""
+
+#. module: webservice
+#: model:ir.model.fields,field_description:webservice.field_webservice_backend__oauth2_scope
+msgid "Oauth2 Scope"
+msgstr ""
+
+#. module: webservice
+#: model:ir.model.fields,field_description:webservice.field_webservice_backend__oauth2_state
+msgid "Oauth2 State"
+msgstr ""
+
+#. module: webservice
+#: model:ir.model.fields,field_description:webservice.field_webservice_backend__oauth2_token
+msgid "Oauth2 Token"
+msgstr ""
+
+#. module: webservice
+#: model:ir.model.fields.selection,name:webservice.selection__webservice_backend__oauth2_token_method__post
+msgid "POST"
+msgstr "POST"
+
+#. module: webservice
+#: model:ir.model.fields,field_description:webservice.field_webservice_backend__password
+msgid "Password"
+msgstr "Lozinka"
+
+#. module: webservice
+#: model:ir.model.fields,field_description:webservice.field_webservice_backend__protocol
+msgid "Protocol"
+msgstr "Protokol"
+
+#. module: webservice
+#: model:ir.model.fields.selection,name:webservice.selection__webservice_backend__auth_type__none
+msgid "Public"
+msgstr "Javni"
+
+#. module: webservice
+#: model:ir.model.fields,field_description:webservice.field_webservice_backend__redirect_url
+msgid "Redirect Url"
+msgstr ""
+
+#. module: webservice
+#: model:ir.model.fields,field_description:webservice.field_webservice_backend__tech_name
+msgid "Tech Name"
+msgstr ""
+
+#. module: webservice
+#: model:ir.model.fields,help:webservice.field_webservice_backend__redirect_url
+msgid "The redirect URL to be used as part of the OAuth2 authorisation flow"
+msgstr ""
+
+#. module: webservice
+#: model:ir.model.fields,field_description:webservice.field_webservice_backend__oauth2_token_method
+msgid "Token Request Method"
+msgstr ""
+
+#. module: webservice
+#: model:ir.model.fields,field_description:webservice.field_webservice_backend__oauth2_token_url
+msgid "Token URL"
+msgstr ""
+
+#. module: webservice
+#: model:ir.model.fields,help:webservice.field_webservice_backend__tech_name
+msgid "Unique name for technical purposes. Eg: server env keys."
+msgstr ""
+
+#. module: webservice
+#: model:ir.model.fields,field_description:webservice.field_webservice_backend__url
+msgid "Url"
+msgstr "URL"
+
+#. module: webservice
+#: model:ir.model.fields,field_description:webservice.field_webservice_backend__username
+msgid "Username"
+msgstr "Korisničko ime"
+
+#. module: webservice
+#: model:ir.model.fields.selection,name:webservice.selection__webservice_backend__auth_type__user_pwd
+msgid "Username & password"
+msgstr ""
+
+#. module: webservice
+#: model:ir.model.fields.selection,name:webservice.selection__webservice_backend__oauth2_flow__web_application
+msgid "Web Application (Authorization Code Grant)"
+msgstr ""
+
+#. module: webservice
+#: model:ir.actions.act_window,name:webservice.webservice_backend_act_window
+#: model:ir.model,name:webservice.model_webservice_backend
+#: model:ir.ui.menu,name:webservice.webservice_backend_menu
+msgid "WebService Backend"
+msgstr ""
+
+#. module: webservice
+#. odoo-python
+#: code:addons/webservice/models/webservice_backend.py:0
+msgid ""
+"Webservice '%(name)s' requires '%(auth_type)s' authentication. However, the "
+"following field(s) are not valued: %(fields)s"
+msgstr ""
+
+#. module: webservice
+#: model:ir.model.fields.selection,name:webservice.selection__webservice_backend__content_type__application/xml
+msgid "XML"
+msgstr "XML"
+
+#. module: webservice
+#: model:ir.model.fields,help:webservice.field_webservice_backend__oauth2_state
+msgid ""
+"random key generated when authorization flow starts to ensure that no CSRF "
+"attack happen"
+msgstr ""
+
+#. module: webservice
+#: model:ir.model.fields,help:webservice.field_webservice_backend__oauth2_scope
+msgid "scope of the the authorization"
+msgstr ""
+
+#. module: webservice
+#: model:ir.model.fields,help:webservice.field_webservice_backend__oauth2_token
+msgid "the OAuth2 token (serialized JSON)"
+msgstr "OAuth2 token (serijalizirani JSON)"

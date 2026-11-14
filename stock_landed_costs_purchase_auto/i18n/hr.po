@@ -1,0 +1,87 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_landed_costs_purchase_auto
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: stock_landed_costs_purchase_auto
+#. odoo-python
+#: code:addons/stock_landed_costs_purchase_auto/models/purchase_order.py:0
+msgid ""
+"Cannot create a landed cost for purchase order %(order)s: no default journal"
+" is configured for landed costs. Please set it in Inventory > Configuration "
+"> Settings."
+msgstr ""
+"Nije moguće stvoriti trošak nabave za narudžbenicu %(order)s: nije "
+"konfiguriran zadani dnevnik za troškove nabave. Postavite ga u Inventar > "
+"Konfiguracija > Postavke."
+
+#. module: stock_landed_costs_purchase_auto
+#: model:ir.model.fields,field_description:stock_landed_costs_purchase_auto.field_purchase_order__display_name
+#: model:ir.model.fields,field_description:stock_landed_costs_purchase_auto.field_purchase_order_line__display_name
+#: model:ir.model.fields,field_description:stock_landed_costs_purchase_auto.field_stock_landed_cost__display_name
+#: model:ir.model.fields,field_description:stock_landed_costs_purchase_auto.field_stock_move__display_name
+#: model:ir.model.fields,field_description:stock_landed_costs_purchase_auto.field_stock_picking__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: stock_landed_costs_purchase_auto
+#: model:ir.model.fields,field_description:stock_landed_costs_purchase_auto.field_purchase_order__id
+#: model:ir.model.fields,field_description:stock_landed_costs_purchase_auto.field_purchase_order_line__id
+#: model:ir.model.fields,field_description:stock_landed_costs_purchase_auto.field_stock_landed_cost__id
+#: model:ir.model.fields,field_description:stock_landed_costs_purchase_auto.field_stock_move__id
+#: model:ir.model.fields,field_description:stock_landed_costs_purchase_auto.field_stock_picking__id
+msgid "ID"
+msgstr "ID"
+
+#. module: stock_landed_costs_purchase_auto
+#: model:ir.model.fields,field_description:stock_landed_costs_purchase_auto.field_purchase_order__landed_cost_number
+msgid "Landed Cost Number"
+msgstr "Broj troška nabave"
+
+#. module: stock_landed_costs_purchase_auto
+#: model:ir.model.fields,field_description:stock_landed_costs_purchase_auto.field_purchase_order__landed_cost_ids
+#: model_terms:ir.ui.view,arch_db:stock_landed_costs_purchase_auto.purchase_order_form
+msgid "Landed Costs"
+msgstr "Zavisni troškovi"
+
+#. module: stock_landed_costs_purchase_auto
+#: model:ir.model.fields,field_description:stock_landed_costs_purchase_auto.field_stock_landed_cost__purchase_id
+msgid "Purchase"
+msgstr "Nabava"
+
+#. module: stock_landed_costs_purchase_auto
+#: model:ir.model,name:stock_landed_costs_purchase_auto.model_purchase_order
+msgid "Purchase Order"
+msgstr "Nabavni nalog"
+
+#. module: stock_landed_costs_purchase_auto
+#: model:ir.model,name:stock_landed_costs_purchase_auto.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "Stavka nabavnog naloga"
+
+#. module: stock_landed_costs_purchase_auto
+#: model:ir.model,name:stock_landed_costs_purchase_auto.model_stock_landed_cost
+msgid "Stock Landed Cost"
+msgstr "Zavisni trošak"
+
+#. module: stock_landed_costs_purchase_auto
+#: model:ir.model,name:stock_landed_costs_purchase_auto.model_stock_move
+msgid "Stock Move"
+msgstr "Skladišni prijenos"
+
+#. module: stock_landed_costs_purchase_auto
+#: model:ir.model,name:stock_landed_costs_purchase_auto.model_stock_picking
+msgid "Transfer"
+msgstr "Prijenos"

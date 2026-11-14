@@ -1,0 +1,977 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mail_gateway
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__res_domain
+msgid "Active domain"
+msgstr "Aktivna domena"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__email_add_signature
+msgid "Add signature"
+msgstr "Dodaj potpis"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__partner_ids
+msgid "Additional Contacts"
+msgstr "Dodatni kontakti"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__record_alias_domain_id
+msgid "Alias Domain"
+msgstr "Alias domena"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_discuss_channel__anonymous_name
+msgid "Anonymous Name"
+msgstr "Naziv nepoznatog"
+
+#. module: mail_gateway
+#: model:ir.model,name:mail_gateway.model_mail_guest_manage
+msgid "Assign gateway guest to a partner"
+msgstr "Dodijeli gosta pristupnika partneru"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__attachment_ids
+msgid "Attachments"
+msgstr "Privitci"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__author_id
+msgid "Author"
+msgstr "Autor"
+
+#. module: mail_gateway
+#: model:ir.model.fields,help:mail_gateway.field_mail_compose_gateway_message__author_id
+msgid ""
+"Author of the message. If not set, email_from may hold an email address that"
+" did not match any partner."
+msgstr ""
+"Autor poruke. Ako nije postavljen, email_from može sadržavati adresu e-pošte"
+" koja nije odgovarala niti jednom partneru."
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__composition_batch
+msgid "Batch composition"
+msgstr "Grupna kompozicija"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__partner_bcc_ids
+msgid "Bcc"
+msgstr "Bcc"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__body_has_template_value
+msgid "Body content is the same as the template"
+msgstr "Sadržaj tijela je identičan kao i predložak"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__can_attach_attachment
+msgid "Can Attach Attachment"
+msgstr "Može priložiti privitak"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__can_edit_body
+msgid "Can Edit Body"
+msgstr "Može urediti sadržaj"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_gateway__can_set_webhook
+msgid "Can Set Webhook"
+msgstr "Može postaviti webhook"
+
+#. module: mail_gateway
+#: model_terms:ir.ui.view,arch_db:mail_gateway.mail_guest_manage_form_view
+#: model_terms:ir.ui.view,arch_db:mail_gateway.mail_message_gateway_link_form_view
+#: model_terms:ir.ui.view,arch_db:mail_gateway.mail_message_gateway_send_form_view
+msgid "Cancel"
+msgstr "Odustani"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__partner_cc_ids
+msgid "Cc"
+msgstr "Cc (kopija)"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_discuss_channel__channel_type
+msgid "Channel Type"
+msgstr "Tip kanala"
+
+#. module: mail_gateway
+#: model:ir.model.fields,help:mail_gateway.field_discuss_channel__channel_type
+msgid ""
+"Chat is private and unique between 2 persons. Group is private among invited"
+" persons. Channel can be freely joined (depending on its configuration)."
+msgstr ""
+"Razgovor je privatan i jedinstven između dvije osobe. Grupa je privatna "
+"unutar pozvanih osoba. Kanalu se može slobodno pridružiti (ovisno o "
+"postavkama)."
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_mail__gateway_message_ids
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_message__gateway_message_ids
+msgid "Child gateway messages"
+msgstr "Podređene poruke pristupnika"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__composition_comment_option
+msgid "Comment Options"
+msgstr "Opcije komentara"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_discuss_channel__company_id
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__record_company_id
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_gateway__company_id
+#: model:ir.model.fields,field_description:mail_gateway.field_res_partner_gateway_channel__company_id
+msgid "Company"
+msgstr "Tvrtka"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__composition_mode
+msgid "Composition mode"
+msgstr "Mod sastavljanja"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__reply_to_force_new
+msgid "Considers answers as new thread"
+msgstr "Smatra odgovore novom niti"
+
+#. module: mail_gateway
+#: model:ir.model,name:mail_gateway.model_res_partner
+msgid "Contact"
+msgstr "Kontakt"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__body
+msgid "Contents"
+msgstr "Sadržaj"
+
+#. module: mail_gateway
+#: model_terms:ir.ui.view,arch_db:mail_gateway.mail_guest_manage_form_view
+msgid "Create new partner"
+msgstr "Kreiraj novog partnera"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__create_uid
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_gateway__create_uid
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_guest_manage__create_uid
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_message_gateway_link__create_uid
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_message_gateway_send__create_uid
+#: model:ir.model.fields,field_description:mail_gateway.field_res_partner_gateway_channel__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__create_date
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_gateway__create_date
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_guest_manage__create_date
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_message_gateway_link__create_date
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_message_gateway_send__create_date
+#: model:ir.model.fields,field_description:mail_gateway.field_res_partner_gateway_channel__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__auto_delete
+msgid "Delete Emails"
+msgstr "Briši poruke"
+
+#. module: mail_gateway
+#: model:ir.model,name:mail_gateway.model_discuss_channel
+msgid "Discussion Channel"
+msgstr "Kanal rasprava"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_discuss_channel__display_name
+#: model:ir.model.fields,field_description:mail_gateway.field_ir_websocket__display_name
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__display_name
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_gateway__display_name
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_gateway_abstract__display_name
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_guest__display_name
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_guest_manage__display_name
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_message__display_name
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_message_gateway_link__display_name
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_message_gateway_send__display_name
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_notification__display_name
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_thread__display_name
+#: model:ir.model.fields,field_description:mail_gateway.field_res_partner__display_name
+#: model:ir.model.fields,field_description:mail_gateway.field_res_partner_gateway_channel__display_name
+#: model:ir.model.fields,field_description:mail_gateway.field_res_users__display_name
+#: model:ir.model.fields,field_description:mail_gateway.field_res_users_settings__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__display_object_attachment_ids
+msgid "Display Object Attachment"
+msgstr "Prikaži privitak objekta"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__email_layout_xmlid
+msgid "Email Notification Layout"
+msgstr "Izgled obavijesti e-poštom"
+
+#. module: mail_gateway
+#: model:ir.model,name:mail_gateway.model_mail_thread
+msgid "Email Thread"
+msgstr "E-mail"
+
+#. module: mail_gateway
+#: model:ir.model.fields,help:mail_gateway.field_mail_compose_gateway_message__email_from
+msgid ""
+"Email address of the sender. This field is set when no matching partner is "
+"found and replaces the author_id field in the chatter."
+msgstr ""
+"E-mail adresa pošiljatelja. Ovo se polje postavlja kada nije pronađen "
+"nijedan partner i zamjenjuje autor_id polje u chatu."
+
+#. module: mail_gateway
+#: model:ir.model.fields,help:mail_gateway.field_mail_notification__gateway_failure_reason
+msgid ""
+"Failure reason. This is usually the exception thrown by the email server, "
+"stored to ease the debugging of mailing issues."
+msgstr ""
+"Razlog pogreške. Ovo je vjerojatno iznimka koju je izbacio e-mail server, "
+"kako bi se olakšalo ispravljanje pogrešaka u slanju e-mailova."
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__email_from
+msgid "From"
+msgstr "Od"
+
+#. module: mail_gateway
+#. odoo-javascript
+#: code:addons/mail_gateway/static/src/components/chatter/chatter.xml:0
+#: code:addons/mail_gateway/static/src/core/common/discuss_app_model_patch.esm.js:0
+#: model:ir.actions.act_window,name:mail_gateway.mail_gateway_act_window
+#: model:ir.model.fields,field_description:mail_gateway.field_discuss_channel__gateway_id
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_guest__gateway_id
+#: model:ir.model.fields,field_description:mail_gateway.field_res_partner_gateway_channel__gateway_id
+#: model:ir.model.fields,field_description:mail_gateway.field_res_users__gateway_ids
+#: model:ir.model.fields.selection,name:mail_gateway.selection__discuss_channel__channel_type__gateway
+#: model:ir.model.fields.selection,name:mail_gateway.selection__mail_notification__notification_type__gateway
+#: model:ir.module.category,name:mail_gateway.module_category_gateway
+#: model:ir.ui.menu,name:mail_gateway.mail_gateway_menu
+#: model:res.groups.privilege,name:mail_gateway.gateway_privilege
+msgid "Gateway"
+msgstr "Prolaz"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_res_users_settings__is_discuss_sidebar_category_gateway_open
+msgid "Gateway Category Open"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_mail__gateway_channel_ids
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_message__gateway_channel_ids
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_message_gateway_send__gateway_channel_id
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_notification__gateway_channel_id
+#: model:ir.model.fields,field_description:mail_gateway.field_res_partner__gateway_channel_ids
+#: model:ir.model.fields,field_description:mail_gateway.field_res_users__gateway_channel_ids
+msgid "Gateway Channel"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_mail__gateway_channel_data
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_message__gateway_channel_data
+msgid "Gateway Channel Data"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_discuss_channel__gateway_channel_token
+msgid "Gateway Channel Token"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_notification__gateway_failure_reason
+msgid "Gateway Failure Reason"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_discuss_channel__gateway_message_ids
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_notification__gateway_message_id
+msgid "Gateway Message"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_mail__gateway_notification_ids
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_message__gateway_notification_ids
+msgid "Gateway Notification"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.actions.act_window,name:mail_gateway.res_partner_gateway_channel_act_window
+#: model:ir.ui.menu,name:mail_gateway.res_partner_gateway_channel_menu
+msgid "Gateway Partner Channels"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_mail__gateway_thread_data
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_message__gateway_thread_data
+msgid "Gateway Thread Data"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_guest__gateway_token
+#: model:ir.model.fields,field_description:mail_gateway.field_res_partner_gateway_channel__gateway_token
+msgid "Gateway Token"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_gateway__gateway_type
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_mail__gateway_type
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_message__gateway_type
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_notification__gateway_type
+msgid "Gateway Type"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model,name:mail_gateway.model_mail_gateway_abstract
+msgid "Gateway abstract for functions"
+msgstr ""
+
+#. module: mail_gateway
+#. odoo-javascript
+#: code:addons/mail_gateway/static/src/components/composer/composer.esm.js:0
+msgid "Gateway message"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_discuss_channel__gateway_token
+msgid "Gateway related Token"
+msgstr ""
+
+#. module: mail_gateway
+#: model_terms:ir.ui.view,arch_db:mail_gateway.mail_compose_gateway_message_form_view
+msgid "Gateways"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model,name:mail_gateway.model_mail_guest
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_guest_manage__guest_id
+msgid "Guest"
+msgstr "Gost"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_gateway__has_new_channel_security
+msgid "Has New Channel Security"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_discuss_channel__id
+#: model:ir.model.fields,field_description:mail_gateway.field_ir_websocket__id
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__id
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_gateway__id
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_gateway_abstract__id
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_guest__id
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_guest_manage__id
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_message__id
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_message_gateway_link__id
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_message_gateway_send__id
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_notification__id
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_thread__id
+#: model:ir.model.fields,field_description:mail_gateway.field_res_partner__id
+#: model:ir.model.fields,field_description:mail_gateway.field_res_partner_gateway_channel__id
+#: model:ir.model.fields,field_description:mail_gateway.field_res_users__id
+#: model:ir.model.fields,field_description:mail_gateway.field_res_users_settings__id
+msgid "ID"
+msgstr "ID"
+
+#. module: mail_gateway
+#: model:ir.model.fields,help:mail_gateway.field_mail_compose_gateway_message__mass_mailing_name
+msgid ""
+"If set, a mass mailing will be created so that you can track its results in "
+"the Email Marketing app."
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,help:mail_gateway.field_mail_compose_gateway_message__scheduled_date
+msgid ""
+"In comment mode: if set, postpone notifications sending. In mass mail mode: "
+"if sent, send emails after that date. This date is considered as being in "
+"UTC timezone."
+msgstr ""
+"U načinu komentara: ako je postavljeno, odgađa slanje obavijesti. U načinu "
+"masovne pošte: ako je poslano, šalje e-pošte nakon tog datuma. Ovaj se datum"
+" smatra u UTC vremenskoj zoni."
+
+#. module: mail_gateway
+#: model_terms:ir.ui.view,arch_db:mail_gateway.mail_gateway_form_view
+msgid "Integrate Webhook"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields.selection,name:mail_gateway.selection__mail_gateway__integrated_webhook_state__integrated
+msgid "Integrated"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_gateway__integrated_webhook_state
+msgid "Integrated Webhook State"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__is_mail_template_editor
+msgid "Is Editor"
+msgstr "Je urednik"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__subtype_is_log
+msgid "Is a log"
+msgstr "Je zapisnik"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__notified_bcc_contains_share
+msgid "Is an external partner follower of the document?"
+msgstr "Je li vanjski partner pratitelj dokumenta?"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__auto_delete_keep_log
+msgid "Keep Message Copy"
+msgstr "Zadrži kopiju poruke"
+
+#. module: mail_gateway
+#: model:ir.model.fields,help:mail_gateway.field_mail_compose_gateway_message__auto_delete_keep_log
+msgid ""
+"Keep a copy of the email content if emails are removed (mass mailing only)"
+msgstr ""
+"Zadrži kopiju sadržaja e-pošte ako se e-pošte uklone (samo masovna e-pošta)"
+
+#. module: mail_gateway
+#: model:ir.model.fields,help:mail_gateway.field_discuss_channel__gateway_token
+#: model:ir.model.fields,help:mail_gateway.field_mail_gateway__token
+msgid "Key used for integration purposes"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,help:mail_gateway.field_mail_gateway__webhook_key
+msgid "Key used on the connection URL"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,help:mail_gateway.field_mail_gateway__webhook_secret
+msgid ""
+"Key used to ensure that the connection is secure and\n"
+"        comes from the desired source"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__lang
+msgid "Language"
+msgstr "Jezik"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__write_uid
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_gateway__write_uid
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_guest_manage__write_uid
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_message_gateway_link__write_uid
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_message_gateway_send__write_uid
+#: model:ir.model.fields,field_description:mail_gateway.field_res_partner_gateway_channel__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__write_date
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_gateway__write_date
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_guest_manage__write_date
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_message_gateway_link__write_date
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_message_gateway_send__write_date
+#: model:ir.model.fields,field_description:mail_gateway.field_res_partner_gateway_channel__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: mail_gateway
+#: model_terms:ir.ui.view,arch_db:mail_gateway.mail_message_gateway_link_form_view
+msgid "Link"
+msgstr "Veza"
+
+#. module: mail_gateway
+#. odoo-javascript
+#: code:addons/mail_gateway/static/src/components/message/message_patch.esm.js:0
+msgid "Link Message to thread"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model,name:mail_gateway.model_mail_message_gateway_link
+msgid "Link message from gateway"
+msgstr ""
+
+#. module: mail_gateway
+#. odoo-javascript
+#: code:addons/mail_gateway/static/src/core/common/message_actions.esm.js:0
+msgid "Link to thread"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__mail_activity_type_id
+msgid "Mail Activity Type"
+msgstr "Tip mail aktivnosti"
+
+#. module: mail_gateway
+#: model:ir.model,name:mail_gateway.model_mail_compose_gateway_message
+msgid "Mail Compose Gateway Message"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model,name:mail_gateway.model_mail_gateway
+msgid "Mail Gateway"
+msgstr ""
+
+#. module: mail_gateway
+#: model_terms:ir.ui.view,arch_db:mail_gateway.mail_message_gateway_link_form_view
+msgid "Mail Message Gateway Link"
+msgstr ""
+
+#. module: mail_gateway
+#: model_terms:ir.ui.view,arch_db:mail_gateway.mail_message_gateway_send_form_view
+msgid "Mail Message Gateway Send"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__mailing_list_ids
+msgid "Mailing List"
+msgstr "Lista za slanje mailova"
+
+#. module: mail_gateway
+#: model:ir.model.fields,help:mail_gateway.field_mail_compose_gateway_message__reply_to_force_new
+msgid ""
+"Manage answers as new incoming emails instead of replies going to the same "
+"thread."
+msgstr ""
+"Upravljaj odgovorima kao novim dolaznim e-poštama umjesto odgovora koji idu "
+"u istu nit."
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__mass_mailing_id
+msgid "Mass Mailing"
+msgstr "Grupna e-pošta"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__campaign_id
+msgid "Mass Mailing Campaign"
+msgstr "Kampanja masovne pošte"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__mass_mailing_name
+msgid "Mass Mailing Name"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_gateway__member_ids
+msgid "Member"
+msgstr "Član"
+
+#. module: mail_gateway
+#: model_terms:ir.ui.view,arch_db:mail_gateway.mail_gateway_form_view
+msgid "Members"
+msgstr "Članovi"
+
+#. module: mail_gateway
+#: model_terms:ir.ui.view,arch_db:mail_gateway.mail_guest_manage_form_view
+msgid "Merge"
+msgstr "Spoji"
+
+#. module: mail_gateway
+#: model:ir.model,name:mail_gateway.model_mail_message
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_message_gateway_link__message_id
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_message_gateway_send__message_id
+msgid "Message"
+msgstr "Poruka"
+
+#. module: mail_gateway
+#: model:ir.model,name:mail_gateway.model_mail_notification
+msgid "Message Notifications"
+msgstr "Obavjesti poruka"
+
+#. module: mail_gateway
+#: model:ir.model.fields,help:mail_gateway.field_mail_compose_gateway_message__message_type
+msgid ""
+"Message type: email for email message, notification for system message, "
+"comment for other messages such as user replies"
+msgstr ""
+"Vrsta poruke: e-mail za e-mail poruke, priopćenja za sistemske poruke, "
+"komentari za druge poruke poput korisničkih odgovora"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_gateway__name
+#: model:ir.model.fields,field_description:mail_gateway.field_res_partner_gateway_channel__name
+msgid "Name"
+msgstr "Naziv"
+
+#. module: mail_gateway
+#. odoo-javascript
+#: code:addons/mail_gateway/static/src/core/common/thread_actions.esm.js:0
+msgid "New Partner"
+msgstr ""
+
+#. module: mail_gateway
+#. odoo-javascript
+#: code:addons/mail_gateway/static/src/components/gateway_follower/gateway_follower.xml:0
+msgid "Not selected"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_notification__notification_type
+msgid "Notification Type"
+msgstr "Vrsta obavijesti"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__notify_author
+msgid "Notify Author"
+msgstr "Obavijesti autora"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__notify_author_mention
+msgid "Notify Author Mention"
+msgstr "Obavijesti o spominjanju autora"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__notify_skip_followers
+msgid "Notify Skip Followers"
+msgstr "Obavijest - preskoči pratitelje"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__object_attachment_ids
+msgid "Object Attachments"
+msgstr ""
+
+#. module: mail_gateway
+#. odoo-javascript
+#: code:addons/mail_gateway/static/src/core/common/thread_actions.esm.js:0
+msgid "Open Contact"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,help:mail_gateway.field_mail_compose_gateway_message__lang
+msgid ""
+"Optional translation language (ISO code) to select when sending out an "
+"email. If not set, the main partner's language will be used. This should "
+"usually be a placeholder expression that provides the appropriate language, "
+"e.g. {{ object.partner_id.lang }}."
+msgstr ""
+"Opcionalni jezik prijevoda (ISO kod) za odabir pri slanju e-pošte. Ako nije "
+"postavljeno, koristit će se glavni jezik partnera. Ovo bi uobičajeno trebao "
+"biti placeholder izraz koji pruža odgovarajući jezik, npr. {{ "
+"object.partner_id.lang }}."
+
+#. module: mail_gateway
+#: model:ir.model.fields,help:mail_gateway.field_mail_compose_gateway_message__reply_to_mode
+msgid ""
+"Original Discussion: Answers go in the original document discussion thread. \n"
+" Another Email Address: Answers go to the email address mentioned in the tracking message-id instead of original document discussion thread. \n"
+" This has an impact on the generated message-id."
+msgstr ""
+"Izvorna diskusija: odgovori idu u izvornu nit diskusije dokumenta. \n"
+" Druga e-adresa: odgovori idu na e-adresu navedenu u praćenom message-id-u umjesto u izvornu nit diskusije dokumenta. \n"
+" To utječe na generirani message-id."
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_mail__gateway_message_id
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_message__gateway_message_id
+msgid "Original gateway message"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__mail_server_id
+msgid "Outgoing mail server"
+msgstr "Izlazni poslužitelj e-pošte"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__parent_id
+msgid "Parent Message"
+msgstr "Nadređena poruka"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_guest_manage__partner_id
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_message_gateway_send__partner_id
+#: model:ir.model.fields,field_description:mail_gateway.field_res_partner_gateway_channel__partner_id
+msgid "Partner"
+msgstr "Partner"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__partner_ids_all_have_email
+msgid "Partner Ids All Have Email"
+msgstr "Svi ID-ovi partnera imaju e-poštu"
+
+#. module: mail_gateway
+#: model:ir.model.constraint,message:mail_gateway.constraint_res_partner_gateway_channel_unique_partner_gateway
+msgid "Partner can only have one configuration for each gateway."
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields.selection,name:mail_gateway.selection__mail_gateway__integrated_webhook_state__pending
+msgid "Pending"
+msgstr "Čeka slanje"
+
+#. module: mail_gateway
+#: model:ir.model.fields,help:mail_gateway.field_mail_compose_gateway_message__use_exclusion_list
+msgid ""
+"Prevent sending messages to blacklisted contacts. Disable only when "
+"absolutely necessary."
+msgstr ""
+"Spriječi slanje poruka kontaktima s crne liste. Onemogućite samo kad je "
+"apsolutno nužno."
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_message_gateway_link__resource_ref
+msgid "Record reference"
+msgstr "Referenca zapisa"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__res_ids
+msgid "Related Document IDs"
+msgstr "ID-ovi povezanih dokumenata"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__model
+msgid "Related Document Model"
+msgstr "Model povezanog dokumenta"
+
+#. module: mail_gateway
+#: model_terms:ir.ui.view,arch_db:mail_gateway.mail_gateway_form_view
+msgid "Remove Webhook"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__render_model
+msgid "Rendering Model"
+msgstr "Model renderiranja"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__reply_to_mode
+msgid "Replies"
+msgstr "Odgovori"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__reply_to
+msgid "Reply To"
+msgstr "Odgovori na"
+
+#. module: mail_gateway
+#: model:ir.model.fields,help:mail_gateway.field_mail_compose_gateway_message__reply_to
+msgid ""
+"Reply email address. Setting the reply_to bypasses the automatic thread "
+"creation."
+msgstr ""
+"E-adresa za odgovor. Postavljanje reply_to zaobilazi automatsko kreiranje "
+"niti."
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__res_domain_user_id
+msgid "Responsible"
+msgstr "Odgovoran"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__scheduled_date
+msgid "Scheduled Date"
+msgstr "Planirani datum"
+
+#. module: mail_gateway
+#. odoo-javascript
+#: code:addons/mail_gateway/static/src/core/common/discuss_app_model_patch.esm.js:0
+msgid "Search Gateway Channel"
+msgstr ""
+
+#. module: mail_gateway
+#: model_terms:ir.ui.view,arch_db:mail_gateway.mail_message_gateway_send_form_view
+msgid "Send"
+msgstr "Pošalji"
+
+#. module: mail_gateway
+#: model:ir.model,name:mail_gateway.model_mail_message_gateway_send
+msgid "Send Message through gateway"
+msgstr ""
+
+#. module: mail_gateway
+#. odoo-javascript
+#: code:addons/mail_gateway/static/src/components/composer/composer.esm.js:0
+msgid "Send a message to a gateway..."
+msgstr ""
+
+#. module: mail_gateway
+#. odoo-javascript
+#: code:addons/mail_gateway/static/src/components/composer/composer.esm.js:0
+msgid "Send gateway"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__force_send
+msgid "Send mailing or notifications directly"
+msgstr "Pošalji e-poštu ili obavijesti izravno"
+
+#. module: mail_gateway
+#. odoo-javascript
+#: code:addons/mail_gateway/static/src/components/message/message_patch.esm.js:0
+#: code:addons/mail_gateway/static/src/core/common/message_actions.esm.js:0
+msgid "Send with gateway"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__subject
+msgid "Subject"
+msgstr "Predmet"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__subtype_id
+msgid "Subtype"
+msgstr "Podvrsta"
+
+#. module: mail_gateway
+#: model:ir.model,name:mail_gateway.model_res_partner_gateway_channel
+msgid "Technical data used to get the gateway author"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__template_name
+msgid "Template Name"
+msgstr "Naziv predloška"
+
+#. module: mail_gateway
+#: model:ir.model.fields,help:mail_gateway.field_res_users_settings__is_discuss_sidebar_category_gateway_open
+msgid "The gateway category in the sidebar will be open"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,help:mail_gateway.field_mail_compose_gateway_message__auto_delete
+msgid ""
+"This option permanently removes any track of email after it's been sent, "
+"including from the Technical menu in the Settings, in order to preserve "
+"storage space of your Odoo database."
+msgstr ""
+"Ova opcija trajno uklanja svaki trag e-pošte nakon što je poslana, "
+"uključujući iz tehničkog izbornika u postavkama, kako bi se sačuvao prostor "
+"Vaše Odoo baze podataka."
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__model_is_thread
+msgid "Thread-Enabled"
+msgstr "Niti omogućene"
+
+#. module: mail_gateway
+#. odoo-javascript
+#: code:addons/mail_gateway/static/src/components/chatter/chatter.xml:0
+msgid "To:"
+msgstr "Za:"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_gateway__token
+msgid "Token"
+msgstr "Token"
+
+#. module: mail_gateway
+#: model:ir.model.constraint,message:mail_gateway.constraint_mail_gateway_mail_gateway_token
+msgid "Token must be unique"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__message_type
+msgid "Type"
+msgstr "Vrsta"
+
+#. module: mail_gateway
+#: model_terms:ir.ui.view,arch_db:mail_gateway.mail_gateway_form_view
+msgid "Update Webhook"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__use_exclusion_list
+msgid "Use Exclusion List"
+msgstr "Koristi popis isključenja"
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__template_id
+msgid "Use template"
+msgstr "Koristi predložak"
+
+#. module: mail_gateway
+#: model:ir.model.fields,help:mail_gateway.field_mail_compose_gateway_message__res_domain_user_id
+msgid "Used as context used to evaluate composer domain"
+msgstr "Koristi se kao kontekst za evaluaciju domene sastavljača"
+
+#. module: mail_gateway
+#: model:ir.model,name:mail_gateway.model_res_users
+#: model:res.groups,name:mail_gateway.gateway_user
+msgid "User"
+msgstr "Korisnik"
+
+#. module: mail_gateway
+#: model:ir.model,name:mail_gateway.model_res_users_settings
+msgid "User Settings"
+msgstr "Korisničke postavke"
+
+#. module: mail_gateway
+#: model:ir.model.fields,help:mail_gateway.field_mail_gateway__webhook_user_id
+msgid "User that will create the messages"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_gateway__webhook_key
+msgid "Webhook Key"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.constraint,message:mail_gateway.constraint_mail_gateway_mail_gateway_webhook_key
+msgid "Webhook Key must be unique"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_gateway__webhook_secret
+msgid "Webhook Secret"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_gateway__webhook_url
+msgid "Webhook Url"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_gateway__webhook_user_id
+msgid "Webhook User"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,help:mail_gateway.field_mail_gateway__has_new_channel_security
+msgid ""
+"When checked, channels are not created automatically. Usable on Telegram"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__wizard_channel_ids
+msgid "Wizard Channel"
+msgstr ""
+
+#. module: mail_gateway
+#: model:ir.model.fields,field_description:mail_gateway.field_mail_compose_gateway_message__wizard_partner_ids
+msgid "Wizard Partner"
+msgstr ""
+
+#. module: mail_gateway
+#. odoo-javascript
+#: code:addons/mail_gateway/static/src/components/chatter/chatter.xml:0
+msgid "gateway"
+msgstr "pristupnik"
+
+#. module: mail_gateway
+#. odoo-javascript
+#: code:addons/mail_gateway/static/src/components/message/message.xml:0
+msgid "on"
+msgstr "na"
+
+#. module: mail_gateway
+#: model:ir.model,name:mail_gateway.model_ir_websocket
+msgid "websocket message handling"
+msgstr "upravljanje porukama websocketa"

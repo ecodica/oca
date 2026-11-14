@@ -1,0 +1,80 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_picking_origin_state
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: stock_picking_origin_state
+#: model:ir.model.fields,help:stock_picking_origin_state.field_stock_picking__origin_state
+msgid ""
+"Aggregated state of the origin pickings. Reports the deepest level still "
+"active; once every origin picking is done, reports the closest origin as "
+"Done. Empty only when the picking has no origin pickings."
+msgstr ""
+"Agregirano stanje izvornih otpremnica. Prijavljuje najdublju još aktivnu "
+"razinu; kad su sve izvorne otpremnice dovršene, prijavljuje najbliže "
+"porijeklo kao dovršeno. Prazno samo kada otpremnica nema izvornih "
+"otpremnica."
+
+#. module: stock_picking_origin_state
+#: model:ir.model.fields,field_description:stock_picking_origin_state.field_stock_picking__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: stock_picking_origin_state
+#: model:ir.model.fields,help:stock_picking_origin_state.field_stock_picking__origin_state_label
+msgid "Display string combining Origin Operation Type and Origin State"
+msgstr ""
+"Prikazni niz koji kombinira vrstu operacije porijekla i stanje porijekla"
+
+#. module: stock_picking_origin_state
+#: model:ir.model.fields.selection,name:stock_picking_origin_state.selection__stock_picking__origin_state__done
+msgid "Done"
+msgstr "GOTOVO"
+
+#. module: stock_picking_origin_state
+#: model:ir.model.fields,field_description:stock_picking_origin_state.field_stock_picking__id
+msgid "ID"
+msgstr "ID"
+
+#. module: stock_picking_origin_state
+#: model:ir.model.fields,field_description:stock_picking_origin_state.field_stock_picking__origin_state
+#: model_terms:ir.ui.view,arch_db:stock_picking_origin_state.vpicktree
+msgid "Origin State"
+msgstr ""
+
+#. module: stock_picking_origin_state
+#: model:ir.model.fields,field_description:stock_picking_origin_state.field_stock_picking__origin_state_label
+msgid "Origin State Label"
+msgstr ""
+
+#. module: stock_picking_origin_state
+#: model:ir.model.fields.selection,name:stock_picking_origin_state.selection__stock_picking__origin_state__partially_available
+msgid "Partially Available"
+msgstr "Djelomično dostupno"
+
+#. module: stock_picking_origin_state
+#: model:ir.model.fields.selection,name:stock_picking_origin_state.selection__stock_picking__origin_state__assigned
+msgid "Ready"
+msgstr "Spremno"
+
+#. module: stock_picking_origin_state
+#: model:ir.model,name:stock_picking_origin_state.model_stock_picking
+msgid "Transfer"
+msgstr "Prijenos"
+
+#. module: stock_picking_origin_state
+#: model:ir.model.fields.selection,name:stock_picking_origin_state.selection__stock_picking__origin_state__waiting
+msgid "Waiting"
+msgstr "Čekanje"

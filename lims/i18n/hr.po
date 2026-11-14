@@ -1,0 +1,977 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lims
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: lims
+#: model_terms:ir.ui.view,arch_db:lims.lims_sample_report_template
+msgid "<span>Sample Report</span>"
+msgstr "<span>Primjer izvještaja</span>"
+
+#. module: lims
+#: model_terms:ir.ui.view,arch_db:lims.lims_sample_report_template
+msgid "<strong>Published on</strong>"
+msgstr "<strong>Objavljeno</strong>"
+
+#. module: lims
+#: model_terms:ir.ui.view,arch_db:lims.lims_sample_report_template
+msgid "<strong>Received on</strong>"
+msgstr "<strong>Primljeno</strong>"
+
+#. module: lims
+#: model_terms:ir.ui.view,arch_db:lims.lims_sample_report_template
+msgid "<strong>Sample Type</strong>"
+msgstr "<strong>Vrsta uzorka</strong>"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__message_needaction
+#: model:ir.model.fields,field_description:lims.field_lims_sample__message_needaction
+msgid "Action Needed"
+msgstr "Potrebna radnja"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__active
+#: model:ir.model.fields,field_description:lims.field_lims_sample_type__active
+msgid "Active"
+msgstr "Aktivno"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__activity_ids
+#: model:ir.model.fields,field_description:lims.field_lims_sample__activity_ids
+msgid "Activities"
+msgstr "Aktivnosti"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__activity_exception_decoration
+#: model:ir.model.fields,field_description:lims.field_lims_sample__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Ukras iznimke aktivnosti"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__activity_state
+#: model:ir.model.fields,field_description:lims.field_lims_sample__activity_state
+msgid "Activity State"
+msgstr "Status aktivnosti"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__activity_type_icon
+#: model:ir.model.fields,field_description:lims.field_lims_sample__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Ikona vrste aktivnosti"
+
+#. module: lims
+#: model_terms:ir.ui.view,arch_db:lims.lims_analysis_list_creation_view
+msgid "Add a line"
+msgstr "Dodaj stavku"
+
+#. module: lims
+#: model_terms:ir.ui.view,arch_db:lims.lims_analysis_list_creation_view
+msgid "Add a note"
+msgstr "Dodaj bilješku"
+
+#. module: lims
+#: model_terms:ir.ui.view,arch_db:lims.lims_analysis_list_creation_view
+msgid "Add a section"
+msgstr "Dodaj odlomak"
+
+#. module: lims
+#: model_terms:ir.ui.view,arch_db:lims.lims_analysis_list_creation_view
+msgid "Add a subsection"
+msgstr "Dodaj podsekciju"
+
+#. module: lims
+#: model_terms:ir.ui.view,arch_db:lims.lims_analyte_form_view
+msgid "Advanced"
+msgstr "Napredno"
+
+#. module: lims
+#: model:ir.model.fields,help:lims.field_res_config_settings__lims_unforce_double_verification_manager
+msgid "Allow managers to validate analyses without double verification"
+msgstr "Dopusti voditeljima validaciju analiza bez dvostruke provjere"
+
+#. module: lims
+#: model_terms:ir.ui.view,arch_db:lims.res_config_settings_view_form
+msgid "Allows manager to make a double approval of analyses"
+msgstr "Omogućuje voditelju dvostruko odobrenje analiza"
+
+#. module: lims
+#: model:ir.actions.act_window,name:lims.lims_analysis_act_window
+#: model:ir.model,name:lims.model_lims_analysis
+#: model:ir.model.fields,field_description:lims.field_lims_sample__analysis_ids
+#: model:ir.ui.menu,name:lims.lims_analysis_menu
+#: model_terms:ir.ui.view,arch_db:lims.lims_sample_form_view
+msgid "Analysis"
+msgstr "Analiza"
+
+#. module: lims
+#: model:ir.model.constraint,message:lims.constraint_lims_analysis_identifier_unique
+msgid "Analysis identifier must be unique"
+msgstr "Identifikator analize mora biti jedinstven"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analysis__analyst_id
+#: model:res.groups,name:lims.group_lims_analyst
+msgid "Analyst"
+msgstr "Analitičar"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analysis__analyte_id
+#: model:ir.model.fields,field_description:lims.field_lims_analyte_option__analyte_id
+#: model:ir.model.fields,field_description:lims.field_lims_analyte_specs__analyte_id
+#: model:ir.model.fields.selection,name:lims.selection__lims_analysis__display_type__analyte
+#: model_terms:ir.ui.view,arch_db:lims.lims_analysis_search_view
+msgid "Analyte"
+msgstr "Analit"
+
+#. module: lims
+#: model:ir.actions.act_window,name:lims.lims_analyte_act_window
+#: model:ir.ui.menu,name:lims.lims_analyte_menu
+msgid "Analytes"
+msgstr "Analiti"
+
+#. module: lims
+#: model_terms:ir.ui.view,arch_db:lims.lims_analysis_list_base_view
+msgid "Analyze"
+msgstr "Analiziraj"
+
+#. module: lims
+#: model_terms:ir.ui.view,arch_db:lims.res_config_settings_view_form
+msgid "Approval"
+msgstr "Odobrenje"
+
+#. module: lims
+#: model_terms:ir.ui.view,arch_db:lims.lims_analyte_form_view
+#: model_terms:ir.ui.view,arch_db:lims.lims_sample_type_search_view
+msgid "Archived"
+msgstr "Arhivirano"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__message_attachment_count
+#: model:ir.model.fields,field_description:lims.field_lims_sample__message_attachment_count
+msgid "Attachment Count"
+msgstr "Broj privitaka"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__autoverify
+msgid "Autoverify"
+msgstr "Automatski verificiraj"
+
+#. module: lims
+#: model:ir.model.fields.selection,name:lims.selection__lims_analyte__result_type__boolean
+msgid "Boolean"
+msgstr "Logička"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analysis__can_verify
+msgid "Can Verify"
+msgstr "Može verificirati"
+
+#. module: lims
+#: model:ir.model.fields.selection,name:lims.selection__lims_sample__state__cancelled
+msgid "Cancelled"
+msgstr "Otkazano"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analysis__capture_date
+msgid "Capture Date"
+msgstr "Datum hvatanja"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__code
+msgid "Code"
+msgstr "Šifra"
+
+#. module: lims
+#: model:ir.model.constraint,message:lims.constraint_lims_analyte_code_unique
+msgid "Code must be unique."
+msgstr "Šifra mora biti jedinstvena."
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analysis__company_id
+#: model:ir.model.fields,field_description:lims.field_lims_sample__company_id
+msgid "Company"
+msgstr "Tvrtka"
+
+#. module: lims
+#: model:ir.model,name:lims.model_res_config_settings
+msgid "Config Settings"
+msgstr "Postavke"
+
+#. module: lims
+#: model:ir.ui.menu,name:lims.lims_config_root
+msgid "Configuration"
+msgstr "Konfiguracija"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analysis__create_uid
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__create_uid
+#: model:ir.model.fields,field_description:lims.field_lims_analyte_option__create_uid
+#: model:ir.model.fields,field_description:lims.field_lims_analyte_specs__create_uid
+#: model:ir.model.fields,field_description:lims.field_lims_sample__create_uid
+#: model:ir.model.fields,field_description:lims.field_lims_sample_type__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analysis__create_date
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__create_date
+#: model:ir.model.fields,field_description:lims.field_lims_analyte_option__create_date
+#: model:ir.model.fields,field_description:lims.field_lims_analyte_specs__create_date
+#: model:ir.model.fields,field_description:lims.field_lims_sample__create_date
+#: model:ir.model.fields,field_description:lims.field_lims_sample_type__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: lims
+#: model:ir.model.fields.selection,name:lims.selection__lims_analyte__result_type__date
+msgid "Date"
+msgstr "Datum"
+
+#. module: lims
+#: model:ir.model.fields.selection,name:lims.selection__lims_analyte__result_type__datetime
+msgid "Datetime"
+msgstr "Datum i vrijeme"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__description
+#: model:ir.model.fields,field_description:lims.field_lims_sample_type__description
+msgid "Description"
+msgstr "Opis"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analysis__display_name
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__display_name
+#: model:ir.model.fields,field_description:lims.field_lims_analyte_option__display_name
+#: model:ir.model.fields,field_description:lims.field_lims_analyte_specs__display_name
+#: model:ir.model.fields,field_description:lims.field_lims_sample__display_name
+#: model:ir.model.fields,field_description:lims.field_lims_sample_type__display_name
+#: model:ir.model.fields,field_description:lims.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analysis__display_type
+msgid "Display Type"
+msgstr "Vrsta prikaza"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analysis__due_date
+msgid "Due Date"
+msgstr "Datum dospijeća"
+
+#. module: lims
+#: model_terms:ir.ui.view,arch_db:lims.lims_analysis_list_base_view
+msgid "Evaluation"
+msgstr "Procjena"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_sample__external_identifier
+msgid "External Identifier"
+msgstr "Vanjski identifikator"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__message_follower_ids
+#: model:ir.model.fields,field_description:lims.field_lims_sample__message_follower_ids
+msgid "Followers"
+msgstr "Pratitelji"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__message_partner_ids
+#: model:ir.model.fields,field_description:lims.field_lims_sample__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Pratitelji (partneri)"
+
+#. module: lims
+#: model:ir.model.fields,help:lims.field_lims_analyte__activity_type_icon
+#: model:ir.model.fields,help:lims.field_lims_sample__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Font awesome ikona npr. fa-tasks"
+
+#. module: lims
+#: model_terms:ir.ui.view,arch_db:lims.lims_analyte_form_view
+msgid "General Information"
+msgstr "Opći podaci"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__has_message
+#: model:ir.model.fields,field_description:lims.field_lims_sample__has_message
+msgid "Has Message"
+msgstr "Ima poruku"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_sample_type__hazardous
+#: model_terms:ir.ui.view,arch_db:lims.lims_sample_type_search_view
+msgid "Hazardous"
+msgstr ""
+
+#. module: lims
+#: model:ir.model.fields.selection,name:lims.selection__lims_sample__priority__2
+msgid "High"
+msgstr "Visok"
+
+#. module: lims
+#: model:ir.model.fields.selection,name:lims.selection__lims_sample__priority__1
+msgid "Highest"
+msgstr "Najviši"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analysis__id
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__id
+#: model:ir.model.fields,field_description:lims.field_lims_analyte_option__id
+#: model:ir.model.fields,field_description:lims.field_lims_analyte_specs__id
+#: model:ir.model.fields,field_description:lims.field_lims_sample__id
+#: model:ir.model.fields,field_description:lims.field_lims_sample_type__id
+#: model:ir.model.fields,field_description:lims.field_res_config_settings__id
+msgid "ID"
+msgstr "ID"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__activity_exception_icon
+#: model:ir.model.fields,field_description:lims.field_lims_sample__activity_exception_icon
+msgid "Icon"
+msgstr "Ikona"
+
+#. module: lims
+#: model:ir.model.fields,help:lims.field_lims_analyte__activity_exception_icon
+#: model:ir.model.fields,help:lims.field_lims_sample__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Ikona koja označava iznimnu aktivnost."
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analysis__identifier
+#: model:ir.model.fields,field_description:lims.field_lims_sample__identifier
+msgid "Identifier"
+msgstr "Identifikator"
+
+#. module: lims
+#: model:ir.model.fields,help:lims.field_lims_analyte__message_needaction
+#: model:ir.model.fields,help:lims.field_lims_sample__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Ako je označeno, nove poruke zahtijevaju vašu pažnju."
+
+#. module: lims
+#: model:ir.model.fields,help:lims.field_lims_analyte__message_has_error
+#: model:ir.model.fields,help:lims.field_lims_sample__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Ako je označeno, neke poruke imaju grešku u dostavi."
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_sample__interpretation
+#: model_terms:ir.ui.view,arch_db:lims.lims_sample_form_view
+msgid "Interpretation"
+msgstr ""
+
+#. module: lims
+#: model:ir.model.fields.selection,name:lims.selection__lims_sample__state__invalid
+msgid "Invalid"
+msgstr "Neispravno"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__message_is_follower
+#: model:ir.model.fields,field_description:lims.field_lims_sample__message_is_follower
+msgid "Is Follower"
+msgstr "Je pratitelj"
+
+#. module: lims
+#: model_terms:ir.ui.view,arch_db:lims.lims_analysis_search_view
+msgid "Items rejected"
+msgstr ""
+
+#. module: lims
+#: model_terms:ir.ui.view,arch_db:lims.lims_analysis_search_view
+msgid "Items to be verified"
+msgstr ""
+
+#. module: lims
+#: model_terms:ir.ui.view,arch_db:lims.lims_analysis_search_view
+msgid "Items to receive"
+msgstr ""
+
+#. module: lims
+#: model_terms:ir.ui.view,arch_db:lims.lims_analysis_search_view
+msgid "Items to work on"
+msgstr ""
+
+#. module: lims
+#: model_terms:ir.ui.view,arch_db:lims.lims_analysis_search_view
+msgid "Items verified"
+msgstr ""
+
+#. module: lims
+#: model:ir.module.category,name:lims.ir_module_category_lims
+#: model:ir.ui.menu,name:lims.lims_root
+#: model:res.groups.privilege,name:lims.res_groups_privilege_lims
+msgid "LIMS"
+msgstr "LIMS"
+
+#. module: lims
+#: model:res.groups,name:lims.group_lims_base
+msgid "LIMS Base Root Menu"
+msgstr ""
+
+#. module: lims
+#: model:ir.actions.report,name:lims.lims_sample_report
+msgid "LIMS Sample Report"
+msgstr ""
+
+#. module: lims
+#: model_terms:ir.ui.view,arch_db:lims.res_config_settings_view_form
+msgid "Laboratory"
+msgstr ""
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analysis__write_uid
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__write_uid
+#: model:ir.model.fields,field_description:lims.field_lims_analyte_option__write_uid
+#: model:ir.model.fields,field_description:lims.field_lims_analyte_specs__write_uid
+#: model:ir.model.fields,field_description:lims.field_lims_sample__write_uid
+#: model:ir.model.fields,field_description:lims.field_lims_sample_type__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analysis__write_date
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__write_date
+#: model:ir.model.fields,field_description:lims.field_lims_analyte_option__write_date
+#: model:ir.model.fields,field_description:lims.field_lims_analyte_specs__write_date
+#: model:ir.model.fields,field_description:lims.field_lims_sample__write_date
+#: model:ir.model.fields,field_description:lims.field_lims_sample_type__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: lims
+#: model:ir.model,name:lims.model_lims_analyte
+msgid "Lims Analyte"
+msgstr ""
+
+#. module: lims
+#: model:ir.model,name:lims.model_lims_analyte_option
+msgid "Lims Analyte Option"
+msgstr ""
+
+#. module: lims
+#: model:ir.model,name:lims.model_lims_analyte_specs
+msgid "Lims Analyte Specs"
+msgstr ""
+
+#. module: lims
+#: model:ir.model.fields.selection,name:lims.selection__lims_sample__priority__4
+msgid "Low"
+msgstr "Nizak"
+
+#. module: lims
+#: model:ir.model.fields.selection,name:lims.selection__lims_sample__priority__5
+msgid "Lowest"
+msgstr ""
+
+#. module: lims
+#: model:res.groups,name:lims.group_lims_manager
+msgid "Manager"
+msgstr "Menadžer"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte_specs__max_operator
+msgid "Max Operator"
+msgstr ""
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte_specs__max_value
+msgid "Max Value"
+msgstr ""
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte_specs__max_warning_value
+msgid "Max Warning Value"
+msgstr ""
+
+#. module: lims
+#: model:ir.model.fields.selection,name:lims.selection__lims_analysis__value_state__max
+msgid "Maximum"
+msgstr "Maksimum"
+
+#. module: lims
+#: model:ir.model.fields.selection,name:lims.selection__lims_analysis__value_state__max_warning
+msgid "Maximum Warning"
+msgstr ""
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__message_has_error
+#: model:ir.model.fields,field_description:lims.field_lims_sample__message_has_error
+msgid "Message Delivery error"
+msgstr "Greška u dostavi poruke"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__message_ids
+#: model:ir.model.fields,field_description:lims.field_lims_sample__message_ids
+msgid "Messages"
+msgstr "Poruke"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte_specs__min_operator
+msgid "Min Operator"
+msgstr ""
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte_specs__min_value
+msgid "Min Value"
+msgstr ""
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte_specs__min_warning_value
+msgid "Min Warning Value"
+msgstr ""
+
+#. module: lims
+#: model:ir.model.fields.selection,name:lims.selection__lims_analysis__value_state__min
+msgid "Minimum"
+msgstr "Minimalno"
+
+#. module: lims
+#: model:ir.model.fields.selection,name:lims.selection__lims_analysis__value_state__min_warning
+msgid "Minimum Warning"
+msgstr ""
+
+#. module: lims
+#: model:ir.model.fields.selection,name:lims.selection__lims_analyte__result_type__multiselection
+msgid "Multi-selection"
+msgstr ""
+
+#. module: lims
+#: model:ir.model.fields.selection,name:lims.selection__lims_analyte__result_type__multiselection-check
+msgid "Multi-selection with checks"
+msgstr ""
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__my_activity_date_deadline
+#: model:ir.model.fields,field_description:lims.field_lims_sample__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Rok moje aktivnosti"
+
+#. module: lims
+#: model_terms:ir.ui.view,arch_db:lims.lims_sample_report_template
+msgid "My Sample Report"
+msgstr ""
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analysis__name
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__name
+#: model:ir.model.fields,field_description:lims.field_lims_sample_type__name
+msgid "Name"
+msgstr "Naziv"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__activity_date_deadline
+#: model:ir.model.fields,field_description:lims.field_lims_sample__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Rok sljedeće aktivnosti"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__activity_summary
+#: model:ir.model.fields,field_description:lims.field_lims_sample__activity_summary
+msgid "Next Activity Summary"
+msgstr "Sažetak sljedeće aktivnosti"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__activity_type_id
+#: model:ir.model.fields,field_description:lims.field_lims_sample__activity_type_id
+msgid "Next Activity Type"
+msgstr "Vrsta sljedeće aktivnosti"
+
+#. module: lims
+#: model:ir.model.fields.selection,name:lims.selection__lims_sample__priority__3
+msgid "Normal"
+msgstr "Normalan"
+
+#. module: lims
+#: model:ir.model.fields.selection,name:lims.selection__lims_analysis__display_type__line_note
+msgid "Note"
+msgstr "Bilješka"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__message_needaction_counter
+#: model:ir.model.fields,field_description:lims.field_lims_sample__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Broj radnji"
+
+#. module: lims
+#: model:ir.model.fields,help:lims.field_lims_analyte__precision_digits
+msgid ""
+"Number of decimals to consider when comparing numeric results with\n"
+"        specifications. Ignored for other result types."
+msgstr ""
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__message_has_error_counter
+#: model:ir.model.fields,field_description:lims.field_lims_sample__message_has_error_counter
+msgid "Number of errors"
+msgstr "Broj grešaka"
+
+#. module: lims
+#: model:ir.model.fields,help:lims.field_lims_analyte__message_needaction_counter
+#: model:ir.model.fields,help:lims.field_lims_sample__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Broj poruka koje zahtijevaju radnju"
+
+#. module: lims
+#: model:ir.model.fields,help:lims.field_lims_analyte__message_has_error_counter
+#: model:ir.model.fields,help:lims.field_lims_sample__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Broj poruka s greškom u dostavi"
+
+#. module: lims
+#: model:ir.model.fields.selection,name:lims.selection__lims_analyte__result_type__float
+msgid "Numeric"
+msgstr "Numerički"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__option_ids
+msgid "Option"
+msgstr "Opcija"
+
+#. module: lims
+#: model_terms:ir.ui.view,arch_db:lims.lims_analyte_form_view
+msgid "Options"
+msgstr "Opcije"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_sample__partner_id
+msgid "Partner"
+msgstr "Partner"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__precision_digits
+msgid "Precision Digits"
+msgstr ""
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_sample__priority
+msgid "Priority"
+msgstr "Prioritet"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analysis__progress
+#: model:ir.model.fields,field_description:lims.field_lims_sample__progress
+msgid "Progress"
+msgstr "Napredak"
+
+#. module: lims
+#: model:res.groups,name:lims.group_lims_publisher
+msgid "Publisher"
+msgstr ""
+
+#. module: lims
+#. odoo-python
+#: code:addons/lims/models/lims_analysis.py:0
+msgid "RV: "
+msgstr "RV: "
+
+#. module: lims
+#: model_terms:ir.ui.view,arch_db:lims.lims_sample_form_view
+msgid "Receive"
+msgstr "Primi"
+
+#. module: lims
+#: model:ir.model.fields.selection,name:lims.selection__lims_sample__state__received
+msgid "Received"
+msgstr "Primljeno"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_sample__received_date
+msgid "Received Date"
+msgstr ""
+
+#. module: lims
+#: model:ir.model.fields.selection,name:lims.selection__lims_analysis__state__registered
+#: model:ir.model.fields.selection,name:lims.selection__lims_sample__state__registered
+msgid "Registered"
+msgstr "Registrirano"
+
+#. module: lims
+#: model_terms:ir.ui.view,arch_db:lims.lims_analysis_list_base_view
+msgid "Reject"
+msgstr "Odbij"
+
+#. module: lims
+#: model:ir.model.fields.selection,name:lims.selection__lims_analysis__state__rejected
+#: model_terms:ir.ui.view,arch_db:lims.lims_analysis_search_view
+msgid "Rejected"
+msgstr "Odbijeno"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__activity_user_id
+#: model:ir.model.fields,field_description:lims.field_lims_sample__activity_user_id
+msgid "Responsible User"
+msgstr "Odgovorni korisnik"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__result_type
+msgid "Result Type"
+msgstr ""
+
+#. module: lims
+#: model_terms:ir.ui.view,arch_db:lims.lims_analysis_list_base_view
+msgid "Retract"
+msgstr ""
+
+#. module: lims
+#: model:ir.actions.act_window,name:lims.lims_sample_act_window
+#: model:ir.model,name:lims.model_lims_sample
+#: model:ir.model.fields,field_description:lims.field_lims_analysis__sample_id
+#: model:ir.ui.menu,name:lims.lims_sample_root
+#: model_terms:ir.ui.view,arch_db:lims.lims_analysis_search_view
+msgid "Sample"
+msgstr "Uzorak"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_sample__sample_date
+msgid "Sample Date"
+msgstr ""
+
+#. module: lims
+#: model:ir.actions.act_window,name:lims.lims_sample_type_act_window
+#: model:ir.model,name:lims.model_lims_sample_type
+#: model:ir.model.fields,field_description:lims.field_lims_analyte_specs__sample_type_id
+#: model:ir.model.fields,field_description:lims.field_lims_sample__sample_type_id
+msgid "Sample Type"
+msgstr ""
+
+#. module: lims
+#: model:ir.ui.menu,name:lims.lims_sample_type_menu
+msgid "Sample Types"
+msgstr ""
+
+#. module: lims
+#: model:ir.model.fields.selection,name:lims.selection__lims_sample__state__due
+msgid "Sample due"
+msgstr ""
+
+#. module: lims
+#: model:ir.model.constraint,message:lims.constraint_lims_sample_identifier_unique
+msgid "Sample identifier must be unique"
+msgstr ""
+
+#. module: lims
+#: model:res.groups,name:lims.group_lims_sampler
+msgid "Sampler"
+msgstr ""
+
+#. module: lims
+#: model:ir.ui.menu,name:lims.lims_sample_menu
+msgid "Samples"
+msgstr ""
+
+#. module: lims
+#: model:ir.model.fields.selection,name:lims.selection__lims_sample__state__scheduled_sampling
+msgid "Scheduled Sampling"
+msgstr ""
+
+#. module: lims
+#: model:ir.model.fields.selection,name:lims.selection__lims_analysis__display_type__line_section
+msgid "Section"
+msgstr "Odlomak"
+
+#. module: lims
+#: model:ir.model.fields.selection,name:lims.selection__lims_analyte__result_type__selection
+msgid "Selection"
+msgstr "Odabir"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analysis__sequence
+#: model:ir.model.fields,field_description:lims.field_lims_analyte_option__sequence
+msgid "Sequence"
+msgstr "Sekvenca"
+
+#. module: lims
+#: model:ir.actions.act_window,name:lims.action_lims_config
+#: model:ir.ui.menu,name:lims.lims_settings_menu
+msgid "Settings"
+msgstr "Postavke"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__specification_ids
+msgid "Specification"
+msgstr "Specifikacija"
+
+#. module: lims
+#: model_terms:ir.ui.view,arch_db:lims.lims_analyte_form_view
+msgid "Specifications"
+msgstr "Specifikacije"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analysis__state
+#: model:ir.model.fields,field_description:lims.field_lims_sample__state
+msgid "State"
+msgstr "Stanje"
+
+#. module: lims
+#: model:ir.model.fields,help:lims.field_lims_analyte__activity_state
+#: model:ir.model.fields,help:lims.field_lims_sample__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Status na temelju aktivnosti\n"
+"Kašnjenje: rok je već prošao\n"
+"Danas: datum aktivnosti je danas\n"
+"Planirano: buduće aktivnosti."
+
+#. module: lims
+#: model:ir.model.fields.selection,name:lims.selection__lims_analyte__result_type__char
+msgid "String"
+msgstr "Niz"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analysis__submitted_date
+msgid "Submitted Date"
+msgstr ""
+
+#. module: lims
+#: model:ir.model.fields.selection,name:lims.selection__lims_analysis__display_type__line_subsection
+msgid "Subsection"
+msgstr "Pododjeljak"
+
+#. module: lims
+#: model:ir.model.fields.selection,name:lims.selection__lims_analyte__result_type__text
+msgid "Text"
+msgstr "Tekst"
+
+#. module: lims
+#: model:ir.model.fields.selection,name:lims.selection__lims_analysis__state__to_analyze
+msgid "To Analyze"
+msgstr ""
+
+#. module: lims
+#: model_terms:ir.ui.view,arch_db:lims.lims_analysis_search_view
+msgid "To analyze"
+msgstr ""
+
+#. module: lims
+#: model:ir.model.fields.selection,name:lims.selection__lims_analysis__state__to_be_verified
+#: model:ir.model.fields.selection,name:lims.selection__lims_sample__state__to_be_verified
+msgid "To be verified"
+msgstr ""
+
+#. module: lims
+#: model_terms:ir.ui.view,arch_db:lims.lims_analysis_search_view
+msgid "To receive"
+msgstr "Za primitak"
+
+#. module: lims
+#: model_terms:ir.ui.view,arch_db:lims.lims_analysis_search_view
+msgid "To verify"
+msgstr ""
+
+#. module: lims
+#: model:ir.model.fields,help:lims.field_lims_analyte__activity_exception_decoration
+#: model:ir.model.fields,help:lims.field_lims_sample__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Vrsta iznimne aktivnosti na zapisu."
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_res_config_settings__lims_unforce_double_verification_manager
+msgid "Unforce double verification for managers"
+msgstr ""
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analysis__uom_id
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__uom_id
+msgid "Uom"
+msgstr "JM"
+
+#. module: lims
+#: model:ir.model.fields.selection,name:lims.selection__lims_analysis__value_state__valid
+msgid "Valid"
+msgstr "Odobreno"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analysis__value
+#: model:ir.model.fields,field_description:lims.field_lims_analyte_option__value
+msgid "Value"
+msgstr "Vrijednost"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analysis__value_state
+msgid "Value State"
+msgstr ""
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analysis__verification_date
+#: model:ir.model.fields,field_description:lims.field_lims_sample__verification_date
+msgid "Verification Date"
+msgstr ""
+
+#. module: lims
+#: model:ir.model.fields.selection,name:lims.selection__lims_analysis__state__verified
+#: model:ir.model.fields.selection,name:lims.selection__lims_sample__state__verified
+#: model_terms:ir.ui.view,arch_db:lims.lims_analysis_search_view
+msgid "Verified"
+msgstr "Potvrđeno"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analysis__verified_by
+msgid "Verified By"
+msgstr ""
+
+#. module: lims
+#: model:res.groups,name:lims.group_lims_verifier
+msgid "Verifier"
+msgstr ""
+
+#. module: lims
+#: model_terms:ir.ui.view,arch_db:lims.lims_analysis_list_base_view
+msgid "Verify"
+msgstr "Ovjeriti"
+
+#. module: lims
+#: model:ir.model.fields,field_description:lims.field_lims_analyte__website_message_ids
+#: model:ir.model.fields,field_description:lims.field_lims_sample__website_message_ids
+msgid "Website Messages"
+msgstr "Poruke web stranice"
+
+#. module: lims
+#: model:ir.model.fields,help:lims.field_lims_analyte__website_message_ids
+#: model:ir.model.fields,help:lims.field_lims_sample__website_message_ids
+msgid "Website communication history"
+msgstr "Povijest komunikacije web stranice"
+
+#. module: lims
+#: model:ir.model.fields,help:lims.field_lims_analyte__autoverify
+msgid "Whether the analysis can be verified by the user if he is a verifier."
+msgstr ""
+
+#. module: lims
+#. odoo-python
+#: code:addons/lims/models/lims_analysis.py:0
+msgid "You are not allowed to analyze this"
+msgstr "Nije vam dopušteno analizirati ovo"
+
+#. module: lims
+#. odoo-python
+#: code:addons/lims/models/lims_analysis.py:0
+msgid "You are not allowed to retract an analysis to be verified"
+msgstr "Nije vam dopušteno povući analizu radi provjere"
+
+#. module: lims
+#. odoo-python
+#: code:addons/lims/models/lims_analysis.py:0
+msgid "You are not allowed to verify an analysis"
+msgstr "Nije vam dopušteno verificirati analizu"
+
+#. module: lims
+#: model:uom.uom,name:lims.product_uom_mg
+msgid "mg"
+msgstr "mg"

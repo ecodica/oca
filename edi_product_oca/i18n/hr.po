@@ -1,0 +1,135 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* edi_product_oca
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: edi_product_oca
+#: model:ir.model.fields,field_description:edi_product_oca.field_product_product__edi_disable_auto
+#: model:ir.model.fields,field_description:edi_product_oca.field_product_template__edi_disable_auto
+#: model:ir.model.fields,field_description:edi_product_oca.field_uom_uom__edi_disable_auto
+msgid "Disable auto"
+msgstr "Onemogući auto"
+
+#. module: edi_product_oca
+#: model:ir.model.fields,field_description:edi_product_oca.field_product_product__display_name
+#: model:ir.model.fields,field_description:edi_product_oca.field_product_template__display_name
+#: model:ir.model.fields,field_description:edi_product_oca.field_uom_uom__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: edi_product_oca
+#: model_terms:ir.ui.view,arch_db:edi_product_oca.product_template_form_view
+#: model_terms:ir.ui.view,arch_db:edi_product_oca.uom_uom_form_view_inherit
+msgid "EDI"
+msgstr "EDI"
+
+#. module: edi_product_oca
+#: model:ir.model.fields,field_description:edi_product_oca.field_product_product__origin_edi_endpoint_id
+#: model:ir.model.fields,field_description:edi_product_oca.field_product_template__origin_edi_endpoint_id
+#: model:ir.model.fields,field_description:edi_product_oca.field_uom_uom__origin_edi_endpoint_id
+msgid "EDI origin endpoint"
+msgstr "EDI izvorni endpoint"
+
+#. module: edi_product_oca
+#: model:ir.model.fields,field_description:edi_product_oca.field_product_product__origin_exchange_type_id
+#: model:ir.model.fields,field_description:edi_product_oca.field_product_template__origin_exchange_type_id
+#: model:ir.model.fields,field_description:edi_product_oca.field_uom_uom__origin_exchange_type_id
+msgid "EDI origin exchange type"
+msgstr "EDI izvorna vrsta razmjene"
+
+#. module: edi_product_oca
+#: model:ir.model.fields,field_description:edi_product_oca.field_product_product__origin_exchange_record_id
+#: model:ir.model.fields,field_description:edi_product_oca.field_product_template__origin_exchange_record_id
+#: model:ir.model.fields,field_description:edi_product_oca.field_uom_uom__origin_exchange_record_id
+msgid "EDI origin record"
+msgstr "EDI izvorni zapis"
+
+#. module: edi_product_oca
+#: model:ir.model.fields,help:edi_product_oca.field_product_product__origin_exchange_record_id
+#: model:ir.model.fields,help:edi_product_oca.field_product_template__origin_exchange_record_id
+#: model:ir.model.fields,help:edi_product_oca.field_uom_uom__origin_exchange_record_id
+msgid "EDI record that originated this document."
+msgstr "EDI zapis koji je stvorio ovaj dokument."
+
+#. module: edi_product_oca
+#: model:ir.model.fields,field_description:edi_product_oca.field_product_product__edi_config
+#: model:ir.model.fields,field_description:edi_product_oca.field_product_template__edi_config
+#: model:ir.model.fields,field_description:edi_product_oca.field_uom_uom__edi_config
+msgid "Edi Config"
+msgstr "EDI konfiguracija"
+
+#. module: edi_product_oca
+#: model:ir.model.fields,field_description:edi_product_oca.field_product_product__edi_has_form_config
+#: model:ir.model.fields,field_description:edi_product_oca.field_product_template__edi_has_form_config
+#: model:ir.model.fields,field_description:edi_product_oca.field_uom_uom__edi_has_form_config
+msgid "Edi Has Form Config"
+msgstr "EDI ima konfiguraciju forme"
+
+#. module: edi_product_oca
+#: model:ir.model.fields,field_description:edi_product_oca.field_product_product__exchange_record_ids
+#: model:ir.model.fields,field_description:edi_product_oca.field_product_template__exchange_record_ids
+#: model:ir.model.fields,field_description:edi_product_oca.field_uom_uom__exchange_record_ids
+msgid "Exchange Record"
+msgstr ""
+
+#. module: edi_product_oca
+#: model:ir.model.fields,field_description:edi_product_oca.field_product_product__exchange_record_count
+#: model:ir.model.fields,field_description:edi_product_oca.field_product_template__exchange_record_count
+#: model:ir.model.fields,field_description:edi_product_oca.field_uom_uom__exchange_record_count
+msgid "Exchange Record Count"
+msgstr ""
+
+#. module: edi_product_oca
+#: model:ir.model.fields,field_description:edi_product_oca.field_product_product__exchange_related_record_ids
+#: model:ir.model.fields,field_description:edi_product_oca.field_product_template__exchange_related_record_ids
+#: model:ir.model.fields,field_description:edi_product_oca.field_uom_uom__exchange_related_record_ids
+msgid "Exchange Related Record"
+msgstr ""
+
+#. module: edi_product_oca
+#: model:ir.model.fields,field_description:edi_product_oca.field_product_product__id
+#: model:ir.model.fields,field_description:edi_product_oca.field_product_template__id
+#: model:ir.model.fields,field_description:edi_product_oca.field_uom_uom__id
+msgid "ID"
+msgstr "ID"
+
+#. module: edi_product_oca
+#: model:ir.model,name:edi_product_oca.model_product_template
+msgid "Product"
+msgstr "Proizvod"
+
+#. module: edi_product_oca
+#: model:ir.model,name:edi_product_oca.model_uom_uom
+msgid "Product Unit of Measure"
+msgstr "JM proizvoda"
+
+#. module: edi_product_oca
+#: model:ir.model,name:edi_product_oca.model_product_product
+msgid "Product Variant"
+msgstr "Varijanta proizvoda"
+
+#. module: edi_product_oca
+#: model:ir.model.fields,help:edi_product_oca.field_product_product__origin_edi_endpoint_id
+#: model:ir.model.fields,help:edi_product_oca.field_product_template__origin_edi_endpoint_id
+#: model:ir.model.fields,help:edi_product_oca.field_uom_uom__origin_edi_endpoint_id
+msgid "Record generated via this endpoint"
+msgstr ""
+
+#. module: edi_product_oca
+#: model:ir.model.fields,help:edi_product_oca.field_product_product__edi_disable_auto
+#: model:ir.model.fields,help:edi_product_oca.field_product_template__edi_disable_auto
+#: model:ir.model.fields,help:edi_product_oca.field_uom_uom__edi_disable_auto
+msgid "When marked, EDI automatic processing will be avoided"
+msgstr ""

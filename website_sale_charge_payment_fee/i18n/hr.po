@@ -1,0 +1,125 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_sale_charge_payment_fee
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: website_sale_charge_payment_fee
+#: model_terms:ir.ui.view,arch_db:website_sale_charge_payment_fee.method_form_fee
+msgid "(Fee:"
+msgstr "(Naknada:"
+
+#. module: website_sale_charge_payment_fee
+#: model:ir.model.fields,help:website_sale_charge_payment_fee.field_payment_provider__charge_fee
+msgid ""
+"An extra fee line will be added to online order when using this payment "
+"method"
+msgstr ""
+"Dodatna stavka naknade bit će dodana online narudžbi pri korištenju ove "
+"metode plaćanja"
+
+#. module: website_sale_charge_payment_fee
+#: model_terms:ir.ui.view,arch_db:website_sale_charge_payment_fee.provider_form_fee_inherit
+msgid "Charge payment fee"
+msgstr "Naplati naknadu plaćanja"
+
+#. module: website_sale_charge_payment_fee
+#: model:ir.model.fields,field_description:website_sale_charge_payment_fee.field_payment_provider__charge_fee_type
+msgid "Computation type"
+msgstr "Vrsta izračuna"
+
+#. module: website_sale_charge_payment_fee
+#: model:ir.model.fields,field_description:website_sale_charge_payment_fee.field_payment_provider__display_name
+#: model:ir.model.fields,field_description:website_sale_charge_payment_fee.field_sale_order__display_name
+#: model:ir.model.fields,field_description:website_sale_charge_payment_fee.field_sale_order_line__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: website_sale_charge_payment_fee
+#: model:ir.model.fields,field_description:website_sale_charge_payment_fee.field_payment_provider__charge_fee_currency_id
+msgid "Fee Currency"
+msgstr ""
+
+#. module: website_sale_charge_payment_fee
+#: model:ir.model.fields,field_description:website_sale_charge_payment_fee.field_payment_provider__charge_fee_description
+msgid "Fee Description"
+msgstr ""
+
+#. module: website_sale_charge_payment_fee
+#: model:ir.model.fields,field_description:website_sale_charge_payment_fee.field_payment_provider__charge_fee_product_id
+msgid "Fee Product"
+msgstr ""
+
+#. module: website_sale_charge_payment_fee
+#: model:ir.model.fields,field_description:website_sale_charge_payment_fee.field_payment_provider__charge_fee
+msgid "Fee charged to customer"
+msgstr ""
+
+#. module: website_sale_charge_payment_fee
+#: model:ir.model.fields.selection,name:website_sale_charge_payment_fee.selection__payment_provider__charge_fee_type__fixed
+msgid "Fixed"
+msgstr "Fiksna"
+
+#. module: website_sale_charge_payment_fee
+#: model:ir.model.fields,field_description:website_sale_charge_payment_fee.field_payment_provider__charge_fee_fixed_price
+msgid "Fixed Price"
+msgstr "Fiksna cijena"
+
+#. module: website_sale_charge_payment_fee
+#: model:ir.model.fields,field_description:website_sale_charge_payment_fee.field_payment_provider__id
+#: model:ir.model.fields,field_description:website_sale_charge_payment_fee.field_sale_order__id
+#: model:ir.model.fields,field_description:website_sale_charge_payment_fee.field_sale_order_line__id
+msgid "ID"
+msgstr "ID"
+
+#. module: website_sale_charge_payment_fee
+#: model_terms:ir.ui.view,arch_db:website_sale_charge_payment_fee.payment_fee
+msgid "Payment Fee"
+msgstr ""
+
+#. module: website_sale_charge_payment_fee
+#: model:ir.model.fields,field_description:website_sale_charge_payment_fee.field_sale_order__amount_payment_fee
+msgid "Payment Fee Amount"
+msgstr ""
+
+#. module: website_sale_charge_payment_fee
+#: model:ir.model,name:website_sale_charge_payment_fee.model_payment_provider
+msgid "Payment Provider"
+msgstr "Pružatelj plaćanja"
+
+#. module: website_sale_charge_payment_fee
+#: model:ir.model.fields,field_description:website_sale_charge_payment_fee.field_sale_order_line__payment_fee_line
+msgid "Payment fee line"
+msgstr ""
+
+#. module: website_sale_charge_payment_fee
+#: model:ir.model.fields,field_description:website_sale_charge_payment_fee.field_payment_provider__charge_fee_percentage
+#: model:ir.model.fields.selection,name:website_sale_charge_payment_fee.selection__payment_provider__charge_fee_type__percentage
+msgid "Percentage"
+msgstr "Postotak"
+
+#. module: website_sale_charge_payment_fee
+#: model:ir.model.fields,help:website_sale_charge_payment_fee.field_payment_provider__charge_fee_percentage
+msgid "Percentage applied to order total"
+msgstr ""
+
+#. module: website_sale_charge_payment_fee
+#: model:ir.model,name:website_sale_charge_payment_fee.model_sale_order
+msgid "Sales Order"
+msgstr "Prodajni nalog"
+
+#. module: website_sale_charge_payment_fee
+#: model:ir.model,name:website_sale_charge_payment_fee.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Stavka prodajnog naloga"

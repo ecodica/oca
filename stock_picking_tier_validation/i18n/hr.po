@@ -1,0 +1,145 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_picking_tier_validation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: stock_picking_tier_validation
+#. odoo-python
+#: code:addons/stock_picking_tier_validation/models/stock_picking.py:0
+msgid "A validation process is still open for at least one record."
+msgstr "Postupak validacije još je otvoren za barem jedan zapis."
+
+#. module: stock_picking_tier_validation
+#: model:ir.model.fields,field_description:stock_picking_tier_validation.field_stock_picking__can_forward
+msgid "Can Forward"
+msgstr "Može proslijediti"
+
+#. module: stock_picking_tier_validation
+#: model:ir.model.fields,field_description:stock_picking_tier_validation.field_stock_picking__can_review
+msgid "Can Review"
+msgstr "Može recenzirati"
+
+#. module: stock_picking_tier_validation
+#: model:ir.model.fields,field_description:stock_picking_tier_validation.field_stock_picking__display_name
+#: model:ir.model.fields,field_description:stock_picking_tier_validation.field_tier_definition__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: stock_picking_tier_validation
+#: model:ir.model.fields,field_description:stock_picking_tier_validation.field_stock_picking__has_comment
+msgid "Has Comment"
+msgstr "Ima komentar"
+
+#. module: stock_picking_tier_validation
+#: model:ir.model.fields,field_description:stock_picking_tier_validation.field_stock_picking__hide_reviews
+msgid "Hide Reviews"
+msgstr "Sakrij recenzije"
+
+#. module: stock_picking_tier_validation
+#: model:ir.model.fields,field_description:stock_picking_tier_validation.field_stock_picking__id
+#: model:ir.model.fields,field_description:stock_picking_tier_validation.field_tier_definition__id
+msgid "ID"
+msgstr "ID"
+
+#. module: stock_picking_tier_validation
+#: model:ir.model.fields,help:stock_picking_tier_validation.field_stock_picking__has_comment
+msgid "If set, Allow the reviewer to leave a comment on the review."
+msgstr ""
+"Ako je postavljeno, dozvoljava recenzentu da ostavi komentar na recenziji."
+
+#. module: stock_picking_tier_validation
+#: model:ir.model.fields,field_description:stock_picking_tier_validation.field_stock_picking__need_validation
+msgid "Need Validation"
+msgstr "Treba validaciju"
+
+#. module: stock_picking_tier_validation
+#: model_terms:ir.ui.view,arch_db:stock_picking_tier_validation.view_picking_internal_search
+msgid "Needs my Review"
+msgstr "Treba moju recenziju"
+
+#. module: stock_picking_tier_validation
+#: model:ir.model.fields,field_description:stock_picking_tier_validation.field_stock_picking__next_review
+msgid "Next Review"
+msgstr "Sljedeća ovjera"
+
+#. module: stock_picking_tier_validation
+#: model:ir.model.fields,field_description:stock_picking_tier_validation.field_stock_picking__rejected_message
+msgid "Rejected Message"
+msgstr "Poruka odbijanja"
+
+#. module: stock_picking_tier_validation
+#: model:ir.model.fields,field_description:stock_picking_tier_validation.field_stock_picking__require_authentication
+msgid "Require Authentication"
+msgstr "Zahtijevaj autentikaciju"
+
+#. module: stock_picking_tier_validation
+#: model:ir.model.fields,field_description:stock_picking_tier_validation.field_stock_picking__reviewer_ids
+msgid "Reviewers"
+msgstr "Recenzenti"
+
+#. module: stock_picking_tier_validation
+#. odoo-python
+#: code:addons/stock_picking_tier_validation/models/stock_picking.py:0
+msgid ""
+"This action needs to be validated for at least one record. \n"
+"Please request a validation."
+msgstr ""
+"Ova radnja mora biti validirana za barem jedan zapis. \n"
+"Zatražite validaciju."
+
+#. module: stock_picking_tier_validation
+#: model:ir.model,name:stock_picking_tier_validation.model_tier_definition
+msgid "Tier Definition"
+msgstr "Definicija razine"
+
+#. module: stock_picking_tier_validation
+#: model:ir.model.fields,field_description:stock_picking_tier_validation.field_stock_picking__to_validate_message
+msgid "To Validate Message"
+msgstr "Poruka za validaciju"
+
+#. module: stock_picking_tier_validation
+#: model:ir.model,name:stock_picking_tier_validation.model_stock_picking
+msgid "Transfer"
+msgstr "Prijenos"
+
+#. module: stock_picking_tier_validation
+#: model_terms:ir.ui.view,arch_db:stock_picking_tier_validation.view_picking_internal_search
+msgid "Transfers to review"
+msgstr "Prijenosi za recenziju"
+
+#. module: stock_picking_tier_validation
+#: model_terms:ir.ui.view,arch_db:stock_picking_tier_validation.view_picking_internal_search
+msgid "Transfers validated and ready to be done"
+msgstr "Prijenosi validirani i spremni za izvršenje"
+
+#. module: stock_picking_tier_validation
+#: model_terms:ir.ui.view,arch_db:stock_picking_tier_validation.view_picking_internal_search
+msgid "Validated"
+msgstr "Validirano"
+
+#. module: stock_picking_tier_validation
+#: model:ir.model.fields,field_description:stock_picking_tier_validation.field_stock_picking__validated_message
+msgid "Validated Message"
+msgstr "Poruka validacije"
+
+#. module: stock_picking_tier_validation
+#: model:ir.model.fields,field_description:stock_picking_tier_validation.field_stock_picking__validation_status
+msgid "Validation Status"
+msgstr "Status validacije"
+
+#. module: stock_picking_tier_validation
+#: model:ir.model.fields,field_description:stock_picking_tier_validation.field_stock_picking__review_ids
+msgid "Validations"
+msgstr "Validacije"

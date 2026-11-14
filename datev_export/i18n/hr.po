@@ -1,0 +1,81 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* datev_export
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: datev_export
+#: model:ir.model.fields,field_description:datev_export.field_res_company__datev_client_number
+#: model:ir.model.fields,field_description:datev_export.field_res_config_settings__datev_client_number
+#: model_terms:ir.ui.view,arch_db:datev_export.res_config_settings_view_form
+msgid "Client Number"
+msgstr "Broj klijenta"
+
+#. module: datev_export
+#: model:ir.model,name:datev_export.model_res_company
+msgid "Companies"
+msgstr "Tvrtke"
+
+#. module: datev_export
+#: model:ir.model,name:datev_export.model_res_config_settings
+msgid "Config Settings"
+msgstr "Postavke"
+
+#. module: datev_export
+#: model:ir.model.fields,field_description:datev_export.field_res_company__datev_consultant_number
+#: model:ir.model.fields,field_description:datev_export.field_res_config_settings__datev_consultant_number
+#: model_terms:ir.ui.view,arch_db:datev_export.res_config_settings_view_form
+msgid "Consultant Number"
+msgstr "Broj konzultanta"
+
+#. module: datev_export
+#: model_terms:ir.ui.view,arch_db:datev_export.res_config_settings_view_form
+msgid "DATEV Export"
+msgstr "DATEV izvoz"
+
+#. module: datev_export
+#: model:ir.model.fields,field_description:datev_export.field_res_company__display_name
+#: model:ir.model.fields,field_description:datev_export.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: datev_export
+#: model:ir.model.fields,field_description:datev_export.field_res_company__id
+#: model:ir.model.fields,field_description:datev_export.field_res_config_settings__id
+msgid "ID"
+msgstr "ID"
+
+#. module: datev_export
+#: model:ir.model.fields,help:datev_export.field_res_company__datev_client_number
+#: model:ir.model.fields,help:datev_export.field_res_config_settings__datev_client_number
+#: model_terms:ir.ui.view,arch_db:datev_export.res_config_settings_view_form
+msgid "Number from 0 to 99999"
+msgstr ""
+
+#. module: datev_export
+#: model_terms:ir.ui.view,arch_db:datev_export.res_config_settings_view_form
+msgid "Number from 1000 to 9999999"
+msgstr ""
+
+#. module: datev_export
+#: model:ir.model.fields,help:datev_export.field_res_company__datev_consultant_number
+#: model:ir.model.fields,help:datev_export.field_res_config_settings__datev_consultant_number
+msgid "Number from 1000 to 99999999"
+msgstr ""
+
+#. module: datev_export
+#: model_terms:ir.ui.view,arch_db:datev_export.res_config_settings_view_form
+msgid "Values set here are company-specific."
+msgstr ""
+"Vrijednosti koje su ovdje postavljene specifične su za pojedine tvrtke."

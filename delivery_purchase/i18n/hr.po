@@ -1,0 +1,115 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* delivery_purchase
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: delivery_purchase
+#: model:ir.model.fields,field_description:delivery_purchase.field_purchase_order__carrier_id
+msgid "Delivery Method"
+msgstr "Način dostave"
+
+#. module: delivery_purchase
+#: model:ir.model.fields,field_description:delivery_purchase.field_purchase_order__delivery_price
+msgid "Delivery Price"
+msgstr "Cijena dostave"
+
+#. module: delivery_purchase
+#: model:ir.model.fields,field_description:delivery_purchase.field_delivery_carrier__display_name
+#: model:ir.model.fields,field_description:delivery_purchase.field_purchase_order__display_name
+#: model:ir.model.fields,field_description:delivery_purchase.field_purchase_order_line__display_name
+#: model:ir.model.fields,field_description:delivery_purchase.field_stock_picking__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: delivery_purchase
+#. odoo-python
+#: code:addons/delivery_purchase/models/delivery_carrier.py:0
+msgid "Error: no matching grid."
+msgstr ""
+
+#. module: delivery_purchase
+#. odoo-python
+#: code:addons/delivery_purchase/models/delivery_carrier.py:0
+msgid "Error: this delivery method is not available for this address."
+msgstr ""
+
+#. module: delivery_purchase
+#. odoo-python
+#: code:addons/delivery_purchase/models/purchase_order.py:0
+msgid "Free Shipping"
+msgstr "Besplatna dostava"
+
+#. module: delivery_purchase
+#: model:ir.model.fields,field_description:delivery_purchase.field_delivery_carrier__id
+#: model:ir.model.fields,field_description:delivery_purchase.field_purchase_order__id
+#: model:ir.model.fields,field_description:delivery_purchase.field_purchase_order_line__id
+#: model:ir.model.fields,field_description:delivery_purchase.field_stock_picking__id
+msgid "ID"
+msgstr "ID"
+
+#. module: delivery_purchase
+#: model:ir.model.fields,field_description:delivery_purchase.field_purchase_order_line__is_delivery
+msgid "Is a Delivery"
+msgstr "Je isporuka"
+
+#. module: delivery_purchase
+#: model:ir.model.fields,field_description:delivery_purchase.field_purchase_order_line__delivery_picking_orig_id
+msgid "Origin picking (delivery)"
+msgstr ""
+
+#. module: delivery_purchase
+#: model:ir.model,name:delivery_purchase.model_purchase_order
+msgid "Purchase Order"
+msgstr "Nabavni nalog"
+
+#. module: delivery_purchase
+#: model:ir.model,name:delivery_purchase.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "Stavka nabavnog naloga"
+
+#. module: delivery_purchase
+#. odoo-python
+#: code:addons/delivery_purchase/models/stock_picking.py:0
+msgid ""
+"Shipment sent to carrier %(carrier_name)s for shipping with tracking number "
+"%(tracking_ref)s<br/>Cost: %(carrier_price)s %(currency_name)s"
+msgstr ""
+
+#. module: delivery_purchase
+#: model:ir.model,name:delivery_purchase.model_delivery_carrier
+msgid "Shipping Methods"
+msgstr "Načini dostave"
+
+#. module: delivery_purchase
+#. odoo-python
+#: code:addons/delivery_purchase/models/delivery_carrier.py:0
+msgid "The shipping is free since the order amount exceeds %.2f."
+msgstr ""
+
+#. module: delivery_purchase
+#. odoo-python
+#: code:addons/delivery_purchase/models/delivery_carrier.py:0
+msgid "There is no matching delivery rule."
+msgstr ""
+
+#. module: delivery_purchase
+#: model:ir.model.fields,field_description:delivery_purchase.field_purchase_order_line__qty_to_invoice
+msgid "To Invoice Quantity"
+msgstr "Količina za fakturiranje"
+
+#. module: delivery_purchase
+#: model:ir.model,name:delivery_purchase.model_stock_picking
+msgid "Transfer"
+msgstr "Prijenos"

@@ -1,0 +1,2785 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* tms
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__supplier_invoice_count
+msgid "# Vendor Bills"
+msgstr "Ulazni računi"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.view_tms_driver_kanban
+msgid "<i class=\"fa fa-fw me-1 fa-phone\" title=\"Phone\"/>"
+msgstr "<i class=\"fa fa-fw me-1 fa-phone\" title=\"Telefon\"/>"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.view_tms_driver_kanban
+msgid "<i class=\"fa fa-fw me-1 fa-users\" title=\"Team\"/>"
+msgstr "<i class=\"fa fa-fw me-1 fa-users\" title=\"Tim\"/>"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.tms_order_view_kanban
+msgid ""
+"<i class=\"fa fa-long-arrow-right mx-2 oe_read_only\" aria-label=\"Arrow "
+"icon\" title=\"Arrow\"/>"
+msgstr ""
+"<i class=\"fa fa-long-arrow-right mx-2 oe_read_only\" aria-label=\"Ikona "
+"strelice\" title=\"Strelica\"/>"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.tms_crew_view_kanban
+msgid "<span class=\"badge badge-primary\">Crew</span>"
+msgstr "<span class=\"badge badge-primary\">Posada</span>"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.tms_team_view_kanban
+msgid ""
+"<span class=\"fa fa-bus me-2\" aria-label=\"Vehicle\" title=\"Vehicles\"/>\n"
+"                                                <span>Vehicles: </span>"
+msgstr ""
+"<span class=\"fa fa-bus me-2\" aria-label=\"Vozilo\" title=\"Vozila\"/>\n"
+"                                                <span>Vozila: </span>"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.tms_order_view_kanban
+msgid "<span class=\"fa fa-car me-2\" aria-label=\"Vehicle\" title=\"Vehicle\"/>"
+msgstr "<span class=\"fa fa-car me-2\" aria-label=\"Vozilo\" title=\"Vozilo\"/>"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.tms_order_view_kanban
+msgid "<span class=\"fa fa-map-o me-2\" title=\"Route\"/>"
+msgstr "<span class=\"fa fa-map-o me-2\" title=\"Ruta\"/>"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.tms_team_view_kanban
+msgid ""
+"<span class=\"fa fa-users me-2\" aria-label=\"Driver\" title=\"Drivers\"/>\n"
+"                                                <span>Drivers: </span>"
+msgstr ""
+"<span class=\"fa fa-users me-2\" aria-label=\"Vozač\" title=\"Vozači\"/>\n"
+"                                                <span>Vozači: </span>"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.tms_order_view_form
+msgid "<span class=\"w-75\">Hours</span>"
+msgstr "<span class=\"w-75\">Sati</span>"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.fleet_vehicle_inherit_view_form
+msgid ""
+"<span invisible=\"operation != 'passenger'\" class=\"w-50\">Passengers\n"
+"                                </span>"
+msgstr ""
+"<span invisible=\"operation != 'passenger'\" class=\"w-50\">Putnici\n"
+"                                </span>"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.view_tms_driver_kanban
+msgid "<span>Crews: </span>"
+msgstr "<span>Posade: </span>"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.tms_order_view_kanban
+msgid "<span>Reporting</span>"
+msgstr "<span>Izvještaji</span>"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.tms_order_view_kanban
+msgid "<span>View</span>"
+msgstr "<span>Pogled</span>"
+
+#. module: tms
+#: model:ir.model.fields.selection,name:tms.selection__tms_driver__driver_license_type__a
+msgid "A - Motorcycles"
+msgstr "A - Motocikli"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__account_move_count
+msgid "Account Move Count"
+msgstr "Broj premještanja računa"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__property_account_payable_id
+msgid "Account Payable"
+msgstr "Konto obveze"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__property_account_receivable_id
+msgid "Account Receivable"
+msgstr "Konto potraživanja"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__message_needaction
+#: model:ir.model.fields,field_description:tms.field_tms_order__message_needaction
+msgid "Action Needed"
+msgstr "Potrebna radnja"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_crew__active
+#: model:ir.model.fields,field_description:tms.field_tms_driver__active
+#: model:ir.model.fields,field_description:tms.field_tms_insurance__active
+#: model:ir.model.fields,field_description:tms.field_tms_order__active
+#: model:ir.model.fields,field_description:tms.field_tms_route__active
+#: model:ir.model.fields,field_description:tms.field_tms_stage__active
+#: model:ir.model.fields,field_description:tms.field_tms_team__active
+#: model:ir.model.fields.selection,name:tms.selection__tms_insurance__state__active
+msgid "Active"
+msgstr "Aktivno"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__active_lang_count
+msgid "Active Lang Count"
+msgstr "Broj aktivnih jezika"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__activity_ids
+#: model:ir.model.fields,field_description:tms.field_tms_order__activity_ids
+msgid "Activities"
+msgstr "Aktivnosti"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__activity_exception_decoration
+#: model:ir.model.fields,field_description:tms.field_tms_order__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Ukras iznimke aktivnosti"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__activity_state
+#: model:ir.model.fields,field_description:tms.field_tms_order__activity_state
+msgid "Activity State"
+msgstr "Status aktivnosti"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__activity_type_icon
+#: model:ir.model.fields,field_description:tms.field_tms_order__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Ikona vrste aktivnosti"
+
+#. module: tms
+#: model:ir.ui.menu,name:tms.menu_fleet_activity_types
+msgid "Activity Types"
+msgstr "Tipovi aktivnosti"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.tms_order_view_form
+msgid "Add a description for the order..."
+msgstr "Dodajte opis za narudžbu..."
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.tms_stage_form_view
+msgid "Add a description..."
+msgstr "Dodaj opis..."
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__type
+msgid "Address Type"
+msgstr "Vrsta adrese"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__type_address_label
+msgid "Address Type Description"
+msgstr "Vrsta adrese Opis"
+
+#. module: tms
+#: model:res.groups,name:tms.group_tms_admin
+msgid "Administrator"
+msgstr "Administrator"
+
+#. module: tms
+#: model:ir.ui.menu,name:tms.menu_tms_operation_trip
+msgid "All Trips"
+msgstr "Sva putovanja"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__lang
+msgid ""
+"All the emails and documents sent to this contact will be translated in this"
+" language."
+msgstr ""
+"Sva e-pošta i dokumentacija poslani ovom kontaktu biti će prevedeni na ovaj "
+"jezik."
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "Allow the use of predefined routes in trips"
+msgstr "Dopusti korištenje unaprijed definiranih ruta u putovanjima"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.view_tms_crew_search
+#: model_terms:ir.ui.view,arch_db:tms.view_tms_order_search
+#: model_terms:ir.ui.view,arch_db:tms.view_tms_route_search
+#: model_terms:ir.ui.view,arch_db:tms.view_tms_stage_search
+#: model_terms:ir.ui.view,arch_db:tms.view_tms_team_search
+msgid "Archived"
+msgstr "Arhivirano"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.tms_order_view_kanban
+msgid "Arrow"
+msgstr "Strelica"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.tms_order_view_kanban
+msgid "Arrow icon"
+msgstr "Ikona strelice"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__message_attachment_count
+#: model:ir.model.fields,field_description:tms.field_tms_order__message_attachment_count
+msgid "Attachment Count"
+msgstr "Broj privitaka"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__autopost_bills
+msgid "Auto-post bills"
+msgstr "Automatski knjiži račune"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__autopost_bills
+msgid "Automatically post bills for this trusted partner"
+msgstr "Automatski knjižite račune za ovog pouzdanog partnera"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__receipt_reminder_email
+msgid ""
+"Automatically send a confirmation email to the vendor X days before the "
+"expected receipt date, asking him to confirm the exact date."
+msgstr ""
+"Automatski pošaljite e-mail s potvrdom dobavljaču X dana prije očekivanog "
+"datuma primitka, u kojem se od njega traži potvrda točnog datuma."
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__available_invoice_template_pdf_report_ids
+msgid "Available Invoice Template Pdf Report"
+msgstr "Dostupni predložak računa u PDF formatu"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__avatar_1920
+msgid "Avatar"
+msgstr "Avatar"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__avatar_1024
+msgid "Avatar 1024"
+msgstr "Avatar 1024"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__avatar_128
+msgid "Avatar 128"
+msgstr "Avatar 128"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__avatar_256
+msgid "Avatar 256"
+msgstr "Avatar 256"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__avatar_512
+msgid "Avatar 512"
+msgstr "Avatar 512"
+
+#. module: tms
+#: model:ir.model.fields.selection,name:tms.selection__tms_driver__driver_license_type__b
+msgid "B - Automobiles"
+msgstr "B - Automobili"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__bank_account_count
+msgid "Bank"
+msgstr "Banka"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__bank_ids
+msgid "Banks"
+msgstr "Banke"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__barcode
+msgid "Barcode"
+msgstr "Barkod"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__is_blacklisted
+msgid "Blacklist"
+msgstr "Crna lista"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__phone_blacklisted
+msgid "Blacklisted Phone is Phone"
+msgstr "Brojevi na crnoj listi su telefonski"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__message_bounce
+msgid "Bounce"
+msgstr "Odbij"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__buyer_id
+msgid "Buyer"
+msgstr "Kupac"
+
+#. module: tms
+#: model:ir.model.fields.selection,name:tms.selection__tms_driver__driver_license_type__c
+msgid "C - Truck"
+msgstr "C - Kamion"
+
+#. module: tms
+#: model:ir.model.fields.selection,name:tms.selection__tms_insurance__state__cancelled
+#: model:tms.stage,name:tms.tms_stage_order_cancelled
+msgid "Cancelled"
+msgstr "Otkazano"
+
+#. module: tms
+#. odoo-python
+#: code:addons/tms/models/tms_stage.py:0
+msgid ""
+"Cannot create TMS Stage because it has the same Type and Sequence of an "
+"existing TMS Stage."
+msgstr ""
+"Nije moguće kreirati TMS fazu jer ima istu vrstu i redoslijed kao postojeća "
+"TMS faza."
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_fleet_vehicle__capacity
+#: model_terms:ir.ui.view,arch_db:tms.fleet_vehicle_inherit_view_form
+msgid "Capacity"
+msgstr "Kapacitet"
+
+#. module: tms
+#: model:ir.model.fields.selection,name:tms.selection__fleet_vehicle__operation__cargo
+msgid "Cargo"
+msgstr "Teret"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_fleet_vehicle__cargo_uom_id
+msgid "Cargo Uom"
+msgstr "Jedinica mjere tereta"
+
+#. module: tms
+#: model:ir.ui.menu,name:tms.menu_config_fleet_models_categories
+msgid "Categories"
+msgstr "Kategorije"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__channel_member_ids
+msgid "Channel Member"
+msgstr "Član kanala"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__channel_ids
+msgid "Channels"
+msgstr "Kanali prodaje"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__is_company
+msgid "Check if the contact is a company, otherwise it is a person"
+msgstr "Označite ako je kontakt Tvrtka, u suprotnom smatra se osobom"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__city
+msgid "City"
+msgstr "Grad"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_stage__custom_color
+msgid "Color Code"
+msgstr "Šifra boje"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__color
+#: model:ir.model.fields,field_description:tms.field_tms_team__color
+msgid "Color Index"
+msgstr "Indeks boje"
+
+#. module: tms
+#. odoo-python
+#: code:addons/tms/models/tms_stage.py:0
+msgid "Color code should be Hex Code. Ex:-#FFFFFF"
+msgstr "Šifra boje treba biti heksadekadska. Npr. -#FFFFFF"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__commercial_partner_id
+msgid "Commercial Entity"
+msgstr "Poslovni entitet"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__ref_company_ids
+msgid "Companies that refers to partner"
+msgstr "Tvrtke koje su vezane s partnerom"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_crew__company_id
+#: model:ir.model.fields,field_description:tms.field_tms_driver__company_id
+#: model:ir.model.fields,field_description:tms.field_tms_insurance__company_id
+#: model:ir.model.fields,field_description:tms.field_tms_order__company_id
+#: model:ir.model.fields,field_description:tms.field_tms_stage__company_id
+#: model:ir.model.fields,field_description:tms.field_tms_team__company_id
+msgid "Company"
+msgstr "Tvrtka"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__company_registry
+msgid "Company ID"
+msgstr "OIB"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__company_registry_label
+msgid "Company ID Label"
+msgstr "Oznaka ID tvrtke"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__company_name
+msgid "Company Name"
+msgstr "Tvrtka"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__commercial_company_name
+msgid "Company Name Entity"
+msgstr "Entitet naziva tvrtke"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__company_registry_placeholder
+msgid "Company Registry Placeholder"
+msgstr "Rezervirano mjesto OIB-a tvrtke"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__company_type
+msgid "Company Type"
+msgstr "Vrsta tvrtke"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_insurance__company_id
+msgid "Company related to this insurance"
+msgstr "Tvrtka povezana s ovim osiguranjem"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_crew__company_id
+#: model:ir.model.fields,help:tms.field_tms_order__company_id
+#: model:ir.model.fields,help:tms.field_tms_team__company_id
+msgid "Company related to this order"
+msgstr "Tvrtka povezana s ovom narudžbom"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__contact_address
+msgid "Complete Address"
+msgstr "Puna adresa"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__complete_name
+msgid "Complete Name"
+msgstr "Puni naziv"
+
+#. module: tms
+#: model:tms.stage,name:tms.tms_stage_order_completed
+msgid "Completed"
+msgstr "Završeno"
+
+#. module: tms
+#: model:ir.model,name:tms.model_res_config_settings
+msgid "Config Settings"
+msgstr "Postavke"
+
+#. module: tms
+#: model:ir.ui.menu,name:tms.config
+msgid "Configuration"
+msgstr "Konfiguracija"
+
+#. module: tms
+#: model:tms.stage,name:tms.tms_stage_order_confirmed
+msgid "Confirmed"
+msgstr "Potvrđeno"
+
+#. module: tms
+#: model:ir.model,name:tms.model_res_partner
+#: model:ir.model.fields,field_description:tms.field_tms_driver__child_ids
+msgid "Contact"
+msgstr "Kontakt"
+
+#. module: tms
+#: model:ir.ui.menu,name:tms.menu_fleet_contracts
+msgid "Contracts"
+msgstr "Ugovori"
+
+#. module: tms
+#: model:ir.ui.menu,name:tms.menu_fleet_reporting_cost
+msgid "Costs"
+msgstr "Troškovi"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__message_bounce
+msgid "Counter of the number of bounced emails for this contact"
+msgstr "Broj odbačenih e-mail poruka ovog kontakta"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__country_id
+msgid "Country"
+msgstr "Država"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__country_code
+msgid "Country Code"
+msgstr "Šifra države"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.tms_insurance_view_form
+msgid "Coverage"
+msgstr "Pokriće"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_insurance__coverage_details
+msgid "Coverage Details"
+msgstr "Detalji pokrića"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "Create Trip Orders with Sale Orders"
+msgstr "Kreiraj narudžbe putovanja s prodajnim nalozima"
+
+#. module: tms
+#: model_terms:ir.actions.act_window,help:tms.action_tms_stage
+msgid "Create a Stage."
+msgstr "Kreiraj fazu."
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "Create vendor bills and customer invoices when completing trip orders."
+msgstr ""
+"Kreiraj račune dobavljača i račune kupaca pri dovršetku narudžbi putovanja."
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_crew__create_uid
+#: model:ir.model.fields,field_description:tms.field_tms_driver__create_uid
+#: model:ir.model.fields,field_description:tms.field_tms_insurance__create_uid
+#: model:ir.model.fields,field_description:tms.field_tms_order__create_uid
+#: model:ir.model.fields,field_description:tms.field_tms_route__create_uid
+#: model:ir.model.fields,field_description:tms.field_tms_stage__create_uid
+#: model:ir.model.fields,field_description:tms.field_tms_team__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_crew__create_date
+#: model:ir.model.fields,field_description:tms.field_tms_driver__create_date
+#: model:ir.model.fields,field_description:tms.field_tms_insurance__create_date
+#: model:ir.model.fields,field_description:tms.field_tms_order__create_date
+#: model:ir.model.fields,field_description:tms.field_tms_route__create_date
+#: model:ir.model.fields,field_description:tms.field_tms_stage__create_date
+#: model:ir.model.fields,field_description:tms.field_tms_team__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__credit_limit
+msgid "Credit Limit"
+msgstr "Kreditno ograničenje"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__credit_to_invoice
+msgid "Credit To Invoice"
+msgstr "Kredit na račun"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__credit_limit
+msgid "Credit limit specific to this partner."
+msgstr "Kreditno ograničenje specifično za ovog partnera."
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_order__crew_id
+#: model:ir.model.fields,field_description:tms.field_tms_team__crew_ids
+msgid "Crew"
+msgstr "Posada"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_order__crew_active
+msgid "Crew Active"
+msgstr "Posada aktivna"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_order__crew_ids_domain
+msgid "Crew Ids Domain"
+msgstr "Domena ID-ova posade"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.tms_crew_view_form
+msgid "Crew Name"
+msgstr "Naziv posade"
+
+#. module: tms
+#: model:ir.model.constraint,message:tms.constraint_tms_crew_name_uniq
+msgid "Crew name already exists!"
+msgstr "Naziv posade već postoji!"
+
+#. module: tms
+#: model:ir.actions.act_window,name:tms.action_tms_config_crew
+#: model:ir.actions.act_window,name:tms.action_tms_dash_crew
+#: model:ir.model.fields,field_description:tms.field_tms_driver__crew_ids
+#: model:ir.ui.menu,name:tms.menu_tms_config_crew
+#: model_terms:ir.ui.view,arch_db:tms.tms_team_view_form
+msgid "Crews"
+msgstr "Posade"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__currency_id
+msgid "Currency"
+msgstr "Valuta"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__property_stock_customer
+msgid "Customer Location"
+msgstr "Lokacija kupca"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__property_payment_term_id
+msgid "Customer Payment Terms"
+msgstr "Uvjeti plaćanja kupca"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__customer_rank
+msgid "Customer Rank"
+msgstr "Rank kupca"
+
+#. module: tms
+#: model:ir.model.fields.selection,name:tms.selection__tms_driver__driver_license_type__d
+msgid "D - Bus"
+msgstr "D - Autobus"
+
+#. module: tms
+#: model:ir.ui.menu,name:tms.dashboard
+msgid "Dashboard"
+msgstr "Nadzorna ploča"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_order__date_end
+msgid "Date End"
+msgstr "Datum završetka"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_order__date_start
+msgid "Date Start"
+msgstr "Datum početka"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__reminder_date_before_receipt
+msgid "Days Before Receipt"
+msgstr "Dani prije računa"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__days_sales_outstanding
+msgid "Days Sales Outstanding (DSO)"
+msgstr "Dani prodaje nepodmireni (DSO)"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "Days before expiration"
+msgstr "Dani prije isteka"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "Default Distance UoM"
+msgstr "Zadana jedinica mjere udaljenosti"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "Default Length UoM"
+msgstr "Zadana jedinica mjere duljine"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "Default Speed UoM"
+msgstr "Zadana jedinica mjere brzine"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "Default Time UoM"
+msgstr "Zadana jedinica mjere vremena"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_crew__default_vehicle_id
+msgid "Default Vehicle"
+msgstr "Zadano vozilo"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "Default Weight UoM"
+msgstr "Zadana jedinica mjere težine"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__group_rfq
+msgid ""
+"Define if RFQ should be grouped         together based on expected arrival, except for dropship operations.\n"
+"         On Order: Replenishment needs will be grouped together except for MTO.\n"
+"         Daily: Replenishment needs will be grouped if the expected arrival is the same day\n"
+"         Weekly: Replenishment needs will be grouped if the expected arrival is the same week or week day\n"
+"         Always: Replenishment needs will always be grouped."
+msgstr ""
+"Definirajte trebaju li se zahtjevi za ponudu grupirati         zajedno na temelju očekivanog dolaska, osim za dropship operacije.\n"
+"         Po nalogu: potrebe za nadopunom grupirat će se zajedno osim za proizvodnju po narudžbi.\n"
+"         Dnevno: potrebe za nadopunom grupirat će se ako je očekivani dolazak isti dan\n"
+"         Tjedno: potrebe za nadopunom grupirat će se ako je očekivani dolazak isti tjedan ili dan u tjednu\n"
+"         Uvijek: potrebe za nadopunom uvijek će se grupirati."
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_stage__is_completed
+msgid "Defines how this stage is evaluated as completed stage"
+msgstr "Definira kako se ova faza ocjenjuje kao dovršena faza"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__trust
+msgid "Degree of trust you have in this debtor"
+msgstr "Stupanj povjerenja koji imate prema ovom kupcu"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_crew__description
+#: model:ir.model.fields,field_description:tms.field_tms_order__description
+#: model:ir.model.fields,field_description:tms.field_tms_stage__description
+#: model:ir.model.fields,field_description:tms.field_tms_team__description
+#: model_terms:ir.ui.view,arch_db:tms.tms_order_view_form
+msgid "Description"
+msgstr "Opis"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_order__destination_id
+msgid "Destination"
+msgstr "Odredište"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_order__destination_location
+#: model:ir.model.fields,field_description:tms.field_tms_route__destination_location_id
+msgid "Destination Location"
+msgstr "Odredišna lokacija"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__display_invoice_edi_format
+msgid "Display Invoice Edi Format"
+msgstr "Prikaži EDI format računa"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__display_invoice_template_pdf_report_id
+msgid "Display Invoice Template Pdf Report"
+msgstr "Prikaži PDF izvješće predloška računa"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_fleet_vehicle__display_name
+#: model:ir.model.fields,field_description:tms.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:tms.field_res_partner__display_name
+#: model:ir.model.fields,field_description:tms.field_tms_crew__display_name
+#: model:ir.model.fields,field_description:tms.field_tms_driver__display_name
+#: model:ir.model.fields,field_description:tms.field_tms_insurance__display_name
+#: model:ir.model.fields,field_description:tms.field_tms_order__display_name
+#: model:ir.model.fields,field_description:tms.field_tms_route__display_name
+#: model:ir.model.fields,field_description:tms.field_tms_stage__display_name
+#: model:ir.model.fields,field_description:tms.field_tms_team__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_route__distance
+#: model_terms:ir.ui.view,arch_db:tms.view_tms_route_form
+msgid "Distance"
+msgstr "Udaljenost"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__distance_traveled
+#: model_terms:ir.ui.view,arch_db:tms.view_tms_driver_form_inherit
+msgid "Distance Traveled"
+msgstr "Prijeđena udaljenost"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__distance_traveled_uom
+msgid "Distance Traveled Uom"
+msgstr "Jedinica mjere prijeđene udaljenosti"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_route__distance_uom
+msgid "Distance Uom"
+msgstr "Jedinica mjere udaljenosti"
+
+#. module: tms
+#. odoo-python
+#: code:addons/tms/models/tms_insurance.py:0
+#: model:ir.model.fields.selection,name:tms.selection__tms_insurance__state__draft
+#: model:tms.stage,name:tms.tms_stage_order_draft
+msgid "Draft"
+msgstr "Nacrt"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_order__driver_id
+#: model:ir.model.fields,field_description:tms.field_tms_team__driver_ids
+#: model:ir.model.fields.selection,name:tms.selection__tms_stage__stage_type__driver
+#: model:res.groups,name:tms.group_tms_driver
+#: model_terms:ir.ui.view,arch_db:tms.view_tms_driver_kanban
+msgid "Driver"
+msgstr "Vozač"
+
+#. module: tms
+#. odoo-python
+#: code:addons/tms/models/tms_order.py:0
+msgid ""
+"Driver %(driver)s license will expire in %(days)s days, which is less than "
+"or equal to the security threshold of %(threshold)s days."
+msgstr ""
+"Vozaču %(driver)s dozvola istječe za %(days)s dana, što je manje ili jednako"
+" sigurnosnom pragu od %(threshold)s dana."
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.view_tms_driver_form_inherit
+msgid "Driver Experience"
+msgstr "Iskustvo vozača"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_fleet_vehicle__tms_driver_id
+msgid "Driver Id"
+msgstr "ID vozača"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_order__driver_ids_domain
+msgid "Driver Ids Domain"
+msgstr "Domena ID-ova vozača"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__driver_license_expiration_date
+msgid "Driver License Expiration Date"
+msgstr "Datum isteka vozačke dozvole"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__driver_license_file
+msgid "Driver License File"
+msgstr "Datoteka vozačke dozvole"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__driver_license_number
+msgid "Driver License Number"
+msgstr "Broj vozačke dozvole"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.view_tms_driver_form_inherit
+msgid "Driver Status"
+msgstr "Status vozača"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.view_tms_driver_form_inherit
+msgid "Driver Type"
+msgstr "Vrsta drivera"
+
+#. module: tms
+#. odoo-python
+#: code:addons/tms/models/tms_driver.py:0
+msgid "Driver created"
+msgstr "Vozač kreiran"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_res_config_settings__driver_license_security_days
+msgid "Driver license security days"
+msgstr "Sigurnosni dani vozačke dozvole"
+
+#. module: tms
+#: model:mail.message.subtype,description:tms.mt_driver_stage
+msgid "Driver stage changed"
+msgstr "Faza vozača promijenjena"
+
+#. module: tms
+#: model:ir.actions.act_window,name:tms.action_tms_config_stage_driver
+#: model:ir.actions.act_window,name:tms.action_tms_driver
+#: model:ir.model.fields,field_description:tms.field_tms_crew__driver_ids
+#: model:ir.ui.menu,name:tms.menu_tms_config_driver
+#: model:ir.ui.menu,name:tms.menu_tms_driver
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:tms.tms_team_view_form
+msgid "Drivers"
+msgstr "Vozači"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_team__driver_count
+msgid "Drivers Count"
+msgstr "Broj vozača"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__driving_experience_years
+msgid "Driving Experience Years"
+msgstr "Godine vozačkog iskustva"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__duplicate_bank_partner_ids
+msgid "Duplicate Bank Partner"
+msgstr "Duplicirani bankovni partner"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.tms_order_view_form
+msgid "Duration"
+msgstr "Trajanje"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__partner_share
+msgid ""
+"Either customer (not a user), either shared user. Indicated the current "
+"partner is a customer without access or with a limited access created for "
+"sharing data."
+msgstr ""
+"Ili kupac (ne korisnik), ili zajednički korisnik. Navedeno da je trenutni "
+"partner klijent bez pristupa ili s ograničenim pristupom stvorenim za "
+"dijeljenje podataka."
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__email
+msgid "Email"
+msgstr "E-pošta"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__employee
+msgid "Employee"
+msgstr "Zaposlenik"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__employee_ids
+msgid "Employees"
+msgstr "Zaposlenici"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__employees_count
+msgid "Employees Count"
+msgstr "Broj zaposlenika"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "Enable the creation of stops in a route"
+msgstr "Omogući kreiranje zaustavljanja u ruti"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.tms_order_view_form
+#: model_terms:ir.ui.view,arch_db:tms.tms_order_view_list
+msgid "End"
+msgstr "Kraj"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_insurance__end_date
+msgid "End Date"
+msgstr "Datum završetka"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_order__end_trip
+msgid "End Trip"
+msgstr "Završi putovanje"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_route__estimated_time
+#: model_terms:ir.ui.view,arch_db:tms.view_tms_route_form
+msgid "Estimated Time"
+msgstr "Procijenjeno vrijeme"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_route__estimated_time_uom
+msgid "Estimated Time Uom"
+msgstr "Jedinica mjere procijenjenog vremena"
+
+#. module: tms
+#: model:ir.model.fields.selection,name:tms.selection__tms_insurance__state__expired
+msgid "Expired"
+msgstr "Isteklo"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_stage__legend_priority
+msgid ""
+"Explanation text to help users using the star and priority mechanism on "
+"stages or orders that are in this stage."
+msgstr ""
+"Objašnjenje za pomoć korisnicima pri korištenju mehanizma zvjezdica i "
+"prioriteta na fazama ili narudžbama u ovoj fazi."
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__is_external
+msgid "External Driver"
+msgstr "Vanjski vozač"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__phone_sanitized
+msgid ""
+"Field used to store sanitized phone number. Helps speeding up searches and "
+"comparisons."
+msgstr ""
+"Polje za pohranu normaliziranog broja telefona. Ubrzava pretraživanje i "
+"usporedbe."
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__fiscal_country_codes
+msgid "Fiscal Country Codes"
+msgstr "Fiskalni kodovi zemalja"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__fiscal_country_group_codes
+msgid "Fiscal Country Group Codes"
+msgstr "Fiskalni kodovi grupa zemalja"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__property_account_position_id
+msgid "Fiscal Position"
+msgstr "Fiskalna pozicija"
+
+#. module: tms
+#: model:ir.ui.menu,name:tms.menu_config_fleet_models
+msgid "Fleet Models"
+msgstr "Modeli voznog parka"
+
+#. module: tms
+#: model:ir.ui.menu,name:tms.menu_config_fleet_services
+msgid "Fleet Services"
+msgstr "Usluge voznog parka"
+
+#. module: tms
+#: model:ir.ui.menu,name:tms.menu_config_fleet_vehicles
+msgid "Fleet Vehicles"
+msgstr "Vozila voznog parka"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_stage__fold
+msgid "Folded in Kanban"
+msgstr "Zatvoreno u kanbanu"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__message_follower_ids
+#: model:ir.model.fields,field_description:tms.field_tms_order__message_follower_ids
+msgid "Followers"
+msgstr "Pratitelji"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__message_partner_ids
+#: model:ir.model.fields,field_description:tms.field_tms_order__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Pratitelji (partneri)"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__activity_type_icon
+#: model:ir.model.fields,help:tms.field_tms_order__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Font awesome ikona npr. fa-tasks"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__email_formatted
+msgid "Format email address \"Name <email@domain>\""
+msgstr "Format email adrese \"Naziv <email@domena>\""
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__email_formatted
+msgid "Formatted Email"
+msgstr "Oblikovani e-mail"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__partner_latitude
+msgid "Geo Latitude"
+msgstr "Geografska širina"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__partner_longitude
+msgid "Geo Longitude"
+msgstr "Geografska duljina"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__date_localization
+msgid "Geolocation Date"
+msgstr "Datum geolociranja"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__group_rfq
+msgid "Group RFQ"
+msgstr "Grupiraj zahtjeve za ponudu"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__has_message
+#: model:ir.model.fields,field_description:tms.field_tms_order__has_message
+msgid "Has Message"
+msgstr "Ima poruku"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.view_tms_route_form
+msgid "Hours"
+msgstr "Sati"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_fleet_vehicle__id
+#: model:ir.model.fields,field_description:tms.field_res_config_settings__id
+#: model:ir.model.fields,field_description:tms.field_res_partner__id
+#: model:ir.model.fields,field_description:tms.field_tms_crew__id
+#: model:ir.model.fields,field_description:tms.field_tms_driver__id
+#: model:ir.model.fields,field_description:tms.field_tms_insurance__id
+#: model:ir.model.fields,field_description:tms.field_tms_order__id
+#: model:ir.model.fields,field_description:tms.field_tms_route__id
+#: model:ir.model.fields,field_description:tms.field_tms_stage__id
+#: model:ir.model.fields,field_description:tms.field_tms_team__id
+msgid "ID"
+msgstr "ID"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__im_status
+msgid "IM Status"
+msgstr "IM Status"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__activity_exception_icon
+#: model:ir.model.fields,field_description:tms.field_tms_order__activity_exception_icon
+msgid "Icon"
+msgstr "Ikona"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__activity_exception_icon
+#: model:ir.model.fields,help:tms.field_tms_order__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Ikona koja označava iznimnu aktivnost."
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__message_needaction
+#: model:ir.model.fields,help:tms.field_tms_order__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Ako je označeno, nove poruke zahtijevaju vašu pažnju."
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__message_has_error
+#: model:ir.model.fields,help:tms.field_tms_order__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Ako je označeno, neke poruke imaju grešku u dostavi."
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__is_blacklisted
+msgid ""
+"If the email address is on the blacklist, the contact won't receive mass "
+"mailing anymore, from any list"
+msgstr ""
+"Ako je adresa e-pošte na crnoj listi, kontakt više neće primati masovnu "
+"poštu, ni s jedne liste"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__phone_sanitized_blacklisted
+msgid ""
+"If the sanitized phone number is on the blacklist, the contact won't receive"
+" mass mailing sms anymore, from any list"
+msgstr ""
+"Ako je telefonski broj na crnoj listi, kontakt više neće primati SMS poruke "
+"iz masovnih kampanja, s bilo kojeg popisa."
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__ignore_abnormal_invoice_amount
+msgid "Ignore Abnormal Invoice Amount"
+msgstr "Ignoriraj abnormalan iznos na računu"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__ignore_abnormal_invoice_date
+msgid "Ignore Abnormal Invoice Date"
+msgstr "Ignoriraj abnormalan datum računa"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__image_1920
+msgid "Image"
+msgstr "Slika"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__image_1024
+msgid "Image 1024"
+msgstr "Slika 1024"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__image_128
+msgid "Image 128"
+msgstr "Slika 128"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__image_256
+msgid "Image 256"
+msgstr "Slika 256"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__image_512
+msgid "Image 512"
+msgstr "Slika 512"
+
+#. module: tms
+#: model:tms.stage,name:tms.tms_stage_driver_in_base
+msgid "In Base"
+msgstr "U bazi"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__is_training
+msgid "In Training"
+msgstr "U obuci"
+
+#. module: tms
+#: model:tms.stage,name:tms.tms_stage_driver_in_trip
+msgid "In Trip"
+msgstr "Na putovanju"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__phone_blacklisted
+msgid ""
+"Indicates if a blacklisted sanitized phone number is a phone number. Helps "
+"distinguish which number is blacklisted             when there is both a "
+"mobile and phone field in a model."
+msgstr ""
+"Označava je li blokirani normalizirani broj telefona telefonski broj. Pomaže"
+" razlikovati koji je broj na crnoj listi kada model ima i mobilno i "
+"telefonsko polje."
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__industry_id
+msgid "Industry"
+msgstr "Industrija"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.tms_insurance_view_form
+msgid "Information"
+msgstr "Informacija"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__contact_address_inline
+msgid "Inlined Complete Address"
+msgstr "Potpuna adresa u jednom retku"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_fleet_vehicle__insurance_id
+#: model_terms:ir.ui.view,arch_db:tms.fleet_vehicle_inherit_view_form
+msgid "Insurance"
+msgstr "Osiguranje"
+
+#. module: tms
+#: model:ir.actions.act_window,name:tms.action_tms_insurance
+#: model:ir.ui.menu,name:tms.menu_tms_insurance
+msgid "Insurance Policies"
+msgstr "Police osiguranja"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.fleet_vehicle_inherit_view_form
+msgid "Insurance Policy"
+msgstr "Polica osiguranja"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_insurance__insurer_id
+msgid "Insurer"
+msgstr "Osiguratelj"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__invoice_edi_format_store
+msgid "Invoice Edi Format Store"
+msgstr "Format za spremanje EDI računa"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__invoice_template_pdf_report_id
+msgid "Invoice report"
+msgstr "Izvješće računa"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__invoice_sending_method
+msgid "Invoice sending"
+msgstr "Slanje računa"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__invoice_ids
+msgid "Invoices"
+msgstr "Računi"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__is_active
+msgid "Is Active"
+msgstr "Je aktivno"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_stage__is_completed
+msgid "Is Completed"
+msgstr "Je dovršeno"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_stage__is_default
+msgid "Is Default"
+msgstr "Je zadano"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__message_is_follower
+#: model:ir.model.fields,field_description:tms.field_tms_order__message_is_follower
+msgid "Is Follower"
+msgstr "Je pratitelj"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__is_in_call
+msgid "Is In Call"
+msgstr "Je u pozivu"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__is_public
+msgid "Is Public"
+msgstr "Je javno"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__is_company
+msgid "Is a Company"
+msgstr "je tvrtka"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__function
+msgid "Job Position"
+msgstr "Radno mjesto"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__lang
+msgid "Language"
+msgstr "Jezik"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_crew__write_uid
+#: model:ir.model.fields,field_description:tms.field_tms_driver__write_uid
+#: model:ir.model.fields,field_description:tms.field_tms_insurance__write_uid
+#: model:ir.model.fields,field_description:tms.field_tms_order__write_uid
+#: model:ir.model.fields,field_description:tms.field_tms_route__write_uid
+#: model:ir.model.fields,field_description:tms.field_tms_stage__write_uid
+#: model:ir.model.fields,field_description:tms.field_tms_team__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_crew__write_date
+#: model:ir.model.fields,field_description:tms.field_tms_driver__write_date
+#: model:ir.model.fields,field_description:tms.field_tms_insurance__write_date
+#: model:ir.model.fields,field_description:tms.field_tms_order__write_date
+#: model:ir.model.fields,field_description:tms.field_tms_route__write_date
+#: model:ir.model.fields,field_description:tms.field_tms_stage__write_date
+#: model:ir.model.fields,field_description:tms.field_tms_team__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.view_tms_driver_form_inherit
+msgid "Licence Expiration Date"
+msgstr "Datum isteka dozvole"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.view_tms_driver_form_inherit
+msgid "Licence No."
+msgstr "Br. dozvole"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.view_tms_driver_form_inherit
+msgid "Licence Type"
+msgstr "Vrsta dozvole"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.view_tms_driver_form_inherit
+msgid "License File"
+msgstr "Datoteka dozvole"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__driver_license_type
+msgid "License type"
+msgstr "Vrsta dozvole"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.view_res_partner_list_tms_location
+#: model_terms:ir.ui.view,arch_db:tms.view_tms_route_form
+msgid "Location"
+msgstr "Lokacija"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_res_partner__location_type
+#: model:ir.model.fields,field_description:tms.field_res_users__location_type
+#: model:ir.model.fields,field_description:tms.field_tms_driver__location_type
+msgid "Location Type"
+msgstr "Tip lokacije"
+
+#. module: tms
+#: model:ir.actions.act_window,name:tms.action_tms_location
+#: model:ir.ui.menu,name:tms.menu_tms_location
+msgid "Locations"
+msgstr "Lokacije"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__main_user_id
+msgid "Main User"
+msgstr "Main User"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_res_config_settings__group_tms_crew
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "Manage Crews"
+msgstr "Upravljaj posadama"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_res_config_settings__group_tms_driver_license
+msgid "Manage Driver License"
+msgstr "Upravljaj vozačkom dozvolom"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "Manage Driver License Expiration"
+msgstr "Upravljaj istekom vozačke dozvole"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "Manage Driver License Expiration Date Before A Trip"
+msgstr "Upravljaj datumom isteka vozačke dozvole prije putovanja"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_res_config_settings__group_tms_route_stop
+msgid "Manage Route Stops"
+msgstr "Upravljaj zaustavljanjima rute"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_res_config_settings__group_tms_route
+msgid "Manage Routes"
+msgstr "Upravljaj rutama"
+
+#. module: tms
+#: model:res.groups,name:tms.group_tms_crew
+#: model:res.groups.privilege,name:tms.privilege_tms_crew
+msgid "Manage TMS Crew"
+msgstr "Upravljaj TMS posadom"
+
+#. module: tms
+#: model:res.groups,name:tms.group_tms_driver_license
+#: model:res.groups.privilege,name:tms.privilege_tms_driver_license
+msgid "Manage TMS Driver License"
+msgstr "Upravljaj TMS vozačkom dozvolom"
+
+#. module: tms
+#: model:res.groups,name:tms.group_tms_uom
+#: model:res.groups.privilege,name:tms.privilege_tms_uom
+msgid "Manage TMS Oum"
+msgstr "Upravljaj TMS jedinicama mjere"
+
+#. module: tms
+#: model:res.groups,name:tms.group_tms_route_stop
+#: model:res.groups.privilege,name:tms.privilege_tms_route_stop
+msgid "Manage TMS Route Stops"
+msgstr "Upravljaj TMS zaustavljanjima rute"
+
+#. module: tms
+#: model:res.groups,name:tms.group_tms_route
+#: model:res.groups.privilege,name:tms.privilege_tms_route
+msgid "Manage TMS Routes"
+msgstr "Upravljaj TMS rutama"
+
+#. module: tms
+#: model:res.groups,name:tms.group_tms_team
+#: model:res.groups.privilege,name:tms.privilege_tms_team
+msgid "Manage TMS Teams"
+msgstr "Upravljaj TMS timovima"
+
+#. module: tms
+#: model:res.groups,name:tms.group_tms_vehicle_insurance
+#: model:res.groups.privilege,name:tms.privilege_tms_vehicle_insurance
+msgid "Manage TMS Vehicle Insurance"
+msgstr "Upravljaj TMS osiguranjem vozila"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_res_config_settings__group_tms_team
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "Manage Teams"
+msgstr "Upravljaj timovima"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "Manage Trips Accounting"
+msgstr "Upravljaj računovodstvom putovanja"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_res_config_settings__group_tms_vehicle_insurance
+msgid "Manage Vehicle Insurance"
+msgstr "Upravljaj osiguranjem vozila"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "Manage Vehicle Insurance Expiration"
+msgstr "Upravljaj istekom osiguranja vozila"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "Manage Vehicle Insurance Expiration Date Before A Trip"
+msgstr "Upravljaj datumom isteka osiguranja vozila prije putovanja"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "Manage crews that share the same vehicle"
+msgstr "Upravljaj posadama koje dijele isto vozilo"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "Manage depreciations"
+msgstr "Upravljaj amortizacijama"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "Manage expenses of a trip: hotel, tolls, fuel"
+msgstr "Upravljaj troškovima putovanja: hotel, cestarine, gorivo"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "Manage pre-defined routes"
+msgstr "Upravljaj unaprijed definiranim rutama"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "Manage purchase requests for drivers and other suppliers"
+msgstr "Upravljaj zahtjevima za nabavu za vozače i druge dobavljače"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "Manage teams that share the same process/stages"
+msgstr "Upravljaj timovima koji dijele isti proces/faze"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_res_config_settings__module_tms_expense
+msgid "Manage trip expenses"
+msgstr "Upravljaj troškovima putovanja"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_res_config_settings__module_tms_account
+msgid "Manage trip invoicing"
+msgstr "Upravljaj fakturiranjem putovanja"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_res_config_settings__module_tms_purchase
+msgid "Manage trip purchases"
+msgstr "Upravljaj nabavama putovanja"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_res_config_settings__module_tms_sale
+msgid "Manage trip sales"
+msgstr "Upravljaj prodajama putovanja"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_res_config_settings__module_tms_account_asset
+msgid "Manage vehicle as accounting assets"
+msgstr "Upravljaj vozilom kao računovodstvenom imovinom"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "Manage vehicles as accounting assets"
+msgstr "Upravljaj vozilima kao računovodstvenom imovinom"
+
+#. module: tms
+#: model:ir.ui.menu,name:tms.menu_config_fleet_models_Manufacturers
+msgid "Manufacturers"
+msgstr "Proizvođači"
+
+#. module: tms
+#: model:ir.ui.menu,name:tms.data
+msgid "Master Data"
+msgstr "Glavni podaci"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__message_has_error
+#: model:ir.model.fields,field_description:tms.field_tms_order__message_has_error
+msgid "Message Delivery error"
+msgstr "Greška u dostavi poruke"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__purchase_warn_msg
+msgid "Message for Purchase Order"
+msgstr "Poruka za narudžbu (nabave)"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__sale_warn_msg
+msgid "Message for Sales Order"
+msgstr "Poruka za prodajni nalog"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__picking_warn_msg
+msgid "Message for Stock Picking"
+msgstr "Poruka za skladišnicu"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__message_ids
+#: model:ir.model.fields,field_description:tms.field_tms_order__message_ids
+msgid "Messages"
+msgstr "Poruke"
+
+#. module: tms
+#: model:ir.model,name:tms.model_tms_driver
+msgid "Model for TMS drivers"
+msgstr "Model za TMS vozače"
+
+#. module: tms
+#: model:ir.model,name:tms.model_tms_insurance
+msgid "Model for TMS insurances"
+msgstr "Model za TMS osiguranja"
+
+#. module: tms
+#: model:ir.ui.menu,name:tms.menu_config_fleet_models_models
+msgid "Models"
+msgstr "Modeli"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__my_activity_date_deadline
+#: model:ir.model.fields,field_description:tms.field_tms_order__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Rok moje aktivnosti"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_crew__name
+#: model:ir.model.fields,field_description:tms.field_tms_driver__name
+#: model:ir.model.fields,field_description:tms.field_tms_insurance__name
+#: model:ir.model.fields,field_description:tms.field_tms_order__name
+#: model:ir.model.fields,field_description:tms.field_tms_stage__name
+#: model:ir.model.fields,field_description:tms.field_tms_team__name
+#: model_terms:ir.ui.view,arch_db:tms.view_tms_driver_list
+msgid "Name"
+msgstr "Naziv"
+
+#. module: tms
+#. odoo-python
+#: code:addons/tms/models/tms_order.py:0
+#: code:addons/tms/tests/test_tms_order.py:0
+msgid "New"
+msgstr "Novi"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__activity_date_deadline
+#: model:ir.model.fields,field_description:tms.field_tms_order__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Rok sljedeće aktivnosti"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__activity_summary
+#: model:ir.model.fields,field_description:tms.field_tms_order__activity_summary
+msgid "Next Activity Summary"
+msgstr "Sažetak sljedeće aktivnosti"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__activity_type_id
+#: model:ir.model.fields,field_description:tms.field_tms_order__activity_type_id
+msgid "Next Activity Type"
+msgstr "Vrsta sljedeće aktivnosti"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__email_normalized
+msgid "Normalized Email"
+msgstr "Normalizirani Email"
+
+#. module: tms
+#: model:tms.stage,name:tms.tms_stage_driver_not_available
+msgid "Not Available"
+msgstr "Nije dostupno"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__comment
+#: model_terms:ir.ui.view,arch_db:tms.view_tms_route_form
+msgid "Notes"
+msgstr "Bilješke"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_route__notes
+msgid "Notes/Comments"
+msgstr "Bilješke/komentari"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__message_needaction_counter
+#: model:ir.model.fields,field_description:tms.field_tms_order__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Broj radnji"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_team__trips_todo_count
+msgid "Number of Trips"
+msgstr "Broj putovanja"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__reminder_date_before_receipt
+msgid "Number of days to send reminder email before the promised receipt date"
+msgstr ""
+"Broj dana preostalih za slanje e-mail podsjetnika prije obećanog datuma "
+"izvršenja naloga"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__message_has_error_counter
+#: model:ir.model.fields,field_description:tms.field_tms_order__message_has_error_counter
+msgid "Number of errors"
+msgstr "Broj grešaka"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__message_needaction_counter
+#: model:ir.model.fields,help:tms.field_tms_order__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Broj poruka koje zahtijevaju radnju"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__message_has_error_counter
+#: model:ir.model.fields,help:tms.field_tms_order__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Broj poruka s greškom u dostavi"
+
+#. module: tms
+#: model:ir.ui.menu,name:tms.menu_fleet_odometers
+msgid "Odometers"
+msgstr "Odometar"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__offline_since
+msgid "Offline since"
+msgstr "Nepovezan od"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__on_time_rate
+msgid "On-Time Delivery Rate"
+msgstr "Točnost isporuke"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_fleet_vehicle__operation
+#: model_terms:ir.ui.view,arch_db:tms.fleet_vehicle_inherit_view_form
+msgid "Operation"
+msgstr "Operacija"
+
+#. module: tms
+#: model:ir.ui.menu,name:tms.operations
+msgid "Operations"
+msgstr "Operacije"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_team__order_ids
+msgid "Orders"
+msgstr "Nalozi"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_team__order_count
+msgid "Orders Count"
+msgstr "Broj narudžbi"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_order__origin_id
+msgid "Origin"
+msgstr "Izvor"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_order__origin_location
+#: model:ir.model.fields,field_description:tms.field_tms_route__origin_location_id
+msgid "Origin Location"
+msgstr "Izvorišna lokacija"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_crew__personnel_ids
+msgid "Other Personnel"
+msgstr "Ostalo osoblje"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__on_time_rate
+msgid ""
+"Over the past x days; the number of products received on time divided by the"
+" number of ordered products.x is either the System Parameter "
+"purchase_stock.on_time_delivery_days or the default 365"
+msgstr ""
+"Tijekom zadnjih x dana; broj proizvoda primljenih na vrijeme podijeljen s "
+"brojem naručenih proizvoda. x je sistemski parametar "
+"purchase_stock.on_time_delivery_days ili zadana vrijednost 365"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__parent_name
+msgid "Parent name"
+msgstr "Ime roditelja"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__partner_id
+msgid "Partner"
+msgstr "Partner"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__partner_company_registry_placeholder
+msgid "Partner Company Registry Placeholder"
+msgstr "Rezervirano mjesto OIB-a partnera"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__contract_ids
+msgid "Partner Contracts"
+msgstr "Ugovori"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__use_partner_credit_limit
+msgid "Partner Limit"
+msgstr "Limit partnera"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__partner_vat_placeholder
+msgid "Partner Vat Placeholder"
+msgstr "Rezervirano mjesto PDV-a partnera"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__same_company_registry_partner_id
+msgid "Partner with same Company Registry"
+msgstr "Partner s istim registrom tvrtki"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__same_vat_partner_id
+msgid "Partner with same Tax ID"
+msgstr "Partner sa istim poreznim brojem"
+
+#. module: tms
+#: model:ir.model.fields.selection,name:tms.selection__fleet_vehicle__operation__passenger
+msgid "Passenger"
+msgstr "Putnik"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__payment_token_count
+msgid "Payment Token Count"
+msgstr "Broj tokena plaćanja"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__payment_token_ids
+msgid "Payment Tokens"
+msgstr "Token plaćanja"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.tms_crew_view_form
+#: model_terms:ir.ui.view,arch_db:tms.tms_team_view_form
+msgid "Personnel"
+msgstr "Osoblje"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__phone
+msgid "Phone"
+msgstr "Telefon"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__phone_sanitized_blacklisted
+msgid "Phone Blacklisted"
+msgstr "Telefon je stavljen na crnu listu"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__phone_mobile_search
+msgid "Phone Number"
+msgstr "Broj telefona"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.tms_order_view_form
+msgid "Planning"
+msgstr "Planiranje"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_insurance__policy_number
+msgid "Policy Number"
+msgstr "Broj police"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_insurance__premium_amount
+msgid "Premium Amount"
+msgstr "Iznos premije"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__property_product_pricelist
+msgid "Pricelist"
+msgstr "Cjenik"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_stage__legend_priority
+msgid "Priority Management Explanation"
+msgstr "Objašnjenje upravljanja prioritetom"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__properties
+msgid "Properties"
+msgstr "Svojstva"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__properties_base_definition_id
+msgid "Properties Base Definition"
+msgstr "Bazna definicija svojstava"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__property_inbound_payment_method_line_id
+msgid "Property Inbound Payment Method Line"
+msgstr "Stavka svojstva dolazne metode plaćanja"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__property_outbound_payment_method_line_id
+msgid "Property Outbound Payment Method Line"
+msgstr "Stavka svojstva odlazne metode plaćanja"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__purchase_line_ids
+msgid "Purchase Lines"
+msgstr "Linije nabave"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__purchase_order_count
+msgid "Purchase Order Count"
+msgstr "Broj naloga za nabavu"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__receipt_reminder_email
+msgid "Receipt Reminder"
+msgstr "Podsjetnik o računu"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__ref
+msgid "Reference"
+msgstr "Referenca"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.tms_order_view_form
+msgid "Refresh"
+msgstr "Osvježi"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__parent_id
+msgid "Related Company"
+msgstr "Povezana tvrtka"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__employee_ids
+msgid "Related employees based on their private address"
+msgstr "Povezani zaposlenici na temelju njihove privatne adrese"
+
+#. module: tms
+#: model:ir.ui.menu,name:tms.reporting
+msgid "Reporting"
+msgstr "Izvještavanje"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__activity_user_id
+#: model:ir.model.fields,field_description:tms.field_tms_order__activity_user_id
+msgid "Responsible User"
+msgstr "Odgovorni korisnik"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_order__route_id
+#: model_terms:ir.ui.view,arch_db:tms.tms_order_view_kanban
+#: model_terms:ir.ui.view,arch_db:tms.view_tms_route_form
+msgid "Route"
+msgstr "Ruta"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.view_tms_route_form
+msgid "Route Details"
+msgstr "Detalji rute"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_route__name
+#: model_terms:ir.ui.view,arch_db:tms.view_tms_route_form
+msgid "Route Name"
+msgstr "Naziv rute"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_order__route_destination
+msgid "Route destination"
+msgstr "Odredište rute"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_order__route_origin
+msgid "Route origin"
+msgstr "Ishodište rute"
+
+#. module: tms
+#: model:ir.actions.act_window,name:tms.action_tms_route
+#: model:ir.ui.menu,name:tms.menu_tms_route
+msgid "Routes"
+msgstr "Rute"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__rtc_session_ids
+msgid "Rtc Session"
+msgstr "RTC sesija"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__sale_order_count
+msgid "Sale Order Count"
+msgstr "Broj ponuda"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__sale_order_ids
+msgid "Sales Order"
+msgstr "Prodajni nalog"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__user_id
+msgid "Salesperson"
+msgstr "Prodavač"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__phone_sanitized
+msgid "Sanitized Number"
+msgstr "Sanirani broj"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_order__scheduled_duration
+#: model_terms:ir.ui.view,arch_db:tms.tms_order_view_form
+msgid "Scheduled Duration"
+msgstr "Planirano trajanje"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_order__diff_duration
+msgid "Scheduled Duration - Actual Duration"
+msgstr "Planirano trajanje - stvarno trajanje"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_order__scheduled_date_end
+msgid "Scheduled End"
+msgstr "Planirani završetak"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_order__scheduled_date_start
+msgid "Scheduled Start"
+msgstr "Planirani početak"
+
+#. module: tms
+#: model:ir.model.constraint,message:tms.constraint_tms_order_duration_ge_zero
+msgid "Scheduled duration must be greater than or equal to zero!"
+msgstr "Planirano trajanje mora biti veće ili jednako nuli!"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_order__scheduled_duration
+msgid "Scheduled duration of the work in hours"
+msgstr "Planirano trajanje rada u satima"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__self
+msgid "Self"
+msgstr "Sebi"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "Sell trips or tickets"
+msgstr "Prodaj putovanja ili karte"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_order__sequence
+#: model:ir.model.fields,field_description:tms.field_tms_stage__sequence
+#: model:ir.model.fields,field_description:tms.field_tms_team__sequence
+msgid "Sequence"
+msgstr "Sekvenca"
+
+#. module: tms
+#: model:ir.ui.menu,name:tms.menu_fleet_services
+msgid "Services"
+msgstr "Usluge"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__use_partner_credit_limit
+msgid "Set a value greater than 0.0 to activate a credit limit check"
+msgstr ""
+"Postavite vrijednost veću od 0,0 za aktivaciju provjere kreditnog "
+"ograničenja"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid ""
+"Set the number of days before the expiration date of the driver license to show a\n"
+"                                warning."
+msgstr ""
+"Postavite broj dana prije datuma isteka vozačke dozvole za prikaz\n"
+"                                upozorenja."
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid ""
+"Set the number of days before the expiration date of the vehicle insurance to show a\n"
+"                                warning."
+msgstr ""
+"Postavite broj dana prije datuma isteka osiguranja vozila za prikaz\n"
+"                                upozorenja."
+
+#. module: tms
+#: model:ir.actions.act_window,name:tms.action_tms_config
+#: model:ir.ui.menu,name:tms.settings
+msgid "Settings"
+msgstr "Postavke"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__partner_share
+msgid "Share Partner"
+msgstr "Podijeli partnera"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__show_credit_limit
+msgid "Show Credit Limit"
+msgstr "Prikaži kreditni limit"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__signup_type
+msgid "Signup Token Type"
+msgstr "Tip tokena prijave"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__specific_property_product_pricelist
+msgid "Specific Property Product Pricelist"
+msgstr "Dodijeljen specifičan cjenik proizvoda"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__stage_id
+#: model:ir.model.fields,field_description:tms.field_tms_order__stage_id
+#: model:mail.message.subtype,name:tms.mt_driver_stage
+#: model_terms:ir.ui.view,arch_db:tms.tms_stage_form_view
+#: model_terms:ir.ui.view,arch_db:tms.view_tms_order_search
+msgid "Stage"
+msgstr "Faza"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.tms_stage_form_view
+msgid "Stage Description"
+msgstr "Opis faze"
+
+#. module: tms
+#: model:ir.actions.act_window,name:tms.action_tms_config_stage_travel
+#: model:ir.actions.act_window,name:tms.action_tms_stage
+#: model:ir.model.fields,field_description:tms.field_tms_team__stage_ids
+#: model:ir.ui.menu,name:tms.menu_tms_config_stage
+msgid "Stages"
+msgstr "Faze"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.tms_order_view_form
+#: model_terms:ir.ui.view,arch_db:tms.tms_order_view_list
+msgid "Start"
+msgstr "Početak"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_insurance__start_date
+msgid "Start Date"
+msgstr "Datum početka"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_order__start_trip
+msgid "Start Trip"
+msgstr "Započni putovanje"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__state_id
+#: model:ir.model.fields,field_description:tms.field_tms_insurance__state
+msgid "State"
+msgstr "Stanje"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__application_statistics
+msgid "Stats"
+msgstr "Statistika"
+
+#. module: tms
+#: model:ir.ui.menu,name:tms.menu_config_fleet_vehicles_status
+msgid "Status"
+msgstr "Status"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__activity_state
+#: model:ir.model.fields,help:tms.field_tms_order__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Status na temelju aktivnosti\n"
+"Kašnjenje: rok je već prošao\n"
+"Danas: datum aktivnosti je danas\n"
+"Planirano: buduće aktivnosti."
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_route__stop_location_ids
+#: model_terms:ir.ui.view,arch_db:tms.view_tms_route_form
+msgid "Stop Locations"
+msgstr "Lokacije zaustavljanja"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "Stops"
+msgstr "Zaustavljanja"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_route__stop_locations
+msgid "Stops locations in route"
+msgstr "Lokacije zaustavljanja na ruti"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__street
+msgid "Street"
+msgstr "Ulica"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__street2
+msgid "Street2"
+msgstr "Ulica2"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__suggest_based_on
+msgid "Suggest Based On"
+msgstr "Predloži na temelju"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__suggest_days
+msgid "Suggest Days"
+msgstr "Predloženi dani"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__suggest_percent
+msgid "Suggest Percent"
+msgstr "Predloženi postotak"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__property_purchase_currency_id
+msgid "Supplier Currency"
+msgstr "Valuta dobavljača"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__supplier_rank
+msgid "Supplier Rank"
+msgstr "Rank dobavljača"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_res_config_settings__group_tms_uom
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "TMS Units of Measure"
+msgstr "TMS jedinice mjere"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.tms_team_view_kanban
+msgid "TRIPS"
+msgstr "PUTOVANJA"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__category_id
+#: model:ir.ui.menu,name:tms.menu_config_fleet_vehicles_tags
+msgid "Tags"
+msgstr "Oznake"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.tms_order_view_kanban
+msgid "Tasks Analysis"
+msgstr "Analiza zadataka"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__vat
+msgid "Tax ID"
+msgstr "PDV ID / OIB"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__vat_label
+msgid "Tax ID Label"
+msgstr "Oznaka poreznog broja"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_order__tms_team_id
+#: model_terms:ir.ui.view,arch_db:tms.view_tms_order_search
+msgid "Team"
+msgstr "Tim"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.tms_team_view_form
+msgid "Team Name"
+msgstr "Naziv tima"
+
+#. module: tms
+#: model:ir.model.constraint,message:tms.constraint_tms_team_name_uniq
+msgid "Team name already exists!"
+msgstr "Naziv tima već postoji!"
+
+#. module: tms
+#: model:ir.actions.act_window,name:tms.action_tms_config_team
+#: model:ir.actions.act_window,name:tms.action_tms_dash_team
+#: model:ir.model.fields,field_description:tms.field_tms_stage__tms_team_ids
+#: model:ir.ui.menu,name:tms.menu_tms_config_team
+#: model:ir.ui.menu,name:tms.menu_tms_dash_team
+msgid "Teams"
+msgstr "Timovi"
+
+#. module: tms
+#: model:ir.model.fields.selection,name:tms.selection__res_partner__location_type__terrestrial
+#: model:ir.model.fields.selection,name:tms.selection__tms_driver__driver_type__terrestrial
+msgid "Terrestrial"
+msgstr "Kopneno"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__country_code
+msgid ""
+"The ISO country code in two chars. \n"
+"You can use this field for quick search."
+msgstr ""
+"ISO oznaka države u dva slova.\n"
+"Možete koristiti za brzo pretraživanje."
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__property_account_position_id
+msgid ""
+"The fiscal position determines the taxes/accounts used for this contact."
+msgstr "Fiskalna pozicija određuje poreze i konta za partnera."
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__user_id
+msgid "The internal user in charge of this contact."
+msgstr "Unutarnji korisnik zadužen za kontakt."
+
+#. module: tms
+#: model:ir.model.constraint,message:tms.constraint_tms_insurance_unique_policy_number_per_insurer
+msgid "The policy number must be unique for each insurer!"
+msgstr "Broj police mora biti jedinstven za svakog osiguratelja!"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__company_registry
+msgid ""
+"The registry number of the company. Use it if it is different from the Tax "
+"ID. It must be unique across all partners of a same country"
+msgstr ""
+"Matični broj tvrtke. Koristite ga ako se razlikuje od poreznog broja. Mora "
+"biti jedinstven za sve partnere iste zemlje"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__property_stock_customer
+msgid ""
+"The stock location used as destination when sending goods to this contact."
+msgstr ""
+"Skladišna lokacija koja se koristi kao odredište pri slanju robe ovom "
+"kontaktu."
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__property_stock_supplier
+msgid ""
+"The stock location used as source when receiving goods from this contact."
+msgstr ""
+"Skladišna lokacija koja se koristi kao izvor pri primanju robe od ovog "
+"kontakta."
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__main_user_id
+msgid ""
+"There can be several users related to the same partner. When a single user "
+"is needed, this field attempts to find the most appropriate one."
+msgstr ""
+"Može postojati više korisnika povezanih s istim partnerom. Kada je potreban "
+"jedan korisnik, ovo polje pokušava pronaći najprikladnijeg."
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__property_purchase_currency_id
+msgid "This currency will be used for purchases from the current partner"
+msgstr "Ova valuta koristit će se za kupnje od trenutnog partnera"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__email_normalized
+msgid ""
+"This field is used to search on email address as the primary email field can"
+" contain more than strictly an email address."
+msgstr ""
+"Ovo se polje koristi za pretragu e-adrese jer polje primarne e-pošte može "
+"sadržavati više od same e-adrese."
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_stage__fold
+msgid ""
+"This stage is folded in the kanban view when there are no record in that "
+"stage to display."
+msgstr ""
+"Ova faza je presavijena u kanban prikazu kada nema zapisa u toj fazi za "
+"prikaz."
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_order__time_uom
+msgid "Time Uom"
+msgstr "Jedinica mjere vremena"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__tz
+msgid "Timezone"
+msgstr "Vremenska zona"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__tz_offset
+msgid "Timezone offset"
+msgstr "Pomak vremenskog pojasa"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_res_config_settings__tms_distance_uom
+msgid "Tms Distance Uom"
+msgstr "Jedinica mjere udaljenosti TMS"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_res_config_settings__tms_length_uom
+msgid "Tms Length Uom"
+msgstr "Jedinica mjere duljine TMS"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_res_config_settings__tms_speed_uom
+msgid "Tms Speed Uom"
+msgstr "Jedinica mjere brzine TMS"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_fleet_vehicle__tms_team_id
+#: model:ir.model.fields,field_description:tms.field_tms_crew__tms_team_id
+#: model:ir.model.fields,field_description:tms.field_tms_driver__tms_team_id
+msgid "Tms Team"
+msgstr "Tim TMS"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_res_config_settings__tms_time_uom
+msgid "Tms Time Uom"
+msgstr "Jedinica mjere vremena TMS"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_res_config_settings__tms_weight_uom
+msgid "Tms Weight Uom"
+msgstr "Jedinica mjere težine TMS"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__total_invoiced
+msgid "Total Invoiced"
+msgstr "Ukupno obračunato"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__debit
+msgid "Total Payable"
+msgstr "Ukupno obaveze"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__credit
+msgid "Total Receivable"
+msgstr "Ukupno potraživanja"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__credit
+msgid "Total amount this customer owes you."
+msgstr "Ukupan iznos dugovanja kupca."
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__debit
+msgid "Total amount you have to pay to this vendor."
+msgstr "Ukupni iznos za uplatu ovom dobavljaču."
+
+#. module: tms
+#: model:ir.ui.menu,name:tms.root
+#: model_terms:ir.ui.view,arch_db:tms.fleet_vehicle_inherit_view_form
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "Transport"
+msgstr "Transport"
+
+#. module: tms
+#: model:ir.module.category,name:tms.tms
+#: model:res.groups.privilege,name:tms.privilege_tms
+msgid "Transport Management System"
+msgstr "Sustav za upravljanje prijevozom"
+
+#. module: tms
+#: model:ir.model,name:tms.model_tms_crew
+msgid "Transport Management System Crew"
+msgstr "Posada sustava za upravljanje prijevozom"
+
+#. module: tms
+#: model:ir.model,name:tms.model_tms_order
+msgid "Transport Management System Order"
+msgstr "Narudžba sustava za upravljanje prijevozom"
+
+#. module: tms
+#: model:ir.model,name:tms.model_tms_route
+msgid "Transport Management System Route"
+msgstr "Ruta sustava za upravljanje prijevozom"
+
+#. module: tms
+#: model:ir.model,name:tms.model_tms_stage
+msgid "Transport Management System Stage"
+msgstr "Faza sustava za upravljanje prijevozom"
+
+#. module: tms
+#: model:ir.model,name:tms.model_tms_team
+msgid "Transport Management System Team"
+msgstr "Tim sustava za upravljanje prijevozom"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_res_partner__tms_location
+#: model:ir.model.fields,field_description:tms.field_res_users__tms_location
+#: model:ir.model.fields,field_description:tms.field_tms_driver__tms_location
+msgid "Transport location"
+msgstr "Lokacija prijevoza"
+
+#. module: tms
+#: model:ir.model.fields.selection,name:tms.selection__tms_stage__stage_type__order
+msgid "Trip"
+msgstr "Putovanje"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_order__duration
+msgid "Trip Duration"
+msgstr "Trajanje putovanja"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.tms_order_view_form
+msgid "Trip Name"
+msgstr "Naziv putovanja"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.tms_order_report_view_graph
+msgid "Trip Reports"
+msgstr "Izvještaji putovanja"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.tms_order_view_form
+msgid "Trip Tracking"
+msgstr "Praćenje putovanja"
+
+#. module: tms
+#: model:ir.model.constraint,message:tms.constraint_tms_order_name_uniq
+msgid "Trip name already exists!"
+msgstr "Naziv putovanja već postoji!"
+
+#. module: tms
+#: model:ir.actions.act_window,name:tms.action_tms_dash_order
+#: model:ir.actions.act_window,name:tms.action_tms_operation_trip
+#: model:ir.actions.act_window,name:tms.action_tms_report_order
+#: model:ir.model.fields,field_description:tms.field_tms_driver__trips_ids
+#: model:ir.ui.menu,name:tms.menu_tms_dash_order
+#: model:ir.ui.menu,name:tms.menu_tms_report_trip
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:tms.tms_crew_view_kanban
+#: model_terms:ir.ui.view,arch_db:tms.tms_order_view_pivot
+msgid "Trips"
+msgstr "Putovanja"
+
+#. module: tms
+#: model:ir.actions.act_window,name:tms.action_tms_order_kanban
+msgid "Trips Kanban"
+msgstr "Kanban putovanja"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__driver_type
+#: model:ir.model.fields,field_description:tms.field_tms_stage__stage_type
+#: model_terms:ir.ui.view,arch_db:tms.view_tms_stage_search
+msgid "Type"
+msgstr "Vrsta"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__activity_exception_decoration
+#: model:ir.model.fields,help:tms.field_tms_order__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Vrsta iznimne aktivnosti na zapisu."
+
+#. module: tms
+#: model:ir.ui.menu,name:tms.menu_config_fleet_services_types
+msgid "Types"
+msgstr "Tipovi"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "Units"
+msgstr "Jedinice"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.view_tms_route_form
+msgid "UoM"
+msgstr "JM"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_stage__custom_color
+msgid "Use Hex Code only Ex:-#FFFFFF"
+msgstr "Koristite samo heksadekadsku šifru. Npr. -#FFFFFF"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__barcode
+msgid "Use a barcode to identify this contact."
+msgstr "Koristite barkod za identifikaciju ovog ugovora."
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_order__route
+msgid "Use predefined route"
+msgstr "Koristi unaprijed definiranu rutu"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__property_product_pricelist
+msgid "Used for sales to the current partner"
+msgstr "Koristi se za prodaju trenutnom partneru"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_stage__sequence
+msgid "Used to order stages. Lower is first."
+msgstr "Koristi se za redoslijed faza. Niže je prvo."
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_team__sequence
+msgid "Used to sort teams. Lower is better."
+msgstr "Koristi se za sortiranje timova. Niže je bolje."
+
+#. module: tms
+#: model:res.groups,name:tms.group_tms_user
+msgid "User"
+msgstr "Korisnik"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__user_ids
+msgid "Users"
+msgstr "Korisnici"
+
+#. module: tms
+#: model:ir.model,name:tms.model_fleet_vehicle
+#: model:ir.model.fields,field_description:tms.field_tms_insurance__vehicle_ids
+#: model:ir.model.fields,field_description:tms.field_tms_order__vehicle_id
+#: model:ir.model.fields,field_description:tms.field_tms_team__vehicle_ids
+#: model_terms:ir.ui.view,arch_db:tms.tms_crew_view_form
+msgid "Vehicle"
+msgstr "Vozilo"
+
+#. module: tms
+#. odoo-python
+#: code:addons/tms/models/tms_order.py:0
+msgid ""
+"Vehicle %(vehicle)s insurance will expire in %(days)s days, which is less "
+"than or equal to the security threshold of %(threshold)s days."
+msgstr ""
+"Vozilu %(vehicle)s osiguranje istječe za %(days)s dana, što je manje ili "
+"jednako sigurnosnom pragu od %(threshold)s dana."
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_order__vehicle_ids_domain
+msgid "Vehicle Ids Domain"
+msgstr "Domena ID-ova vozila"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_res_config_settings__vehicle_insurance_security_days
+msgid "Vehicle Insurance security days"
+msgstr "Sigurnosni dani osiguranja vozila"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__vehicles_ids
+#: model:ir.ui.menu,name:tms.menu_fleet_vehicle
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:tms.tms_insurance_view_form
+#: model_terms:ir.ui.view,arch_db:tms.tms_team_view_form
+msgid "Vehicles"
+msgstr "Vozila"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_team__vehicle_count
+msgid "Vehicles Count"
+msgstr "Broj vozila"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__property_stock_supplier
+msgid "Vendor Location"
+msgstr "Lokacija dobavljača"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__property_supplier_payment_term_id
+msgid "Vendor Payment Terms"
+msgstr "Uvjeti plaćanja dobavljača"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__website
+msgid "Website Link"
+msgstr "Link web stranice"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__website_message_ids
+#: model:ir.model.fields,field_description:tms.field_tms_order__website_message_ids
+msgid "Website Messages"
+msgstr "Poruke web stranice"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__website_message_ids
+#: model:ir.model.fields,help:tms.field_tms_order__website_message_ids
+msgid "Website communication history"
+msgstr "Povijest komunikacije web stranice"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__group_on
+msgid "Week Day"
+msgstr "Dan u tjednu"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__tz
+msgid ""
+"When printing documents and exporting/importing data, time values are computed according to this timezone.\n"
+"If the timezone is not set, UTC (Coordinated Universal Time) is used.\n"
+"Anywhere else, time values are computed according to the time offset of your web client."
+msgstr ""
+"Prilikom ispisa dokumenata i izvoza/uvoza podataka, vremenske vrijednosti se izračunavaju prema ovoj vremenskoj zoni.\n"
+"Ako vremenska zona nije postavljena, koristi se UTC (Univerzalno koordinirano vrijeme).\n"
+"Bilo gdje drugdje, vremenske vrijednosti se izračunavaju prema vremenskom pomaku vašeg web klijenta."
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__employee
+msgid "Whether this contact is an Employee."
+msgstr "Whether this contact is an Employee."
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.tms_stage_form_view
+msgid ""
+"You can add a description to help your coworkers\n"
+"                            understand the meaning and purpose of the stage."
+msgstr ""
+"Možete dodati opis kako biste pomogli svojim suradnicima\n"
+"                            razumjeti značenje i svrhu faze."
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__vat
+msgid "You can use '/' to indicate that the customer has no Tax ID."
+msgstr "Možete koristiti '/' kako biste označili da nema OIB-a."
+
+#. module: tms
+#. odoo-python
+#: code:addons/tms/models/tms_stage.py:0
+msgid "You cannot delete default stages."
+msgstr "Ne možete obrisati zadane faze."
+
+#. module: tms
+#. odoo-python
+#: code:addons/tms/models/tms_order.py:0
+msgid "You must create an TMS order stage first."
+msgstr "Prvo morate kreirati fazu TMS narudžbe."
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__zip
+msgid "Zip"
+msgstr "Poštanski broj"
+
+#. module: tms
+#: model:ir.model.fields,help:tms.field_tms_driver__days_sales_outstanding
+msgid ""
+"[(Total Receivable/Total Revenue) * number of days since the first invoice] "
+"for this customer"
+msgstr ""
+"[(Ukupna potraživanja/Ukupni prihod) * broj dana od prvog računa] za ovog "
+"kupca"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "e.g. Hours"
+msgstr "npr. Sati"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "e.g. kg"
+msgstr "npr. kg"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "e.g. km"
+msgstr "npr. km"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "e.g. km/h"
+msgstr "npr. km/h"
+
+#. module: tms
+#: model_terms:ir.ui.view,arch_db:tms.res_config_settings_view_form
+msgid "e.g. m"
+msgstr "npr. m"
+
+#. module: tms
+#: model:ir.model.fields,field_description:tms.field_tms_driver__invoice_edi_format
+msgid "eInvoice format"
+msgstr "Format e-računa"
+
+#. module: tms
+#: model:ir.model.fields.selection,name:tms.selection__tms_driver__distance_traveled_uom__km
+#: model_terms:ir.ui.view,arch_db:tms.view_tms_route_form
+msgid "km"
+msgstr "km"
+
+#. module: tms
+#: model:uom.uom,name:tms.uom_kmh
+msgid "km/h"
+msgstr "km/h"
+
+#. module: tms
+#: model:ir.model.fields.selection,name:tms.selection__tms_driver__distance_traveled_uom__mi
+msgid "mi"
+msgstr "mi"
+
+#. module: tms
+#: model:uom.uom,name:tms.uom_mph
+msgid "mph"
+msgstr "mph"

@@ -1,0 +1,143 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_invoice_section_sale_order
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: account_invoice_section_sale_order
+#: model:res.groups,name:account_invoice_section_sale_order.group_sale_order_invoice_section_name
+msgid "Allow customization of invoice section name from sale order"
+msgstr "Dopusti prilagodbu naziva odjeljka računa iz prodajnog naloga"
+
+#. module: account_invoice_section_sale_order
+#: model:ir.model,name:account_invoice_section_sale_order.model_res_company
+msgid "Companies"
+msgstr "Tvrtke"
+
+#. module: account_invoice_section_sale_order
+#: model:ir.model,name:account_invoice_section_sale_order.model_res_config_settings
+msgid "Config Settings"
+msgstr "Postavke"
+
+#. module: account_invoice_section_sale_order
+#: model:ir.model,name:account_invoice_section_sale_order.model_res_partner
+msgid "Contact"
+msgstr "Kontakt"
+
+#. module: account_invoice_section_sale_order
+#: model_terms:ir.ui.view,arch_db:account_invoice_section_sale_order.view_partner_property_form
+msgid "Custom section name on invoice"
+msgstr "Prilagođeni naziv odjeljka na računu"
+
+#. module: account_invoice_section_sale_order
+#: model_terms:ir.ui.view,arch_db:account_invoice_section_sale_order.res_config_settings_view_form
+msgid "Customize section names when invoicing from sale orders"
+msgstr "Prilagodi nazive odjeljaka pri fakturiranju iz prodajnih naloga"
+
+#. module: account_invoice_section_sale_order
+#: model:ir.model.fields,help:account_invoice_section_sale_order.field_res_company__invoice_section_grouping
+#: model:ir.model.fields,help:account_invoice_section_sale_order.field_res_config_settings__invoice_section_grouping
+msgid "Defines object used to group invoice lines"
+msgstr "Definira objekt za grupiranje stavaka računa"
+
+#. module: account_invoice_section_sale_order
+#: model:ir.model.fields,field_description:account_invoice_section_sale_order.field_account_move__display_name
+#: model:ir.model.fields,field_description:account_invoice_section_sale_order.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:account_invoice_section_sale_order.field_res_company__display_name
+#: model:ir.model.fields,field_description:account_invoice_section_sale_order.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:account_invoice_section_sale_order.field_res_partner__display_name
+#: model:ir.model.fields,field_description:account_invoice_section_sale_order.field_sale_order__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: account_invoice_section_sale_order
+#: model:ir.model.fields.selection,name:account_invoice_section_sale_order.selection__res_company__invoice_section_grouping__sale_order
+msgid "Group by sale Order"
+msgstr "Grupiraj po prodajnom nalogu"
+
+#. module: account_invoice_section_sale_order
+#: model_terms:ir.ui.view,arch_db:account_invoice_section_sale_order.res_config_settings_view_form
+msgid "Grouping object"
+msgstr "Objekt grupiranja"
+
+#. module: account_invoice_section_sale_order
+#: model:ir.model.fields,field_description:account_invoice_section_sale_order.field_account_move__id
+#: model:ir.model.fields,field_description:account_invoice_section_sale_order.field_account_move_line__id
+#: model:ir.model.fields,field_description:account_invoice_section_sale_order.field_res_company__id
+#: model:ir.model.fields,field_description:account_invoice_section_sale_order.field_res_config_settings__id
+#: model:ir.model.fields,field_description:account_invoice_section_sale_order.field_res_partner__id
+#: model:ir.model.fields,field_description:account_invoice_section_sale_order.field_sale_order__id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_invoice_section_sale_order
+#: model:ir.model.fields,field_description:account_invoice_section_sale_order.field_res_company__invoice_section_grouping
+#: model:ir.model.fields,field_description:account_invoice_section_sale_order.field_res_config_settings__invoice_section_grouping
+msgid "Invoice Section Grouping"
+msgstr "Grupiranje odjeljaka računa"
+
+#. module: account_invoice_section_sale_order
+#: model:ir.model.fields,field_description:account_invoice_section_sale_order.field_res_company__invoice_section_name_scheme
+#: model:ir.model.fields,field_description:account_invoice_section_sale_order.field_res_config_settings__invoice_section_name_scheme
+#: model:ir.model.fields,field_description:account_invoice_section_sale_order.field_res_partner__invoice_section_name_scheme
+#: model:ir.model.fields,field_description:account_invoice_section_sale_order.field_res_users__invoice_section_name_scheme
+msgid "Invoice Section Name Scheme"
+msgstr "Shema naziva odjeljaka računa"
+
+#. module: account_invoice_section_sale_order
+#: model:ir.model,name:account_invoice_section_sale_order.model_account_move
+msgid "Journal Entry"
+msgstr "Stavke temeljnice"
+
+#. module: account_invoice_section_sale_order
+#: model:ir.model,name:account_invoice_section_sale_order.model_account_move_line
+msgid "Journal Item"
+msgstr "Stavka dnevnika"
+
+#. module: account_invoice_section_sale_order
+#: model_terms:ir.ui.view,arch_db:account_invoice_section_sale_order.res_config_settings_view_form
+msgid "Naming scheme"
+msgstr "Shema imenovanja"
+
+#. module: account_invoice_section_sale_order
+#: model:ir.model,name:account_invoice_section_sale_order.model_sale_order
+msgid "Sales Order"
+msgstr "Prodajni nalog"
+
+#. module: account_invoice_section_sale_order
+#: model_terms:ir.ui.view,arch_db:account_invoice_section_sale_order.res_config_settings_view_form
+msgid "Section names"
+msgstr "Nazivi odjeljaka"
+
+#. module: account_invoice_section_sale_order
+#: model:ir.model.fields,help:account_invoice_section_sale_order.field_res_company__invoice_section_name_scheme
+#: model:ir.model.fields,help:account_invoice_section_sale_order.field_res_config_settings__invoice_section_name_scheme
+#: model:ir.model.fields,help:account_invoice_section_sale_order.field_res_partner__invoice_section_name_scheme
+#: model:ir.model.fields,help:account_invoice_section_sale_order.field_res_users__invoice_section_name_scheme
+msgid ""
+"This is the name of the sections on invoices when generated from sales "
+"orders. Keep empty to use default. You can use a python expression with the "
+"'object' (representing sale order) and 'time' variables. For a fixed text, "
+"quote it, for example 'Group'."
+msgstr ""
+"Ovo je naziv odjeljaka na računima kada se generiraju iz prodajnih naloga. "
+"Ostavite prazno za zadano. Možete koristiti python izraz s varijablama "
+"'object' (predstavlja prodajni nalog) i 'time'. Za fiksni tekst, stavite ga "
+"u navodnike, na primjer 'Grupa'."
+
+#. module: account_invoice_section_sale_order
+#. odoo-python
+#: code:addons/account_invoice_section_sale_order/models/account_move.py:0
+msgid "Unrecognized invoice_section_grouping"
+msgstr "Neprepoznato invoice_section_grouping"

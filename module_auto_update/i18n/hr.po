@@ -1,0 +1,106 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* module_auto_update
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: module_auto_update
+#: model_terms:ir.ui.view,arch_db:module_auto_update.view_base_module_upgrade
+msgid "Are you sure you want to launch module auto-update?"
+msgstr "Jeste li sigurni da želite pokrenuti automatsko ažuriranje modula?"
+
+#. module: module_auto_update
+#: model:ir.actions.act_window,name:module_auto_update.base_module_upgrade_wizard_action
+#: model:ir.model,name:module_auto_update.model_module_auto_update
+#: model:ir.ui.menu,name:module_auto_update.menu_base_module_upgrade_wizard_action
+msgid "Auto-Upgrade Modules"
+msgstr "Automatska nadogradnja modula"
+
+#. module: module_auto_update
+#: model_terms:ir.ui.view,arch_db:module_auto_update.view_base_module_upgrade
+msgid "Cancel"
+msgstr "Odustani"
+
+#. module: module_auto_update
+#. odoo-python
+#: code:addons/module_auto_update/models/module.py:0
+msgid "Checksum upgrade complete."
+msgstr "Nadogradnja kontrolnog zbroja dovršena."
+
+#. module: module_auto_update
+#: model_terms:ir.ui.view,arch_db:module_auto_update.view_base_module_upgrade
+msgid "Confirm"
+msgstr "Potvrdi"
+
+#. module: module_auto_update
+#: model:ir.model.fields,field_description:module_auto_update.field_module_auto_update__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: module_auto_update
+#: model:ir.model.fields,field_description:module_auto_update.field_module_auto_update__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: module_auto_update
+#: model:ir.model.fields,field_description:module_auto_update.field_ir_module_module__display_name
+#: model:ir.model.fields,field_description:module_auto_update.field_module_auto_update__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: module_auto_update
+#: model:ir.model.fields,field_description:module_auto_update.field_ir_module_module__id
+#: model:ir.model.fields,field_description:module_auto_update.field_module_auto_update__id
+msgid "ID"
+msgstr "ID"
+
+#. module: module_auto_update
+#: model_terms:ir.ui.view,arch_db:module_auto_update.view_base_module_upgrade
+msgid "Impacted Apps"
+msgstr "Utjecaj na aplikacije"
+
+#. module: module_auto_update
+#: model:ir.model.fields,field_description:module_auto_update.field_module_auto_update__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: module_auto_update
+#: model:ir.model.fields,field_description:module_auto_update.field_module_auto_update__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: module_auto_update
+#: model:ir.model,name:module_auto_update.model_ir_module_module
+msgid "Module"
+msgstr "Modul"
+
+#. module: module_auto_update
+#: model:ir.model.fields,field_description:module_auto_update.field_module_auto_update__modules_to_update_ids
+msgid "Modules to Update"
+msgstr "Moduli za ažuriranje"
+
+#. module: module_auto_update
+#. odoo-python
+#: code:addons/module_auto_update/models/module.py:0
+msgid ""
+"No checksum change detected in installed modules and all modules installed, "
+"nothing to do."
+msgstr ""
+"Nije otkrivena promjena kontrolnog zbroja u instaliranim modulima i svi su "
+"moduli instalirani; nema što učiniti."
+
+#. module: module_auto_update
+#: model_terms:ir.ui.view,arch_db:module_auto_update.view_base_module_upgrade
+msgid "Show Modules to Update"
+msgstr "Prikaži module za ažuriranje"

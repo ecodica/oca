@@ -1,0 +1,64 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* maintenance_request_purchase
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: maintenance_request_purchase
+#: model:ir.model.fields,field_description:maintenance_request_purchase.field_maintenance_request__display_name
+#: model:ir.model.fields,field_description:maintenance_request_purchase.field_purchase_order__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: maintenance_request_purchase
+#: model:ir.model.fields,field_description:maintenance_request_purchase.field_maintenance_request__id
+#: model:ir.model.fields,field_description:maintenance_request_purchase.field_purchase_order__id
+msgid "ID"
+msgstr "ID"
+
+#. module: maintenance_request_purchase
+#: model_terms:ir.ui.view,arch_db:maintenance_request_purchase.purchase_order_form
+msgid "Maintenance"
+msgstr "Održavanje"
+
+#. module: maintenance_request_purchase
+#: model:ir.model,name:maintenance_request_purchase.model_maintenance_request
+msgid "Maintenance Request"
+msgstr "Zahtjev za održavanjem"
+
+#. module: maintenance_request_purchase
+#: model:ir.model.fields,field_description:maintenance_request_purchase.field_purchase_order__maintenance_request_ids
+msgid "Maintenance Requests"
+msgstr "Zahtjevi za održavanjem"
+
+#. module: maintenance_request_purchase
+#: model:ir.model.fields,field_description:maintenance_request_purchase.field_purchase_order__maintenance_requests_count
+msgid "Maintenance Requests Count"
+msgstr ""
+
+#. module: maintenance_request_purchase
+#: model:ir.model,name:maintenance_request_purchase.model_purchase_order
+msgid "Purchase Order"
+msgstr "Nabavni nalog"
+
+#. module: maintenance_request_purchase
+#: model:ir.model.fields,field_description:maintenance_request_purchase.field_maintenance_request__purchase_order_ids
+#: model_terms:ir.ui.view,arch_db:maintenance_request_purchase.hr_equipment_request_view_form_button_box
+msgid "Purchase Orders"
+msgstr "Nabavni nalozi"
+
+#. module: maintenance_request_purchase
+#: model:ir.model.fields,field_description:maintenance_request_purchase.field_maintenance_request__purchases_count
+msgid "Purchases Count"
+msgstr ""

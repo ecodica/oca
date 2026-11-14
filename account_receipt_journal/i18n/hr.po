@@ -1,0 +1,124 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_receipt_journal
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: account_receipt_journal
+#: model:ir.model,name:account_receipt_journal.model_account_chart_template
+msgid "Account Chart Template"
+msgstr "Kontni plan"
+
+#. module: account_receipt_journal
+#: model:ir.model.fields,field_description:account_receipt_journal.field_account_chart_template__display_name
+#: model:ir.model.fields,field_description:account_receipt_journal.field_account_journal__display_name
+#: model:ir.model.fields,field_description:account_receipt_journal.field_account_move__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: account_receipt_journal
+#: model:ir.model.fields,field_description:account_receipt_journal.field_account_journal__receipts
+msgid "Exclusive to Receipts"
+msgstr "Isključivo za primke"
+
+#. module: account_receipt_journal
+#: model:ir.model.fields,field_description:account_receipt_journal.field_account_chart_template__id
+#: model:ir.model.fields,field_description:account_receipt_journal.field_account_journal__id
+#: model:ir.model.fields,field_description:account_receipt_journal.field_account_move__id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_receipt_journal
+#: model:ir.model.fields,help:account_receipt_journal.field_account_journal__receipts
+msgid ""
+"If checked, this journal will be used by default for receipts and only can "
+"be used for receipts."
+msgstr ""
+"Ako je označeno, ovaj dnevnik će se prema zadanim postavkama koristiti za "
+"primke i može se koristiti samo za primke."
+
+#. module: account_receipt_journal
+#: model:ir.model,name:account_receipt_journal.model_account_journal
+msgid "Journal"
+msgstr "Dnevnik"
+
+#. module: account_receipt_journal
+#: model:ir.model,name:account_receipt_journal.model_account_move
+msgid "Journal Entry"
+msgstr "Stavke temeljnice"
+
+#. module: account_receipt_journal
+#. odoo-python
+#: code:addons/account_receipt_journal/models/account_chart_template.py:0
+msgid "P-REC"
+msgstr "P-REC"
+
+#. module: account_receipt_journal
+#. odoo-python
+#: code:addons/account_receipt_journal/models/account_move.py:0
+msgid ""
+"Purchase Receipt must use a Receipt Journal because there is already a "
+"Receipt Journal for Purchases"
+msgstr ""
+"Primka nabave mora koristiti dnevnik primaka jer već postoji dnevnik primaka"
+" za nabave"
+
+#. module: account_receipt_journal
+#. odoo-python
+#: code:addons/account_receipt_journal/models/account_chart_template.py:0
+msgid "Purchase Receipts Journal"
+msgstr "Dnevnik primaka nabave"
+
+#. module: account_receipt_journal
+#. odoo-python
+#: code:addons/account_receipt_journal/models/account_move.py:0
+msgid "Receipt Journal is restricted to Receipts"
+msgstr "Dnevnik primaka ograničen je na primke"
+
+#. module: account_receipt_journal
+#: model_terms:ir.ui.view,arch_db:account_receipt_journal.view_account_journal_form_receipts
+msgid "Receipts"
+msgstr "Primici"
+
+#. module: account_receipt_journal
+#. odoo-python
+#: code:addons/account_receipt_journal/models/account_chart_template.py:0
+msgid "S-REC"
+msgstr "S-REC"
+
+#. module: account_receipt_journal
+#. odoo-python
+#: code:addons/account_receipt_journal/models/account_move.py:0
+msgid ""
+"Sale Receipt must use a Receipt Journal because there is already a Receipt "
+"Journal for Sales"
+msgstr ""
+"Prodajna primka mora koristiti dnevnik primaka jer već postoji dnevnik "
+"primaka za prodaje"
+
+#. module: account_receipt_journal
+#. odoo-python
+#: code:addons/account_receipt_journal/models/account_chart_template.py:0
+msgid "Sale Receipts Journal"
+msgstr "Dnevnik prodajnih primaka"
+
+#. module: account_receipt_journal
+#. odoo-python
+#: code:addons/account_receipt_journal/models/account_journal.py:0
+msgid ""
+"The sequence of the journal '%s' must be higher than the sequence of the "
+"other journals of the same type."
+msgstr ""
+"Sekvenca dnevnika '%s' mora biti veća od sekvence ostalih dnevnika iste "
+"vrste."

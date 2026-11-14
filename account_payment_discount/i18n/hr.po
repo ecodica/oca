@@ -1,0 +1,117 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_payment_discount
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: account_payment_discount
+#: model:ir.model.fields,field_description:account_payment_discount.field_account_payment_line__amount_residual_currency
+msgid "Amount Residual Currency"
+msgstr "Valuta preostalog iznosa"
+
+#. module: account_payment_discount
+#: model:ir.model.fields,help:account_payment_discount.field_account_payment_line__diff_amount_residual_currency_amount_discount_currency
+msgid "Amount of discount"
+msgstr "Iznos popusta"
+
+#. module: account_payment_discount
+#: model:ir.model.fields,field_description:account_payment_discount.field_account_payment_line_create__cash_discount_date
+msgid "Cash Discount Date"
+msgstr "Datum gotovinskog popusta"
+
+#. module: account_payment_discount
+#: model:ir.model.fields,field_description:account_payment_discount.field_account_payment_line__diff_amount_residual_currency_amount_discount_currency
+msgid "Discount Amount"
+msgstr "Iznos popusta"
+
+#. module: account_payment_discount
+#: model:ir.model.fields,field_description:account_payment_discount.field_account_payment_line__discount_amount_currency
+msgid "Discount Amount Currency"
+msgstr "Iznos popusta valuta"
+
+#. module: account_payment_discount
+#: model:ir.model.fields,field_description:account_payment_discount.field_account_payment_line__discount_date
+msgid "Discount Date"
+msgstr "Datum popusta"
+
+#. module: account_payment_discount
+#: model:ir.model.fields.selection,name:account_payment_discount.selection__account_payment_line_create__date_type__discount_due_date
+msgid "Discount Due Date"
+msgstr "Datum dospijeća popusta"
+
+#. module: account_payment_discount
+#: model:ir.model.fields,field_description:account_payment_discount.field_account_move__display_name
+#: model:ir.model.fields,field_description:account_payment_discount.field_account_payment_line__display_name
+#: model:ir.model.fields,field_description:account_payment_discount.field_account_payment_line_create__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: account_payment_discount
+#: model:ir.model.fields,field_description:account_payment_discount.field_account_payment_line__can_have_discount
+msgid "Early Discount"
+msgstr "Rani popust"
+
+#. module: account_payment_discount
+#: model:ir.model.fields,field_description:account_payment_discount.field_account_move__id
+#: model:ir.model.fields,field_description:account_payment_discount.field_account_payment_line__id
+#: model:ir.model.fields,field_description:account_payment_discount.field_account_payment_line_create__id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_payment_discount
+#: model:ir.model,name:account_payment_discount.model_account_move
+msgid "Journal Entry"
+msgstr "Stavke temeljnice"
+
+#. module: account_payment_discount
+#: model:ir.model.fields,help:account_payment_discount.field_account_payment_line__discount_date
+msgid ""
+"Last date at which the discounted amount must be paid in order for the Early"
+" Payment Discount to be granted"
+msgstr ""
+"Posljednji datum do kojeg se mora platiti sniženi iznos kako bi se odobrio "
+"popust za rano plaćanje"
+
+#. module: account_payment_discount
+#: model:ir.model.fields,field_description:account_payment_discount.field_account_payment_line__pay_with_discount
+msgid "Pay With Discount"
+msgstr "Plati s popustom"
+
+#. module: account_payment_discount
+#: model:ir.model,name:account_payment_discount.model_account_payment_line
+msgid "Payment Lines"
+msgstr "Stavke plaćanja"
+
+#. module: account_payment_discount
+#: model:ir.model.fields,help:account_payment_discount.field_account_payment_line_create__cash_discount_date
+msgid ""
+"Search lines with a discount due date which is posterior to the selected "
+"date."
+msgstr ""
+"Pretraži retke s datumom dospijeća popusta koji je nakon odabranog datuma."
+
+#. module: account_payment_discount
+#: model:ir.model.fields,help:account_payment_discount.field_account_payment_line__discount_amount_currency
+msgid "Total amount discount included"
+msgstr "Ukupni iznos uključujući popust"
+
+#. module: account_payment_discount
+#: model:ir.model.fields,field_description:account_payment_discount.field_account_payment_line_create__date_type
+msgid "Type of Date Filter"
+msgstr "Tip filtera datuma"
+
+#. module: account_payment_discount
+#: model:ir.model,name:account_payment_discount.model_account_payment_line_create
+msgid "Wizard to create payment lines"
+msgstr "Čarobnjak za stvaranje stavki plaćanja"

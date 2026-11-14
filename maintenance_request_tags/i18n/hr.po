@@ -1,0 +1,94 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* maintenance_request_tags
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: maintenance_request_tags
+#: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request_tag__color
+msgid "Color Index (0-15)"
+msgstr "Indeks boje (0-15)"
+
+#. module: maintenance_request_tags
+#: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request_tag__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: maintenance_request_tags
+#: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request_tag__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: maintenance_request_tags
+#: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request__display_name
+#: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request_tag__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: maintenance_request_tags
+#: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request__id
+#: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request_tag__id
+msgid "ID"
+msgstr "ID"
+
+#. module: maintenance_request_tags
+#: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request_tag__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: maintenance_request_tags
+#: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request_tag__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: maintenance_request_tags
+#: model:ir.model,name:maintenance_request_tags.model_maintenance_request
+msgid "Maintenance Request"
+msgstr "Zahtjev za održavanjem"
+
+#. module: maintenance_request_tags
+#: model:ir.model,name:maintenance_request_tags.model_maintenance_request_tag
+msgid "Maintenance Request Tag"
+msgstr ""
+
+#. module: maintenance_request_tags
+#: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request_tag__request_ids
+msgid "Maintenance Requests"
+msgstr "Zahtjevi za održavanjem"
+
+#. module: maintenance_request_tags
+#: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request_tag__name
+msgid "Request Tag"
+msgstr ""
+
+#. module: maintenance_request_tags
+#: model:ir.actions.act_window,name:maintenance_request_tags.maintenance_request_tag_act_window
+#: model:ir.ui.menu,name:maintenance_request_tags.maintenance_request_tag_menu
+msgid "Request Tags"
+msgstr ""
+
+#. module: maintenance_request_tags
+#: model:ir.model.constraint,message:maintenance_request_tags.constraint_maintenance_request_tag_name_uniq
+msgid "Tag name already exists !"
+msgstr "Naziv oznake već postoji!"
+
+#. module: maintenance_request_tags
+#: model:ir.model.fields,field_description:maintenance_request_tags.field_maintenance_request__tag_ids
+msgid "Tags"
+msgstr "Oznake"
+
+#. module: maintenance_request_tags
+#: model_terms:ir.ui.view,arch_db:maintenance_request_tags.hr_equipment_request_view_form
+msgid "e.g. Computers"
+msgstr ""

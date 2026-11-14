@@ -1,0 +1,267 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* datev_export_dtvf
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: datev_export_dtvf
+#: model:mail.template,body_html:datev_export_dtvf.mail_template_cron_export
+msgid ""
+"<h1>Dear recipient,</h1>\n"
+"            <p>\n"
+"            please find attached the latest DATEV export from <t t-out=\"object.company_id.name\"/>.\n"
+"            </p>\n"
+"        "
+msgstr ""
+
+#. module: datev_export_dtvf
+#: model:ir.model,name:datev_export_dtvf.model_account_account
+msgid "Account"
+msgstr "Konto"
+
+#. module: datev_export_dtvf
+#: model:ir.model,name:datev_export_dtvf.model_res_company
+msgid "Companies"
+msgstr "Tvrtke"
+
+#. module: datev_export_dtvf
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_datev_export_dtvf_export__company_id
+msgid "Company"
+msgstr "Tvrtka"
+
+#. module: datev_export_dtvf
+#: model:ir.model,name:datev_export_dtvf.model_res_config_settings
+msgid "Config Settings"
+msgstr "Postavke"
+
+#. module: datev_export_dtvf
+#: model:ir.model,name:datev_export_dtvf.model_res_partner
+msgid "Contact"
+msgstr "Kontakt"
+
+#. module: datev_export_dtvf
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_datev_export_dtvf_export__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: datev_export_dtvf
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_datev_export_dtvf_export__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: datev_export_dtvf
+#: model:ir.actions.act_window,name:datev_export_dtvf.action_datev_export_dtvf
+#: model:ir.ui.menu,name:datev_export_dtvf.menu_datev_export_dtvf
+msgid "DATEV DTVF Export"
+msgstr "DATEV DTVF izvoz"
+
+#. module: datev_export_dtvf
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_res_company__datev_partner_numbering
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_res_config_settings__datev_partner_numbering
+#: model_terms:ir.ui.view,arch_db:datev_export_dtvf.res_config_settings_view_form
+msgid "DATEV Partner numbering"
+msgstr "DATEV numeriranje partnera"
+
+#. module: datev_export_dtvf
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_res_company__datev_account_code_length
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_res_config_settings__datev_account_code_length
+#: model_terms:ir.ui.view,arch_db:datev_export_dtvf.res_config_settings_view_form
+msgid "DATEV account code length"
+msgstr "Duljina šifre konta DATEV"
+
+#. module: datev_export_dtvf
+#: model:ir.model,name:datev_export_dtvf.model_datev_export_dtvf_export
+#: model:mail.template,name:datev_export_dtvf.mail_template_cron_export
+msgid "DATEV export"
+msgstr "DATEV izvoz"
+
+#. module: datev_export_dtvf
+#: model_terms:ir.ui.view,arch_db:datev_export_dtvf.view_res_partner_form
+msgid "DATEV identifiers"
+msgstr "DATEV identifikatori"
+
+#. module: datev_export_dtvf
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_res_partner__l10n_de_datev_export_identifier_customer
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_res_users__l10n_de_datev_export_identifier_customer
+msgid "DATEV number (customer)"
+msgstr "DATEV broj (kupac)"
+
+#. module: datev_export_dtvf
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_res_partner__l10n_de_datev_export_identifier_supplier
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_res_users__l10n_de_datev_export_identifier_supplier
+msgid "DATEV number (supplier)"
+msgstr "DATEV broj (dobavljač)"
+
+#. module: datev_export_dtvf
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_res_company__datev_customer_sequence_id
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_res_config_settings__datev_customer_sequence_id
+msgid "DATEV sequence for customers"
+msgstr "DATEV sekvenca za kupce"
+
+#. module: datev_export_dtvf
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_res_company__datev_supplier_sequence_id
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_res_config_settings__datev_supplier_sequence_id
+msgid "DATEV sequence for suppliers"
+msgstr "DATEV sekvenca za dobavljače"
+
+#. module: datev_export_dtvf
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_datev_export_dtvf_export__file_data
+msgid "Data"
+msgstr "Podaci"
+
+#. module: datev_export_dtvf
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_account_account__datev_code
+msgid "Datev Code"
+msgstr "DATEV šifra"
+
+#. module: datev_export_dtvf
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_account_account__display_name
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_datev_export_dtvf_export__display_name
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_res_company__display_name
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: datev_export_dtvf
+#: model:ir.model.fields.selection,name:datev_export_dtvf.selection__datev_export_dtvf_export__state__done
+msgid "Done"
+msgstr "GOTOVO"
+
+#. module: datev_export_dtvf
+#: model:ir.model.fields.selection,name:datev_export_dtvf.selection__datev_export_dtvf_export__state__draft
+msgid "Draft"
+msgstr "Nacrt"
+
+#. module: datev_export_dtvf
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_datev_export_dtvf_export__fiscalyear_end
+msgid "End date"
+msgstr "Datum završetka"
+
+#. module: datev_export_dtvf
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_datev_export_dtvf_export__file_name
+msgid "Filename"
+msgstr "Naziv datoteke"
+
+#. module: datev_export_dtvf
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_datev_export_dtvf_export__fiscalyear_id
+msgid "Fiscal year"
+msgstr ""
+
+#. module: datev_export_dtvf
+#: model_terms:ir.ui.view,arch_db:datev_export_dtvf.l10n_de_dtfv_export_view_form
+#: model_terms:ir.ui.view,arch_db:datev_export_dtvf.view_res_partner_form
+msgid "Generate"
+msgstr "Generiraj"
+
+#. module: datev_export_dtvf
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_datev_export_dtvf_export__date_generated
+msgid "Generated at"
+msgstr ""
+
+#. module: datev_export_dtvf
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_account_account__id
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_datev_export_dtvf_export__id
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_res_company__id
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_res_config_settings__id
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_res_partner__id
+msgid "ID"
+msgstr "ID"
+
+#. module: datev_export_dtvf
+#: model:ir.model.fields,help:datev_export_dtvf.field_account_account__datev_code
+msgid ""
+"In case your COA codes don't work for DATEV, fill in an alternative code "
+"here"
+msgstr ""
+
+#. module: datev_export_dtvf
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_datev_export_dtvf_export__journal_ids
+msgid "Journals"
+msgstr "Vrste Temeljnice"
+
+#. module: datev_export_dtvf
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_res_partner__l10n_de_datev_export_show
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_res_users__l10n_de_datev_export_show
+msgid "L10N De Datev Export Show"
+msgstr ""
+
+#. module: datev_export_dtvf
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_datev_export_dtvf_export__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: datev_export_dtvf
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_datev_export_dtvf_export__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: datev_export_dtvf
+#: model:ir.actions.server,name:datev_export_dtvf.cron_export_ir_actions_server
+msgid "Monthly DATEV export via mail (dtvf)"
+msgstr ""
+
+#. module: datev_export_dtvf
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_datev_export_dtvf_export__name
+msgid "Name"
+msgstr "Naziv"
+
+#. module: datev_export_dtvf
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_datev_export_dtvf_export__period_ids
+msgid "Periods"
+msgstr "Razdoblja"
+
+#. module: datev_export_dtvf
+#. odoo-python
+#: code:addons/datev_export_dtvf/models/datev_export_dtvf.py:0
+msgid "Please fill in the DATEV section in the invoicing configuration"
+msgstr ""
+
+#. module: datev_export_dtvf
+#: model_terms:ir.ui.view,arch_db:datev_export_dtvf.l10n_de_dtfv_export_view_form
+msgid "Reset to draft"
+msgstr "Vrati u nacrt"
+
+#. module: datev_export_dtvf
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_datev_export_dtvf_export__fiscalyear_start
+msgid "Start date"
+msgstr "Početni datum"
+
+#. module: datev_export_dtvf
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_datev_export_dtvf_export__state
+msgid "State"
+msgstr "Stanje"
+
+#. module: datev_export_dtvf
+#: model:ir.model.fields,field_description:datev_export_dtvf.field_account_account__datev_export_nonautomatic
+msgid "Suppress automatic calculations in DATEV"
+msgstr ""
+
+#. module: datev_export_dtvf
+#: model_terms:ir.ui.view,arch_db:datev_export_dtvf.res_config_settings_view_form
+msgid "The length of an account code in DATEV"
+msgstr ""
+
+#. module: datev_export_dtvf
+#: model:ir.model.fields,help:datev_export_dtvf.field_account_account__datev_export_nonautomatic
+msgid ""
+"When this flag is set, journal items from this account will be exported with"
+" field 'BU-Schlussel' set to '40', which inhibits automatic calculations in "
+"DATEV."
+msgstr ""
+
+#. module: datev_export_dtvf
+#: model:mail.template,subject:datev_export_dtvf.mail_template_cron_export
+msgid "{{object.name}}"
+msgstr "{{object.name}}"

@@ -1,0 +1,80 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mail_activity_board
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: mail_activity_board
+#: model:ir.model,name:mail_activity_board.model_mail_activity
+msgid "Activity"
+msgstr "Aktivnost"
+
+#. module: mail_activity_board
+#: model:ir.model,name:mail_activity_board.model_mail_activity_mixin
+msgid "Activity Mixin"
+msgstr "Miješanje aktivnosti"
+
+#. module: mail_activity_board
+#: model:ir.model.fields,field_description:mail_activity_board.field_mail_activity__calendar_event_id_partner_ids
+msgid "Attendees"
+msgstr "Sudionici"
+
+#. module: mail_activity_board
+#: model_terms:ir.ui.view,arch_db:mail_activity_board.mail_activity_view_search
+msgid "Deadline"
+msgstr "Krajnji rok"
+
+#. module: mail_activity_board
+#: model:ir.model.fields,field_description:mail_activity_board.field_mail_activity__display_name
+#: model:ir.model.fields,field_description:mail_activity_board.field_mail_activity_mixin__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: mail_activity_board
+#: model:ir.model.fields,field_description:mail_activity_board.field_mail_activity__related_model_instance
+msgid "Document"
+msgstr "Dokument"
+
+#. module: mail_activity_board
+#: model:ir.model.fields,field_description:mail_activity_board.field_mail_activity__duration
+msgid "Duration"
+msgstr "Trajanje"
+
+#. module: mail_activity_board
+#: model:ir.model.fields,field_description:mail_activity_board.field_mail_activity__id
+#: model:ir.model.fields,field_description:mail_activity_board.field_mail_activity_mixin__id
+msgid "ID"
+msgstr "ID"
+
+#. module: mail_activity_board
+#: model:ir.model.fields,field_description:mail_activity_board.field_mail_activity__res_model_id_name
+#: model_terms:ir.ui.view,arch_db:mail_activity_board.mail_activity_view_search
+msgid "Origin"
+msgstr "Izvor"
+
+#. module: mail_activity_board
+#: model:ir.model.fields,field_description:mail_activity_board.field_mail_activity__calendar_event_id_start
+msgid "Start"
+msgstr "Početak"
+
+#. module: mail_activity_board
+#: model:ir.model.fields,help:mail_activity_board.field_mail_activity__calendar_event_id_start
+msgid "Start date of an event, without time for full days events"
+msgstr "Početni datum događaja, bez vremena za cjelodnevne događaje"
+
+#. module: mail_activity_board
+#. odoo-javascript
+#: code:addons/mail_activity_board/static/src/components/chatter/chatter.xml:0
+msgid "View Activities"
+msgstr ""

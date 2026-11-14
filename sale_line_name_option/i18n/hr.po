@@ -1,0 +1,61 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_line_name_option
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: sale_line_name_option
+#: model:ir.model,name:sale_line_name_option.model_res_company
+msgid "Companies"
+msgstr "Tvrtke"
+
+#. module: sale_line_name_option
+#: model:ir.model,name:sale_line_name_option.model_res_config_settings
+msgid "Config Settings"
+msgstr "Postavke"
+
+#. module: sale_line_name_option
+#: model:ir.model.fields,field_description:sale_line_name_option.field_product_product__display_name
+#: model:ir.model.fields,field_description:sale_line_name_option.field_res_company__display_name
+#: model:ir.model.fields,field_description:sale_line_name_option.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: sale_line_name_option
+#: model:ir.model.fields,field_description:sale_line_name_option.field_product_product__id
+#: model:ir.model.fields,field_description:sale_line_name_option.field_res_company__id
+#: model:ir.model.fields,field_description:sale_line_name_option.field_res_config_settings__id
+msgid "ID"
+msgstr "ID"
+
+#. module: sale_line_name_option
+#: model_terms:ir.ui.view,arch_db:sale_line_name_option.res_config_settings_view_form
+msgid "If enabled, product codes will be omitted from sale order line names."
+msgstr ""
+
+#. module: sale_line_name_option
+#: model:ir.model.fields,field_description:sale_line_name_option.field_res_company__no_product_code_in_sale_line_name
+#: model:ir.model.fields,field_description:sale_line_name_option.field_res_config_settings__no_product_code_in_sale_line_name
+msgid "No Product Code In Sale Line Name"
+msgstr ""
+
+#. module: sale_line_name_option
+#: model_terms:ir.ui.view,arch_db:sale_line_name_option.res_config_settings_view_form
+msgid "No Product Code in Sale Line Name"
+msgstr ""
+
+#. module: sale_line_name_option
+#: model:ir.model,name:sale_line_name_option.model_product_product
+msgid "Product Variant"
+msgstr "Varijanta proizvoda"

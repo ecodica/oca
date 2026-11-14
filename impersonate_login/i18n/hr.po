@@ -1,0 +1,223 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* impersonate_login
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: impersonate_login
+#. odoo-javascript
+#: code:addons/impersonate_login/static/src/js/user_menu.esm.js:0
+msgid "Back to Original User"
+msgstr "Natrag na izvornog korisnika"
+
+#. module: impersonate_login
+#: model:ir.model,name:impersonate_login.model_base
+msgid "Base"
+msgstr "Osnovica"
+
+#. module: impersonate_login
+#: model:ir.model,name:impersonate_login.model_res_config_settings
+msgid "Config Settings"
+msgstr "Postavke"
+
+#. module: impersonate_login
+#: model:ir.model.fields,field_description:impersonate_login.field_mail_mail__body
+#: model:ir.model.fields,field_description:impersonate_login.field_mail_message__body
+msgid "Contents"
+msgstr "Sadržaj"
+
+#. module: impersonate_login
+#. odoo-python
+#: code:addons/impersonate_login/models/res_users.py:0
+msgid ""
+"Create and manage users that will connect to the system. Users can be "
+"deactivated should there be a period of time during which they will/should "
+"not connect to the system. You can assign them groups in order to give them "
+"specific access to the applications they need to use in the system."
+msgstr ""
+"Upravljanje korisnicima koji će se spajati na sustav. Korisnici mogu biti "
+"deaktivirani ako kaoko bi im se trajno ili provremeno ograničio pristup "
+"sistemu. Korisnicima možete dodijeliti grupe koje im daju prava pristupa "
+"aplikacijama koje su im potrebne."
+
+#. module: impersonate_login
+#: model:ir.model.fields,field_description:impersonate_login.field_impersonate_log__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: impersonate_login
+#: model:ir.model.fields,field_description:impersonate_login.field_impersonate_log__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: impersonate_login
+#: model:ir.model.fields,field_description:impersonate_login.field_impersonate_log__display_name
+#: model:ir.model.fields,field_description:impersonate_login.field_ir_http__display_name
+#: model:ir.model.fields,field_description:impersonate_login.field_mail_message__display_name
+#: model:ir.model.fields,field_description:impersonate_login.field_mail_thread__display_name
+#: model:ir.model.fields,field_description:impersonate_login.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:impersonate_login.field_res_users__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: impersonate_login
+#: model:ir.model,name:impersonate_login.model_mail_thread
+msgid "Email Thread"
+msgstr "E-mail"
+
+#. module: impersonate_login
+#: model:ir.model.fields,field_description:impersonate_login.field_impersonate_log__date_end
+msgid "End Date"
+msgstr "Datum završetka"
+
+#. module: impersonate_login
+#: model:ir.model,name:impersonate_login.model_ir_http
+msgid "HTTP Routing"
+msgstr "HTTP usmjeravanje"
+
+#. module: impersonate_login
+#: model:ir.model.fields,field_description:impersonate_login.field_impersonate_log__id
+#: model:ir.model.fields,field_description:impersonate_login.field_ir_http__id
+#: model:ir.model.fields,field_description:impersonate_login.field_mail_message__id
+#: model:ir.model.fields,field_description:impersonate_login.field_mail_thread__id
+#: model:ir.model.fields,field_description:impersonate_login.field_res_config_settings__id
+#: model:ir.model.fields,field_description:impersonate_login.field_res_users__id
+msgid "ID"
+msgstr "ID"
+
+#. module: impersonate_login
+#: model:ir.model.fields,help:impersonate_login.field_res_config_settings__restrict_impersonate_admin_settings
+msgid ""
+"If enabled, users with the 'Administration: Settings' access right cannot be"
+" impersonated."
+msgstr ""
+"Ako je omogućeno, korisnici s pravom pristupa 'Administracija: Postavke' ne "
+"mogu se predstavljati."
+
+#. module: impersonate_login
+#: model:ir.actions.act_window,name:impersonate_login.impersonate_log_action
+msgid "Impersonate Login Logs"
+msgstr "Zapisi prijave uz predstavljanje"
+
+#. module: impersonate_login
+#: model:ir.model,name:impersonate_login.model_impersonate_log
+msgid "Impersonate Logs"
+msgstr "Zapisi predstavljanja"
+
+#. module: impersonate_login
+#: model:res.groups,name:impersonate_login.group_impersonate_login
+msgid "Impersonate Users"
+msgstr "Predstavljaj se kao korisnici"
+
+#. module: impersonate_login
+#: model:ir.model.fields,field_description:impersonate_login.field_mail_mail__impersonated_author_id
+#: model:ir.model.fields,field_description:impersonate_login.field_mail_message__impersonated_author_id
+msgid "Impersonated Author"
+msgstr "Predstavljeni autor"
+
+#. module: impersonate_login
+#: model:ir.ui.menu,name:impersonate_login.menu_impersonate_log
+msgid "Impersonated Logs"
+msgstr "Zapisi predstavljanja"
+
+#. module: impersonate_login
+#: model_terms:ir.ui.view,arch_db:impersonate_login.view_res_config_settings_impersonate
+msgid "Impersonation Login"
+msgstr "Prijava predstavljanjem"
+
+#. module: impersonate_login
+#. odoo-python
+#: code:addons/impersonate_login/models/res_users.py:0
+msgid "It's you."
+msgstr "To ste vi."
+
+#. module: impersonate_login
+#: model:ir.model.fields,field_description:impersonate_login.field_impersonate_log__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: impersonate_login
+#: model:ir.model.fields,field_description:impersonate_login.field_impersonate_log__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: impersonate_login
+#: model:ir.model.fields,field_description:impersonate_login.field_impersonate_log__impersonated_partner_id
+msgid "Logged as"
+msgstr "Prijavljen kao"
+
+#. module: impersonate_login
+#. odoo-python
+#: code:addons/impersonate_login/models/mail_message.py:0
+msgid "Logged in as %(name)s"
+msgstr "Prijavljeni kao %(name)s"
+
+#. module: impersonate_login
+#: model:ir.model,name:impersonate_login.model_mail_message
+msgid "Message"
+msgstr "Poruka"
+
+#. module: impersonate_login
+#. odoo-python
+#: code:addons/impersonate_login/models/res_users.py:0
+msgid "No users found. Let's create one!"
+msgstr "Nije pronađen nijedan korisnik. Stvorimo jednog!"
+
+#. module: impersonate_login
+#: model_terms:ir.ui.view,arch_db:impersonate_login.view_res_config_settings_impersonate
+msgid ""
+"Prevents impersonating users that have the 'Administration: Settings' access"
+" rights."
+msgstr ""
+"Sprječava predstavljanje kao korisnici s pravima pristupa 'Administracija: "
+"Postavke'."
+
+#. module: impersonate_login
+#: model:ir.model.fields,field_description:impersonate_login.field_res_config_settings__restrict_impersonate_admin_settings
+#: model_terms:ir.ui.view,arch_db:impersonate_login.view_res_config_settings_impersonate
+msgid "Restrict Impersonation of 'Administration: Settings' Users"
+msgstr "Ograniči predstavljanje kao korisnici s 'Administracija: Postavke'"
+
+#. module: impersonate_login
+#: model:ir.model.fields,field_description:impersonate_login.field_impersonate_log__date_start
+msgid "Start Date"
+msgstr "Datum početka"
+
+#. module: impersonate_login
+#. odoo-javascript
+#: code:addons/impersonate_login/static/src/js/user_menu.esm.js:0
+#: model_terms:ir.ui.view,arch_db:impersonate_login.impersonate_res_users_tree
+msgid "Switch Login"
+msgstr "Zamijeni prijavu"
+
+#. module: impersonate_login
+#: model:ir.model,name:impersonate_login.model_res_users
+#: model:ir.model.fields,field_description:impersonate_login.field_impersonate_log__user_id
+msgid "User"
+msgstr "Korisnik"
+
+#. module: impersonate_login
+#. odoo-python
+#: code:addons/impersonate_login/models/res_users.py:0
+msgid "You are already Logged as another user."
+msgstr "Već ste prijavljeni kao drugi korisnik."
+
+#. module: impersonate_login
+#. odoo-python
+#: code:addons/impersonate_login/models/res_users.py:0
+msgid ""
+"You cannot impersonate users with 'Administration: Settings' access rights."
+msgstr ""
+"Ne možete se predstavljati kao korisnici s pravima pristupa 'Administracija:"
+" Postavke'."

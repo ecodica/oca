@@ -1,0 +1,127 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_lot_condition
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: stock_lot_condition
+#: model:ir.model.fields,field_description:stock_lot_condition.field_stock_lot_condition__active
+msgid "Active"
+msgstr "Aktivno"
+
+#. module: stock_lot_condition
+#: model_terms:ir.ui.view,arch_db:stock_lot_condition.stock_lot_condition_view_form
+#: model_terms:ir.ui.view,arch_db:stock_lot_condition.stock_lot_condition_view_search
+msgid "Archived"
+msgstr "Arhivirano"
+
+#. module: stock_lot_condition
+#: model:ir.model.fields,field_description:stock_lot_condition.field_stock_lot_condition__color
+msgid "Color"
+msgstr "Boja"
+
+#. module: stock_lot_condition
+#: model:ir.model.fields,field_description:stock_lot_condition.field_stock_lot__condition_id
+#: model_terms:ir.ui.view,arch_db:stock_lot_condition.search_product_lot_filter
+msgid "Condition"
+msgstr "Uvjet"
+
+#. module: stock_lot_condition
+#: model:ir.model.fields,field_description:stock_lot_condition.field_stock_lot__condition_note
+msgid "Condition Note"
+msgstr "Bilješka uvjeta"
+
+#. module: stock_lot_condition
+#: model:ir.model.fields,field_description:stock_lot_condition.field_stock_lot__condition_required_note
+msgid "Condition Required Note"
+msgstr "Obavezna bilješka uvjeta"
+
+#. module: stock_lot_condition
+#: model:ir.actions.act_window,name:stock_lot_condition.stock_lot_condition_action
+msgid "Conditions"
+msgstr "Uvjeti"
+
+#. module: stock_lot_condition
+#: model:ir.model.fields,field_description:stock_lot_condition.field_stock_lot_condition__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: stock_lot_condition
+#: model:ir.model.fields,field_description:stock_lot_condition.field_stock_lot_condition__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: stock_lot_condition
+#: model:ir.model.fields,field_description:stock_lot_condition.field_stock_lot_condition__description
+msgid "Description"
+msgstr "Opis"
+
+#. module: stock_lot_condition
+#: model:ir.model.fields,field_description:stock_lot_condition.field_stock_lot__display_name
+#: model:ir.model.fields,field_description:stock_lot_condition.field_stock_lot_condition__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: stock_lot_condition
+#: model:ir.model.fields,field_description:stock_lot_condition.field_stock_lot__id
+#: model:ir.model.fields,field_description:stock_lot_condition.field_stock_lot_condition__id
+msgid "ID"
+msgstr "ID"
+
+#. module: stock_lot_condition
+#: model:ir.model.fields,help:stock_lot_condition.field_stock_lot_condition__required_note
+msgid ""
+"If this box is checked, it will be mandatory to indicate a text for this "
+"condition in lots."
+msgstr ""
+
+#. module: stock_lot_condition
+#: model:ir.model.fields,field_description:stock_lot_condition.field_stock_lot_condition__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: stock_lot_condition
+#: model:ir.model.fields,field_description:stock_lot_condition.field_stock_lot_condition__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: stock_lot_condition
+#: model:ir.ui.menu,name:stock_lot_condition.menu_stock_lot_condition
+msgid "Lot conditions"
+msgstr ""
+
+#. module: stock_lot_condition
+#: model:ir.model,name:stock_lot_condition.model_stock_lot
+msgid "Lot/Serial"
+msgstr "Lot/Serija"
+
+#. module: stock_lot_condition
+#: model:ir.model.fields,field_description:stock_lot_condition.field_stock_lot_condition__name
+msgid "Name"
+msgstr "Naziv"
+
+#. module: stock_lot_condition
+#: model:ir.model.fields,field_description:stock_lot_condition.field_stock_lot_condition__required_note
+msgid "Required note?"
+msgstr ""
+
+#. module: stock_lot_condition
+#: model:ir.model.fields,field_description:stock_lot_condition.field_stock_lot_condition__sequence
+msgid "Sequence"
+msgstr "Sekvenca"
+
+#. module: stock_lot_condition
+#: model:ir.model,name:stock_lot_condition.model_stock_lot_condition
+msgid "Stock Lot Condition"
+msgstr ""

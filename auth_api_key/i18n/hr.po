@@ -1,0 +1,165 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* auth_api_key
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: auth_api_key
+#: model:ir.model,name:auth_api_key.model_auth_api_key
+msgid "API Key"
+msgstr "API ključ"
+
+#. module: auth_api_key
+#: model:ir.model.fields,field_description:auth_api_key.field_auth_api_key__active
+msgid "Active"
+msgstr "Aktivno"
+
+#. module: auth_api_key
+#: model:ir.model.constraint,message:auth_api_key.constraint_auth_api_key_name_uniq
+msgid "Api Key name must be unique."
+msgstr "Naziv API ključa mora biti jedinstven."
+
+#. module: auth_api_key
+#: model_terms:ir.ui.view,arch_db:auth_api_key.auth_api_key_form_view
+msgid "Archived"
+msgstr "Arhivirano"
+
+#. module: auth_api_key
+#: model:ir.actions.act_window,name:auth_api_key.auth_api_key_act_window
+#: model:ir.ui.menu,name:auth_api_key.auth_api_key_menu
+msgid "Auth Api Key"
+msgstr "Autentikacijski API ključ"
+
+#. module: auth_api_key
+#: model:ir.model,name:auth_api_key.model_res_company
+msgid "Companies"
+msgstr "Tvrtke"
+
+#. module: auth_api_key
+#: model:ir.model,name:auth_api_key.model_res_config_settings
+msgid "Config Settings"
+msgstr "Postavke"
+
+#. module: auth_api_key
+#: model:ir.model.fields,field_description:auth_api_key.field_auth_api_key__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: auth_api_key
+#: model:ir.model.fields,field_description:auth_api_key.field_auth_api_key__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: auth_api_key
+#: model:ir.model.fields,field_description:auth_api_key.field_res_company__archived_user_disable_auth_api_key
+#: model:ir.model.fields,field_description:auth_api_key.field_res_config_settings__archived_user_disable_auth_api_key
+msgid "Disable API key for archived user"
+msgstr "Onemogući API ključ za arhiviranog korisnika"
+
+#. module: auth_api_key
+#: model_terms:ir.ui.view,arch_db:auth_api_key.res_config_settings_view_form
+msgid "Disable API key when archiving user"
+msgstr "Onemogući API ključ pri arhiviranju korisnika"
+
+#. module: auth_api_key
+#: model:ir.model.fields,field_description:auth_api_key.field_auth_api_key__display_name
+#: model:ir.model.fields,field_description:auth_api_key.field_ir_http__display_name
+#: model:ir.model.fields,field_description:auth_api_key.field_res_company__display_name
+#: model:ir.model.fields,field_description:auth_api_key.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: auth_api_key
+#: model_terms:ir.ui.view,arch_db:auth_api_key.auth_api_key_form_view
+msgid "Generate Random Token"
+msgstr ""
+
+#. module: auth_api_key
+#: model:ir.model,name:auth_api_key.model_ir_http
+msgid "HTTP Routing"
+msgstr "HTTP usmjeravanje"
+
+#. module: auth_api_key
+#: model:ir.model.fields,field_description:auth_api_key.field_auth_api_key__id
+#: model:ir.model.fields,field_description:auth_api_key.field_ir_http__id
+#: model:ir.model.fields,field_description:auth_api_key.field_res_company__id
+#: model:ir.model.fields,field_description:auth_api_key.field_res_config_settings__id
+msgid "ID"
+msgstr "ID"
+
+#. module: auth_api_key
+#: model:ir.model.fields,help:auth_api_key.field_res_company__archived_user_disable_auth_api_key
+#: model:ir.model.fields,help:auth_api_key.field_res_config_settings__archived_user_disable_auth_api_key
+msgid ""
+"If checked, when a user is archived/unactivated the same change is "
+"propagated to his related api key. It is not retroactive (nothing is done  "
+"when enabling/disabling this option)."
+msgstr ""
+
+#. module: auth_api_key
+#: model:ir.model.fields,field_description:auth_api_key.field_auth_api_key__key
+msgid "Key"
+msgstr "Ključ"
+
+#. module: auth_api_key
+#: model:ir.model.fields,field_description:auth_api_key.field_auth_api_key__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: auth_api_key
+#: model:ir.model.fields,field_description:auth_api_key.field_auth_api_key__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: auth_api_key
+#: model:ir.model.fields,field_description:auth_api_key.field_auth_api_key__name
+msgid "Name"
+msgstr "Naziv"
+
+#. module: auth_api_key
+#. odoo-python
+#: code:addons/auth_api_key/models/auth_api_key.py:0
+msgid "The API key is required."
+msgstr ""
+
+#. module: auth_api_key
+#: model:ir.model.fields,help:auth_api_key.field_auth_api_key__key
+msgid ""
+"The API key. Enter a dummy value in this field if it is\n"
+"        obtained from the server environment configuration."
+msgstr ""
+
+#. module: auth_api_key
+#. odoo-python
+#: code:addons/auth_api_key/models/auth_api_key.py:0
+msgid "The key '%s' is not allowed"
+msgstr ""
+
+#. module: auth_api_key
+#: model:ir.model.fields,help:auth_api_key.field_auth_api_key__user_id
+msgid ""
+"The user used to process the requests authenticated by\n"
+"        the api key"
+msgstr ""
+
+#. module: auth_api_key
+#: model:ir.model.fields,field_description:auth_api_key.field_auth_api_key__user_id
+msgid "User"
+msgstr "Korisnik"
+
+#. module: auth_api_key
+#. odoo-python
+#: code:addons/auth_api_key/models/auth_api_key.py:0
+msgid "User is not allowed"
+msgstr ""

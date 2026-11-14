@@ -1,0 +1,253 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fieldservice_availability
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: fieldservice_availability
+#. odoo-python
+#: code:addons/fieldservice_availability/models/fsm_blackout_day.py:0
+#: model:ir.model.constraint,message:fieldservice_availability.constraint_fsm_blackout_day_unique_blackout_day_zip
+msgid "A blackout day for this date and ZIP code already exists!"
+msgstr "Zabranjeni dan za ovaj datum i poštanski broj već postoji!"
+
+#. module: fieldservice_availability
+#: model:ir.model.constraint,message:fieldservice_availability.constraint_fsm_stress_day_unique_stress_day
+msgid "A stress day with this date already exists!"
+msgstr "Dan stresa s ovim datumom već postoji!"
+
+#. module: fieldservice_availability
+#: model_terms:ir.actions.act_window,help:fieldservice_availability.action_fsm_blackout_days
+msgid "Add a Field Service Blackout Day here."
+msgstr "Dodajte zabranjeni dan terenske službe ovdje."
+
+#. module: fieldservice_availability
+#: model_terms:ir.actions.act_window,help:fieldservice_availability.action_fsm_blackout_groups
+msgid "Add a Field Service Blackout Group here."
+msgstr "Dodajte grupu zabranjenih dana terenske službe ovdje."
+
+#. module: fieldservice_availability
+#: model_terms:ir.actions.act_window,help:fieldservice_availability.action_fsm_delivery_time_range
+msgid "Add a Field Service Delivery Time Range here."
+msgstr "Dodajte raspon vremena isporuke terenske službe ovdje."
+
+#. module: fieldservice_availability
+#: model_terms:ir.actions.act_window,help:fieldservice_availability.action_fsm_stress_days
+msgid "Add a Field Service Stress Day here."
+msgstr "Dodajte dan stresa terenske službe ovdje."
+
+#. module: fieldservice_availability
+#: model:ir.ui.menu,name:fieldservice_availability.menu_fsm_config_availability
+msgid "Availability"
+msgstr "Raspoloživost"
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_blackout_day__date
+msgid "Blackout Day"
+msgstr "Zabranjeni dan"
+
+#. module: fieldservice_availability
+#: model:ir.actions.act_window,name:fieldservice_availability.action_fsm_blackout_days
+#: model:ir.ui.menu,name:fieldservice_availability.menu_fsm_blackout_days_root
+msgid "Blackout Days"
+msgstr "Zabranjeni dani"
+
+#. module: fieldservice_availability
+#: model:ir.model,name:fieldservice_availability.model_fsm_blackout_day
+msgid "Blackout Days (No Service)"
+msgstr "Zabranjeni dani (bez usluge)"
+
+#. module: fieldservice_availability
+#: model:ir.model,name:fieldservice_availability.model_fsm_blackout_group
+msgid "Blackout Group"
+msgstr "Grupa zabranjenih dana"
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_route__fsm_blackout_group_ids
+msgid "Blackout Group Days"
+msgstr "Dani grupe zabranjenih dana"
+
+#. module: fieldservice_availability
+#: model:ir.actions.act_window,name:fieldservice_availability.action_fsm_blackout_groups
+#: model:ir.ui.menu,name:fieldservice_availability.menu_fsm_blackout_group_root
+msgid "Blackout Groups"
+msgstr "Grupe zabranjenih dana"
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_blackout_day__create_uid
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_blackout_group__create_uid
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_delivery_time_range__create_uid
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_stress_day__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_blackout_day__create_date
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_blackout_group__create_date
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_delivery_time_range__create_date
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_stress_day__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,help:fieldservice_availability.field_fsm_delivery_time_range__sequence
+msgid "Customize the order of time ranges. Lower numbers are shown first."
+msgstr ""
+"Prilagodite redoslijed vremenskih raspona. Niži brojevi prikazuju se prvi."
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_blackout_group__fsm_blackout_day_ids
+msgid "Days"
+msgstr "Dani"
+
+#. module: fieldservice_availability
+#: model:ir.model,name:fieldservice_availability.model_fsm_delivery_time_range
+#: model_terms:ir.ui.view,arch_db:fieldservice_availability.view_fsm_delivery_time_range_form
+msgid "Delivery Time Range"
+msgstr "Raspon vremena isporuke"
+
+#. module: fieldservice_availability
+#: model:ir.actions.act_window,name:fieldservice_availability.action_fsm_delivery_time_range
+#: model:ir.ui.menu,name:fieldservice_availability.menu_fsm_delivery_time_range
+msgid "Delivery Time Ranges"
+msgstr "Rasponi vremena isporuke"
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_blackout_day__name
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_stress_day__name
+msgid "Description"
+msgstr "Opis"
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_blackout_day__display_name
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_blackout_group__display_name
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_delivery_time_range__display_name
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_route__display_name
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_stress_day__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_delivery_time_range__end_time
+msgid "End Time"
+msgstr "Vrijeme završetka"
+
+#. module: fieldservice_availability
+#: model:ir.model,name:fieldservice_availability.model_fsm_order
+msgid "Field Service Order"
+msgstr ""
+
+#. module: fieldservice_availability
+#: model:ir.model,name:fieldservice_availability.model_fsm_route
+msgid "Field Service Route"
+msgstr ""
+
+#. module: fieldservice_availability
+#: model:ir.model,name:fieldservice_availability.model_fsm_stress_day
+msgid "High-Demand Days"
+msgstr ""
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_blackout_day__id
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_blackout_group__id
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_delivery_time_range__id
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_order__id
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_route__id
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_stress_day__id
+msgid "ID"
+msgstr "ID"
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_blackout_day__write_uid
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_blackout_group__write_uid
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_delivery_time_range__write_uid
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_stress_day__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_blackout_day__write_date
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_blackout_group__write_date
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_delivery_time_range__write_date
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_stress_day__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_blackout_group__name
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_delivery_time_range__name
+msgid "Name"
+msgstr "Naziv"
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_order__display_name
+msgid "Order"
+msgstr "Narudžba"
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,help:fieldservice_availability.field_fsm_blackout_day__zip
+msgid "Postal code of the blackout day."
+msgstr ""
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_delivery_time_range__route_id
+msgid "Route"
+msgstr "Ruta"
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_delivery_time_range__sequence
+msgid "Sequence"
+msgstr "Sekvenca"
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,help:fieldservice_availability.field_fsm_delivery_time_range__route_id
+msgid ""
+"Specific route this time range applies to. Leave empty for global time "
+"ranges."
+msgstr ""
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_delivery_time_range__start_time
+msgid "Start Time"
+msgstr ""
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_stress_day__date
+msgid "Stress Day"
+msgstr ""
+
+#. module: fieldservice_availability
+#: model:ir.actions.act_window,name:fieldservice_availability.action_fsm_stress_days
+#: model:ir.ui.menu,name:fieldservice_availability.menu_fsm_stress_days_root
+msgid "Stress Days"
+msgstr ""
+
+#. module: fieldservice_availability
+#. odoo-python
+#: code:addons/fieldservice_availability/models/fsm_order.py:0
+msgid ""
+"The date %(date)s is a blackout day for field service operations on this "
+"route."
+msgstr ""
+
+#. module: fieldservice_availability
+#. odoo-python
+#: code:addons/fieldservice_availability/models/fsm_delivery_time_range.py:0
+msgid "The start time must be earlier than the end time."
+msgstr ""
+
+#. module: fieldservice_availability
+#: model:ir.model.fields,field_description:fieldservice_availability.field_fsm_blackout_day__zip
+msgid "Zip"
+msgstr "Poštanski broj"

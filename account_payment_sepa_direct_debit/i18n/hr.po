@@ -1,0 +1,511 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_banking_sepa_direct_debit
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: account_banking_sepa_direct_debit
+#: model:ir.actions.report,print_report_name:account_banking_sepa_direct_debit.report_sepa_direct_debit_mandate
+msgid ""
+"'Mandate-%s-%s' % (object.unique_mandate_reference, object.partner_id and "
+"object.partner_id.name.replace(' ', '_') or '')"
+msgstr ""
+"'Mandate-%s-%s' % (object.unique_mandate_reference, object.partner_id and "
+"object.partner_id.name.replace(' ', '_') or '')"
+
+#. module: account_banking_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
+msgid "<em>Account Number - IBAN:</em>"
+msgstr "<em>Broj računa - IBAN:</em>"
+
+#. module: account_banking_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
+msgid "<em>Address of the Debtor:</em>"
+msgstr "<em>Adresa dužnika:</em>"
+
+#. module: account_banking_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
+msgid "<em>Address:</em>"
+msgstr "<em>Adresa:</em>"
+
+#. module: account_banking_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
+msgid "<em>Country of the debtor:</em>"
+msgstr "<em>Država dužnika:</em>"
+
+#. module: account_banking_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
+msgid "<em>Country:</em>"
+msgstr "<em>Država:</em>"
+
+#. module: account_banking_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
+msgid "<em>Creditor's Name:</em>"
+msgstr "<em>Naziv vjerovnika:</em>"
+
+#. module: account_banking_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
+msgid "<em>Date - Location:</em>"
+msgstr "<em>Datum - mjesto:</em>"
+
+#. module: account_banking_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
+msgid "<em>Debtor's Name:</em>"
+msgstr "<em>Naziv dužnika:</em>"
+
+#. module: account_banking_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
+msgid "<em>Identifier:</em>"
+msgstr "<em>Identifikator:</em>"
+
+#. module: account_banking_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
+msgid "<em>Mandate Reference:</em>"
+msgstr "<em>Referenca mandata:</em>"
+
+#. module: account_banking_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
+msgid "<em>Postal Code - City - Town:</em>"
+msgstr "<em>Poštanski broj - grad - mjesto:</em>"
+
+#. module: account_banking_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
+msgid "<em>Signature of the debtor:</em>"
+msgstr "<em>Potpis dužnika:</em>"
+
+#. module: account_banking_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
+msgid "<em>Swift BIC (up to 8 or 11 characteres):</em>"
+msgstr "<em>SWIFT BIC (do 8 ili 11 znakova):</em>"
+
+#. module: account_banking_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
+msgid "<em>Type of payment:</em>"
+msgstr "<em>Vrsta plaćanja:</em>"
+
+#. module: account_banking_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
+msgid "<strong>Sepa Business-To-Business Direct debit Mandate</strong>"
+msgstr ""
+"<strong>SEPA mandat izravnog terećenja između poslovnih subjekata</strong>"
+
+#. module: account_banking_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
+msgid "<strong>Sepa Direct Debit Mandate</strong>"
+msgstr "<strong>SEPA mandat izravnog terećenja</strong>"
+
+#. module: account_banking_sepa_direct_debit
+#: model:ir.model,name:account_banking_sepa_direct_debit.model_account_banking_mandate
+msgid "A generic banking mandate"
+msgstr "Generički bankovni mandat"
+
+#. module: account_banking_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
+msgid ""
+"ALL GAPS ARE MANDATORY. ONCE THIS MANDATE HAS BEEN SIGNED MUST BE SENT TO "
+"CREDITOR FOR STORAGE."
+msgstr ""
+"SVE PRAZNINE SU OBAVEZNE. NAKON POTPISA OVAJ MANDAT MORA BITI POSLAN "
+"VJEROVNIKU NA POHRANU."
+
+#. module: account_banking_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
+msgid ""
+"ALL GAPS ARE MANDATORY. ONCE THIS MANDATE HAS BEEN SIGNED MUST BE SENT TO CREDITOR FOR STORAGE.\n"
+"                        NEVERTHELESS, THE BANK OF DEBTOR REQUIRES DEBTOR’S AUTHORIZATION BEFORE DEBITING B2B DIRECT DEBITS IN THE ACCOUNT.\n"
+"                        THE DEBTOR WILL BE ABLE TO MANAGE THE MENTIONED AUTHORIZATION THROUGH THE MEANS PROVIDED BY HIS BANK."
+msgstr ""
+"SVE PRAZNINE SU OBAVEZNE. NAKON POTPISA OVAJ MANDAT MORA BITI POSLAN VJEROVNIKU NA POHRANU.\n"
+"                        IPAK, BANKA DUŽNIKA ZAHTIJEVA DUŽNIKOVO ODOBRENJE PRIJE TEREĆENJA B2B IZRAVNIH TEREĆENJA NA RAČUNU.\n"
+"                        DUŽNIK ĆE MOĆI UPRAVLJATI NAVEDENIM ODOBRENJEM PUTEM SREDSTAVA KOJE MU PRUŽA NJEGOVA BANKA."
+
+#. module: account_banking_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
+msgid ""
+"As part of your rights, you are entitled to a refund from\n"
+"                        your bank under the terms and conditions of your agreement\n"
+"                        with your bank.\n"
+"                        A refund must be claimed within 8 weeks starting from the date on which your account was debited."
+msgstr ""
+"U sklopu vaših prava imate pravo na povrat od\n"
+"                        vaše banke prema uvjetima vašeg ugovora\n"
+"                        s vašom bankom.\n"
+"                        Povrat mora biti zatražen u roku od 8 tjedana od dana na koji je vaš račun terećen."
+
+#. module: account_banking_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_banking_sepa_direct_debit/models/account_banking_mandate.py:0
+#, python-format
+msgid ""
+"As you changed the bank account attached to this mandate, the 'Sequence "
+"Type' has been set back to 'First'."
+msgstr ""
+"Budući da ste promijenili bankovni račun povezan s ovim mandatom, 'Vrsta "
+"sekvence' vraćena je na 'Prvo'."
+
+#. module: account_banking_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_banking_sepa_direct_debit/models/account_payment_order.py:0
+#, python-format
+msgid ""
+"Automatically switched from <b>First</b> to <b>Recurring</b> when the debit "
+"order <a href=# data-oe-model=account.payment.order data-oe-id=%d>{}</a> has"
+" been marked as uploaded."
+msgstr ""
+"Automatski se prebacuje s <b>Prvo</b> na <b>Ponavljajuće</b> kada je nalog "
+"za terećenje <a href=# data-oe-model=account.payment.order data-oe-"
+"id=%d>{}</a> označen kao učitan."
+
+#. module: account_banking_sepa_direct_debit
+#: model:ir.model.fields.selection,name:account_banking_sepa_direct_debit.selection__account_banking_mandate__scheme__core
+msgid "Basic (CORE)"
+msgstr "Osnovno (CORE)"
+
+#. module: account_banking_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
+msgid "By signing this mandate form, you authorise (A)"
+msgstr "Potpisom ovog obrasca mandata ovlašćujete (A)"
+
+#. module: account_banking_sepa_direct_debit
+#: model:ir.model,name:account_banking_sepa_direct_debit.model_res_company
+msgid "Companies"
+msgstr "Tvrtke"
+
+#. module: account_banking_sepa_direct_debit
+#: model:ir.model,name:account_banking_sepa_direct_debit.model_res_config_settings
+msgid "Config Settings"
+msgstr "Postavke"
+
+#. module: account_banking_sepa_direct_debit
+#: model:ir.model.fields,field_description:account_banking_sepa_direct_debit.field_account_banking_mandate__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: account_banking_sepa_direct_debit
+#: model:ir.model.fields,help:account_banking_sepa_direct_debit.field_account_payment_mode__sepa_creditor_identifier
+msgid ""
+"Enter the Creditor Identifier that has been attributed to your company to make SEPA Direct Debits. If not defined, SEPA Creditor Identifier from company will be used.\n"
+"This identifier is composed of :\n"
+"- your country ISO code (2 letters)\n"
+"- a 2-digits checkum\n"
+"- a 3-letters business code\n"
+"- a country-specific identifier"
+msgstr ""
+"Unesite identifikator vjerovnika koji je dodijeljen vašoj tvrtki za izvršenje SEPA izravnih terećenja. Ako nije definiran, koristit će se SEPA identifikator vjerovnika tvrtke.\n"
+"Ovaj identifikator sastoji se od:\n"
+"- ISO koda vaše države (2 slova)\n"
+"- 2-znamenkaste kontrolne znamenke\n"
+"- 3-slovnog poslovnog koda\n"
+"- identifikatora specifičnog za državu"
+
+#. module: account_banking_sepa_direct_debit
+#: model:ir.model.fields,help:account_banking_sepa_direct_debit.field_res_company__sepa_creditor_identifier
+#: model:ir.model.fields,help:account_banking_sepa_direct_debit.field_res_config_settings__sepa_creditor_identifier
+msgid ""
+"Enter the Creditor Identifier that has been attributed to your company to make SEPA Direct Debits. This identifier is composed of :\n"
+"- your country ISO code (2 letters)\n"
+"- a 2-digits checkum\n"
+"- a 3-letters business code\n"
+"- a country-specific identifier"
+msgstr ""
+"Unesite identifikator vjerovnika koji je dodijeljen vašoj tvrtki za izvršenje SEPA izravnih terećenja. Ovaj identifikator sastoji se od:\n"
+"- ISO koda vaše države (2 slova)\n"
+"- 2-znamenkaste kontrolne znamenke\n"
+"- 3-slovnog poslovnog koda\n"
+"- identifikatora specifičnog za državu"
+
+#. module: account_banking_sepa_direct_debit
+#: model:ir.model.fields.selection,name:account_banking_sepa_direct_debit.selection__account_banking_mandate__scheme__b2b
+msgid "Enterprise (B2B)"
+msgstr "Poduzeće (B2B)"
+
+#. module: account_banking_sepa_direct_debit
+#: model:ir.model.fields.selection,name:account_banking_sepa_direct_debit.selection__account_banking_mandate__recurrent_sequence_type__final
+msgid "Final"
+msgstr "Završno"
+
+#. module: account_banking_sepa_direct_debit
+#: model:ir.model.fields.selection,name:account_banking_sepa_direct_debit.selection__account_banking_mandate__recurrent_sequence_type__first
+msgid "First"
+msgstr "Prvi"
+
+#. module: account_banking_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_banking_sepa_direct_debit/models/account_payment_order.py:0
+#, python-format
+msgid "Invalid mandate type in '%s'. Valid ones are 'Recurrent' or 'One-Off'"
+msgstr ""
+"Nevažeća vrsta mandata u '%s'. Valjane su 'Ponavljajući' ili 'Jednokratni'"
+
+#. module: account_banking_sepa_direct_debit
+#: model:ir.model.fields,field_description:account_banking_sepa_direct_debit.field_account_banking_mandate__format
+msgid "Mandate Format"
+msgstr "Format mandata"
+
+#. module: account_banking_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_banking_sepa_direct_debit/models/account_banking_mandate.py:0
+#, python-format
+msgid "Mandate automatically set to expired after %d months without use."
+msgstr ""
+"Mandat se automatski postavlja kao istekao nakon %d mjeseci bez upotrebe."
+
+#. module: account_banking_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_banking_sepa_direct_debit/models/account_banking_mandate.py:0
+#, python-format
+msgid "Mandate update"
+msgstr "Ažuriranje mandata"
+
+#. module: account_banking_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_banking_sepa_direct_debit/models/account_payment_line.py:0
+#, python-format
+msgid ""
+"Missing SEPA Direct Debit mandate on the line with partner {partner_name} "
+"(reference {reference})."
+msgstr ""
+"Nedostaje mandat SEPA izravnog terećenja na retku s partnerom {partner_name}"
+" (referenca {reference})."
+
+#. module: account_banking_sepa_direct_debit
+#: model:ir.model.fields.selection,name:account_banking_sepa_direct_debit.selection__account_banking_mandate__type__oneoff
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.view_mandate_search
+msgid "One-Off"
+msgstr "Jednokratni"
+
+#. module: account_banking_sepa_direct_debit
+#: model:ir.model.fields,field_description:account_banking_sepa_direct_debit.field_account_payment_method__pain_version
+msgid "PAIN Version"
+msgstr "PAIN verzija"
+
+#. module: account_banking_sepa_direct_debit
+#: model:ir.model,name:account_banking_sepa_direct_debit.model_account_payment_line
+msgid "Payment Lines"
+msgstr "Stavke plaćanja"
+
+#. module: account_banking_sepa_direct_debit
+#: model:ir.model,name:account_banking_sepa_direct_debit.model_account_payment_method
+msgid "Payment Methods"
+msgstr "Načini plaćanja"
+
+#. module: account_banking_sepa_direct_debit
+#: model:ir.model,name:account_banking_sepa_direct_debit.model_account_payment_mode
+msgid "Payment Modes"
+msgstr "Načini plaćanja"
+
+#. module: account_banking_sepa_direct_debit
+#: model:ir.model,name:account_banking_sepa_direct_debit.model_account_payment_order
+msgid "Payment Order"
+msgstr "Nalog za plaćanje"
+
+#. module: account_banking_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_banking_sepa_direct_debit/models/account_payment_order.py:0
+#, python-format
+msgid ""
+"Payment Type Code '%s' is not supported. The only Payment Type Code "
+"supported for SEPA Direct Debit are 'pain.008.001.02', 'pain.008.001.03' and"
+" 'pain.008.001.04'."
+msgstr ""
+"Šifra vrste plaćanja '%s' nije podržana. Jedine podržane šifre vrste "
+"plaćanja za SEPA izravno terećenje su 'pain.008.001.02', 'pain.008.001.03' i"
+" 'pain.008.001.04'."
+
+#. module: account_banking_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.view_mandate_form
+msgid "Print"
+msgstr "Ispis"
+
+#. module: account_banking_sepa_direct_debit
+#: model:ir.model.fields.selection,name:account_banking_sepa_direct_debit.selection__account_banking_mandate__type__recurrent
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.view_mandate_search
+msgid "Recurrent"
+msgstr "Ponavljajuće"
+
+#. module: account_banking_sepa_direct_debit
+#: model:ir.model.fields.selection,name:account_banking_sepa_direct_debit.selection__account_banking_mandate__recurrent_sequence_type__recurring
+msgid "Recurring"
+msgstr "Ponavljajući"
+
+#. module: account_banking_sepa_direct_debit
+#: model:ir.model.fields,field_description:account_banking_sepa_direct_debit.field_account_payment_mode__sepa_creditor_identifier
+#: model:ir.model.fields,field_description:account_banking_sepa_direct_debit.field_res_company__sepa_creditor_identifier
+#: model:ir.model.fields,field_description:account_banking_sepa_direct_debit.field_res_config_settings__sepa_creditor_identifier
+msgid "SEPA Creditor Identifier"
+msgstr "SEPA identifikator vjerovnika"
+
+#. module: account_banking_sepa_direct_debit
+#: model:account.payment.method,name:account_banking_sepa_direct_debit.sepa_direct_debit
+msgid "SEPA Direct Debit for customers"
+msgstr "SEPA izravno terećenje za kupce"
+
+#. module: account_banking_sepa_direct_debit
+#: model:account.payment.mode,name:account_banking_sepa_direct_debit.payment_mode_inbound_sepa_dd1
+msgid "SEPA Direct Debit of customers"
+msgstr "SEPA izravno terećenje kupaca"
+
+#. module: account_banking_sepa_direct_debit
+#: model:ir.actions.report,name:account_banking_sepa_direct_debit.report_sepa_direct_debit_mandate
+msgid "SEPA Mandate"
+msgstr "SEPA mandat"
+
+#. module: account_banking_sepa_direct_debit
+#: model:ir.model.fields,field_description:account_banking_sepa_direct_debit.field_account_banking_mandate__scheme
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.view_mandate_search
+msgid "Scheme"
+msgstr "Shema"
+
+#. module: account_banking_sepa_direct_debit
+#: model:ir.model.fields.selection,name:account_banking_sepa_direct_debit.selection__account_banking_mandate__format__sepa
+msgid "Sepa Mandate"
+msgstr "SEPA mandat"
+
+#. module: account_banking_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.view_mandate_search
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.view_mandate_tree
+msgid "Sequence Type"
+msgstr "Vrsta sekvence"
+
+#. module: account_banking_sepa_direct_debit
+#: model:ir.model.fields,field_description:account_banking_sepa_direct_debit.field_account_banking_mandate__recurrent_sequence_type
+msgid "Sequence Type for Next Debit"
+msgstr "Vrsta sekvence za sljedeće terećenje"
+
+#. module: account_banking_sepa_direct_debit
+#: model:ir.actions.server,name:account_banking_sepa_direct_debit.sdd_mandate_expire_cron_ir_actions_server
+#: model:ir.cron,cron_name:account_banking_sepa_direct_debit.sdd_mandate_expire_cron
+msgid "Set SEPA Direct Debit Mandates to Expired"
+msgstr "Postavi SEPA mandate izravnog terećenja kao istekle"
+
+#. module: account_banking_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_banking_sepa_direct_debit/models/account_payment_mode.py:0
+#: code:addons/account_banking_sepa_direct_debit/models/res_company.py:0
+#, python-format
+msgid "The SEPA Creditor Identifier '%s' is invalid."
+msgstr "SEPA identifikator vjerovnika '%s' je nevažeći."
+
+#. module: account_banking_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_banking_sepa_direct_debit/models/account_payment_line.py:0
+#, python-format
+msgid ""
+"The SEPA Direct Debit mandate with reference {mandate_ref} for partner "
+"{partner_name} has expired."
+msgstr ""
+"Mandat SEPA izravnog terećenja s referencom {mandate_ref} za partnera "
+"{partner_name} je istekao."
+
+#. module: account_banking_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_banking_sepa_direct_debit/models/account_payment_line.py:0
+#, python-format
+msgid ""
+"The SEPA Direct Debit mandate with reference {mandate_ref} for partner "
+"{partner_name} has type set to 'One-Off' but has a last debit date set to "
+"{last_debit_date}. Therefore, it cannot be used."
+msgstr ""
+"Mandat SEPA izravnog terećenja s referencom {mandate_ref} za partnera "
+"{partner_name} ima vrstu postavljenu na 'Jednokratni', ali ima zadnji datum "
+"terećenja postavljen na {last_debit_date}. Stoga se ne može koristiti."
+
+#. module: account_banking_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_banking_sepa_direct_debit/models/account_banking_mandate.py:0
+#, python-format
+msgid "The recurrent mandate '%s' must have a sequence type."
+msgstr "Ponavljajući mandat '%s' mora imati vrstu sekvence."
+
+#. module: account_banking_sepa_direct_debit
+#: model:ir.model.fields,help:account_banking_sepa_direct_debit.field_account_banking_mandate__recurrent_sequence_type
+msgid ""
+"This field is only used for Recurrent mandates, not for One-Off mandates."
+msgstr ""
+"Ovo polje koristi se samo za ponavljajuće mandate, ne za jednokratne "
+"mandate."
+
+#. module: account_banking_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
+msgid ""
+"This mandate is only intended for business-to-business transactions.\n"
+"                        You are not entitled to a refund from your bank after your account has\n"
+"                        been debited, but you are entitled to request your bank\n"
+"                        not to debit your account up until the day on which the payment is due."
+msgstr ""
+"Ovaj mandat namijenjen je samo transakcijama između poslovnih subjekata.\n"
+"                        Nemate pravo na povrat od svoje banke nakon što je vaš račun\n"
+"                        terećen, ali imate pravo zatražiti od svoje banke\n"
+"                        da ne tereti vaš račun do dana na koji plaćanje dospijeva."
+
+#. module: account_banking_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
+msgid "To be completed by the creditor"
+msgstr "Popunjava vjerovnik"
+
+#. module: account_banking_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
+msgid "To be completed by the debtor"
+msgstr "Popunjava dužnik"
+
+#. module: account_banking_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.view_mandate_search
+msgid "Type"
+msgstr "Vrsta"
+
+#. module: account_banking_sepa_direct_debit
+#: model:ir.model.fields,field_description:account_banking_sepa_direct_debit.field_account_banking_mandate__type
+msgid "Type of Mandate"
+msgstr "Vrsta mandata"
+
+#. module: account_banking_sepa_direct_debit
+#: model:ir.model.fields,field_description:account_banking_sepa_direct_debit.field_account_banking_mandate__unique_mandate_reference
+msgid "Unique Mandate Reference"
+msgstr "Jedinstvena referenca mandata"
+
+#. module: account_banking_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.view_account_config_settings
+msgid "Write the ICS of your company"
+msgstr "Napišite ICS svoje tvrtke"
+
+#. module: account_banking_sepa_direct_debit
+#: model:ir.model.fields.selection,name:account_banking_sepa_direct_debit.selection__account_payment_method__pain_version__pain_008_001_02
+msgid "pain.008.001.02 (recommended for direct debit)"
+msgstr "pain.008.001.02 (preporučeno za izravno terećenje)"
+
+#. module: account_banking_sepa_direct_debit
+#: model:ir.model.fields.selection,name:account_banking_sepa_direct_debit.selection__account_payment_method__pain_version__pain_008_001_03
+msgid "pain.008.001.03"
+msgstr "pain.008.001.03"
+
+#. module: account_banking_sepa_direct_debit
+#: model:ir.model.fields.selection,name:account_banking_sepa_direct_debit.selection__account_payment_method__pain_version__pain_008_001_04
+msgid "pain.008.001.04"
+msgstr "pain.008.001.04"
+
+#. module: account_banking_sepa_direct_debit
+#: model:ir.model.fields.selection,name:account_banking_sepa_direct_debit.selection__account_payment_method__pain_version__pain_008_003_02
+msgid "pain.008.003.02 (direct debit in Germany)"
+msgstr "pain.008.003.02 (izravno terećenje u Njemačkoj)"
+
+#. module: account_banking_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
+msgid ""
+"to send instructions to your bank to debit your account and (B) your bank to\n"
+"                       debit your account in accordance with the instructions from"
+msgstr ""
+"za slanje uputa svojoj banci da tereti vaš račun i (B) vašoj banci da\n"
+"                       tereti vaš račun u skladu s uputama od"

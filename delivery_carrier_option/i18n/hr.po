@@ -1,0 +1,208 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* delivery_carrier_option
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: delivery_carrier_option
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_delivery_carrier_option__active
+msgid "Active"
+msgstr "Aktivno"
+
+#. module: delivery_carrier_option
+#: model:ir.model.fields.selection,name:delivery_carrier_option.selection__delivery_carrier_template_option__type__additional
+msgid "Additional Service"
+msgstr "Dodatna usluga"
+
+#. module: delivery_carrier_option
+#: model:ir.model.fields,help:delivery_carrier_option.field_delivery_carrier_option__description
+#: model:ir.model.fields,help:delivery_carrier_option.field_delivery_carrier_template_option__description
+msgid "Allow to define a more complete description than in the name field."
+msgstr "Omogućuje definiranje potpunijeg opisa nego u polju naziva."
+
+#. module: delivery_carrier_option
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_delivery_carrier_option__by_default
+msgid "Applied by Default"
+msgstr "Primijenjeno prema zadanim postavkama"
+
+#. module: delivery_carrier_option
+#: model:ir.model.fields.selection,name:delivery_carrier_option.selection__delivery_carrier_template_option__type__basic
+msgid "Basic Service"
+msgstr "Osnovna usluga"
+
+#. module: delivery_carrier_option
+#: model:ir.model.fields,help:delivery_carrier_option.field_delivery_carrier_option__by_default
+msgid ""
+"By check, user can choose to apply this option to each Delivery Order\n"
+" using this delivery method"
+msgstr ""
+"Prema potvrdnom okviru, korisnik može odabrati primjenu ove opcije na svaki otpremni nalog\n"
+" koji koristi ovu metodu isporuke"
+
+#. module: delivery_carrier_option
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_delivery_carrier_option__carrier_id
+msgid "Carrier"
+msgstr "Prijevoznik"
+
+#. module: delivery_carrier_option
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_delivery_carrier_option__code
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_delivery_carrier_template_option__code
+msgid "Code"
+msgstr "Šifra"
+
+#. module: delivery_carrier_option
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_delivery_carrier_option__color
+msgid "Color"
+msgstr "Boja"
+
+#. module: delivery_carrier_option
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_delivery_carrier_option__create_uid
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_delivery_carrier_template_option__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: delivery_carrier_option
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_delivery_carrier_option__create_date
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_delivery_carrier_template_option__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: delivery_carrier_option
+#: model:ir.model.fields.selection,name:delivery_carrier_option.selection__delivery_carrier_template_option__type__delivery
+msgid "Delivery Instructions"
+msgstr "Upute za isporuku"
+
+#. module: delivery_carrier_option
+#: model:ir.model,name:delivery_carrier_option.model_delivery_carrier_option
+msgid "Delivery carrier option"
+msgstr "Opcija prijevoznika isporuke"
+
+#. module: delivery_carrier_option
+#: model:ir.model,name:delivery_carrier_option.model_delivery_carrier_template_option
+msgid "Delivery carrier template option"
+msgstr "Opcija predloška prijevoznika isporuke"
+
+#. module: delivery_carrier_option
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_delivery_carrier_option__description
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_delivery_carrier_template_option__description
+msgid "Description"
+msgstr "Opis"
+
+#. module: delivery_carrier_option
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_delivery_carrier__display_name
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_delivery_carrier_option__display_name
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_delivery_carrier_template_option__display_name
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_stock_picking__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: delivery_carrier_option
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_delivery_carrier__id
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_delivery_carrier_option__id
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_delivery_carrier_template_option__id
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_stock_picking__id
+msgid "ID"
+msgstr "ID"
+
+#. module: delivery_carrier_option
+#: model:ir.model.fields,help:delivery_carrier_option.field_delivery_carrier_option__mandatory
+msgid ""
+"If checked, this option is necessarily applied to the delivery order. "
+"Mandatory options show up in orange in the option widget on the picking."
+msgstr ""
+
+#. module: delivery_carrier_option
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_delivery_carrier_option__write_uid
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_delivery_carrier_template_option__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: delivery_carrier_option
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_delivery_carrier_option__write_date
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_delivery_carrier_template_option__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: delivery_carrier_option
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_delivery_carrier_option__mandatory
+msgid "Mandatory"
+msgstr "Obavezno"
+
+#. module: delivery_carrier_option
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_delivery_carrier_option__name
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_delivery_carrier_template_option__name
+msgid "Name"
+msgstr "Naziv"
+
+#. module: delivery_carrier_option
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_delivery_carrier__available_option_ids
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_delivery_carrier_option__tmpl_option_id
+msgid "Option"
+msgstr "Opcija"
+
+#. module: delivery_carrier_option
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_delivery_carrier_option__type
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_delivery_carrier_template_option__type
+msgid "Option Type"
+msgstr ""
+
+#. module: delivery_carrier_option
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_stock_picking__option_ids
+#: model_terms:ir.ui.view,arch_db:delivery_carrier_option.view_delivery_carrier_form
+msgid "Options"
+msgstr "Opcije"
+
+#. module: delivery_carrier_option
+#: model:ir.model.fields,help:delivery_carrier_option.field_delivery_carrier_option__color
+msgid "Orange if the option is mandatory, otherwise no color"
+msgstr ""
+
+#. module: delivery_carrier_option
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_delivery_carrier_option__partner_id
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_delivery_carrier_template_option__partner_id
+msgid "Partner Carrier"
+msgstr ""
+
+#. module: delivery_carrier_option
+#: model:ir.model.fields.selection,name:delivery_carrier_option.selection__delivery_carrier_template_option__type__partner_option
+msgid "Partner Option"
+msgstr ""
+
+#. module: delivery_carrier_option
+#: model:ir.model.fields,field_description:delivery_carrier_option.field_delivery_carrier_option__readonly_flag
+msgid "Readonly Flag"
+msgstr ""
+
+#. module: delivery_carrier_option
+#: model:ir.model,name:delivery_carrier_option.model_delivery_carrier
+msgid "Shipping Methods"
+msgstr "Načini dostave"
+
+#. module: delivery_carrier_option
+#: model:ir.model,name:delivery_carrier_option.model_stock_picking
+msgid "Transfer"
+msgstr "Prijenos"
+
+#. module: delivery_carrier_option
+#: model:ir.model.fields,help:delivery_carrier_option.field_delivery_carrier_option__readonly_flag
+msgid ""
+"When True, help to prevent the user to modify some fields option (if "
+"attribute is defined in the view)"
+msgstr ""
+
+#. module: delivery_carrier_option
+#: model_terms:ir.ui.view,arch_db:delivery_carrier_option.delivery_carrier_option_view_form
+#: model_terms:ir.ui.view,arch_db:delivery_carrier_option.delivery_carrier_template_option_view_form
+msgid "delivery_carrier_option"
+msgstr "delivery_carrier_option"

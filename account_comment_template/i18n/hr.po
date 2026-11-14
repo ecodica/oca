@@ -1,0 +1,46 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_comment_template
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: account_comment_template
+#: model:ir.model.fields,field_description:account_comment_template.field_account_move__comment_template_ids
+msgid "Comment Template"
+msgstr "Predložak komentara"
+
+#. module: account_comment_template
+#: model_terms:ir.ui.view,arch_db:account_comment_template.move_form_add_comment
+msgid "Comments"
+msgstr "Komentari"
+
+#. module: account_comment_template
+#: model:ir.model.fields,field_description:account_comment_template.field_account_move__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: account_comment_template
+#: model:ir.ui.menu,name:account_comment_template.menu_base_comment_template_invoice
+msgid "Document Comments"
+msgstr "Komentari dokumenta"
+
+#. module: account_comment_template
+#: model:ir.model.fields,field_description:account_comment_template.field_account_move__id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_comment_template
+#: model:ir.model,name:account_comment_template.model_account_move
+msgid "Journal Entry"
+msgstr "Stavke temeljnice"

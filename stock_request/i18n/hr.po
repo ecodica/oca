@@ -1,0 +1,1139 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_request
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: stock_request
+#. odoo-python
+#: code:addons/stock_request/models/stock_move_line.py:0
+msgid ""
+"%(product_name)s : Transferred quantity %(product_qty)s %(product_uom)s"
+msgstr "%(product_name)s : Prenesena količina %(product_qty)s %(product_uom)s"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__message_needaction
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__message_needaction
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__message_needaction
+msgid "Action Needed"
+msgstr "Potrebna radnja"
+
+#. module: stock_request
+#: model_terms:ir.ui.view,arch_db:stock_request.res_config_settings_view_form
+msgid "Activates Stock Request Orders"
+msgstr "Aktivira narudžbe zahtjeva za zalihama"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__activity_ids
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__activity_ids
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__activity_ids
+msgid "Activities"
+msgstr "Aktivnosti"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__activity_exception_decoration
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__activity_exception_decoration
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Ukras iznimke aktivnosti"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__activity_state
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__activity_state
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__activity_state
+msgid "Activity State"
+msgstr "Status aktivnosti"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__activity_type_icon
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__activity_type_icon
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Ikona vrste aktivnosti"
+
+#. module: stock_request
+#: model_terms:ir.ui.view,arch_db:stock_request.res_config_settings_view_form
+msgid "Add State to Stock Request and Stock Request Orders if activated."
+msgstr ""
+"Dodaje status zahtjevu za zalihama i narudžbama zahtjeva za zalihama ako je "
+"aktivirano."
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_allocation__allocated_product_qty
+msgid "Allocated Quantity"
+msgstr "Alocirana Količina"
+
+#. module: stock_request
+#: model_terms:ir.ui.view,arch_db:stock_request.res_config_settings_view_form
+msgid "Allow All Locations Types"
+msgstr "Dopusti sve vrste lokacija"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_res_company__stock_request_allow_virtual_loc
+#: model:ir.model.fields,field_description:stock_request.field_res_config_settings__stock_request_allow_virtual_loc
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__allow_virtual_location
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__allow_virtual_location
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__allow_virtual_location
+msgid "Allow Virtual locations on Stock Requests"
+msgstr "Dopusti virtualne lokacije u zahtjevima za zalihama"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__allowed_uom_ids
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__allowed_uom_ids
+msgid "Allowed Uom"
+msgstr "Dopuštena JM"
+
+#. module: stock_request
+#: model_terms:ir.ui.view,arch_db:stock_request.res_config_settings_view_form
+msgid "Analytic"
+msgstr "Analitika"
+
+#. module: stock_request
+#: model_terms:ir.ui.view,arch_db:stock_request.res_config_settings_view_form
+msgid "Analytic accounting in Stock Requests"
+msgstr "Analitičko knjigovodstvo u zahtjevima za zalihama"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__message_attachment_count
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__message_attachment_count
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__message_attachment_count
+msgid "Attachment Count"
+msgstr "Broj privitaka"
+
+#. module: stock_request
+#: model_terms:ir.ui.view,arch_db:stock_request.res_config_settings_view_form
+msgid ""
+"By default only internal and transit locations are allowed in Stock Request "
+"and Orders."
+msgstr ""
+"Prema zadanim postavkama dopuštene su samo interne i tranzitne lokacije u "
+"zahtjevima za zalihama i narudžbama."
+
+#. module: stock_request
+#: model_terms:ir.ui.view,arch_db:stock_request.res_config_settings_view_form
+msgid "By default, available stock is not used"
+msgstr "Prema zadanim postavkama dostupna zaliha se ne koristi"
+
+#. module: stock_request
+#: model_terms:ir.ui.view,arch_db:stock_request.stock_request_order_form
+#: model_terms:ir.ui.view,arch_db:stock_request.view_stock_request_form
+msgid "Cancel"
+msgstr "Odustani"
+
+#. module: stock_request
+#: model:ir.model.fields.selection,name:stock_request.selection__stock_request__state__cancel
+#: model_terms:ir.ui.view,arch_db:stock_request.stock_request_order_search
+#: model_terms:ir.ui.view,arch_db:stock_request.stock_request_search
+msgid "Cancelled"
+msgstr "Otkazano"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_res_company__stock_request_check_available_first
+#: model:ir.model.fields,field_description:stock_request.field_res_config_settings__stock_request_check_available_first
+#: model_terms:ir.ui.view,arch_db:stock_request.res_config_settings_view_form
+msgid "Check available stock first"
+msgstr "Prvo provjeri dostupnu zalihu"
+
+#. module: stock_request
+#: model_terms:ir.actions.act_window,help:stock_request.action_stock_request_form
+msgid "Click to add a Stock Request."
+msgstr "Kliknite za dodavanje zahtjeva za zalihama."
+
+#. module: stock_request
+#: model:ir.model,name:stock_request.model_res_company
+msgid "Companies"
+msgstr "Tvrtke"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__company_id
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__company_id
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_allocation__company_id
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__company_id
+msgid "Company"
+msgstr "Tvrtka"
+
+#. module: stock_request
+#. odoo-python
+#: code:addons/stock_request/models/stock_request.py:0
+msgid "Company must be equal to the order"
+msgstr "Tvrtka mora odgovarati narudžbi"
+
+#. module: stock_request
+#: model:ir.model,name:stock_request.model_res_config_settings
+msgid "Config Settings"
+msgstr "Postavke"
+
+#. module: stock_request
+#: model_terms:ir.ui.view,arch_db:stock_request.stock_request_order_form
+#: model_terms:ir.ui.view,arch_db:stock_request.view_stock_request_form
+msgid "Confirm"
+msgstr "Potvrdi"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__create_uid
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_allocation__create_uid
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__create_date
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_allocation__create_date
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: stock_request
+#: model_terms:ir.ui.view,arch_db:stock_request.stock_request_search
+msgid "Current requests"
+msgstr "Trenutačni zahtjevi"
+
+#. module: stock_request
+#: model:ir.model.fields,help:stock_request.field_stock_request__expected_date
+#: model:ir.model.fields,help:stock_request.field_stock_request_order__expected_date
+msgid "Date when you expect to receive the goods."
+msgstr "Datum kada očekujete primitak robe."
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__picking_count
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__picking_count
+msgid "Delivery Orders"
+msgstr "Otpremni nalozi"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_res_company__display_name
+#: model:ir.model.fields,field_description:stock_request.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:stock_request.field_stock_location__display_name
+#: model:ir.model.fields,field_description:stock_request.field_stock_move__display_name
+#: model:ir.model.fields,field_description:stock_request.field_stock_move_line__display_name
+#: model:ir.model.fields,field_description:stock_request.field_stock_picking__display_name
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__display_name
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__display_name
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_allocation__display_name
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__display_name
+#: model:ir.model.fields,field_description:stock_request.field_stock_route__display_name
+#: model:ir.model.fields,field_description:stock_request.field_stock_rule__display_name
+#: model:ir.model.fields,field_description:stock_request.field_stock_warehouse__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: stock_request
+#: model:ir.model.fields.selection,name:stock_request.selection__stock_request__state__done
+#: model_terms:ir.ui.view,arch_db:stock_request.view_stock_request_form
+msgid "Done"
+msgstr "GOTOVO"
+
+#. module: stock_request
+#: model:ir.model.fields.selection,name:stock_request.selection__stock_request__state__draft
+#: model_terms:ir.ui.view,arch_db:stock_request.stock_request_order_search
+#: model_terms:ir.ui.view,arch_db:stock_request.stock_request_search
+msgid "Draft"
+msgstr "Nacrt"
+
+#. module: stock_request
+#: model_terms:ir.ui.view,arch_db:stock_request.res_config_settings_view_form
+msgid "Enable Analytic Accounting in Stock Requests"
+msgstr "Omogući analitičko knjigovodstvo u zahtjevima za zalihama"
+
+#. module: stock_request
+#: model_terms:ir.ui.view,arch_db:stock_request.res_config_settings_view_form
+msgid "Enable Orders"
+msgstr "Omogući narudžbe"
+
+#. module: stock_request
+#: model_terms:ir.ui.view,arch_db:stock_request.res_config_settings_view_form
+msgid "Enable Stock Requests Kanban cards"
+msgstr "Omogući Kanban kartice zahtjeva za zalihama"
+
+#. module: stock_request
+#: model_terms:ir.ui.view,arch_db:stock_request.res_config_settings_view_form
+msgid "Enable Stock Requests for Manufacturing"
+msgstr "Omogući zahtjeve za zalihama za proizvodnju"
+
+#. module: stock_request
+#: model_terms:ir.ui.view,arch_db:stock_request.res_config_settings_view_form
+msgid "Enable Stock Requests for Purchases"
+msgstr "Omogući zahtjeve za zalihama za nabavu"
+
+#. module: stock_request
+#: model_terms:ir.ui.view,arch_db:stock_request.res_config_settings_view_form
+msgid "Enable Submitted State"
+msgstr "Omogući status predano"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__expected_date
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__expected_date
+msgid "Expected Date"
+msgstr "Očekivani datum"
+
+#. module: stock_request
+#. odoo-python
+#: code:addons/stock_request/models/stock_request.py:0
+msgid "Expected date must be equal to the order"
+msgstr "Očekivani datum mora odgovarati narudžbi"
+
+#. module: stock_request
+#: model_terms:ir.ui.view,arch_db:stock_request.stock_request_order_search
+#: model_terms:ir.ui.view,arch_db:stock_request.stock_request_search
+msgid "Finished"
+msgstr "Dovršeno"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__message_follower_ids
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__message_follower_ids
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__message_follower_ids
+msgid "Followers"
+msgstr "Pratitelji"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__message_partner_ids
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__message_partner_ids
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Pratitelji (partneri)"
+
+#. module: stock_request
+#: model:ir.model.fields,help:stock_request.field_stock_request__activity_type_icon
+#: model:ir.model.fields,help:stock_request.field_stock_request_abstract__activity_type_icon
+#: model:ir.model.fields,help:stock_request.field_stock_request_order__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Font awesome ikona npr. fa-tasks"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_res_config_settings__group_stock_request_order
+msgid "Group Stock Request Order"
+msgstr "Grupiraj narudžbu zahtjeva za zalihama"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__has_message
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__has_message
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__has_message
+msgid "Has Message"
+msgstr "Ima poruku"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_res_company__id
+#: model:ir.model.fields,field_description:stock_request.field_res_config_settings__id
+#: model:ir.model.fields,field_description:stock_request.field_stock_location__id
+#: model:ir.model.fields,field_description:stock_request.field_stock_move__id
+#: model:ir.model.fields,field_description:stock_request.field_stock_move_line__id
+#: model:ir.model.fields,field_description:stock_request.field_stock_picking__id
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__id
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__id
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_allocation__id
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__id
+#: model:ir.model.fields,field_description:stock_request.field_stock_route__id
+#: model:ir.model.fields,field_description:stock_request.field_stock_rule__id
+#: model:ir.model.fields,field_description:stock_request.field_stock_warehouse__id
+msgid "ID"
+msgstr "ID"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__activity_exception_icon
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__activity_exception_icon
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__activity_exception_icon
+msgid "Icon"
+msgstr "Ikona"
+
+#. module: stock_request
+#: model:ir.model.fields,help:stock_request.field_stock_request__activity_exception_icon
+#: model:ir.model.fields,help:stock_request.field_stock_request_abstract__activity_exception_icon
+#: model:ir.model.fields,help:stock_request.field_stock_request_order__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Ikona koja označava iznimnu aktivnost."
+
+#. module: stock_request
+#: model:ir.model.fields,help:stock_request.field_stock_request__message_needaction
+#: model:ir.model.fields,help:stock_request.field_stock_request_abstract__message_needaction
+#: model:ir.model.fields,help:stock_request.field_stock_request_order__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Ako je označeno, nove poruke zahtijevaju vašu pažnju."
+
+#. module: stock_request
+#: model:ir.model.fields,help:stock_request.field_stock_request__message_has_error
+#: model:ir.model.fields,help:stock_request.field_stock_request_abstract__message_has_error
+#: model:ir.model.fields,help:stock_request.field_stock_request_order__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Ako je označeno, neke poruke imaju grešku u dostavi."
+
+#. module: stock_request
+#: model_terms:ir.ui.view,arch_db:stock_request.stock_request_order_search
+#: model_terms:ir.ui.view,arch_db:stock_request.stock_request_search
+msgid "In Progress"
+msgstr "U tijeku"
+
+#. module: stock_request
+#: model:ir.model.fields.selection,name:stock_request.selection__stock_request__state__open
+msgid "In progress"
+msgstr "U tijeku"
+
+#. module: stock_request
+#: model:ir.model,name:stock_request.model_stock_location
+msgid "Inventory Locations"
+msgstr "Lokacije inventure"
+
+#. module: stock_request
+#: model:ir.model,name:stock_request.model_stock_route
+msgid "Inventory Routes"
+msgstr "Rute zalihe"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__message_is_follower
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__message_is_follower
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__message_is_follower
+msgid "Is Follower"
+msgstr "Je pratitelj"
+
+#. module: stock_request
+#: model_terms:ir.ui.view,arch_db:stock_request.stock_request_order_form
+msgid "Items"
+msgstr "Stavki"
+
+#. module: stock_request
+#: model_terms:ir.ui.view,arch_db:stock_request.res_config_settings_view_form
+msgid "Kanban"
+msgstr "Kanban"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__write_uid
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_allocation__write_uid
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__write_date
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_allocation__write_date
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__location_id
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__location_id
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__location_id
+#: model_terms:ir.ui.view,arch_db:stock_request.stock_request_order_search
+#: model_terms:ir.ui.view,arch_db:stock_request.stock_request_search
+msgid "Location"
+msgstr "Lokacija"
+
+#. module: stock_request
+#. odoo-python
+#: code:addons/stock_request/models/stock_request.py:0
+msgid "Location must be equal to the order"
+msgstr "Lokacija mora odgovarati narudžbi"
+
+#. module: stock_request
+#: model_terms:ir.ui.view,arch_db:stock_request.res_config_settings_view_form
+msgid "Manufacturing"
+msgstr "Proizvodnja"
+
+#. module: stock_request
+#: model:ir.ui.menu,name:stock_request.menu_stock_request_master_data
+msgid "Master Data"
+msgstr "Glavni podaci"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__message_has_error
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__message_has_error
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__message_has_error
+msgid "Message Delivery error"
+msgstr "Greška u dostavi poruke"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__message_ids
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__message_ids
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__message_ids
+msgid "Messages"
+msgstr "Poruke"
+
+#. module: stock_request
+#: model:ir.model.fields,help:stock_request.field_stock_request__reference_ids
+#: model:ir.model.fields,help:stock_request.field_stock_request_abstract__reference_ids
+#: model:ir.model.fields,help:stock_request.field_stock_request_order__reference_ids
+msgid ""
+"Moves created through this stock request will be grouped using these "
+"references. If none are given, the moves generated by procurement rules will"
+" be grouped into one big picking."
+msgstr ""
+"Temeljnice stvorene ovim zahtjevom za zalihama bit će grupirane pomoću ovih "
+"referenci. Ako nijedna nije navedena, temeljnice koje generiraju pravila "
+"nabave bit će grupirane u jednu veliku skladišnicu."
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__my_activity_date_deadline
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__my_activity_date_deadline
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Rok moje aktivnosti"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__name
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__name
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__name
+msgid "Name"
+msgstr "Naziv"
+
+#. module: stock_request
+#: model:ir.model.constraint,message:stock_request.constraint_stock_request_abstract_name_uniq
+msgid "Name must be unique"
+msgstr "Ime mora biti jedinstveno."
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__activity_date_deadline
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__activity_date_deadline
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Rok sljedeće aktivnosti"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__activity_summary
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__activity_summary
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__activity_summary
+msgid "Next Activity Summary"
+msgstr "Sažetak sljedeće aktivnosti"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__activity_type_id
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__activity_type_id
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__activity_type_id
+msgid "Next Activity Type"
+msgstr "Vrsta sljedeće aktivnosti"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__message_needaction_counter
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__message_needaction_counter
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Broj radnji"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__message_has_error_counter
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__message_has_error_counter
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__message_has_error_counter
+msgid "Number of errors"
+msgstr "Broj grešaka"
+
+#. module: stock_request
+#: model:ir.model.fields,help:stock_request.field_stock_request__message_needaction_counter
+#: model:ir.model.fields,help:stock_request.field_stock_request_abstract__message_needaction_counter
+#: model:ir.model.fields,help:stock_request.field_stock_request_order__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Broj poruka koje zahtijevaju radnju"
+
+#. module: stock_request
+#: model:ir.model.fields,help:stock_request.field_stock_request__message_has_error_counter
+#: model:ir.model.fields,help:stock_request.field_stock_request_abstract__message_has_error_counter
+#: model:ir.model.fields,help:stock_request.field_stock_request_order__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Broj poruka s greškom u dostavi"
+
+#. module: stock_request
+#. odoo-python
+#: code:addons/stock_request/models/stock_request_order.py:0
+msgid "Only orders on draft state can be unlinked"
+msgstr "Samo se narudžbe u statusu skice mogu izbrisati"
+
+#. module: stock_request
+#. odoo-python
+#: code:addons/stock_request/models/stock_request.py:0
+msgid "Only requests on draft state can be unlinked"
+msgstr "Samo se zahtjevi u statusu skice mogu izbrisati"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_allocation__open_product_qty
+msgid "Open Quantity"
+msgstr "Količina"
+
+#. module: stock_request
+#: model:ir.ui.menu,name:stock_request.menu_stock_request_operations
+msgid "Operations"
+msgstr "Operacije"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__order_id
+msgid "Order"
+msgstr "Narudžba"
+
+#. module: stock_request
+#: model_terms:ir.ui.view,arch_db:stock_request.res_config_settings_view_form
+msgid "Orders &amp; Configuration"
+msgstr "Narudžbe i konfiguracija"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__picking_ids
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__picking_ids
+msgid "Pickings"
+msgstr "Prikupi"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__product_id
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__product_id
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_allocation__product_id
+#: model_terms:ir.ui.view,arch_db:stock_request.stock_request_search
+msgid "Product"
+msgstr "Proizvod"
+
+#. module: stock_request
+#: model:ir.model,name:stock_request.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Kretanja proizvoda (Stavka skladišnog prijenosa)"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__product_uom_id
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__product_uom_id
+msgid "Product Unit of Measure"
+msgstr "JM proizvoda"
+
+#. module: stock_request
+#: model_terms:ir.ui.view,arch_db:stock_request.res_config_settings_view_form
+msgid "Purchases"
+msgstr "Nabave"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__qty_cancelled
+msgid "Qty Cancelled"
+msgstr "Otkazana kol."
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__qty_done
+msgid "Qty Done"
+msgstr "Završena kol."
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__qty_in_progress
+msgid "Qty In Progress"
+msgstr "kol. u tijeku"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__product_uom_qty
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__product_uom_qty
+msgid "Quantity"
+msgstr "Količina"
+
+#. module: stock_request
+#: model:ir.model.fields,help:stock_request.field_stock_request__qty_cancelled
+msgid "Quantity cancelled"
+msgstr "Otkazana kol."
+
+#. module: stock_request
+#: model:ir.model.fields,help:stock_request.field_stock_request__qty_done
+msgid "Quantity completed"
+msgstr "Riješena kol."
+
+#. module: stock_request
+#: model:ir.model.fields,help:stock_request.field_stock_request__qty_in_progress
+msgid "Quantity in progress."
+msgstr "kol. u tijeku"
+
+#. module: stock_request
+#: model:ir.model.fields,help:stock_request.field_stock_request__product_qty
+#: model:ir.model.fields,help:stock_request.field_stock_request_abstract__product_qty
+msgid "Quantity in the default UoM of the product"
+msgstr "Količina u zadanoj JM proizvoda"
+
+#. module: stock_request
+#: model:ir.model.fields,help:stock_request.field_stock_request_allocation__requested_product_uom_qty
+msgid ""
+"Quantity of the stock request allocated to the stock move, in the UoM of the"
+" Stock Request"
+msgstr ""
+"Količina zahtjeva za zalihama dodijeljena skladišnom prijenosu, u JM "
+"zahtjeva za zalihama"
+
+#. module: stock_request
+#: model:ir.model.fields,help:stock_request.field_stock_request_allocation__allocated_product_qty
+#: model:ir.model.fields,help:stock_request.field_stock_request_allocation__requested_product_qty
+msgid ""
+"Quantity of the stock request allocated to the stock move, in the default "
+"UoM of the product"
+msgstr ""
+"Količina zahtjeva za zalihama dodijeljena skladišnom prijenosu, u zadanoj JM"
+" proizvoda"
+
+#. module: stock_request
+#: model:ir.model.fields,help:stock_request.field_stock_request__product_uom_qty
+#: model:ir.model.fields,help:stock_request.field_stock_request_abstract__product_uom_qty
+msgid "Quantity, specified in the unit of measure indicated in the request."
+msgstr "Količina navedena u jedinici mjere označenoj u zahtjevu."
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__product_qty
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__product_qty
+msgid "Real Quantity"
+msgstr "Realna količina"
+
+#. module: stock_request
+#. odoo-python
+#: code:addons/stock_request/models/stock_move_line.py:0
+msgid ""
+"Receipt confirmation %(picking_name)s for your Request %(request_name)s"
+msgstr "Potvrda primitka %(picking_name)s za vaš zahtjev %(request_name)s"
+
+#. module: stock_request
+#: model:ir.model.fields.selection,name:stock_request.selection__stock_request__picking_policy__one
+#: model:ir.model.fields.selection,name:stock_request.selection__stock_request_order__picking_policy__one
+msgid "Receive all products at once"
+msgstr "Primi sve proizvode odjednom"
+
+#. module: stock_request
+#: model:ir.model.fields.selection,name:stock_request.selection__stock_request__picking_policy__direct
+#: model:ir.model.fields.selection,name:stock_request.selection__stock_request_order__picking_policy__direct
+msgid "Receive each product when available"
+msgstr "Primi svaki proizvod kada postane dostupan"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__reference_ids
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__reference_ids
+msgid "Reference"
+msgstr "Referenca"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__reference_ids
+msgid "References"
+msgstr "Reference"
+
+#. module: stock_request
+#. odoo-python
+#: code:addons/stock_request/models/stock_request.py:0
+msgid "References must be equal to the order"
+msgstr "Reference moraju odgovarati narudžbi"
+
+#. module: stock_request
+#: model:ir.actions.server,name:stock_request.action_template_generate_stock_request_orders
+#: model:ir.actions.server,name:stock_request.action_variant_generate_stock_request_orders
+msgid "Request Stock"
+msgstr "Zatraži zalihe"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__requested_by
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__requested_by
+msgid "Requested By"
+msgstr "Zatražio"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_allocation__requested_product_qty
+msgid "Requested Quantity"
+msgstr "Tražena količina"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_allocation__requested_product_uom_qty
+msgid "Requested Quantity (UoM)"
+msgstr "Status zahtjeva"
+
+#. module: stock_request
+#. odoo-python
+#: code:addons/stock_request/models/stock_request.py:0
+msgid "Requested by must be equal to the order"
+msgstr "Podnositelj zahtjeva mora odgovarati narudžbi"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__activity_user_id
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__activity_user_id
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__activity_user_id
+msgid "Responsible User"
+msgstr "Odgovorni korisnik"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__route_id
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__route_id
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__route_id
+#: model_terms:ir.ui.view,arch_db:stock_request.stock_request_search
+msgid "Route"
+msgstr "Ruta"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__route_ids
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__route_ids
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__route_ids
+msgid "Routes"
+msgstr "Rute"
+
+#. module: stock_request
+#: model_terms:ir.ui.view,arch_db:stock_request.stock_request_order_form
+#: model_terms:ir.ui.view,arch_db:stock_request.view_stock_request_form
+msgid "Set to Draft"
+msgstr "Postavi na nacrt"
+
+#. module: stock_request
+#: model:ir.actions.act_window,name:stock_request.action_stock_request_config
+#: model:ir.ui.menu,name:stock_request.menu_stock_request_config
+msgid "Settings"
+msgstr "Postavke"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__picking_policy
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__picking_policy
+msgid "Shipping Policy"
+msgstr "Način otpreme"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__state
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__state
+#: model_terms:ir.ui.view,arch_db:stock_request.stock_request_search
+msgid "Status"
+msgstr "Status"
+
+#. module: stock_request
+#: model:ir.model.fields,help:stock_request.field_stock_request__activity_state
+#: model:ir.model.fields,help:stock_request.field_stock_request_abstract__activity_state
+#: model:ir.model.fields,help:stock_request.field_stock_request_order__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Status na temelju aktivnosti\n"
+"Kašnjenje: rok je već prošao\n"
+"Danas: datum aktivnosti je danas\n"
+"Planirano: buduće aktivnosti."
+
+#. module: stock_request
+#: model:ir.model,name:stock_request.model_stock_move
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_allocation__stock_move_id
+msgid "Stock Move"
+msgstr "Skladišni prijenos"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__move_ids
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__move_ids
+msgid "Stock Moves"
+msgstr "Skladišni prijenosi"
+
+#. module: stock_request
+#: model:ir.model,name:stock_request.model_stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_allocation__stock_request_id
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__stock_request_ids
+#: model:res.groups.privilege,name:stock_request.res_groups_privilege_stock_request
+#: model_terms:ir.ui.view,arch_db:stock_request.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:stock_request.view_stock_request_form
+msgid "Stock Request"
+msgstr "Zahtjev za zalihu"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_picking__stock_request_count
+msgid "Stock Request #"
+msgstr "Zahtjev za zalihama #"
+
+#. module: stock_request
+#: model:ir.model,name:stock_request.model_stock_request_allocation
+#: model:ir.model.fields,field_description:stock_request.field_stock_move__allocation_ids
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__allocation_ids
+msgid "Stock Request Allocation"
+msgstr "Dodjela zahtjeva za zalihama"
+
+#. module: stock_request
+#: model_terms:ir.ui.view,arch_db:stock_request.view_move_form
+#: model_terms:ir.ui.view,arch_db:stock_request.view_stock_request_allocation_form
+msgid "Stock Request Allocations"
+msgstr "Dodjele zahtjeva za zalihama"
+
+#. module: stock_request
+#: model:res.groups,name:stock_request.group_stock_request_manager
+msgid "Stock Request Manager"
+msgstr "Voditelj zahtjeva za zalihama"
+
+#. module: stock_request
+#: model:ir.model,name:stock_request.model_stock_request_order
+#: model:res.groups,name:stock_request.group_stock_request_order
+msgid "Stock Request Order"
+msgstr "Narudžba zahtjeva za zalihama"
+
+#. module: stock_request
+#: model:ir.actions.act_window,name:stock_request.stock_request_order_action
+#: model:ir.ui.menu,name:stock_request.stock_request_order_menu
+#: model:res.groups.privilege,name:stock_request.res_groups_privilege_stock_request_order
+#: model_terms:ir.ui.view,arch_db:stock_request.stock_request_order_search
+msgid "Stock Request Orders"
+msgstr "Narudžbe zahtjeva za zalihama"
+
+#. module: stock_request
+#: model:ir.model,name:stock_request.model_stock_request_abstract
+msgid "Stock Request Template"
+msgstr "Predložak zahtjeva za zalihama"
+
+#. module: stock_request
+#: model:res.groups,name:stock_request.group_stock_request_user
+msgid "Stock Request User"
+msgstr "Korisnik zahtjeva za zalihama"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_res_config_settings__module_stock_request_mrp
+msgid "Stock Request for Manufacturing"
+msgstr "Zahtjev za zalihama za proizvodnju"
+
+#. module: stock_request
+#: model:ir.model.constraint,message:stock_request.constraint_stock_request_name_uniq
+#: model:ir.model.constraint,message:stock_request.constraint_stock_request_order_name_uniq
+msgid "Stock Request name must be unique"
+msgstr "Naziv zahtjeva za zalihama mora biti jedinstven"
+
+#. module: stock_request
+#. odoo-python
+#: code:addons/stock_request/models/stock_request.py:0
+msgid "Stock Request product quantity cannot be negative."
+msgstr "Količina proizvoda u zahtjevu za zalihama ne može biti negativna."
+
+#. module: stock_request
+#. odoo-python
+#: code:addons/stock_request/models/stock_request.py:0
+msgid "Stock Request product quantity has to be strictly positive."
+msgstr "Količina proizvoda u zahtjevu za zalihama mora biti strogo pozitivna."
+
+#. module: stock_request
+#: model:ir.actions.act_window,name:stock_request.action_stock_request_form
+#: model:ir.model.fields,field_description:stock_request.field_stock_move__stock_request_ids
+#: model:ir.model.fields,field_description:stock_request.field_stock_picking__stock_request_ids
+#: model:ir.ui.menu,name:stock_request.menu_stock_request
+#: model:ir.ui.menu,name:stock_request.menu_stock_request_root
+#: model_terms:ir.ui.view,arch_db:stock_request.stock_request_order_form
+#: model_terms:ir.ui.view,arch_db:stock_request.stock_request_search
+#: model_terms:ir.ui.view,arch_db:stock_request.view_picking_form
+msgid "Stock Requests"
+msgstr "Zahtjevi za zalihama"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_res_config_settings__module_stock_request_analytic
+msgid "Stock Requests Analytic integration"
+msgstr "Analitička integracija zahtjeva za zalihama"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_res_config_settings__module_stock_request_kanban
+msgid "Stock Requests Kanban integration"
+msgstr "Kanban integracija zahtjeva za zalihama"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_res_config_settings__module_stock_request_purchase
+msgid "Stock Requests for Purchases"
+msgstr "Zahtjevi za zalihama za nabavu"
+
+#. module: stock_request
+#: model:ir.model,name:stock_request.model_stock_rule
+msgid "Stock Rule"
+msgstr "Pravilo zalihe"
+
+#. module: stock_request
+#: model_terms:ir.ui.view,arch_db:stock_request.stock_request_order_form
+msgid "Stock request Order"
+msgstr "Narudžba zahtjeva za zalihama"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__stock_request_count
+msgid "Stock requests"
+msgstr "Zahtjevi za zalihama"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_res_config_settings__module_stock_request_submit
+msgid "Submitted state in Stock Requests"
+msgstr "Status predano u zahtjevima za zalihama"
+
+#. module: stock_request
+#. odoo-python
+#: code:addons/stock_request/models/stock_move.py:0
+#: code:addons/stock_request/models/stock_request_order.py:0
+msgid "The company of the stock request must match with that of the location."
+msgstr "Tvrtka zahtjeva za zalihama mora se podudarati s tvrtkom lokacije."
+
+#. module: stock_request
+#. odoo-python
+#: code:addons/stock_request/models/stock_request_order.py:0
+msgid ""
+"The company of the stock request must match with that of the warehouse."
+msgstr "Tvrtka zahtjeva za zalihama mora se podudarati s tvrtkom skladišta."
+
+#. module: stock_request
+#. odoo-python
+#: code:addons/stock_request/models/stock_move_line.py:0
+msgid ""
+"The following requested items from Stock Request %(request_name)s have now "
+"been received in %(location_name)s using Picking %(picking_name)s:"
+msgstr ""
+"Sljedeće zatražene stavke iz zahtjeva za zalihama %(request_name)s sada su "
+"zaprimljene u %(location_name)s putem skladišnice %(picking_name)s:"
+
+#. module: stock_request
+#. odoo-python
+#: code:addons/stock_request/models/stock_request.py:0
+msgid "The picking policy must be equal to the order"
+msgstr "Politika skladišne operacije mora odgovarati narudžbi"
+
+#. module: stock_request
+#: model:ir.model.fields,help:stock_request.field_stock_request_order__route_id
+msgid "The route related to a stock request order"
+msgstr "Smjer povezan s narudžbom zahtjeva za zalihama"
+
+#. module: stock_request
+#. odoo-python
+#: code:addons/stock_request/models/stock_request_order.py:0
+msgid "There should be at least one request item for confirming the order."
+msgstr "Mora postojati najmanje jedna stavka zahtjeva za potvrdu narudžbe."
+
+#. module: stock_request
+#. odoo-python
+#: code:addons/stock_request/models/stock_request_order.py:0
+msgid "This action only works in the context of products"
+msgstr "Ova radnja radi samo u kontekstu proizvoda"
+
+#. module: stock_request
+#: model:ir.model,name:stock_request.model_stock_picking
+msgid "Transfer"
+msgstr "Prijenos"
+
+#. module: stock_request
+#: model_terms:ir.ui.view,arch_db:stock_request.stock_request_order_form
+#: model_terms:ir.ui.view,arch_db:stock_request.view_stock_request_form
+msgid "Transfers"
+msgstr "Prijenosi"
+
+#. module: stock_request
+#: model:ir.model.fields,help:stock_request.field_stock_request__activity_exception_decoration
+#: model:ir.model.fields,help:stock_request.field_stock_request_abstract__activity_exception_decoration
+#: model:ir.model.fields,help:stock_request.field_stock_request_order__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Vrsta iznimne aktivnosti na zapisu."
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_allocation__product_uom_id
+msgid "UoM"
+msgstr "JM"
+
+#. module: stock_request
+#: model_terms:ir.ui.view,arch_db:stock_request.res_config_settings_view_form
+msgid "Use Kanban cards for consumable products"
+msgstr "Koristi Kanban kartice za potrošne proizvode"
+
+#. module: stock_request
+#: model_terms:ir.ui.view,arch_db:stock_request.res_config_settings_view_form
+msgid "Use Manufacturing Orders with Stock Requests"
+msgstr "Koristi naloge za proizvodnju sa zahtjevima za zalihama"
+
+#. module: stock_request
+#: model_terms:ir.ui.view,arch_db:stock_request.res_config_settings_view_form
+msgid "Use Purchases with Stock Requests"
+msgstr "Koristi nabavu sa zahtjevima za zalihama"
+
+#. module: stock_request
+#: model:ir.model,name:stock_request.model_stock_warehouse
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__warehouse_id
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__warehouse_id
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__warehouse_id
+#: model_terms:ir.ui.view,arch_db:stock_request.stock_request_order_search
+#: model_terms:ir.ui.view,arch_db:stock_request.stock_request_search
+msgid "Warehouse"
+msgstr "Skladište"
+
+#. module: stock_request
+#. odoo-python
+#: code:addons/stock_request/models/stock_request.py:0
+msgid "Warehouse must be equal to the order"
+msgstr "Skladište mora odgovarati narudžbi"
+
+#. module: stock_request
+#: model:ir.model.fields,field_description:stock_request.field_stock_request__website_message_ids
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_abstract__website_message_ids
+#: model:ir.model.fields,field_description:stock_request.field_stock_request_order__website_message_ids
+msgid "Website Messages"
+msgstr "Poruke web stranice"
+
+#. module: stock_request
+#: model:ir.model.fields,help:stock_request.field_stock_request__website_message_ids
+#: model:ir.model.fields,help:stock_request.field_stock_request_abstract__website_message_ids
+#: model:ir.model.fields,help:stock_request.field_stock_request_order__website_message_ids
+msgid "Website communication history"
+msgstr "Povijest komunikacije web stranice"
+
+#. module: stock_request
+#. odoo-python
+#: code:addons/stock_request/models/stock_location.py:0
+msgid ""
+"You cannot change the company of the location, as it is already assigned to "
+"stock request orders that belong to another company."
+msgstr ""
+"Ne možete promijeniti tvrtku lokacije jer je već dodijeljena narudžbama "
+"zahtjeva za zalihama koje pripadaju drugoj tvrtki."
+
+#. module: stock_request
+#. odoo-python
+#: code:addons/stock_request/models/stock_location.py:0
+msgid ""
+"You cannot change the company of the location, as it is already assigned to "
+"stock requests that belong to another company."
+msgstr ""
+"Ne možete promijeniti tvrtku lokacije jer je već dodijeljena zahtjevima za "
+"zalihama koji pripadaju drugoj tvrtki."
+
+#. module: stock_request
+#. odoo-python
+#: code:addons/stock_request/models/stock_route.py:0
+msgid ""
+"You cannot change the company of the route, as it is already assigned to "
+"stock requests that belong to another company."
+msgstr ""
+"Ne možete promijeniti tvrtku smjera jer je već dodijeljen zahtjevima za "
+"zalihama koji pripadaju drugoj tvrtki."
+
+#. module: stock_request
+#. odoo-python
+#: code:addons/stock_request/models/stock_warehouse.py:0
+msgid ""
+"You cannot change the company of the warehouse, as it is already assigned to"
+" stock request orders that belong to another company."
+msgstr ""
+"Ne možete promijeniti tvrtku skladišta jer je već dodijeljeno narudžbama "
+"zahtjeva za zalihama koje pripadaju drugoj tvrtki."
+
+#. module: stock_request
+#. odoo-python
+#: code:addons/stock_request/models/stock_warehouse.py:0
+msgid ""
+"You cannot change the company of the warehouse, as it is already assigned to"
+" stock requests that belong to another company."
+msgstr ""
+"Ne možete promijeniti tvrtku skladišta jer je već dodijeljeno zahtjevima za "
+"zalihama koji pripadaju drugoj tvrtki."
+
+#. module: stock_request
+#. odoo-python
+#: code:addons/stock_request/models/stock_request_abstract.py:0
+msgid "You have entered a location that is assigned to another company."
+msgstr "Unijeli ste lokaciju koja je dodijeljena drugoj tvrtki."
+
+#. module: stock_request
+#. odoo-python
+#: code:addons/stock_request/models/stock_request_abstract.py:0
+msgid "You have entered a product that is assigned to another company."
+msgstr "Unijeli ste proizvod koji je dodijeljen drugoj tvrtki."
+
+#. module: stock_request
+#. odoo-python
+#: code:addons/stock_request/models/stock_request_abstract.py:0
+msgid "You have entered a route that is assigned to another company."
+msgstr "Unijeli ste smjer koji je dodijeljen drugoj tvrtki."
+
+#. module: stock_request
+#. odoo-python
+#: code:addons/stock_request/models/stock_request_abstract.py:0
+msgid "You have entered a warehouse that is assigned to another company."
+msgstr "Unijeli ste skladište koje je dodijeljeno drugoj tvrtki."
+
+#. module: stock_request
+#. odoo-python
+#: code:addons/stock_request/models/stock_request_abstract.py:0
+msgid ""
+"You have to select a product unit of measure in the same category than the "
+"default unit of measure of the product"
+msgstr ""
+"Morate odabrati jedinicu mjere proizvoda u istoj kategoriji kao zadanu "
+"jedinicu mjere proizvoda"

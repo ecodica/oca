@@ -1,0 +1,803 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_invoice_import
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import.py:0
+msgid "%d vendor bill(s) created"
+msgstr "%d račun(a) dobavljača kreirano"
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import.py:0
+msgid ""
+"<strong>The total amount of the imported invoice is %(real_amount_total)s "
+"whereas the total amount computed by Odoo is "
+"%(current_amount_total)s</strong>. It is the consequence of a difference "
+"between the total tax amount of the invoice (%(real_amount_tax)s) and the "
+"total tax amount computed by Odoo (%(current_amount_tax)s). This is often "
+"caused by missing taxes in invoice lines due to a failure to find the tax in"
+" Odoo that correspond to the tax in the imported invoice or missing "
+"configuration of taxes on products or missing configuration of <em>Default "
+"Taxes</em> on the partner (if there are no products on invoice lines)."
+msgstr ""
+"<strong>Ukupni iznos uvezenog računa je %(real_amount_total)s, dok je ukupni"
+" iznos koji je izračunao Odoo %(current_amount_total)s</strong>. Posljedica "
+"je to razlike između ukupnog iznosa poreza računa (%(real_amount_tax)s) i "
+"ukupnog iznosa poreza koji je izračunao Odoo (%(current_amount_tax)s). Često"
+" je to uzrokovano nedostajućim porezima u stavkama računa zbog neuspjeha u "
+"pronalaženju poreza u Odoo koji odgovara porezu u uvezenom računu ili "
+"nedostajuće konfiguracije poreza na proizvodima ili nedostajuće "
+"konfiguracije <em>Zadanih poreza</em> na partneru (ako nema proizvoda na "
+"stavkama računa)."
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_invoice_import__message_needaction
+msgid "Action Needed"
+msgstr "Potrebna radnja"
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import.py:0
+msgid "Adjustment"
+msgstr "Prilagodba"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_res_company__adjustment_credit_account_id
+#: model:ir.model.fields,field_description:account_invoice_import.field_res_config_settings__adjustment_credit_account_id
+msgid "Adjustment Credit Account"
+msgstr "Konto korekcije odobrenja"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_res_company__adjustment_debit_account_id
+#: model:ir.model.fields,field_description:account_invoice_import.field_res_config_settings__adjustment_debit_account_id
+msgid "Adjustment Debit Account"
+msgstr "Konto korekcije terećenja"
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import.py:0
+msgid "Adjustment on %s"
+msgstr "Korekcija na %s"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_invoice_import__message_attachment_count
+msgid "Attachment Count"
+msgstr "Broj privitaka"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_res_company__invoice_import_create_bank_account
+#: model:ir.model.fields,field_description:account_invoice_import.field_res_config_settings__invoice_import_create_bank_account
+msgid "Auto-create Bank Account of Supplier"
+msgstr "Automatski kreiraj bankovni račun dobavljača"
+
+#. module: account_invoice_import
+#: model_terms:ir.ui.view,arch_db:account_invoice_import.account_invoice_import_form
+#: model_terms:ir.ui.view,arch_db:account_invoice_import.account_invoice_import_partner_create_form
+msgid "Cancel"
+msgstr "Odustani"
+
+#. module: account_invoice_import
+#: model:ir.model,name:account_invoice_import.model_res_company
+msgid "Companies"
+msgstr "Tvrtke"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_invoice_import__company_id
+msgid "Company"
+msgstr "Tvrtka"
+
+#. module: account_invoice_import
+#: model:ir.model,name:account_invoice_import.model_res_config_settings
+msgid "Config Settings"
+msgstr "Postavke"
+
+#. module: account_invoice_import
+#: model:ir.model,name:account_invoice_import.model_res_partner
+msgid "Contact"
+msgstr "Kontakt"
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import_partner_create.py:0
+msgid "Create New Partner"
+msgstr "Kreiraj novog partnera"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_invoice_import_partner_create__create_or_update
+msgid "Create Or Update"
+msgstr "Kreiraj ili ažuriraj"
+
+#. module: account_invoice_import
+#: model_terms:ir.ui.view,arch_db:account_invoice_import.account_invoice_import_partner_create_form
+msgid "Create Partner"
+msgstr "Kreiraj partnera"
+
+#. module: account_invoice_import
+#: model:ir.actions.act_window,name:account_invoice_import.account_invoice_import_partner_create_action
+#: model_terms:ir.ui.view,arch_db:account_invoice_import.view_move_form
+msgid "Create or Update Partner"
+msgstr "Kreiraj ili ažuriraj partnera"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_invoice_import__create_uid
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_invoice_import_partner_create__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_invoice_import__create_date
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_invoice_import_partner_create__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_res_partner__invoice_import_account_id
+#: model:ir.model.fields,field_description:account_invoice_import.field_res_users__invoice_import_account_id
+msgid "Default Expense Account"
+msgstr "Zadani konto troška"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_res_partner__invoice_import_product_id
+#: model:ir.model.fields,field_description:account_invoice_import.field_res_users__invoice_import_product_id
+msgid "Default Product"
+msgstr "Zadani proizvod"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_res_partner__invoice_import_tax_ids
+#: model:ir.model.fields,field_description:account_invoice_import.field_res_users__invoice_import_tax_ids
+msgid "Default Taxes"
+msgstr "Uobičajeni porezi"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_invoice_import__display_name
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_invoice_import_partner_create__display_name
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_journal__display_name
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_move__display_name
+#: model:ir.model.fields,field_description:account_invoice_import.field_res_company__display_name
+#: model:ir.model.fields,field_description:account_invoice_import.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:account_invoice_import.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: account_invoice_import
+#: model_terms:ir.ui.view,arch_db:account_invoice_import.res_config_settings_view_form
+msgid "Expense account used for adjustment invoice line"
+msgstr "Konto rashoda korišten za stavku računa prilagodbe"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_invoice_import__message_follower_ids
+msgid "Followers"
+msgstr "Pratitelji"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_invoice_import__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Pratitelji (partneri)"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_res_partner__invoice_import_label
+#: model:ir.model.fields,field_description:account_invoice_import.field_res_users__invoice_import_label
+#: model:ir.model.fields,help:account_invoice_import.field_res_partner__invoice_import_label
+#: model:ir.model.fields,help:account_invoice_import.field_res_users__invoice_import_label
+msgid "Force Invoice Line Description"
+msgstr "Prisili opis stavke računa"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_res_partner__invoice_import_journal_id
+#: model:ir.model.fields,field_description:account_invoice_import.field_res_users__invoice_import_journal_id
+msgid "Force Purchase Journal"
+msgstr "Prisili dnevnik nabave"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_res_partner__invoice_import_single_line
+#: model:ir.model.fields,field_description:account_invoice_import.field_res_users__invoice_import_single_line
+msgid "Force Single Invoice Line"
+msgstr "Prisili pojedinačnu stavku računa"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_invoice_import__has_message
+msgid "Has Message"
+msgstr "Ima poruku"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_invoice_import__id
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_invoice_import_partner_create__id
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_journal__id
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_move__id
+#: model:ir.model.fields,field_description:account_invoice_import.field_res_company__id
+#: model:ir.model.fields,field_description:account_invoice_import.field_res_config_settings__id
+#: model:ir.model.fields,field_description:account_invoice_import.field_res_partner__id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,help:account_invoice_import.field_account_invoice_import__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Ako je označeno, nove poruke zahtijevaju vašu pažnju."
+
+#. module: account_invoice_import
+#: model:ir.model.fields,help:account_invoice_import.field_account_invoice_import__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Ako je označeno, neke poruke imaju grešku u dostavi."
+
+#. module: account_invoice_import
+#: model:ir.model.fields,help:account_invoice_import.field_res_partner__invoice_import_journal_id
+#: model:ir.model.fields,help:account_invoice_import.field_res_users__invoice_import_journal_id
+msgid "If empty, Odoo will use the first purchase journal."
+msgstr "Ako je prazno, Odoo će koristiti prvi dnevnik nabave."
+
+#. module: account_invoice_import
+#: model_terms:ir.ui.view,arch_db:account_invoice_import.res_config_settings_view_form
+msgid ""
+"If enabled, Odoo will auto-create the bank account of suppliers upon vendor "
+"bill import."
+msgstr ""
+"Ako je omogućeno, Odoo će automatski kreirati bankovni račun dobavljača pri "
+"uvozu računa dobavljača."
+
+#. module: account_invoice_import
+#: model_terms:ir.ui.view,arch_db:account_invoice_import.account_invoice_import_form
+msgid ""
+"If the format you need is not listed above, you should install an "
+"additionnal Odoo module that adds support for that format (e.g. "
+"<em>account_invoice_import_facturx</em>, "
+"<em>account_invoice_import_ubl</em>, "
+"<em>account_invoice_import_simple_pdf</em>, etc)."
+msgstr ""
+"Ako format koji trebate nije gore naveden, trebali biste instalirati dodatni"
+" Odoo modul koji dodaje podršku za taj format (npr. "
+"<em>account_invoice_import_facturx</em>, "
+"<em>account_invoice_import_ubl</em>, "
+"<em>account_invoice_import_simple_pdf</em> itd.)."
+
+#. module: account_invoice_import
+#: model_terms:ir.ui.view,arch_db:account_invoice_import.account_invoice_import_form
+msgid "Import"
+msgstr "Uvoz"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_bank_statement_line__import_partner_data
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_invoice_import_partner_create__import_partner_data
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_move__import_partner_data
+msgid "Import Partner Data"
+msgstr "Uvezi podatke partnera"
+
+#. module: account_invoice_import
+#: model_terms:ir.ui.view,arch_db:account_invoice_import.account_invoice_import_form
+msgid "Import Supplier Invoice or Refund"
+msgstr "Uvezi račun dobavljača ili povrat"
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import.py:0
+#: model:ir.actions.act_window,name:account_invoice_import.account_invoice_import_action
+#: model:ir.ui.menu,name:account_invoice_import.account_invoice_import_menu
+msgid "Import Vendor Bills"
+msgstr "Uvezi račune dobavljača"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_bank_statement_line__import_warnings
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_move__import_warnings
+msgid "Import Warnings"
+msgstr "Upozorenja uvoza"
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import.py:0
+msgid "Import of file %s"
+msgstr "Uvoz datoteke %s"
+
+#. module: account_invoice_import
+#: model_terms:ir.ui.view,arch_db:account_invoice_import.res_config_settings_view_form
+msgid "Income account used for adjustment invoice line"
+msgstr "Konto prihoda korišten za stavku računa prilagodbe"
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import.py:0
+msgid "Invoice '%(filename)s' already exists in Odoo: %(existing_inv)s."
+msgstr "Račun '%(filename)s' već postoji u Odoo: %(existing_inv)s."
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_invoice_import__message_is_follower
+msgid "Is Follower"
+msgstr "Je pratitelj"
+
+#. module: account_invoice_import
+#: model:ir.model,name:account_invoice_import.model_account_journal
+msgid "Journal"
+msgstr "Dnevnik"
+
+#. module: account_invoice_import
+#: model:ir.model,name:account_invoice_import.model_account_move
+msgid "Journal Entry"
+msgstr "Stavke temeljnice"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_invoice_import__write_uid
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_invoice_import_partner_create__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_invoice_import__write_date
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_invoice_import_partner_create__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_res_company__invoice_import_email
+#: model:ir.model.fields,field_description:account_invoice_import.field_res_config_settings__invoice_import_email
+msgid "Mail Gateway: Destination E-mail"
+msgstr "Mail Gateway: odredišna e-pošta"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_invoice_import__message_has_error
+msgid "Message Delivery error"
+msgstr "Greška u dostavi poruke"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_invoice_import__message_ids
+msgid "Messages"
+msgstr "Poruke"
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import.py:0
+msgid "No invoice created."
+msgstr "Nije kreiran račun."
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import.py:0
+msgid "No invoice file was provided."
+msgstr "Nije pružena datoteka računa."
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import.py:0
+msgid "No journal with type %(journal_type)s in company %(company)s."
+msgstr "Nema dnevnika vrste %(journal_type)s u tvrtki %(company)s."
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_invoice_import__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Broj radnji"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_invoice_import__message_has_error_counter
+msgid "Number of errors"
+msgstr "Broj grešaka"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,help:account_invoice_import.field_account_invoice_import__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Broj poruka koje zahtijevaju radnju"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,help:account_invoice_import.field_account_invoice_import__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Broj poruka s greškom u dostavi"
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import.py:0
+msgid ""
+"Odoo failed to read the XML invoice '%(filename)s'. Did you install the Odoo"
+" module to support this type of file?"
+msgstr ""
+"Odoo nije uspio pročitati XML račun '%(filename)s'. Jeste li instalirali "
+"Odoo modul za podršku ovoj vrsti datoteke?"
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import.py:0
+msgid "Only the date format 102 is supported."
+msgstr "Podržan je samo format datuma 102."
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_invoice_import__invoice_attachment_ids
+msgid "PDF or XML Invoices to Import"
+msgstr "PDF ili XML računi za uvoz"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_res_partner__invoice_import_move_partner_id
+#: model:ir.model.fields,field_description:account_invoice_import.field_res_users__invoice_import_move_partner_id
+msgid "Partner"
+msgstr "Partner"
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/models/res_partner.py:0
+msgid ""
+"Partner <a href=# data-oe-model=res.partner data-oe-"
+"id=%(partner_id)s>%(partner_name)s</a> has been created via the wizard "
+"<em>Create or update partner</em>."
+msgstr ""
+"Partner <a href=# data-oe-model=res.partner data-oe-"
+"id=%(partner_id)s>%(partner_name)s</a> kreiran je kroz čarobnjak <em>Kreiraj"
+" ili ažuriraj partnera</em>."
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import_partner_create.py:0
+msgid ""
+"Partner <a href=# data-oe-model=res.partner data-oe-"
+"id=%(partner_id)s>%(partner_name)s</a> has been set via the wizard "
+"<em>Create or Update Partner</em>. The partner has been updated."
+msgstr ""
+"Partner <a href=# data-oe-model=res.partner data-oe-"
+"id=%(partner_id)s>%(partner_name)s</a> postavljen je kroz čarobnjak "
+"<em>Kreiraj ili ažuriraj partnera</em>. Partner je ažuriran."
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_invoice_import_partner_create__partner_name
+msgid "Partner Name"
+msgstr "Ime partnera"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_invoice_import_partner_create__partner_vat
+msgid "Partner VAT Number"
+msgstr "PDV broj partnera"
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/models/res_partner.py:0
+msgid ""
+"Partner has been created from the wizard <em>Create or Update Partner</em> "
+"of vendor bill import."
+msgstr ""
+"Partner je kreiran iz čarobnjaka <em>Kreiraj ili ažuriraj partnera</em> "
+"uvoza računa dobavljača."
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_invoice_import_partner_create__update_partner_id
+msgid "Partner to Update"
+msgstr "Partner za ažuriranje"
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/models/res_partner.py:0
+msgid ""
+"Partner updated via the wizard <em>Create or Update Partner</em> of Vendor "
+"Bill import."
+msgstr ""
+"Partner ažuriran kroz čarobnjak <em>Kreiraj ili ažuriraj partnera</em> uvoza"
+" računa dobavljača."
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_res_partner__invoice_import_move_id
+#: model:ir.model.fields,field_description:account_invoice_import.field_res_users__invoice_import_move_id
+msgid "Related Imported Vendor Bill"
+msgstr "Povezani uvezeni račun dobavljača"
+
+#. module: account_invoice_import
+#: model_terms:ir.ui.view,arch_db:account_invoice_import.view_partner_property_form
+msgid "Set partner"
+msgstr "Postavi partnera"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_bank_statement_line__show_import_warnings
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_move__show_import_warnings
+msgid "Show Import Warnings"
+msgstr "Prikaži upozorenja uvoza"
+
+#. module: account_invoice_import
+#: model_terms:ir.ui.view,arch_db:account_invoice_import.account_invoice_import_form
+msgid "Supported formats:"
+msgstr "Podržani formati:"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,help:account_invoice_import.field_res_partner__invoice_import_tax_ids
+#: model:ir.model.fields,help:account_invoice_import.field_res_users__invoice_import_tax_ids
+msgid ""
+"Taxes configured here will go through the mapping of the fiscal position."
+msgstr "Porezi konfigurirani ovdje proći će kroz mapiranje fiskalne pozicije."
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import.py:0
+msgid ""
+"The <strong>total tax amount</strong> has been <strong>forced</strong> to "
+"%(forced_amount)s (amount computed by Odoo was: %(initial_amount)s)."
+msgstr ""
+"<strong>Ukupni iznos poreza</strong> je <strong>prisilno postavljen</strong>"
+" na %(forced_amount)s (iznos koji je izračunao Odoo bio je: "
+"%(initial_amount)s)."
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import.py:0
+msgid "The XML file '%(filename)s' is not XML-compliant. Error: %(err)s"
+msgstr "XML datoteka '%(filename)s' nije XML usklađena. Pogreška: %(err)s"
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import.py:0
+msgid "The XPath argument must be a list."
+msgstr "Argument XPath mora biti lista."
+
+#. module: account_invoice_import
+#: model:ir.model.fields,help:account_invoice_import.field_res_partner__invoice_import_account_id
+#: model:ir.model.fields,help:account_invoice_import.field_res_users__invoice_import_account_id
+msgid ""
+"The account configured here will be updated by the mapping of the fiscal "
+"position."
+msgstr ""
+"Konto konfiguriran ovdje bit će ažuriran mapiranjem fiskalne pozicije."
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/models/account_move.py:0
+msgid ""
+"The fiscal position %(fiscal_position)s was not applied on vendor bill "
+"%(move)s."
+msgstr ""
+"Fiskalna pozicija %(fiscal_position)s nije primijenjena na račun dobavljača "
+"%(move)s."
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/models/res_partner.py:0
+#: code:addons/account_invoice_import/wizard/account_invoice_import_partner_create.py:0
+msgid "The imported partner data is invalid."
+msgstr "Uvezeni podaci partnera su nevažeći."
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import.py:0
+msgid "The invoice file content must be provided as bytes."
+msgstr "Sadržaj datoteke računa mora biti pružen kao bajtovi."
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import.py:0
+msgid "The invoice filename must be provided as text."
+msgstr "Naziv datoteke računa mora biti pružen kao tekst."
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import.py:0
+msgid "The parsed invoice does not contain invoice lines."
+msgstr "Parsirani račun ne sadrži stavke računa."
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import.py:0
+msgid "The parsed invoice has not been pre-processed."
+msgstr "Parsirani račun nije prethodno obrađen."
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import.py:0
+msgid ""
+"The untaxed amount of the imported invoice (%(imported)s) still differs from"
+" the untaxed amount computed by Odoo (%(computed)s) after adjustment."
+msgstr ""
+"Iznos bez poreza uvezenog računa (%(imported)s) i dalje se razlikuje od "
+"iznosa bez poreza koji je izračunao Odoo (%(computed)s) nakon prilagodbe."
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/models/res_partner.py:0
+msgid "The vendor bill %(move)s already has a partner %(partner)s."
+msgstr "Račun dobavljača %(move)s već ima partnera %(partner)s."
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import_partner_create.py:0
+msgid "The vendor bill does not contain imported partner data."
+msgstr "Račun dobavljača ne sadrži uvezene podatke partnera."
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import_partner_create.py:0
+msgid "The vendor bill is missing."
+msgstr "Račun dobavljača nedostaje."
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import_partner_create.py:0
+msgid "The wizard is not configured to create a partner."
+msgstr "Čarobnjak nije konfiguriran za kreiranje partnera."
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import_partner_create.py:0
+msgid "The wizard is not configured to update a partner."
+msgstr "Čarobnjak nije konfiguriran za ažuriranje partnera."
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/models/res_partner.py:0
+msgid "There is no vendor bill linked to this partner."
+msgstr "Nema računa dobavljača povezanog s ovim partnerom."
+
+#. module: account_invoice_import
+#: model:ir.model.fields,help:account_invoice_import.field_res_company__invoice_import_email
+#: model:ir.model.fields,help:account_invoice_import.field_res_config_settings__invoice_import_email
+msgid ""
+"This field is used in multi-company setups to import the invoices received "
+"by the mail gateway in the appropriate company"
+msgstr ""
+"Ovo polje koristi se u višetvrtkovnim postavkama za uvoz računa primljenih "
+"kroz mail gateway u odgovarajuću tvrtku"
+
+#. module: account_invoice_import
+#: model_terms:ir.ui.view,arch_db:account_invoice_import.res_config_settings_view_form
+msgid ""
+"This field is used in multi-company setups to import the invoices received "
+"by the mail gateway in the appropriate company."
+msgstr ""
+"Ovo polje koristi se u višetvrtkovnim postavkama za uvoz računa primljenih "
+"kroz mail gateway u odgovarajuću tvrtku."
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import.py:0
+msgid ""
+"This invoice has been created automatically via file import. Origin: "
+"<strong>%s</strong>."
+msgstr ""
+"Ovaj račun kreiran je automatski putem uvoza datoteke. Porijeklo: "
+"<strong>%s</strong>."
+
+#. module: account_invoice_import
+#: model:ir.model.constraint,message:account_invoice_import.constraint_res_company_invoice_import_email_uniq
+msgid "This invoice import email already exists!"
+msgstr "Ovaj unos e-pošte računa već postoji!"
+
+#. module: account_invoice_import
+#: model:ir.model.fields.selection,name:account_invoice_import.selection__account_invoice_import_partner_create__create_or_update__update
+msgid "This partner already exists in Odoo"
+msgstr "Ovaj partner već postoji u Odoo"
+
+#. module: account_invoice_import
+#: model:ir.model.fields.selection,name:account_invoice_import.selection__account_invoice_import_partner_create__create_or_update__create
+msgid "This partner doesn't already exists in Odoo"
+msgstr "Ovaj partner još ne postoji u Odoo"
+
+#. module: account_invoice_import
+#: model_terms:ir.ui.view,arch_db:account_invoice_import.account_invoice_import_partner_create_form
+msgid "Update Partner"
+msgstr "Ažuriraj partnera"
+
+#. module: account_invoice_import
+#: model_terms:ir.ui.view,arch_db:account_invoice_import.account_invoice_import_form
+msgid ""
+"Upload below the vendor bills/refunds as PDF or XML file: Odoo will create a"
+" draft vendor bills refund for each file."
+msgstr ""
+"Dolje učitajte račune dobavljača/povrate kao PDF ili XML datoteku: Odoo će "
+"kreirati nacrt povrata računa dobavljača za svaku datoteku."
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_invoice_import_partner_create__move_id
+msgid "Vendor Bill"
+msgstr "Ulazni račun"
+
+#. module: account_invoice_import
+#: model_terms:ir.ui.view,arch_db:account_invoice_import.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:account_invoice_import.view_partner_property_form
+msgid "Vendor Bills Import"
+msgstr "Uvoz računa dobavljača"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,field_description:account_invoice_import.field_account_invoice_import__website_message_ids
+msgid "Website Messages"
+msgstr "Poruke web stranice"
+
+#. module: account_invoice_import
+#: model:ir.model.fields,help:account_invoice_import.field_account_invoice_import__website_message_ids
+msgid "Website communication history"
+msgstr "Povijest komunikacije web stranice"
+
+#. module: account_invoice_import
+#: model:ir.model,name:account_invoice_import.model_account_invoice_import_partner_create
+msgid "Wizard to create a new partner or update an existing partner"
+msgstr ""
+"Čarobnjak za kreiranje novog partnera ili ažuriranje postojećeg partnera"
+
+#. module: account_invoice_import
+#: model:ir.model,name:account_invoice_import.model_account_invoice_import
+msgid "Wizard to import supplier invoices/refunds"
+msgstr "Čarobnjak za uvoz računa dobavljača/povrata"
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import.py:0
+msgid ""
+"You are importing a customer invoice/refund in journal '%(journal)s' which "
+"is not a sale journal."
+msgstr ""
+"Uvozite račun/povrat kupca u dnevnik '%(journal)s' koji nije prodajni "
+"dnevnik."
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import.py:0
+msgid ""
+"You are importing a vendor bill/refund in journal '%(journal)s' which is not"
+" a purchase journal."
+msgstr ""
+"Uvozite račun/povrat dobavljača u dnevnik '%(journal)s' koji nije dnevnik "
+"nabave."
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import.py:0
+msgid ""
+"You are importing an invoice in company %(company)s that cannot deduct VAT "
+"and the imported invoice has several VAT taxes on the same line (%(line)s). "
+"We do not support this scenario for the moment."
+msgstr ""
+"Uvozite račun u tvrtku %(company)s koja ne može odbiti PDV, a uvezeni račun "
+"ima nekoliko PDV poreza na istoj stavci (%(line)s). Za sada ne podržavamo "
+"ovaj scenarij."
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import.py:0
+msgid ""
+"You must configure the 'Adjustment Credit Account' on the Accounting "
+"Configuration page of company %(company)s."
+msgstr ""
+"Morate konfigurirati 'Konto korekcije odobrenja' na stranici računovodstvene"
+" konfiguracije tvrtke %(company)s."
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import.py:0
+msgid ""
+"You must configure the 'Adjustment Debit Account' on the Accounting "
+"Configuration page of company %(company)s."
+msgstr ""
+"Morate konfigurirati 'Konto korekcije terećenja' na stranici računovodstvene"
+" konfiguracije tvrtke %(company)s."
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import_partner_create.py:0
+msgid "You must select the partner to update."
+msgstr "Morate odabrati partnera za ažuriranje."
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import.py:0
+msgid "You must select the vendor bills to import."
+msgstr "Morate odabrati račune dobavljača za uvoz."
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import.py:0
+msgid ""
+"email sent by <b>{email_from}</b> on {date} with subject <b>{subject}</b>"
+msgstr ""
+"e-pošta poslana od <b>{email_from}</b> dana {date} s predmetom "
+"<b>{subject}</b>"
+
+#. module: account_invoice_import
+#: model_terms:ir.ui.view,arch_db:account_invoice_import.view_partner_property_form
+msgid "on imported vendor bill"
+msgstr "na uvezenom računu dobavljača"
+
+#. module: account_invoice_import
+#. odoo-python
+#: code:addons/account_invoice_import/wizard/account_invoice_import.py:0
+msgid "unspecified"
+msgstr "nenavedeno"

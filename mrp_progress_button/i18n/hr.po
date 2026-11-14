@@ -1,0 +1,67 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mrp_progress_button
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: mrp_progress_button
+#: model:ir.model.fields,field_description:mrp_progress_button.field_mrp_production__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: mrp_progress_button
+#: model:ir.model.fields,field_description:mrp_progress_button.field_mrp_production__id
+msgid "ID"
+msgstr "ID"
+
+#. module: mrp_progress_button
+#: model:ir.model,name:mrp_progress_button.model_mrp_production
+msgid "Manufacturing Order"
+msgstr "Nalog za proizvodnju"
+
+#. module: mrp_progress_button
+#. odoo-python
+#: code:addons/mrp_progress_button/models/mrp_production.py:0
+msgid "Only manufacturing orders in progress can be unstarted: %s."
+msgstr ""
+
+#. module: mrp_progress_button
+#: model:ir.model.fields,field_description:mrp_progress_button.field_mrp_production__date_started
+msgid "Started On"
+msgstr ""
+
+#. module: mrp_progress_button
+#: model_terms:ir.ui.view,arch_db:mrp_progress_button.mrp_production_progress_button_form_view
+msgid "Unstart"
+msgstr ""
+
+#. module: mrp_progress_button
+#. odoo-python
+#: code:addons/mrp_progress_button/models/mrp_production.py:0
+msgid "You cannot unstart %s because a quantity is already being produced."
+msgstr "Ne možete poništiti početak %s jer se količina već proizvodi."
+
+#. module: mrp_progress_button
+#. odoo-python
+#: code:addons/mrp_progress_button/models/mrp_production.py:0
+msgid "You cannot unstart %s because some components are already picked."
+msgstr "Ne možete poništiti početak %s jer su neke komponente već sabrane."
+
+#. module: mrp_progress_button
+#. odoo-python
+#: code:addons/mrp_progress_button/models/mrp_production.py:0
+msgid "You cannot unstart %s because some work orders are started or done."
+msgstr ""
+"Ne možete poništiti početak %s jer su neki radni nalozi započeti ili "
+"dovršeni."

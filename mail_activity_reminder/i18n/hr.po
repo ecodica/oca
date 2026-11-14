@@ -1,0 +1,117 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mail_activity_reminder
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: mail_activity_reminder
+#: model_terms:ir.ui.view,arch_db:mail_activity_reminder.message_activity_assigned
+msgid ".<br/>"
+msgstr ".<br/>"
+
+#. module: mail_activity_reminder
+#: model_terms:ir.ui.view,arch_db:mail_activity_reminder.message_activity_assigned
+msgid "<span>You have some activities assigned that expire soon:</span>"
+msgstr "<span>Imate neke dodijeljene aktivnosti koje uskoro istječu:</span>"
+
+#. module: mail_activity_reminder
+#: model:ir.model.fields,help:mail_activity_reminder.field_mail_activity_type__reminders
+msgid ""
+"A non-digit-separated list of offsets (in days) when reminders should be "
+"fired: e.g. 0 means \"on the deadline day\" while 5 means \"5 calendar days "
+"before the deadline\"."
+msgstr ""
+"Popis pomaka (u danima) odvojenih bez znamenki kada podsjetnici trebaju biti"
+" aktivirani: npr. 0 znači \"na dan roka\", dok 5 znači \"5 kalendarskih dana"
+" prije roka\"."
+
+#. module: mail_activity_reminder
+#: model:ir.model,name:mail_activity_reminder.model_mail_activity
+msgid "Activity"
+msgstr "Aktivnost"
+
+#. module: mail_activity_reminder
+#: model:ir.model,name:mail_activity_reminder.model_mail_activity_type
+msgid "Activity Type"
+msgstr "Vrsta aktivnosti"
+
+#. module: mail_activity_reminder
+#: model:ir.model.fields,field_description:mail_activity_reminder.field_mail_activity__deadline
+msgid "Deadline"
+msgstr "Krajnji rok"
+
+#. module: mail_activity_reminder
+#: model:ir.model.fields,field_description:mail_activity_reminder.field_mail_activity__display_name
+#: model:ir.model.fields,field_description:mail_activity_reminder.field_mail_activity_type__display_name
+#: model:ir.model.fields,field_description:mail_activity_reminder.field_mail_thread__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: mail_activity_reminder
+#: model:ir.model,name:mail_activity_reminder.model_mail_thread
+msgid "Email Thread"
+msgstr "E-mail"
+
+#. module: mail_activity_reminder
+#: model:ir.model.fields,field_description:mail_activity_reminder.field_mail_activity__id
+#: model:ir.model.fields,field_description:mail_activity_reminder.field_mail_activity_type__id
+#: model:ir.model.fields,field_description:mail_activity_reminder.field_mail_thread__id
+msgid "ID"
+msgstr "ID"
+
+#. module: mail_activity_reminder
+#: model:ir.model.fields,field_description:mail_activity_reminder.field_mail_activity__last_reminder_local
+msgid "Last reminder (local)"
+msgstr ""
+
+#. module: mail_activity_reminder
+#: model:ir.actions.server,name:mail_activity_reminder.mail_activity_reminder_ir_actions_server
+msgid "Mail Activity: Reminders"
+msgstr ""
+
+#. module: mail_activity_reminder
+#: model:ir.model.fields,field_description:mail_activity_reminder.field_mail_activity__next_reminder
+msgid "Next reminder"
+msgstr "Sljedeći podsjetnik"
+
+#. module: mail_activity_reminder
+#: model:ir.model.fields,field_description:mail_activity_reminder.field_mail_activity_type__reminders
+msgid "Reminders"
+msgstr "Podsjetnici"
+
+#. module: mail_activity_reminder
+#. odoo-python
+#: code:addons/mail_activity_reminder/models/mail_activity.py:0
+msgid "Some activities you are assigned to expire soon."
+msgstr ""
+
+#. module: mail_activity_reminder
+#: model_terms:ir.ui.view,arch_db:mail_activity_reminder.message_activity_assigned
+msgid "View"
+msgstr "Prikaz"
+
+#. module: mail_activity_reminder
+#: model_terms:ir.ui.view,arch_db:mail_activity_reminder.message_activity_assigned
+msgid "assigned you an activity"
+msgstr "dodijelio vam je aktivnost"
+
+#. module: mail_activity_reminder
+#: model_terms:ir.ui.view,arch_db:mail_activity_reminder.message_activity_assigned
+msgid "on"
+msgstr "na"
+
+#. module: mail_activity_reminder
+#: model_terms:ir.ui.view,arch_db:mail_activity_reminder.message_activity_assigned
+msgid "to close for"
+msgstr "za zatvaranje za"

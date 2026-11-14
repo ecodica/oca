@@ -1,0 +1,1468 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* purchase_request
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
+msgid "<strong>Analytic Distribution</strong>"
+msgstr "<strong>Analitička raspodjela</strong>"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
+msgid ""
+"<strong>Assigned to:</strong>\n"
+"                                <br/>"
+msgstr ""
+"<strong>Dodijeljeno:</strong>\n"
+"                                <br/>"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
+msgid ""
+"<strong>Creation Date:</strong>\n"
+"                                <br/>"
+msgstr ""
+"<strong>Datum kreiranja:</strong>\n"
+"                                <br/>"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
+msgid ""
+"<strong>Description:</strong>\n"
+"                                <br/>"
+msgstr ""
+"<strong>Opis:</strong>\n"
+"                                <br/>"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
+msgid "<strong>Description</strong>"
+msgstr "<strong>Opis</strong>"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
+msgid "<strong>Estimated Cost</strong>"
+msgstr "<strong>Procijenjeni trošak</strong>"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
+msgid ""
+"<strong>Picking Type:</strong>\n"
+"                                <br/>"
+msgstr ""
+"<strong>Vrsta otpremnice:</strong>\n"
+"                                <br/>"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
+msgid "<strong>Product UoM</strong>"
+msgstr "<strong>JM proizvoda</strong>"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
+msgid "<strong>Qty</strong>"
+msgstr "<strong>Kol</strong>"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
+msgid ""
+"<strong>Request Reference:</strong>\n"
+"                                <br/>"
+msgstr ""
+"<strong>Referenca zahtjeva:</strong>\n"
+"                                <br/>"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
+msgid "<strong>Requested Date</strong>"
+msgstr "<strong>Zatraženi datum</strong>"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
+msgid ""
+"<strong>Requested by:</strong>\n"
+"                                <br/>"
+msgstr ""
+"<strong>Zatražio:</strong>\n"
+"                                <br/>"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
+msgid ""
+"<strong>Source:</strong>\n"
+"                                <br/>"
+msgstr ""
+"<strong>Izvor:</strong>\n"
+"                                <br/>"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
+msgid "<strong>Specifications</strong>"
+msgstr "<strong>Specifikacije</strong>"
+
+#. module: purchase_request
+#: model_terms:ir.actions.act_window,help:purchase_request.purchase_request_form_action
+msgid ""
+"A purchase request is an instruction to Purchasing to procure\n"
+"            a certain quantity of materials services, so that they are\n"
+"            available at a certain point in time."
+msgstr ""
+"Zahtjev za nabavu je uputa nabavi da nabavi\n"
+"            određenu količinu materijala ili usluga, tako da budu\n"
+"            dostupni u određenom trenutku."
+
+#. module: purchase_request
+#. odoo-python
+#: code:addons/purchase_request/models/stock_move.py:0
+msgid ""
+"A sale/manufacturing order that generated this purchase request has been "
+"cancelled/deleted. Check if an action is needed."
+msgstr ""
+"Prodajni/proizvodni nalog koji je generirao ovaj zahtjev za nabavu je "
+"otkazan/obrisan. Provjerite je li potrebna neka radnja."
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__message_needaction
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__message_needaction
+msgid "Action Needed"
+msgstr "Potrebna radnja"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__activity_ids
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__activity_ids
+msgid "Activities"
+msgstr "Aktivnosti"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__activity_exception_decoration
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Ukras iznimke aktivnosti"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__activity_state
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__activity_state
+msgid "Activity State"
+msgstr "Status aktivnosti"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__activity_type_icon
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Ikona vrste aktivnosti"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+msgid "All Bought"
+msgstr "Sve kupljeno"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_allocation__allocated_product_qty
+msgid "Allocated Quantity"
+msgstr "Alocirana Količina"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_form
+msgid "Allocations"
+msgstr "Dodjele"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__analytic_distribution
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+msgid "Analytic Distribution"
+msgstr "Analitička distribucija"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__analytic_precision
+msgid "Analytic Precision"
+msgstr "Preciznost analitike"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
+msgid "Approve"
+msgstr "Odobri"
+
+#. module: purchase_request
+#: model:ir.model.fields.selection,name:purchase_request.selection__purchase_request__state__approved
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+msgid "Approved"
+msgstr "Odobreno"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__assigned_to
+msgid "Approver"
+msgstr "Odobravatelj"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__assigned_to
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+msgid "Assigned to"
+msgstr "Dodjeljen"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+msgid "Assigned to me"
+msgstr "Dodijeljeno meni"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+msgid "At least a Draft PO has been created"
+msgstr "Kreiran je barem jedan nacrt nabavnog naloga"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+msgid "At least a PO has been completed"
+msgstr "Dovršen je barem jedan nabavni nalog"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+msgid "At least a PO has been confirmed"
+msgstr "Potvrđen je barem jedan nabavni nalog"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__message_attachment_count
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__message_attachment_count
+msgid "Attachment Count"
+msgstr "Broj privitaka"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_line_make_purchase_order
+msgid "Cancel"
+msgstr "Odustani"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__cancelled
+msgid "Cancelled"
+msgstr "Otkazano"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+msgid "Cancelled Quantity"
+msgstr "Otkazana količina"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_product_product__purchase_request
+#: model:ir.model.fields,help:purchase_request.field_product_template__purchase_request
+msgid ""
+"Check this box to generate Purchase Request instead of generating Requests "
+"For Quotation from procurement."
+msgstr ""
+"Označite ovo polje za generiranje zahtjeva za nabavu umjesto generiranja "
+"zahtjeva za ponudu iz nabave."
+
+#. module: purchase_request
+#: model_terms:ir.actions.act_window,help:purchase_request.purchase_request_form_action
+msgid "Click to start a new purchase request process."
+msgstr "Kliknite za pokretanje novog procesa zahtjeva za nabavu."
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__company_id
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_allocation__company_id
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__company_id
+msgid "Company"
+msgstr "Tvrtka"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_make_purchase_order_item__keep_description
+msgid "Copy descriptions to new PO"
+msgstr "Kopiraj opise u novi nabavni nalog"
+
+#. module: purchase_request
+#: model:ir.actions.act_window,name:purchase_request.action_purchase_request_line_make_purchase_order
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_line_make_purchase_order
+msgid "Create RFQ"
+msgstr "Kreiraj zahtjev za ponudu (RFQ)"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_stock_move__created_purchase_request_line_id
+msgid "Created Purchase Request Line"
+msgstr "Kreirana stavka zahtjeva za nabavu"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__create_uid
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_allocation__create_uid
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__create_uid
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_make_purchase_order__create_uid
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_make_purchase_order_item__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__create_date
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_allocation__create_date
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__create_date
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_make_purchase_order__create_date
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_make_purchase_order_item__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__date_start
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__date_start
+msgid "Creation date"
+msgstr "Datum kreiranja"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__currency_id
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__currency_id
+msgid "Currency"
+msgstr "Valuta"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_request__date_start
+#: model:ir.model.fields,help:purchase_request.field_purchase_request_line__date_start
+msgid "Date when the user initiated the request."
+msgstr "Datum kada je korisnik pokrenuo zahtjev."
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__description
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__name
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_make_purchase_order_item__name
+msgid "Description"
+msgstr "Opis"
+
+#. module: purchase_request
+#. odoo-python
+#: code:addons/purchase_request/models/purchase_request_line.py:0
+msgid "Detailed Line"
+msgstr "Detaljna stavka"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_product_template__display_name
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_order__display_name
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_order_line__display_name
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__display_name
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_allocation__display_name
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__display_name
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_make_purchase_order__display_name
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_make_purchase_order_item__display_name
+#: model:ir.model.fields,field_description:purchase_request.field_stock_move__display_name
+#: model:ir.model.fields,field_description:purchase_request.field_stock_move_line__display_name
+#: model:ir.model.fields,field_description:purchase_request.field_stock_rule__display_name
+#: model:ir.model.fields,field_description:purchase_request.field_stock_warehouse_orderpoint__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__distribution_analytic_account_ids
+msgid "Distribution Analytic Account"
+msgstr "Analitički račun distribucije"
+
+#. module: purchase_request
+#: model:ir.model.fields.selection,name:purchase_request.selection__purchase_request__state__done
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+msgid "Done"
+msgstr "GOTOVO"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__move_dest_ids
+msgid "Downstream Moves"
+msgstr "Silazna kretanja"
+
+#. module: purchase_request
+#: model:ir.model.fields.selection,name:purchase_request.selection__purchase_request__state__draft
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+msgid "Draft"
+msgstr "Nacrt"
+
+#. module: purchase_request
+#. odoo-python
+#: code:addons/purchase_request/wizard/purchase_request_line_make_purchase_order.py:0
+msgid "Enter a positive quantity."
+msgstr "Unesite pozitivnu količinu."
+
+#. module: purchase_request
+#. odoo-python
+#: code:addons/purchase_request/wizard/purchase_request_line_make_purchase_order.py:0
+msgid "Enter a supplier."
+msgstr "Unesite dobavljača."
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__estimated_cost
+msgid "Estimated Cost"
+msgstr "Procijenjeni trošak"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_request_line__estimated_cost
+msgid "Estimated cost of Purchase Request Line, not propagated to PO."
+msgstr ""
+"Procijenjeni trošak stavke zahtjeva za nabavu, ne prenosi se na nabavni "
+"nalog."
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_line_make_purchase_order
+msgid "Existing RFQ to update:"
+msgstr "Postojeći zahtjev za ponudu za ažuriranje:"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__message_follower_ids
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__message_follower_ids
+msgid "Followers"
+msgstr "Pratitelji"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__message_partner_ids
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Pratitelji (partneri)"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_request__activity_type_icon
+#: model:ir.model.fields,help:purchase_request.field_purchase_request_line__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Font awesome ikona npr. fa-tasks"
+
+#. module: purchase_request
+#. odoo-python
+#: code:addons/purchase_request/models/purchase_request_allocation.py:0
+msgid ""
+"From last reception this quantity has been allocated to this purchase "
+"request"
+msgstr ""
+"Od zadnjeg prijema ova količina je dodijeljena ovom zahtjevu za nabavu"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+msgid "Future Activities"
+msgstr "Buduće aktivnosti"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__has_message
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__has_message
+msgid "Has Message"
+msgstr "Ima poruku"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_order_line_search_sub
+msgid "Hide cancelled lines"
+msgstr "Sakrij otkazane retke"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_product_template__id
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_order__id
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_order_line__id
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__id
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_allocation__id
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__id
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_make_purchase_order__id
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_make_purchase_order_item__id
+#: model:ir.model.fields,field_description:purchase_request.field_stock_move__id
+#: model:ir.model.fields,field_description:purchase_request.field_stock_move_line__id
+#: model:ir.model.fields,field_description:purchase_request.field_stock_rule__id
+#: model:ir.model.fields,field_description:purchase_request.field_stock_warehouse_orderpoint__id
+msgid "ID"
+msgstr "ID"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__activity_exception_icon
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__activity_exception_icon
+msgid "Icon"
+msgstr "Ikona"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_request__activity_exception_icon
+#: model:ir.model.fields,help:purchase_request.field_purchase_request_line__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Ikona koja označava iznimnu aktivnost."
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_request__message_needaction
+#: model:ir.model.fields,help:purchase_request.field_purchase_request_line__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Ako je označeno, nove poruke zahtijevaju vašu pažnju."
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_request__message_has_error
+#: model:ir.model.fields,help:purchase_request.field_purchase_request_line__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Ako je označeno, neke poruke imaju grešku u dostavi."
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+msgid "In Progress"
+msgstr "U tijeku"
+
+#. module: purchase_request
+#: model:ir.model.fields.selection,name:purchase_request.selection__purchase_request__state__in_progress
+msgid "In progress"
+msgstr "U tijeku"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__is_editable
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__is_editable
+msgid "Is Editable"
+msgstr "Je uređivo"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__message_is_follower
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__message_is_follower
+msgid "Is Follower"
+msgstr "Je pratitelj"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__is_name_editable
+msgid "Is Name Editable"
+msgstr "Je li naziv moguće uređivati"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_make_purchase_order__item_ids
+msgid "Item"
+msgstr "Stavka"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__write_uid
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_allocation__write_uid
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__write_uid
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_make_purchase_order__write_uid
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_make_purchase_order_item__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__write_date
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_allocation__write_date
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__write_date
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_make_purchase_order__write_date
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_make_purchase_order_item__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+msgid "Late Activities"
+msgstr "Zakašnjele aktivnosti"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
+msgid "Lines"
+msgstr "Stavke"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_order_line_form2_sub
+msgid "Manual Invoices"
+msgstr "Ručni računi"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_make_purchase_order__sync_data_planned
+msgid "Match existing PO lines by Scheduled Date"
+msgstr "Podudari postojeće stavke nabavnog naloga po planiranom datumu"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__message_has_error
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__message_has_error
+msgid "Message Delivery error"
+msgstr "Greška u dostavi poruke"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__message_ids
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__message_ids
+msgid "Messages"
+msgstr "Poruke"
+
+#. module: purchase_request
+#: model:ir.model,name:purchase_request.model_stock_warehouse_orderpoint
+msgid "Minimum Inventory Rule"
+msgstr "Pravilo minimalne zalihe"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__my_activity_date_deadline
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Rok moje aktivnosti"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+msgid "My requests"
+msgstr "Moji zahtjevi"
+
+#. module: purchase_request
+#. odoo-python
+#: code:addons/purchase_request/models/purchase_request.py:0
+msgid "New"
+msgstr "Novi"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_line_make_purchase_order
+msgid "New PO details:"
+msgstr "Detalji novog nabavnog naloga:"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__activity_date_deadline
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Rok sljedeće aktivnosti"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__activity_summary
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__activity_summary
+msgid "Next Activity Summary"
+msgstr "Sažetak sljedeće aktivnosti"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__activity_type_id
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__activity_type_id
+msgid "Next Activity Type"
+msgstr "Vrsta sljedeće aktivnosti"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+msgid "No RFQ or Purchase has been created"
+msgstr "Nije kreiran zahtjev za ponudu ni nabava"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__message_needaction_counter
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Broj radnji"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__message_has_error_counter
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__message_has_error_counter
+msgid "Number of errors"
+msgstr "Broj grešaka"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_request__message_needaction_counter
+#: model:ir.model.fields,help:purchase_request.field_purchase_request_line__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Broj poruka koje zahtijevaju radnju"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_request__message_has_error_counter
+#: model:ir.model.fields,help:purchase_request.field_purchase_request_line__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Broj poruka s greškom u dostavi"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_allocation__open_product_qty
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+msgid "Open Quantity"
+msgstr "Količina"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_order_line_search_sub
+msgid "Order Reference"
+msgstr "Referenca naloga"
+
+#. module: purchase_request
+#. odoo-python
+#: code:addons/purchase_request/models/purchase_order.py:0
+msgid "Order confirmation %(po_name)s for your Request %(pr_name)s"
+msgstr "Potvrda narudžbe %(po_name)s za vaš zahtjev %(pr_name)s"
+
+#. module: purchase_request
+#. odoo-python
+#: code:addons/purchase_request/models/purchase_order.py:0
+msgid ""
+"Ordered quantity %(prl_qty)s %(prl_uom)s, Planned date %(prl_date_planned)s"
+msgstr ""
+"Naručena količina %(prl_qty)s %(prl_uom)s, planirani datum "
+"%(prl_date_planned)s"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__orderpoint_id
+msgid "Orderpoint"
+msgstr "Točka narudžbe"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__description
+msgid "PR Description"
+msgstr "Opis zahtjeva za nabavu"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__pending_qty_to_receive
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+msgid "Pending Qty to Receive"
+msgstr "Količina na čekanju za primitak"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
+msgid "Picking"
+msgstr "Primka"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__picking_type_id
+msgid "Picking Type"
+msgstr "Vrsta prikupljanja"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
+msgid "Pickings"
+msgstr "Prikupi"
+
+#. module: purchase_request
+#. odoo-python
+#: code:addons/purchase_request/wizard/purchase_request_line_make_purchase_order.py:0
+msgid "Please select a product for all lines"
+msgstr "Odaberite proizvod za sve stavke"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__supplier_id
+msgid "Preferred supplier"
+msgstr "Preferirani dobavljač"
+
+#. module: purchase_request
+#: model:ir.model,name:purchase_request.model_product_template
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__product_id
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_allocation__product_id
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__product_id
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_make_purchase_order_item__product_id
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+msgid "Product"
+msgstr "Proizvod"
+
+#. module: purchase_request
+#: model:ir.model,name:purchase_request.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Kretanja proizvoda (Stavka skladišnog prijenosa)"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
+msgid "Products"
+msgstr "Proizvodi"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__line_ids
+msgid "Products to Purchase"
+msgstr "Artikli za nabavu"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+msgid "Purchase Confirmed"
+msgstr "Nabava potvrđena"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+msgid "Purchase Done"
+msgstr "Nabava dovršena"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_allocation__purchase_line_id
+msgid "Purchase Line"
+msgstr "Stavka nabave"
+
+#. module: purchase_request
+#: model:ir.model,name:purchase_request.model_purchase_order
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_make_purchase_order__purchase_order_id
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
+msgid "Purchase Order"
+msgstr "Nabavni nalog"
+
+#. module: purchase_request
+#: model:ir.model,name:purchase_request.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "Stavka nabavnog naloga"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__purchase_lines
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_order_line_form2_sub
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_form
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_line_details
+msgid "Purchase Order Lines"
+msgstr "Stavke narudžbe"
+
+#. module: purchase_request
+#: model:mail.message.subtype,name:purchase_request.mt_request_po_confirmed
+msgid "Purchase Order confirmation"
+msgstr "Potvrda nabavnog naloga"
+
+#. module: purchase_request
+#: model:mail.message.subtype,description:purchase_request.mt_request_po_confirmed
+msgid "Purchase Order is confirmed"
+msgstr "Nabavni nalog je potvrđen"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
+msgid "Purchase Orders"
+msgstr "Nabavni nalozi"
+
+#. module: purchase_request
+#: model:ir.actions.report,name:purchase_request.action_report_purchase_requests
+#: model:ir.model,name:purchase_request.model_purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_product_product__purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_product_template__purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__request_id
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_make_purchase_order_item__request_id
+#: model:ir.model.fields,field_description:purchase_request.field_stock_move__purchase_request_ids
+#: model:ir.module.category,name:purchase_request.module_category_purchase_request
+#: model:res.groups.privilege,name:purchase_request.res_groups_privilege_purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+msgid "Purchase Request"
+msgstr "Zahtjev za nabavu"
+
+#. module: purchase_request
+#. odoo-python
+#: code:addons/purchase_request/models/purchase_order.py:0
+msgid "Purchase Request %(name)s has already been completed"
+msgstr "Zahtjev za nabavu %(name)s već je dovršen"
+
+#. module: purchase_request
+#. odoo-python
+#: code:addons/purchase_request/wizard/purchase_request_line_make_purchase_order.py:0
+msgid "Purchase Request %(name)s is not approved or in progress"
+msgstr "Zahtjev za nabavu %(name)s nije odobren ili nije u tijeku"
+
+#. module: purchase_request
+#: model:ir.model,name:purchase_request.model_purchase_request_allocation
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_order_line__purchase_request_allocation_ids
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__purchase_request_allocation_ids
+#: model:ir.model.fields,field_description:purchase_request.field_stock_move__purchase_request_allocation_ids
+msgid "Purchase Request Allocation"
+msgstr "Raspodjela zahtjeva za nabavu"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_move_form
+msgid "Purchase Request Allocations"
+msgstr "Raspodjele zahtjeva za nabavu"
+
+#. module: purchase_request
+#: model:ir.model,name:purchase_request.model_purchase_request_line
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_allocation__purchase_request_line_id
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_make_purchase_order_item__line_id
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_form
+msgid "Purchase Request Line"
+msgstr "Stavka zahtjeva za nabavu"
+
+#. module: purchase_request
+#: model:ir.model,name:purchase_request.model_purchase_request_line_make_purchase_order
+msgid "Purchase Request Line Make Purchase Order"
+msgstr "Stavka zahtjeva za nabavu - kreiranje nabavnog naloga"
+
+#. module: purchase_request
+#: model:ir.model,name:purchase_request.model_purchase_request_line_make_purchase_order_item
+msgid "Purchase Request Line Make Purchase Order Item"
+msgstr "Stavka stavke zahtjeva za nabavu - kreiranje nabavnog naloga"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__line_count
+msgid "Purchase Request Line count"
+msgstr "Broj stavaka zahtjeva za nabavu"
+
+#. module: purchase_request
+#. odoo-python
+#: code:addons/purchase_request/models/purchase_order.py:0
+#: model:ir.actions.act_window,name:purchase_request.purchase_request_line_form_action
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_order_line__purchase_request_lines
+#: model:ir.ui.menu,name:purchase_request.menu_purchase_request_line
+#: model:ir.ui.menu,name:purchase_request.menu_purchase_request_line_act
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_order_line_form2
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_order_line_form2_sub
+msgid "Purchase Request Lines"
+msgstr "Stavke zahtjeva za nabavu"
+
+#. module: purchase_request
+#: model:res.groups,name:purchase_request.group_purchase_request_manager
+msgid "Purchase Request Manager"
+msgstr "Upravitelj zahtjeva za nabavu"
+
+#. module: purchase_request
+#: model:res.groups,name:purchase_request.group_purchase_request_user
+msgid "Purchase Request User"
+msgstr "Korisnik zahtjeva za nabavu"
+
+#. module: purchase_request
+#: model:mail.message.subtype,description:purchase_request.mt_request_approved
+#: model:mail.message.subtype,name:purchase_request.mt_request_approved
+msgid "Purchase Request approved"
+msgstr "Zahtjev za nabavu odobren"
+
+#. module: purchase_request
+#: model:mail.message.subtype,name:purchase_request.mt_request_done
+msgid "Purchase Request done"
+msgstr "Zahtjev za nabavu dovršen"
+
+#. module: purchase_request
+#: model:mail.message.subtype,description:purchase_request.mt_request_done
+msgid "Purchase Request is done"
+msgstr "Zahtjev za nabavu je dovršen"
+
+#. module: purchase_request
+#: model:mail.message.subtype,description:purchase_request.mt_request_rejected
+#: model:mail.message.subtype,name:purchase_request.mt_request_rejected
+msgid "Purchase Request rejected"
+msgstr "Zahtjev za nabavu odbijen"
+
+#. module: purchase_request
+#: model:mail.message.subtype,description:purchase_request.mt_request_to_approve
+#: model:mail.message.subtype,name:purchase_request.mt_request_to_approve
+msgid "Purchase Request to be approved"
+msgstr "Zahtjev za nabavu za odobrenje"
+
+#. module: purchase_request
+#: model:ir.actions.act_window,name:purchase_request.action_purchase_request_line_product_tree
+#: model:ir.actions.act_window,name:purchase_request.purchase_request_form_action
+#: model:ir.ui.menu,name:purchase_request.menu_purchase_request
+#: model:ir.ui.menu,name:purchase_request.menu_purchase_request_act
+#: model:ir.ui.menu,name:purchase_request.menu_purchase_request_pro_mgt
+#: model:ir.ui.menu,name:purchase_request.parent_menu_purchase_request
+msgid "Purchase Requests"
+msgstr "Zahtjevi za nabavu"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__purchase_state
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+msgid "Purchase Status"
+msgstr "Status nabave"
+
+#. module: purchase_request
+#: model:mail.message.subtype,name:purchase_request.mt_request_picking_done
+msgid "Purchase receipt confirmation"
+msgstr "Potvrda primitka nabave"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__purchase_count
+msgid "Purchases count"
+msgstr "Broj nabava"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+msgid "Purchasing not started"
+msgstr "Nabava nije započela"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__qty_cancelled
+msgid "Qty Cancelled"
+msgstr "Otkazana kol."
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__qty_done
+msgid "Qty Done"
+msgstr "Završena kol."
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__qty_in_progress
+msgid "Qty In Progress"
+msgstr "kol. u tijeku"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__product_qty
+msgid "Quantity"
+msgstr "Količina"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_request_line__qty_cancelled
+msgid "Quantity cancelled"
+msgstr "Otkazana kol."
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_request_line__qty_done
+msgid "Quantity completed"
+msgstr "Riješena kol."
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_request_line__qty_in_progress
+msgid "Quantity in progress."
+msgstr "kol. u tijeku"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_request_allocation__allocated_product_qty
+msgid ""
+"Quantity of the purchase request line allocated to the stockmove, in the "
+"default UoM of the product"
+msgstr ""
+"Količina stavke zahtjeva za nabavu dodijeljena kretanju zaliha, u zadanoj JM"
+" proizvoda"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_request_allocation__requested_product_uom_qty
+msgid ""
+"Quantity of the purchase request line allocated to thestock move, in the UoM"
+" of the Purchase Request Line"
+msgstr ""
+"Količina stavke zahtjeva za nabavu dodijeljena kretanju zaliha, u JM stavke "
+"zahtjeva za nabavu"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_make_purchase_order_item__product_qty
+msgid "Quantity to purchase"
+msgstr "Količina za nabavu"
+
+#. module: purchase_request
+#. odoo-python
+#: code:addons/purchase_request/wizard/purchase_request_line_make_purchase_order.py:0
+msgid "RFQ"
+msgstr "ZZP (RFQ)"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__purchased_qty
+msgid "RFQ/PO Qty"
+msgstr "Količina RFQ/PO"
+
+#. module: purchase_request
+#. odoo-python
+#: code:addons/purchase_request/models/stock_move_line.py:0
+msgid ""
+"Receipt confirmation %(picking_name)s for your Request %(request_name)s"
+msgstr "Potvrda primitka %(picking_name)s za vaš zahtjev %(request_name)s"
+
+#. module: purchase_request
+#. odoo-python
+#: code:addons/purchase_request/models/stock_move_line.py:0
+msgid "Receipt confirmation for Request %(name)s"
+msgstr "Potvrda primitka za zahtjev %(name)s"
+
+#. module: purchase_request
+#: model:mail.message.subtype,description:purchase_request.mt_request_picking_done
+msgid "Receipt is done"
+msgstr "Primitak je dovršen"
+
+#. module: purchase_request
+#. odoo-python
+#: code:addons/purchase_request/models/purchase_order.py:0
+msgid "Received quantity"
+msgstr "Zaprimljena količina"
+
+#. module: purchase_request
+#. odoo-python
+#: code:addons/purchase_request/models/purchase_request_allocation.py:0
+msgid "Received quantity %(product_qty)s %(product_uom)s"
+msgstr "Primljena količina %(product_qty)s %(product_uom)s"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
+msgid "Reject"
+msgstr "Odbij"
+
+#. module: purchase_request
+#: model:ir.model.fields.selection,name:purchase_request.selection__purchase_request__state__rejected
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+msgid "Rejected"
+msgstr "Odbijeno"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+msgid "Request"
+msgstr "Zahtjev"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__date_required
+msgid "Request Date"
+msgstr "Datum zahtjeva"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_order_form
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_order_line_tree
+msgid "Request Lines"
+msgstr "Stavke zahtjeva"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__name
+msgid "Request Reference"
+msgstr "Referenca zahtjeva"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
+msgid "Request approval"
+msgstr "Zatraži odobrenje"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+msgid "Request is approved"
+msgstr "Zahtjev je odobren"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+msgid "Request is done"
+msgstr "Zahtjev je dovršen"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+msgid "Request is in progress"
+msgstr "Zahtjev je u tijeku"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+msgid "Request is rejected"
+msgstr "Zahtjev je odbijen"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+msgid "Request is to be approved"
+msgstr "Zahtjev je za odobrenje"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__request_state
+msgid "Request state"
+msgstr "Stanje zahtjeva"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+msgid "Request status"
+msgstr "Status zahtjeva"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__requested_by
+msgid "Requested By"
+msgstr "Zatražio"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_allocation__requested_product_uom_qty
+msgid "Requested Quantity"
+msgstr "Tražena količina"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__requested_by
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+msgid "Requested by"
+msgstr "Zahtjeva"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+msgid "Requested for Quotation"
+msgstr "Zatraženo za ponudu"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
+msgid "Reset"
+msgstr "Poništi"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__activity_user_id
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__activity_user_id
+msgid "Responsible User"
+msgstr "Odgovorni korisnik"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_order_line_search_sub
+msgid "Search Purchase Order Line"
+msgstr "Pretraži stavku nabavnog naloga"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+msgid "Search Purchase Request"
+msgstr "Pretraži zahtjev za nabavu"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_request_allocation__purchase_line_id
+msgid "Service Purchase Order Line"
+msgstr "Stavka nabavnog naloga usluge"
+
+#. module: purchase_request
+#. odoo-python
+#: code:addons/purchase_request/models/purchase_order.py:0
+msgid "Service confirmation for Request %(request_name)s"
+msgstr "Potvrda usluge za zahtjev %(request_name)s"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_request_line_make_purchase_order_item__keep_description
+msgid ""
+"Set true if you want to keep the descriptions provided in the wizard in the "
+"new PO."
+msgstr ""
+"Postavite na točno ako želite zadržati opise unesene u čarobnjaku u novom "
+"nabavnom nalogu."
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
+msgid "Show Details"
+msgstr "Prikaži detalje"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+msgid "Source"
+msgstr "Izvor"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__origin
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__origin
+msgid "Source Document"
+msgstr "Izvorni dokument"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__specifications
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_form
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_line_details
+msgid "Specifications"
+msgstr "Specifikacije"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+msgid "Start Date"
+msgstr "Datum početka"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__state
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_allocation__purchase_state
+msgid "Status"
+msgstr "Status"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_request__activity_state
+#: model:ir.model.fields,help:purchase_request.field_purchase_request_line__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Status na temelju aktivnosti\n"
+"Kašnjenje: rok je već prošao\n"
+"Danas: datum aktivnosti je danas\n"
+"Planirano: buduće aktivnosti."
+
+#. module: purchase_request
+#: model:ir.model,name:purchase_request.model_stock_move
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_allocation__stock_move_id
+msgid "Stock Move"
+msgstr "Skladišni prijenos"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__move_count
+msgid "Stock Move count"
+msgstr "Broj kretanja zaliha"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_order_line_form2_sub
+msgid "Stock Moves"
+msgstr "Skladišni prijenosi"
+
+#. module: purchase_request
+#: model:ir.model,name:purchase_request.model_stock_rule
+msgid "Stock Rule"
+msgstr "Pravilo zalihe"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_make_purchase_order__supplier_id
+msgid "Supplier"
+msgstr "Dobavljač"
+
+#. module: purchase_request
+#. odoo-python
+#: code:addons/purchase_request/models/stock_move.py:0
+msgid ""
+"The company of the purchase request must match with that of the location."
+msgstr "Tvrtka zahtjeva za nabavu mora odgovarati tvrtki lokacije."
+
+#. module: purchase_request
+#. odoo-python
+#: code:addons/purchase_request/models/purchase_order.py:0
+msgid ""
+"The following requested items from Purchase Request %(pr_name)s have now "
+"been confirmed in Purchase Order %(po_name)s:"
+msgstr ""
+"Sljedeće zatražene stavke iz zahtjeva za nabavu %(pr_name)s sada su "
+"potvrđene u nabavnom nalogu %(po_name)s:"
+
+#. module: purchase_request
+#. odoo-python
+#: code:addons/purchase_request/models/stock_move_line.py:0
+msgid ""
+"The following requested items from Purchase Request %(request_name)s have "
+"now been received in %(location_name)s using Picking %(picking_name)s:"
+msgstr ""
+"Sljedeće zatražene stavke iz zahtjeva za nabavu %(request_name)s sada su "
+"primljene na %(location_name)s putem otpremnice %(picking_name)s:"
+
+#. module: purchase_request
+#. odoo-python
+#: code:addons/purchase_request/models/stock_move_line.py:0
+msgid ""
+"The following requested items from Purchase Request %(request_name)s "
+"requested by %(requestor)s have now been received in %(location_name)s:"
+msgstr ""
+"Sljedeće zatražene stavke iz zahtjeva za nabavu %(request_name)s koje je "
+"zatražio %(requestor)s sada su primljene na %(location_name)s:"
+
+#. module: purchase_request
+#. odoo-python
+#: code:addons/purchase_request/models/purchase_order.py:0
+msgid ""
+"The following requested services from Purchase Request %(request_name)s "
+"requested by %(requestor)s have now been received:"
+msgstr ""
+"Sljedeće zatražene usluge iz zahtjeva za nabavu %(request_name)s koje je "
+"zatražio %(requestor)s sada su primljene:"
+
+#. module: purchase_request
+#. odoo-python
+#: code:addons/purchase_request/wizard/purchase_request_line_make_purchase_order.py:0
+msgid "The purchase has already been completed."
+msgstr "Nabava je već dovršena."
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__qty_to_buy
+msgid "There is some pending qty to buy"
+msgstr "Postoji neka količina na čekanju za kupnju"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+msgid "To Approve"
+msgstr "Odobriti"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__to_approve_allowed
+msgid "To Approve Allowed"
+msgstr "Dopušteno za odobrenje"
+
+#. module: purchase_request
+#: model:ir.model.fields.selection,name:purchase_request.selection__purchase_request__state__to_approve
+msgid "To be approved"
+msgstr "Za odobrenje"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+msgid "Today Activities"
+msgstr "Današnje aktivnosti"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__estimated_cost
+msgid "Total Estimated Cost"
+msgstr "Ukupni procijenjeni trošak"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_form
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_line_details
+msgid "Tracking"
+msgstr "Praćenje"
+
+#. module: purchase_request
+#. odoo-python
+#: code:addons/purchase_request/models/stock_move_line.py:0
+msgid "Transferred quantity"
+msgstr "Prenesena količina"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_request__activity_exception_decoration
+#: model:ir.model.fields,help:purchase_request.field_purchase_request_line__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Vrsta iznimne aktivnosti na zapisu."
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+msgid "Unassigned"
+msgstr "Nedodjeljen"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+msgid "Unassigned Request"
+msgstr "Nedodijeljeni zahtjev"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+msgid "Uncancelled"
+msgstr "Neotkazano"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+msgid "Unread Messages"
+msgstr "Nepročitane poruke"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_allocation__product_uom_id
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__product_uom_id
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_make_purchase_order_item__product_uom_id
+msgid "UoM"
+msgstr "JM"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_order_line_search_sub
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_order_line_tree_sub
+msgid "Vendor"
+msgstr "Dobavljač"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__website_message_ids
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__website_message_ids
+msgid "Website Messages"
+msgstr "Poruke web stranice"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_request__website_message_ids
+#: model:ir.model.fields,help:purchase_request.field_purchase_request_line__website_message_ids
+msgid "Website communication history"
+msgstr "Povijest komunikacije web stranice"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_request_line_make_purchase_order__sync_data_planned
+msgid ""
+"When checked, PO lines on the selected purchase order are only reused if the"
+" scheduled date matches as well."
+msgstr ""
+"Kada je označeno, stavke nabavnog naloga na odabranom nabavnom nalogu "
+"ponovno se koriste samo ako se podudara i planirani datum."
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_make_purchase_order_item__wiz_id
+msgid "Wizard"
+msgstr "Čarobnjak"
+
+#. module: purchase_request
+#. odoo-python
+#: code:addons/purchase_request/models/purchase_request_line.py:0
+msgid ""
+"You can only delete a purchase request line if the purchase request is in "
+"draft state."
+msgstr ""
+"Stavku zahtjeva za nabavu možete obrisati samo ako je zahtjev za nabavu u "
+"statusu nacrt."
+
+#. module: purchase_request
+#. odoo-python
+#: code:addons/purchase_request/models/purchase_request.py:0
+msgid ""
+"You can't request an approval for a purchase request which is empty. "
+"(%(name)s)"
+msgstr "Ne možete zatražiti odobrenje za prazan zahtjev za nabavu. (%(name)s)"
+
+#. module: purchase_request
+#. odoo-python
+#: code:addons/purchase_request/models/purchase_request.py:0
+msgid "You cannot delete a purchase request which is not draft."
+msgstr "Ne možete obrisati zahtjev za nabavu koji nije nacrt."
+
+#. module: purchase_request
+#. odoo-python
+#: code:addons/purchase_request/models/purchase_request_line.py:0
+msgid "You cannot delete a record that refers to purchase lines!"
+msgstr "Ne možete obrisati zapis koji se odnosi na stavke nabave!"
+
+#. module: purchase_request
+#. odoo-python
+#: code:addons/purchase_request/wizard/purchase_request_line_make_purchase_order.py:0
+msgid "You have to enter a Picking Type."
+msgstr "Morate unijeti vrstu otpremnice."
+
+#. module: purchase_request
+#. odoo-python
+#: code:addons/purchase_request/wizard/purchase_request_line_make_purchase_order.py:0
+msgid "You have to select lines from the same Picking Type."
+msgstr "Morate odabrati stavke iz iste vrste otpremnice."
+
+#. module: purchase_request
+#. odoo-python
+#: code:addons/purchase_request/wizard/purchase_request_line_make_purchase_order.py:0
+msgid "You have to select lines from the same company."
+msgstr "Morate odabrati stavke iz iste tvrtke."

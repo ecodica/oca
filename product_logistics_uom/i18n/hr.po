@@ -1,0 +1,218 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_logistics_uom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: product_logistics_uom
+#: model_terms:ir.ui.view,arch_db:product_logistics_uom.product_template_form_view
+msgid ""
+"<i class=\"fa fa-fw fa-warning text-warning\" title=\"Value too small for "
+"the selected uom. Select another uom to display the value.\"/>"
+msgstr ""
+"<i class=\"fa fa-fw fa-warning text-warning\" title=\"Value too small for "
+"the selected uom. Select another uom to display the value.\"/>"
+
+#. module: product_logistics_uom
+#: model_terms:ir.ui.view,arch_db:product_logistics_uom.product_template_form_view
+msgid ""
+"<span invisible=\"not show_volume_uom_warning\">\n"
+"                    <i class=\"fa fa-fw fa-warning text-warning\" title=\"Value too small for the selected uom. Select another uom to display the value.\"/>\n"
+"                </span>"
+msgstr ""
+"<span invisible=\"not show_volume_uom_warning\">\n"
+"                    <i class=\"fa fa-fw fa-warning text-warning\" title=\"Value too small for the selected uom. Select another uom to display the value.\"/>\n"
+"                </span>"
+
+#. module: product_logistics_uom
+#: model_terms:ir.ui.view,arch_db:product_logistics_uom.product_template_form_view
+msgid ""
+"<span invisible=\"not show_weight_uom_warning\">\n"
+"                    <i class=\"fa fa-fw fa-warning text-warning\" title=\"Value too small for the selected uom. Select another uom to display the value.\"/>\n"
+"                </span>"
+msgstr ""
+"<span invisible=\"not show_weight_uom_warning\">\n"
+"                    <i class=\"fa fa-fw fa-warning text-warning\" title=\"Value too small for the selected uom. Select another uom to display the value.\"/>\n"
+"                </span>"
+
+#. module: product_logistics_uom
+#: model:ir.model,name:product_logistics_uom.model_res_config_settings
+msgid "Config Settings"
+msgstr "Postavke"
+
+#. module: product_logistics_uom
+#: model:ir.model.fields,field_description:product_logistics_uom.field_res_config_settings__product_default_length_uom_id
+msgid "Default Length Unit of Measure"
+msgstr "Zadana jedinica mjere za duljinu"
+
+#. module: product_logistics_uom
+#: model:ir.model.fields,field_description:product_logistics_uom.field_res_config_settings__product_default_volume_uom_id
+msgid "Default Volume Unit of Measure"
+msgstr "Zadana jedinica mjere za obujam"
+
+#. module: product_logistics_uom
+#: model:ir.model.fields,field_description:product_logistics_uom.field_res_config_settings__product_default_weight_uom_id
+msgid "Default Weight Unit of Measure"
+msgstr "Zadana jedinica mjere za težinu"
+
+#. module: product_logistics_uom
+#: model:ir.model.fields,help:product_logistics_uom.field_res_config_settings__product_default_length_uom_id
+msgid "Default unit of measure to express product length"
+msgstr "Zadana jedinica mjere za izražavanje duljine proizvoda"
+
+#. module: product_logistics_uom
+#: model:ir.model.fields,help:product_logistics_uom.field_res_config_settings__product_default_volume_uom_id
+msgid "Default unit of measure to express product volume"
+msgstr "Zadana jedinica mjere za izražavanje obujma proizvoda"
+
+#. module: product_logistics_uom
+#: model:ir.model.fields,help:product_logistics_uom.field_res_config_settings__product_default_weight_uom_id
+msgid "Default unit of measure to express product weight"
+msgstr "Zadana jedinica mjere za izražavanje težine proizvoda"
+
+#. module: product_logistics_uom
+#: model_terms:ir.ui.view,arch_db:product_logistics_uom.res_config_settings_view_form
+msgid "Define your length unit of measure"
+msgstr "Definirajte svoju jedinicu mjere za duljinu"
+
+#. module: product_logistics_uom
+#: model:ir.model.fields,field_description:product_logistics_uom.field_product_product__display_name
+#: model:ir.model.fields,field_description:product_logistics_uom.field_product_template__display_name
+#: model:ir.model.fields,field_description:product_logistics_uom.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: product_logistics_uom
+#: model:ir.model.fields,field_description:product_logistics_uom.field_product_product__weight
+#: model:ir.model.fields,field_description:product_logistics_uom.field_product_template__weight
+msgid "Gross Weight"
+msgstr "Bruto težina"
+
+#. module: product_logistics_uom
+#: model:ir.model.fields,field_description:product_logistics_uom.field_product_product__id
+#: model:ir.model.fields,field_description:product_logistics_uom.field_product_template__id
+#: model:ir.model.fields,field_description:product_logistics_uom.field_res_config_settings__id
+msgid "ID"
+msgstr "ID"
+
+#. module: product_logistics_uom
+#: model_terms:ir.ui.view,arch_db:product_logistics_uom.res_config_settings_view_form
+msgid "Length"
+msgstr "Duljina"
+
+#. module: product_logistics_uom
+#: model:ir.model,name:product_logistics_uom.model_product_template
+msgid "Product"
+msgstr "Proizvod"
+
+#. module: product_logistics_uom
+#: model:ir.model,name:product_logistics_uom.model_product_product
+msgid "Product Variant"
+msgstr "Varijanta proizvoda"
+
+#. module: product_logistics_uom
+#: model:ir.model.fields,field_description:product_logistics_uom.field_product_product__show_volume_uom_warning
+#: model:ir.model.fields,field_description:product_logistics_uom.field_product_template__show_volume_uom_warning
+msgid "Show Volume Uom Warning"
+msgstr "Prikaži upozorenje o jm obujma"
+
+#. module: product_logistics_uom
+#: model:ir.model.fields,field_description:product_logistics_uom.field_product_product__show_weight_uom_warning
+#: model:ir.model.fields,field_description:product_logistics_uom.field_product_template__show_weight_uom_warning
+msgid "Show Weight Uom Warning"
+msgstr "Prikaži upozorenje o jm težine"
+
+#. module: product_logistics_uom
+#: model:ir.model.fields,help:product_logistics_uom.field_product_product__show_volume_uom_warning
+#: model:ir.model.fields,help:product_logistics_uom.field_product_template__show_volume_uom_warning
+msgid ""
+"Technical field used to warn the user to change the volumeuom since the "
+"value for product_volume is too small and has beenrounded."
+msgstr ""
+"Tehničko polje koje upozorava korisnika da promijeni jedinicu obujma jer je "
+"vrijednost product_volume premala i zaokružena."
+
+#. module: product_logistics_uom
+#: model:ir.model.fields,help:product_logistics_uom.field_product_product__show_weight_uom_warning
+#: model:ir.model.fields,help:product_logistics_uom.field_product_template__show_weight_uom_warning
+msgid ""
+"Technical field used to warn the user to change the weightuom since the "
+"value for product_weight is too small and has beenrounded."
+msgstr ""
+"Tehničko polje koje upozorava korisnika da promijeni jedinicu težine jer je "
+"vrijednost product_weight premala i zaokružena."
+
+#. module: product_logistics_uom
+#: model:ir.model.fields,help:product_logistics_uom.field_product_product__product_volume
+msgid "The volume in the product's volume UOM."
+msgstr "Obujam u jedinici obujma proizvoda."
+
+#. module: product_logistics_uom
+#: model:ir.model.fields,help:product_logistics_uom.field_product_product__product_weight
+msgid "The weight in the product's weight UOM."
+msgstr "Težina u jedinici težine proizvoda."
+
+#. module: product_logistics_uom
+#: model:ir.model.fields,field_description:product_logistics_uom.field_product_product__volume
+#: model:ir.model.fields,field_description:product_logistics_uom.field_product_template__volume
+#: model_terms:ir.ui.view,arch_db:product_logistics_uom.product_template_form_view
+msgid "Volume"
+msgstr "Volumen"
+
+#. module: product_logistics_uom
+#: model:ir.model.fields,field_description:product_logistics_uom.field_product_product__volume_uom_id
+#: model:ir.model.fields,field_description:product_logistics_uom.field_product_template__volume_uom_id
+msgid "Volume Unit of Measure"
+msgstr "Jedinica mjere za obujam"
+
+#. module: product_logistics_uom
+#: model:ir.model.fields,field_description:product_logistics_uom.field_product_product__product_volume
+#: model:ir.model.fields,field_description:product_logistics_uom.field_product_template__product_volume
+msgid "Volume in product UOM"
+msgstr "Obujam u jm proizvoda"
+
+#. module: product_logistics_uom
+#: model:ir.model.fields,field_description:product_logistics_uom.field_product_product__volume_uom_name
+#: model:ir.model.fields,field_description:product_logistics_uom.field_product_template__volume_uom_name
+msgid "Volume unit of measure label"
+msgstr "Oznaka jedinice mjere volumena"
+
+#. module: product_logistics_uom
+#: model_terms:ir.ui.view,arch_db:product_logistics_uom.product_template_form_view
+msgid "Weight"
+msgstr "Težina"
+
+#. module: product_logistics_uom
+#: model:ir.model.fields,field_description:product_logistics_uom.field_product_product__weight_uom_id
+#: model:ir.model.fields,field_description:product_logistics_uom.field_product_template__weight_uom_id
+msgid "Weight Unit of Measure"
+msgstr "Jedinica mjere za težinu"
+
+#. module: product_logistics_uom
+#: model:ir.model.fields,field_description:product_logistics_uom.field_product_product__product_weight
+#: model:ir.model.fields,field_description:product_logistics_uom.field_product_template__product_weight
+msgid "Weight in product UOM"
+msgstr "Težina u jm proizvoda"
+
+#. module: product_logistics_uom
+#: model:ir.model.fields,help:product_logistics_uom.field_product_product__weight
+#: model:ir.model.fields,help:product_logistics_uom.field_product_template__weight
+msgid "Weight of the product with its container and packaging."
+msgstr "Težina proizvoda s ambalažom i pakiranjem."
+
+#. module: product_logistics_uom
+#: model:ir.model.fields,field_description:product_logistics_uom.field_product_product__weight_uom_name
+#: model:ir.model.fields,field_description:product_logistics_uom.field_product_template__weight_uom_name
+msgid "Weight unit of measure label"
+msgstr "Oznaka jedinice mjere težine"

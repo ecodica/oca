@@ -1,0 +1,115 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* base_ebill_payment_contract
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: base_ebill_payment_contract
+#: model:ir.model.fields.selection,name:base_ebill_payment_contract.selection__ebill_payment_contract__state__cancel
+msgid "Cancel"
+msgstr "Odustani"
+
+#. module: base_ebill_payment_contract
+#: model:ir.model,name:base_ebill_payment_contract.model_res_partner
+msgid "Contact"
+msgstr "Kontakt"
+
+#. module: base_ebill_payment_contract
+#: model:ir.model.fields,field_description:base_ebill_payment_contract.field_ebill_payment_contract__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: base_ebill_payment_contract
+#: model:ir.model.fields,field_description:base_ebill_payment_contract.field_ebill_payment_contract__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: base_ebill_payment_contract
+#: model:ir.model.fields,field_description:base_ebill_payment_contract.field_ebill_payment_contract__partner_id
+msgid "Customer"
+msgstr "Kupac"
+
+#. module: base_ebill_payment_contract
+#: model:ir.model.fields,field_description:base_ebill_payment_contract.field_ebill_payment_contract__display_name
+#: model:ir.model.fields,field_description:base_ebill_payment_contract.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: base_ebill_payment_contract
+#: model:ir.model.fields.selection,name:base_ebill_payment_contract.selection__ebill_payment_contract__state__draft
+msgid "Draft"
+msgstr "Nacrt"
+
+#. module: base_ebill_payment_contract
+#: model:ir.model.fields,field_description:base_ebill_payment_contract.field_ebill_payment_contract__date_end
+msgid "End date"
+msgstr "Datum završetka"
+
+#. module: base_ebill_payment_contract
+#: model:ir.model.fields,field_description:base_ebill_payment_contract.field_ebill_payment_contract__id
+#: model:ir.model.fields,field_description:base_ebill_payment_contract.field_res_partner__id
+msgid "ID"
+msgstr "ID"
+
+#. module: base_ebill_payment_contract
+#: model:ir.model.fields,field_description:base_ebill_payment_contract.field_ebill_payment_contract__is_valid
+msgid "Is Valid"
+msgstr "Je valjan"
+
+#. module: base_ebill_payment_contract
+#: model:ir.model.fields,field_description:base_ebill_payment_contract.field_ebill_payment_contract__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: base_ebill_payment_contract
+#: model:ir.model.fields,field_description:base_ebill_payment_contract.field_ebill_payment_contract__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: base_ebill_payment_contract
+#: model:ir.model.fields,field_description:base_ebill_payment_contract.field_ebill_payment_contract__name
+msgid "Name"
+msgstr "Naziv"
+
+#. module: base_ebill_payment_contract
+#: model:ir.model.fields.selection,name:base_ebill_payment_contract.selection__ebill_payment_contract__state__open
+msgid "Open"
+msgstr "Otvori"
+
+#. module: base_ebill_payment_contract
+#: model:ir.model.fields,field_description:base_ebill_payment_contract.field_ebill_payment_contract__transmit_method_id
+msgid "Service Name"
+msgstr "Naziv usluge"
+
+#. module: base_ebill_payment_contract
+#: model:ir.model.fields,field_description:base_ebill_payment_contract.field_ebill_payment_contract__date_start
+msgid "Start date"
+msgstr "Početni datum"
+
+#. module: base_ebill_payment_contract
+#: model:ir.model.fields,field_description:base_ebill_payment_contract.field_ebill_payment_contract__state
+msgid "State"
+msgstr "Stanje"
+
+#. module: base_ebill_payment_contract
+#: model_terms:ir.ui.view,arch_db:base_ebill_payment_contract.ebill_payment_contract_search_view
+msgid "Valid"
+msgstr "Odobreno"
+
+#. module: base_ebill_payment_contract
+#: model:ir.actions.act_window,name:base_ebill_payment_contract.ebill_payment_contract_act_window
+#: model:ir.model,name:base_ebill_payment_contract.model_ebill_payment_contract
+#: model:ir.ui.menu,name:base_ebill_payment_contract.ebill_payment_contract_menu
+msgid "eBill Payment Contract"
+msgstr "Ugovor eRačun plaćanja"

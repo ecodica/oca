@@ -1,0 +1,67 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* delivery_multi_destination
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: delivery_multi_destination
+#: model:ir.model.fields,field_description:delivery_multi_destination.field_delivery_carrier__destination_type
+msgid "Destination Type"
+msgstr "Vrsta odredišta"
+
+#. module: delivery_multi_destination
+#: model:ir.model.fields,field_description:delivery_multi_destination.field_delivery_carrier__child_ids
+msgid "Destination grid"
+msgstr "Odredišna rešetka"
+
+#. module: delivery_multi_destination
+#: model_terms:ir.ui.view,arch_db:delivery_multi_destination.view_delivery_carrier_form
+msgid "Destinations"
+msgstr "Odredišta"
+
+#. module: delivery_multi_destination
+#: model:ir.model.fields,field_description:delivery_multi_destination.field_delivery_carrier__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: delivery_multi_destination
+#: model:ir.model.fields,field_description:delivery_multi_destination.field_delivery_carrier__id
+msgid "ID"
+msgstr "ID"
+
+#. module: delivery_multi_destination
+#: model:ir.model.fields.selection,name:delivery_multi_destination.selection__delivery_carrier__destination_type__multi
+msgid "Multiple destinations"
+msgstr "Više odredišta"
+
+#. module: delivery_multi_destination
+#: model:ir.model.fields.selection,name:delivery_multi_destination.selection__delivery_carrier__destination_type__one
+msgid "One destination"
+msgstr ""
+
+#. module: delivery_multi_destination
+#: model:ir.model.fields,field_description:delivery_multi_destination.field_delivery_carrier__parent_id
+msgid "Parent carrier"
+msgstr ""
+
+#. module: delivery_multi_destination
+#: model:ir.model,name:delivery_multi_destination.model_delivery_carrier
+msgid "Shipping Methods"
+msgstr "Načini dostave"
+
+#. module: delivery_multi_destination
+#. odoo-python
+#: code:addons/delivery_multi_destination/models/delivery_carrier.py:0
+msgid "There is no matching delivery rule."
+msgstr ""

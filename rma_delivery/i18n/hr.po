@@ -1,0 +1,275 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* rma_delivery
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: rma_delivery
+#: model_terms:ir.ui.view,arch_db:rma_delivery.rma_choose_delivery_carrier_form_view
+msgid "Accept"
+msgstr "Prihvati"
+
+#. module: rma_delivery
+#: model_terms:ir.ui.view,arch_db:rma_delivery.rma_choose_delivery_carrier_form_view
+msgid "Cancel"
+msgstr "Odustani"
+
+#. module: rma_delivery
+#: model:ir.model.fields,field_description:rma_delivery.field_rma__carrier_id
+#: model:ir.model.fields,field_description:rma_delivery.field_rma_choose_delivery_carrier__carrier_id
+msgid "Carrier"
+msgstr "Prijevoznik"
+
+#. module: rma_delivery
+#: model:ir.model.fields,field_description:rma_delivery.field_rma_choose_delivery_carrier__carrier_type
+msgid "Carrier Type"
+msgstr "Vrsta prijevoznika"
+
+#. module: rma_delivery
+#: model:ir.model,name:rma_delivery.model_res_company
+msgid "Companies"
+msgstr "Tvrtke"
+
+#. module: rma_delivery
+#: model:ir.model.fields,field_description:rma_delivery.field_rma_choose_delivery_carrier__company_id
+#: model:ir.model.fields,field_description:rma_delivery.field_rma_rma_wizard__company_id
+msgid "Company"
+msgstr "Tvrtka"
+
+#. module: rma_delivery
+#: model:ir.model,name:rma_delivery.model_res_config_settings
+msgid "Config Settings"
+msgstr "Postavke"
+
+#. module: rma_delivery
+#: model:ir.model.fields,field_description:rma_delivery.field_stock_return_picking__partner_id
+msgid "Contact"
+msgstr "Kontakt"
+
+#. module: rma_delivery
+#: model:ir.model.fields,field_description:rma_delivery.field_rma_choose_delivery_carrier__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: rma_delivery
+#: model:ir.model.fields,field_description:rma_delivery.field_rma_choose_delivery_carrier__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: rma_delivery
+#: model:ir.model.fields.selection,name:rma_delivery.selection__res_company__rma_delivery_strategy__customer_method
+#: model:ir.model.fields.selection,name:rma_delivery.selection__res_company__rma_reception_strategy__customer_method
+msgid "Customer method"
+msgstr "Metoda kupca"
+
+#. module: rma_delivery
+#: model:ir.model.fields.selection,name:rma_delivery.selection__res_company__rma_delivery_strategy__mixed_method
+#: model:ir.model.fields.selection,name:rma_delivery.selection__res_company__rma_reception_strategy__mixed_method
+msgid "Customer method (fallback to fixed)"
+msgstr "Metoda kupca (povratak na fiksno)"
+
+#. module: rma_delivery
+#: model:ir.model.fields,field_description:rma_delivery.field_res_company__rma_fixed_delivery_method
+#: model:ir.model.fields,field_description:rma_delivery.field_res_config_settings__rma_fixed_delivery_method
+msgid "Default RMA delivery method"
+msgstr "Zadana metoda otpreme RMA"
+
+#. module: rma_delivery
+#: model:ir.model.fields,field_description:rma_delivery.field_res_company__rma_fixed_reception_strategy
+#: model:ir.model.fields,field_description:rma_delivery.field_res_config_settings__rma_fixed_reception_strategy
+msgid "Default RMA reception method"
+msgstr "Zadana metoda prijema RMA"
+
+#. module: rma_delivery
+#: model_terms:ir.ui.view,arch_db:rma_delivery.res_config_settings_view_form
+msgid "Default delivery method"
+msgstr "Zadana metoda otpreme"
+
+#. module: rma_delivery
+#: model_terms:ir.ui.view,arch_db:rma_delivery.res_config_settings_view_form
+msgid "Default reception method"
+msgstr "Zadana metoda prijema"
+
+#. module: rma_delivery
+#: model:ir.model.fields.selection,name:rma_delivery.selection__rma_choose_delivery_carrier__carrier_type__delivery
+msgid "Delivery"
+msgstr "Otpremnica"
+
+#. module: rma_delivery
+#: model_terms:ir.ui.view,arch_db:rma_delivery.res_config_settings_view_form
+msgid "Delivery strategy"
+msgstr "Strategija otpreme"
+
+#. module: rma_delivery
+#: model:ir.model.fields,field_description:rma_delivery.field_delivery_carrier__display_name
+#: model:ir.model.fields,field_description:rma_delivery.field_res_company__display_name
+#: model:ir.model.fields,field_description:rma_delivery.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:rma_delivery.field_rma__display_name
+#: model:ir.model.fields,field_description:rma_delivery.field_rma_carrier_mixin__display_name
+#: model:ir.model.fields,field_description:rma_delivery.field_rma_choose_delivery_carrier__display_name
+#: model:ir.model.fields,field_description:rma_delivery.field_rma_rma_wizard__display_name
+#: model:ir.model.fields,field_description:rma_delivery.field_stock_move__display_name
+#: model:ir.model.fields,field_description:rma_delivery.field_stock_return_picking__display_name
+#: model:ir.model.fields,field_description:rma_delivery.field_stock_return_picking_line__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: rma_delivery
+#: model:ir.model.fields,field_description:rma_delivery.field_rma__domain_carrier_id
+#: model:ir.model.fields,field_description:rma_delivery.field_rma_choose_delivery_carrier__domain_carrier_id
+msgid "Domain Carrier"
+msgstr "Prijevoznik domene"
+
+#. module: rma_delivery
+#: model:ir.model.fields,field_description:rma_delivery.field_rma_rma_wizard__domain_reception_carrier_id
+#: model:ir.model.fields,field_description:rma_delivery.field_stock_return_picking__domain_reception_carrier_id
+msgid "Domain Reception Carrier"
+msgstr "Prijevoznik domene prijema"
+
+#. module: rma_delivery
+#: model:ir.model.fields.selection,name:rma_delivery.selection__res_company__rma_delivery_strategy__fixed_method
+#: model:ir.model.fields.selection,name:rma_delivery.selection__res_company__rma_reception_strategy__fixed_method
+msgid "Fixed method"
+msgstr "Fiksna metoda"
+
+#. module: rma_delivery
+#: model:ir.model.fields,field_description:rma_delivery.field_delivery_carrier__id
+#: model:ir.model.fields,field_description:rma_delivery.field_res_company__id
+#: model:ir.model.fields,field_description:rma_delivery.field_res_config_settings__id
+#: model:ir.model.fields,field_description:rma_delivery.field_rma__id
+#: model:ir.model.fields,field_description:rma_delivery.field_rma_carrier_mixin__id
+#: model:ir.model.fields,field_description:rma_delivery.field_rma_choose_delivery_carrier__id
+#: model:ir.model.fields,field_description:rma_delivery.field_rma_rma_wizard__id
+#: model:ir.model.fields,field_description:rma_delivery.field_stock_move__id
+#: model:ir.model.fields,field_description:rma_delivery.field_stock_return_picking__id
+#: model:ir.model.fields,field_description:rma_delivery.field_stock_return_picking_line__id
+msgid "ID"
+msgstr "ID"
+
+#. module: rma_delivery
+#: model:ir.model.fields,field_description:rma_delivery.field_rma_choose_delivery_carrier__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: rma_delivery
+#: model:ir.model.fields,field_description:rma_delivery.field_rma_choose_delivery_carrier__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: rma_delivery
+#: model:ir.model,name:rma_delivery.model_rma_carrier_mixin
+msgid "Mixin to use RMA Carrier"
+msgstr "Mixin za korištenje RMA prijevoznika"
+
+#. module: rma_delivery
+#: model:ir.model,name:rma_delivery.model_rma
+#: model_terms:ir.ui.view,arch_db:rma_delivery.res_config_settings_view_form
+msgid "RMA"
+msgstr "RMA"
+
+#. module: rma_delivery
+#: model:ir.model,name:rma_delivery.model_rma_choose_delivery_carrier
+msgid "RMA Delivery Carrier Selection Wizard"
+msgstr "Čarobnjak odabira prijevoznika otpreme RMA"
+
+#. module: rma_delivery
+#: model:ir.model.fields,field_description:rma_delivery.field_res_company__rma_delivery_strategy
+#: model:ir.model.fields,field_description:rma_delivery.field_res_config_settings__rma_delivery_strategy
+#: model:ir.model.fields,field_description:rma_delivery.field_rma__rma_delivery_strategy
+msgid "RMA delivery method strategy"
+msgstr "Strategija metode otpreme RMA"
+
+#. module: rma_delivery
+#: model:ir.model.fields.selection,name:rma_delivery.selection__res_company__rma_delivery_strategy__rma_method
+#: model:ir.model.fields.selection,name:rma_delivery.selection__res_company__rma_reception_strategy__rma_method
+msgid "RMA method"
+msgstr "Metoda RMA"
+
+#. module: rma_delivery
+#: model:ir.model.fields,field_description:rma_delivery.field_res_company__rma_reception_strategy
+#: model:ir.model.fields,field_description:rma_delivery.field_res_config_settings__rma_reception_strategy
+#: model:ir.model.fields,field_description:rma_delivery.field_rma__rma_reception_strategy
+#: model:ir.model.fields,field_description:rma_delivery.field_rma_rma_wizard__rma_reception_strategy
+#: model:ir.model.fields,field_description:rma_delivery.field_stock_return_picking__rma_reception_strategy
+msgid "RMA reception method strategy"
+msgstr "Strategija metode prijema RMA"
+
+#. module: rma_delivery
+#: model:ir.model.fields.selection,name:rma_delivery.selection__rma_choose_delivery_carrier__carrier_type__reception
+msgid "Reception"
+msgstr "Prijem"
+
+#. module: rma_delivery
+#: model:ir.model.fields,field_description:rma_delivery.field_rma__reception_carrier_id
+#: model:ir.model.fields,field_description:rma_delivery.field_rma_rma_wizard__reception_carrier_id
+#: model:ir.model.fields,field_description:rma_delivery.field_stock_return_picking__reception_carrier_id
+msgid "Reception Carrier"
+msgstr "Prijevoznik prijema"
+
+#. module: rma_delivery
+#: model_terms:ir.ui.view,arch_db:rma_delivery.res_config_settings_view_form
+msgid "Reception strategy"
+msgstr "Strategija prijema"
+
+#. module: rma_delivery
+#: model:ir.model,name:rma_delivery.model_stock_return_picking
+msgid "Return Picking"
+msgstr "Povrat robe"
+
+#. module: rma_delivery
+#: model:ir.model,name:rma_delivery.model_stock_return_picking_line
+msgid "Return Picking Line"
+msgstr "Stavka povratnog prikupljanja"
+
+#. module: rma_delivery
+#: model:ir.model.fields,field_description:rma_delivery.field_rma_choose_delivery_carrier__rma_id
+msgid "Rma"
+msgstr "RMA"
+
+#. module: rma_delivery
+#: model:ir.model,name:rma_delivery.model_rma_rma_wizard
+msgid "Rma Rma Wizard"
+msgstr "Čarobnjak RMA"
+
+#. module: rma_delivery
+#: model:ir.model.fields,field_description:rma_delivery.field_rma_choose_delivery_carrier__partner_id
+#: model:ir.model.fields,field_description:rma_delivery.field_rma_rma_wizard__partner_shipping_id
+msgid "Shipping Address"
+msgstr "Adresa isporuke"
+
+#. module: rma_delivery
+#: model:ir.model,name:rma_delivery.model_delivery_carrier
+msgid "Shipping Methods"
+msgstr "Načini dostave"
+
+#. module: rma_delivery
+#: model:ir.model.fields,help:rma_delivery.field_rma_choose_delivery_carrier__partner_id
+#: model:ir.model.fields,help:rma_delivery.field_rma_rma_wizard__partner_shipping_id
+msgid "Shipping address for current RMA."
+msgstr "Adresa otpreme za trenutni RMA."
+
+#. module: rma_delivery
+#: model:ir.model,name:rma_delivery.model_stock_move
+msgid "Stock Move"
+msgstr "Skladišni prijenos"
+
+#. module: rma_delivery
+#: model_terms:ir.ui.view,arch_db:rma_delivery.rma_view_form
+msgid "Update carrier"
+msgstr "Ažuriraj prijevoznika"
+
+#. module: rma_delivery
+#: model:ir.actions.act_window,name:rma_delivery.rma_choose_delivery_carrier_action
+msgid "Update shipping"
+msgstr "Ažuriraj otpremu"

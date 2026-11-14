@@ -1,0 +1,256 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* storage_media
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: storage_media
+#: model:ir.model.fields,help:storage_media.field_storage_media__url_path
+msgid "Accessible path, no base URL"
+msgstr "Dostupna putanja, bez osnovnog URL-a"
+
+#. module: storage_media
+#: model:ir.model.fields,field_description:storage_media.field_storage_media__active
+msgid "Active"
+msgstr "Aktivno"
+
+#. module: storage_media
+#: model_terms:ir.ui.view,arch_db:storage_media.storage_media_view_search
+msgid "All"
+msgstr "Sve"
+
+#. module: storage_media
+#: model_terms:ir.ui.view,arch_db:storage_media.storage_media_view_form
+#: model_terms:ir.ui.view,arch_db:storage_media.storage_media_view_search
+msgid "Archived"
+msgstr "Arhivirano"
+
+#. module: storage_media
+#: model_terms:ir.ui.view,arch_db:storage_media.storage_file_replace_view_form
+msgid "Cancel"
+msgstr "Odustani"
+
+#. module: storage_media
+#: model:ir.model.fields,field_description:storage_media.field_storage_media__checksum
+msgid "Checksum/SHA1"
+msgstr "Kontrolni zbroj/SHA1"
+
+#. module: storage_media
+#: model:ir.model.fields,field_description:storage_media.field_storage_media_type__code
+msgid "Code"
+msgstr "Šifra"
+
+#. module: storage_media
+#: model:ir.model.fields,field_description:storage_media.field_storage_media__company_id
+msgid "Company"
+msgstr "Tvrtka"
+
+#. module: storage_media
+#: model_terms:ir.ui.view,arch_db:storage_media.storage_file_replace_view_form
+msgid "Confirm"
+msgstr "Potvrdi"
+
+#. module: storage_media
+#: model:ir.model.fields,field_description:storage_media.field_storage_media__create_uid
+#: model:ir.model.fields,field_description:storage_media.field_storage_media_type__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: storage_media
+#: model:ir.model.fields,field_description:storage_media.field_storage_media__create_date
+#: model:ir.model.fields,field_description:storage_media.field_storage_media_type__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: storage_media
+#: model:ir.model.fields,field_description:storage_media.field_storage_media__data
+#: model:ir.model.fields,help:storage_media.field_storage_media__data
+msgid "Data"
+msgstr "Podaci"
+
+#. module: storage_media
+#: model:ir.model.fields,field_description:storage_media.field_storage_media__display_name
+#: model:ir.model.fields,field_description:storage_media.field_storage_media_type__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: storage_media
+#: model:ir.model.fields,field_description:storage_media.field_storage_media__extension
+msgid "Extension"
+msgstr ""
+
+#. module: storage_media
+#: model:ir.model.fields,field_description:storage_media.field_storage_media__file_id
+msgid "File"
+msgstr "Datoteka"
+
+#. module: storage_media
+#: model:ir.model.fields,field_description:storage_media.field_storage_media__file_size
+msgid "File Size"
+msgstr "Veličina datoteke"
+
+#. module: storage_media
+#: model:ir.model.fields,field_description:storage_media.field_storage_file__file_type
+#: model:ir.model.fields,field_description:storage_media.field_storage_image__file_type
+#: model:ir.model.fields,field_description:storage_media.field_storage_media__file_type
+#: model:ir.model.fields,field_description:storage_media.field_storage_thumbnail__file_type
+msgid "File Type"
+msgstr "Vrsta datoteke"
+
+#. module: storage_media
+#: model:ir.model.fields,field_description:storage_media.field_storage_media__filename
+msgid "Filename without extension"
+msgstr ""
+
+#. module: storage_media
+#: model:ir.model.fields,help:storage_media.field_storage_media__internal_url
+msgid "HTTP URL to load the file directly from storage."
+msgstr "HTTP URL to load the file directly from storage."
+
+#. module: storage_media
+#: model:ir.model.fields,help:storage_media.field_storage_media__url
+msgid "HTTP accessible path to the file"
+msgstr ""
+
+#. module: storage_media
+#: model:ir.model.fields,field_description:storage_media.field_storage_media__human_file_size
+msgid "Human File Size"
+msgstr ""
+
+#. module: storage_media
+#: model:ir.model.fields,field_description:storage_media.field_storage_media__id
+#: model:ir.model.fields,field_description:storage_media.field_storage_media_type__id
+msgid "ID"
+msgstr "ID"
+
+#. module: storage_media
+#: model:ir.model.fields,field_description:storage_media.field_storage_media__internal_url
+msgid "Internal Url"
+msgstr ""
+
+#. module: storage_media
+#: model:ir.model.fields,field_description:storage_media.field_storage_media__write_uid
+#: model:ir.model.fields,field_description:storage_media.field_storage_media_type__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: storage_media
+#: model:ir.model.fields,field_description:storage_media.field_storage_media__write_date
+#: model:ir.model.fields,field_description:storage_media.field_storage_media_type__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: storage_media
+#: model:ir.model.fields,field_description:storage_media.field_storage_file_replace__media_id
+#: model:ir.model.fields.selection,name:storage_media.selection__storage_file__file_type__media
+#: model_terms:ir.ui.view,arch_db:storage_media.storage_file_replace_view_form
+msgid "Media"
+msgstr "Datoteka"
+
+#. module: storage_media
+#: model:ir.model.fields,field_description:storage_media.field_storage_media__media_type_id
+msgid "Media Type"
+msgstr "Vrsta medija"
+
+#. module: storage_media
+#: model:ir.model.fields,field_description:storage_media.field_storage_media__mimetype
+msgid "Mime Type"
+msgstr "Mime vrsta"
+
+#. module: storage_media
+#: model:ir.model.fields,field_description:storage_media.field_storage_media__name
+#: model:ir.model.fields,field_description:storage_media.field_storage_media_type__name
+#: model_terms:ir.ui.view,arch_db:storage_media.storage_file_replace_view_form
+msgid "Name"
+msgstr "Naziv"
+
+#. module: storage_media
+#: model:ir.model.fields,field_description:storage_media.field_storage_media__relative_path
+msgid "Relative Path"
+msgstr ""
+
+#. module: storage_media
+#: model:ir.model.fields,help:storage_media.field_storage_media__relative_path
+msgid "Relative location for backend"
+msgstr ""
+
+#. module: storage_media
+#: model:ir.actions.act_window,name:storage_media.storage_replace_file_action
+#: model_terms:ir.ui.view,arch_db:storage_media.storage_file_replace_view_form
+#: model_terms:ir.ui.view,arch_db:storage_media.storage_media_view_form
+msgid "Replace File"
+msgstr ""
+
+#. module: storage_media
+#: model:ir.model.fields,field_description:storage_media.field_storage_media__slug
+msgid "Slug"
+msgstr ""
+
+#. module: storage_media
+#: model:ir.model.fields,help:storage_media.field_storage_media__slug
+msgid "Slug-ified name with ID for URL"
+msgstr ""
+
+#. module: storage_media
+#: model:ir.model.fields,field_description:storage_media.field_storage_media__backend_id
+msgid "Storage"
+msgstr "Pohrana"
+
+#. module: storage_media
+#: model:ir.model,name:storage_media.model_storage_file
+msgid "Storage File"
+msgstr ""
+
+#. module: storage_media
+#: model:ir.actions.act_window,name:storage_media.storage_media_action
+#: model:ir.model,name:storage_media.model_storage_media
+#: model:ir.ui.menu,name:storage_media.storage_media_menu
+#: model_terms:ir.ui.view,arch_db:storage_media.storage_media_view_form
+#: model_terms:ir.ui.view,arch_db:storage_media.storage_media_view_search
+msgid "Storage Media"
+msgstr ""
+
+#. module: storage_media
+#: model:res.groups,name:storage_media.group_media_manager
+msgid "Storage Media Manager"
+msgstr ""
+
+#. module: storage_media
+#: model:ir.actions.act_window,name:storage_media.act_open_storage_media_type_view
+#: model:ir.model,name:storage_media.model_storage_media_type
+#: model:ir.ui.menu,name:storage_media.menu_storage_media_type
+#: model_terms:ir.ui.view,arch_db:storage_media.storage_media_type_view_form
+#: model_terms:ir.ui.view,arch_db:storage_media.storage_media_type_view_search
+msgid "Storage Media Type"
+msgstr ""
+
+#. module: storage_media
+#: model:ir.model.fields,field_description:storage_media.field_storage_media__to_delete
+msgid "To Delete"
+msgstr ""
+
+#. module: storage_media
+#: model:ir.model.fields,field_description:storage_media.field_storage_media__url
+msgid "Url"
+msgstr "URL"
+
+#. module: storage_media
+#: model:ir.model.fields,field_description:storage_media.field_storage_media__url_path
+msgid "Url Path"
+msgstr ""
+
+#. module: storage_media
+#: model:ir.model,name:storage_media.model_storage_file_replace
+msgid "Wizard template allowing to replace a storage.file"
+msgstr ""

@@ -1,0 +1,86 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* developer_menu
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: developer_menu
+#: model:ir.ui.menu,name:developer_menu.window
+msgid "Actions Window"
+msgstr "Prozor radnji"
+
+#. module: developer_menu
+#: model:ir.ui.menu,name:developer_menu.fields
+msgid "Fields"
+msgstr "Polja"
+
+#. module: developer_menu
+#: model:ir.ui.menu,name:developer_menu.model_data
+msgid "Model Data"
+msgstr "Podaci modela"
+
+#. module: developer_menu
+#: model:ir.ui.menu,name:developer_menu.model
+msgid "Models"
+msgstr "Modeli"
+
+#. module: developer_menu
+#: model:ir.ui.menu,name:developer_menu.param
+msgid "Parameters"
+msgstr "Parametri"
+
+#. module: developer_menu
+#: model:ir.ui.menu,name:developer_menu.view
+msgid "Views"
+msgstr "Pogledi"
+
+#. module: developer_menu
+#: model:ir.ui.menu,name:developer_menu.server
+msgid "⚙ Actions Server"
+msgstr "⚙ Poslužitelj radnji"
+
+#. module: developer_menu
+#: model:ir.ui.menu,name:developer_menu.menu
+msgid "📃 Menus"
+msgstr "📃 Izbornici"
+
+#. module: developer_menu
+#: model:ir.ui.menu,name:developer_menu.report
+msgid "📄 Reports"
+msgstr "📄 Izvještaji"
+
+#. module: developer_menu
+#: model:ir.ui.menu,name:developer_menu.cron
+msgid "📅 Crons"
+msgstr "📅 Cronovi"
+
+#. module: developer_menu
+#: model:ir.ui.menu,name:developer_menu.rec_rule
+msgid "📑 Record Rules"
+msgstr "📑 Pravila zapisa"
+
+#. module: developer_menu
+#: model:ir.ui.menu,name:developer_menu.mail_tmpl
+msgid "📧 Mail Templates"
+msgstr "📧 Predlošci e-pošte"
+
+#. module: developer_menu
+#: model:ir.ui.menu,name:developer_menu.seq
+msgid "🔢 Sequences"
+msgstr "🔢 Sekvence"
+
+#. module: developer_menu
+#: model:ir.ui.menu,name:developer_menu.conf_tech
+msgid "🧰 Dev"
+msgstr "🧰 Razvoj"

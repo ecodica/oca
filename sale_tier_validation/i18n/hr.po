@@ -1,0 +1,188 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_tier_validation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: sale_tier_validation
+#: model:ir.model.fields,help:sale_tier_validation.field_res_company__sale_report_print_block
+#: model:ir.model.fields,help:sale_tier_validation.field_res_config_settings__sale_report_print_block
+#: model_terms:ir.ui.view,arch_db:sale_tier_validation.sale_config_settings_form_view
+msgid ""
+"Block the printing of the sale order report if the order is not validated."
+msgstr "Blokiraj ispis izvještaja prodajnog naloga ako nalog nije validiran."
+
+#. module: sale_tier_validation
+#: model:ir.model.fields,field_description:sale_tier_validation.field_sale_order__can_forward
+msgid "Can Forward"
+msgstr "Može proslijediti"
+
+#. module: sale_tier_validation
+#: model:ir.model.fields,field_description:sale_tier_validation.field_sale_order__can_review
+msgid "Can Review"
+msgstr "Može recenzirati"
+
+#. module: sale_tier_validation
+#: model:ir.model,name:sale_tier_validation.model_res_company
+msgid "Companies"
+msgstr "Tvrtke"
+
+#. module: sale_tier_validation
+#: model:ir.model,name:sale_tier_validation.model_res_config_settings
+msgid "Config Settings"
+msgstr "Postavke"
+
+#. module: sale_tier_validation
+#: model:ir.model.fields,field_description:sale_tier_validation.field_report_sale_report_saleorder__display_name
+#: model:ir.model.fields,field_description:sale_tier_validation.field_res_company__display_name
+#: model:ir.model.fields,field_description:sale_tier_validation.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:sale_tier_validation.field_sale_order__display_name
+#: model:ir.model.fields,field_description:sale_tier_validation.field_tier_definition__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: sale_tier_validation
+#: model:ir.model.fields,field_description:sale_tier_validation.field_sale_order__has_comment
+msgid "Has Comment"
+msgstr "Ima komentar"
+
+#. module: sale_tier_validation
+#: model:ir.model.fields,field_description:sale_tier_validation.field_sale_order__hide_reviews
+msgid "Hide Reviews"
+msgstr "Sakrij recenzije"
+
+#. module: sale_tier_validation
+#: model:ir.model.fields,field_description:sale_tier_validation.field_report_sale_report_saleorder__id
+#: model:ir.model.fields,field_description:sale_tier_validation.field_res_company__id
+#: model:ir.model.fields,field_description:sale_tier_validation.field_res_config_settings__id
+#: model:ir.model.fields,field_description:sale_tier_validation.field_sale_order__id
+#: model:ir.model.fields,field_description:sale_tier_validation.field_tier_definition__id
+msgid "ID"
+msgstr "ID"
+
+#. module: sale_tier_validation
+#: model:ir.model.fields,help:sale_tier_validation.field_sale_order__has_comment
+msgid "If set, Allow the reviewer to leave a comment on the review."
+msgstr ""
+"Ako je postavljeno, dozvoljava recenzentu da ostavi komentar na recenziji."
+
+#. module: sale_tier_validation
+#: model_terms:ir.ui.view,arch_db:sale_tier_validation.view_sale_order_filter
+msgid "My Sales to review"
+msgstr "Moje prodaje za recenziju"
+
+#. module: sale_tier_validation
+#: model:ir.model.fields,field_description:sale_tier_validation.field_sale_order__need_validation
+msgid "Need Validation"
+msgstr "Treba validaciju"
+
+#. module: sale_tier_validation
+#: model_terms:ir.ui.view,arch_db:sale_tier_validation.view_sale_order_filter
+msgid "Needs my Review"
+msgstr "Treba moju recenziju"
+
+#. module: sale_tier_validation
+#: model:ir.model.fields,field_description:sale_tier_validation.field_sale_order__next_review
+msgid "Next Review"
+msgstr "Sljedeća ovjera"
+
+#. module: sale_tier_validation
+#. odoo-python
+#: code:addons/sale_tier_validation/reports/sale_report.py:0
+msgid "Quotation printing is blocked until the order is approved."
+msgstr "Ispis ponude blokiran je dok se narudžba ne odobri."
+
+#. module: sale_tier_validation
+#: model:ir.model.fields,field_description:sale_tier_validation.field_sale_order__rejected_message
+msgid "Rejected Message"
+msgstr "Poruka odbijanja"
+
+#. module: sale_tier_validation
+#: model:ir.model.fields,field_description:sale_tier_validation.field_sale_order__require_authentication
+msgid "Require Authentication"
+msgstr "Zahtijevaj autentikaciju"
+
+#. module: sale_tier_validation
+#: model:ir.model.fields,field_description:sale_tier_validation.field_sale_order__reviewer_ids
+msgid "Reviewers"
+msgstr "Recenzenti"
+
+#. module: sale_tier_validation
+#: model_terms:ir.ui.view,arch_db:sale_tier_validation.view_sale_order_filter
+msgid "SOs validated and ready to be confirmed"
+msgstr "Prodajni nalozi validirani i spremni za potvrdu"
+
+#. module: sale_tier_validation
+#: model:ir.model,name:sale_tier_validation.model_report_sale_report_saleorder
+msgid "Sale Order Report"
+msgstr "Izvještaj prodajnog naloga"
+
+#. module: sale_tier_validation
+#: model:ir.model.fields,field_description:sale_tier_validation.field_res_company__sale_report_print_block
+#: model:ir.model.fields,field_description:sale_tier_validation.field_res_config_settings__sale_report_print_block
+msgid "Sale Report Print Block"
+msgstr "Blokiranje ispisa izvještaja prodaje"
+
+#. module: sale_tier_validation
+#: model:ir.model,name:sale_tier_validation.model_sale_order
+msgid "Sales Order"
+msgstr "Prodajni nalog"
+
+#. module: sale_tier_validation
+#: model:ir.model,name:sale_tier_validation.model_tier_definition
+msgid "Tier Definition"
+msgstr "Definicija razine"
+
+#. module: sale_tier_validation
+#: model:mail.message.subtype,name:sale_tier_validation.crm_team_tier_validation_accepted
+#: model:mail.message.subtype,name:sale_tier_validation.sale_order_tier_validation_accepted
+msgid "Tier Validation Accepted Notification"
+msgstr "Obavijest prihvaćene validacije u razinama"
+
+#. module: sale_tier_validation
+#: model:mail.message.subtype,name:sale_tier_validation.crm_team_tier_validation_rejected
+#: model:mail.message.subtype,name:sale_tier_validation.sale_order_tier_validation_rejected
+msgid "Tier Validation Rejected Notification"
+msgstr "Obavijest odbijene validacije u razinama"
+
+#. module: sale_tier_validation
+#: model:mail.message.subtype,name:sale_tier_validation.crm_team_tier_validation_requested
+#: model:mail.message.subtype,name:sale_tier_validation.sale_order_tier_validation_requested
+msgid "Tier Validation Requested"
+msgstr "Zatražena validacija u razinama"
+
+#. module: sale_tier_validation
+#: model:ir.model.fields,field_description:sale_tier_validation.field_sale_order__to_validate_message
+msgid "To Validate Message"
+msgstr "Poruka za validaciju"
+
+#. module: sale_tier_validation
+#: model_terms:ir.ui.view,arch_db:sale_tier_validation.view_sale_order_filter
+msgid "Validated"
+msgstr "Validirano"
+
+#. module: sale_tier_validation
+#: model:ir.model.fields,field_description:sale_tier_validation.field_sale_order__validated_message
+msgid "Validated Message"
+msgstr "Poruka validacije"
+
+#. module: sale_tier_validation
+#: model:ir.model.fields,field_description:sale_tier_validation.field_sale_order__validation_status
+msgid "Validation Status"
+msgstr "Status validacije"
+
+#. module: sale_tier_validation
+#: model:ir.model.fields,field_description:sale_tier_validation.field_sale_order__review_ids
+msgid "Validations"
+msgstr "Validacije"

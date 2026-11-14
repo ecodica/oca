@@ -1,0 +1,320 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_picking_invoicing
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: stock_picking_invoicing
+#: model_terms:ir.ui.view,arch_db:stock_picking_invoicing.stock_picking_type_kanban
+msgid "<span class=\"col-6\">To be Invoiced</span>"
+msgstr "<span class=\"col-6\">Za fakturiranje</span>"
+
+#. module: stock_picking_invoicing
+#. odoo-python
+#: code:addons/stock_picking_invoicing/wizards/stock_invoice_onshipping.py:0
+msgid "All pickings are not related to your company!"
+msgstr "Sve otpremnice nisu povezane s vašom tvrtkom!"
+
+#. module: stock_picking_invoicing
+#: model_terms:ir.ui.view,arch_db:stock_picking_invoicing.view_stock_invoice_onshipping
+msgid "Cancel"
+msgstr "Odustani"
+
+#. module: stock_picking_invoicing
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_stock_picking_type__count_picking_2binvoiced
+msgid "Count Picking 2Binvoiced"
+msgstr "Broj otpremnica za fakturiranje"
+
+#. module: stock_picking_invoicing
+#: model_terms:ir.ui.view,arch_db:stock_picking_invoicing.view_stock_invoice_onshipping
+msgid "Create"
+msgstr "Kreiraj"
+
+#. module: stock_picking_invoicing
+#: model:ir.model.fields.selection,name:stock_picking_invoicing.selection__stock_invoice_onshipping__journal_type__sale
+msgid "Create Customer Invoice"
+msgstr "Kreiraj izlazni račun"
+
+#. module: stock_picking_invoicing
+#: model:ir.actions.act_window,name:stock_picking_invoicing.action_stock_invoice_onshipping
+msgid "Create Draft Invoices"
+msgstr "Kreiraj nacrte računa"
+
+#. module: stock_picking_invoicing
+#: model_terms:ir.ui.view,arch_db:stock_picking_invoicing.view_picking_form
+msgid "Create Invoice"
+msgstr "Kreiraj račun"
+
+#. module: stock_picking_invoicing
+#: model:ir.model.fields.selection,name:stock_picking_invoicing.selection__stock_invoice_onshipping__journal_type__purchase
+msgid "Create Supplier Invoice"
+msgstr "Kreiraj račun dobavljača"
+
+#. module: stock_picking_invoicing
+#: model_terms:ir.ui.view,arch_db:stock_picking_invoicing.view_stock_invoice_onshipping
+msgid "Create invoice"
+msgstr "Kreiraj račun"
+
+#. module: stock_picking_invoicing
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_stock_invoice_onshipping__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: stock_picking_invoicing
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_stock_invoice_onshipping__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: stock_picking_invoicing
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_account_move__display_name
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_stock_invoice_onshipping__display_name
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_stock_invoice_state_mixin__display_name
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_stock_move__display_name
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_stock_picking__display_name
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_stock_picking_type__display_name
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_stock_return_picking__display_name
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_stock_return_picking_line__display_name
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_stock_rule__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: stock_picking_invoicing
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_stock_invoice_onshipping__group
+msgid "Group"
+msgstr "Grupa"
+
+#. module: stock_picking_invoicing
+#: model:ir.model.fields,help:stock_picking_invoicing.field_stock_invoice_onshipping__group
+msgid ""
+"Group pickings/moves to create invoice(s):\n"
+"Picking: One invoice per picking;\n"
+"Partner: One invoice for each picking's partner;\n"
+"Partner/Product: One invoice per picking's partner and group product into a single invoice line."
+msgstr ""
+"Grupiraj otpremnice/kretanja za stvaranje računa:\n"
+"Otpremnica: jedan račun po otpremnici;\n"
+"Partner: jedan račun za svakog partnera otpremnice;\n"
+"Partner/proizvod: jedan račun po partneru otpremnice i grupiraj proizvode u jedan redak računa."
+
+#. module: stock_picking_invoicing
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_account_move__id
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_stock_invoice_onshipping__id
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_stock_invoice_state_mixin__id
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_stock_move__id
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_stock_picking__id
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_stock_picking_type__id
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_stock_return_picking__id
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_stock_return_picking_line__id
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_stock_rule__id
+msgid "ID"
+msgstr "ID"
+
+#. module: stock_picking_invoicing
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_stock_invoice_onshipping__invoice_date
+msgid "Invoice Date"
+msgstr "Datum računa"
+
+#. module: stock_picking_invoicing
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_stock_invoice_state_mixin__invoice_state
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_stock_move__invoice_state
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_stock_picking__invoice_state
+msgid "Invoice Status"
+msgstr "Stanje računa"
+
+#. module: stock_picking_invoicing
+#: model:ir.model.fields.selection,name:stock_picking_invoicing.selection__stock_invoice_state_mixin__invoice_state__invoiced
+#: model:ir.model.fields.selection,name:stock_picking_invoicing.selection__stock_move__invoice_state__invoiced
+#: model:ir.model.fields.selection,name:stock_picking_invoicing.selection__stock_picking__invoice_state__invoiced
+msgid "Invoiced"
+msgstr "Izdani računi"
+
+#. module: stock_picking_invoicing
+#: model:ir.model.fields,help:stock_picking_invoicing.field_stock_invoice_state_mixin__invoice_state
+#: model:ir.model.fields,help:stock_picking_invoicing.field_stock_move__invoice_state
+#: model:ir.model.fields,help:stock_picking_invoicing.field_stock_picking__invoice_state
+msgid ""
+"Invoiced: an invoice already exists\n"
+"To Be Invoiced: need to be invoiced\n"
+"Not Applicable: no invoice to create"
+msgstr ""
+"Fakturirano: račun već postoji\n"
+"Za fakturiranje: potrebno je fakturirati\n"
+"Nije primjenjivo: nema računa za stvaranje"
+
+#. module: stock_picking_invoicing
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_stock_return_picking__invoice_state
+#: model_terms:ir.ui.view,arch_db:stock_picking_invoicing.view_move_picking_form
+#: model_terms:ir.ui.view,arch_db:stock_picking_invoicing.view_picking_form
+msgid "Invoicing"
+msgstr "Stavka računa"
+
+#. module: stock_picking_invoicing
+#: model:ir.model,name:stock_picking_invoicing.model_account_move
+msgid "Journal Entry"
+msgstr "Stavke temeljnice"
+
+#. module: stock_picking_invoicing
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_stock_invoice_onshipping__journal_type
+msgid "Journal Type"
+msgstr "Tip dnevnika"
+
+#. module: stock_picking_invoicing
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_stock_invoice_onshipping__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: stock_picking_invoicing
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_stock_invoice_onshipping__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: stock_picking_invoicing
+#. odoo-python
+#: code:addons/stock_picking_invoicing/wizards/stock_invoice_onshipping.py:0
+msgid "No invoice created!"
+msgstr "Račun nije kreiran!"
+
+#. module: stock_picking_invoicing
+#: model:ir.model.fields.selection,name:stock_picking_invoicing.selection__stock_return_picking__invoice_state__none
+msgid "No invoicing"
+msgstr "Bez fakturiranja"
+
+#. module: stock_picking_invoicing
+#: model:ir.model.fields.selection,name:stock_picking_invoicing.selection__stock_invoice_state_mixin__invoice_state__none
+#: model:ir.model.fields.selection,name:stock_picking_invoicing.selection__stock_move__invoice_state__none
+#: model:ir.model.fields.selection,name:stock_picking_invoicing.selection__stock_picking__invoice_state__none
+msgid "Not Applicable"
+msgstr "Nije primjenjivo"
+
+#. module: stock_picking_invoicing
+#: model:ir.model.fields.selection,name:stock_picking_invoicing.selection__stock_invoice_onshipping__group__partner
+msgid "Partner"
+msgstr "Partner"
+
+#. module: stock_picking_invoicing
+#: model:ir.model.fields.selection,name:stock_picking_invoicing.selection__stock_invoice_onshipping__group__partner_product
+msgid "Partner/Product"
+msgstr "Partner/proizvod"
+
+#. module: stock_picking_invoicing
+#: model:ir.model.fields.selection,name:stock_picking_invoicing.selection__stock_invoice_onshipping__group__picking
+msgid "Picking"
+msgstr "Primka"
+
+#. module: stock_picking_invoicing
+#: model:ir.model,name:stock_picking_invoicing.model_stock_picking_type
+msgid "Picking Type"
+msgstr "Vrsta prikupljanja"
+
+#. module: stock_picking_invoicing
+#: model:ir.actions.act_window,name:stock_picking_invoicing.2binvoiced_action_picking_dashboard
+msgid "Picking to Invoice"
+msgstr "Otpremnica za fakturiranje"
+
+#. module: stock_picking_invoicing
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_stock_invoice_onshipping__purchase_journal
+msgid "Purchase Journal"
+msgstr "Dnevnik nabave"
+
+#. module: stock_picking_invoicing
+#: model:ir.model,name:stock_picking_invoicing.model_stock_return_picking
+msgid "Return Picking"
+msgstr "Povrat robe"
+
+#. module: stock_picking_invoicing
+#: model:ir.model,name:stock_picking_invoicing.model_stock_return_picking_line
+msgid "Return Picking Line"
+msgstr "Stavka povratnog prikupljanja"
+
+#. module: stock_picking_invoicing
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_stock_invoice_onshipping__sale_journal
+msgid "Sale Journal"
+msgstr "Dnevnik prodaje"
+
+#. module: stock_picking_invoicing
+#: model_terms:ir.ui.view,arch_db:stock_picking_invoicing.view_picking_form
+msgid "Set to Not Billable"
+msgstr "Postavi na nije fakturirano"
+
+#. module: stock_picking_invoicing
+#: model_terms:ir.ui.view,arch_db:stock_picking_invoicing.view_picking_form
+msgid "Set to as invoiced"
+msgstr "Postavi na fakturirano"
+
+#. module: stock_picking_invoicing
+#: model_terms:ir.ui.view,arch_db:stock_picking_invoicing.view_picking_form
+msgid "Set to be invoiced"
+msgstr "Postavi na za fakturiranje"
+
+#. module: stock_picking_invoicing
+#: model_terms:ir.ui.view,arch_db:stock_picking_invoicing.view_picking_invoicing_internal_search
+msgid "Shipments to Invoice"
+msgstr "Pošiljke za fakturiranje"
+
+#. module: stock_picking_invoicing
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_stock_invoice_onshipping__show_purchase_journal
+msgid "Show Purchase Journal"
+msgstr "Prikaži dnevnik nabave"
+
+#. module: stock_picking_invoicing
+#: model:ir.model.fields,field_description:stock_picking_invoicing.field_stock_invoice_onshipping__show_sale_journal
+msgid "Show Sale Journal"
+msgstr "Prikaži dnevnik prodaje"
+
+#. module: stock_picking_invoicing
+#: model:ir.model,name:stock_picking_invoicing.model_stock_invoice_onshipping
+msgid "Stock Invoice Onshipping"
+msgstr "Fakturiranje zaliha pri otpremi"
+
+#. module: stock_picking_invoicing
+#: model:ir.model,name:stock_picking_invoicing.model_stock_invoice_state_mixin
+msgid "Stock Invoice State Mixin"
+msgstr "Mixin stanja fakturiranja zaliha"
+
+#. module: stock_picking_invoicing
+#: model:ir.model,name:stock_picking_invoicing.model_stock_move
+msgid "Stock Move"
+msgstr "Skladišni prijenos"
+
+#. module: stock_picking_invoicing
+#: model:ir.model,name:stock_picking_invoicing.model_stock_rule
+msgid "Stock Rule"
+msgstr "Pravilo zalihe"
+
+#. module: stock_picking_invoicing
+#: model:ir.model.fields.selection,name:stock_picking_invoicing.selection__stock_invoice_state_mixin__invoice_state__2binvoiced
+#: model:ir.model.fields.selection,name:stock_picking_invoicing.selection__stock_move__invoice_state__2binvoiced
+#: model:ir.model.fields.selection,name:stock_picking_invoicing.selection__stock_picking__invoice_state__2binvoiced
+msgid "To Be Invoiced"
+msgstr "Za fakturiranje"
+
+#. module: stock_picking_invoicing
+#: model:ir.model.fields.selection,name:stock_picking_invoicing.selection__stock_return_picking__invoice_state__2binvoiced
+msgid "To be refunded/invoiced"
+msgstr "Za povrat/fakturiranje"
+
+#. module: stock_picking_invoicing
+#: model:ir.model,name:stock_picking_invoicing.model_stock_picking
+msgid "Transfer"
+msgstr "Prijenos"
+
+#. module: stock_picking_invoicing
+#: model_terms:ir.ui.view,arch_db:stock_picking_invoicing.view_picking_form
+msgid "True"
+msgstr "Točno"
+
+#. module: stock_picking_invoicing
+#: model_terms:ir.ui.view,arch_db:stock_picking_invoicing.view_stock_invoice_onshipping
+msgid "or"
+msgstr "ili"

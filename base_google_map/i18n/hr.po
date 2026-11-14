@@ -1,0 +1,599 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* base_google_map
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: base_google_map
+#: model_terms:ir.ui.view,arch_db:base_google_map.res_config_settings_view_form
+msgid "API key"
+msgstr "API ključ"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__af
+msgid "Afrikaans"
+msgstr "Afrikaans"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__sq
+msgid "Albanian"
+msgstr "Albanski"
+
+#. module: base_google_map
+#: model_terms:ir.ui.view,arch_db:base_google_map.res_config_settings_view_form
+msgid "Allow Google Address Autocomplete on Website"
+msgstr "Dopusti Google autodovršavanje adrese na web stranici"
+
+#. module: base_google_map
+#: model:ir.model.fields,field_description:base_google_map.field_res_config_settings__module_web_widget_google_address_autocomplete
+msgid "Allow Google Address Form Autocomplete"
+msgstr "Dopusti Google autodovršavanje obrasca adrese"
+
+#. module: base_google_map
+#: model:ir.model.fields,field_description:base_google_map.field_res_config_settings__module_web_view_google_map
+#: model_terms:ir.ui.view,arch_db:base_google_map.res_config_settings_view_form
+msgid "Allow Google Map View"
+msgstr "Dopusti prikaz Google karte"
+
+#. module: base_google_map
+#: model:ir.model.fields,field_description:base_google_map.field_res_config_settings__module_web_widget_google_marker_icon_picker
+#: model_terms:ir.ui.view,arch_db:base_google_map.res_config_settings_view_form
+msgid "Allow Google Marker Icon Picker"
+msgstr "Dopusti odabir ikone Google markera"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__am
+msgid "Amharic"
+msgstr "Amharski"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__ar
+msgid "Armenian"
+msgstr "Armenski"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_theme__aubergine
+msgid "Aubergine"
+msgstr "Aubergine"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__az
+msgid "Azerbaijani"
+msgstr "Azerbajdžanski"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__eu
+msgid "Basque"
+msgstr "Baskijski"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__be
+msgid "Belarusian"
+msgstr "Bjeloruski"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__bn
+msgid "Bengali"
+msgstr "Bengalski"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__bs
+msgid "Bosnian"
+msgstr "Bosanski"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__bg
+msgid "Bulgarian"
+msgstr "Bugarski"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__my
+msgid "Burmese"
+msgstr "Burmanski"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__ca
+msgid "Catalan"
+msgstr "Katalonski"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__zh
+msgid "Chinese"
+msgstr "Kineski"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__zh-hk
+msgid "Chinese (Hong Kong)"
+msgstr "Kineski (Hong Kong)"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__zh-cn
+msgid "Chinese (Simplified)"
+msgstr "Kineski (pojednostavljeni)"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__zh-tw
+msgid "Chinese (Traditional)"
+msgstr "Kineski (tradicionalni)"
+
+#. module: base_google_map
+#: model:ir.model,name:base_google_map.model_res_config_settings
+msgid "Config Settings"
+msgstr "Postavke"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__hr
+msgid "Croatian"
+msgstr "Hrvatski"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__cs
+msgid "Czech"
+msgstr "Češki"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__da
+msgid "Danish"
+msgstr "Danski"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_theme__dark
+msgid "Dark"
+msgstr "Tamno"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_theme__default
+msgid "Default"
+msgstr "Zadano"
+
+#. module: base_google_map
+#: model:ir.model.fields,field_description:base_google_map.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__nl
+msgid "Dutch"
+msgstr "Nizozemski"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__en
+msgid "English"
+msgstr "Engleski"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__en-au
+msgid "English (Australian)"
+msgstr "Engleski (australski)"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__en-gb
+msgid "English (Great Britain)"
+msgstr "Engleski (Velika Britanija)"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__et
+msgid "Estonian"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__fa
+msgid "Farsi"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__fil
+msgid "Filipino"
+msgstr "Filipinski"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__fi
+msgid "Finnish"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__fr
+msgid "French"
+msgstr "Francuski"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__fr-ca
+msgid "French (Canada)"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__gl
+msgid "Galician"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields,field_description:base_google_map.field_res_config_settings__google_maps_geometry
+#: model_terms:ir.ui.view,arch_db:base_google_map.res_config_settings_view_form
+msgid "Geometry"
+msgstr ""
+
+#. module: base_google_map
+#: model_terms:ir.ui.view,arch_db:base_google_map.res_config_settings_view_form
+msgid ""
+"Geometry includes utility functions for calculating scalar geometric values "
+"(such as distance and area) on the surface of the earth."
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__ka
+msgid "Georgian"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__de
+msgid "German"
+msgstr "Njemački"
+
+#. module: base_google_map
+#: model:ir.model.fields,field_description:base_google_map.field_res_config_settings__google_maps_lang_localization
+msgid "Google Maps Language Localization"
+msgstr ""
+
+#. module: base_google_map
+#: model_terms:ir.ui.view,arch_db:base_google_map.res_config_settings_view_form
+msgid "Google Maps Libraries"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields,field_description:base_google_map.field_res_config_settings__google_maps_region_localization
+msgid "Google Maps Region Localization"
+msgstr ""
+
+#. module: base_google_map
+#: model_terms:ir.ui.view,arch_db:base_google_map.res_config_settings_view_form
+msgid "Google Maps View"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields,field_description:base_google_map.field_res_config_settings__google_maps_view_api_key
+msgid "Google Maps View Api Key"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__el
+msgid "Greek"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__gu
+msgid "Gujarati"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__iw
+msgid "Hebrew"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__hi
+msgid "Hindi"
+msgstr "Hindski"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__hu
+msgid "Hungarian"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields,field_description:base_google_map.field_res_config_settings__id
+msgid "ID"
+msgstr "ID"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__is
+msgid "Icelandic"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__id
+msgid "Indonesian"
+msgstr "Indonezijski"
+
+#. module: base_google_map
+#: model_terms:ir.ui.view,arch_db:base_google_map.res_config_settings_view_form
+msgid "Install Google Address Autocomplete on Website Form (requires Website)"
+msgstr ""
+
+#. module: base_google_map
+#: model_terms:ir.ui.view,arch_db:base_google_map.res_config_settings_view_form
+msgid "Install the Google Map View module"
+msgstr ""
+
+#. module: base_google_map
+#: model_terms:ir.ui.view,arch_db:base_google_map.res_config_settings_view_form
+msgid "Install the Google Marker Icon Picker module"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__it
+msgid "Italian"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__ja
+msgid "Japanese"
+msgstr "Japanski"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__kn
+msgid "Kannada"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__kk
+msgid "Kazakh"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__km
+msgid "Khmer"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__ko
+msgid "Korean"
+msgstr "Korejski"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__ky
+msgid "Kyrgyz"
+msgstr ""
+
+#. module: base_google_map
+#: model_terms:ir.ui.view,arch_db:base_google_map.res_config_settings_view_form
+msgid "Language"
+msgstr "Jezik"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__lo
+msgid "Lao"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__lv
+msgid "Latvian"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__lt
+msgid "Lithuanian"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__mk
+msgid "Macedonian"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__ms
+msgid "Malay"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__ml
+msgid "Malayalam"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields,field_description:base_google_map.field_res_config_settings__google_maps_theme
+msgid "Map theme"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__mr
+msgid "Marathi"
+msgstr "Marathski"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__mn
+msgid "Mongolian"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__ne
+msgid "Nepali"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_theme__night
+msgid "Night"
+msgstr "Noć"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__no
+msgid "Norwegian"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields,field_description:base_google_map.field_res_config_settings__google_maps_places
+#: model_terms:ir.ui.view,arch_db:base_google_map.res_config_settings_view_form
+msgid "Places"
+msgstr ""
+
+#. module: base_google_map
+#: model_terms:ir.ui.view,arch_db:base_google_map.res_config_settings_view_form
+msgid ""
+"Places enables your application to search for places such as establishments,"
+" geographic locations, or prominent points of interest, within a defined "
+"area."
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__pl
+msgid "Polish"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__pt
+msgid "Portuguese"
+msgstr "Portugalski"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__pt-br
+msgid "Portuguese (Brazil)"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__pt-pt
+msgid "Portuguese (Portugal)"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__pa
+msgid "Punjabi"
+msgstr "Pandžapski"
+
+#. module: base_google_map
+#: model_terms:ir.ui.view,arch_db:base_google_map.res_config_settings_view_form
+msgid "Region"
+msgstr "Regija"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_theme__retro
+msgid "Retro"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__ro
+msgid "Romanian"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__ru
+msgid "Russian"
+msgstr "Ruski"
+
+#. module: base_google_map
+#: model_terms:ir.ui.view,arch_db:base_google_map.res_config_settings_view_form
+msgid "Select the Google Maps map theme"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__sr
+msgid "Serbian"
+msgstr ""
+
+#. module: base_google_map
+#: model_terms:ir.ui.view,arch_db:base_google_map.res_config_settings_view_form
+msgid ""
+"Set API keys and map localization. Visit the Google documentation about "
+"Localizing the Map."
+msgstr ""
+
+#. module: base_google_map
+#: model_terms:ir.ui.view,arch_db:base_google_map.res_config_settings_view_form
+msgid ""
+"Set the language of the map. If you set the language, consider setting the "
+"region too so your application complies with local laws."
+msgstr ""
+
+#. module: base_google_map
+#: model_terms:ir.ui.view,arch_db:base_google_map.res_config_settings_view_form
+msgid "Set the region of the map"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_theme__silver
+msgid "Silver"
+msgstr "Srebrni"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__si
+msgid "Sinhalese"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__sk
+msgid "Slovak"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__sl
+msgid "Slovenian"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__es
+msgid "Spanish"
+msgstr "Španjolski"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__es-419
+msgid "Spanish (Latin America)"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__sw
+msgid "Swahili"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__sv
+msgid "Swedish"
+msgstr "Švedski"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__ta
+msgid "Tamil"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__te
+msgid "Telugu"
+msgstr "Telugu"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__th
+msgid "Thai"
+msgstr ""
+
+#. module: base_google_map
+#: model_terms:ir.ui.view,arch_db:base_google_map.res_config_settings_view_form
+msgid "Theme"
+msgstr "Tema"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__tr
+msgid "Turkish"
+msgstr "Turski"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__uk
+msgid "Ukrainian"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__ur
+msgid "Urdu"
+msgstr "Urdski"
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__uz
+msgid "Uzbek"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__vi
+msgid "Vietnamese"
+msgstr ""
+
+#. module: base_google_map
+#: model:ir.model.fields.selection,name:base_google_map.selection__res_config_settings__google_maps_lang_localization__zu
+msgid "Zulu"
+msgstr "Zulu"

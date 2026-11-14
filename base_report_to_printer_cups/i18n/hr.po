@@ -1,0 +1,638 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* base_report_to_printer_cups
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state__aborted
+msgid "Aborted"
+msgstr "Prekinuto"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state_reason__aborted-by-system
+msgid "Aborted by the system"
+msgstr "Prekinuo sustav"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_job__active
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_server__active
+msgid "Active"
+msgstr "Aktivno"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_server__address
+msgid "Address"
+msgstr "Adresa"
+
+#. module: base_report_to_printer_cups
+#: model_terms:ir.ui.view,arch_db:base_report_to_printer_cups.printing_printer_view_form_inherit_cups
+msgid "Are you sure to want to cancel all jobs of this printer?"
+msgstr "Jeste li sigurni da želite otkazati sve zadatke ovog pisača?"
+
+#. module: base_report_to_printer_cups
+#: model_terms:ir.ui.view,arch_db:base_report_to_printer_cups.printing_printer_view_form_inherit_cups
+msgid "Are you sure to want to print a test page?"
+msgstr "Jeste li sigurni da želite ispisati probnu stranicu?"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_printer__backend
+msgid "Backend"
+msgstr "U pozadinu"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state_reason__job-transforming
+msgid "Being transformed into a different format"
+msgstr "Pretvara se u drugačiji format"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_printer__backend__cups
+msgid "CUPS"
+msgstr "CUPS"
+
+#. module: base_report_to_printer_cups
+#: model:ir.ui.menu,name:base_report_to_printer_cups.printing_server_menu
+msgid "CUPS Servers"
+msgstr "CUPS poslužitelji"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state_reason__cups-filter-crashed
+msgid "CUPS filter crashed"
+msgstr "CUPS filtar se srušio"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,help:base_report_to_printer_cups.field_printing_job__job_id_cups
+msgid "CUPS id for this job."
+msgstr "CUPS id za ovaj posao."
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state_reason__job-restartable
+msgid "Can be restarted"
+msgstr "Može se ponovno pokrenuti"
+
+#. module: base_report_to_printer_cups
+#: model_terms:ir.ui.view,arch_db:base_report_to_printer_cups.printer_update_wizard
+#: model_terms:ir.ui.view,arch_db:base_report_to_printer_cups.view_printing_job_form_inherit_cups
+msgid "Cancel"
+msgstr "Odustani"
+
+#. module: base_report_to_printer_cups
+#: model_terms:ir.ui.view,arch_db:base_report_to_printer_cups.printing_printer_view_form_inherit_cups
+msgid "Cancel all running jobs"
+msgstr "Otkaži sve aktivne poslove"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state__canceled
+msgid "Canceled"
+msgstr "Otkazano"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state_reason__job-canceled-at-device
+msgid "Cancelled at the device"
+msgstr "Otkazano na uređaju"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state_reason__job-canceled-by-operator
+msgid "Cancelled by the printer operator"
+msgstr "Otkazao operater pisača"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state_reason__job-canceled-by-user
+msgid "Cancelled by the user"
+msgstr "Otkazao korisnik"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state_reason__processing-to-stop-point
+msgid "Cancelled, but printing already processed pages"
+msgstr "Otkazano, ali već ispisane stranice se ispisuju"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state_reason__job-completed-successfully
+msgid "Completed successfully"
+msgstr "Uspješno dovršeno"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state_reason__job-completed-with-errors
+msgid "Completed with some errors"
+msgstr "Dovršeno s nekim pogreškama"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state_reason__job-completed-with-warnings
+msgid "Completed with some warnings"
+msgstr "Dovršeno s nekim upozorenjima"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state_reason__unsupported-compression
+msgid "Compressed using an unknown algorithm"
+msgstr "Komprimirano nepoznatim algoritmom"
+
+#. module: base_report_to_printer_cups
+#. odoo-javascript
+#: code:addons/base_report_to_printer_cups/static/src/js/qweb_action_manager.esm.js:0
+msgid "Could not send to printer!"
+msgstr "Nije moguće poslati na pisač!"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_printer_update_wizard__create_uid
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_server__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_printer_update_wizard__create_date
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_server__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,help:base_report_to_printer_cups.field_printing_job__job_state
+msgid "Current state of the job."
+msgstr "Trenutno stanje posla."
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state_reason__job-interpreting
+msgid "Currently being interpreted"
+msgstr "Trenutno se interpretira"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state_reason__job-outgoing
+msgid "Currently being sent to the printer"
+msgstr "Trenutno se šalje na pisač"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state_reason__job-hold-until-specified
+msgid "Currently held"
+msgstr "Trenutno zadržano"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state_reason__job-printing
+msgid "Currently printing"
+msgstr "Trenutno se ispisuje"
+
+#. module: base_report_to_printer_cups
+#: model_terms:ir.ui.view,arch_db:base_report_to_printer_cups.printing_printer_view_form_inherit_cups
+msgid "Disable"
+msgstr "Onemogući"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_ir_actions_report__display_name
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_job__display_name
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_printer__display_name
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_printer_update_wizard__display_name
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_server__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: base_report_to_printer_cups
+#: model_terms:ir.ui.view,arch_db:base_report_to_printer_cups.printing_printer_view_form_inherit_cups
+msgid "Enable"
+msgstr "Omogući"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_server__encryption_policy
+msgid "Encryption Policy"
+msgstr "Politika enkripcije"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,help:base_report_to_printer_cups.field_printing_server__encryption_policy
+msgid "Encryption Policy to connect to the server. Empty by default."
+msgstr "Politika enkripcije za povezivanje s poslužiteljem. Zadano je prazno."
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state_reason__compression-error
+msgid "Error in the compressed data"
+msgstr "Pogreška u komprimiranim podacima"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state_reason__document-format-error
+msgid "Error in the document"
+msgstr "Pogreška u dokumentu"
+
+#. module: base_report_to_printer_cups
+#. odoo-python
+#: code:addons/base_report_to_printer_cups/models/printing_printer.py:0
+msgid "Failed to cancel jobs on printer %(printer)s: %(error)s"
+msgstr "Otkazivanje zadataka na pisaču %(printer)s nije uspjelo: %(error)s"
+
+#. module: base_report_to_printer_cups
+#. odoo-python
+#: code:addons/base_report_to_printer_cups/models/printing_server.py:0
+msgid ""
+"Failed to connect to the CUPS server on %(address)s:%(port)s. Check that the"
+" CUPS server is running and that you can reach it from the Odoo server."
+msgstr ""
+"Povezivanje s CUPS poslužiteljem na %(address)s:%(port)s nije uspjelo. "
+"Provjerite radi li CUPS poslužitelj i je li dostupan s Odoo poslužitelja."
+
+#. module: base_report_to_printer_cups
+#. odoo-python
+#: code:addons/base_report_to_printer_cups/models/printing_printer.py:0
+msgid "Failed to disable printer %(printer)s: %(error)s"
+msgstr "Onemogućavanje pisača %(printer)s nije uspjelo: %(error)s"
+
+#. module: base_report_to_printer_cups
+#. odoo-python
+#: code:addons/base_report_to_printer_cups/models/printing_printer.py:0
+msgid "Failed to enable printer %(printer)s: %(error)s"
+msgstr "Omogućavanje pisača %(printer)s nije uspjelo: %(error)s"
+
+#. module: base_report_to_printer_cups
+#. odoo-python
+#: code:addons/base_report_to_printer_cups/models/printing_printer.py:0
+msgid "Failed to get PPD for printer %(printer)s: %(error)s"
+msgstr "Dohvaćanje PPD datoteke za pisač %(printer)s nije uspjelo: %(error)s"
+
+#. module: base_report_to_printer_cups
+#. odoo-python
+#: code:addons/base_report_to_printer_cups/models/printing_printer.py:0
+msgid "Failed to print on printer %(printer)s: %(error)s"
+msgstr "Ispis na pisaču %(printer)s nije uspio: %(error)s"
+
+#. module: base_report_to_printer_cups
+#. odoo-python
+#: code:addons/base_report_to_printer_cups/models/printing_printer.py:0
+msgid "Failed to print test page on printer %(printer)s: %(error)s"
+msgstr "Ispis probne stranice na pisaču %(printer)s nije uspio: %(error)s"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state_reason__job-incoming
+msgid "Files are currently being received"
+msgstr "Datoteke se trenutno primaju"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state_reason__submission-interrupted
+msgid "Files were not received in full"
+msgstr "Datoteke nisu u potpunosti primljene"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_server__encryption_policy__3
+msgid "HTTP_ENCRYPT_ALWAYS"
+msgstr "HTTP_ENCRYPT_ALWAYS"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_server__encryption_policy__0
+msgid "HTTP_ENCRYPT_IF_REQUESTED"
+msgstr "HTTP_ENCRYPT_IF_REQUESTED"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_server__encryption_policy__1
+msgid "HTTP_ENCRYPT_NEVER"
+msgstr "HTTP_ENCRYPT_NEVER"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_server__encryption_policy__2
+msgid "HTTP_ENCRYPT_REQUIRED"
+msgstr "HTTP_ENCRYPT_REQUIRED"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state_reason__service-off-line
+msgid "Held because the printer is offline"
+msgstr "Zadržano jer je pisač izvan mreže"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_ir_actions_report__id
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_job__id
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_printer__id
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_printer_update_wizard__id
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_server__id
+msgid "ID"
+msgstr "ID"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,help:base_report_to_printer_cups.field_printing_server__address
+msgid "IP address or hostname of the server"
+msgstr "IP adresa ili naziv računala poslužitelja"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,help:base_report_to_printer_cups.field_printing_server__active
+msgid "If checked, this server is useable."
+msgstr "Ako je označeno, ovaj poslužitelj je upotrebljiv."
+
+#. module: base_report_to_printer_cups
+#. odoo-javascript
+#: code:addons/base_report_to_printer_cups/static/src/js/qweb_action_manager.esm.js:0
+msgid "Issue on"
+msgstr "Problem na"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_job__job_id_cups
+msgid "Job ID"
+msgstr "ID posla"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_printer__job_ids
+#: model_terms:ir.ui.view,arch_db:base_report_to_printer_cups.printing_printer_view_form_inherit_cups
+msgid "Jobs"
+msgstr "Radna mjesta"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_printer_update_wizard__write_uid
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_server__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_printer_update_wizard__write_date
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_server__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,help:base_report_to_printer_cups.field_printing_server__printer_ids
+msgid "List of printers available on this server."
+msgstr "Popis pisača dostupnih na ovom poslužitelju."
+
+#. module: base_report_to_printer_cups
+#: model:ir.model,name:base_report_to_printer_cups.model_printing_printer
+msgid "Logical Printer"
+msgstr "Zadani pisač"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_job__job_media_progress
+msgid "Media Progress"
+msgstr "Napredak medija"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_printer__multi_thread
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_server__multi_thread
+msgid "Multi Thread"
+msgstr "Više niti"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_server__name
+msgid "Name"
+msgstr "Naziv"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,help:base_report_to_printer_cups.field_printing_server__name
+msgid "Name of the server."
+msgstr "Naziv poslužitelja."
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state_reason__job-data-insufficient
+msgid "No data has been received"
+msgstr "Nisu primljeni podaci"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state_reason__none
+msgid "No reason"
+msgstr "Bez razloga"
+
+#. module: base_report_to_printer_cups
+#: model_terms:ir.ui.view,arch_db:base_report_to_printer_cups.printer_update_wizard
+msgid "Ok"
+msgstr "U redu"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_printer__output_tray_ids
+msgid "Output trays"
+msgstr "Output trays"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_printer__input_tray_ids
+msgid "Paper Sources"
+msgstr "Izvori papira"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_server__password
+msgid "Password"
+msgstr "Lozinka"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,help:base_report_to_printer_cups.field_printing_server__password
+msgid "Password to connect to the server. Empty by default."
+msgstr "Lozinka za povezivanje s poslužiteljem. Zadano je prazno."
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state__pending_held
+msgid "Pending Held"
+msgstr "Na čekanju zadržano"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,help:base_report_to_printer_cups.field_printing_job__job_media_progress
+msgid "Percentage of progress for this job."
+msgstr "Postotak napretka ovog posla."
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_server__port
+msgid "Port"
+msgstr "Port"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,help:base_report_to_printer_cups.field_printing_server__port
+msgid "Port of the server."
+msgstr "Port poslužitelja."
+
+#. module: base_report_to_printer_cups
+#. odoo-javascript
+#: code:addons/base_report_to_printer_cups/static/src/js/qweb_action_manager.esm.js:0
+msgid "Print"
+msgstr "Ispis"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model,name:base_report_to_printer_cups.model_printing_job
+msgid "Print Job"
+msgstr "Zadatak za ispis"
+
+#. module: base_report_to_printer_cups
+#: model_terms:ir.ui.view,arch_db:base_report_to_printer_cups.printing_printer_view_form_inherit_cups
+msgid "Print Test Page"
+msgstr "Ispiši probnu stranicu"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state_reason__printer-stopped
+msgid "Printer is stopped"
+msgstr "Pisač je zaustavljen"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state_reason__job-queued-for-marker
+msgid "Printer needs ink/marker/toner"
+msgstr "Pisaču treba tinta/toner"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state_reason__printer-stopped-partly
+msgid "Printer state reason set to 'stopped-partly'"
+msgstr "Razlog stanja pisača postavljen na 'stopped-partly'"
+
+#. module: base_report_to_printer_cups
+#: model_terms:ir.ui.view,arch_db:base_report_to_printer_cups.printing_server_cups_view_form
+msgid "Printers"
+msgstr "Printeri"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_server__printer_ids
+msgid "Printers List"
+msgstr "Popis pisača"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model,name:base_report_to_printer_cups.model_printing_printer_update_wizard
+msgid "Printing Printer Update Wizard"
+msgstr "Čarobnjak ažuriranja pisača"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model,name:base_report_to_printer_cups.model_printing_server
+msgid "Printing server"
+msgstr "Poslužitelj ispisa"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state__processing
+msgid "Processing"
+msgstr "Obrađujem"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state__processing_stopped
+msgid "Processing Stopped"
+msgstr "Obrada zaustavljena"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state_reason__queued-in-device
+msgid "Queued at the output device"
+msgstr "U redu čekanja na izlaznom uređaju"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state_reason__job-queued
+msgid "Queued for printing"
+msgstr "U redu čekanja za ispis"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,help:base_report_to_printer_cups.field_printing_job__job_state_reason
+msgid "Reason for the current job state."
+msgstr "Razlog trenutnog stanja posla."
+
+#. module: base_report_to_printer_cups
+#: model:ir.model,name:base_report_to_printer_cups.model_ir_actions_report
+msgid "Report Action"
+msgstr "Radnja izvještaja"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state_reason__resources-are-not-ready
+msgid "Resources not available to print the job"
+msgstr "Resursi za ispis zadatka nisu dostupni"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_job__server_id
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_printer__server_id
+msgid "Server"
+msgstr "Poslužitelj"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,help:base_report_to_printer_cups.field_printing_job__server_id
+msgid "Server which hosts this job."
+msgstr "Poslužitelj koji hosta ovaj posao."
+
+#. module: base_report_to_printer_cups
+#: model:ir.actions.act_window,name:base_report_to_printer_cups.printing_server_action
+#: model_terms:ir.ui.view,arch_db:base_report_to_printer_cups.printing_server_view_search
+msgid "Servers"
+msgstr "Poslužitelji"
+
+#. module: base_report_to_printer_cups
+#: model_terms:ir.ui.view,arch_db:base_report_to_printer_cups.printing_printer_view_form_inherit_cups
+msgid "Set Default"
+msgstr "Postavi zadano"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_job__job_state
+msgid "State"
+msgstr "Stanje"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_job__job_state_reason
+msgid "State Reason"
+msgstr "Razlog stanja"
+
+#. module: base_report_to_printer_cups
+#. odoo-javascript
+#: code:addons/base_report_to_printer_cups/static/src/js/qweb_action_manager.esm.js:0
+msgid "Successfully sent to CUPS printer!"
+msgstr "Uspješno poslano na CUPS pisač!"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state_reason__document-access-error
+msgid "The URI cannot be accessed"
+msgstr "URI se ne može pristupiti"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.constraint,message:base_report_to_printer_cups.constraint_printing_job_job_id_cups_unique
+msgid "The id of the job must be unique per server !"
+msgstr "ID posla mora biti jedinstven po poslužitelju!"
+
+#. module: base_report_to_printer_cups
+#. odoo-javascript
+#: code:addons/base_report_to_printer_cups/static/src/js/qweb_action_manager.esm.js:0
+msgid "The report"
+msgstr "Izvješće"
+
+#. module: base_report_to_printer_cups
+#: model_terms:ir.ui.view,arch_db:base_report_to_printer_cups.printer_update_wizard
+msgid ""
+"This process will create all missing printers from the current CUPS "
+"server.\""
+msgstr ""
+"Ovaj će postupak stvoriti sve pisače koji nedostaju na trenutačnom CUPS "
+"poslužitelju.\""
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,help:base_report_to_printer_cups.field_printing_job__active
+msgid "Unchecked if the job is purged from CUPS."
+msgstr "Neoznačeno znači da je zadatak uklonjen iz CUPS-a."
+
+#. module: base_report_to_printer_cups
+#: model_terms:ir.ui.view,arch_db:base_report_to_printer_cups.printing_printer_view_form_inherit_cups
+msgid "Unset Default"
+msgstr "Poništi zadano"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields.selection,name:base_report_to_printer_cups.selection__printing_job__job_state_reason__unsupported-document-format
+msgid "Unsupported format"
+msgstr "Nepodržan format"
+
+#. module: base_report_to_printer_cups
+#: model:ir.actions.server,name:base_report_to_printer_cups.ir_cron_update_cups_printers_ir_actions_server
+msgid "Update CUPS Printers Jobs"
+msgstr "Ažuriraj zadatke CUPS pisača"
+
+#. module: base_report_to_printer_cups
+#: model_terms:ir.ui.view,arch_db:base_report_to_printer_cups.printing_server_cups_view_form
+msgid "Update Jobs"
+msgstr "Ažuriraj zadatke"
+
+#. module: base_report_to_printer_cups
+#: model_terms:ir.ui.view,arch_db:base_report_to_printer_cups.printing_server_cups_view_form
+msgid "Update Printers"
+msgstr "Ažuriraj pisače"
+
+#. module: base_report_to_printer_cups
+#: model:ir.actions.act_window,name:base_report_to_printer_cups.action_printer_update_wizard
+#: model:ir.ui.menu,name:base_report_to_printer_cups.menu_printer_update_wizard
+#: model_terms:ir.ui.view,arch_db:base_report_to_printer_cups.printer_update_wizard
+msgid "Update Printers from CUPS"
+msgstr "Ažuriraj pisače iz CUPS-a"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,field_description:base_report_to_printer_cups.field_printing_server__user
+msgid "User"
+msgstr "Korisnik"
+
+#. module: base_report_to_printer_cups
+#: model:ir.model.fields,help:base_report_to_printer_cups.field_printing_server__user
+msgid "User name to connect to the server. Empty by default."
+msgstr "Korisničko ime za povezivanje s poslužiteljem. Zadano je prazno."
+
+#. module: base_report_to_printer_cups
+#. odoo-javascript
+#: code:addons/base_report_to_printer_cups/static/src/js/qweb_action_manager.esm.js:0
+msgid "couldn't be printed. Click on the button below to download it"
+msgstr ""
+"nije bilo moguće ispisati. Kliknite na gumb u nastavku da biste ga preuzeli"

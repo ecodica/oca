@@ -1,0 +1,220 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mrp_bom_tracking
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: mrp_bom_tracking
+#: model_terms:ir.ui.view,arch_db:mrp_bom_tracking.track_bom_line_template
+msgid "-&gt;"
+msgstr "-&gt;"
+
+#. module: mrp_bom_tracking
+#: model_terms:ir.ui.view,arch_db:mrp_bom_tracking.track_bom_template_2
+msgid ""
+":\n"
+"                New component<br/>"
+msgstr ""
+":\n"
+"                Nova komponenta<br/>"
+
+#. module: mrp_bom_tracking
+#: model_terms:ir.ui.view,arch_db:mrp_bom_tracking.track_bom_template_2
+msgid ""
+":\n"
+"                Removed component<br/>"
+msgstr ""
+":\n"
+"                Uklonjena komponenta<br/>"
+
+#. module: mrp_bom_tracking
+#: model_terms:ir.ui.view,arch_db:mrp_bom_tracking.track_bom_line_template
+#: model_terms:ir.ui.view,arch_db:mrp_bom_tracking.track_bom_template
+msgid ""
+"<br/>\n"
+"                    Product Unit of Measure:"
+msgstr ""
+"<br/>\n"
+"                    Jedinica mjere proizvoda:"
+
+#. module: mrp_bom_tracking
+#: model_terms:ir.ui.view,arch_db:mrp_bom_tracking.track_bom_line_template
+msgid "<strong>The component details have been updated.</strong>"
+msgstr "<strong>Detalji komponente su ažurirani.</strong>"
+
+#. module: mrp_bom_tracking
+#: model_terms:ir.ui.view,arch_db:mrp_bom_tracking.track_bom_template
+#: model_terms:ir.ui.view,arch_db:mrp_bom_tracking.track_bom_template_2
+msgid "<strong>The components have changed.</strong>"
+msgstr "<strong>Komponente su se promijenile.</strong>"
+
+#. module: mrp_bom_tracking
+#: model:ir.model.fields,help:mrp_bom_tracking.field_mrp_bom__produce_delay
+msgid ""
+"Average lead time in days to manufacture this product. In the case of multi-"
+"level BOM, the manufacturing lead times of the components will be added. In "
+"case the product is subcontracted, this can be used to determine the date at"
+" which components should be sent to the subcontractor."
+msgstr ""
+"Prosječno vrijeme proizvodnje ovog proizvoda u danima. U slučaju "
+"višerazinske strukture materijala (BOM), vremena proizvodnje za komponente "
+"bit će zbrojena. Ako se proizvod izrađuje u kooperaciji, ovo se vrijeme može"
+" koristiti za određivanje datuma kada bi komponente trebale biti poslane "
+"kooperantu."
+
+#. module: mrp_bom_tracking
+#: model:ir.model,name:mrp_bom_tracking.model_mrp_bom
+msgid "Bill of Material"
+msgstr "Sastavnica materijala"
+
+#. module: mrp_bom_tracking
+#: model:ir.model,name:mrp_bom_tracking.model_mrp_bom_line
+msgid "Bill of Material Line"
+msgstr "Stavka sastavnice"
+
+#. module: mrp_bom_tracking
+#: model:ir.model.fields,field_description:mrp_bom_tracking.field_mrp_bom__type
+msgid "BoM Type"
+msgstr "Tip sastavnice"
+
+#. module: mrp_bom_tracking
+#: model_terms:ir.ui.view,arch_db:mrp_bom_tracking.track_bom_line_template
+msgid "Consumed in Operation:"
+msgstr "Potrošeno u operaciji:"
+
+#. module: mrp_bom_tracking
+#: model:ir.model.fields,help:mrp_bom_tracking.field_mrp_bom__days_to_prepare_mo
+msgid ""
+"Create and confirm Manufacturing Orders this many days in advance, to have "
+"enough time to replenish components or manufacture semi-finished products."
+msgstr ""
+"Kreiraj i potvrdi radne naloge ovoliko dana unaprijed kako bi bilo dovoljno "
+"vremena za nabavu komponenti ili proizvodnju polugotovih proizvoda."
+
+#. module: mrp_bom_tracking
+#: model:ir.model.fields,field_description:mrp_bom_tracking.field_mrp_bom__days_to_prepare_mo
+msgid "Days to prepare Manufacturing Order"
+msgstr "Dani za pripremu naloga za proizvodnju"
+
+#. module: mrp_bom_tracking
+#: model:ir.model.fields,help:mrp_bom_tracking.field_mrp_bom__consumption
+msgid ""
+"Defines if you can consume more or less components than the quantity defined on the BoM:\n"
+"  * Allowed: allowed for all manufacturing users.\n"
+"  * Allowed with warning: allowed for all manufacturing users with summary of consumption differences when closing the manufacturing order.\n"
+"  Note that in the case of component Highlight Consumption, where consumption is registered manually exclusively, consumption warnings will still be issued when appropriate also.\n"
+"  * Blocked: only a manager can close a manufacturing order when the BoM consumption is not respected."
+msgstr ""
+"Definira možete li potrošiti više ili manje komponenti od količine definirane na sastavnici:\n"
+"  * Dopušteno: dopušteno za sve proizvodne korisnike.\n"
+"  * Dopušteno s upozorenjem: dopušteno za sve proizvodne korisnike uz sažetak razlika u potrošnji pri zatvaranju radnog naloga.\n"
+"  Imajte na umu da će se u slučaju komponente Highlight Consumption, gdje se potrošnja bilježi isključivo ručno, i dalje izdavati upozorenja o potrošnji kada je potrebno.\n"
+"  * Blokirano: samo voditelj može zatvoriti radni nalog kada potrošnja na sastavnici nije poštovana."
+
+#. module: mrp_bom_tracking
+#: model:ir.model.fields,field_description:mrp_bom_tracking.field_mrp_bom__display_name
+#: model:ir.model.fields,field_description:mrp_bom_tracking.field_mrp_bom_line__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: mrp_bom_tracking
+#: model:ir.model.fields,field_description:mrp_bom_tracking.field_mrp_bom__consumption
+msgid "Flexible Consumption"
+msgstr "Fleksibilni utrošak"
+
+#. module: mrp_bom_tracking
+#: model:ir.model.fields,field_description:mrp_bom_tracking.field_mrp_bom__id
+#: model:ir.model.fields,field_description:mrp_bom_tracking.field_mrp_bom_line__id
+msgid "ID"
+msgstr "ID"
+
+#. module: mrp_bom_tracking
+#: model:ir.model.fields,help:mrp_bom_tracking.field_mrp_bom__product_id
+msgid ""
+"If a product variant is defined the BOM is available only for this product."
+msgstr ""
+"Ako je definirana varijanta proizvoda, sastavnica je dostupna samo za taj "
+"proizvod."
+
+#. module: mrp_bom_tracking
+#: model:ir.model.fields,field_description:mrp_bom_tracking.field_mrp_bom__produce_delay
+msgid "Manufacturing Lead Time"
+msgstr "Pripremno vrijeme proizvodnje"
+
+#. module: mrp_bom_tracking
+#: model:ir.model.fields,field_description:mrp_bom_tracking.field_mrp_bom__ready_to_produce
+msgid "Manufacturing Readiness"
+msgstr "Spremnost na proizvodnju"
+
+#. module: mrp_bom_tracking
+#: model:ir.model.fields,field_description:mrp_bom_tracking.field_mrp_bom__picking_type_id
+msgid "Operation Type"
+msgstr "Vrsta operacije"
+
+#. module: mrp_bom_tracking
+#: model:ir.model.fields,field_description:mrp_bom_tracking.field_mrp_bom__product_tmpl_id
+msgid "Product"
+msgstr "Proizvod"
+
+#. module: mrp_bom_tracking
+#: model_terms:ir.ui.view,arch_db:mrp_bom_tracking.track_bom_line_template
+#: model_terms:ir.ui.view,arch_db:mrp_bom_tracking.track_bom_template
+msgid "Product Quantity:"
+msgstr ""
+
+#. module: mrp_bom_tracking
+#: model:ir.model.fields,field_description:mrp_bom_tracking.field_mrp_bom__product_id
+msgid "Product Variant"
+msgstr "Varijanta proizvoda"
+
+#. module: mrp_bom_tracking
+#: model:ir.model.fields,field_description:mrp_bom_tracking.field_mrp_bom__product_qty
+msgid "Quantity"
+msgstr "Količina"
+
+#. module: mrp_bom_tracking
+#: model:ir.model.fields,field_description:mrp_bom_tracking.field_mrp_bom__code
+msgid "Reference"
+msgstr "Referenca"
+
+#. module: mrp_bom_tracking
+#: model:ir.model.fields,help:mrp_bom_tracking.field_mrp_bom__product_qty
+msgid ""
+"This should be the smallest quantity that this product can be produced in. "
+"If the BOM contains operations, make sure the work center capacity is "
+"accurate."
+msgstr ""
+"Ovo bi trebala biti najmanja količina u kojoj se ovaj proizvod može "
+"proizvesti. Ako BOM sadrži operacije, provjerite da li je kapacitet radnog "
+"centra točan."
+
+#. module: mrp_bom_tracking
+#: model:ir.model.fields,help:mrp_bom_tracking.field_mrp_bom__picking_type_id
+msgid ""
+"When a procurement has a ‘produce’ route with a operation type set, it will "
+"try to create a Manufacturing Order for that product using a BoM of the same"
+" operation type.If not,the operation type is not taken into account in the "
+"BoM search. That allows to define stock rules which trigger different "
+"manufacturing orders with different BoMs."
+msgstr ""
+"Kada nabava ima rutu \"proizvodi\" s postavljenim tipom operacije, pokušat "
+"će kreirati radni nalog za taj proizvod pomoću sastavnice istog tipa "
+"operacije. Ako ne, tip operacije se ne uzima u obzir pri pretraživanju "
+"sastavnice. To omogućuje definiranje pravila zaliha koja aktiviraju "
+"različite radne naloge s različitim sastavnicama."
+
+#. module: mrp_bom_tracking
+#: model_terms:ir.ui.view,arch_db:mrp_bom_tracking.track_bom_template
+msgid "component<br/>"
+msgstr ""

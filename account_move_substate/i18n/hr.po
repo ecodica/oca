@@ -1,0 +1,110 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_move_substate
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: account_move_substate
+#: model:mail.template,body_html:account_move_substate.mail_template_data_account_move_substate_verified
+msgid ""
+"<div>\n"
+"    Dear <t t-out=\"object.user_id.name or 'accounting user'\"/>,<br/>\n"
+"    This email is to inform that your journal entry <t t-out=\"object.name or ''\"/> was verified by accounting manager.\n"
+"    <br/><br/>\n"
+"    Best Regards,\n"
+"    <t t-if=\"user.signature\">\n"
+"                <br/>\n"
+"                <t t-out=\"user.signature or ''\"/>\n"
+"            </t>\n"
+"    </div>\n"
+"        "
+msgstr ""
+"<div>\n"
+"    Poštovani <t t-out=\"object.user_id.name or 'računovodstveni korisnik'\"/>,<br/>\n"
+"    Ova e-pošta obavještava da je vašu stavku dnevnika <t t-out=\"object.name or ''\"/> potvrdio voditelj računovodstva.\n"
+"    <br/><br/>\n"
+"    Srdačan pozdrav,\n"
+"    <t t-if=\"user.signature\">\n"
+"                <br/>\n"
+"                <t t-out=\"user.signature or ''\"/>\n"
+"            </t>\n"
+"    </div>\n"
+"        "
+
+#. module: account_move_substate
+#: model:ir.model.fields.selection,name:account_move_substate.selection__base_substate_type__model__account_move
+msgid "Account Move"
+msgstr "Temeljnica"
+
+#. module: account_move_substate
+#: model:base.substate.type,name:account_move_substate.base_substate_type_account_move
+msgid "Account Move Substate"
+msgstr "Podstanje knjiženja računa"
+
+#. module: account_move_substate
+#: model:ir.model.fields,field_description:account_move_substate.field_base_substate_type__model
+msgid "Apply on"
+msgstr "Primjeni na"
+
+#. module: account_move_substate
+#: model:ir.model,name:account_move_substate.model_base_substate_type
+msgid "Base Substate Type"
+msgstr "Vrsta osnovnog podstanja"
+
+#. module: account_move_substate
+#: model:ir.model.fields,field_description:account_move_substate.field_account_move__display_name
+#: model:ir.model.fields,field_description:account_move_substate.field_base_substate_type__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: account_move_substate
+#: model:target.state.value,name:account_move_substate.target_state_value_draft
+msgid "Draft"
+msgstr "Nacrt"
+
+#. module: account_move_substate
+#: model:ir.model.fields,field_description:account_move_substate.field_account_move__id
+#: model:ir.model.fields,field_description:account_move_substate.field_base_substate_type__id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_move_substate
+#: model:ir.model,name:account_move_substate.model_account_move
+msgid "Journal Entry"
+msgstr "Stavke temeljnice"
+
+#. module: account_move_substate
+#: model:target.state.value,name:account_move_substate.target_state_value_posted
+msgid "Posted"
+msgstr "Proknjiženo"
+
+#. module: account_move_substate
+#: model:ir.model.fields,field_description:account_move_substate.field_account_move__substate_id
+msgid "Sub State"
+msgstr "Podstanje"
+
+#. module: account_move_substate
+#: model_terms:ir.ui.view,arch_db:account_move_substate.view_account_invoice_filter
+msgid "Substate"
+msgstr "Podstanje"
+
+#. module: account_move_substate
+#: model:mail.template,name:account_move_substate.mail_template_data_account_move_substate_verified
+msgid "Verified"
+msgstr "Potvrđeno"
+
+#. module: account_move_substate
+#: model:mail.template,subject:account_move_substate.mail_template_data_account_move_substate_verified
+msgid "Your journal entry {{object.name}} is verified"
+msgstr "Vaša stavka dnevnika {{object.name}} je verificirana"

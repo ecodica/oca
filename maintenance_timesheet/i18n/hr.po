@@ -1,0 +1,161 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* maintenance_timesheet
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.equipment_request_view_form
+msgid ""
+"<span class=\"o_stat_text\">\n"
+"                            Hours\n"
+"                        </span>"
+msgstr ""
+"<span class=\"o_stat_text\">\n"
+"                            Sati\n"
+"                        </span>"
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.hr_equipment_request_view_kanban
+msgid "<span class=\"oe_label\">Hours</span>"
+msgstr "<span class=\"oe_label\">Sati</span>"
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "<span id=\"timesheet_information_title\">Timesheet Entries</span>"
+msgstr "<span id=\"timesheet_information_title\">Unosi radnog vremena</span>"
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "<strong>Timesheet Total Hours:</strong>"
+msgstr "<strong>Ukupni sati radnog vremena:</strong>"
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "<strong>Total</strong>"
+msgstr "<strong>Ukupno</strong>"
+
+#. module: maintenance_timesheet
+#: model:ir.model,name:maintenance_timesheet.model_account_analytic_line
+msgid "Analytic Line"
+msgstr "Analitička stavka"
+
+#. module: maintenance_timesheet
+#. odoo-python
+#: code:addons/maintenance_timesheet/models/hr_timesheet.py:0
+msgid ""
+"Cannot save or delete a timesheet for a maintenance request already done"
+msgstr ""
+"Ne može se spremiti ili obrisati radno vrijeme za dovršen zahtjev za "
+"održavanje"
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "Date"
+msgstr "Datum"
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "Description"
+msgstr "Opis"
+
+#. module: maintenance_timesheet
+#: model:ir.model.fields,field_description:maintenance_timesheet.field_account_analytic_line__display_name
+#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_equipment__display_name
+#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__display_name
+#: model:ir.model.fields,field_description:maintenance_timesheet.field_timesheets_analysis_report__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.equipment_request_view_form
+msgid "Duration (Hour(s))"
+msgstr "Trajanje (sat/i)"
+
+#. module: maintenance_timesheet
+#: model:ir.model.fields,field_description:maintenance_timesheet.field_account_analytic_line__id
+#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_equipment__id
+#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__id
+#: model:ir.model.fields,field_description:maintenance_timesheet.field_timesheets_analysis_report__id
+msgid "ID"
+msgstr "ID"
+
+#. module: maintenance_timesheet
+#: model:ir.model,name:maintenance_timesheet.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr "Oprema za održavanje"
+
+#. module: maintenance_timesheet
+#: model:ir.model,name:maintenance_timesheet.model_maintenance_request
+#: model:ir.model.fields,field_description:maintenance_timesheet.field_account_analytic_line__maintenance_request_id
+#: model:ir.model.fields,field_description:maintenance_timesheet.field_timesheets_analysis_report__maintenance_request_id
+msgid "Maintenance Request"
+msgstr "Zahtjev za održavanjem"
+
+#. module: maintenance_timesheet
+#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__planned_hours
+msgid "Planned Hours"
+msgstr "Planirani sati"
+
+#. module: maintenance_timesheet
+#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__progress
+msgid "Progress"
+msgstr "Napredak"
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "Project -"
+msgstr ""
+
+#. module: maintenance_timesheet
+#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__remaining_hours
+msgid "Remaining Hours"
+msgstr "Preostali sati"
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.hr_timesheet_line_search
+msgid "Request"
+msgstr "Zahtjev"
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "Responsible"
+msgstr "Odgovoran"
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "Task"
+msgstr "Zadatak"
+
+#. module: maintenance_timesheet
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.report_maintenance_request_document
+msgid "Time"
+msgstr "Vrijeme"
+
+#. module: maintenance_timesheet
+#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__timesheet_total_hours
+msgid "Timesheet Total Hours"
+msgstr ""
+
+#. module: maintenance_timesheet
+#: model:ir.actions.act_window,name:maintenance_timesheet.timesheet_action_from_request
+#: model:ir.model.fields,field_description:maintenance_timesheet.field_maintenance_request__timesheet_ids
+#: model_terms:ir.ui.view,arch_db:maintenance_timesheet.equipment_request_view_form
+msgid "Timesheets"
+msgstr "Kontrolne kartice"
+
+#. module: maintenance_timesheet
+#: model:ir.model,name:maintenance_timesheet.model_timesheets_analysis_report
+msgid "Timesheets Analysis Report"
+msgstr "Izvještaj analize evidencija"

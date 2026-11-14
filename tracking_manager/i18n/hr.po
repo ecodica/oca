@@ -1,0 +1,162 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* tracking_manager
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: tracking_manager
+#: model_terms:ir.ui.view,arch_db:tracking_manager.track_o2m_m2m_template
+msgid "<b>Change :</b>"
+msgstr "<b>Promjena :</b>"
+
+#. module: tracking_manager
+#: model_terms:ir.ui.view,arch_db:tracking_manager.track_o2m_m2m_template
+msgid "<b>Delete :</b>"
+msgstr "<b>Brisanje :</b>"
+
+#. module: tracking_manager
+#: model_terms:ir.ui.view,arch_db:tracking_manager.track_o2m_m2m_template
+msgid "<b>New :</b>"
+msgstr "<b>Novo :</b>"
+
+#. module: tracking_manager
+#: model_terms:ir.ui.view,arch_db:tracking_manager.view_model_form
+msgid "Active"
+msgstr "Aktivno"
+
+#. module: tracking_manager
+#: model:ir.model.fields,field_description:tracking_manager.field_ir_model__active_custom_tracking
+msgid "Active Custom Tracking"
+msgstr "Aktivno prilagođeno praćenje"
+
+#. module: tracking_manager
+#: model:ir.model.fields,field_description:tracking_manager.field_ir_model__automatic_custom_tracking
+msgid "Automatic Custom Tracking"
+msgstr "Automatsko prilagođeno praćenje"
+
+#. module: tracking_manager
+#: model_terms:ir.ui.view,arch_db:tracking_manager.view_model_form
+msgid "Automatic configuration"
+msgstr "Automatska konfiguracija"
+
+#. module: tracking_manager
+#: model:ir.model,name:tracking_manager.model_base
+msgid "Base"
+msgstr "Osnovica"
+
+#. module: tracking_manager
+#: model_terms:ir.ui.view,arch_db:tracking_manager.track_o2m_m2m_template
+msgid "Changed"
+msgstr "Promijenjeno"
+
+#. module: tracking_manager
+#: model:ir.model.fields,field_description:tracking_manager.field_ir_model_fields__custom_tracking
+#: model_terms:ir.ui.view,arch_db:tracking_manager.view_model_form
+msgid "Custom Tracking"
+msgstr "Prilagođeno praćenje"
+
+#. module: tracking_manager
+#: model_terms:ir.ui.view,arch_db:tracking_manager.view_model_track_fields_search
+msgid "Custom Tracking OFF"
+msgstr "Prilagođeno praćenje ISKLJUČENO"
+
+#. module: tracking_manager
+#: model_terms:ir.ui.view,arch_db:tracking_manager.view_model_track_fields_search
+msgid "Custom Tracking ON"
+msgstr "Prilagođeno praćenje UKLJUČENO"
+
+#. module: tracking_manager
+#: model:ir.model.fields,field_description:tracking_manager.field_ir_model__display_name
+#: model:ir.model.fields,field_description:tracking_manager.field_ir_model_fields__display_name
+#: model:ir.model.fields,field_description:tracking_manager.field_mail_thread__display_name
+#: model:ir.model.fields,field_description:tracking_manager.field_mail_tracking_value__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: tracking_manager
+#: model:ir.model.fields,field_description:tracking_manager.field_ir_model__automatic_custom_tracking_domain
+msgid "Domain"
+msgstr "Domena"
+
+#. module: tracking_manager
+#: model:ir.model,name:tracking_manager.model_mail_thread
+msgid "Email Thread"
+msgstr "E-mail"
+
+#. module: tracking_manager
+#: model:ir.model,name:tracking_manager.model_ir_model_fields
+msgid "Fields"
+msgstr "Polja"
+
+#. module: tracking_manager
+#: model:ir.model.fields,field_description:tracking_manager.field_ir_model__id
+#: model:ir.model.fields,field_description:tracking_manager.field_ir_model_fields__id
+#: model:ir.model.fields,field_description:tracking_manager.field_mail_thread__id
+#: model:ir.model.fields,field_description:tracking_manager.field_mail_tracking_value__id
+msgid "ID"
+msgstr "ID"
+
+#. module: tracking_manager
+#: model:ir.model.fields,help:tracking_manager.field_ir_model__automatic_custom_tracking
+msgid ""
+"If marked, the fields matching the matched by the domain below will be "
+"automatically tracked for this model."
+msgstr ""
+"Ako je označeno, polja koja odgovaraju dolje navedenoj domeni automatski će "
+"se pratiti za ovaj model."
+
+#. module: tracking_manager
+#: model:ir.model,name:tracking_manager.model_mail_tracking_value
+msgid "Mail Tracking Value"
+msgstr "Vrijednost praćenja pošte"
+
+#. module: tracking_manager
+#: model:ir.model,name:tracking_manager.model_ir_model
+msgid "Models"
+msgstr "Modeli"
+
+#. module: tracking_manager
+#: model:ir.model.fields,field_description:tracking_manager.field_ir_model_fields__native_tracking
+msgid "Native Tracking"
+msgstr "Izvorno praćenje"
+
+#. module: tracking_manager
+#: model:ir.model.fields,field_description:tracking_manager.field_ir_model_fields__trackable
+msgid "Trackable"
+msgstr "Pratljivo"
+
+#. module: tracking_manager
+#: model:ir.actions.act_window,name:tracking_manager.ir_model_fields_action
+msgid "Trackable Fields"
+msgstr "Polja koja se prate"
+
+#. module: tracking_manager
+#: model:ir.model.fields,field_description:tracking_manager.field_ir_model__tracked_field_count
+msgid "Tracked Field Count"
+msgstr "Broj praćenih polja"
+
+#. module: tracking_manager
+#: model_terms:ir.ui.view,arch_db:tracking_manager.view_model_form
+msgid "Tracked Fields"
+msgstr "Praćena polja"
+
+#. module: tracking_manager
+#: model_terms:ir.ui.view,arch_db:tracking_manager.view_model_form
+msgid "Update"
+msgstr "Ažuriraj"
+
+#. module: tracking_manager
+#: model_terms:ir.ui.view,arch_db:tracking_manager.view_model_form
+msgid "Update fields configuration"
+msgstr "Ažuriraj konfiguraciju polja"

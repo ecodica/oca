@@ -1,0 +1,689 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_ecotax
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: account_ecotax
+#: model_terms:ir.ui.view,arch_db:account_ecotax.report_invoice_document
+msgid "<span name=\"ecotax_line_label\">Eco Part Unit</span>"
+msgstr "<span name=\"ecotax_line_label\">Eko jedinica dijela</span>"
+
+#. module: account_ecotax
+#: model:ir.model,name:account_ecotax.model_account_ecotax_category
+msgid "Account Ecotax Category"
+msgstr "Kategorija ekoporeza računa"
+
+#. module: account_ecotax
+#: model:ir.model,name:account_ecotax.model_account_ecotax_classification
+msgid "Account Ecotax Classification"
+msgstr "Klasifikacija ekoporeza računa"
+
+#. module: account_ecotax
+#: model:ir.model,name:account_ecotax.model_account_move_line_ecotax
+msgid "Account move line ecotax"
+msgstr "Stavka knjiženja ekoporeza"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_account_ecotax_category__active
+#: model:ir.model.fields,field_description:account_ecotax.field_account_ecotax_classification__active
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_collector__active
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_sector__active
+msgid "Active"
+msgstr "Aktivno"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_product_product__additional_ecotax_line_product_ids
+msgid "Additional Ecotax Lines"
+msgstr "Dodatni reci ekoporeza"
+
+#. module: account_ecotax
+#: model_terms:ir.ui.view,arch_db:account_ecotax.product_normal_form_view
+#: model_terms:ir.ui.view,arch_db:account_ecotax.product_variant_easy_edit_view
+msgid "Additional Ecotaxe classif"
+msgstr "Dodatna klasifikacija ekoporeza"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_product_product__all_ecotax_line_product_ids
+msgid "All Ecotax Lines"
+msgstr "Svi reci ekoporeza"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_line_product__amount
+msgid "Amount"
+msgstr "Iznos"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_account_move_line_ecotax__amount_total
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_line_mixin__amount_total
+msgid "Amount Total"
+msgstr "Ukupni iznos"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_account_move_line_ecotax__amount_unit
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_line_mixin__amount_unit
+msgid "Amount Unit"
+msgstr "Iznos jedinica"
+
+#. module: account_ecotax
+#: model_terms:ir.ui.view,arch_db:account_ecotax.ecotax_category_form
+#: model_terms:ir.ui.view,arch_db:account_ecotax.ecotax_classification_form
+#: model_terms:ir.ui.view,arch_db:account_ecotax.ecotax_collector_form
+#: model_terms:ir.ui.view,arch_db:account_ecotax.ecotax_sector_form
+msgid "Archived"
+msgstr "Arhivirano"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_account_ecotax_classification__categ_id
+#: model:ir.ui.menu,name:account_ecotax.menu_ecotax_category
+msgid "Category"
+msgstr "Kategorija"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_account_move_line_ecotax__classification_id
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_line_mixin__classification_id
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_line_product__classification_id
+#: model:ir.ui.menu,name:account_ecotax.menu_ecotax_classification
+#: model_terms:ir.ui.view,arch_db:account_ecotax.ecotax_classification_search
+msgid "Classification"
+msgstr "Klasifikacija"
+
+#. module: account_ecotax
+#: model_terms:ir.actions.act_window,help:account_ecotax.action_ecotax_classification
+msgid "Click to start a new Ecotaxe Classification."
+msgstr "Kliknite za pokretanje nove klasifikacije ekoporeza."
+
+#. module: account_ecotax
+#: model_terms:ir.actions.act_window,help:account_ecotax.action_ecotax_category
+msgid "Click to start a new Ecotaxe category."
+msgstr "Kliknite za pokretanje nove kategorije ekoporeza."
+
+#. module: account_ecotax
+#: model_terms:ir.actions.act_window,help:account_ecotax.action_ecotax_collector
+msgid "Click to start a new Ecotaxe collector."
+msgstr "Kliknite za pokretanje novog sakupljača ekoporeza."
+
+#. module: account_ecotax
+#: model_terms:ir.actions.act_window,help:account_ecotax.action_ecotax_sector
+msgid "Click to start a new Ecotaxe sector."
+msgstr "Kliknite za pokretanje novog sektora ekoporeza."
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_account_ecotax_category__code
+#: model:ir.model.fields,field_description:account_ecotax.field_account_ecotax_classification__code
+msgid "Code"
+msgstr "Šifra"
+
+#. module: account_ecotax
+#: model:ir.ui.menu,name:account_ecotax.menu_ecotax_collector
+msgid "Collector"
+msgstr "Sakupljač"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_account_ecotax_classification__company_id
+msgid "Company"
+msgstr "Tvrtka"
+
+#. module: account_ecotax
+#: model:ir.model.fields,help:account_ecotax.field_product_product__all_ecotax_line_product_ids
+msgid ""
+"Contain all ecotaxs classification defined in product templateand the additionnal.\n"
+"ecotaxs defined in product variant. For more detailssee the product variant accounting tab"
+msgstr ""
+"Sadrži sve klasifikacije ekoporeza definirane u predlošku proizvoda i dodatne\n"
+"ekoporeze definirane u varijanti proizvoda. Za više detalja pogledajte\n"
+"karticu računovodstva varijante proizvoda"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_account_ecotax_category__create_uid
+#: model:ir.model.fields,field_description:account_ecotax.field_account_ecotax_classification__create_uid
+#: model:ir.model.fields,field_description:account_ecotax.field_account_move_line_ecotax__create_uid
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_collector__create_uid
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_line_product__create_uid
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_sector__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_account_ecotax_category__create_date
+#: model:ir.model.fields,field_description:account_ecotax.field_account_ecotax_classification__create_date
+#: model:ir.model.fields,field_description:account_ecotax.field_account_move_line_ecotax__create_date
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_collector__create_date
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_line_product__create_date
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_sector__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_account_move_line_ecotax__currency_id
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_line_mixin__currency_id
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_line_product__currency_id
+msgid "Currency"
+msgstr "Valuta"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_account_ecotax_classification__default_fixed_ecotax
+msgid "Default Fixed Ecotax"
+msgstr "Zadani fiksni ekoporez"
+
+#. module: account_ecotax
+#: model:ir.model.fields,help:account_ecotax.field_account_ecotax_classification__default_fixed_ecotax
+msgid "Default fixed ecotax amount."
+msgstr "Zadani iznos fiksnog ekoporeza."
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_account_ecotax_category__description
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_sector__description
+#: model_terms:ir.ui.view,arch_db:account_ecotax.view_move_line_ecotax_form
+msgid "Description"
+msgstr "Opis"
+
+#. module: account_ecotax
+#: model_terms:ir.ui.view,arch_db:account_ecotax.view_move_line_ecotax_form
+msgid "Disc.%"
+msgstr "Pop.%"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_account_ecotax_category__display_name
+#: model:ir.model.fields,field_description:account_ecotax.field_account_ecotax_classification__display_name
+#: model:ir.model.fields,field_description:account_ecotax.field_account_move__display_name
+#: model:ir.model.fields,field_description:account_ecotax.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:account_ecotax.field_account_move_line_ecotax__display_name
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_collector__display_name
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_line_mixin__display_name
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_line_product__display_name
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_sector__display_name
+#: model:ir.model.fields,field_description:account_ecotax.field_product_product__display_name
+#: model:ir.model.fields,field_description:account_ecotax.field_product_template__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: account_ecotax
+#: model:ir.model.fields.selection,name:account_ecotax.selection__account_ecotax_classification__product_status__m
+msgid "Domestic"
+msgstr "Domaći"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_account_move_line__subtotal_ecotax
+#: model:ir.ui.menu,name:account_ecotax.menu_ecotax
+#: model_terms:ir.ui.view,arch_db:account_ecotax.view_move_form_inherit
+msgid "Ecotax"
+msgstr "Ekoporez"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_product_product__ecotax_amount
+#: model:ir.model.fields,field_description:account_ecotax.field_product_template__ecotax_amount
+msgid "Ecotax Amount"
+msgstr "Iznos ekoporeza"
+
+#. module: account_ecotax
+#: model:ir.model.fields,help:account_ecotax.field_ecotax_line_product__amount
+msgid "Ecotax Amount computed form Classification or forced ecotax amount"
+msgstr ""
+"Iznos ekoporeza izračunat iz klasifikacije ili prisilnog iznosa ekoporeza"
+
+#. module: account_ecotax
+#: model:ir.model.fields,help:account_ecotax.field_product_product__ecotax_amount
+msgid "Ecotax Amount computed form all ecotax line classification"
+msgstr "Iznos ekoporeza izračunat iz svih klasifikacija redaka ekoporeza"
+
+#. module: account_ecotax
+#: model:ir.model.fields,help:account_ecotax.field_product_template__ecotax_amount
+msgid "Ecotax Amount computed from Classification"
+msgstr "Iznos ekoporeza izračunat iz klasifikacije"
+
+#. module: account_ecotax
+#: model:ir.model.fields,help:account_ecotax.field_account_move_line_ecotax__amount_unit
+#: model:ir.model.fields,help:account_ecotax.field_ecotax_line_mixin__amount_unit
+msgid "Ecotax Amount computed from Classification or Manual ecotax"
+msgstr "Iznos ekoporeza izračunat iz klasifikacije ili ručnog ekoporeza"
+
+#. module: account_ecotax
+#: model:ir.model.fields,help:account_ecotax.field_account_move_line_ecotax__amount_total
+#: model:ir.model.fields,help:account_ecotax.field_ecotax_line_mixin__amount_total
+msgid ""
+"Ecotax Amount total computed from Classification or forced ecotax amount"
+msgstr ""
+"Ukupni iznos ekoporeza izračunat iz klasifikacije ili prisilnog iznosa "
+"ekoporeza"
+
+#. module: account_ecotax
+#: model:ir.actions.act_window,name:account_ecotax.action_ecotax_classification
+msgid "Ecotax Classification"
+msgstr "Klasifikacija ekoporeza"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_account_ecotax_classification__ecotax_coef
+msgid "Ecotax Coef"
+msgstr "Koeficijent ekoporeza"
+
+#. module: account_ecotax
+#: model:ir.model,name:account_ecotax.model_ecotax_line_mixin
+msgid "Ecotax Line Mixin"
+msgstr "Mixin redaka ekoporeza"
+
+#. module: account_ecotax
+#: model:ir.model,name:account_ecotax.model_ecotax_line_product
+msgid "Ecotax Line product"
+msgstr "Proizvod redaka ekoporeza"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_account_move_line__ecotax_line_ids
+#: model:ir.model.fields,field_description:account_ecotax.field_product_product__ecotax_line_product_ids
+#: model:ir.model.fields,field_description:account_ecotax.field_product_template__ecotax_line_product_ids
+msgid "Ecotax Lines"
+msgstr "Reci ekoporeza"
+
+#. module: account_ecotax
+#: model:ir.model,name:account_ecotax.model_ecotax_sector
+msgid "Ecotax Sector"
+msgstr "Sektor ekoporeza"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_account_ecotax_classification__ecotax_type
+msgid "Ecotax Type"
+msgstr "Vrsta ekoporeza"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_account_move_line__ecotax_amount_unit
+msgid "Ecotax Unit"
+msgstr "Jedinica ekoporeza"
+
+#. module: account_ecotax
+#: model:ir.actions.act_window,name:account_ecotax.action_ecotax_category
+msgid "Ecotax category"
+msgstr "Kategorija ekoporeza"
+
+#. module: account_ecotax
+#: model:ir.actions.act_window,name:account_ecotax.action_ecotax_collector
+#: model:ir.model,name:account_ecotax.model_ecotax_collector
+#: model:ir.model.fields,field_description:account_ecotax.field_account_ecotax_classification__collector_id
+msgid "Ecotax collector"
+msgstr "Sakupljač ekoporeza"
+
+#. module: account_ecotax
+#: model:ir.actions.act_window,name:account_ecotax.action_ecotax_sector
+#: model:ir.model.fields,field_description:account_ecotax.field_account_ecotax_classification__sector_id
+msgid "Ecotax sector"
+msgstr "Sektor ekoporeza"
+
+#. module: account_ecotax
+#: model:ir.model.fields,help:account_ecotax.field_product_product__weight_based_ecotax
+#: model:ir.model.fields,help:account_ecotax.field_product_template__weight_based_ecotax
+msgid ""
+"Ecotax value :\n"
+"product weight * ecotax coef of Ecotax Classification"
+msgstr ""
+"Vrijednost ekoporeza:\n"
+"težina proizvoda * koeficijent ekoporeza klasifikacije ekoporeza"
+
+#. module: account_ecotax
+#: model_terms:ir.ui.view,arch_db:account_ecotax.product_normal_form_view
+msgid "Ecotaxe classif"
+msgstr "Klasifikacija ekoporeza"
+
+#. module: account_ecotax
+#: model_terms:ir.ui.view,arch_db:account_ecotax.product_variant_easy_edit_view
+msgid "Ecotaxe classification"
+msgstr "Klasifikacija ekoporeza"
+
+#. module: account_ecotax
+#: model_terms:ir.ui.view,arch_db:account_ecotax.view_move_line_ecotax_form
+msgid "Ecotaxe lines"
+msgstr "Reci ekoporeza"
+
+#. module: account_ecotax
+#: model_terms:ir.ui.view,arch_db:account_ecotax.ecotax_classification_form
+msgid "Ecotaxes settings"
+msgstr "Postavke ekoporeza"
+
+#. module: account_ecotax
+#: model:ir.model.fields.selection,name:account_ecotax.selection__account_ecotax_classification__ecotax_type__fixed
+#: model_terms:ir.ui.view,arch_db:account_ecotax.ecotax_classification_search
+msgid "Fixed"
+msgstr "Fiksna"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_product_product__fixed_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_product_template__fixed_ecotax
+msgid "Fixed Ecotax"
+msgstr "Fiksni ekoporez"
+
+#. module: account_ecotax
+#: model:ir.model.fields,help:account_ecotax.field_product_product__fixed_ecotax
+#: model:ir.model.fields,help:account_ecotax.field_product_template__fixed_ecotax
+msgid "Fixed ecotax of the Ecotax Classification"
+msgstr "Fiksni ekoporez klasifikacije ekoporeza"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_line_product__force_amount
+msgid "Force Amount"
+msgstr "Prisili iznos"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_account_move_line_ecotax__force_amount_unit
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_line_mixin__force_amount_unit
+msgid "Force Amount Unit"
+msgstr "Prisili jedinicu iznosa"
+
+#. module: account_ecotax
+#: model:ir.model.fields,help:account_ecotax.field_ecotax_line_product__force_amount
+msgid ""
+"Force ecotax amount.\n"
+"Allow to substitute default Ecotax Classification"
+msgstr ""
+"Prisili iznos ekoporeza.\n"
+"Omogućuje zamjenu zadane klasifikacije ekoporeza"
+
+#. module: account_ecotax
+#: model:ir.model.fields,help:account_ecotax.field_account_move_line_ecotax__force_amount_unit
+#: model:ir.model.fields,help:account_ecotax.field_ecotax_line_mixin__force_amount_unit
+msgid ""
+"Force ecotax.\n"
+"Allow to add a subtitle to the default Ecotax Classification"
+msgstr ""
+"Prisili ekoporez.\n"
+"Omogućuje dodavanje podnaslova zadanoj klasifikaciji ekoporeza"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_account_ecotax_category__id
+#: model:ir.model.fields,field_description:account_ecotax.field_account_ecotax_classification__id
+#: model:ir.model.fields,field_description:account_ecotax.field_account_move__id
+#: model:ir.model.fields,field_description:account_ecotax.field_account_move_line__id
+#: model:ir.model.fields,field_description:account_ecotax.field_account_move_line_ecotax__id
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_collector__id
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_line_mixin__id
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_line_product__id
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_sector__id
+#: model:ir.model.fields,field_description:account_ecotax.field_product_product__id
+#: model:ir.model.fields,field_description:account_ecotax.field_product_template__id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_ecotax
+#: model:ir.model.fields,help:account_ecotax.field_account_ecotax_classification__ecotax_type
+msgid ""
+"If ecotax is weight based,the ecotax coef must take into account\n"
+"the weight unit of measure (kg by default)"
+msgstr ""
+"Ako je ekoporez temeljen na težini, koeficijent ekoporeza mora uzeti u obzir\n"
+"jedinicu mjere težine (kg prema zadanim postavkama)"
+
+#. module: account_ecotax
+#: model:ir.model.fields.selection,name:account_ecotax.selection__account_ecotax_classification__supplier_status__imp
+msgid "Importer"
+msgstr "Uvoznik"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_account_bank_statement_line__amount_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_account_move__amount_ecotax
+msgid "Included Ecotax"
+msgstr "Uključeni ekoporez"
+
+#. module: account_ecotax
+#: model_terms:ir.ui.view,arch_db:account_ecotax.document_tax_totals
+msgid "Including Eco Part"
+msgstr "Uključujući eko dio"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_account_ecotax_classification__intrastat_code
+msgid "Intrastat Code"
+msgstr "Intrastat Kod"
+
+#. module: account_ecotax
+#: model:ir.model.fields.selection,name:account_ecotax.selection__account_ecotax_classification__supplier_status__int
+msgid "Introducer"
+msgstr "Uvoditelj"
+
+#. module: account_ecotax
+#: model:ir.model,name:account_ecotax.model_account_move
+msgid "Journal Entry"
+msgstr "Stavke temeljnice"
+
+#. module: account_ecotax
+#: model:ir.model,name:account_ecotax.model_account_move_line
+#: model:ir.model.fields,field_description:account_ecotax.field_account_move_line_ecotax__account_move_line_id
+msgid "Journal Item"
+msgstr "Stavka dnevnika"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_account_ecotax_category__write_uid
+#: model:ir.model.fields,field_description:account_ecotax.field_account_ecotax_classification__write_uid
+#: model:ir.model.fields,field_description:account_ecotax.field_account_move_line_ecotax__write_uid
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_collector__write_uid
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_line_product__write_uid
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_sector__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_account_ecotax_category__write_date
+#: model:ir.model.fields,field_description:account_ecotax.field_account_ecotax_classification__write_date
+#: model:ir.model.fields,field_description:account_ecotax.field_account_move_line_ecotax__write_date
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_collector__write_date
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_line_product__write_date
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_sector__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: account_ecotax
+#: model:ir.model.fields,help:account_ecotax.field_account_ecotax_classification__supplier_status
+msgid ""
+"MAN ==> Manufacturer: is locally established in the country, and manufactures goods which are subject to ecotaxes\n"
+"under their own name and brand, or designs such goods, subcontracts the manufacturing and then sells them under their own name and brand\n"
+"RES ==> Reseller, under their own brand: is locally established in the country, and sells under their own name or brand goods subject to ecotax manufactured by others\n"
+"INT ==> Introducer: is locally established and sells on the local market goods subject to ecotax coming from other countries of the European Union\n"
+"IMP ==> Importer: is established in France, and sells on the local market goods subject to ecotax coming from countries outsidethe European Union\n"
+"REM ==> Remote vendor: is established in another country of the European Union or outside the EU, and remotely sells good subject to ecotaxes to customers in the country"
+msgstr ""
+"PRO ==> Proizvođač: lokalno je etabliran u zemlji i proizvodi robu koja podliježe ekoporezima\n"
+"pod vlastitim imenom i markom, ili dizajnira takvu robu, podugovara proizvodnju i zatim je prodaje pod vlastitim imenom i markom\n"
+"RES ==> Preprodavač, pod vlastitom markom: lokalno je etabliran u zemlji i prodaje pod vlastitim imenom ili markom robu podložnu ekoporezu koju proizvode drugi\n"
+"INT ==> Uvoditelj: lokalno je etabliran i prodaje na lokalnom tržištu robu podložnu ekoporezu koja dolazi iz drugih zemalja Europske unije\n"
+"IMP ==> Uvoznik: etabliran je u Francuskoj i prodaje na lokalnom tržištu robu podložnu ekoporezu koja dolazi iz zemalja izvan Europske unije\n"
+"REM ==> Udaljeni prodavač: etabliran je u drugoj zemlji Europske unije ili izvan EU-a i na daljinu prodaje robu podložnu ekoporezima kupcima u zemlji"
+
+#. module: account_ecotax
+#: model:ir.model.fields.selection,name:account_ecotax.selection__account_ecotax_classification__supplier_status__man
+msgid "Manufacturer"
+msgstr "Proizvođač"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_account_ecotax_category__name
+#: model:ir.model.fields,field_description:account_ecotax.field_account_ecotax_classification__name
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_collector__name
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_sector__name
+#: model_terms:ir.ui.view,arch_db:account_ecotax.ecotax_category_form
+#: model_terms:ir.ui.view,arch_db:account_ecotax.ecotax_classification_form
+#: model_terms:ir.ui.view,arch_db:account_ecotax.ecotax_collector_form
+#: model_terms:ir.ui.view,arch_db:account_ecotax.ecotax_sector_form
+msgid "Name"
+msgstr "Naziv"
+
+#. module: account_ecotax
+#: model_terms:ir.ui.view,arch_db:account_ecotax.view_move_line_ecotax_form
+msgid "Note"
+msgstr "Bilješka"
+
+#. module: account_ecotax
+#: model:ir.model.constraint,message:account_ecotax.constraint_ecotax_line_product_unique_classification_id_by_product
+msgid "Only one ecotax classification occurrence by product"
+msgstr "Samo jedna pojava klasifikacije ekoporeza po proizvodu"
+
+#. module: account_ecotax
+#: model:ir.model.constraint,message:account_ecotax.constraint_ecotax_line_product_unique_classification_id_by_product_tmpl
+msgid "Only one ecotax classification occurrence by product Template"
+msgstr "Samo jedna pojava klasifikacije ekoporeza po predlošku proizvoda"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_collector__partner_id
+msgid "Partner"
+msgstr "Partner"
+
+#. module: account_ecotax
+#: model:ir.model,name:account_ecotax.model_product_template
+#: model:ir.model.fields,field_description:account_ecotax.field_account_move_line_ecotax__product_id
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_line_mixin__product_id
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_line_product__product_id
+msgid "Product"
+msgstr "Proizvod"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_account_ecotax_classification__product_status
+msgid "Product Status"
+msgstr "Status proizvoda"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_line_product__product_tmpl_id
+msgid "Product Template"
+msgstr "Predložak proizvoda"
+
+#. module: account_ecotax
+#: model_terms:ir.ui.view,arch_db:account_ecotax.product_template_form_view
+#: model_terms:ir.ui.view,arch_db:account_ecotax.product_variant_easy_edit_view
+msgid "Product Template Ecotaxe classif"
+msgstr "Klasifikacija ekoporeza predloška proizvoda"
+
+#. module: account_ecotax
+#: model:ir.model,name:account_ecotax.model_product_product
+msgid "Product Variant"
+msgstr "Varijanta proizvoda"
+
+#. module: account_ecotax
+#: model:ir.model.fields.selection,name:account_ecotax.selection__account_ecotax_classification__product_status__p
+msgid "Professional"
+msgstr "Stručni"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_account_move_line_ecotax__quantity
+#: model:ir.model.fields,field_description:account_ecotax.field_ecotax_line_mixin__quantity
+msgid "Quantity"
+msgstr "Količina"
+
+#. module: account_ecotax
+#: model:ir.model.fields.selection,name:account_ecotax.selection__account_ecotax_classification__supplier_status__rem
+msgid "Remote vendor"
+msgstr "Udaljeni prodavač"
+
+#. module: account_ecotax
+#: model:ir.model.fields.selection,name:account_ecotax.selection__account_ecotax_classification__supplier_status__res
+msgid "Reseller, under their own brand"
+msgstr "Preprodavač, pod vlastitom markom"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_account_ecotax_classification__scale_code
+msgid "Scale Code"
+msgstr "Šifra ljestvice"
+
+#. module: account_ecotax
+#: model_terms:ir.ui.view,arch_db:account_ecotax.ecotax_classification_search
+msgid "Search Ecotaxe Classification"
+msgstr "Pretraži klasifikaciju ekoporeza"
+
+#. module: account_ecotax
+#: model_terms:ir.ui.view,arch_db:account_ecotax.ecotax_category_search
+msgid "Search Ecotaxe category"
+msgstr "Pretraži kategoriju ekoporeza"
+
+#. module: account_ecotax
+#: model_terms:ir.ui.view,arch_db:account_ecotax.ecotax_collector_search
+msgid "Search Ecotaxe collector"
+msgstr "Pretraži sakupljača ekoporeza"
+
+#. module: account_ecotax
+#: model_terms:ir.ui.view,arch_db:account_ecotax.ecotax_sector_search
+msgid "Search Ecotaxe sector"
+msgstr "Pretraži sektor ekoporeza"
+
+#. module: account_ecotax
+#: model_terms:ir.ui.view,arch_db:account_ecotax.view_move_line_ecotax_form
+msgid "Section"
+msgstr "Odlomak"
+
+#. module: account_ecotax
+#: model:ir.ui.menu,name:account_ecotax.menu_ecotax_sector
+msgid "Sector"
+msgstr "Sektor"
+
+#. module: account_ecotax
+#: model:ir.model.fields,help:account_ecotax.field_account_ecotax_classification__company_id
+msgid ""
+"Specify a company if you want to define this Ecotax Classification only for "
+"specific company. Otherwise, this Fiscal Classification will be available "
+"for all companies."
+msgstr ""
+"Navedite tvrtku ako želite definirati ovu klasifikaciju ekoporeza samo za "
+"određenu tvrtku. U suprotnom, ova fiskalna klasifikacija bit će dostupna za "
+"sve tvrtke."
+
+#. module: account_ecotax
+#: model_terms:ir.ui.view,arch_db:account_ecotax.view_move_line_ecotax_form
+msgid "Subtotal"
+msgstr "Podzbroj"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_account_ecotax_classification__supplier_status
+msgid "Supplier Status"
+msgstr "Status dobavljača"
+
+#. module: account_ecotax
+#: model:ir.model.fields,help:account_ecotax.field_account_move_line_ecotax__quantity
+msgid ""
+"The optional quantity expressed by this line, eg: number of product sold. "
+"The quantity is not a legal requirement but is very useful for some reports."
+msgstr ""
+"Opcionalna količina izražena ovom linijom, npr.: broj prodanih komada "
+"artikla. Količina je vrlo korisna za neke izvještaje."
+
+#. module: account_ecotax
+#: model_terms:ir.ui.view,arch_db:account_ecotax.view_move_line_ecotax_form
+msgid "Total"
+msgstr "Ukupno"
+
+#. module: account_ecotax
+#: model_terms:ir.ui.view,arch_db:account_ecotax.view_move_line_ecotax_form
+msgid "Total Ecotaxe"
+msgstr "Ukupno ekoporez"
+
+#. module: account_ecotax
+#: model_terms:ir.ui.view,arch_db:account_ecotax.ecotax_classification_search
+msgid "Type"
+msgstr "Vrsta"
+
+#. module: account_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_product_product__weight_based_ecotax
+#: model:ir.model.fields,field_description:account_ecotax.field_product_template__weight_based_ecotax
+msgid "Weight Based Ecotax"
+msgstr "Ekoporez temeljen na težini"
+
+#. module: account_ecotax
+#: model:ir.model.fields.selection,name:account_ecotax.selection__account_ecotax_classification__ecotax_type__weight_based
+#: model_terms:ir.ui.view,arch_db:account_ecotax.ecotax_classification_search
+msgid "Weight based"
+msgstr "Temeljeno na težini"
+
+#. module: account_ecotax
+#: model_terms:ir.ui.view,arch_db:account_ecotax.ecotax_category_search
+msgid "category"
+msgstr "kategorija"
+
+#. module: account_ecotax
+#: model_terms:ir.ui.view,arch_db:account_ecotax.ecotax_collector_search
+msgid "collector"
+msgstr "sakupljač"
+
+#. module: account_ecotax
+#: model_terms:ir.ui.view,arch_db:account_ecotax.ecotax_sector_search
+msgid "sector"
+msgstr "sektor"

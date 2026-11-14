@@ -1,0 +1,92 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_timesheet_day_week
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: hr_timesheet_day_week
+#: model:ir.model,name:hr_timesheet_day_week.model_account_analytic_line
+msgid "Analytic Line"
+msgstr "Analitička stavka"
+
+#. module: hr_timesheet_day_week
+#: model:ir.model.fields,field_description:hr_timesheet_day_week.field_account_analytic_line__day_week
+#: model:ir.model.fields,field_description:hr_timesheet_day_week.field_timesheets_analysis_report__day_week
+#: model_terms:ir.ui.view,arch_db:hr_timesheet_day_week.hr_timesheet_line_search
+msgid "Day of Week"
+msgstr "Dan u tjednu"
+
+#. module: hr_timesheet_day_week
+#: model:ir.model.fields,field_description:hr_timesheet_day_week.field_account_analytic_line__display_name
+#: model:ir.model.fields,field_description:hr_timesheet_day_week.field_timesheets_analysis_report__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: hr_timesheet_day_week
+#: model:ir.model.fields.selection,name:hr_timesheet_day_week.selection__account_analytic_line__day_week__4
+#: model:ir.model.fields.selection,name:hr_timesheet_day_week.selection__timesheets_analysis_report__day_week__4
+msgid "Friday"
+msgstr "Petak"
+
+#. module: hr_timesheet_day_week
+#: model:ir.model.fields,field_description:hr_timesheet_day_week.field_account_analytic_line__id
+#: model:ir.model.fields,field_description:hr_timesheet_day_week.field_timesheets_analysis_report__id
+msgid "ID"
+msgstr "ID"
+
+#. module: hr_timesheet_day_week
+#: model:ir.model.fields.selection,name:hr_timesheet_day_week.selection__account_analytic_line__day_week__0
+#: model:ir.model.fields.selection,name:hr_timesheet_day_week.selection__timesheets_analysis_report__day_week__0
+msgid "Monday"
+msgstr "Ponedjeljak"
+
+#. module: hr_timesheet_day_week
+#: model:ir.model.fields.selection,name:hr_timesheet_day_week.selection__account_analytic_line__day_week__5
+#: model:ir.model.fields.selection,name:hr_timesheet_day_week.selection__timesheets_analysis_report__day_week__5
+msgid "Saturday"
+msgstr "Subota"
+
+#. module: hr_timesheet_day_week
+#: model:ir.model.fields.selection,name:hr_timesheet_day_week.selection__account_analytic_line__day_week__6
+#: model:ir.model.fields.selection,name:hr_timesheet_day_week.selection__timesheets_analysis_report__day_week__6
+msgid "Sunday"
+msgstr "Nedjelja"
+
+#. module: hr_timesheet_day_week
+#: model:ir.model.fields.selection,name:hr_timesheet_day_week.selection__account_analytic_line__day_week__3
+#: model:ir.model.fields.selection,name:hr_timesheet_day_week.selection__timesheets_analysis_report__day_week__3
+msgid "Thursday"
+msgstr "Četvrtak"
+
+#. module: hr_timesheet_day_week
+#: model:ir.model,name:hr_timesheet_day_week.model_timesheets_analysis_report
+msgid "Timesheets Analysis Report"
+msgstr "Izvještaj analize evidencija"
+
+#. module: hr_timesheet_day_week
+#: model:ir.model.fields.selection,name:hr_timesheet_day_week.selection__account_analytic_line__day_week__1
+#: model:ir.model.fields.selection,name:hr_timesheet_day_week.selection__timesheets_analysis_report__day_week__1
+msgid "Tuesday"
+msgstr "Utorak"
+
+#. module: hr_timesheet_day_week
+#: model:ir.model.fields.selection,name:hr_timesheet_day_week.selection__account_analytic_line__day_week__2
+#: model:ir.model.fields.selection,name:hr_timesheet_day_week.selection__timesheets_analysis_report__day_week__2
+msgid "Wednesday"
+msgstr "Srijeda"
+
+#. module: hr_timesheet_day_week
+#: model_terms:ir.ui.view,arch_db:hr_timesheet_day_week.hr_timesheet_line_search
+msgid "Weekend"
+msgstr "Vikend"

@@ -1,0 +1,1073 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* base_tier_validation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: base_tier_validation
+#. odoo-python
+#: code:addons/base_tier_validation/models/tier_validation.py:0
+msgid "%(icon)s Pending validation by %(todo_by)s"
+msgstr "%(icon)s Pending validation by %(todo_by)s"
+
+#. module: base_tier_validation
+#. odoo-python
+#: code:addons/base_tier_validation/models/tier_validation.py:0
+msgid "%(icon)s This %(model_name)s needs to be validated"
+msgstr "%(icon)s Ovaj %(model_name)s treba validirati"
+
+#. module: base_tier_validation
+#: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_validation_label
+msgid ""
+"<i class=\"fa fa-lg fa-check\"/>\n"
+"                Operation has been\n"
+"                <b>validated</b>\n"
+"                !"
+msgstr ""
+"<i class=\"fa fa-lg fa-check\"/>\n"
+"                Operacija je\n"
+"                <b>validirana</b>\n"
+"                !"
+
+#. module: base_tier_validation
+#: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_validation_label
+msgid ""
+"<i class=\"fa fa-lg fa-times\"/>\n"
+"                Operation has been\n"
+"                <b>rejected</b>\n"
+"                ."
+msgstr ""
+"<i class=\"fa fa-lg fa-times\"/>\n"
+"                Operacija je\n"
+"                <b>odbijena</b>\n"
+"                ."
+
+#. module: base_tier_validation
+#: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_definition_view_form
+msgid "<span class=\"ms-1\">days</span>"
+msgstr "<span class=\"ms-1\">dana</span>"
+
+#. module: base_tier_validation
+#: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_definition_view_form
+msgid "<span>Bypass, if previous tier was validated by same reviewer</span>"
+msgstr ""
+"<span>Preskoči ako je prethodnu razinu validirao isti recenzent</span>"
+
+#. module: base_tier_validation
+#. odoo-python
+#: code:addons/base_tier_validation/models/tier_validation.py:0
+msgid "A record to be reviewed has been created by %s."
+msgstr "Zapis za pregled stvorio je %s."
+
+#. module: base_tier_validation
+#. odoo-python
+#: code:addons/base_tier_validation/models/tier_review.py:0
+msgid "A review has been requested %s days ago."
+msgstr "Pregled je zatražen prije %s dana."
+
+#. module: base_tier_validation
+#. odoo-python
+#: code:addons/base_tier_validation/models/tier_validation.py:0
+msgid "A review has been requested by %s."
+msgstr "Pregled je zatražio %s."
+
+#. module: base_tier_validation
+#. odoo-python
+#: code:addons/base_tier_validation/models/tier_validation.py:0
+msgid "A review was accepted"
+msgstr "Pregled je prihvaćen"
+
+#. module: base_tier_validation
+#. odoo-python
+#: code:addons/base_tier_validation/models/tier_validation.py:0
+msgid "A review was accepted. (%s)"
+msgstr "Pregled je prihvaćen. (%s)"
+
+#. module: base_tier_validation
+#. odoo-python
+#: code:addons/base_tier_validation/models/tier_validation.py:0
+msgid "A review was rejected by %(user)s. (%(comment)s)"
+msgstr "Pregled je odbio %(user)s. (%(comment)s)"
+
+#. module: base_tier_validation
+#. odoo-python
+#: code:addons/base_tier_validation/models/tier_validation.py:0
+msgid "A review was rejected by %s."
+msgstr "Pregled je odbio %s."
+
+#. module: base_tier_validation
+#: model_terms:ir.actions.act_window,help:base_tier_validation.tier_definition_action
+msgid ""
+"A tier definition tells Odoo which records on a given model need\n"
+"                to be reviewed by which user (or group, or field-based reviewer)\n"
+"                before they can move forward in their workflow."
+msgstr ""
+"Definicija razine govori Odoo-u koje zapise na danom modelu treba\n"
+"                pregledati koji korisnik (ili grupa, ili pregledavatelj temeljen\n"
+"                na polju) prije nego što mogu napredovati u svom tijeku."
+
+#. module: base_tier_validation
+#. odoo-python
+#: code:addons/base_tier_validation/models/tier_validation.py:0
+msgid "A validation process is still open for at least one record."
+msgstr "Postupak validacije još je otvoren za barem jedan zapis."
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__active
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation_exception__active
+msgid "Active"
+msgstr "Aktivno"
+
+#. module: base_tier_validation
+#: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_definition_view_search
+msgid "All"
+msgstr "Sve"
+
+#. module: base_tier_validation
+#: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_validation_exception_form
+msgid "All users"
+msgstr "Svi korisnici"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__allow_write_for_reviewer
+msgid "Allow Write For Reviewers"
+msgstr "Dozvoli pisanje recenzentima"
+
+#. module: base_tier_validation
+#: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_validation_exception_form
+msgid "Allow editing"
+msgstr "Dopusti uređivanje"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,help:base_tier_validation.field_tier_validation_exception__group_ids
+msgid "Allowed groups to use this Tier Validation Exception"
+msgstr "Dozvoljene grupe za korištenje ove iznimke validacije u razinama"
+
+#. module: base_tier_validation
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__tier_definition__review_type__group
+msgid "Any user in a specific group"
+msgstr "Bilo koji korisnik u određenoj grupi"
+
+#. module: base_tier_validation
+#: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_validation_exception_form
+msgid "Applies to"
+msgstr "Odnosi se na"
+
+#. module: base_tier_validation
+#: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_definition_view_form
+msgid "Apply On"
+msgstr "Primijeni na"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,help:base_tier_validation.field_tier_definition__approve_sequence
+#: model:ir.model.fields,help:base_tier_validation.field_tier_review__approve_sequence
+msgid "Approval order by the specified sequence number"
+msgstr "Redoslijed odobrenja po navedenom broju sekvence"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__comment_approve_default
+msgid "Approve Comment"
+msgstr "Komentar odobrenja"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__approve_sequence_bypass
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__approve_sequence_bypass
+msgid "Approve Sequence Bypass"
+msgstr "Preskakanje sekvence odobrenja"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__approve_sequence
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__approve_sequence
+msgid "Approve by sequence"
+msgstr "Odobri po sekvenci"
+
+#. module: base_tier_validation
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__tier_review__status__approved
+msgid "Approved"
+msgstr "Odobreno"
+
+#. module: base_tier_validation
+#: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_definition_view_form
+#: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_definition_view_search
+#: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_validation_exception_form
+#: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_validation_exception_search
+msgid "Archived"
+msgstr "Arhivirano"
+
+#. module: base_tier_validation
+#. odoo-python
+#: code:addons/base_tier_validation/models/tier_validation_exception.py:0
+msgid ""
+"At least one of these fields must be checked! Write under Validation, Write "
+"after Validation"
+msgstr ""
+"Barem jedno od ovih polja mora biti označeno! Piši tijekom validacije, Piši "
+"nakon validacije"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,help:base_tier_validation.field_tier_definition__approve_sequence_bypass
+#: model:ir.model.fields,help:base_tier_validation.field_tier_review__approve_sequence_bypass
+msgid ""
+"Bypassed (auto validated), if previous tier was validated by same reviewer"
+msgstr ""
+"Preskočeno (automatski validirano) ako je prethodnu razinu validirao isti "
+"recenzent"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__can_review
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation__can_review
+msgid "Can Review"
+msgstr "Može recenzirati"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,help:base_tier_validation.field_tier_review__can_review
+msgid ""
+"Can review will be marked if the review is pending and the\n"
+"        approve sequence has been achieved"
+msgstr ""
+"\"Može recenzirati\" bit će označeno ako recenzija čeka i\n"
+"        redoslijed odobrenja je postignut"
+
+#. module: base_tier_validation
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__tier_review__status__cancel
+#: model_terms:ir.ui.view,arch_db:base_tier_validation.view_comment_wizard
+msgid "Cancel"
+msgstr "Odustani"
+
+#. module: base_tier_validation
+#. odoo-javascript
+#. odoo-python
+#: code:addons/base_tier_validation/models/tier_validation.py:0
+#: code:addons/base_tier_validation/static/src/components/tier_review_widget/tier_review_widget.xml:0
+#: model:ir.model.fields,field_description:base_tier_validation.field_comment_wizard__comment
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__has_comment
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__has_comment
+#: model_terms:ir.ui.view,arch_db:base_tier_validation.view_comment_wizard
+msgid "Comment"
+msgstr "Komentar"
+
+#. module: base_tier_validation
+#: model:ir.model,name:base_tier_validation.model_comment_wizard
+msgid "Comment Wizard"
+msgstr "Čarobnjak komentara"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__comment
+msgid "Comments"
+msgstr "Komentari"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__company_id
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__company_id
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation_exception__company_id
+#: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_validation_exception_search
+msgid "Company"
+msgstr "Tvrtka"
+
+#. module: base_tier_validation
+#: model_terms:ir.actions.act_window,help:base_tier_validation.tier_validation_exception_action
+msgid "Create a new Validation Exception!"
+msgstr "Kreiraj novu iznimku validacije!"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_comment_wizard__create_uid
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__create_uid
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__create_uid
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation_exception__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_comment_wizard__create_date
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__create_date
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__create_date
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation_exception__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,help:base_tier_validation.field_tier_definition__comment_approve_default
+msgid "Default comment prefilled when approval comments are enabled."
+msgstr ""
+"Zadani komentar unaprijed ispunjen kad su komentari odobrenja omogućeni."
+
+#. module: base_tier_validation
+#: model_terms:ir.actions.act_window,help:base_tier_validation.tier_definition_action
+msgid "Define a new validation tier"
+msgstr "Definirajte novu razinu validacije"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__definition_type
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__definition_id
+msgid "Definition"
+msgstr "Definicija"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__definition_domain
+msgid "Definition Domain"
+msgstr "Domena definicije"
+
+#. module: base_tier_validation
+#. odoo-javascript
+#: code:addons/base_tier_validation/static/src/components/tier_review_widget/tier_review_widget.xml:0
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__name
+msgid "Description"
+msgstr "Opis"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_comment_wizard__display_name
+#: model:ir.model.fields,field_description:base_tier_validation.field_res_users__display_name
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__display_name
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__display_name
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation__display_name
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation_exception__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__display_status
+msgid "Display Status"
+msgstr "Prikaži status"
+
+#. module: base_tier_validation
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__tier_definition__definition_type__domain
+msgid "Domain"
+msgstr "Domena"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__done_by
+msgid "Done By"
+msgstr "Izvršio"
+
+#. module: base_tier_validation
+#. odoo-javascript
+#: code:addons/base_tier_validation/static/src/components/tier_review_widget/tier_review_widget.xml:0
+msgid "Done by"
+msgstr "Dovršio"
+
+#. module: base_tier_validation
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__tier_definition__review_type__field
+msgid "Field in related record"
+msgstr "Polje u povezanom zapisu"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation_exception__field_ids
+msgid "Fields"
+msgstr "Polja"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__exclude_requester
+msgid "Four-eyes Principle"
+msgstr "Princip četiriju očiju"
+
+#. module: base_tier_validation
+#. odoo-python
+#: code:addons/base_tier_validation/models/tier_review.py:0
+msgid "Group %s"
+msgstr "Grupa %s"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation_exception__group_ids
+msgid "Groups"
+msgstr "Grupe"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation__has_comment
+msgid "Has Comment"
+msgstr "Ima komentar"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation__hide_reviews
+msgid "Hide Reviews"
+msgstr "Sakrij recenzije"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_comment_wizard__id
+#: model:ir.model.fields,field_description:base_tier_validation.field_res_users__id
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__id
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__id
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation__id
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation_exception__id
+msgid "ID"
+msgstr "ID"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,help:base_tier_validation.field_tier_validation__has_comment
+msgid "If set, Allow the reviewer to leave a comment on the review."
+msgstr ""
+"Ako je postavljeno, dozvoljava recenzentu da ostavi komentar na recenziji."
+
+#. module: base_tier_validation
+#: model:ir.model.fields,help:base_tier_validation.field_tier_definition__notify_on_create
+msgid ""
+"If set, all possible reviewers will be notified by email when this "
+"definition is triggered."
+msgstr ""
+"Ako je postavljeno, svi mogući recenzenti bit će obaviješteni e-poštom kad "
+"se aktivira ova definicija."
+
+#. module: base_tier_validation
+#: model:ir.model.fields,help:base_tier_validation.field_tier_definition__notify_on_pending
+msgid ""
+"If set, all possible reviewers will be notified by email when this status is"
+" reached.Usefull in an Approve by sequence scenario. An notification request"
+" to review is sent out when it's their turn to review."
+msgstr ""
+"Ako je postavljeno, svi mogući recenzenti bit će obaviješteni e-poštom kad "
+"se dostigne ovaj status. Korisno u scenariju odobravanja po sekvenci. "
+"Zahtjev za recenziju šalje im se kad dođe njihov red za recenziranje."
+
+#. module: base_tier_validation
+#: model:ir.model.fields,help:base_tier_validation.field_tier_definition__notify_on_accepted
+msgid ""
+"If set, reviewers will be notified by email when a review related to this "
+"definition is accepted."
+msgstr ""
+"Ako je postavljeno, recenzenti će biti obaviješteni e-poštom kad se "
+"recenzija vezana uz ovu definiciju prihvati."
+
+#. module: base_tier_validation
+#: model:ir.model.fields,help:base_tier_validation.field_tier_definition__notify_on_rejected
+msgid ""
+"If set, reviewers will be notified by email when a review related to this "
+"definition is rejected."
+msgstr ""
+"Ako je postavljeno, recenzenti će biti obaviješteni e-poštom kad se "
+"recenzija vezana uz ovu definiciju odbije."
+
+#. module: base_tier_validation
+#: model:ir.model.fields,help:base_tier_validation.field_tier_definition__notify_on_restarted
+msgid ""
+"If set, reviewers will be notified by email when a reviews related to this "
+"definition are restarted."
+msgstr ""
+"Ako je postavljeno, recenzenti će biti obaviješteni e-poštom kad se "
+"recenzije vezane uz ovu definiciju ponovno pokrenu."
+
+#. module: base_tier_validation
+#: model_terms:ir.actions.act_window,help:base_tier_validation.tier_validation_exception_action
+msgid "It's fully validated"
+msgstr "Potpuno je validirano"
+
+#. module: base_tier_validation
+#: model_terms:ir.actions.act_window,help:base_tier_validation.tier_validation_exception_action
+msgid "It's in the validation process"
+msgstr "U procesu je validacije"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__last_reminder_date
+msgid "Last Reminder Date"
+msgstr "Datum posljednjeg podsjetnika"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_comment_wizard__write_uid
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__write_uid
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__write_uid
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation_exception__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_comment_wizard__write_date
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__write_date
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__write_date
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation_exception__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__model
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation_exception__model_id
+#: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_definition_view_search
+#: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_validation_exception_search
+msgid "Model"
+msgstr "Model"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation_exception__model_name
+msgid "Model Name"
+msgstr "Naziv modela"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__name
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation_exception__name
+msgid "Name"
+msgstr "Naziv"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation__need_validation
+msgid "Need Validation"
+msgstr "Treba validaciju"
+
+#. module: base_tier_validation
+#. odoo-python
+#: code:addons/base_tier_validation/models/tier_definition.py:0
+msgid "New Tier Validation"
+msgstr "Nova validacija razine"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation__next_review
+msgid "Next Review"
+msgstr "Sljedeća ovjera"
+
+#. module: base_tier_validation
+#. odoo-python
+#: code:addons/base_tier_validation/models/tier_validation.py:0
+msgid "Next: %s"
+msgstr "Sljedeće: %s"
+
+#. module: base_tier_validation
+#. odoo-javascript
+#: code:addons/base_tier_validation/static/src/components/tier_review_menu/tier_review_menu.xml:0
+msgid "No reviews to do."
+msgstr "Nema pregleda za obaviti."
+
+#. module: base_tier_validation
+#: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_definition_view_form
+msgid "Notifications"
+msgstr "Obavijesti"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__notify_on_accepted
+msgid "Notify Reviewers on Accepted"
+msgstr "Obavijesti recenzente pri prihvaćanju"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__notify_on_create
+msgid "Notify Reviewers on Creation"
+msgstr "Obavijesti recenzente pri kreiranju"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__notify_on_rejected
+msgid "Notify Reviewers on Rejected"
+msgstr "Obavijesti recenzente pri odbijanju"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__notify_on_restarted
+msgid "Notify Reviewers on Restarted"
+msgstr "Obavijesti recenzente pri ponovnom pokretanju"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__notify_on_pending
+msgid "Notify Reviewers on reaching Pending"
+msgstr "Obavijesti recenzente pri dostizanju stanja na čekanju"
+
+#. module: base_tier_validation
+#: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_definition_view_form
+msgid "Notify reviewers when"
+msgstr "Obavijesti pregledavatelje kada"
+
+#. module: base_tier_validation
+#: model_terms:ir.actions.act_window,help:base_tier_validation.tier_validation_exception_action
+msgid ""
+"Once created, you can decide which fields you want to be editable when the "
+"record:"
+msgstr ""
+"Nakon kreiranja možete odrediti koja polja želite da budu uređivačka dok je "
+"zapis:"
+
+#. module: base_tier_validation
+#. odoo-javascript
+#: code:addons/base_tier_validation/static/src/components/tier_review_menu/tier_review_menu.xml:0
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__account_move__validation_status__pending
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__hr_expense__validation_status__pending
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__purchase_order__validation_status__pending
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__purchase_request__validation_status__pending
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__res_partner__validation_status__pending
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__sale_order__validation_status__pending
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__stock_picking__validation_status__pending
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__tier_review__status__pending
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__tier_validation__validation_status__pending
+msgid "Pending"
+msgstr "Čeka slanje"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__model_id
+msgid "Referenced Model"
+msgstr "Referencirani model"
+
+#. module: base_tier_validation
+#: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_validation_label
+msgid "Reject"
+msgstr "Odbij"
+
+#. module: base_tier_validation
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__account_move__validation_status__rejected
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__hr_expense__validation_status__rejected
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__purchase_order__validation_status__rejected
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__purchase_request__validation_status__rejected
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__res_partner__validation_status__rejected
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__sale_order__validation_status__rejected
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__stock_picking__validation_status__rejected
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__tier_review__status__rejected
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__tier_validation__validation_status__rejected
+msgid "Rejected"
+msgstr "Odbijeno"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation__rejected_message
+msgid "Rejected Message"
+msgstr "Poruka odbijanja"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__res_id
+msgid "Related Document ID"
+msgstr "ID povezanog dokumenta"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__model
+msgid "Related Document Model"
+msgstr "Model povezanog dokumenta"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__notify_reminder_delay
+msgid "Remind Every (Days)"
+msgstr "Podsjeti svakih (dana)"
+
+#. module: base_tier_validation
+#: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_definition_view_form
+msgid "Remind every"
+msgstr "Podsjeti svakih"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,help:base_tier_validation.field_tier_definition__notify_reminder_delay
+msgid ""
+"Remind the reviewers every this many days until the review is done. Leave at"
+" 0 to send no reminder."
+msgstr ""
+"Podsjeti pregledavatelje svakih ovoliko dana dok pregled nije dovršen. "
+"Ostavite 0 da ne šalje podsjetnike."
+
+#. module: base_tier_validation
+#: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_validation_buttons
+msgid "Request Validation"
+msgstr "Zatraži validaciju"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__requested_by
+msgid "Requested By"
+msgstr "Zatražio"
+
+#. module: base_tier_validation
+#. odoo-javascript
+#: code:addons/base_tier_validation/static/src/components/tier_review_widget/tier_review_widget.xml:0
+msgid "Requested by"
+msgstr "Zahtjeva"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_comment_wizard__res_id
+msgid "Res"
+msgstr "Res"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_comment_wizard__res_model
+msgid "Res Model"
+msgstr "Res model"
+
+#. module: base_tier_validation
+#: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_validation_buttons
+msgid "Restart Validation"
+msgstr "Ponovno pokreni validaciju"
+
+#. module: base_tier_validation
+#. odoo-javascript
+#: code:addons/base_tier_validation/static/src/components/tier_review_menu/tier_review_menu.xml:0
+#: model:ir.model.fields,field_description:base_tier_validation.field_comment_wizard__review_ids
+#: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_definition_view_form
+msgid "Review"
+msgstr "Recenzija"
+
+#. module: base_tier_validation
+#. odoo-python
+#: code:addons/base_tier_validation/models/tier_validation.py:0
+msgid "Review pending for %(assignees)s, requested by %(requester)s."
+msgstr "Pregled čeka na %(assignees)s, zatražio %(requester)s."
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__reviewer_id
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__reviewer_id
+msgid "Reviewer"
+msgstr "Recenzent"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__reviewer_field_id
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__reviewer_field_id
+msgid "Reviewer field"
+msgstr "Polje recenzenta"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__reviewer_group_id
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__reviewer_group_id
+msgid "Reviewer group"
+msgstr "Grupa recenzenata"
+
+#. module: base_tier_validation
+#. odoo-python
+#: code:addons/base_tier_validation/models/tier_definition.py:0
+msgid "Reviewer may lack access"
+msgstr "Recenzent možda nema pristup"
+
+#. module: base_tier_validation
+#: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_definition_view_form
+msgid "Reviewer permissions"
+msgstr "Dozvole pregledavatelja"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__reviewer_ids
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation__reviewer_ids
+msgid "Reviewers"
+msgstr "Recenzenti"
+
+#. module: base_tier_validation
+#. odoo-javascript
+#: code:addons/base_tier_validation/static/src/components/tier_review_menu/tier_review_menu.xml:0
+#: code:addons/base_tier_validation/static/src/components/tier_review_widget/tier_review_widget.xml:0
+#: model:ir.model.fields,field_description:base_tier_validation.field_res_users__review_ids
+msgid "Reviews"
+msgstr "Recenzije"
+
+#. module: base_tier_validation
+#: model:ir.actions.server,name:base_tier_validation.ir_cron_auto_tier_validation_ir_actions_server
+msgid "Send Tier Review Reminder"
+msgstr "Pošalji podsjetnik za recenziju"
+
+#. module: base_tier_validation
+#. odoo-javascript
+#: code:addons/base_tier_validation/static/src/components/tier_review_widget/tier_review_widget.xml:0
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__sequence
+msgid "Sequence"
+msgstr "Sekvenca"
+
+#. module: base_tier_validation
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__tier_definition__review_type__individual
+msgid "Specific user"
+msgstr "Određeni korisnik"
+
+#. module: base_tier_validation
+#. odoo-javascript
+#: code:addons/base_tier_validation/static/src/components/tier_review_widget/tier_review_widget.xml:0
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__status
+msgid "Status"
+msgstr "Status"
+
+#. module: base_tier_validation
+#. odoo-python
+#: code:addons/base_tier_validation/models/tier_definition.py:0
+msgid ""
+"The following reviewer(s) may not be able to read '%(model)s' records and so cannot act on the reviews this tier will create: %(reviewers)s.\n"
+"\n"
+"This is a best-effort check against model-level access rights only -- record rules may still grant or revoke access at runtime. Make sure these users belong to a group with read access on the target model, or pick different reviewers."
+msgstr ""
+"Sljedeći recenzenti možda ne mogu čitati zapise '%(model)s' i stoga ne mogu postupati po pregledima koje će ova razina stvoriti: %(reviewers)s.\n"
+"\n"
+"Ovo je provjera najboljeg truda samo na temelju prava pristupa na razini modela -- pravila zapisa i dalje mogu dodijeliti ili ukinuti pristup tijekom izvršavanja. Provjerite pripadaju li ti korisnici grupi s pravom čitanja ciljnog modela ili odaberite druge recenzente."
+
+#. module: base_tier_validation
+#. odoo-python
+#: code:addons/base_tier_validation/models/tier_validation.py:0
+msgid "The review has been reset by %s."
+msgstr "Pregled je poništio %s."
+
+#. module: base_tier_validation
+#. odoo-python
+#: code:addons/base_tier_validation/models/tier_validation.py:0
+msgid ""
+"This action needs to be validated for at least one record. Reviews pending:\n"
+" - %s \n"
+"Please request a validation."
+msgstr ""
+"Ova radnja mora biti validirana za barem jedan zapis. Pregledi na čekanju:\n"
+" - %s \n"
+"Zatražite validaciju."
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__sequence
+msgid "Tier"
+msgstr "Razina"
+
+#. module: base_tier_validation
+#: model:ir.actions.act_window,name:base_tier_validation.tier_definition_action
+#: model:ir.model,name:base_tier_validation.model_tier_definition
+#: model:ir.ui.menu,name:base_tier_validation.menu_tier_definition
+#: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_definition_view_form
+msgid "Tier Definition"
+msgstr "Definicija razine"
+
+#. module: base_tier_validation
+#: model:ir.model,name:base_tier_validation.model_tier_review
+msgid "Tier Review"
+msgstr "Recenzija razine"
+
+#. module: base_tier_validation
+#: model:ir.model,name:base_tier_validation.model_tier_validation
+msgid "Tier Validation (abstract)"
+msgstr "Validacija u razinama (apstraktno)"
+
+#. module: base_tier_validation
+#: model:mail.message.subtype,name:base_tier_validation.mt_tier_validation_accepted
+msgid "Tier Validation Accepted Notification"
+msgstr "Obavijest prihvaćene validacije u razinama"
+
+#. module: base_tier_validation
+#: model:ir.actions.act_window,name:base_tier_validation.tier_validation_exception_action
+#: model:ir.ui.menu,name:base_tier_validation.menu_tier_validation_exception
+#: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_validation_exception_form
+msgid "Tier Validation Exception"
+msgstr "Iznimka validacije u razinama"
+
+#. module: base_tier_validation
+#: model:ir.model,name:base_tier_validation.model_tier_validation_exception
+msgid "Tier Validation Exceptions"
+msgstr "Iznimke validacije u razinama"
+
+#. module: base_tier_validation
+#: model:mail.message.subtype,name:base_tier_validation.mt_tier_validation_rejected
+msgid "Tier Validation Rejected Notification"
+msgstr "Obavijest odbijene validacije u razinama"
+
+#. module: base_tier_validation
+#: model:mail.activity.type,name:base_tier_validation.mail_act_tier_validation_reminder
+#: model:mail.message.subtype,name:base_tier_validation.mt_tier_validation_reminder
+msgid "Tier Validation Reminder"
+msgstr "Podsjetnik validacije u razinama"
+
+#. module: base_tier_validation
+#: model:mail.message.subtype,name:base_tier_validation.mt_tier_validation_requested
+msgid "Tier Validation Requested"
+msgstr "Zatražena validacija u razinama"
+
+#. module: base_tier_validation
+#: model:mail.message.subtype,name:base_tier_validation.mt_tier_validation_restarted
+msgid "Tier Validation Restarted"
+msgstr "Ponovno pokrenuta validacija u razinama"
+
+#. module: base_tier_validation
+#: model:ir.ui.menu,name:base_tier_validation.menu_tier_confirmation
+msgid "Tier Validations"
+msgstr "Validacije u razinama"
+
+#. module: base_tier_validation
+#: model_terms:ir.actions.act_window,help:base_tier_validation.tier_definition_action
+msgid ""
+"Tiers can be chained -- enable\n"
+"                <em>Approve by sequence</em>\n"
+"                on each definition for the model to require the lower-sequence\n"
+"                tier to be approved first."
+msgstr ""
+"Razine se mogu lančati -- omogućite\n"
+"                <em>Odobravanje po redoslijedu</em>\n"
+"                na svakoj definiciji za model da zahtijeva nižu\n"
+"                razinu da bude odobrena prva."
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation__to_validate_message
+msgid "To Validate Message"
+msgstr "Poruka za validaciju"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__todo_by
+msgid "Todo By"
+msgstr "Za obaviti od"
+
+#. module: base_tier_validation
+#. odoo-javascript
+#: code:addons/base_tier_validation/static/src/components/tier_review_widget/tier_review_widget.xml:0
+msgid "Todo by"
+msgstr "Za obaviti do"
+
+#. module: base_tier_validation
+#: model:ir.model,name:base_tier_validation.model_res_users
+msgid "User"
+msgstr "Korisnik"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation_exception__valid_model_field_ids
+msgid "Valid Model Field"
+msgstr "Valjano polje modela"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__valid_reviewer_field_ids
+msgid "Valid Reviewer Field"
+msgstr "Valjano polje recenzenta"
+
+#. module: base_tier_validation
+#: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_validation_label
+msgid "Validate"
+msgstr "Validiraj"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_comment_wizard__validate_reject
+msgid "Validate Reject"
+msgstr "Validiraj odbijanje"
+
+#. module: base_tier_validation
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__account_move__validation_status__validated
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__hr_expense__validation_status__validated
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__purchase_order__validation_status__validated
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__purchase_request__validation_status__validated
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__res_partner__validation_status__validated
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__sale_order__validation_status__validated
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__stock_picking__validation_status__validated
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__tier_validation__validation_status__validated
+msgid "Validated"
+msgstr "Validirano"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation__validated_message
+msgid "Validated Message"
+msgstr "Poruka validacije"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__review_type
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__review_type
+msgid "Validated by"
+msgstr "Potvrdio"
+
+#. module: base_tier_validation
+#. odoo-javascript
+#: code:addons/base_tier_validation/static/src/components/tier_review_widget/tier_review_widget.xml:0
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__reviewed_date
+msgid "Validation Date"
+msgstr "Datum validacije"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__reviewed_formated_date
+msgid "Validation Formated Date"
+msgstr "Formatirani datum validacije"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation__validation_status
+msgid "Validation Status"
+msgstr "Status validacije"
+
+#. module: base_tier_validation
+#. odoo-python
+#: code:addons/base_tier_validation/models/tier_review.py:0
+msgid "Validation reviewer field should be of the appropriate type"
+msgstr "Polje recenzenta validacije mora biti odgovarajućeg tipa"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation__review_ids
+msgid "Validations"
+msgstr "Validacije"
+
+#. module: base_tier_validation
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__account_move__validation_status__waiting
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__hr_expense__validation_status__waiting
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__purchase_order__validation_status__waiting
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__purchase_request__validation_status__waiting
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__res_partner__validation_status__waiting
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__sale_order__validation_status__waiting
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__stock_picking__validation_status__waiting
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__tier_review__status__waiting
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__tier_validation__validation_status__waiting
+msgid "Waiting"
+msgstr "Čekanje"
+
+#. module: base_tier_validation
+#: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_definition_view_form
+msgid "When reviewing"
+msgstr "Pri pregledavanju"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,help:base_tier_validation.field_tier_definition__exclude_requester
+msgid ""
+"When set, the user who requested the validation is removed from this tier's "
+"reviewer pool. Anyone else in the configured group can validate -- except "
+"the requester themselves. Without this flag, a requester who happens to be "
+"in the same group as the configured reviewers can auto-validate their own "
+"request. Only meaningful for review_type='group'; the form hides this field "
+"for the other review types."
+msgstr ""
+"Kad je postavljeno, korisnik koji je zatražio validaciju uklanja se iz skupa"
+" recenzenata ove razine. Svi ostali u konfiguriranoj grupi mogu validirati "
+"-- osim samog podnositelja. Bez ove oznake, podnositelj koji se nalazi u "
+"istoj grupi kao konfigurirani recenzenti može automatski validirati vlastiti"
+" zahtjev. Smisleno samo za review_type='group'; obrazac sakriva ovo polje za"
+" ostale vrste recenzije."
+
+#. module: base_tier_validation
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__account_move__validation_status__no
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__hr_expense__validation_status__no
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__purchase_order__validation_status__no
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__purchase_request__validation_status__no
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__res_partner__validation_status__no
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__sale_order__validation_status__no
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__stock_picking__validation_status__no
+#: model:ir.model.fields.selection,name:base_tier_validation.selection__tier_validation__validation_status__no
+msgid "Without validation"
+msgstr "Bez validacije"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation_exception__allowed_to_write_after_validation
+msgid "Write after Validation"
+msgstr "Zapiši nakon validacije"
+
+#. module: base_tier_validation
+#: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_validation_exception_search
+msgid "Write after validation"
+msgstr "Zapiši nakon validacije"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation_exception__allowed_to_write_under_validation
+msgid "Write under Validation"
+msgstr "Zapiši tijekom validacije"
+
+#. module: base_tier_validation
+#: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_validation_exception_search
+msgid "Write under validation"
+msgstr "Zapiši tijekom validacije"
+
+#. module: base_tier_validation
+#. odoo-python
+#: code:addons/base_tier_validation/models/tier_validation.py:0
+msgid ""
+"You are not allowed to write those fields after validation.\n"
+"- %(not_allowed_fields_str)s\n"
+"\n"
+"Only those fields can be modified:\n"
+"- %(allowed_fields_str)s"
+msgstr ""
+"Ne smijete mijenjati ta polja nakon validacije.\n"
+"- %(not_allowed_fields_str)s\n"
+"\n"
+"Samo se ova polja mogu mijenjati:\n"
+"- %(allowed_fields_str)s"
+
+#. module: base_tier_validation
+#. odoo-python
+#: code:addons/base_tier_validation/models/tier_validation.py:0
+msgid ""
+"You are not allowed to write those fields under validation.\n"
+"- %(not_allowed_fields_str)s\n"
+"\n"
+"Only those fields can be modified:\n"
+"- %(allowed_fields_str)s"
+msgstr ""
+"Ne smijete mijenjati ta polja tijekom validacije.\n"
+"- %(not_allowed_fields_str)s\n"
+"\n"
+"Samo se ova polja mogu mijenjati:\n"
+"- %(allowed_fields_str)s"
+
+#. module: base_tier_validation
+#: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_definition_view_form
+msgid "e.g. Tier Validation for..."
+msgstr "npr. Validacija u razinama za..."
+
+#. module: base_tier_validation
+#. odoo-python
+#: code:addons/base_tier_validation/models/tier_validation.py:0
+msgid "the assigned reviewer"
+msgstr "dodijeljeni recenzent"

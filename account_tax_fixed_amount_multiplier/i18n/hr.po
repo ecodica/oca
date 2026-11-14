@@ -1,0 +1,84 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_tax_fixed_amount_multiplier
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: account_tax_fixed_amount_multiplier
+#: model:ir.model.fields,field_description:account_tax_fixed_amount_multiplier.field_product_product__uom_factor
+#: model:ir.model.fields,field_description:account_tax_fixed_amount_multiplier.field_product_template__uom_factor
+msgid "Absolute Quantity"
+msgstr "Apsolutna količina"
+
+#. module: account_tax_fixed_amount_multiplier
+#: model:ir.model.fields,help:account_tax_fixed_amount_multiplier.field_account_tax__fixed_amount_multiplier
+msgid ""
+"Controls how the quantity is used for fixed-amount taxes:\n"
+"- No Multiplier: the amount is applied once per line.\n"
+"- Quantity (default): multiplied by the line quantity, regardless of the unit of measure.\n"
+"- Product Quantity: the line quantity is converted to the product's unit of measure before multiplying.\n"
+"- Product Weight: multiplied by the total weight (product quantity × product weight)."
+msgstr ""
+"Kontrolira kako se količina koristi za poreze s fiksnim iznosom:\n"
+"- Bez množitelja: iznos se primjenjuje jednom po stavci.\n"
+"- Količina (zadano): množi se s količinom stavke, bez obzira na jedinicu mjere.\n"
+"- Količina proizvoda: količina stavke pretvara se u jedinicu mjere proizvoda prije množenja.\n"
+"- Težina proizvoda: množi se s ukupnom težinom (količina proizvoda × težina proizvoda)."
+
+#. module: account_tax_fixed_amount_multiplier
+#: model:ir.model.fields,field_description:account_tax_fixed_amount_multiplier.field_account_tax__display_name
+#: model:ir.model.fields,field_description:account_tax_fixed_amount_multiplier.field_product_template__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: account_tax_fixed_amount_multiplier
+#: model:ir.model.fields,field_description:account_tax_fixed_amount_multiplier.field_account_tax__id
+#: model:ir.model.fields,field_description:account_tax_fixed_amount_multiplier.field_product_template__id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_tax_fixed_amount_multiplier
+#: model:ir.model.fields,field_description:account_tax_fixed_amount_multiplier.field_account_tax__fixed_amount_multiplier
+msgid "Multiplier"
+msgstr "Množitelj"
+
+#. module: account_tax_fixed_amount_multiplier
+#: model:ir.model.fields.selection,name:account_tax_fixed_amount_multiplier.selection__account_tax__fixed_amount_multiplier__none
+msgid "No Multiplier"
+msgstr "Bez množitelja"
+
+#. module: account_tax_fixed_amount_multiplier
+#: model:ir.model,name:account_tax_fixed_amount_multiplier.model_product_template
+msgid "Product"
+msgstr "Proizvod"
+
+#. module: account_tax_fixed_amount_multiplier
+#: model:ir.model.fields.selection,name:account_tax_fixed_amount_multiplier.selection__account_tax__fixed_amount_multiplier__product_quantity
+msgid "Product Quantity"
+msgstr "Količina proizvoda"
+
+#. module: account_tax_fixed_amount_multiplier
+#: model:ir.model.fields.selection,name:account_tax_fixed_amount_multiplier.selection__account_tax__fixed_amount_multiplier__product_weight
+msgid "Product Weight"
+msgstr "Težina proizvoda"
+
+#. module: account_tax_fixed_amount_multiplier
+#: model:ir.model.fields.selection,name:account_tax_fixed_amount_multiplier.selection__account_tax__fixed_amount_multiplier__quantity
+msgid "Quantity (default)"
+msgstr "Količina (zadano)"
+
+#. module: account_tax_fixed_amount_multiplier
+#: model:ir.model,name:account_tax_fixed_amount_multiplier.model_account_tax
+msgid "Tax"
+msgstr "Porez"

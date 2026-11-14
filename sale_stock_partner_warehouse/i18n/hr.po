@@ -1,0 +1,83 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_stock_partner_warehouse
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: sale_stock_partner_warehouse
+#: model:ir.model,name:sale_stock_partner_warehouse.model_res_company
+msgid "Companies"
+msgstr "Tvrtke"
+
+#. module: sale_stock_partner_warehouse
+#: model:ir.model,name:sale_stock_partner_warehouse.model_res_config_settings
+msgid "Config Settings"
+msgstr "Postavke"
+
+#. module: sale_stock_partner_warehouse
+#: model:ir.model,name:sale_stock_partner_warehouse.model_res_partner
+msgid "Contact"
+msgstr "Kontakt"
+
+#. module: sale_stock_partner_warehouse
+#: model:ir.model,website_form_label:sale_stock_partner_warehouse.model_res_partner
+msgid "Create a Customer"
+msgstr "Kreiraj kupca"
+
+#. module: sale_stock_partner_warehouse
+#: model:ir.model.fields,field_description:sale_stock_partner_warehouse.field_res_company__display_name
+#: model:ir.model.fields,field_description:sale_stock_partner_warehouse.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:sale_stock_partner_warehouse.field_res_partner__display_name
+#: model:ir.model.fields,field_description:sale_stock_partner_warehouse.field_sale_order__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: sale_stock_partner_warehouse
+#: model:ir.model.fields,field_description:sale_stock_partner_warehouse.field_res_company__id
+#: model:ir.model.fields,field_description:sale_stock_partner_warehouse.field_res_config_settings__id
+#: model:ir.model.fields,field_description:sale_stock_partner_warehouse.field_res_partner__id
+#: model:ir.model.fields,field_description:sale_stock_partner_warehouse.field_sale_order__id
+msgid "ID"
+msgstr "ID"
+
+#. module: sale_stock_partner_warehouse
+#: model_terms:ir.ui.view,arch_db:sale_stock_partner_warehouse.res_config_settings_view_form
+msgid ""
+"If enabled, the sale order will propose the warehouse from the shipping "
+"address, falling back to the customer's warehouse if none is set."
+msgstr ""
+"Ako je omogućeno, prodajni nalog predložit će skladište s adrese dostave, a "
+"ako nije postavljeno, koristit će se skladište kupca."
+
+#. module: sale_stock_partner_warehouse
+#: model_terms:ir.ui.view,arch_db:sale_stock_partner_warehouse.res_config_settings_view_form
+msgid "Prioritize Shipping Partner in Sale Warehouse Proposal"
+msgstr "Prioritiziraj partnera dostave u prijedlogu skladišta prodaje"
+
+#. module: sale_stock_partner_warehouse
+#: model:ir.model.fields,field_description:sale_stock_partner_warehouse.field_res_partner__sale_warehouse_id
+#: model:ir.model.fields,field_description:sale_stock_partner_warehouse.field_res_users__sale_warehouse_id
+msgid "Sale Warehouse"
+msgstr "Prodajno skladište"
+
+#. module: sale_stock_partner_warehouse
+#: model:ir.model.fields,field_description:sale_stock_partner_warehouse.field_res_company__sale_warehouse_by_partner_shipping
+#: model:ir.model.fields,field_description:sale_stock_partner_warehouse.field_res_config_settings__sale_warehouse_by_partner_shipping
+msgid "Sale Warehouse By Partner Shipping"
+msgstr "Prodajno skladište prema partneru dostave"
+
+#. module: sale_stock_partner_warehouse
+#: model:ir.model,name:sale_stock_partner_warehouse.model_sale_order
+msgid "Sales Order"
+msgstr "Prodajni nalog"

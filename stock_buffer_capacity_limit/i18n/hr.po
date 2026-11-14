@@ -1,0 +1,49 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_buffer_capacity_limit
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: stock_buffer_capacity_limit
+#: model:ir.model.fields,field_description:stock_buffer_capacity_limit.field_stock_buffer__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: stock_buffer_capacity_limit
+#: model:ir.model.fields,field_description:stock_buffer_capacity_limit.field_stock_buffer__id
+msgid "ID"
+msgstr "ID"
+
+#. module: stock_buffer_capacity_limit
+#: model:ir.model.fields,field_description:stock_buffer_capacity_limit.field_stock_buffer__product_location_qty
+msgid "Quantity On Location"
+msgstr ""
+
+#. module: stock_buffer_capacity_limit
+#: model:ir.model,name:stock_buffer_capacity_limit.model_stock_buffer
+msgid "Stock Buffer"
+msgstr ""
+
+#. module: stock_buffer_capacity_limit
+#: model:ir.model.fields,field_description:stock_buffer_capacity_limit.field_stock_buffer__storage_capacity_limit
+msgid "Storage Capacity Limit"
+msgstr ""
+
+#. module: stock_buffer_capacity_limit
+#: model:ir.model.fields,help:stock_buffer_capacity_limit.field_stock_buffer__storage_capacity_limit
+msgid ""
+"The system will never propose a procurement that would move on-hand qty "
+"(considering short-term incoming qty as well) over this limit, even if this "
+"means that you have planning or execution alerts."
+msgstr ""

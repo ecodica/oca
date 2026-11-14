@@ -1,0 +1,116 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_sale_checkout_skip_payment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: website_sale_checkout_skip_payment
+#: model_terms:ir.ui.view,arch_db:website_sale_checkout_skip_payment.navigation_buttons
+msgid "<span class=\"px-3\">or</span>"
+msgstr "<span class=\"px-3\">ili</span>"
+
+#. module: website_sale_checkout_skip_payment
+#: model_terms:ir.ui.view,arch_db:website_sale_checkout_skip_payment.navigation_buttons
+msgid "<span>Confirm <span class=\"fa fa-angle-right ms-2 fw-light\"/></span>"
+msgstr "<span>Potvrdi <span class=\"fa fa-angle-right ms-2 fw-light\"/></span>"
+
+#. module: website_sale_checkout_skip_payment
+#: model_terms:ir.ui.view,arch_db:website_sale_checkout_skip_payment.confirmation_order_error
+msgid ""
+"<strong>Error!</strong> An error occurred trying to\n"
+"                            confirm the sale order."
+msgstr ""
+"<strong>Pogreška!</strong> Došlo je do pogreške pri pokušaju\n"
+"                            potvrde prodajnog naloga."
+
+#. module: website_sale_checkout_skip_payment
+#: model:ir.model.fields,field_description:website_sale_checkout_skip_payment.field_website__checkout_skip_payment
+msgid "Checkout Skip Payment"
+msgstr "Preskoči plaćanje pri odjavi"
+
+#. module: website_sale_checkout_skip_payment
+#: model:ir.model,name:website_sale_checkout_skip_payment.model_res_config_settings
+msgid "Config Settings"
+msgstr "Postavke"
+
+#. module: website_sale_checkout_skip_payment
+#: model_terms:ir.ui.view,arch_db:website_sale_checkout_skip_payment.navigation_buttons
+msgid "Confirm"
+msgstr "Potvrdi"
+
+#. module: website_sale_checkout_skip_payment
+#: model:ir.model,name:website_sale_checkout_skip_payment.model_res_partner
+msgid "Contact"
+msgstr "Kontakt"
+
+#. module: website_sale_checkout_skip_payment
+#: model:ir.model,website_form_label:website_sale_checkout_skip_payment.model_res_partner
+msgid "Create a Customer"
+msgstr "Kreiraj kupca"
+
+#. module: website_sale_checkout_skip_payment
+#: model:ir.model.fields,field_description:website_sale_checkout_skip_payment.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:website_sale_checkout_skip_payment.field_res_partner__display_name
+#: model:ir.model.fields,field_description:website_sale_checkout_skip_payment.field_website__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: website_sale_checkout_skip_payment
+#: model:ir.model.fields,field_description:website_sale_checkout_skip_payment.field_res_config_settings__id
+#: model:ir.model.fields,field_description:website_sale_checkout_skip_payment.field_res_partner__id
+#: model:ir.model.fields,field_description:website_sale_checkout_skip_payment.field_website__id
+msgid "ID"
+msgstr "ID"
+
+#. module: website_sale_checkout_skip_payment
+#: model_terms:ir.ui.view,arch_db:website_sale_checkout_skip_payment.res_config_settings_view_form
+msgid "Message shown to the user when the purchase is finished"
+msgstr ""
+
+#. module: website_sale_checkout_skip_payment
+#. odoo-python
+#: code:addons/website_sale_checkout_skip_payment/models/website.py:0
+msgid "Our team will check your order and send you payment information soon."
+msgstr ""
+
+#. module: website_sale_checkout_skip_payment
+#: model_terms:ir.ui.view,arch_db:website_sale_checkout_skip_payment.res_config_settings_view_form
+msgid "Sale Checkout Skip Message"
+msgstr ""
+
+#. module: website_sale_checkout_skip_payment
+#: model_terms:ir.ui.view,arch_db:website_sale_checkout_skip_payment.confirmation_order_error
+msgid "Shop - Confirmation - Error"
+msgstr ""
+
+#. module: website_sale_checkout_skip_payment
+#: model:ir.model.fields,field_description:website_sale_checkout_skip_payment.field_res_partner__skip_website_checkout_payment
+#: model:ir.model.fields,field_description:website_sale_checkout_skip_payment.field_res_users__skip_website_checkout_payment
+msgid "Skip Website Checkout Payment"
+msgstr ""
+
+#. module: website_sale_checkout_skip_payment
+#: model:ir.model,name:website_sale_checkout_skip_payment.model_website
+msgid "Website"
+msgstr "Web stranica"
+
+#. module: website_sale_checkout_skip_payment
+#: model:ir.model.fields,field_description:website_sale_checkout_skip_payment.field_res_config_settings__website_sale_checkout_skip_message
+msgid "Website Sale Checkout Skip Message"
+msgstr ""
+
+#. module: website_sale_checkout_skip_payment
+#: model:ir.model.fields,field_description:website_sale_checkout_skip_payment.field_website__website_sale_checkout_skip_message
+msgid "Website Sale Skip Message"
+msgstr ""

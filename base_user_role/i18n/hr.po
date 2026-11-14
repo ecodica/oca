@@ -1,0 +1,524 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* base_user_role
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_groups__role_count
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__role_count
+msgid "# User Roles"
+msgstr "# Broj rola"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__all_users_count
+msgid "# Users"
+msgstr "# korisnika"
+
+#. module: base_user_role
+#. odoo-python
+#: code:addons/base_user_role/models/role.py:0
+msgid "%s (copy)"
+msgstr "%s (kopija)"
+
+#. module: base_user_role
+#: model_terms:ir.ui.view,arch_db:base_user_role.view_res_users_form_inherit
+msgid "<em>Any configuration changes made here will not be persistent.</em>"
+msgstr ""
+"<em>Bilo kakve promjene konfiguracije napravljene ovdje neće biti "
+"trajne.</em>"
+
+#. module: base_user_role
+#: model_terms:ir.ui.view,arch_db:base_user_role.view_res_users_form_inherit
+msgid "<strong>The access rights of this user are managed by roles.</strong>"
+msgstr "<strong>Pristupnim pravima ovog korisnika upravljaju role.</strong>"
+
+#. module: base_user_role
+#: model:ir.model.fields,help:base_user_role.field_res_users_role__disjoint_ids
+msgid ""
+"A user may not belong to this group and one of those.  For instance, users "
+"may not be portal users and internal users."
+msgstr ""
+"Korisnik ne može pripadati ovoj grupi i jednoj od onih.  Na primjer, "
+"korisnici ne mogu biti portalni korisnici i interni korisnici."
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__api_key_duration
+msgid "API Keys maximum duration days"
+msgstr "Maksimalno trajanje API ključeva u danima"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__model_access
+msgid "Access Controls"
+msgstr "Kontrola pristupa"
+
+#. module: base_user_role
+#: model:ir.model,name:base_user_role.model_res_groups
+msgid "Access Groups"
+msgstr "Grupe"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__menu_access
+msgid "Access Menu"
+msgstr "Izbornik prava"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__model_access_ids
+#: model_terms:ir.ui.view,arch_db:base_user_role.view_res_users_role_form
+msgid "Access Rights"
+msgstr "Prava pristupa"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role_line__active
+msgid "Active"
+msgstr "Aktivno"
+
+#. module: base_user_role
+#: model:ir.actions.act_window,name:base_user_role.action_add_multiple_users_wizard
+#: model_terms:ir.ui.view,arch_db:base_user_role.view_res_users_role_form
+msgid "Add Multiple Users"
+msgstr "Dodaj više korisnika"
+
+#. module: base_user_role
+#: model_terms:ir.ui.view,arch_db:base_user_role.view_res_users_role_add_users_wizard
+msgid "Add Users"
+msgstr "Dodaj korisnike"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_wizard_create_role_from_user__assign_to_user
+msgid "Assign to user"
+msgstr "Dodijeli korisniku"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__group_id
+msgid "Associated group"
+msgstr "Pridružena grupa"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__group_privilege_id
+msgid "Associated privilege"
+msgstr "Pridružena privilegija"
+
+#. module: base_user_role
+#: model_terms:ir.ui.view,arch_db:base_user_role.group_groups_into_role_wiz_view
+#: model_terms:ir.ui.view,arch_db:base_user_role.view_res_users_role_add_users_wizard
+msgid "Cancel"
+msgstr "Odustani"
+
+#. module: base_user_role
+#: model_terms:ir.ui.view,arch_db:base_user_role.create_from_user_wizard_view
+msgid "Close"
+msgstr "Zatvori"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__comment
+msgid "Comment"
+msgstr "Komentar"
+
+#. module: base_user_role
+#: model_terms:ir.ui.view,arch_db:base_user_role.create_from_user_wizard_view
+#: model_terms:ir.ui.view,arch_db:base_user_role.group_groups_into_role_wiz_view
+msgid "Create"
+msgstr "Kreiraj"
+
+#. module: base_user_role
+#: model:ir.actions.act_window,name:base_user_role.action_wizard_groups_into_role
+msgid "Create Role"
+msgstr "Kreiraj rolu"
+
+#. module: base_user_role
+#: model:ir.actions.act_window,name:base_user_role.create_from_user_wizard_action
+#: model_terms:ir.ui.view,arch_db:base_user_role.create_from_user_wizard_view
+msgid "Create role from user"
+msgstr "Kreiraj rolu iz korisnika"
+
+#. module: base_user_role
+#: model:ir.model,name:base_user_role.model_wizard_create_role_from_user
+msgid "Create role from user wizard"
+msgstr "Čarobnjak za kreiranje role iz korisnika"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__create_uid
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role_line__create_uid
+#: model:ir.model.fields,field_description:base_user_role.field_role_add_users_wizard__create_uid
+#: model:ir.model.fields,field_description:base_user_role.field_wizard_create_role_from_user__create_uid
+#: model:ir.model.fields,field_description:base_user_role.field_wizard_groups_into_role__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__create_date
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role_line__create_date
+#: model:ir.model.fields,field_description:base_user_role.field_role_add_users_wizard__create_date
+#: model:ir.model.fields,field_description:base_user_role.field_wizard_create_role_from_user__create_date
+#: model:ir.model.fields,field_description:base_user_role.field_wizard_groups_into_role__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: base_user_role
+#: model_terms:ir.ui.view,arch_db:base_user_role.view_res_users_role_search
+msgid "Default"
+msgstr "Zadano"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__is_default
+msgid "Default on new users"
+msgstr "Zadano za nove korisnike"
+
+#. module: base_user_role
+#: model:ir.model.fields,help:base_user_role.field_res_users_role__api_key_duration
+msgid ""
+"Determines the maximum duration of an api key created by a user belonging to"
+" this group."
+msgstr ""
+"Određuje maksimalno trajanje API ključa koji kreira korisnik koji pripada "
+"ovoj grupi."
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__disjoint_ids
+msgid "Disjoint Groups"
+msgstr "Disjoint Groups"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_groups__display_name
+#: model:ir.model.fields,field_description:base_user_role.field_res_users__display_name
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__display_name
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role_line__display_name
+#: model:ir.model.fields,field_description:base_user_role.field_role_add_users_wizard__display_name
+#: model:ir.model.fields,field_description:base_user_role.field_wizard_create_role_from_user__display_name
+#: model:ir.model.fields,field_description:base_user_role.field_wizard_groups_into_role__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role_line__is_enabled
+msgid "Enabled"
+msgstr "Omogućeno"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role_line__date_from
+#: model:ir.model.fields,field_description:base_user_role.field_role_add_users_wizard__date_from
+msgid "From"
+msgstr "Od"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__full_name
+msgid "Group Name"
+msgstr "Naziv grupe"
+
+#. module: base_user_role
+#: model:ir.model.fields,help:base_user_role.field_res_users_role__share
+msgid "Group created to set access rights for sharing data with some users."
+msgstr ""
+"Grupa stvorena za postavljanje prava pristupa za dijeljenje podataka s nekim"
+" korisnicima."
+
+#. module: base_user_role
+#: model:ir.model,name:base_user_role.model_wizard_groups_into_role
+msgid "Group groups into a role"
+msgstr "Grupiraj grupe u rolu"
+
+#. module: base_user_role
+#: model:ir.model.fields,help:base_user_role.field_wizard_groups_into_role__name
+msgid "Group groups into a role and specify a name for this role"
+msgstr "Grupirajte grupe u rolu i navedite naziv te role"
+
+#. module: base_user_role
+#: model_terms:ir.ui.view,arch_db:base_user_role.view_res_users_role_form
+msgid "Groups"
+msgstr "Grupe"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_groups__id
+#: model:ir.model.fields,field_description:base_user_role.field_res_users__id
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__id
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role_line__id
+#: model:ir.model.fields,field_description:base_user_role.field_role_add_users_wizard__id
+#: model:ir.model.fields,field_description:base_user_role.field_wizard_create_role_from_user__id
+#: model:ir.model.fields,field_description:base_user_role.field_wizard_groups_into_role__id
+msgid "ID"
+msgstr "ID"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__implied_ids
+msgid "Implied Groups"
+msgstr "Podrazumijevane grupe"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__implied_by_ids
+msgid "Implying Groups"
+msgstr "Grupe koje implicitno uključuju"
+
+#. module: base_user_role
+#: model_terms:ir.ui.view,arch_db:base_user_role.view_res_users_role_form
+msgid "Internal Notes"
+msgstr "Interne bilješke"
+
+#. module: base_user_role
+#: model:ir.model.fields,help:base_user_role.field_res_groups__parent_ids
+#: model:ir.model.fields,help:base_user_role.field_res_users_role__parent_ids
+msgid ""
+"Inverse relation for the Inherits field. The groups from which this group is"
+" inheriting"
+msgstr ""
+"Obrnuta relacija za polje Nasljeđuje. Grupe od kojih ova grupa nasljeđuje"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__write_uid
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role_line__write_uid
+#: model:ir.model.fields,field_description:base_user_role.field_role_add_users_wizard__write_uid
+#: model:ir.model.fields,field_description:base_user_role.field_wizard_create_role_from_user__write_uid
+#: model:ir.model.fields,field_description:base_user_role.field_wizard_groups_into_role__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__write_date
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role_line__write_date
+#: model:ir.model.fields,field_description:base_user_role.field_role_add_users_wizard__write_date
+#: model:ir.model.fields,field_description:base_user_role.field_wizard_create_role_from_user__write_date
+#: model:ir.model.fields,field_description:base_user_role.field_wizard_groups_into_role__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__model_access_count
+msgid "Model Access Count"
+msgstr "Broj pristupa modelu"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__name
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role_line__name
+#: model:ir.model.fields,field_description:base_user_role.field_wizard_create_role_from_user__name
+#: model:ir.model.fields,field_description:base_user_role.field_wizard_groups_into_role__name
+msgid "Name"
+msgstr "Naziv"
+
+#. module: base_user_role
+#: model:ir.model.fields,help:base_user_role.field_res_users_role__all_users_count
+msgid "Number of users having this group (implicitly or explicitly)"
+msgstr "Broj korisnika koji imaju ovu grupu (implicitno ili eksplicitno)"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_groups__trans_parent_ids
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__trans_parent_ids
+msgid "Parent Groups"
+msgstr "Parent Groups"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_groups__parent_ids
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__parent_ids
+msgid "Parents"
+msgstr "Nadređeni"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__privilege_id
+msgid "Privilege"
+msgstr "Privilegija"
+
+#. module: base_user_role
+#: model:ir.model.fields,help:base_user_role.field_res_users_role__group_privilege_id
+msgid "Privilege assigned to the associated group."
+msgstr "Privilegija dodijeljena pridruženoj grupi."
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__rule_ids
+#: model_terms:ir.ui.view,arch_db:base_user_role.view_res_users_role_form
+msgid "Record Rules"
+msgstr "Pravila prava zapisa"
+
+#. module: base_user_role
+#: model:ir.model.fields,help:base_user_role.field_res_groups__role_id
+#: model:ir.model.fields,help:base_user_role.field_res_users_role__role_id
+msgid "Relation for the groups that represents a role"
+msgstr "Relacija za grupe koje predstavljaju rolu"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_groups__role_id
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__role_id
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role_line__role_id
+#: model:ir.model.fields,field_description:base_user_role.field_role_add_users_wizard__role_id
+msgid "Role"
+msgstr "Uloga"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users__role_line_ids
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__line_ids
+msgid "Role lines"
+msgstr "Stavke uloga"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users__user_role_ids
+msgid "Roles"
+msgstr "Uloge"
+
+#. module: base_user_role
+#: model:ir.model.fields,help:base_user_role.field_res_groups__role_ids
+#: model:ir.model.fields,help:base_user_role.field_res_users_role__role_ids
+msgid "Roles in which the group is involved"
+msgstr "Role u kojima grupa sudjeluje"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__rule_groups
+msgid "Rules"
+msgstr "Pravila"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__rules_count
+msgid "Rules Count"
+msgstr "Broj pravila"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__sequence
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role_line__sequence
+msgid "Sequence"
+msgstr "Sekvenca"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__share
+msgid "Share Group"
+msgstr "Grupa dijeljenja"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users__show_alert
+msgid "Show Alert"
+msgstr "Prikaži upozorenje"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__view_group_hierarchy
+msgid "Technical field for default group setting"
+msgstr "Tehničko polje za zadanu postavku grupe"
+
+#. module: base_user_role
+#: model:ir.model.fields,help:base_user_role.field_res_users_role__all_implied_ids
+msgid "The group itself with all its implied groups."
+msgstr "Sama grupa sa svim svojim impliciranim grupama."
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role_line__date_to
+#: model:ir.model.fields,field_description:base_user_role.field_role_add_users_wizard__date_to
+msgid "To"
+msgstr "Do"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__all_implied_ids
+msgid "Transitively Implied Groups"
+msgstr "Tranzitivno podrazumijevane grupe"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__all_implied_by_ids
+msgid "Transitively Implying Groups"
+msgstr "Tranzitivno implicitno uključujuće grupe"
+
+#. module: base_user_role
+#: model:ir.actions.server,name:base_user_role.cron_update_users_ir_actions_server
+msgid "Update user roles"
+msgstr "Ažuriraj uloge korisnika"
+
+#. module: base_user_role
+#: model:ir.model,name:base_user_role.model_res_users
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__user_ids
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role_line__user_id
+msgid "User"
+msgstr "Korisnik"
+
+#. module: base_user_role
+#: model:ir.model,name:base_user_role.model_res_users_role
+msgid "User Role"
+msgstr "Korisnička uloga"
+
+#. module: base_user_role
+#: model:ir.actions.act_window,name:base_user_role.action_res_users_role_tree
+#: model:ir.model.fields,field_description:base_user_role.field_res_groups__role_ids
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__role_ids
+#: model:ir.ui.menu,name:base_user_role.menu_action_res_users_role_tree
+#: model_terms:ir.ui.view,arch_db:base_user_role.res_groups_view_form
+#: model_terms:ir.ui.view,arch_db:base_user_role.view_res_users_form_inherit
+msgid "User Roles"
+msgstr "Uloge korisnika"
+
+#. module: base_user_role
+#: model:ir.module.category,name:base_user_role.ir_module_category_role
+msgid "User roles"
+msgstr "Uloge korisnika"
+
+#. module: base_user_role
+#: model:ir.model.constraint,message:base_user_role.constraint_res_users_role_line_user_role_uniq
+msgid "User roles can be assigned to a user only once at a time"
+msgstr ""
+"Korisničke role mogu se dodijeliti korisniku samo jednom u isto vrijeme"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_role_add_users_wizard__user_ids
+#: model_terms:ir.ui.view,arch_db:base_user_role.view_res_users_role_form
+msgid "Users"
+msgstr "Korisnici"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__all_user_ids
+msgid "Users and implied users"
+msgstr "Korisnici i implicirani korisnici"
+
+#. module: base_user_role
+#: model:ir.model,name:base_user_role.model_res_users_role_line
+msgid "Users associated to a role"
+msgstr "Korisnici priduženi roli"
+
+#. module: base_user_role
+#: model:ir.model.fields,help:base_user_role.field_res_users_role__user_ids
+msgid "Users explicitly in this group"
+msgstr "Korisnici koji su eksplicitno u ovoj grupi"
+
+#. module: base_user_role
+#: model:ir.model.fields,help:base_user_role.field_res_users_role__implied_by_ids
+msgid "Users in those groups are implicitly part of this group."
+msgstr "Korisnici u tim grupama implicitno su dio ove grupe."
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__role_user_ids
+msgid "Users list"
+msgstr "Popis korisnika"
+
+#. module: base_user_role
+#: model:ir.model.fields,help:base_user_role.field_res_users_role__implied_ids
+msgid "Users of this group are also implicitly part of those groups"
+msgstr "Korisnici ove grupe također su implicitno dio tih grupa"
+
+#. module: base_user_role
+#: model:ir.model.fields,field_description:base_user_role.field_res_groups__view_access
+#: model:ir.model.fields,field_description:base_user_role.field_res_users_role__view_access
+msgid "Views"
+msgstr "Pogledi"
+
+#. module: base_user_role
+#: model:ir.model.fields,help:base_user_role.field_res_users_role__is_default
+msgid "When enabled, this role is assigned to newly created users by default."
+msgstr ""
+"Kada je omogućeno, ova rola se prema zadanim postavkama dodjeljuje novo "
+"kreiranim korisnicima."
+
+#. module: base_user_role
+#: model:ir.model,name:base_user_role.model_role_add_users_wizard
+msgid "Wizard to add multiple users to a role"
+msgstr "Čarobnjak za dodavanje više korisnika u rolu"
+
+#. module: base_user_role
+#: model_terms:ir.ui.view,arch_db:base_user_role.create_from_user_wizard_view
+msgid "or"
+msgstr "ili"
+
+#. module: base_user_role
+#: model_terms:ir.ui.view,arch_db:base_user_role.view_res_users_form_inherit
+msgid "x"
+msgstr "x"

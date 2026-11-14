@@ -1,0 +1,80 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_origin
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: product_origin
+#: model:ir.model.fields,field_description:product_origin.field_product_product__state_id
+#: model:ir.model.fields,field_description:product_origin.field_product_template__state_id
+msgid "Country State of Origin"
+msgstr "Savezna država podrijetla"
+
+#. module: product_origin
+#: model:ir.model.fields,field_description:product_origin.field_product_product__country_id
+#: model:ir.model.fields,field_description:product_origin.field_product_template__country_id
+#: model_terms:ir.ui.view,arch_db:product_origin.product_template_search_view
+msgid "Country of Origin"
+msgstr "Država porijekla"
+
+#. module: product_origin
+#: model:ir.model.fields,field_description:product_origin.field_product_product__display_name
+#: model:ir.model.fields,field_description:product_origin.field_product_template__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: product_origin
+#: model:ir.model.fields,field_description:product_origin.field_product_product__id
+#: model:ir.model.fields,field_description:product_origin.field_product_template__id
+msgid "ID"
+msgstr "ID"
+
+#. module: product_origin
+#: model_terms:ir.ui.view,arch_db:product_origin.product_template_form_view
+#: model_terms:ir.ui.view,arch_db:product_origin.view_product_product_form
+#: model_terms:ir.ui.view,arch_db:product_origin.view_product_product_form_variant
+msgid "Origin"
+msgstr "Izvor"
+
+#. module: product_origin
+#: model:ir.model,name:product_origin.model_product_template
+msgid "Product"
+msgstr "Proizvod"
+
+#. module: product_origin
+#: model:ir.model,name:product_origin.model_product_product
+msgid "Product Variant"
+msgstr "Varijanta proizvoda"
+
+#. module: product_origin
+#: model:ir.model.fields,field_description:product_origin.field_product_product__state_id_domain
+#: model:ir.model.fields,field_description:product_origin.field_product_template__state_id_domain
+msgid "State Id Domain"
+msgstr ""
+
+#. module: product_origin
+#: model:ir.model.fields,help:product_origin.field_product_product__state_id_domain
+#: model:ir.model.fields,help:product_origin.field_product_template__state_id_domain
+msgid ""
+"Technical field, used to compute dynamically state domain depending on the "
+"country."
+msgstr ""
+
+#. module: product_origin
+#. odoo-python
+#: code:addons/product_origin/models/product_product.py:0
+#: code:addons/product_origin/models/product_template.py:0
+msgid ""
+"The state '%(state_name)s' doesn't belong to the country '%(country_name)s'"
+msgstr ""

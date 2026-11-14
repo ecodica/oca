@@ -1,0 +1,225 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fieldservice_sign
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: fieldservice_sign
+#: model_terms:ir.ui.view,arch_db:fieldservice_sign.report_fsm_order_document_sign
+msgid "<strong>Signed By:</strong>"
+msgstr "<strong>Potpisao:</strong>"
+
+#. module: fieldservice_sign
+#: model_terms:ir.ui.view,arch_db:fieldservice_sign.report_fsm_order_document_sign
+msgid "<strong>Signed On:</strong>"
+msgstr "<strong>Potpisano:</strong>"
+
+#. module: fieldservice_sign
+#. odoo-python
+#: code:addons/fieldservice_sign/models/fsm_order.py:0
+msgid "A signed document is required before completing order %(order)s."
+msgstr "Potpisan dokument je obavezan prije dovršetka naloga %(order)s."
+
+#. module: fieldservice_sign
+#: model:ir.model.fields,help:fieldservice_sign.field_res_company__fsm_require_signature_to_complete
+#: model:ir.model.fields,help:fieldservice_sign.field_res_config_settings__fsm_require_signature_to_complete
+msgid "Block completing an order until a customer signature is captured."
+msgstr "Blokiraj dovršetak naloga dok se ne uhvati potpis kupca."
+
+#. module: fieldservice_sign
+#: model:ir.model.fields,help:fieldservice_sign.field_res_company__fsm_require_document_signed_to_complete
+#: model:ir.model.fields,help:fieldservice_sign.field_res_config_settings__fsm_require_document_signed_to_complete
+msgid "Block completing an order until a linked signature request is signed."
+msgstr ""
+"Blokiraj dovršetak naloga dok se ne potpiše povezani zahtjev za potpis."
+
+#. module: fieldservice_sign
+#: model:ir.model,name:fieldservice_sign.model_res_company
+msgid "Companies"
+msgstr "Tvrtke"
+
+#. module: fieldservice_sign
+#: model:ir.model,name:fieldservice_sign.model_res_config_settings
+msgid "Config Settings"
+msgstr "Postavke"
+
+#. module: fieldservice_sign
+#. odoo-python
+#: code:addons/fieldservice_sign/models/fsm_order.py:0
+msgid ""
+"Configure an FSM Order Sign Template on the company before requesting a "
+"document signature."
+msgstr ""
+"Konfigurirajte predložak potpisa FSM naloga na tvrtki prije zahtjeva za "
+"potpis dokumenta."
+
+#. module: fieldservice_sign
+#: model_terms:ir.ui.view,arch_db:fieldservice_sign.report_fsm_order_document_sign
+msgid "Customer Signature"
+msgstr "Kupčev potpis"
+
+#. module: fieldservice_sign
+#. odoo-python
+#: code:addons/fieldservice_sign/models/fsm_order.py:0
+msgid "Customer signature is required before completing order %(order)s."
+msgstr "Potpis kupca obavezan je prije dovršetka naloga %(order)s."
+
+#. module: fieldservice_sign
+#: model:ir.model.fields,help:fieldservice_sign.field_res_company__fsm_order_sign_oca_template_id
+#: model:ir.model.fields,help:fieldservice_sign.field_res_config_settings__fsm_order_sign_oca_template_id
+msgid "Default sign_oca template used when requesting a document signature."
+msgstr "Zadani sign_oca predložak pri zahtjevu za potpis dokumenta."
+
+#. module: fieldservice_sign
+#: model:ir.model.fields,field_description:fieldservice_sign.field_res_company__display_name
+#: model:ir.model.fields,field_description:fieldservice_sign.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:fieldservice_sign.field_sign_oca_request__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: fieldservice_sign
+#: model_terms:ir.ui.view,arch_db:fieldservice_sign.fsm_order_form_inherit_sign
+#: model_terms:ir.ui.view,arch_db:fieldservice_sign.res_config_settings_view_form
+msgid "Document Signing"
+msgstr "Potpisivanje dokumenta"
+
+#. module: fieldservice_sign
+#. odoo-python
+#: code:addons/fieldservice_sign/models/fsm_order.py:0
+msgid "Document signing is disabled for company %(company)s."
+msgstr "Potpisivanje dokumenta onemogućeno je za tvrtku %(company)s."
+
+#. module: fieldservice_sign
+#: model:ir.model.fields,help:fieldservice_sign.field_fsm_order__fsm_signature_capture
+#: model:ir.model.fields,help:fieldservice_sign.field_res_company__fsm_signature_capture
+#: model:ir.model.fields,help:fieldservice_sign.field_res_config_settings__fsm_signature_capture
+msgid "Enable on-site customer signature capture on Field Service orders."
+msgstr ""
+"Omogući hvatanje potpisa kupca na licu mjesta na nalozima terenske službe."
+
+#. module: fieldservice_sign
+#: model:ir.model.fields,help:fieldservice_sign.field_fsm_order__fsm_document_signing
+#: model:ir.model.fields,help:fieldservice_sign.field_res_company__fsm_document_signing
+#: model:ir.model.fields,help:fieldservice_sign.field_res_config_settings__fsm_document_signing
+msgid "Enable sign_oca document signing on Field Service orders."
+msgstr "Omogući sign_oca potpisivanje dokumenata na nalozima terenske službe."
+
+#. module: fieldservice_sign
+#: model:ir.model.fields,field_description:fieldservice_sign.field_fsm_order__fsm_document_signing
+#: model:ir.model.fields,field_description:fieldservice_sign.field_res_company__fsm_document_signing
+#: model:ir.model.fields,field_description:fieldservice_sign.field_res_config_settings__fsm_document_signing
+msgid "FSM Document Signing"
+msgstr ""
+
+#. module: fieldservice_sign
+#: model:ir.model.fields,field_description:fieldservice_sign.field_res_company__fsm_order_sign_oca_template_id
+#: model:ir.model.fields,field_description:fieldservice_sign.field_res_config_settings__fsm_order_sign_oca_template_id
+msgid "FSM Order Sign Template"
+msgstr ""
+
+#. module: fieldservice_sign
+#: model:ir.model.fields,field_description:fieldservice_sign.field_fsm_order__fsm_signature_capture
+#: model:ir.model.fields,field_description:fieldservice_sign.field_res_company__fsm_signature_capture
+#: model:ir.model.fields,field_description:fieldservice_sign.field_res_config_settings__fsm_signature_capture
+msgid "FSM Signature Capture"
+msgstr ""
+
+#. module: fieldservice_sign
+#: model:ir.model,name:fieldservice_sign.model_fsm_order
+#: model:ir.model.fields,field_description:fieldservice_sign.field_sign_oca_request__fsm_order_id
+#: model_terms:ir.ui.view,arch_db:fieldservice_sign.sign_oca_request_search_view
+msgid "Field Service Order"
+msgstr ""
+
+#. module: fieldservice_sign
+#: model:ir.model.fields,field_description:fieldservice_sign.field_fsm_order__id
+#: model:ir.model.fields,field_description:fieldservice_sign.field_res_company__id
+#: model:ir.model.fields,field_description:fieldservice_sign.field_res_config_settings__id
+#: model:ir.model.fields,field_description:fieldservice_sign.field_sign_oca_request__id
+msgid "ID"
+msgstr "ID"
+
+#. module: fieldservice_sign
+#: model_terms:ir.ui.view,arch_db:fieldservice_sign.res_config_settings_view_form
+msgid "Launch sign_oca signature requests from Field Service orders."
+msgstr ""
+
+#. module: fieldservice_sign
+#: model_terms:ir.ui.view,arch_db:fieldservice_sign.res_config_settings_view_form
+msgid "On-site Signature Capture"
+msgstr ""
+
+#. module: fieldservice_sign
+#: model:ir.model.fields,field_description:fieldservice_sign.field_fsm_order__display_name
+msgid "Order"
+msgstr "Narudžba"
+
+#. module: fieldservice_sign
+#: model_terms:ir.ui.view,arch_db:fieldservice_sign.fsm_order_form_inherit_sign
+msgid "Request Signature"
+msgstr "Zatraži potpis"
+
+#. module: fieldservice_sign
+#: model:ir.model.fields,field_description:fieldservice_sign.field_res_company__fsm_require_document_signed_to_complete
+#: model:ir.model.fields,field_description:fieldservice_sign.field_res_config_settings__fsm_require_document_signed_to_complete
+msgid "Require Document Signed to Complete"
+msgstr ""
+
+#. module: fieldservice_sign
+#: model:ir.model.fields,field_description:fieldservice_sign.field_res_company__fsm_require_signature_to_complete
+#: model:ir.model.fields,field_description:fieldservice_sign.field_res_config_settings__fsm_require_signature_to_complete
+msgid "Require Signature to Complete"
+msgstr ""
+
+#. module: fieldservice_sign
+#: model_terms:ir.ui.view,arch_db:fieldservice_sign.res_config_settings_view_form
+msgid ""
+"Show customer signature capture on Field Service orders and optionally "
+"require it before completion."
+msgstr ""
+
+#. module: fieldservice_sign
+#: model:ir.model,name:fieldservice_sign.model_sign_oca_request
+msgid "Sign Request"
+msgstr ""
+
+#. module: fieldservice_sign
+#: model:ir.model.fields,field_description:fieldservice_sign.field_fsm_order__sign_request_count
+msgid "Sign Request Count"
+msgstr "Broj zahtjeva za potpisivanje"
+
+#. module: fieldservice_sign
+#: model_terms:ir.ui.view,arch_db:fieldservice_sign.fsm_order_form_inherit_sign
+msgid "Sign Requests"
+msgstr ""
+
+#. module: fieldservice_sign
+#: model:ir.model.fields,field_description:fieldservice_sign.field_fsm_order__sign_request_id
+msgid "Signature Request"
+msgstr "Zahtjev za potpis"
+
+#. module: fieldservice_sign
+#: model:ir.model.fields,field_description:fieldservice_sign.field_fsm_order__sign_request_state
+msgid "Signature Request Status"
+msgstr ""
+
+#. module: fieldservice_sign
+#: model:ir.model.fields,field_description:fieldservice_sign.field_fsm_order__sign_request_ids
+msgid "Signature Requests"
+msgstr "Zahtjevi za potpis"
+
+#. module: fieldservice_sign
+#: model_terms:ir.ui.view,arch_db:fieldservice_sign.res_config_settings_view_form
+msgid "Signatures"
+msgstr ""

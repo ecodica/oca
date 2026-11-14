@@ -1,0 +1,85 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_statement_import_online_qonto
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: account_statement_import_online_qonto
+#. odoo-python
+#: code:addons/account_statement_import_online_qonto/models/online_bank_statement_provider_qonto.py:0
+msgid ""
+"%(status_code)s \n"
+"\n"
+" %(response_text)s"
+msgstr ""
+"%(status_code)s \n"
+"\n"
+" %(response_text)s"
+
+#. module: account_statement_import_online_qonto
+#. odoo-python
+#: code:addons/account_statement_import_online_qonto/models/online_bank_statement_provider_qonto.py:0
+msgid ""
+"Currency %(currency)s used in transaction ID %(transaction_id)s doesn't "
+"exist in Odoo."
+msgstr ""
+"Valuta %(currency)s korištena u ID-u transakcije %(transaction_id)s ne "
+"postoji u Odoo."
+
+#. module: account_statement_import_online_qonto
+#: model:ir.model.fields,field_description:account_statement_import_online_qonto.field_online_bank_statement_provider__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: account_statement_import_online_qonto
+#: model:ir.model.fields,field_description:account_statement_import_online_qonto.field_online_bank_statement_provider__id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_statement_import_online_qonto
+#: model_terms:ir.ui.view,arch_db:account_statement_import_online_qonto.online_bank_statement_provider_form
+msgid "Key"
+msgstr "Ključ"
+
+#. module: account_statement_import_online_qonto
+#: model_terms:ir.ui.view,arch_db:account_statement_import_online_qonto.online_bank_statement_provider_form
+msgid "Login"
+msgstr "Korisnik"
+
+#. module: account_statement_import_online_qonto
+#: model:ir.model,name:account_statement_import_online_qonto.model_online_bank_statement_provider
+msgid "Online Bank Statement Provider"
+msgstr "Pružatelj online bankovnog izvoda"
+
+#. module: account_statement_import_online_qonto
+#. odoo-python
+#: code:addons/account_statement_import_online_qonto/models/online_bank_statement_provider_qonto.py:0
+msgid "Please fill login and key"
+msgstr "Popunite prijavu i ključ"
+
+#. module: account_statement_import_online_qonto
+#. odoo-python
+#: code:addons/account_statement_import_online_qonto/models/online_bank_statement_provider_qonto.py:0
+msgid "Qonto : wrong configuration, unknow account %(acc_number)s"
+msgstr "Qonto: pogrešna konfiguracija, nepoznat konto %(acc_number)s"
+
+#. module: account_statement_import_online_qonto
+#. odoo-python
+#: code:addons/account_statement_import_online_qonto/models/online_bank_statement_provider_qonto.py:0
+msgid ""
+"Transaction ID %(transaction_id)s has no local currency. This should never "
+"happen."
+msgstr ""
+"Transakcija ID %(transaction_id)s nema lokalnu valutu. To se nikada ne bi "
+"smjelo dogoditi."

@@ -1,0 +1,70 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_attribute_set
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: product_attribute_set
+#: model:ir.model,name:product_attribute_set.model_attribute_attribute
+msgid "Attribute"
+msgstr "Značajka"
+
+#. module: product_attribute_set
+#: model:ir.model.fields,field_description:product_attribute_set.field_product_product__attribute_set_id
+#: model:ir.model.fields,field_description:product_attribute_set.field_product_template__attribute_set_id
+#: model_terms:ir.ui.view,arch_db:product_attribute_set.product_template_search_view
+msgid "Attribute Set"
+msgstr "Skup atributa"
+
+#. module: product_attribute_set
+#: model_terms:ir.ui.view,arch_db:product_attribute_set.product_template_form_view
+#: model_terms:ir.ui.view,arch_db:product_attribute_set.product_variant_easy_edit_view
+msgid "Attributes"
+msgstr "Značajke"
+
+#. module: product_attribute_set
+#: model:ir.model.fields,field_description:product_attribute_set.field_product_category__attribute_set_id
+msgid "Default Attribute Set"
+msgstr "Zadani skup atributa"
+
+#. module: product_attribute_set
+#: model:ir.model.fields,field_description:product_attribute_set.field_attribute_attribute__display_name
+#: model:ir.model.fields,field_description:product_attribute_set.field_product_category__display_name
+#: model:ir.model.fields,field_description:product_attribute_set.field_product_product__display_name
+#: model:ir.model.fields,field_description:product_attribute_set.field_product_template__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: product_attribute_set
+#: model:ir.model.fields,field_description:product_attribute_set.field_attribute_attribute__id
+#: model:ir.model.fields,field_description:product_attribute_set.field_product_category__id
+#: model:ir.model.fields,field_description:product_attribute_set.field_product_product__id
+#: model:ir.model.fields,field_description:product_attribute_set.field_product_template__id
+msgid "ID"
+msgstr "ID"
+
+#. module: product_attribute_set
+#: model:ir.model,name:product_attribute_set.model_product_template
+msgid "Product"
+msgstr "Proizvod"
+
+#. module: product_attribute_set
+#: model:ir.model,name:product_attribute_set.model_product_category
+msgid "Product Category"
+msgstr "Kategorija proizvoda"
+
+#. module: product_attribute_set
+#: model:ir.model,name:product_attribute_set.model_product_product
+msgid "Product Variant"
+msgstr "Varijanta proizvoda"

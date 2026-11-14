@@ -1,0 +1,112 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_location_position
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: stock_location_position
+#: model:ir.model.fields,field_description:stock_location_position.field_stock_location__posx
+msgid "Box (X)"
+msgstr "Kutija (X)"
+
+#. module: stock_location_position
+#: model:ir.model.fields,field_description:stock_location_position.field_stock_location__posy
+msgid "Box (Y)"
+msgstr "Kutija (Y)"
+
+#. module: stock_location_position
+#: model:ir.model.fields,field_description:stock_location_position.field_stock_location__posz
+msgid "Box (Z)"
+msgstr "Kutija (Z)"
+
+#. module: stock_location_position
+#: model:ir.model.fields,field_description:stock_location_position.field_stock_location__corridor
+msgid "Corridor"
+msgstr "Koridor"
+
+#. module: stock_location_position
+#: model:ir.model.fields,help:stock_location_position.field_stock_location__level
+msgid "Define as the floor of the house"
+msgstr "Definiraj kao kat kuće"
+
+#. module: stock_location_position
+#: model:ir.model.fields,help:stock_location_position.field_stock_location__rack
+msgid "Define as the house number within the street"
+msgstr "Definiraj kao kućni broj unutar ulice"
+
+#. module: stock_location_position
+#: model:ir.model.fields,help:stock_location_position.field_stock_location__row
+msgid "Define as the side within the street"
+msgstr "Definiraj kao stranu unutar ulice"
+
+#. module: stock_location_position
+#: model:ir.model.fields,help:stock_location_position.field_stock_location__corridor
+msgid "Define as the street"
+msgstr "Definiraj kao ulicu"
+
+#. module: stock_location_position
+#: model:ir.model.fields,field_description:stock_location_position.field_stock_location__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: stock_location_position
+#: model:ir.model.fields,field_description:stock_location_position.field_stock_location__id
+msgid "ID"
+msgstr "ID"
+
+#. module: stock_location_position
+#: model:ir.model,name:stock_location_position.model_stock_location
+msgid "Inventory Locations"
+msgstr "Lokacije inventure"
+
+#. module: stock_location_position
+#: model:ir.model.fields,field_description:stock_location_position.field_stock_location__level
+msgid "Level"
+msgstr "Razina"
+
+#. module: stock_location_position
+#: model:ir.model.fields,help:stock_location_position.field_stock_location__posx
+msgid ""
+"Optional (X) coordinate of the bin if the location is split in several "
+"parts. (e.g. drawer storage)"
+msgstr ""
+
+#. module: stock_location_position
+#: model:ir.model.fields,help:stock_location_position.field_stock_location__posy
+msgid ""
+"Optional (Y) coordinate of the bin if the location is split in several "
+"parts. (e.g. drawer storage)"
+msgstr ""
+
+#. module: stock_location_position
+#: model:ir.model.fields,help:stock_location_position.field_stock_location__posz
+msgid ""
+"Optional (Z) coordinate of the bin if the location is split in several "
+"parts. (e.g. storage tray)"
+msgstr ""
+
+#. module: stock_location_position
+#: model_terms:ir.ui.view,arch_db:stock_location_position.stock_location_form_inherit
+msgid "Position"
+msgstr "Pozicija"
+
+#. module: stock_location_position
+#: model:ir.model.fields,field_description:stock_location_position.field_stock_location__rack
+msgid "Rack"
+msgstr ""
+
+#. module: stock_location_position
+#: model:ir.model.fields,field_description:stock_location_position.field_stock_location__row
+msgid "Row"
+msgstr "Red"

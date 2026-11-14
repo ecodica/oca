@@ -1,0 +1,99 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_move_tier_validation_approver
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: account_move_tier_validation_approver
+#: model:ir.model.fields,field_description:account_move_tier_validation_approver.field_res_partner__approver_id
+#: model:ir.model.fields,field_description:account_move_tier_validation_approver.field_res_users__approver_id
+msgid "Approver of Vendor Bills"
+msgstr "Odobravatelj računa dobavljača"
+
+#. module: account_move_tier_validation_approver
+#: model:ir.model.fields,field_description:account_move_tier_validation_approver.field_res_company__validation_approver_tier_definition_id
+msgid "Bill approval tier definition"
+msgstr "Definicija razine odobrenja računa"
+
+#. module: account_move_tier_validation_approver
+#: model:ir.model,name:account_move_tier_validation_approver.model_res_company
+msgid "Companies"
+msgstr "Tvrtke"
+
+#. module: account_move_tier_validation_approver
+#: model:ir.model,name:account_move_tier_validation_approver.model_res_config_settings
+msgid "Config Settings"
+msgstr "Postavke"
+
+#. module: account_move_tier_validation_approver
+#: model:ir.model,name:account_move_tier_validation_approver.model_res_partner
+msgid "Contact"
+msgstr "Kontakt"
+
+#. module: account_move_tier_validation_approver
+#: model:ir.model.fields,field_description:account_move_tier_validation_approver.field_account_move__display_name
+#: model:ir.model.fields,field_description:account_move_tier_validation_approver.field_res_company__display_name
+#: model:ir.model.fields,field_description:account_move_tier_validation_approver.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:account_move_tier_validation_approver.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: account_move_tier_validation_approver
+#: model:ir.model.fields,field_description:account_move_tier_validation_approver.field_account_move__id
+#: model:ir.model.fields,field_description:account_move_tier_validation_approver.field_res_company__id
+#: model:ir.model.fields,field_description:account_move_tier_validation_approver.field_res_config_settings__id
+#: model:ir.model.fields,field_description:account_move_tier_validation_approver.field_res_partner__id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_move_tier_validation_approver
+#. odoo-python
+#: code:addons/account_move_tier_validation_approver/models/account_move.py:0
+msgid "It is mandatory to indicate a Responsible for Approval (in %s)"
+msgstr "Obavezno je navesti odgovornu osobu za odobrenje (u %s)"
+
+#. module: account_move_tier_validation_approver
+#: model:ir.model,name:account_move_tier_validation_approver.model_account_move
+msgid "Journal Entry"
+msgstr "Stavke temeljnice"
+
+#. module: account_move_tier_validation_approver
+#: model:ir.model.fields,field_description:account_move_tier_validation_approver.field_res_config_settings__require_approver_in_vendor_bills
+msgid "Require Approver In Vendor Bills"
+msgstr "Zahtijevaj odobravatelja na računima dobavljača"
+
+#. module: account_move_tier_validation_approver
+#: model_terms:ir.ui.view,arch_db:account_move_tier_validation_approver.res_config_settings_view_form
+msgid ""
+"Require approver before posting vendor bills. Values set here are company-"
+"specific."
+msgstr ""
+"Zahtijevaj odobravatelja prije knjiženja računa dobavljača. Vrijednosti "
+"postavljene ovdje specifične su za poduzeće."
+
+#. module: account_move_tier_validation_approver
+#: model:ir.model.fields,field_description:account_move_tier_validation_approver.field_res_company__require_approver_in_vendor_bills
+msgid "Require approver in vendor bills"
+msgstr "Zahtijevaj odobravatelja na računima dobavljača"
+
+#. module: account_move_tier_validation_approver
+#: model:ir.model.fields,help:account_move_tier_validation_approver.field_res_config_settings__require_approver_in_vendor_bills
+msgid "Requires adding an approver before a vendor bill can be posted."
+msgstr "Zahtijeva dodavanje odobravatelja prije knjiženja računa dobavljača."
+
+#. module: account_move_tier_validation_approver
+#: model:ir.model.fields,field_description:account_move_tier_validation_approver.field_account_bank_statement_line__approver_id
+#: model:ir.model.fields,field_description:account_move_tier_validation_approver.field_account_move__approver_id
+msgid "Responsible for Approval"
+msgstr "Odgovoran za odobrenje"

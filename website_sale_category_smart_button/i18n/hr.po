@@ -1,0 +1,41 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_sale_category_smart_button
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: website_sale_category_smart_button
+#: model_terms:ir.ui.view,arch_db:website_sale_category_smart_button.product_public_category_form_view_smart_button
+msgid "<span class=\"o_stat_text\">Go to Website</span>"
+msgstr "<span class=\"o_stat_text\">Idi na web stranicu</span>"
+
+#. module: website_sale_category_smart_button
+#: model:ir.model.fields,field_description:website_sale_category_smart_button.field_product_public_category__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: website_sale_category_smart_button
+#: model:ir.model.fields,field_description:website_sale_category_smart_button.field_product_public_category__id
+msgid "ID"
+msgstr "ID"
+
+#. module: website_sale_category_smart_button
+#: model:ir.model,name:website_sale_category_smart_button.model_product_public_category
+msgid "Website Product Category"
+msgstr "Kategorije web proizvoda"
+
+#. module: website_sale_category_smart_button
+#: model:ir.model.fields,field_description:website_sale_category_smart_button.field_product_public_category__website_url
+msgid "Website URL"
+msgstr "URL web stranice"

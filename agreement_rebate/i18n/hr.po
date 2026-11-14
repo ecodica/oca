@@ -1,0 +1,680 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* agreement_rebate
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_section__rebate_discount
+msgid "% Dto"
+msgstr "% Pop."
+
+#. module: agreement_rebate
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_form
+msgid ""
+"<i class=\"fa fa-filter\"/>\n"
+"                            You can create a filter to apply the rebate.\n"
+"                            Categories, products, variants, generic conditions to reuse or a custom filter"
+msgstr ""
+
+#. module: agreement_rebate
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_rebate_settlement_form
+msgid "<span>Agreement</span>"
+msgstr "<span>Ugovor</span>"
+
+#. module: agreement_rebate
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_rebate_settlement_form
+msgid "<span>Details</span>"
+msgstr "<span>Detalji</span>"
+
+#. module: agreement_rebate
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_rebate_settlement_form
+msgid "<span>Lines</span>"
+msgstr "<span>Stavke</span>"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement__active
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement_line__active
+msgid "Active"
+msgstr "Aktivno"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement__additional_consumption
+msgid "Additional Consumption"
+msgstr "Dodatna potrošnja"
+
+#. module: agreement_rebate
+#: model:ir.model,name:agreement_rebate.model_agreement
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_line__agreement_id
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_section__agreement_id
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement_line__agreement_id
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_rebate_settlement_line_search
+msgid "Agreement"
+msgstr "Ugovor"
+
+#. module: agreement_rebate
+#: model:ir.model,name:agreement_rebate.model_agreement_rebate_condition
+msgid "Agreement Rebate Condition"
+msgstr "Uvjet rabata ugovora"
+
+#. module: agreement_rebate
+#: model:ir.model,name:agreement_rebate.model_agreement_rebate_line
+msgid "Agreement Rebate Lines"
+msgstr "Stavke rabata ugovora"
+
+#. module: agreement_rebate
+#: model:ir.model,name:agreement_rebate.model_agreement_rebate_section
+msgid "Agreement Rebate Section"
+msgstr "Odjeljak rabata ugovora"
+
+#. module: agreement_rebate
+#: model:ir.model,name:agreement_rebate.model_agreement_rebate_settlement
+msgid "Agreement Rebate Settlement"
+msgstr "Poravnanje rabata ugovora"
+
+#. module: agreement_rebate
+#: model:ir.model,name:agreement_rebate.model_agreement_rebate_settlement_line
+msgid "Agreement Rebate Settlement Lines"
+msgstr "Stavke poravnanja rabata ugovora"
+
+#. module: agreement_rebate
+#: model:ir.model,name:agreement_rebate.model_agreement_type
+msgid "Agreement Types"
+msgstr "Vrste ugovora"
+
+#. module: agreement_rebate
+#: model:ir.model,name:agreement_rebate.model_agreement_invoice_create_wiz
+msgid "Agreement invoice create wizard"
+msgstr "Čarobnjak kreiranja računa ugovora"
+
+#. module: agreement_rebate
+#: model:ir.actions.act_window,name:agreement_rebate.agreement_rebate_condition_action
+msgid "Agreement rebate conditions"
+msgstr "Uvjeti rabata ugovora"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement__rebate_line_ids
+msgid "Agreement rebate lines"
+msgstr "Stavke rabata ugovora"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement__rebate_section_ids
+msgid "Agreement rebate sections"
+msgstr "Odjeljci rabata ugovora"
+
+#. module: agreement_rebate
+#: model:ir.model,name:agreement_rebate.model_agreement_settlement_create_wiz
+msgid "Agreement settlement create wizard"
+msgstr "Čarobnjak kreiranja poravnanja ugovora"
+
+#. module: agreement_rebate
+#: model:ir.actions.act_window,name:agreement_rebate.agreement_rebate_settlement_line_action
+msgid "Agreement settlement lines"
+msgstr "Stavke poravnanja ugovora"
+
+#. module: agreement_rebate
+#: model:ir.actions.act_window,name:agreement_rebate.agreement_rebate_settlement_action
+msgid "Agreement settlements"
+msgstr "Poravnanja ugovora"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_invoice_create_wiz__agreement_type_ids
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_settlement_create_wiz__agreement_type_ids
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.view_invoice_create_wiz
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.view_settlement_create_wiz
+msgid "Agreement types"
+msgstr "Vrste ugovora"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_invoice_create_wiz__agreement_ids
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_settlement_create_wiz__agreement_ids
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.view_invoice_create_wiz
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.view_settlement_create_wiz
+msgid "Agreements"
+msgstr "Ugovori"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement_line__amount_gross
+msgid "Amount Gross"
+msgstr "Bruto iznos"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement__amount_invoiced
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement_line__amount_invoiced
+msgid "Amount Invoiced"
+msgstr "Fakturirani iznos"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement__amount_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement_line__amount_rebate
+msgid "Amount Rebate"
+msgstr "Iznos rabata"
+
+#. module: agreement_rebate
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_rebate_settlement_form
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_rebate_settlement_line_search
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_rebate_settlement_search
+msgid "Archived"
+msgstr "Arhivirano"
+
+#. module: agreement_rebate
+#: model:ir.model.fields.selection,name:agreement_rebate.selection__agreement__rebate_type__section_prorated
+msgid "Calculate the discount in each amount section"
+msgstr "Izračunaj popust u svakom odjeljku iznosa"
+
+#. module: agreement_rebate
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.view_invoice_create_wiz
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.view_settlement_create_wiz
+msgid "Cancel"
+msgstr "Odustani"
+
+#. module: agreement_rebate
+#: model:ir.model.fields.selection,name:agreement_rebate.selection__agreement_invoice_create_wiz__invoice_group__commercial_partner
+msgid "Commercial partner"
+msgstr "Komercijalni partner"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement__company_id
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement_line__company_id
+msgid "Company"
+msgstr "Tvrtka"
+
+#. module: agreement_rebate
+#: model:ir.model.fields.selection,name:agreement_rebate.selection__agreement__rebate_type__section_total
+msgid "Compute total and apply discount rule match"
+msgstr "Izračunaj ukupno i primijeni podudaranje pravila popusta"
+
+#. module: agreement_rebate
+#: model:ir.ui.menu,name:agreement_rebate.agreement_invoice_create_menu
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.view_invoice_create_wiz
+msgid "Create invoices"
+msgstr "Napravi fakture"
+
+#. module: agreement_rebate
+#: model:ir.ui.menu,name:agreement_rebate.agreement_settlement_create_menu
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.view_settlement_create_wiz
+msgid "Create settlements"
+msgstr "Kreiraj poravnanja"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_invoice_create_wiz__create_uid
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_condition__create_uid
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_line__create_uid
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_section__create_uid
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement__create_uid
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement_line__create_uid
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_settlement_create_wiz__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_invoice_create_wiz__create_date
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_condition__create_date
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_line__create_date
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_section__create_date
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement__create_date
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement_line__create_date
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_settlement_create_wiz__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: agreement_rebate
+#: model:ir.model.fields.selection,name:agreement_rebate.selection__agreement_invoice_create_wiz__invoice_type__out_refund
+msgid "Customer Credit Note"
+msgstr "Knjižno odobrenje kupca"
+
+#. module: agreement_rebate
+#: model:ir.model.fields.selection,name:agreement_rebate.selection__agreement_invoice_create_wiz__invoice_type__out_invoice
+msgid "Customer Invoice"
+msgstr "Izlazni račun"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement__date
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement_line__date
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_settlement_create_wiz__date
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_rebate_settlement_line_search
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_rebate_settlement_search
+msgid "Date"
+msgstr "Datum"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement__date_from
+msgid "Date From"
+msgstr "Od datuma"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement__date_to
+msgid "Date To"
+msgstr "Datum do"
+
+#. module: agreement_rebate
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.view_invoice_create_wiz
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.view_settlement_create_wiz
+msgid "Dates filter"
+msgstr "Filtar datuma"
+
+#. module: agreement_rebate
+#. odoo-python
+#: code:addons/agreement_rebate/models/agreement_rebate_settlement.py:0
+msgid "Details"
+msgstr "Detalji"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_settlement_create_wiz__discard_settled_agreement
+msgid "Discard settled agreements"
+msgstr "Odbaci podmirene ugovore"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement__display_name
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_invoice_create_wiz__display_name
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_condition__display_name
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_line__display_name
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_section__display_name
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement__display_name
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement_line__display_name
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_settlement_create_wiz__display_name
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_type__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_invoice_create_wiz__domain
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_condition__rebate_domain
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_settlement_create_wiz__domain
+msgid "Domain"
+msgstr "Domena"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_invoice_create_wiz__invoice_partner_id
+msgid "Force invoice to"
+msgstr ""
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_invoice_create_wiz__date_from
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_section__amount_from
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement_line__amount_from
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_settlement_create_wiz__date_from
+msgid "From"
+msgstr "Od"
+
+#. module: agreement_rebate
+#: model:ir.model.fields.selection,name:agreement_rebate.selection__agreement_rebate_settlement_line__invoice_status__invoiced
+msgid "Fully Invoiced"
+msgstr "U potpunosti izdan račun"
+
+#. module: agreement_rebate
+#: model:ir.model.fields.selection,name:agreement_rebate.selection__agreement__rebate_type__global
+msgid "Global (A discount global for all lines)"
+msgstr ""
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_invoice_create_wiz__invoice_group
+msgid "Group invoice by"
+msgstr ""
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_account_move_line__id
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement__id
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_invoice_create_wiz__id
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_condition__id
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_line__id
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_section__id
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement__id
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement_line__id
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_settlement_create_wiz__id
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_type__id
+msgid "ID"
+msgstr "ID"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,help:agreement_rebate.field_agreement_settlement_create_wiz__discard_settled_agreement
+msgid ""
+"If checked, the agreements with settlements in selected period will be "
+"discard"
+msgstr ""
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement__invoice_id
+msgid "Invoice"
+msgstr "Račun"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement_line__invoice_status
+msgid "Invoice Status"
+msgstr "Stanje računa"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_invoice_create_wiz__invoice_type
+msgid "Invoice Type"
+msgstr ""
+
+#. module: agreement_rebate
+#: model:ir.actions.act_window,name:agreement_rebate.agreement_invoice_create_action
+msgid "Invoice create"
+msgstr ""
+
+#. module: agreement_rebate
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.view_invoice_create_wiz
+msgid "Invoice data"
+msgstr ""
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement_line__invoice_line_ids
+msgid "Invoice lines"
+msgstr "Stavke računa"
+
+#. module: agreement_rebate
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_rebate_settlement_line_search
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_rebate_settlement_search
+msgid "Invoiced"
+msgstr "Izdani računi"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement__is_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_type__is_rebate
+msgid "Is rebate agreement type"
+msgstr ""
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_invoice_create_wiz__journal_id
+msgid "Journal"
+msgstr "Dnevnik"
+
+#. module: agreement_rebate
+#: model:ir.model,name:agreement_rebate.model_account_move_line
+msgid "Journal Item"
+msgstr "Stavka dnevnika"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_settlement_create_wiz__journal_ids
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.view_settlement_create_wiz
+msgid "Journals"
+msgstr "Vrste Temeljnice"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_invoice_create_wiz__write_uid
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_condition__write_uid
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_line__write_uid
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_section__write_uid
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement__write_uid
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement_line__write_uid
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_settlement_create_wiz__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_invoice_create_wiz__write_date
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_condition__write_date
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_line__write_date
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_section__write_date
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement__write_date
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement_line__write_date
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_settlement_create_wiz__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: agreement_rebate
+#: model:ir.model.fields.selection,name:agreement_rebate.selection__agreement__rebate_type__line
+msgid "Line (A discount for every line)"
+msgstr ""
+
+#. module: agreement_rebate
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_form
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_rebate_settlement_form
+msgid "Lines"
+msgstr "Stavke"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement__name
+msgid "Name"
+msgstr "Naziv"
+
+#. module: agreement_rebate
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_rebate_settlement_search
+msgid "Name or agreement code"
+msgstr ""
+
+#. module: agreement_rebate
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_rebate_settlement_line_search
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_rebate_settlement_search
+msgid "Not invoiced"
+msgstr ""
+
+#. module: agreement_rebate
+#: model:ir.model.fields.selection,name:agreement_rebate.selection__agreement_rebate_settlement_line__invoice_status__no
+msgid "Nothing to Invoice"
+msgstr "Ništa za izdavanje računa"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement__partner_id
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement_line__partner_id
+#: model:ir.model.fields.selection,name:agreement_rebate.selection__agreement_invoice_create_wiz__invoice_group__partner
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_rebate_settlement_line_search
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_rebate_settlement_search
+msgid "Partner"
+msgstr "Partner"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement_line__percent
+msgid "Percent"
+msgstr "Postotak"
+
+#. module: agreement_rebate
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_rebate_settlement_line_search
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_rebate_settlement_search
+msgid "Period"
+msgstr "Razdoblje"
+
+#. module: agreement_rebate
+#. odoo-python
+#: code:addons/agreement_rebate/models/account_move_line.py:0
+msgid "Period: %(date_from)s - %(date_to)s"
+msgstr ""
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_invoice_create_wiz__product_id
+msgid "Product"
+msgstr "Proizvod"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_line__rebate_category_ids
+#: model:ir.model.fields.selection,name:agreement_rebate.selection__agreement_rebate_line__rebate_target__category
+msgid "Product categories"
+msgstr "Kategorije proizvoda"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_line__rebate_product_tmpl_ids
+#: model:ir.model.fields.selection,name:agreement_rebate.selection__agreement_rebate_line__rebate_target__product_tmpl
+msgid "Product templates"
+msgstr ""
+
+#. module: agreement_rebate
+#: model:ir.model.fields.selection,name:agreement_rebate.selection__agreement_rebate_line__rebate_target__product
+msgid "Product variant"
+msgstr ""
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_line__rebate_product_ids
+msgid "Products"
+msgstr "Proizvodi"
+
+#. module: agreement_rebate
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_form
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_search
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_type_search
+msgid "Rebate"
+msgstr ""
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement__rebate_discount
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_line__rebate_discount
+msgid "Rebate Discount"
+msgstr ""
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_line__rebate_domain
+msgid "Rebate Domain"
+msgstr ""
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement_line__rebate_line_id
+msgid "Rebate Line"
+msgstr ""
+
+#. module: agreement_rebate
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_rebate_line_form
+msgid "Rebate Lines"
+msgstr ""
+
+#. module: agreement_rebate
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_rebate_settlement_form
+msgid "Rebate Settlements"
+msgstr "Obračuni naknadnih rabata"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_line__rebate_target
+msgid "Rebate Target"
+msgstr ""
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_condition__name
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_line__rebate_condition_id
+#: model:ir.model.fields.selection,name:agreement_rebate.selection__agreement_rebate_line__rebate_target__condition
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_rebate_condition_form
+msgid "Rebate condition"
+msgstr ""
+
+#. module: agreement_rebate
+#: model:ir.ui.menu,name:agreement_rebate.agreement_rebate_condition_menu
+msgid "Rebate conditions"
+msgstr ""
+
+#. module: agreement_rebate
+#: model:ir.model.fields.selection,name:agreement_rebate.selection__agreement_rebate_line__rebate_target__domain
+msgid "Rebate domain"
+msgstr ""
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement_line__rebate_section_id
+msgid "Rebate section"
+msgstr ""
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement_line__settlement_id
+msgid "Rebate settlement"
+msgstr ""
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_invoice_create_wiz__settlements_ids
+msgid "Rebate settlements"
+msgstr ""
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement_line__rebate_type
+msgid "Rebate type"
+msgstr ""
+
+#. module: agreement_rebate
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_rebate_settlement_search
+msgid "Search agreement settlements"
+msgstr ""
+
+#. module: agreement_rebate
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_rebate_settlement_line_search
+msgid "Search settlement lines"
+msgstr ""
+
+#. module: agreement_rebate
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_form
+msgid "Sections"
+msgstr "Sekcije"
+
+#. module: agreement_rebate
+#: model:ir.model.fields.selection,name:agreement_rebate.selection__agreement_invoice_create_wiz__invoice_group__settlement
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_rebate_settlement_line_search
+msgid "Settlement"
+msgstr "Podmirenje"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement__line_ids
+#: model:ir.ui.menu,name:agreement_rebate.agreement_rebate_settlement_line_menu
+msgid "Settlement Lines"
+msgstr ""
+
+#. module: agreement_rebate
+#: model:ir.actions.act_window,name:agreement_rebate.agreement_settlement_create_action
+msgid "Settlement create"
+msgstr ""
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_account_move_line__agreement_rebate_settlement_line_ids
+msgid "Settlement lines"
+msgstr ""
+
+#. module: agreement_rebate
+#: model:ir.ui.menu,name:agreement_rebate.agreement_rebate_settlement_menu
+#: model:ir.ui.menu,name:agreement_rebate.agreement_rebate_settlement_menu_root
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.view_invoice_create_wiz
+msgid "Settlements"
+msgstr "Poravnanja"
+
+#. module: agreement_rebate
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_rebate_settlement_form
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_rebate_settlement_line_tree
+msgid "Show details"
+msgstr "Prikaži detalje"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement_line__target_domain
+msgid "Target Domain"
+msgstr ""
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_invoice_create_wiz__date_to
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_section__amount_to
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_rebate_settlement_line__amount_to
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement_settlement_create_wiz__date_to
+msgid "To"
+msgstr "Do"
+
+#. module: agreement_rebate
+#: model:ir.model.fields.selection,name:agreement_rebate.selection__agreement_rebate_settlement_line__invoice_status__to_invoice
+msgid "To Invoice"
+msgstr "Za izdavanje računa"
+
+#. module: agreement_rebate
+#: model_terms:ir.ui.view,arch_db:agreement_rebate.agreement_rebate_settlement_line_tree
+msgid "Total"
+msgstr "Ukupno"
+
+#. module: agreement_rebate
+#: model:res.groups,name:agreement_rebate.group_use_agreement_rebate
+msgid "Use agreement rebate"
+msgstr ""
+
+#. module: agreement_rebate
+#: model:ir.model.fields.selection,name:agreement_rebate.selection__agreement_invoice_create_wiz__invoice_type__in_invoice
+msgid "Vendor Bill"
+msgstr "Ulazni račun"
+
+#. module: agreement_rebate
+#: model:ir.model.fields.selection,name:agreement_rebate.selection__agreement_invoice_create_wiz__invoice_type__in_refund
+msgid "Vendor Credit Note"
+msgstr "Odobrenje dobavljača"
+
+#. module: agreement_rebate
+#: model:ir.model.fields,field_description:agreement_rebate.field_agreement__rebate_type
+msgid "rebate type"
+msgstr "vrsta rabata"

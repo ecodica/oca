@@ -1,0 +1,81 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* purchase_reception_status
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: purchase_reception_status
+#: model:ir.model.fields,field_description:purchase_reception_status.field_purchase_order__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: purchase_reception_status
+#: model:ir.model.fields,field_description:purchase_reception_status.field_purchase_order__force_received
+msgid "Force Received"
+msgstr ""
+
+#. module: purchase_reception_status
+#: model:ir.model.fields.selection,name:purchase_reception_status.selection__purchase_order__receipt_status__full
+#: model_terms:ir.ui.view,arch_db:purchase_reception_status.view_purchase_order_filter
+msgid "Fully Received"
+msgstr "Potpuno zaprimljeno"
+
+#. module: purchase_reception_status
+#: model:ir.model.fields,field_description:purchase_reception_status.field_purchase_order__id
+msgid "ID"
+msgstr "ID"
+
+#. module: purchase_reception_status
+#: model:ir.model.fields,help:purchase_reception_status.field_purchase_order__force_received
+msgid ""
+"If true, the order is marked forced only when all lines are fully received "
+"and at least one line was manually forced."
+msgstr ""
+
+#. module: purchase_reception_status
+#: model_terms:ir.ui.view,arch_db:purchase_reception_status.view_purchase_order_filter
+msgid "Not Fully Received"
+msgstr ""
+
+#. module: purchase_reception_status
+#: model:ir.model.fields.selection,name:purchase_reception_status.selection__purchase_order__receipt_status__pending
+msgid "Nothing Received"
+msgstr ""
+
+#. module: purchase_reception_status
+#: model:ir.model.fields.selection,name:purchase_reception_status.selection__purchase_order__receipt_status__partial
+msgid "Partially Received"
+msgstr "Djelomično zaprimljeno"
+
+#. module: purchase_reception_status
+#: model:ir.model,name:purchase_reception_status.model_purchase_order
+msgid "Purchase Order"
+msgstr "Nabavni nalog"
+
+#. module: purchase_reception_status
+#: model:ir.model.fields,field_description:purchase_reception_status.field_purchase_order__receipt_status
+#: model_terms:ir.ui.view,arch_db:purchase_reception_status.view_purchase_order_filter
+msgid "Receipt Status"
+msgstr "Status zaprimanja"
+
+#. module: purchase_reception_status
+#: model:ir.model.fields,help:purchase_reception_status.field_purchase_order__receipt_status
+msgid ""
+"Red: Late\n"
+"            Orange: To process today\n"
+"            Green: On time"
+msgstr ""
+"Crveno: Kasni\n"
+"            Narančasto: Za obraditi danas\n"
+"            zeleno: Na vrijeme"

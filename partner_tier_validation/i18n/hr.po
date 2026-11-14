@@ -1,0 +1,124 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* partner_tier_validation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: partner_tier_validation
+#: model:ir.model.fields,field_description:partner_tier_validation.field_res_partner__can_forward
+msgid "Can Forward"
+msgstr "Može proslijediti"
+
+#. module: partner_tier_validation
+#: model:ir.model.fields,field_description:partner_tier_validation.field_res_partner__can_review
+msgid "Can Review"
+msgstr "Može recenzirati"
+
+#. module: partner_tier_validation
+#: model:ir.model,name:partner_tier_validation.model_res_partner
+msgid "Contact"
+msgstr "Kontakt"
+
+#. module: partner_tier_validation
+#: model:ir.model.fields,field_description:partner_tier_validation.field_res_partner__display_name
+#: model:ir.model.fields,field_description:partner_tier_validation.field_tier_definition__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: partner_tier_validation
+#: model:ir.model.fields,field_description:partner_tier_validation.field_res_partner__has_comment
+msgid "Has Comment"
+msgstr "Ima komentar"
+
+#. module: partner_tier_validation
+#: model:ir.model.fields,field_description:partner_tier_validation.field_res_partner__hide_reviews
+msgid "Hide Reviews"
+msgstr "Sakrij recenzije"
+
+#. module: partner_tier_validation
+#: model:ir.model.fields,field_description:partner_tier_validation.field_res_partner__id
+#: model:ir.model.fields,field_description:partner_tier_validation.field_tier_definition__id
+msgid "ID"
+msgstr "ID"
+
+#. module: partner_tier_validation
+#: model:ir.model.fields,help:partner_tier_validation.field_res_partner__has_comment
+msgid "If set, Allow the reviewer to leave a comment on the review."
+msgstr ""
+"Ako je postavljeno, dozvoljava recenzentu da ostavi komentar na recenziji."
+
+#. module: partner_tier_validation
+#: model:ir.model.fields,field_description:partner_tier_validation.field_res_partner__need_validation
+msgid "Need Validation"
+msgstr "Treba validaciju"
+
+#. module: partner_tier_validation
+#: model_terms:ir.ui.view,arch_db:partner_tier_validation.partner_form_tier_filter
+msgid "Needs my Approval"
+msgstr "Treba moje odobrenje"
+
+#. module: partner_tier_validation
+#: model:ir.model.fields,field_description:partner_tier_validation.field_res_partner__next_review
+msgid "Next Review"
+msgstr "Sljedeća ovjera"
+
+#. module: partner_tier_validation
+#: model_terms:ir.ui.view,arch_db:partner_tier_validation.partner_form_tier_filter
+msgid "Partner(s) to Approve"
+msgstr "Partneri za odobrenje"
+
+#. module: partner_tier_validation
+#: model:ir.model.fields,field_description:partner_tier_validation.field_res_partner__rejected_message
+msgid "Rejected Message"
+msgstr "Poruka odbijanja"
+
+#. module: partner_tier_validation
+#: model:ir.model.fields,field_description:partner_tier_validation.field_res_partner__require_authentication
+msgid "Require Authentication"
+msgstr "Zahtijevaj autentikaciju"
+
+#. module: partner_tier_validation
+#: model:ir.model.fields,field_description:partner_tier_validation.field_res_partner__reviewer_ids
+msgid "Reviewers"
+msgstr "Recenzenti"
+
+#. module: partner_tier_validation
+#: model:ir.model,name:partner_tier_validation.model_tier_definition
+msgid "Tier Definition"
+msgstr "Definicija razine"
+
+#. module: partner_tier_validation
+#: model:ir.model.fields,field_description:partner_tier_validation.field_res_partner__to_validate_message
+msgid "To Validate Message"
+msgstr "Poruka za validaciju"
+
+#. module: partner_tier_validation
+#: model:tier.definition,name:partner_tier_validation.partner_tier_definition_company_only
+msgid "Validate New Company"
+msgstr "Validiraj novo poduzeće"
+
+#. module: partner_tier_validation
+#: model:ir.model.fields,field_description:partner_tier_validation.field_res_partner__validated_message
+msgid "Validated Message"
+msgstr "Poruka validacije"
+
+#. module: partner_tier_validation
+#: model:ir.model.fields,field_description:partner_tier_validation.field_res_partner__validation_status
+msgid "Validation Status"
+msgstr "Status validacije"
+
+#. module: partner_tier_validation
+#: model:ir.model.fields,field_description:partner_tier_validation.field_res_partner__review_ids
+msgid "Validations"
+msgstr "Validacije"

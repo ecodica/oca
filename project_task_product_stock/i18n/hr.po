@@ -1,0 +1,93 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* project_task_product_stock
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: project_task_product_stock
+#: model:ir.model,website_form_label:project_task_product_stock.model_project_task
+msgid "Create a Task"
+msgstr "Kreiraj zadatak"
+
+#. module: project_task_product_stock
+#: model:ir.model.fields,field_description:project_task_product_stock.field_project_task__display_name
+#: model:ir.model.fields,field_description:project_task_product_stock.field_stock_lot__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: project_task_product_stock
+#: model:ir.model.fields,help:project_task_product_stock.field_project_task__product_tracking
+msgid "Ensure the traceability of a storable product in your warehouse."
+msgstr "Osigurava sljedivost uskladištivog proizvoda u vašem skladištu."
+
+#. module: project_task_product_stock
+#: model:ir.model.fields,field_description:project_task_product_stock.field_project_task__id
+#: model:ir.model.fields,field_description:project_task_product_stock.field_stock_lot__id
+msgid "ID"
+msgstr "ID"
+
+#. module: project_task_product_stock
+#: model:ir.model,name:project_task_product_stock.model_stock_lot
+msgid "Lot/Serial"
+msgstr "Lot/Serija"
+
+#. module: project_task_product_stock
+#: model:ir.model.fields,field_description:project_task_product_stock.field_project_task__lot_id
+msgid "Lot/Serial Number"
+msgstr "Lot/Serijski broj"
+
+#. module: project_task_product_stock
+#: model:ir.model.fields,field_description:project_task_product_stock.field_project_task__product_tracking
+msgid "Product Tracking"
+msgstr "Praćenje proizvoda"
+
+#. module: project_task_product_stock
+#: model:ir.model,name:project_task_product_stock.model_project_task
+msgid "Task"
+msgstr "Zadatak"
+
+#. module: project_task_product_stock
+#: model:ir.model.fields,field_description:project_task_product_stock.field_stock_lot__task_count
+msgid "Task Count"
+msgstr ""
+
+#. module: project_task_product_stock
+#: model_terms:ir.ui.view,arch_db:project_task_product_stock.view_production_lot_form_inherit_tasks
+msgid "Tasks"
+msgstr "Zadaci"
+
+#. module: project_task_product_stock
+#: model:ir.model.fields,help:project_task_product_stock.field_project_task__display_name
+msgid ""
+"Use these keywords in the title to set new tasks:\n"
+"\n"
+"        30h Allocate 30 hours to the task\n"
+"        #tags Set tags on the task\n"
+"        @user Assign the task to a user\n"
+"        ! Set the task a medium priority\n"
+"        !! Set the task a high priority\n"
+"        !!! Set the task a urgent priority\n"
+"\n"
+"        Make sure to use the right format and order e.g. Improve the configuration screen 5h #feature #v16 @Mitchell !"
+msgstr ""
+"Koristite ove ključne riječi u naslovu za postavljanje novih zadataka:\n"
+"\n"
+"        30h Dodijeli 30 sati zadatku\n"
+"        #tags Postavi oznake na zadatak\n"
+"        @user Dodijeli zadatak korisniku\n"
+"        ! Postavi zadatku srednji prioritet\n"
+"        !! Postavi zadatku visoki prioritet\n"
+"        !!! Postavi zadatku hitni prioritet\n"
+"\n"
+"        Pazite da koristite ispravan format i redoslijed, npr. Poboljšaj zaslon konfiguracije 5h #feature #v16 @Mitchell !"

@@ -1,0 +1,1013 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_statement_import_online_paypal
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "ACH funding for funds recovery from account balance"
+msgstr "ACH financiranje za povrat sredstava sa stanja računa"
+
+#. module: account_statement_import_online_paypal
+#: model_terms:ir.ui.view,arch_db:account_statement_import_online_paypal.online_bank_statement_provider_form
+msgid "API base"
+msgstr "Baza API-ja"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "ATM withdrawal"
+msgstr "Podizanje s bankomata"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Account hold for ACH deposit"
+msgstr "Zadržavanje konta za ACH polog"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Account hold for open authorization"
+msgstr "Zadržavanje konta za otvoreno ovlaštenje"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Account receivable for shipping"
+msgstr "Potraživanje za otpremu"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Auto-sweep from account"
+msgstr "Automatsko prebacivanje s računa"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "AutoSweep"
+msgstr "Automatsko prebacivanje"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "BML credit, transfer from BML"
+msgstr "BML kredit, prijenos s BML-a"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "BML withdrawal, transfer to BML"
+msgstr "BML podizanje, prijenos na BML"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Balance manager account bonus"
+msgstr "Bonus upravitelja stanja računa"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Bill pay transaction"
+msgstr "Transakcija plaćanja računa"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Blocked payments"
+msgstr "Blokirana plaćanja"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Bonus for first ACH use"
+msgstr "Bonus za prvu upotrebu ACH-a"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Buyer credit payment"
+msgstr "Plaćanje kreditom kupca"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Buyer credit payment withdrawal, transfer to BML"
+msgstr "Podizanje plaćanja kreditom kupca, prijenos na BML"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Cancellation of hold for dispute resolution"
+msgstr "Otkazivanje zadržavanja zbog rješavanja spora"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Charge-off adjustment"
+msgstr "Prilagodba otpisa"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Chargeback"
+msgstr "Povrat transakcije (chargeback)"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Chargeback cancellation"
+msgstr "Otkazivanje povrata transakcije"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Chargeback processing fee"
+msgstr "Naknada obrade povrata transakcije"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Chargeback re-presentment rejection"
+msgstr "Odbijanje ponovnog predstavljanja povrata transakcije"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Chargeback reversal"
+msgstr "Storno povrata transakcije"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Check withdrawal"
+msgstr "Podizanje čeka"
+
+#. module: account_statement_import_online_paypal
+#: model_terms:ir.ui.view,arch_db:account_statement_import_online_paypal.online_bank_statement_provider_form
+msgid "Client ID"
+msgstr "ID klijenta"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Coupon redemption"
+msgstr "Iskorištenje kupona"
+
+#. module: account_statement_import_online_paypal
+#: model_terms:ir.ui.view,arch_db:account_statement_import_online_paypal.online_bank_statement_provider_form
+msgid "Credentials"
+msgstr "Akreditiv"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Credit card cash back bonus"
+msgstr "Bonus povrata gotovine kreditne kartice"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Credit card deposit for negative PayPal account balance"
+msgstr "Polog kreditne kartice za negativno stanje PayPal računa"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Credit card security charge refund"
+msgstr "Povrat naknade sigurnosti kreditne kartice"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Currency conversion required to cover negative balance"
+msgstr "Potrebna konverzija valute za pokriće negativnog stanja"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Debit card cash back bonus"
+msgstr "Bonus povrata gotovine debitne kartice"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Deferred disbursement, funds collected for disbursement"
+msgstr "Odgođena isplata, sredstva prikupljena za isplatu"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Delayed disbursement, funds disbursed"
+msgstr "Odgođena isplata, sredstva isplaćena"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Direct payment API"
+msgstr "API izravnog plaćanja"
+
+#. module: account_statement_import_online_paypal
+#: model:ir.model.fields,field_description:account_statement_import_online_paypal.field_online_bank_statement_provider__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Display only transaction"
+msgstr "Prikaži samo transakciju"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Donation payment"
+msgstr "Plaćanje donacije"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Electronic funds transfer (EFT)"
+msgstr "Elektronički prijenos sredstava (EFT)"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Failed to acquire token using Client ID and Secret!"
+msgstr "Nije uspjelo dobivanje tokena pomoću ID-a klijenta i tajne!"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid ""
+"Failed to resolve transaction %(first_transaction_id)s "
+"(%(first_transaction_date)s)"
+msgstr ""
+"Nije uspjelo razrješavanje transakcije %(first_transaction_id)s "
+"(%(first_transaction_date)s)"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid ""
+"Failed to resolve transaction %(last_transaction_id)s "
+"(%(last_transaction_date)s)"
+msgstr ""
+"Nije uspjelo razrješavanje transakcije %(last_transaction_id)s "
+"(%(last_transaction_date)s)"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Fee for %s"
+msgstr "Naknada za %s"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Fee refund"
+msgstr "Povrat naknade"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Fee reversal"
+msgstr "Storno naknade"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Foreign bank withdrawal fee"
+msgstr "Naknada podizanja u stranoj banci"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Funds available"
+msgstr "Dostupna sredstva"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Funds not yet available"
+msgstr "Sredstva još nisu dostupna"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Funds payable: PayPal-provided funds that must be paid back"
+msgstr ""
+"Sredstva na isplatu: sredstva koja PayPal pruža i koja se moraju vratiti"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Funds receivable: PayPal-provided funds that are being paid back"
+msgstr "Sredstva na naplatu: sredstva koja PayPal pruža i koja se vraćaju"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "General PayPal debit card transaction"
+msgstr "Opća PayPal debitna kartična transakcija"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "General PayPal-to-PayPal payment"
+msgstr "Opće plaćanje između PayPal računa"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "General account adjustment"
+msgstr "Opća prilagodba konta"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "General adjustment without business-related event"
+msgstr "Opća prilagodba bez poslovno povezanog događaja"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "General authorization"
+msgstr "Opće ovlaštenje"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "General bonus"
+msgstr "Opći bonus"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "General buyer credit payment"
+msgstr "Opće plaćanje kreditom kupca"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "General credit card deposit"
+msgstr "Opći polog kreditne kartice"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "General credit card withdrawal"
+msgstr "Opće podizanje kreditne kartice"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "General currency conversion"
+msgstr "Opća konverzija valute"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "General dividend"
+msgstr "Opća dividenda"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "General funding of PayPal account"
+msgstr "Opće financiranje PayPal računa"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "General hold"
+msgstr "Opće zadržavanje"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "General hold release"
+msgstr "Opće oslobađanje zadržavanja"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "General incentive or certificate redemption"
+msgstr "Opće iskorištenje poticaja ili certifikata"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "General intra-account transfer"
+msgstr "Opći prijenos unutar računa"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "General non-payment fee"
+msgstr "Opća naknada za neplaćanje"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "General reversal"
+msgstr "Opći storno"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "General temporary hold"
+msgstr "Opće privremeno zadržavanje"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "General withdrawal from PayPal account"
+msgstr "Opće podizanje s PayPal računa"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "General withdrawal to non-bank institution"
+msgstr "Opće podizanje u nebankarsku instituciju"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Generic instrument-funded payment"
+msgstr "Generičko plaćanje financirano instrumentom"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Generic instrument/Open Wallet reversals (buyer side)"
+msgstr "Generička storniranja instrumenta/otvorenog novčanika (strana kupca)"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Generic instrument/Open Wallet reversals (seller side)"
+msgstr ""
+"Generička storniranja instrumenta/otvorenog novčanika (strana prodavatelja)"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Generic instrument/Open Wallet transaction"
+msgstr "Generička transakcija instrumenta/otvorenog novčanika"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Gift certificate expiration fee"
+msgstr "Naknada isteka poklon certifikata"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Gift certificate payment, purchase of gift certificate"
+msgstr "Plaćanje poklon certifikatom, kupnja poklon certifikata"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Gift certificate purchase"
+msgstr "Kupnja poklon certifikata"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Gift certificate redemption"
+msgstr "Iskorištenje poklon certifikata"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Hidden virtual PayPal debit card transaction"
+msgstr "Skrivena virtualna PayPal debitna kartična transakcija"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Hold for dispute investigation"
+msgstr "Zadržavanje za istragu spora"
+
+#. module: account_statement_import_online_paypal
+#: model:ir.model.fields,field_description:account_statement_import_online_paypal.field_online_bank_statement_provider__id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Incentive adjustment"
+msgstr "Prilagodba poticaja"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Instant payment review (IPR) reversal"
+msgstr "Storno pregleda instant plaćanja (IPR)"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "International credit card withdrawal"
+msgstr "Međunarodno podizanje kreditne kartice"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Invalid JSON response from PayPal API."
+msgstr "Nevažeći JSON odgovor iz PayPal API-ja."
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Invalid token type!"
+msgstr "Nevažeća vrsta tokena!"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Invoice %s"
+msgstr "Račun %s"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "MAM reversal"
+msgstr "MAM storno"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Mass payment batch fee"
+msgstr "Naknada masovne serije plaćanja"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "MassPay payment"
+msgstr "MassPay plaćanje"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "MassPay refund transaction"
+msgstr "MassPay povrat transakcije"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "MassPay reversal transaction"
+msgstr "MassPay storno transakcije"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Merchant referral account bonus"
+msgstr "Bonus računa preporuke trgovca"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Mobile payment, made through a mobile phone"
+msgstr "Mobilno plaćanje, napravljeno putem mobilnog telefona"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "No authentication specified!"
+msgstr "Nije navedena autentikacija!"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Non-reference credit payment"
+msgstr "Nekreditno plaćanje bez reference"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Offers used as funding source"
+msgstr "Ponude korištene kao izvor financiranja"
+
+#. module: account_statement_import_online_paypal
+#: model:ir.model,name:account_statement_import_online_paypal.model_online_bank_statement_provider
+msgid "Online Bank Statement Provider"
+msgstr "Pružatelj online bankovnog izvoda"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Other"
+msgstr "Ostalo"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Partner fee"
+msgstr "Naknada partnera"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "PayPal App features are configured incorrectly!"
+msgstr "Značajke PayPal aplikacije su pogrešno konfigurirane!"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "PayPal Checkout APIs"
+msgstr "PayPal Checkout API-ji"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "PayPal Here payment"
+msgstr "PayPal Here plaćanje"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid ""
+"PayPal allows retrieving transactions only up to 3 years in the past. Please"
+" import older transactions manually. See "
+"https://www.paypal.com/us/smarthelp/article/why-can't-i-access-transaction-"
+"history-greater-than-3-years-ts2241"
+msgstr ""
+"PayPal dopušta dohvaćanje transakcija samo do 3 godine u prošlosti. Uvezite "
+"starije transakcije ručno. Pogledajte "
+"https://www.paypal.com/us/smarthelp/article/why-can't-i-access-transaction-"
+"history-greater-than-3-years-ts2241"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "PayPal balance manager funding of PayPal account"
+msgstr "Financiranje PayPal računa od PayPal upravitelja stanja"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "PayPal buyer credit payment funding"
+msgstr "Financiranje plaćanja PayPal kreditom kupca"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "PayPal buyer warranty bonus"
+msgstr "PayPal bonus jamstva kupca"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "PayPal debit authorization"
+msgstr "PayPal ovlaštenje terećenja"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "PayPal debit card cash advance"
+msgstr "PayPal predujam debitne kartice"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "PayPal debit card withdrawal to ATM"
+msgstr "PayPal podizanje debitne kartice na bankomatu"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid ""
+"PayPal protection bonus, payout for PayPal buyer protection, payout for full"
+" protection with PayPal buyer credit."
+msgstr ""
+"PayPal bonus zaštite, isplata za PayPal zaštitu kupca, isplata za potpunu "
+"zaštitu uz PayPal kredit kupca."
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Payment fee"
+msgstr "Naknada plaćanja"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Payment hold"
+msgstr "Zadržavanje plaćanja"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Payment hold release"
+msgstr "Oslobađanje zadržavanja plaćanja"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Payment refund, initiated by merchant"
+msgstr "Povrat plaćanja, pokrenuo trgovac"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Payment reversal, initiated by PayPal"
+msgstr "Storno plaćanja, pokrenuo PayPal"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Payment review hold"
+msgstr "Zadržavanje pregleda plaćanja"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Payment review release"
+msgstr "Oslobađanje pregleda plaćanja"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Points incentive redemption"
+msgstr "Iskorištenje bodova poticaja"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Postage payment to carrier"
+msgstr "Plaćanje poštarine prijevozniku"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Pre-approved payment (BillUser API)"
+msgstr "Unaprijed odobreno plaćanje (BillUser API)"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Reauthorization"
+msgstr "Ponovno ovlaštenje"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Rebate or cash back reversal"
+msgstr "Storno rabata ili povrata gotovine"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Rebate payments"
+msgstr "Plaćanja rabata"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Receivables financing - Applicable only in Brazil"
+msgstr "Financiranje potraživanja - primjenjivo samo u Brazilu"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Reimbursement of chargeback"
+msgstr "Povrat povrata transakcije (reimbursement)"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Reserve hold"
+msgstr "Zadržavanje rezerve"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Reserve release"
+msgstr "Oslobađanje rezerve"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Reversal of ACH deposit"
+msgstr "Storno ACH pologa"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Reversal of ACH withdrawal transaction"
+msgstr "Storno ACH transakcije podizanja"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Reversal of debit card transaction"
+msgstr "Storno transakcije debitne kartice"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Reversal of general account hold"
+msgstr "Storno zadržavanja općeg konta"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Reversal of points usage"
+msgstr "Storno korištenja bodova"
+
+#. module: account_statement_import_online_paypal
+#: model_terms:ir.ui.view,arch_db:account_statement_import_online_paypal.online_bank_statement_provider_form
+msgid "Secret"
+msgstr "Tajna"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Settlement consolidation"
+msgstr "Konsolidacija poravnanja"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Store-to-store transfers"
+msgstr "Prijenosi iz trgovine u trgovinu"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Subscription payment"
+msgstr "Plaćanje pretplate"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Tax hold"
+msgstr "Zadržavanje poreza"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Tax withholding to IRS"
+msgstr "Porez po odbitku prema IRS-u"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Temporary hold on available balance"
+msgstr "Privremeno zadržavanje dostupnog stanja"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Third-party auction payment"
+msgstr "Aukcijsko plaćanje treće strane"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Third-party payout"
+msgstr "Isplata trećoj strani"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Third-party recoupment"
+msgstr "Naplata trećoj strani"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Transaction fee for %s"
+msgstr "Naknada transakcije za %s"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Transfer of funds from payable"
+msgstr "Prijenos sredstava s obveza"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Transfer to and from a credit-card-funded restricted balance"
+msgstr "Prijenos na i s kreditno-kartičnog ograničenog stanja"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Transfer to external GL entity"
+msgstr "Prijenos na vanjski GL subjekt"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Unknown authentication specified!"
+msgstr "Nepoznata autentikacija!"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Unknown error"
+msgstr "Nepoznata greška"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "User-initiated currency conversion"
+msgstr "Korisnički pokrenuta konverzija valute"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Virtual PayPal debit card transaction"
+msgstr "Virtualna PayPal debitna kartična transakcija"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Virtual terminal payment"
+msgstr "Plaćanje virtualnim terminalom"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Void of authorization"
+msgstr "Opoziv ovlaštenja"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Warranty fee for warranty purchase"
+msgstr "Naknada za jamstvo pri kupnji jamstva"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Website payments standard payment"
+msgstr "Standardno plaćanje website plaćanja"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Website payments. Pro account monthly fee"
+msgstr "Website plaćanja. Mjesečna naknada Pro računa"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "Withdrawal to Hyperwallet"
+msgstr "Podizanje u Hyperwallet"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid ""
+"Withdrawals initiated by user manually. Not related to automated scheduled "
+"withdrawals"
+msgstr ""
+"Podizanja koja je korisnik pokrenuo ručno. Nisu povezana s automatiziranim "
+"planiranim podizanjima"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "WorldLink check withdrawal fee"
+msgstr "Naknada podizanja WorldLink čeka"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "WorldLink withdrawal"
+msgstr "WorldLink podizanje"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "eBay auction payment"
+msgstr "eBay aukcijsko plaćanje"
+
+#. module: account_statement_import_online_paypal
+#. odoo-python
+#: code:addons/account_statement_import_online_paypal/models/online_bank_statement_provider_paypal.py:0
+msgid "eBay loyalty incentive"
+msgstr "eBay poticaj lojalnosti"

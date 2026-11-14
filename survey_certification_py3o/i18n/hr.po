@@ -1,0 +1,68 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* survey_certification_py3o
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: survey_certification_py3o
+#: model:ir.actions.report,name:survey_certification_py3o.custom_certification_report
+msgid "Custom Certifications"
+msgstr "Prilagođeni certifikati"
+
+#. module: survey_certification_py3o
+#: model_terms:ir.ui.view,arch_db:survey_certification_py3o.survey_form
+msgid "Custom Template"
+msgstr "Prilagođeni predložak"
+
+#. module: survey_certification_py3o
+#: model:ir.model.fields,field_description:survey_certification_py3o.field_mail_template__display_name
+#: model:ir.model.fields,field_description:survey_certification_py3o.field_py3o_report__display_name
+#: model:ir.model.fields,field_description:survey_certification_py3o.field_survey_survey__display_name
+#: model:ir.model.fields,field_description:survey_certification_py3o.field_survey_user_input__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: survey_certification_py3o
+#: model:ir.model,name:survey_certification_py3o.model_mail_template
+msgid "Email Templates"
+msgstr "Predlošci e-mail poruka"
+
+#. module: survey_certification_py3o
+#: model:ir.model.fields,field_description:survey_certification_py3o.field_mail_template__id
+#: model:ir.model.fields,field_description:survey_certification_py3o.field_py3o_report__id
+#: model:ir.model.fields,field_description:survey_certification_py3o.field_survey_survey__id
+#: model:ir.model.fields,field_description:survey_certification_py3o.field_survey_user_input__id
+msgid "ID"
+msgstr "ID"
+
+#. module: survey_certification_py3o
+#: model:ir.model,name:survey_certification_py3o.model_py3o_report
+msgid "Report Py30"
+msgstr ""
+
+#. module: survey_certification_py3o
+#: model:ir.model,name:survey_certification_py3o.model_survey_survey
+msgid "Survey"
+msgstr "Anketa"
+
+#. module: survey_certification_py3o
+#: model:ir.model,name:survey_certification_py3o.model_survey_user_input
+msgid "Survey User Input"
+msgstr "Anketa koju popunjava korisnik"
+
+#. module: survey_certification_py3o
+#: model:ir.model.fields,field_description:survey_certification_py3o.field_survey_survey__py3o_template_id
+#: model:ir.model.fields,field_description:survey_certification_py3o.field_survey_user_input__py3o_template_id
+msgid "Template"
+msgstr "Predložak"

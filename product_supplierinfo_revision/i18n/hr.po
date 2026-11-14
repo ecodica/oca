@@ -1,0 +1,124 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_supplierinfo_revision
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: product_supplierinfo_revision
+#: model_terms:ir.ui.view,arch_db:product_supplierinfo_revision.supplierinfo_duplicate_wizard_view
+msgid "Apply"
+msgstr "Primjeni"
+
+#. module: product_supplierinfo_revision
+#: model_terms:ir.ui.view,arch_db:product_supplierinfo_revision.supplierinfo_duplicate_wizard_view
+msgid "Cancel"
+msgstr "Odustani"
+
+#. module: product_supplierinfo_revision
+#: model:ir.model.fields,field_description:product_supplierinfo_revision.field_product_supplierinfo_duplicate_wizard__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: product_supplierinfo_revision
+#: model:ir.model.fields,field_description:product_supplierinfo_revision.field_product_supplierinfo_duplicate_wizard__create_date
+msgid "Created on"
+msgstr "Kreiran"
+
+#. module: product_supplierinfo_revision
+#: model:ir.model.fields,field_description:product_supplierinfo_revision.field_product_supplierinfo_duplicate_wizard__date_end
+msgid "Date End"
+msgstr "Datum završetka"
+
+#. module: product_supplierinfo_revision
+#: model:ir.model.fields,field_description:product_supplierinfo_revision.field_product_supplierinfo_duplicate_wizard__date_start
+msgid "Date Start"
+msgstr "Datum početka"
+
+#. module: product_supplierinfo_revision
+#: model:ir.model.fields,field_description:product_supplierinfo_revision.field_product_supplierinfo__display_name
+#: model:ir.model.fields,field_description:product_supplierinfo_revision.field_product_supplierinfo_duplicate_wizard__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: product_supplierinfo_revision
+#: model:ir.actions.act_window,name:product_supplierinfo_revision.supplierinfo_duplicate_wizard_action
+msgid "Duplicate Supplier Info"
+msgstr "Dupliciraj informacije dobavljača"
+
+#. module: product_supplierinfo_revision
+#: model:ir.model.fields,field_description:product_supplierinfo_revision.field_product_supplierinfo__id
+#: model:ir.model.fields,field_description:product_supplierinfo_revision.field_product_supplierinfo_duplicate_wizard__id
+msgid "ID"
+msgstr "ID"
+
+#. module: product_supplierinfo_revision
+#: model:ir.model.fields,field_description:product_supplierinfo_revision.field_product_supplierinfo_duplicate_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: product_supplierinfo_revision
+#: model:ir.model.fields,field_description:product_supplierinfo_revision.field_product_supplierinfo_duplicate_wizard__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: product_supplierinfo_revision
+#: model:ir.model.fields,field_description:product_supplierinfo_revision.field_product_customerinfo__previous_price
+#: model:ir.model.fields,field_description:product_supplierinfo_revision.field_product_supplierinfo__previous_price
+msgid "Previous Price"
+msgstr ""
+
+#. module: product_supplierinfo_revision
+#: model:ir.model.fields,field_description:product_supplierinfo_revision.field_product_customerinfo__previous_info_id
+#: model:ir.model.fields,field_description:product_supplierinfo_revision.field_product_supplierinfo__previous_info_id
+msgid "Previous info"
+msgstr ""
+
+#. module: product_supplierinfo_revision
+#: model:ir.model,name:product_supplierinfo_revision.model_product_supplierinfo_duplicate_wizard
+msgid "Product Supplier Duplicate Wizard"
+msgstr ""
+
+#. module: product_supplierinfo_revision
+#: model:ir.model.fields,help:product_supplierinfo_revision.field_product_customerinfo__previous_info_id
+#: model:ir.model.fields,help:product_supplierinfo_revision.field_product_supplierinfo__previous_info_id
+msgid "Relation with previous info when duplicate line"
+msgstr ""
+
+#. module: product_supplierinfo_revision
+#: model_terms:ir.ui.view,arch_db:product_supplierinfo_revision.supplierinfo_duplicate_wizard_view
+msgid ""
+"Set new start date and variation percent to duplicate.\n"
+"                    This process set start date previous day as end date of\n"
+"                    origin record.\n"
+"                    <br/>\n"
+"                    <br/>"
+msgstr ""
+
+#. module: product_supplierinfo_revision
+#: model:ir.model,name:product_supplierinfo_revision.model_product_supplierinfo
+msgid "Supplier Pricelist"
+msgstr "Cjenik dobavljača"
+
+#. module: product_supplierinfo_revision
+#: model:ir.model.fields,help:product_supplierinfo_revision.field_product_customerinfo__previous_price
+#: model:ir.model.fields,help:product_supplierinfo_revision.field_product_supplierinfo__previous_price
+msgid "The price to purchase a product"
+msgstr "CIjena za kupnju proizvoda"
+
+#. module: product_supplierinfo_revision
+#: model:ir.model.fields,field_description:product_supplierinfo_revision.field_product_customerinfo__variation_percent
+#: model:ir.model.fields,field_description:product_supplierinfo_revision.field_product_supplierinfo__variation_percent
+#: model:ir.model.fields,field_description:product_supplierinfo_revision.field_product_supplierinfo_duplicate_wizard__variation_percent
+msgid "Variation %"
+msgstr "Varijacija %"

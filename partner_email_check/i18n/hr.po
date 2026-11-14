@@ -1,0 +1,133 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* partner_email_check
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: partner_email_check
+#. odoo-python
+#: code:addons/partner_email_check/models/res_partner.py:0
+msgid "%s is an invalid email"
+msgstr "%s je nevažeća e-pošta"
+
+#. module: partner_email_check
+#. odoo-python
+#: code:addons/partner_email_check/models/res_partner.py:0
+msgid "Cannot deliver to email address %s"
+msgstr "Ne može se isporučiti na adresu e-pošte %s"
+
+#. module: partner_email_check
+#: model:ir.model.fields,field_description:partner_email_check.field_res_company__partner_email_check_check_deliverability
+#: model:ir.model.fields,field_description:partner_email_check.field_res_config_settings__partner_email_check_check_deliverability
+msgid "Check deliverability of email addresses"
+msgstr "Provjeri isporučivost adresa e-pošte"
+
+#. module: partner_email_check
+#: model:ir.model.fields,field_description:partner_email_check.field_res_company__partner_email_check_syntax
+#: model:ir.model.fields,field_description:partner_email_check.field_res_config_settings__partner_email_check_syntax
+msgid "Check syntax of email addresses"
+msgstr "Provjeri sintaksu adresa e-pošte"
+
+#. module: partner_email_check
+#: model:ir.model,name:partner_email_check.model_res_company
+msgid "Companies"
+msgstr "Tvrtke"
+
+#. module: partner_email_check
+#: model:ir.model,name:partner_email_check.model_res_config_settings
+msgid "Config Settings"
+msgstr "Postavke"
+
+#. module: partner_email_check
+#: model:ir.model.fields,field_description:partner_email_check.field_res_company__display_name
+#: model:ir.model.fields,field_description:partner_email_check.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:partner_email_check.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: partner_email_check
+#: model:ir.model.fields,help:partner_email_check.field_res_company__partner_email_check_check_deliverability
+#: model:ir.model.fields,help:partner_email_check.field_res_config_settings__partner_email_check_check_deliverability
+msgid "Don't allow email addresses with providers that don't exist"
+msgstr "Ne dopusti adrese e-pošte s pružateljima koji ne postoje"
+
+#. module: partner_email_check
+#: model:ir.model.fields,help:partner_email_check.field_res_company__partner_email_check_syntax
+#: model:ir.model.fields,help:partner_email_check.field_res_config_settings__partner_email_check_syntax
+msgid "Don't allow email addresses with wrong syntax"
+msgstr "Ne dopusti adrese e-pošte s pogrešnom sintaksom"
+
+#. module: partner_email_check
+#: model:ir.model.fields,help:partner_email_check.field_res_company__partner_email_check_filter_duplicates
+#: model:ir.model.fields,help:partner_email_check.field_res_config_settings__partner_email_check_filter_duplicates
+msgid "Don't allow multiple partners to have the same email address."
+msgstr "Ne dopusti da više partnera ima istu adresu e-pošte."
+
+#. module: partner_email_check
+#. odoo-python
+#: code:addons/partner_email_check/models/res_partner.py:0
+msgid "Email '%s' is already in use."
+msgstr "E-pošta '%s' već se koristi."
+
+#. module: partner_email_check
+#: model_terms:ir.ui.view,arch_db:partner_email_check.view_general_configuration
+msgid "Email validation"
+msgstr "Validacija e-pošte"
+
+#. module: partner_email_check
+#: model_terms:ir.ui.view,arch_db:partner_email_check.view_general_configuration
+msgid "Ensure that partner email addresses can be delivered to"
+msgstr "Osiguraj da se adrese e-pošte partnera mogu isporučiti"
+
+#. module: partner_email_check
+#: model:ir.model,name:partner_email_check.model_res_partner
+msgid "Fake Model"
+msgstr "Lažni model"
+
+#. module: partner_email_check
+#. odoo-python
+#: code:addons/partner_email_check/models/res_partner.py:0
+msgid ""
+"Field contains multiple email addresses. This is not supported when "
+"duplicate email addresses are not allowed."
+msgstr ""
+
+#. module: partner_email_check
+#: model:ir.model.fields,field_description:partner_email_check.field_res_company__partner_email_check_filter_duplicates
+#: model:ir.model.fields,field_description:partner_email_check.field_res_config_settings__partner_email_check_filter_duplicates
+msgid "Filter duplicate partner email addresses"
+msgstr ""
+
+#. module: partner_email_check
+#: model:ir.model.fields,field_description:partner_email_check.field_res_company__id
+#: model:ir.model.fields,field_description:partner_email_check.field_res_config_settings__id
+#: model:ir.model.fields,field_description:partner_email_check.field_res_partner__id
+msgid "ID"
+msgstr "ID"
+
+#. module: partner_email_check
+#: model_terms:ir.ui.view,arch_db:partner_email_check.view_general_configuration
+msgid "Require partner email addresses to be unique"
+msgstr ""
+
+#. module: partner_email_check
+#: model_terms:ir.ui.view,arch_db:partner_email_check.view_general_configuration
+msgid "Require partner email addresses to have valid syntax"
+msgstr ""
+
+#. module: partner_email_check
+#: model_terms:ir.ui.view,arch_db:partner_email_check.view_general_configuration
+msgid "Values set here are company-specific."
+msgstr ""
+"Vrijednosti koje su ovdje postavljene specifične su za pojedine tvrtke."

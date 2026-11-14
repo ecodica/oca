@@ -1,0 +1,96 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* web_company_context_highlight
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: web_company_context_highlight
+#: model_terms:ir.ui.view,arch_db:web_company_context_highlight.res_config_settings_view_form
+msgid "Background Color"
+msgstr "Boja pozadine"
+
+#. module: web_company_context_highlight
+#: model:ir.model.fields,help:web_company_context_highlight.field_res_config_settings__web_company_context_highlight_color
+msgid ""
+"Background color used to highlight the company switcher when in multi-"
+"company context."
+msgstr ""
+"Pozadinska boja koja se koristi za isticanje preklopnika tvrtke u kontekstu "
+"više tvrtki."
+
+#. module: web_company_context_highlight
+#: model:ir.model.fields,field_description:web_company_context_highlight.field_res_config_settings__web_company_context_highlight_color
+msgid "Company Highlight Color"
+msgstr "Boja isticanja tvrtke"
+
+#. module: web_company_context_highlight
+#: model:ir.model.fields,field_description:web_company_context_highlight.field_res_config_settings__web_company_context_highlight_text_color
+msgid "Company Highlight Text Color"
+msgstr "Boja teksta isticanja tvrtke"
+
+#. module: web_company_context_highlight
+#: model_terms:ir.ui.view,arch_db:web_company_context_highlight.res_config_settings_view_form
+msgid "Company Switcher Highlight"
+msgstr "Isticanje preklopnika tvrtke"
+
+#. module: web_company_context_highlight
+#: model:ir.model,name:web_company_context_highlight.model_res_config_settings
+msgid "Config Settings"
+msgstr "Postavke"
+
+#. module: web_company_context_highlight
+#: model_terms:ir.ui.view,arch_db:web_company_context_highlight.res_config_settings_view_form
+msgid ""
+"Configure background and text colors to highlight the company switcher when "
+"multiple companies are selected."
+msgstr ""
+"Konfigurirajte pozadinsku i tekstualnu boju za isticanje preklopnika tvrtke "
+"kada je odabrano više tvrtki."
+
+#. module: web_company_context_highlight
+#: model:ir.model.fields,field_description:web_company_context_highlight.field_ir_http__display_name
+#: model:ir.model.fields,field_description:web_company_context_highlight.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: web_company_context_highlight
+#: model:ir.model,name:web_company_context_highlight.model_ir_http
+msgid "HTTP Routing"
+msgstr "HTTP usmjeravanje"
+
+#. module: web_company_context_highlight
+#: model:ir.model.fields,field_description:web_company_context_highlight.field_ir_http__id
+#: model:ir.model.fields,field_description:web_company_context_highlight.field_res_config_settings__id
+msgid "ID"
+msgstr "ID"
+
+#. module: web_company_context_highlight
+#. odoo-javascript
+#: code:addons/web_company_context_highlight/static/src/xml/switch_company_menu.xml:0
+msgid "Multi-company context active"
+msgstr "Kontekst više tvrtki aktivan"
+
+#. module: web_company_context_highlight
+#: model_terms:ir.ui.view,arch_db:web_company_context_highlight.res_config_settings_view_form
+msgid "Text Color"
+msgstr "Boja teksta"
+
+#. module: web_company_context_highlight
+#: model:ir.model.fields,help:web_company_context_highlight.field_res_config_settings__web_company_context_highlight_text_color
+msgid ""
+"Text color used to highlight the company switcher when in multi-company "
+"context."
+msgstr ""
+"Boja teksta koja se koristi za isticanje preklopnika tvrtke u kontekstu više"
+" tvrtki."

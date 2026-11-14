@@ -1,0 +1,72 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_invoice_fixed_discount
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-11-14 00:00+0000\n"
+"Last-Translator: Ecodica d.o.o.\n"
+"Language-Team: Ecodica d.o.o.\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: account_invoice_fixed_discount
+#: model_terms:ir.ui.view,arch_db:account_invoice_fixed_discount.report_invoice_document
+msgid "<span class=\"text-nowrap\"> %)</span>"
+msgstr "<span class=\"text-nowrap\"> %)</span>"
+
+#. module: account_invoice_fixed_discount
+#: model_terms:ir.ui.view,arch_db:account_invoice_fixed_discount.report_invoice_document
+msgid "<span class=\"text-nowrap\"> (or</span>"
+msgstr "<span class=\"text-nowrap\"> (ili</span>"
+
+#. module: account_invoice_fixed_discount
+#: model_terms:ir.ui.view,arch_db:account_invoice_fixed_discount.report_invoice_document
+msgid "<span>Discount Amount (%)</span>"
+msgstr "<span>Iznos popusta (%)</span>"
+
+#. module: account_invoice_fixed_discount
+#: model:ir.model.fields,help:account_invoice_fixed_discount.field_account_move_line__discount_fixed
+msgid ""
+"Apply a fixed amount discount to this line. The amount is multiplied by the "
+"quantity of the product."
+msgstr ""
+"Primijeni popust s fiksnim iznosom na ovu stavku. Iznos se množi količinom "
+"proizvoda."
+
+#. module: account_invoice_fixed_discount
+#: model:ir.model.fields,field_description:account_invoice_fixed_discount.field_account_move_line__discount_fixed
+msgid "Discount (Fixed)"
+msgstr "Popust (fiksni)"
+
+#. module: account_invoice_fixed_discount
+#: model:ir.model.fields,field_description:account_invoice_fixed_discount.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:account_invoice_fixed_discount.field_account_tax__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: account_invoice_fixed_discount
+#: model:res.groups,name:account_invoice_fixed_discount.group_fixed_discount
+msgid "Fixed Discount"
+msgstr "Fiksni popust"
+
+#. module: account_invoice_fixed_discount
+#: model:ir.model.fields,field_description:account_invoice_fixed_discount.field_account_move_line__id
+#: model:ir.model.fields,field_description:account_invoice_fixed_discount.field_account_tax__id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_invoice_fixed_discount
+#: model:ir.model,name:account_invoice_fixed_discount.model_account_move_line
+msgid "Journal Item"
+msgstr "Stavka dnevnika"
+
+#. module: account_invoice_fixed_discount
+#: model:ir.model,name:account_invoice_fixed_discount.model_account_tax
+msgid "Tax"
+msgstr "Porez"
