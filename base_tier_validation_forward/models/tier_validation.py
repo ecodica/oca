@@ -26,12 +26,18 @@ class TierValidation(models.AbstractModel):
         return res
 
     def _get_forwarded_notification_subtype(self):
-        return "base_tier_validation.mt_tier_validation_forwarded"
+        return "base_tier_validation_forward.mt_tier_validation_forwarded"
 
     def forward_tier(self):
         self.ensure_one()
         sequences = self._get_sequences_to_approve(self.env.user)
-        reviews = self.review_ids.filtered(lambda r: r.sequence in sequences)
+        # Forwarded reviews share their sequence: only take the user's own
+        # pending one, or the wizard overwrites earlier forward comments.
+        reviews = self.review_ids.filtered(
+            lambda r: r.sequence in sequences
+            and r.status == "pending"
+            and self.env.user in r.reviewer_ids
+        )
         ctx = self._add_comment("forward", reviews)["context"]
         comment = (
             self.env["comment.wizard"].with_context(**ctx).create({"comment": "/"})
